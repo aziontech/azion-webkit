@@ -1,0 +1,50 @@
+{
+    "name": "@aziontech/azion-web-kit",
+    "version": "0.0.1",
+    "type": "module",
+    "main": "./src/index.js",
+    "private": false,
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
+    "repository": "https://github.com/aziontech/webpackage.git",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "test:unit": "vitest",
+        "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
+        "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
+        "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+        "format": "prettier --write src/"
+    },
+    "dependencies": {
+        "algoliasearch": "^4.17.0",
+        "autoprefixer": "^10.4.16",
+        "postcss": "^8.4.31",
+        "s": "^1.0.0",
+        "tailwind": "^4.0.0",
+        "vue": "^3.3.4",
+        "vue-instantsearch": "^4.10.11"
+    },
+    "devDependencies": {
+        "@rushstack/eslint-patch": "^1.2.0",
+        "@vitejs/plugin-vue": "^4.0.0",
+        "@vue/eslint-config-prettier": "^7.1.0",
+        "@vue/test-utils": "^2.3.0",
+        "cypress": "^12.7.0",
+        "eslint": "^8.34.0",
+        "eslint-plugin-cypress": "^2.12.1",
+        "eslint-plugin-vue": "^9.9.0",
+        "jsdom": "^21.1.0",
+        "prettier": "^2.8.4",
+        "primeflex": "^3.3.1",
+        "primeicons": "^6.0.1",
+        "primevue": "^3.35.0",
+        "sass": "^1.68.0",
+        "start-server-and-test": "^2.0.0",
+        "tailwindcss": "^3.3.3",
+        "vite": "^4.4.9",
+        "vitest": "^0.29.1"
+    }
+}
