@@ -19,7 +19,7 @@
             <p class="my-8">
                 Here at Azion, we're very excited to announce that Azion Technologies has been named
                 a “best fit for companies that need global edge performance…” in The Forrester New WaveTM:
-                Edge Development Platforms, Q4 2021. 
+                Edge Development Platforms, Q4 2021.
             </p>
             <Button label="read more" />
         </div>

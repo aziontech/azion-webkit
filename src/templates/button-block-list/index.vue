@@ -3,8 +3,8 @@
         <Button
             class="min-w-fit"
             @click="onClick"
-            v-for="btn in btnList">
-            
+            :key="index"
+            v-for="(btn, index) in btnList">
             {{ btn.name }}
         </Button>
    </div>

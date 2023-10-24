@@ -13,7 +13,7 @@
                             <div class="md:w-3/5">
                                 <span class="p-input-icon-left w-full">
                                     <i class="pi pi-envelope" />
-                                    <InputMask
+                                    <InputText
                                         type="email"
                                         class='w-full'
                                         placeholder="Your e-mail" />
@@ -24,16 +24,16 @@
                                 class='min-w-fit w-full mt-4 md:mt-0 md:w-2/5'>
                                 subscribe our newsletter
                             </Button>
-                        </div> 
+                        </div>
                     </form>
-                </div> 
+                </div>
             </div>
         </div>
     </section>
 </template>
 
 <script setup>
-    import InputMask from 'primevue/InputMask';
+    import InputText from 'primevue/inputtext';
     import Button from 'primevue/button';
 
     // TODO
