@@ -1,10 +1,3 @@
-// required //
-import 'primeflex/primeflex.css';
-import 'primeicons/primeicons.css';
-import 'primevue/resources/themes/lara-light-blue/theme.css';
-import '../assets/styles/main.css';
-//end required //
-
 import HeroArticle from '../templates/hero/article/index.vue';
 
 export default {
