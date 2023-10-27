@@ -6,6 +6,7 @@ company necessities.
 
 ## Folder Structure
 
+**./src/**
 - **mock:**
     - to create the specific components params value;
 - **stories:**

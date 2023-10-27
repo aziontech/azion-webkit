@@ -1,8 +1,8 @@
-import TitleGridList from '../templates/article/title-grid-list/index.vue';
+import BlogHome from '../views/BlogHome.vue';
 
 export default {
-  title: 'Article/TitleGridList',
-  component: TitleGridList,
+  title: 'Pages/BlogHome',
+  component: BlogHome,
   tags: ['autodocs'],
   argTypes: {}
 };

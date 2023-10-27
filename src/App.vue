@@ -1,5 +1,5 @@
 <template>
-  <Home />
+  <BlogHome />
 
   <hr />
   <BlogPost />
@@ -7,7 +7,7 @@
 
 <script setup>
 import BlogPost from './views/BlogPost.vue';
-import Home from './views/Home.vue'
+import Home from './views/BlogHome.vue'
 
 
 </script>

@@ -1,8 +1,8 @@
-import TitleGridList from '../templates/article/title-grid-list/index.vue';
+import NewsletterCardSmall from '../templates/newsletter/card/small.vue';
 
 export default {
-  title: 'Article/TitleGridList',
-  component: TitleGridList,
+  title: 'Newsletter/NewsletterCardSmall',
+  component: NewsletterCardSmall,
   tags: ['autodocs'],
   argTypes: {}
 };

@@ -1,5 +1,5 @@
 <template>
-  <section class="newsletter-signup shadow-lg p-7 rounded">
+  <section class="newsletter-signup shadow-lg p-7 rounded max-w-md">
     <h5 class="max-w-xl mt-2 mb-0 lg:text-2xl">
       Become an expert in Edge Computing
     </h5>
