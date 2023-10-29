@@ -6,11 +6,11 @@
                 :title="item.title"
                 :target="item.linkTarget"
                 class="block text-2xl font-bold no-underline">
-                
+
                 <div class="flex gap-2 mb-2">
                     <Tag v-for="(tag, index) in item.tagList" :key="index" :value="tag" />
                 </div>
-                
+
                 {{ item.title }}
             </a>
         </li>
@@ -47,5 +47,5 @@
         dataList: {
             type: Array
         }
-    })
+    });
 </script>
