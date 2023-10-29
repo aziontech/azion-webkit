@@ -1,34 +1,80 @@
 <template>
     <div class="container mx-auto block lg:flex items-center">
-        <picture class="block p-0 m-0 mb-82 lg:mb-0 lg:mr-10 min-w-fit">
+        <picture
+            v-if="props.imgSrc"
+            class="block p-0 m-0 mb-82 lg:mb-0 lg:mr-10 min-w-fit">
+            
             <img
-                alt=""
                 class="h-auto w-full"
                 width="622"
                 height="468"
-                src="https://www.azion.com/static/images/uploads/thumbnailblogterraform440x343px-2.png?ims=622x" />
+                :alt="props.imgAlt"
+                :src="props.imgSrc" />
         </picture>
         <div class="content-center">
             <div class="flex gap-2">
-                <Tag value="Featured" />
-                <Tag value="Edge Computing" />
+                <Tag v-for="(tag, index) in props.tagList" :key="index" :value="tag" />
             </div>
             <h1 class="text-5xl my-8">
-                Azion Listed in Forrester New Wave Report for Edge Development Platforms
+                {{ props.title }}
             </h1>
             <p class="my-8">
-                Here at Azion, we're very excited to announce that Azion Technologies has been named
-                a “best fit for companies that need global edge performance…” in The Forrester New WaveTM:
-                Edge Development Platforms, Q4 2021.
+                {{ props.description }}
             </p>
-            <Button label="read more" />
+            
+            <a
+                :href="props.link"
+                :title="props.linkText"
+                :target="props.linkTarget">
+                
+                <Button>
+                    {{ props.linkText }}
+                </Button>
+            </a>
         </div>
     </div>
 </template>
+
 <script setup>
     import Button from 'primevue/button';
     import Tag from 'primevue/tag';
 
-    // TODO
-    // implement props to receive I18N
+    const props = defineProps({
+        imgSrc: {
+            type: String,
+            required: false
+
+        },
+        imgAlt: {
+            type: String,
+            required: false
+        },
+        tagList: {
+            type: Array,
+            required: false
+        },
+        title: {
+            type: String,
+            required: true
+
+        },
+        description: {
+            type: String,
+            required: true
+        },
+        link: {
+            type: String,
+            required: true
+        },
+        linkText: {
+            type: String,
+            required: true
+        },
+        linkTarget: {   
+            type: String,
+            required: false,
+            options: ['_blank', '_self'],
+            default: '_self'
+        }
+    });
 </script>

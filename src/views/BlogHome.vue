@@ -1,24 +1,36 @@
 <template>
   <main>
-    <FeaturedPost />
-    <hr>
-
-    <div class="container mx-auto">
-      <TitleFlexList />
+    <div class="my-8 mb-20">
+      <FeaturedPost
+        :imgSrc="featuredPostData.imgSrc"
+        :imgAlt="featuredPostData.imgAlt"
+        :tagList="featuredPostData.tagList"
+        :title="featuredPostData.title"
+        :description="featuredPostData.description"
+        :link="featuredPostData.link"
+        :linkText="featuredPostData.linkText"
+        :linkTarget="featuredPostData.linkTarget" />
     </div>
-    <hr>
 
-    <NewsletterSingleLine />
-    <hr>
+    <div class="container mx-auto my-8">
+      <TitleFlexList :dataList="titleFlexListData" />
+    </div>
 
-    <div class="container mx-auto">
+    <div class="my-20">
+      <NewsletterSingleLine />
+    </div>
+
+    <div class="container mx-auto my-8">
       <ButtonBlockList />
     </div>
-    <PostCardGridList />
 
-    <hr>
+    <div class="my-8">
+      <PostCardGridList />
+    </div>
 
-    <NewsletterWide />
+    <div class="my-8">
+      <NewsletterWide />
+    </div>
   </main>
 
   <Footer lang="en" :listData="footerData" />
@@ -41,5 +53,7 @@
   // MOCKING PARAMETERS /
   ///////////////////////
 
+  import featuredPostData from '../mock/featuredPost.js';
+  import titleFlexListData from '../mock/titleFlexListData.js';
   import footerData from '../mock/footer.js';
 </script>

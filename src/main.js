@@ -15,4 +15,4 @@ import './assets/styles/main.css';
 createApp(App).mount('#app');
 
 App.use(PrimeVue, { ripple: true });
-App.mount('#app')
+App.mount('#app');
