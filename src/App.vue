@@ -9,7 +9,7 @@
 <script setup>
   import BlogHome from './views/BlogHome.vue'
   import BlogPost from './views/BlogPost.vue';
-</script>
+</script>3
 
 <style lang="scss">
   main {
