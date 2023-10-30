@@ -17,11 +17,25 @@
     </div>
 
     <div class="my-20">
-      <NewsletterSingleLine />
+      <NewsletterSingleLine
+        :title="newsletterSingleLineData.title"
+        :textButton="newsletterSingleLineData.textButton"
+        :placeholderInput="newsletterSingleLineData.placeholderInput"
+        :onSubmit="newsletterSingleLineData.onSubmit" />
     </div>
 
     <div class="container mx-auto my-8">
-      <ButtonBlockList />
+      <ButtonBlockList :dataList="[
+        'Newst',
+        'Serveless',
+        'Security',
+        'Routing',
+        'Orchestration', 
+        'Observability',
+        'Market Trends',
+        'Company News',
+        'Developers'
+      ]"/>
     </div>
 
     <div class="my-8">
@@ -55,5 +69,6 @@
 
   import featuredPostData from '../mock/featuredPost.js';
   import titleFlexListData from '../mock/titleFlexListData.js';
+  import newsletterSingleLineData from '../mock/newsletterSingleLine.js';
   import footerData from '../mock/footer.js';
 </script>

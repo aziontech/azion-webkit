@@ -4,7 +4,7 @@
             <div class="lg:flex justify-between px-6 py-4 rounded shadow-xl">
                 <div class="lg:w-2/4">
                     <h3 class="text-2xl max-w-xl">
-                        Become an expert in Edge Computing
+                        {{ props.title }}
                     </h3>
                 </div>
                 <div class="lg:w-2/4">
@@ -16,13 +16,13 @@
                                     <InputText
                                         type="email"
                                         class='w-full'
-                                        placeholder="Your e-mail" />
+                                        :placeholder="props.placeholderInput" />
                                 </span>
                             </div>
                             <Button
                                 type="submit"
                                 class='min-w-fit w-full mt-4 md:mt-0 md:w-2/5'>
-                                subscribe our newsletter
+                                {{ props.textButton }}
                             </Button>
                         </div>
                     </form>
@@ -35,7 +35,25 @@
 <script setup>
     import InputText from 'primevue/inputtext';
     import Button from 'primevue/button';
-
-    // TODO
-    // implement props to receive I18N
+    
+    const props = defineProps({
+        title: {
+            type: String,
+            required: true
+        },
+        placeholderInput: {
+            type: String,
+            required: true,
+            default: 'Your e-mail'
+        },
+        textButton: {
+            type: String,
+            required: true,
+            default: 'submit'
+        },
+        onSubmit: {
+            type: Function,
+            required: false
+        }
+    });
 </script>

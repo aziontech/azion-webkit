@@ -2,7 +2,7 @@
     <div class="container mx-auto block lg:flex items-center">
         <picture
             v-if="props.imgSrc"
-            class="block p-0 m-0 mb-82 lg:mb-0 lg:mr-10 min-w-fit">
+            class="block p-0 m-0 mb-8 lg:mb-0 lg:mr-10 min-w-fit">
             
             <img
                 class="h-auto w-full"
