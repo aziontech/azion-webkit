@@ -26,7 +26,10 @@
       </div>
     </div>
     <figure class="hidden lg:block p-0 m-0 min-w-fit">
-      <img src="https://www.azion.com/static/images/uploads/thumb-blog-let-s-encrypt-kv.png?ims=478x" alt="" class="h-auto w-full">
+      <img
+        alt=""
+        class="h-auto w-full"
+        src="https://www.azion.com/static/images/uploads/thumb-blog-let-s-encrypt-kv.png?ims=478x">
     </figure>
   </div>
 </template>

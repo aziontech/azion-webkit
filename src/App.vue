@@ -1,5 +1,4 @@
 <template>
-  
   <BlogHome />
   
   <hr />
@@ -10,7 +9,7 @@
 <script setup>
   import BlogHome from './views/BlogHome.vue'
   import BlogPost from './views/BlogPost.vue';
-</script>3
+</script>
 
 <style lang="scss">
   main {
