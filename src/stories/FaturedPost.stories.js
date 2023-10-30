@@ -1,4 +1,5 @@
 import FeaturedPost from '../templates/article/featured-post/index.vue';
+import data from '../mock/featuredPost.js';
 
 export default {
   title: 'Article/FeaturedPost',
@@ -9,7 +10,7 @@ export default {
       control: {
         type: 'select',
       },
-      options: ['_self', '_blank'],
+      options: ['_self', '_blank']
     },
   }
 };
