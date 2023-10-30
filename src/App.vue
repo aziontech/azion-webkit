@@ -1,8 +1,9 @@
 <template>
+  
   <BlogHome />
-
+  
   <hr />
-
+ 
   <BlogPost /> 
 </template>
 
