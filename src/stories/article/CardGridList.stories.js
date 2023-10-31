@@ -1,7 +1,7 @@
 import CardGridList from '../../templates/article/card-grid-list/index.vue';
 
 export default {
-  title: 'Article/CardGridList',
+  title: 'Blocks/CardGridList',
   component: CardGridList,
   tags: ['autodocs'],
   argTypes: {}
