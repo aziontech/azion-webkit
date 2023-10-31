@@ -22,7 +22,7 @@
                             <Button
                                 type="submit"
                                 class='min-w-fit w-full mt-4 md:mt-0 md:w-2/5'>
-                                {{ props.textButton }}
+                                {{ props.buttonText }}
                             </Button>
                         </div>
                     </form>
@@ -43,12 +43,12 @@
         },
         placeholderInput: {
             type: String,
-            required: true,
+            required: false,
             default: 'Your e-mail'
         },
-        textButton: {
+        buttonText: {
             type: String,
-            required: true,
+            required: false,
             default: 'submit'
         },
         onSubmit: {

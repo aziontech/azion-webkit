@@ -1,4 +1,5 @@
 import NewsletterWide from '../templates/newsletter/wide/index.vue';
+import data from '../mock/newsletterWide.js';
 
 export default {
   title: 'Newsletter/Wide',
@@ -9,5 +10,5 @@ export default {
 
 // More on writing stories with args: https://storybook.js.org/docs/vue/writing-stories/args
 export const Default = {
-  args: {}
+  args: data
 };

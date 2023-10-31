@@ -19,21 +19,31 @@
     <div class="my-20">
       <NewsletterSingleLine
         :title="newsletterSingleLineData.title"
-        :textButton="newsletterSingleLineData.textButton"
+        :buttonText="newsletterSingleLineData.buttonText"
         :placeholderInput="newsletterSingleLineData.placeholderInput"
         :onSubmit="newsletterSingleLineData.onSubmit" />
     </div>
 
-    <div class="container mx-auto my-8">
-      <ButtonBlockList :dataList="buttonBlockListData.dataList" :onClick="buttonBlockListData.onclick"/>
-    </div>
+    <section>
+      <div class="container mx-auto my-8">
+        <ButtonBlockList
+          :dataList="buttonBlockListData.dataList"
+          :onClick="buttonBlockListData.onclick" />
+      </div>
+
+      <div class="my-8">
+        <PostCardGridList /> 
+      </div>
+    </section>
 
     <div class="my-8">
-      <PostCardGridList />
-    </div>
-
-    <div class="my-8">
-      <NewsletterWide />
+      <NewsletterWide
+        :overline="newsletterWideData.overline"
+        :title="newsletterWideData.title"
+        :buttonText="newsletterWideData.buttonText"
+        :placeholderInput="newsletterWideData.placeholderInput"
+        :onSubmit="newsletterWideData.onSubmit"
+        />
     </div>
   </main>
 
@@ -61,6 +71,7 @@
   import titleFlexListData from '../mock/titleFlexListData.js';
   import buttonBlockListData from '../mock/buttonBlockList.js';
   import newsletterSingleLineData from '../mock/newsletterSingleLine.js';
+  import newsletterWideData from '../mock/newsletterWide.js';
   
   import footerData from '../mock/footer.js';
 </script>
