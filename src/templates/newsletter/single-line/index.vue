@@ -8,7 +8,10 @@
                     </h3>
                 </div>
                 <div class="lg:w-2/4">
-                    <form id="FormNewsletterSingleLine">
+                    <form
+                        :id="formIdElement"
+                        :name="formIdElement">
+
                         <div class="md:flex md:gap-4 md:justify-between mt-4">
                             <div class="md:w-3/5">
                                 <span class="p-input-icon-left w-full">
@@ -35,7 +38,9 @@
 <script setup>
     import InputText from 'primevue/inputtext';
     import Button from 'primevue/button';
+    import stringConcatRamdomNumber from '../../../helpers/stringConcatRamdomNumber';
     
+    const formIdElement = stringConcatRamdomNumber('FormNewsletterSingleLine');
     const props = defineProps({
         title: {
             type: String,

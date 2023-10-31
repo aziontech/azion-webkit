@@ -11,7 +11,11 @@
                     </h3>
                 </div>
                 <div class="lg:w-2/4">
-                    <form id="FormNewsletterWide" class="mt-8">
+                    <form
+                        :id="formIdElement"
+                        :name="formIdElement"
+                        class="mt-8">
+                        
                         <InputText
                             class='min-w-full'  
                             :placeholder="props.placeholderInput" />
@@ -36,7 +40,9 @@
 <script setup>
     import InputText from 'primevue/inputtext';
     import Button from 'primevue/button';
-
+    import stringConcatRamdomNumber from '../../../helpers/stringConcatRamdomNumber';
+    
+    const formIdElement = stringConcatRamdomNumber('FormNewsletterSingleLine');
     const props = defineProps({
         overline: {
             type: String,
