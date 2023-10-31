@@ -1,4 +1,5 @@
 import ButtonBlockList from '../templates/button-block-list/index.vue';
+import data from '../mock/buttonBlockList.js';
 
 export default {
   title: 'Blocks/ButtonBlockList',
@@ -9,5 +10,5 @@ export default {
 
 // More on writing stories with args: https://storybook.js.org/docs/vue/writing-stories/args
 export const Default = {
-  args: {}
+  args: data
 };

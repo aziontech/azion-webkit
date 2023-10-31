@@ -25,17 +25,7 @@
     </div>
 
     <div class="container mx-auto my-8">
-      <ButtonBlockList :dataList="[
-        'Newst',
-        'Serveless',
-        'Security',
-        'Routing',
-        'Orchestration', 
-        'Observability',
-        'Market Trends',
-        'Company News',
-        'Developers'
-      ]"/>
+      <ButtonBlockList :dataList="buttonBlockListData.dataList" :onClick="buttonBlockListData.onclick"/>
     </div>
 
     <div class="my-8">
@@ -69,6 +59,8 @@
 
   import featuredPostData from '../mock/featuredPost.js';
   import titleFlexListData from '../mock/titleFlexListData.js';
+  import buttonBlockListData from '../mock/buttonBlockList.js';
   import newsletterSingleLineData from '../mock/newsletterSingleLine.js';
+  
   import footerData from '../mock/footer.js';
 </script>
