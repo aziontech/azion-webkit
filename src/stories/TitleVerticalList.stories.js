@@ -1,8 +1,8 @@
-import VerticalPostList from '../../templates/article/title-grid-list/vertical.vue';
-import args from "../../mock/verticalListData"
+import VerticalPostList from '../templates/title-grid-list/vertical.vue';
+import args from "../mock/verticalListData"
 
 export default {
-  title: 'Article/TitleGridList/Vertical',
+  title: 'Blocks/TitleVerticalList',
   component: VerticalPostList,
   tags: ['autodocs'],
   argTypes: {}

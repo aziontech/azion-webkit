@@ -1,8 +1,8 @@
-import ReadableContent from '../../templates/article/readable-content/index.vue';
+import CardGridList from '../templates/card-grid-list/index.vue';
 
 export default {
-  title: 'Article/ReadbleContent',
-  component: ReadableContent,
+  title: 'Blocks/CardGridList',
+  component: CardGridList,
   tags: ['autodocs'],
   argTypes: {}
 };

@@ -1,8 +1,8 @@
-import FeaturedPost from '../../templates/article/featured-post/index.vue';
-import data from '../../mock/featuredPost.js';
+import FeaturedPost from '../templates/featured-post/index.vue';
+import data from '../mock/featuredPost.js';
 
 export default {
-  title: 'Article/FeaturedPost',
+  title: 'Blocks/FeaturedPost',
   component: FeaturedPost,
   tags: ['autodocs'],
   argTypes: {

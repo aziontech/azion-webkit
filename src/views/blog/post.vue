@@ -27,23 +27,23 @@
 </template>
 
 <script setup>
-//////////////////////////
-// IMPORTING COMPONENTS //
-//////////////////////////
-import PostHero from "../../templates/article/hero/index.vue"
-import ReadableContent from "../../templates/article/readable-content/index.vue"
-import NewsletterCard from "../../templates/newsletter/card/small.vue"
-import PostVerticalList from "../../templates/article/title-grid-list/vertical.vue"
-import CategoriesList from "../../templates/categories/index.vue"
-import Footer from '../../templates/footer/index.vue';
+  //////////////////////////
+  // IMPORTING COMPONENTS //
+  //////////////////////////
+  import PostHero from "../../templates/post/hero/index.vue"
+  import ReadableContent from "../../templates/post/readable-content/index.vue"
+  import NewsletterCard from "../../templates/newsletter/card/small.vue"
+  import PostVerticalList from "../../templates/title-grid-list/vertical.vue"
+  import CategoriesList from "../../templates/categories/index.vue"
+  import Footer from '../../templates/footer/index.vue';
 
-////////////////////////
-// MOCKING PARAMETERS /
-///////////////////////
+  ////////////////////////
+  // MOCKING PARAMETERS /
+  ///////////////////////
 
-import footerData from '../../mock/footer.js';
-import categories from '../../mock/categories.js';
-import featuredPostList from "../../mock/verticalListData"
-import newsletterSingleLine from "../../mock/newsletterSingleLine"
-import hero from "../../mock/articleHero"
+  import footerData from '../../mock/footer.js';
+  import categories from '../../mock/categories.js';
+  import featuredPostList from "../../mock/verticalListData"
+  import newsletterSingleLine from "../../mock/newsletterSingleLine"
+  import hero from "../../mock/articleHero"
 </script>

@@ -1,8 +1,8 @@
-import TitleGridList from '../../templates/article/title-grid-list/index.vue';
-import dataList from '../../mock/titleFlexListData.js';
+import TitleGridList from '../templates/title-grid-list/index.vue';
+import dataList from '../mock/titleFlexListData.js';
 
 export default {
-  title: 'Article/TitleGridList/Default',
+  title: 'Blocks/TitleGridList',
   component: TitleGridList,
   tags: ['autodocs'],
   argTypes: {}

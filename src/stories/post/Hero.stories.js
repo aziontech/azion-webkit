@@ -1,4 +1,4 @@
-import HeroArticle from '../../templates/article/hero/index.vue';
+import HeroArticle from '../../templates/post/hero/index.vue';
 import data from '../../mock/articleHero'
 
 export default {
