@@ -1,4 +1,4 @@
-import CardGridList from '../templates/article/card-grid-list/index.vue';
+import CardGridList from '../../templates/article/card-grid-list/index.vue';
 
 export default {
   title: 'Article/CardGridList',

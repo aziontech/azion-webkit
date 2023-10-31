@@ -1,5 +1,5 @@
-import NewsletterSingleLine from '../templates/newsletter/single-line/index.vue';
-import data from '../mock/newsletterSingleLine.js';
+import NewsletterSingleLine from '../../templates/newsletter/single-line/index.vue';
+import data from '../../mock/newsletterSingleLine.js';
 
 export default {
   title: 'Newsletter/SingleLine',

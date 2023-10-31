@@ -1,8 +1,8 @@
-import HeroArticle from '../templates/article/hero/index.vue';
+import ReadableContent from '../../templates/article/readable-content/index.vue';
 
 export default {
-  title: 'Article/Hero',
-  component: HeroArticle,
+  title: 'Article/ReadbleContent',
+  component: ReadableContent,
   tags: ['autodocs'],
   argTypes: {}
 };

@@ -1,5 +1,5 @@
-import NewsletterWide from '../templates/newsletter/wide/index.vue';
-import data from '../mock/newsletterWide.js';
+import NewsletterWide from '../../templates/newsletter/wide/index.vue';
+import data from '../../mock/newsletterWide.js';
 
 export default {
   title: 'Newsletter/Wide',

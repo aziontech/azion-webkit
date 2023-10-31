@@ -1,4 +1,4 @@
-import NewsletterCardSmall from '../templates/newsletter/card/small.vue';
+import NewsletterCardSmall from '../../templates/newsletter/card/small.vue';
 
 export default {
   title: 'Newsletter/NewsletterCardSmall',
