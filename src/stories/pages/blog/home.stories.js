@@ -1,4 +1,4 @@
-import BlogHome from '../../../views/blog/home.vue';
+import BlogHome from '../../../views/BlogHome.vue';
 
 export default {
   title: 'Pages/BlogHome',

@@ -2,7 +2,7 @@ import NewsletterSingleLine from '../../templates/newsletter/single-line/index.v
 import data from '../../mock/newsletterSingleLine.js';
 
 export default {
-  title: 'Newsletter/SingleLine',
+  title: 'Newsletter/Card/SingleLine',
   component: NewsletterSingleLine,
   tags: ['autodocs'],
   argTypes: {}

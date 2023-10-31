@@ -21,6 +21,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.10",
     "algoliasearch": "^4.17.0",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",
