@@ -1,4 +1,4 @@
-import HeroArticle from '../templates/hero/article/index.vue';
+import HeroArticle from '../templates/article/hero/index.vue';
 
 export default {
   title: 'Article/Hero',

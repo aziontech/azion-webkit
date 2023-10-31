@@ -20,7 +20,7 @@
 //////////////////////////
 // IMPORTING COMPONENTS //
 //////////////////////////
-import PostHero from "../templates/hero/article/index.vue"
+import PostHero from "../templates/article/hero/index.vue"
 import ReadableContent from "../templates/article/readable-content/index.vue"
 import Newsletter from "../templates/newsletter/wide/index.vue"
 import NewsletterCard from "../templates/newsletter/card/small.vue"
