@@ -1,5 +1,5 @@
 <template>
-   <div class="flex gap-4 overflow-x-auto3">
+   <div class="flex gap-4 overflow-x-auto">
         <Button
             class="min-w-fit"
             @click="onClick"
