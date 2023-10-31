@@ -1,4 +1,4 @@
-import BlogPost from '../views/BlogPost.vue';
+import BlogPost from '../../views/BlogPost.vue';
 
 export default {
   title: 'Pages/BlogPost',
