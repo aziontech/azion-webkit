@@ -20,17 +20,17 @@
 //////////////////////////
 // IMPORTING COMPONENTS //
 //////////////////////////
-import PostHero from "../templates/article/hero/index.vue"
-import ReadableContent from "../templates/article/readable-content/index.vue"
-import Newsletter from "../templates/newsletter/wide/index.vue"
-import NewsletterCard from "../templates/newsletter/card/small.vue"
-import PostVerticalList from "../templates/article/title-grid-list/vertical.vue"
-import CategoriesList from "../templates/categories/index.vue"
-import Footer from '../templates/footer/index.vue';
+import PostHero from "../../templates/article/hero/index.vue"
+import ReadableContent from "../../templates/article/readable-content/index.vue"
+import Newsletter from "../../templates/newsletter/wide/index.vue"
+import NewsletterCard from "../../templates/newsletter/card/small.vue"
+import PostVerticalList from "../../templates/article/title-grid-list/vertical.vue"
+import CategoriesList from "../../templates/categories/index.vue"
+import Footer from '../../templates/footer/index.vue';
 
 ////////////////////////
 // MOCKING PARAMETERS /
 ///////////////////////
 
-import footerData from '../mock/footer.js';
+import footerData from '../../mock/footer.js';
 </script>

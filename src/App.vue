@@ -7,8 +7,8 @@
 </template>
 
 <script setup>
-  import BlogHome from './views/BlogHome.vue'
-  import BlogPost from './views/BlogPost.vue';
+  import BlogHome from './views/blog/home.vue'
+  import BlogPost from './views/blog/post.vue';
 </script>
 
 <style lang="scss">
