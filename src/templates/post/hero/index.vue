@@ -1,6 +1,6 @@
 <template>
-  <div class="flex gap-4 mb-8">
-    <div class="px-8">
+  <div class="flex gap-8 mb-8">
+    <div>
       <div class="flex justify-between">
         <div class="flex">
           <Tag class="mr-2" v-for="(tag, index) in tagList" :key="index" :value="tag" />
@@ -12,7 +12,7 @@
       <h1 class="text-5xl">
         {{ title }}
       </h1>
-      <div class="flex">
+      <div class="flex" v-if="authors">
         <AvatarGroup>
           <Avatar v-for="(image, index) in authors.avatars" :key="index" :image="image" shape="circle" />
         </AvatarGroup>
@@ -55,7 +55,7 @@
     },
     authors: {
       type: Object,
-      required: true
+      required: false
     },
     postImage: {
       url: String,

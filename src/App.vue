@@ -1,9 +1,9 @@
 <template>
   <BlogHome />
-  
+
   <hr />
- 
-  <BlogPost /> 
+
+  <BlogPost />
 </template>
 
 <script setup>

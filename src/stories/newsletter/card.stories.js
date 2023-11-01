@@ -1,4 +1,4 @@
-import NewsletterCardSmall from '../../templates/newsletter/card/small.vue';
+import NewsletterCardSmall from '../../templates/newsletter/card/index.vue';
 import data from '../../mock/newsletterSingleLine';
 
 export default {

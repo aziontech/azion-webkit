@@ -32,7 +32,7 @@
       </div>
 
       <div class="my-8">
-        <PostCardGridList /> 
+        <PostCardGridList />
       </div>
     </section>
 
@@ -47,7 +47,7 @@
     </div>
   </main>
 
-  <Footer lang="en" :listData="footerData" />
+  <Footer lang="en" :listData="footerData.listData" :cta="footerData.cta" :copyright="footerData.copyright" />
 </template>
 
 <script setup>

@@ -10,39 +10,42 @@
       <div class="lg:flex">
         <ReadableContent class="lg:w-2/3" />
         <div class="lg:w-1/3 lg:pl-20">
-          <PostVerticalList :data="featuredPostList" />
+          <TitleVerticalList :data="featuredPostList" />
           <NewsletterCard class="hidden lg:inline-block"
             :title="newsletterSingleLine.title"
             :buttonText="newsletterSingleLine.buttonText"
             :placeholderInput="newsletterSingleLine.placeholderInput"
             :onSubmit="newsletterSingleLine.onSubmit"
           />
-          <CategoriesList title="CATEGORIES" :categories="categories.categories"/>
+          <div>
+            <h4> CATEGORIES </h4>
+            <ButtonBlockList :dataList="buttonBlockList.dataList" rounded size="small" />
+          </div>
         </div>
       </div>
       <Newsletter />
     </div>
   </main>
-  <Footer lang="en" :listData="footerData" />
+  <Footer lang="en" :listData="footerData.listData" :cta="footerData.cta" :copyright="footerData.copyright" />
 </template>
 
 <script setup>
   //////////////////////////
   // IMPORTING COMPONENTS //
   //////////////////////////
-  import PostHero from "../../templates/post/hero/index.vue"
+  import PostHero from "../../templates/post/hero/index.vue";
   import ReadableContent from "../../templates/post/readable-content/index.vue"
-  import NewsletterCard from "../../templates/newsletter/card/small.vue"
-  import PostVerticalList from "../../templates/title-grid-list/vertical.vue"
-  import CategoriesList from "../../templates/categories/index.vue"
-  import Footer from '../../templates/footer/index.vue';
+  import TitleVerticalList from "../../templates/title-grid-list/vertical.vue"
+  import NewsletterCard from "../../templates/newsletter/card/index.vue"
+  import ButtonBlockList from "../../templates/button-block-list/index.vue"
+  import Footer from '../../templates/footer/index.vue'
 
   ////////////////////////
   // MOCKING PARAMETERS /
   ///////////////////////
 
   import footerData from '../../mock/footer.js';
-  import categories from '../../mock/categories.js';
+  import buttonBlockList from "../../mock/buttonBlockList"
   import featuredPostList from "../../mock/verticalListData"
   import newsletterSingleLine from "../../mock/newsletterSingleLine"
   import hero from "../../mock/articleHero"

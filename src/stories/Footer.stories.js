@@ -1,5 +1,5 @@
 import Footer from '../templates/footer/index.vue';
-import listData from '../mock/footer.js';
+import footerData from '../mock/footer.js';
 
 export default {
   title: 'Blocks/Footer',
@@ -12,6 +12,8 @@ export default {
 export const Default = {
   args: {
     lang: 'en',
-    listData: listData
+    listData: footerData.listData,
+    cta: footerData.cta,
+    copyright: footerData.copyright
   }
 };

@@ -10,6 +10,8 @@ export default {
         'Company News',
         'Developers'
     ],
+    rounded: false,
+    size: "small",
     onclick: function(e) {
         console.log(e);
         console.log('click datalist from mock');

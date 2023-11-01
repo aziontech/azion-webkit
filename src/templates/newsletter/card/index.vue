@@ -7,7 +7,7 @@
       <div class="mt-4">
         <span class="p-input-icon-left w-full">
           <i class="pi pi-envelope" />
-          <InputText class="w-full" :placeholder="placeholderInput" />
+          <InputText :placeholder="placeholderInput" class="w-full" />
 
         </span>
         <Button class='mt-4 w-full' type="submit" @click.prevent="onSubmit">

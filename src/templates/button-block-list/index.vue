@@ -4,8 +4,10 @@
             class="min-w-fit"
             @click="onClick"
             :key="index"
-            v-for="(btn, index) in props.dataList">
-            
+            v-for="(btn, index) in props.dataList"
+            :rounded="rounded"
+            :size="size ? size : null"
+          >
             {{ btn }}
         </Button>
    </div>
@@ -22,6 +24,14 @@
             type: Function,
             required: false,
             default: (e) => { console.log(e); }
+        },
+        size: {
+          type: String,
+          required: false,
+        },
+        rounded: {
+          type: Boolean,
+          required: false
         }
     });
 </script>
