@@ -1,0 +1,2 @@
+import{c as s,r as t,o as n}from"./vue.esm-bundler-1f3dc028.js";import{_ as r}from"./_plugin-vue_export-helper-c27b6911.js";const e={},a={class:"prose prose-slate max-w-none"};function c(o,l){return n(),s("article",a,[t(o.$slots,"default")])}const _=r(e,[["render",c]]);e.__docgenInfo={displayName:"readable-content",description:"",tags:{},slots:[{name:"default"}],sourceFiles:["/Users/robson.junior/dev/azion-web-kit/src/templates/post/readable-content/index.vue"]};export{_ as R};
+//# sourceMappingURL=index-ff7acf1c.js.map
