@@ -3,8 +3,10 @@
 // required //
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
-import 'primevue/resources/themes/lara-light-blue/theme.css';
-import '../src/assets/styles/main.css';
+
+import '../src/assets/main.css';
+import '../src/assets/themes/scss/themes/azion-light/theme.scss';
+import '../src/assets/themes/scss/themes/azion-dark/theme.scss';
 //end required //
 
 const preview = {

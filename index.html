@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="azion-dark">
+  <head>
+      <meta charset="UTF-8">
+      <link rel="icon" href="/favicon.ico">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>azion-web-kit</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>azion-web-kit</title>
-</head>
+  <body>
+      <div style="display: flex; justify-content: center; margin-top: 2rem;">
+        <select id="SelectSwitchTheme">
+          <option value="light">light</option>
+          <option value="dark" selected>dark</option>
+        </select>
+        <script type="text/javascript">
+          let selectSwitchTheme = document.querySelector('#SelectSwitchTheme');
+          let html = document.querySelector('html')
+  
+          selectSwitchTheme.addEventListener('change', function(e) {
+            let theme = e.target.value;
+            
+            if(theme === 'dark') {
+              html.classList.remove('azion-light');
+              html.classList.add('azion-dark');
+              return;
+            }
+  
+            html.classList.remove('azion-dark');
+            html.classList.add('azion-light');
+          });
+        </script>
+      </div>
 
-<body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-</body>
-
+      <div id="app"></div>
+      <script type="module" src="/src/main.js"></script>
+      
+  </body>
 </html>
