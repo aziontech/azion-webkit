@@ -39,7 +39,7 @@
         </div>
       </div>
 
-      <hr class="bg-slate-100 h-px my-8" />
+      <div class="surface-border border border-solid h-px my-8" />
 
       <div class="flex justify-end">
         <slot name="langSelector"></slot>

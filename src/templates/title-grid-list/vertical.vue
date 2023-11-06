@@ -1,10 +1,12 @@
 <template>
   <ul class="list-none p-0">
     <li class="mb-8"  v-for="({tagList, title, description, buttonText, link}, index) in props.data" :key="index">
-      <a :href="link" :title="title" :target="linkTarget" class="block no-underline text-current  mb-2">
-        <Tag class="mr-2" v-for="(tag, index) in tagList" :key="index" :value="tag" />
-        <p class="font-bold lg:text-2xl">{{ title }}</p>
-        <p class="text-small">{{ description }}</p>
+      <a :href="link" :title="title" :target="linkTarget" class="block no-underline text-current mb-2 group">
+        <Tag class="mr-2" v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
+        <div class="hover:underline">
+          <p class="lg:text-2xl font-bold text-color">{{ title }}</p>
+          <p class="text-small font-normal text-color-secondary">{{ description }}</p>
+        </div>
         <span class="text-small">{{ buttonText }}</span>
       </a>
     </li>

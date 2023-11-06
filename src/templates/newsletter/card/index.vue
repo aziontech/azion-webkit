@@ -1,6 +1,6 @@
 <template>
-  <section class="newsletter-signup shadow-lg p-7 rounded max-w-md">
-    <h5 class="max-w-xl mt-2 mb-0 lg:text-2xl">
+  <section class="newsletter-signup border border-solid surface-border p-7 rounded max-w-md">
+    <h5 class="max-w-xl mt-0 mb-0 lg:text-2xl">
       {{ title }}
     </h5>
     <form :id="formId" class="mt-4">
@@ -10,9 +10,12 @@
           <InputText :placeholder="placeholderInput" class="w-full" />
 
         </span>
-        <Button class='mt-4 w-full' type="submit" @click.prevent="onSubmit">
-          {{ buttonText }}
-        </Button>
+        <Button
+          class='mt-4 w-full' type="submit"
+          @click.prevent="onSubmit"
+          icon="pi pi-chevron-right" iconPos="right"
+          :label="buttonText"
+        />
       </div>
     </form>
   </section>

@@ -1,22 +1,22 @@
 <template>
-  <div class="flex gap-8 mb-8">
+  <div class="container mx-auto gap-8 mb-8">
     <div>
       <div class="flex justify-between">
         <div class="flex">
-          <Tag class="mr-2" v-for="(tag, index) in tagList" :key="index" :value="tag" />
+          <Tag class="mr-2" v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
         </div>
         <p class="m-0">
           {{ date }}
         </p>
       </div>
-      <h1 class="text-5xl">
+      <h1 class="text-5xl font-bold text-color">
         {{ title }}
       </h1>
       <div class="flex" v-if="authors">
         <AvatarGroup>
           <Avatar v-for="(image, index) in authors.avatars" :key="index" :image="image" shape="circle" />
         </AvatarGroup>
-        <p>
+        <p class="font-normal text-color-secondary">
           {{ authors.title }}
         </p>
       </div>

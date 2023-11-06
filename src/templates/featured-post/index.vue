@@ -3,7 +3,7 @@
         <picture
             v-if="props.imgSrc"
             class="block p-0 m-0 mb-8 lg:mb-0 lg:mr-10 min-w-fit">
-            
+
             <img
                 class="h-auto w-full"
                 width="622"
@@ -13,23 +13,21 @@
         </picture>
         <div class="content-center">
             <div class="flex gap-2">
-                <Tag v-for="(tag, index) in props.tagList" :key="index" :value="tag" />
+                <Tag v-for="(tag, index) in props.tagList" :key="index" :value="tag" severity="info" />
             </div>
-            <h1 class="text-5xl my-8">
+            <h1 class="text-5xl font-bold text-color my-8">
                 {{ props.title }}
             </h1>
-            <p class="my-8">
+            <p class="text-xl font-normal text-color-secondary my-8">
                 {{ props.description }}
             </p>
-            
+
             <a
                 :href="props.link"
                 :title="props.linkText"
                 :target="props.linkTarget">
-                
-                <Button>
-                    {{ props.linkText }}
-                </Button>
+
+                <Button :label="props.linkText " icon="pi pi-chevron-right" iconPos="right" />
             </a>
         </div>
     </div>
@@ -70,7 +68,7 @@
             type: String,
             required: true
         },
-        linkTarget: {   
+        linkTarget: {
             type: String,
             required: false,
             options: ['_blank', '_self'],
