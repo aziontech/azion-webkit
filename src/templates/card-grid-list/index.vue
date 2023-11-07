@@ -2,12 +2,13 @@
   <div class="container mx-auto">
     <h2>Newest</h2>
     <div class="post-list grid md:grid-cols-3 lg:grid-cols-4 px-2 gap-4 pt-6">
-      <a :href="link" v-for="({ image, link, title, description }, index) in data" :key="index" class="no-underline flex">
+      <a :href="link" v-for="({ image, link, title, description, tagList }, index) in data" :key="index" class="no-underline flex">
         <Card class="border-radius-md">
           <template #header>
             <img class="border-radius-md" lazy alt="user header" :src="`https://assets.azion.com${image}`" />
           </template>
           <template #title>
+            <Tag v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" class="ml-2" />
             <h3 class="text-2xl font-bold text-color p-2 my-0">
               {{ title }}
             </h3>
@@ -25,6 +26,7 @@
 
 <script setup>
 import Card from 'primevue/card';
+import Tag from 'primevue/tag';
 
 // interface Props {
 //   data: Array<{
@@ -32,6 +34,7 @@ import Card from 'primevue/card';
 //     description: String,
 //     link: String,
 //     image: String,
+//     tagList: Array[String]
 //   }>
 // }
 
@@ -43,4 +46,6 @@ const props = defineProps({
 })
 
 const { data } = props
+
+console.log(data)
 </script>
