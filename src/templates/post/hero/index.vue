@@ -1,67 +1,64 @@
 <template>
-  <div class="container mx-auto gap-8 mb-8">
-    <div>
-      <div class="flex justify-between">
-        <div class="flex">
-          <Tag class="mr-2" v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
+  <div class="container flex mx-auto gap-8 mb-8">
+      <div class="w-full">
+        <div class="flex justify-between">
+          <div class="flex">
+            <Tag class="mr-2" v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
+          </div>
+          <p class="m-0">
+            {{ date }}
+          </p>
         </div>
-        <p class="m-0">
-          {{ date }}
-        </p>
+        <h1 class="text-5xl font-bold text-color">
+          {{ title }}
+        </h1>
+        <div class="flex" v-if="authors">
+          <AvatarGroup>
+            <Avatar v-for="(image, index) in authors.avatars" :key="index" :image="image" shape="circle" />
+          </AvatarGroup>
+          <p class="font-normal text-color-secondary ml-2">
+            {{ authors.title }}
+          </p>
+        </div>
       </div>
-      <h1 class="text-5xl font-bold text-color">
-        {{ title }}
-      </h1>
-      <div class="flex" v-if="authors">
-        <AvatarGroup>
-          <Avatar v-for="(image, index) in authors.avatars" :key="index" :image="image" shape="circle" />
-        </AvatarGroup>
-        <p class="font-normal text-color-secondary">
-          {{ authors.title }}
-        </p>
-      </div>
+      <figure class="hidden lg:block p-0 m-0 min-w-fit" v-if="postImage">
+        <img :alt="postImage.alt" class="h-auto w-full" :src="postImage.url">
+      </figure>
     </div>
-    <figure class="hidden lg:block p-0 m-0 min-w-fit" v-if="postImage">
-      <img
-        :alt="postImage.alt"
-        class="h-auto w-full"
-        :src="postImage.url">
-    </figure>
-  </div>
 </template>
 
 <script setup>
-  import Avatar from 'primevue/avatar'
-  import AvatarGroup from 'primevue/avatargroup'
-  import Tag from 'primevue/tag'
+import Avatar from 'primevue/avatar'
+import AvatarGroup from 'primevue/avatargroup'
+import Tag from 'primevue/tag'
 
-  // interface Authors {
-  //   avatars: [url, url],
-  //   title: String
-  // }
+// interface Authors {
+//   avatars: [url, url],
+//   title: String
+// }
 
-  const props = defineProps({
-    date: {
-      required: true,
-      type: String
-    },
-    title: {
-      required: true,
-      type: String
-    },
-    tagList: {
-      required: true,
-      type: Array
-    },
-    authors: {
-      type: Object,
-      required: false
-    },
-    postImage: {
-      url: String,
-      alt: String
-    }
-  })
+const props = defineProps({
+  date: {
+    required: true,
+    type: String
+  },
+  title: {
+    required: true,
+    type: String
+  },
+  tagList: {
+    required: true,
+    type: Array
+  },
+  authors: {
+    type: Object,
+    required: false
+  },
+  postImage: {
+    url: String,
+    alt: String
+  }
+})
 
-  const { date, title, tagList, authors } = props
+const { date, title, tagList, authors } = props
 </script>
