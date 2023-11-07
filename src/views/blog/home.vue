@@ -32,7 +32,7 @@
       </div>
 
       <div class="my-8">
-        <PostCardGridList />
+        <PostCardGridList :data="cardData" />
       </div>
     </section>
 
@@ -72,4 +72,5 @@
   import newsletterSingleLineData from '../../mock/newsletterSingleLine.js';
   import newsletterWideData from '../../mock/newsletterWide.js';
   import footerData from '../../mock/footer.js';
+  import cardData from '../../mock/cards.js';
 </script>
