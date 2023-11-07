@@ -6,7 +6,7 @@
                     <Overline v-if="props.overline">
                         {{ props.overline }}
                     </Overline>
-                    <h3 class="text-5xl font-normal text-color max-w-xl mt-2 mb-0">
+                    <h3 class="text-6xl font-normal text-color max-w-xl mt-2 mb-0">
                         {{ props.title }}
                     </h3>
                 </div>
