@@ -3,9 +3,9 @@
         <div class="lg:px-40 lg:py-28 py-8 px-4">
             <div class="lg:flex justify-between lg:gap-4">
                 <div class="lg:w-2/4">
-                    <span class="uppercase" v-if="props.overline">
+                    <Overline v-if="props.overline">
                         {{ props.overline }}
-                    </span>
+                    </Overline>
                     <h3 class="text-5xl font-normal text-color max-w-xl mt-2 mb-0">
                         {{ props.title }}
                     </h3>
@@ -42,6 +42,7 @@
     import InputText from 'primevue/inputtext';
     import Button from 'primevue/button';
     import stringConcatRamdomNumber from '../../../helpers/stringConcatRamdomNumber';
+    import Overline from '../../overline/index.vue'
 
     const formIdElement = stringConcatRamdomNumber('FormNewsletterSingleLine');
     const props = defineProps({
