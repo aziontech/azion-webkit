@@ -7,7 +7,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "repository": "https://github.com/aziontech/webpackage.git",
+  "repository": "https://github.com/aziontech/azion-web-kit.git",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
