@@ -28,7 +28,7 @@
                                 icon="pi pi-chevron-right"
                                 iconPos="right" @click.prevent="onSubmit"
                                 type="submit" class="w-1/2"
-                                :label="buttonText"
+                                :label="buttonText" size="small"
                               />
                         </div>
                     </form>

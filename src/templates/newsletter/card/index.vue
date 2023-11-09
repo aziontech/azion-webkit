@@ -14,7 +14,7 @@
           class='mt-4 w-full' type="submit"
           @click.prevent="onSubmit"
           icon="pi pi-chevron-right" iconPos="right"
-          :label="buttonText"
+          :label="buttonText" size="small"
         />
       </div>
     </form>
