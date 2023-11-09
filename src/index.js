@@ -12,8 +12,6 @@ import TitleVerticalList from './templates/title-grid-list/vertical.vue';
 import ArticleHero from "./templates/post/hero/index.vue";
 import ReadableContent from "./templates/post/readable-content/index.vue";
 
-export default {};
-
 export {
     ButtonBlockList,
     CardGridList,
