@@ -1,5 +1,5 @@
 export default {
-    imgSrc: 'https://www.azion.com/static/images/uploads/thumbnailblogterraform440x343px-2.png?ims=622x',
+    imgSrc: 'https://www.azion.com/static/images/uploads/thumbnailblogterraform440x343px-2.png',
     imgAlt: 'Azion Listed in Forrester New Wave Report for Edge Development Platforms',
     tagList: [
         'Featured',
