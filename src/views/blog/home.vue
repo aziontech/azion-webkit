@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="my-8 mb-20">
+    <div class="py-8 mb-20">
       <FeaturedPost
         :imgSrc="featuredPostData.imgSrc"
         :imgAlt="featuredPostData.imgAlt"
@@ -12,7 +12,7 @@
         :linkTarget="featuredPostData.linkTarget" />
     </div>
 
-    <div class="container mx-auto my-8">
+    <div class="container mx-auto py-8">
       <TitleFlexList :dataList="titleFlexListData" />
     </div>
 
@@ -25,26 +25,24 @@
     </div>
 
     <section>
-      <div class="container mx-auto my-8">
+      <div class="container mx-auto py-8">
         <ButtonBlockList
           :dataList="buttonBlockListData.dataList"
           :onClick="buttonBlockListData.onclick" />
       </div>
 
-      <div class="my-8">
+      <div class="py-8">
         <PostCardGridList :data="cardData" />
       </div>
     </section>
-
-    <div class="my-8">
       <NewsletterWide
+        class="py-8"
         :overline="newsletterWideData.overline"
         :title="newsletterWideData.title"
         :buttonText="newsletterWideData.buttonText"
         :placeholderInput="newsletterWideData.placeholderInput"
         :onSubmit="newsletterWideData.onSubmit"
         />
-    </div>
   </main>
 
   <Footer lang="en" :listData="footerData.listData" :cta="footerData.cta" :copyright="footerData.copyright" />

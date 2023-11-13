@@ -12,10 +12,6 @@
 </script>
 
 <style lang="scss">
-  main {
-    padding: 2rem 0;
-  }
-
   hr {
     margin: 2rem 0;
     border: none;
