@@ -24,20 +24,16 @@ export default {
                 'header-input': '#292929',
                 'header-button-enabled': '#ffffff32',
                 'header-button-hover': 'rgba(244, 244, 244, 0.04)',
-                'header-avatar': '#363636'
+                'header-avatar': '#363636',
+                footer: '#1e1e1e'
             },
             borderColor: {
                 header: '#3e3e3e',
                 'header-hover': '#F3652B'
             },
                 textColor: {
-                header: '#b5b5b5'
-            },
-            transitionProperty: {
-                width: 'width'
-                },
-            width: {
-                slide: '300px'
+                header: '#b5b5b5',
+                footer: '#CCCCCC'
             },
             animation: {
                 fadeIn: 'fadeIn 220ms ease-in-out',
