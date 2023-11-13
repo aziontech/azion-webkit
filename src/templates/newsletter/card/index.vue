@@ -1,5 +1,5 @@
 <template>
-  <section class="newsletter-signup border border-solid surface-border p-7 rounded max-w-md">
+  <section class="newsletter-signup border border-solid surface-section surface-border p-7 rounded max-w-md">
     <h5 class="max-w-xl mt-0 mb-0 lg:text-2xl">
       {{ title }}
     </h5>

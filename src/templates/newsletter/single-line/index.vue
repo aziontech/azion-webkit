@@ -1,7 +1,7 @@
 <template>
     <section class="newsletter-singleline">
         <div class="container mx-auto">
-            <div class="lg:flex justify-between px-6 py-4 rounded surface-ground border border-solid surface-border">
+            <div class="lg:flex justify-between px-6 py-4 rounded surface-section border border-solid surface-border">
                 <div class="lg:w-2/4">
                     <h3 class="text-2xl max-w-xl">
                         {{ props.title }}

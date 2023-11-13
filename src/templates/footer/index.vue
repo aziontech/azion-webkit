@@ -1,5 +1,5 @@
 <template>
-  <footer class="pt-14 pb-6 px-2 xlg:p-0">
+  <footer class="pt-14 pb-6 px-2 xlg:p-0 bg-footer text-white">
     <div class="container mx-auto">
       <div class="flex flex-col lg:flex-row">
         <div class="w-full lg:w-1/4">
@@ -24,7 +24,7 @@
             <ul
               class="grid list-none leading-loose p-0 m-0"
               :class="indicesListsLargerThanFive.includes(index) ? 'grid grid-cols-2' : 'grid-cols-1'">
-              <li v-for="({ route, desc, target }, index) in list" :key="index" class="mb-2">
+              <li v-for="({ route, desc, target }, index) in list" :key="index" class="mb-2 text-footer">
                 <a
                   :href="`${route}`"
                   class="no-underline text-current"
