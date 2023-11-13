@@ -46,6 +46,4 @@ const props = defineProps({
 })
 
 const { data } = props
-
-console.log(data)
 </script>
