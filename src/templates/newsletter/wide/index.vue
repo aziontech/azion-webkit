@@ -42,7 +42,7 @@
     import InputText from 'primevue/inputtext';
     import Button from 'primevue/button';
     import stringConcatRamdomNumber from '../../../helpers/stringConcatRamdomNumber';
-    import Overline from '../../overline/index.vue'
+    import Overline from '../../../components/overline/index.vue'
 
     const formIdElement = stringConcatRamdomNumber('FormNewsletterSingleLine');
     const props = defineProps({
