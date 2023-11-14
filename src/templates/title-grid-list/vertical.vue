@@ -3,7 +3,7 @@
     <li class="mb-8"  v-for="({tagList, title, description, link}, index) in props.data" :key="index">
       <a :href="link" :title="title" :target="linkTarget" class="block no-underline text-current mb-2 group">
         <Tag class="mr-2" v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
-        <div class="hover:underline">
+        <div class="hover:underline my-2">
           <p class="lg:text-2xl font-bold text-color">{{ title }}</p>
           <p class="truncate text-small font-normal text-color-secondary">{{ description }}</p>
         </div>

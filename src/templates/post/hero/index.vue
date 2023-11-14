@@ -10,7 +10,7 @@
             {{ date }}
           </p>
         </div>
-        <h1 class="text-5xl font-bold text-color">
+        <h1 class="text-5xl font-bold text-color my-6">
           {{ title }}
         </h1>
         <div class="flex" v-if="authors">
@@ -23,7 +23,7 @@
         </div>
       </div>
       <figure class="hidden lg:block p-0 m-0 w-1/3" v-if="postImage">
-        <img :alt="postImage.alt" class="h-fit w-fit" :src="postImage.url">
+        <img :alt="postImage.alt" class="h-max w-max" :src="postImage.url">
       </figure>
     </div>
     </div>
