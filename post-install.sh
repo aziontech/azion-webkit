@@ -35,7 +35,7 @@ install () {
 }
 
 
-clean_download
+# clean_download
 download
 extract
 clean_node_modules
