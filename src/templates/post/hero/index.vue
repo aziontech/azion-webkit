@@ -22,9 +22,9 @@
           {{ date }}
         </p>
       </div>
-      <figure class="p-0 m-0 w-full lg:w-1/3" v-if="postImage">
-        <img :alt="postImage.alt" class="h-full w-full lg:object-cover" :src="postImage.url">
-      </figure>
+        <figure class="p-0 m-0 w-full lg:w-1/3 flex justify-center align-center" v-if="postImage">
+          <img :alt="postImage.alt" class="h-full w-full lg:object-cover max-w-md lg:max-w-none" :src="postImage.url">
+        </figure>
     </div>
   </div>
 </template>
