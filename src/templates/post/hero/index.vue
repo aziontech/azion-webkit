@@ -1,32 +1,32 @@
 <template>
   <div class="w-full surface-section">
-    <div class="container flex mx-auto lg:gap-20">
-      <div class="w-full lg:w-2/3 pt-12">
-        <div class="flex justify-between">
-          <div class="flex">
+    <div class="px-6 py-4 lg:py-0 lg:pl-40 lg:pr-0 flex flex-col-reverse lg:flex-row gap-4 lg:gap-32">
+      <div class="w-full lg:w-2/3 lg:py-14 flex flex-col gap-4 lg:gap-9 lg:-mr-14">
+        <div class="flex flex-col gap-4 lg:gap-6">
+          <div>
             <Tag class="mr-2" v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
           </div>
-          <p class="m-0">
-            {{ date }}
-          </p>
+          <h1 class="text-5xl font-bold text-color">
+            {{ title }}
+          </h1>
         </div>
-        <h1 class="text-5xl font-bold text-color my-6">
-          {{ title }}
-        </h1>
-        <div class="flex" v-if="authors">
+        <div v-if="authors">
           <AvatarGroup>
             <Avatar v-for="(image, index) in authors.avatars" :key="index" :image="image" shape="circle" />
           </AvatarGroup>
-          <p class="font-normal text-color-secondary ml-2">
+          <p class="font-normal text-color-secondary pt-3">
             {{ authors.title }}
           </p>
         </div>
+        <p class="font-normal text-color-secondary ">
+          {{ date }}
+        </p>
       </div>
-      <figure class="hidden lg:block p-0 m-0 w-1/3" v-if="postImage">
-        <img :alt="postImage.alt" class="h-max w-max" :src="postImage.url">
+      <figure class="p-0 m-0 w-full lg:w-1/3" v-if="postImage">
+        <img :alt="postImage.alt" class="h-full w-full lg:object-cover" :src="postImage.url">
       </figure>
     </div>
-    </div>
+  </div>
 </template>
 
 <script setup>
