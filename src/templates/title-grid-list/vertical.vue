@@ -1,6 +1,6 @@
 <template>
-  <ul class="list-none p-0">
-    <li class="mb-8"  v-for="({tagList, title, description, link}, index) in props.data" :key="index">
+  <ul class="list-none p-0 gap-4 lg:gap-11 flex flex-col">
+    <li v-for="({tagList, title, description, link}, index) in props.data" :key="index">
       <a :href="link" :title="title" :target="linkTarget" class="block no-underline text-current mb-2 group">
         <Tag class="mr-2" v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
         <div class="hover:underline my-2">
