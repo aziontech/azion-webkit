@@ -1,6 +1,6 @@
 <template>
   <div class="w-full surface-section">
-    <div class="px-6 py-4 lg:py-0 lg:pl-40 lg:pr-0 flex flex-col-reverse lg:flex-row gap-4 lg:gap-32">
+    <div class="px-6 py-4 lg:py-0 lg:pl-16 xl:pl-40 lg:pr-0 flex flex-col-reverse lg:flex-row gap-4 lg:gap-32">
       <div class="w-full lg:w-2/3 lg:py-14 flex flex-col gap-4 lg:gap-9 lg:-mr-14">
         <div class="flex flex-col gap-4 lg:gap-6">
           <div>
