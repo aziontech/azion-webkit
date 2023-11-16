@@ -4,7 +4,7 @@ import typography from '@tailwindcss/typography';
 export default {
     important: true,
     content: [
-        './src/**/*.{astro,html,js,md,mdx,ts,vue}',
+        './src/**/*.{html,md,mdx,vue}',
         'index.html'
     ],
     darkMode: 'class',
