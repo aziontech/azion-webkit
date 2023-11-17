@@ -1,6 +1,6 @@
 <template>
    <div class="flex gap-4 overflow-x-auto py-1">
-        <Button class="min-w-fit" @click="onClick" :key="index" v-for="(btn, index) in props.dataList" :size="size ? size : null" outlined rounded>
+        <Button class="min-w-fit" :key="index" v-for="(btn, index) in props.dataList" outlined rounded>
             {{ btn }}
         </Button>
    </div>
