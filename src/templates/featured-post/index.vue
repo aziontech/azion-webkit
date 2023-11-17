@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto block lg:flex items-center">
+    <div class="container mx-auto block lg:flex items-center lg:pt-12 lg:pb-16">
         <picture v-if="props.imgSrc" class="block p-0 m-0 lg:mr-10 block lg:min-w-[50%]">
             <img fetchpriority="high" class="h-auto w-full" width="622" height="468" :alt="props.imgAlt" :src="props.imgSrc" />
         </picture>
