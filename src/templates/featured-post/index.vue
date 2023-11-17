@@ -1,9 +1,9 @@
 <template>
     <div class="container mx-auto block lg:flex items-center">
-        <picture v-if="props.imgSrc" class="block p-0 m-0 mb-8 lg:mb-0 lg:mr-10 block lg:min-w-[50%]">
+        <picture v-if="props.imgSrc" class="block p-0 m-0 lg:mr-10 block lg:min-w-[50%]">
             <img fetchpriority="high" class="h-auto w-full" width="622" height="468" :alt="props.imgAlt" :src="props.imgSrc" />
         </picture>
-        <div class="content-center">
+        <div class="content-center p-4 pb-6 lg:p-0">
             <div class="flex gap-2">
                 <Tag v-for="(tag, index) in props.tagList" :key="index" :value="tag" severity="info" />
             </div>
@@ -14,7 +14,7 @@
                 {{ props.description }}
             </p>
             <a :href="props.link" :title="props.linkText" :target="props.linkTarget">
-                <Button :label="props.linkText " icon="pi pi-chevron-right" iconPos="right" />
+                <Button severity="secondary" :label="props.linkText " icon="pi pi-chevron-right" iconPos="right" />
             </a>
         </div>
     </div>
