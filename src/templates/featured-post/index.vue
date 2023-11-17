@@ -1,15 +1,7 @@
 <template>
     <div class="container mx-auto block lg:flex items-center">
-        <picture
-            v-if="props.imgSrc"
-            class="block p-0 m-0 mb-8 lg:mb-0 lg:mr-10 block lg:min-w-[50%]">
-
-            <img
-                class="h-auto w-full"
-                width="622"
-                height="468"
-                :alt="props.imgAlt"
-                :src="props.imgSrc" />
+        <picture v-if="props.imgSrc" class="block p-0 m-0 mb-8 lg:mb-0 lg:mr-10 block lg:min-w-[50%]">
+            <img fetchpriority="high" class="h-auto w-full" width="622" height="468" :alt="props.imgAlt" :src="props.imgSrc" />
         </picture>
         <div class="content-center">
             <div class="flex gap-2">
@@ -21,12 +13,7 @@
             <p class="text-xl font-normal text-color-secondary my-8">
                 {{ props.description }}
             </p>
-
-            <a
-                :href="props.link"
-                :title="props.linkText"
-                :target="props.linkTarget">
-
+            <a :href="props.link" :title="props.linkText" :target="props.linkTarget">
                 <Button :label="props.linkText " icon="pi pi-chevron-right" iconPos="right" />
             </a>
         </div>
