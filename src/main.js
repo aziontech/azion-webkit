@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import PrimeVue from 'primevue/config'
 import App from './App.vue'
+import Tooltip from 'primevue/tooltip';
 
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
@@ -12,4 +13,5 @@ import './assets/themes/scss/themes/azion-dark/theme.scss';
 createApp(App).mount('#app');
 
 App.use(PrimeVue, { ripple: true });
+App.directive('tooltip', Tooltip)
 App.mount('#app');
