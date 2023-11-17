@@ -1,36 +1,26 @@
 <template>
-  <footer class="pt-14 pb-6 px-2 xlg:p-0 bg-footer text-white">
+  <footer class="pt-14 pb-6 px-2 xlg:p-0 surface-ground text-color">
     <div class="container mx-auto">
       <div class="flex flex-col lg:flex-row">
         <div class="w-full lg:w-1/4">
-          <a
-            :href="`/${lang}/`"
-            title="Azion Technologies"
-            class="azion-technologies">
-
+          <a :href="`/${lang}/`" title="Azion Technologies" class="azion-technologies mb-4 block">
             <AznTechLogo />
           </a>
-          <p>{{ cta.text}} <span class="font-bold">{{ cta.phone }}</span></p>
+          <p>
+            {{ cta.text}}
+            <br>
+            <span class="text-[#F3652B]">{{ cta.phone }}</span>
+          </p>
         </div>
 
         <div class="w-full lg:w-3/4 grid grid-cols-1 gap-8 md:gap-0 md:grid-cols-4 m-0 mt-12 lg:mt-0 lg:pl-[5%] leading-loose">
-          <div
-            class=" list-none p-0"
-            :key="index"
-            v-for="({ title, list }, index) in listData">
-            <p class="font-bold mb-4 w-full mt-0">
+          <div class=" list-none p-0" :key="index" v-for="({ title, list }, index) in listData">
+            <p class="mb-4 w-full mt-0 text-xs text-color-secondary">
               {{ title }}
             </p>
-            <ul
-              class="grid list-none leading-loose p-0 m-0"
-              :class="indicesListsLargerThanFive.includes(index) ? 'grid grid-cols-2' : 'grid-cols-1'">
+            <ul class="grid list-none leading-loose p-0 m-0" :class="indicesListsLargerThanFive.includes(index) ? 'grid grid-cols-2' : 'grid-cols-1'">
               <li v-for="({ route, desc, target }, index) in list" :key="index" class="mb-2 text-footer">
-                <a
-                  :href="`${route}`"
-                  class="no-underline text-current"
-                  rel="noopener"
-                  :target="target ? target : '_self'">
-
+                <a :href="`${route}`" class="text-medium text-sm text-color no-underline" rel="noopener" :target="target ? target : '_self'">
                   {{ desc }}
                 </a>
               </li>
@@ -39,7 +29,9 @@
         </div>
       </div>
 
-      <div class="surface-border border border-solid h-px my-8" />
+      <div class="my-8">
+        <Divider />
+      </div>
 
       <div class="flex justify-end">
         <slot name="langSelector"></slot>
@@ -52,7 +44,9 @@
 </template>
 
 <script setup>
-  import AznTechLogo from "../../assets/icons/azion-logo.vue"
+  import AznTechLogo from "../../assets/icons/azion-logo.vue";
+  import Divider from 'primevue/divider';
+
 
   // interface List {
   //   route: string,

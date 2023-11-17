@@ -25,7 +25,6 @@ export default {
         'header-button-enabled': '#ffffff32',
         'header-button-hover': 'rgba(244, 244, 244, 0.04)',
         'header-avatar': '#363636',
-        footer: '#1e1e1e'
       },
       borderColor: {
         header: '#3e3e3e',
@@ -33,7 +32,6 @@ export default {
       },
       textColor: {
         header: '#b5b5b5',
-        footer: '#CCCCCC'
       },
       animation: {
         fadeIn: 'fadeIn 220ms ease-in-out',
