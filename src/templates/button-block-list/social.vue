@@ -26,7 +26,7 @@
   </div>
 </template>
 <script setup>
-import Button from 'primevue/button'
+import Button from 'primevue/button';
 
 const props = defineProps({
   sharedURL: {

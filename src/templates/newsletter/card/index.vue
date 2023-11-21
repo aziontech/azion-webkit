@@ -10,7 +10,7 @@
 					<InputText :placeholder="placeholderInput" class="w-full" />
 
 				</span>
-				<Button class='mt-4 w-full' type="submit" @click.prevent="onSubmit" icon="pi pi-chevron-right"
+				<Button class='mt-4 w-full' type="submit" icon="pi pi-chevron-right"
 					iconPos="right" :label="buttonText" size="small" />
 			</div>
 		</form>
@@ -36,11 +36,6 @@ const props = defineProps({
 		type: String,
 		required: false,
 		default: 'submit'
-	},
-	onSubmit: {
-		type: Function,
-		required: false,
-		default: () => { console.log('[NewsletterCard] onSubmit') }
 	}
 });
 

@@ -1,5 +1,5 @@
 import VerticalPostList from '../templates/title-grid-list/vertical.vue';
-import args from "../mock/verticalListData"
+import args from '../mock/verticalListData.js';
 
 export default {
   title: 'Blocks/TitleVerticalList',

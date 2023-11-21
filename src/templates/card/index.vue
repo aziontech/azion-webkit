@@ -33,8 +33,7 @@ const props = defineProps({
   },
   tagList: {
     type: Array,
-    required: false,
-    default: []
+    required: false
   },
   title: {
     type: String,

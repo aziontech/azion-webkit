@@ -1,6 +1,6 @@
 export default {
   title: 'CATEGORIES',
-  categories:  [
+  categories: [
     {
       label: "Networking",
       severity: "secondary",

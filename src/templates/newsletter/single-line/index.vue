@@ -26,7 +26,7 @@
                             <Button
                               class='min-w-fit w-full mt-4 md:mt-0 md:w-2/5'
                               :label="props.buttonText" icon="pi pi-chevron-right"
-                              iconPos="right" @click.prevent="onSubmit"
+                              iconPos="right"
                               size="small"
                             />
                         </div>
@@ -57,10 +57,6 @@
             type: String,
             required: false,
             default: 'submit'
-        },
-        onSubmit: {
-            type: Function,
-            required: false
         }
     });
 </script>

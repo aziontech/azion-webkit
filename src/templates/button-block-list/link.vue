@@ -4,7 +4,7 @@
   </div>
 </template>
 <script setup>
-import LinkButton from '../../components/link-button/index.vue'
+import LinkButton from '../../templates/link-button/index.vue'
 
 const props = defineProps({
   data: {

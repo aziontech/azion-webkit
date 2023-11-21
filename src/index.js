@@ -1,5 +1,6 @@
 
 import ButtonBlockList from './templates/button-block-list/index.vue';
+import LinkButton from './templates/link-button/index.vue';
 import LinkButtonBlockList from './templates/button-block-list/link.vue';
 import SocialButtonBlockList from './templates/button-block-list/social.vue';
 import Card from './templates/card/index.vue';
@@ -10,12 +11,11 @@ import PostCardGridList from './templates/card-grid-list/index.vue';
 import NewsletterSingleLine from './templates/newsletter/single-line/index.vue';
 import NewsletterCard from './templates/newsletter/card/index.vue';
 import NewsletterWide from './templates/newsletter/wide/index.vue';
-import Overline from "./components/overline/index.vue";
+import Overline from "./templates/overline/index.vue";
 import TitleFlexList from './templates/title-grid-list/index.vue';
 import TitleVerticalList from './templates/title-grid-list/vertical.vue';
 import ArticleHero from "./templates/post/hero/index.vue";
 import ReadableContent from "./templates/post/readable-content/index.vue";
-
 
 export {
   ButtonBlockList,
@@ -32,6 +32,7 @@ export {
   TitleVerticalList,
   NewsletterCard,
   Overline,
+  LinkButton,
   LinkButtonBlockList,
   SocialButtonBlockList
 }

@@ -1,5 +1,5 @@
 <template>
-	<a :href="link" target="_blank" rel="noopener noreferrer" class="p-button p-component p-button-sm min-w-fit no-underline">
+	<a :href="link" :title="text" target="_blank" rel="noopener noreferrer" class="p-button p-component p-button-sm min-w-fit no-underline">
 		{{ text }}
 	</a>
 </template>
@@ -18,3 +18,4 @@ const props = defineProps({
 
 const { text } = props;
 </script>
+
