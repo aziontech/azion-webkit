@@ -1,28 +1,27 @@
 <template>
-  <section class="newsletter-singleline">
-    <div class="container mx-auto">
-      <div class="lg:flex justify-between px-6 py-4 rounded surface-section border border-solid surface-border">
-        <div class="lg:w-2/4 flex items-center">
-          <h3 class="text-2xl max-w-xl">
-            {{ props.title }}
-          </h3>
-        </div>
-        <div class="lg:w-2/4 mt-2 lg:mt-0">
-          <form :id="formIdElement" :name="formIdElement" class="flex items-center w-full" @submit.prevent="onSubmit">
-            <InputGroup class="w-full">
-              <InputGroupAddon>
-                <i class="pi pi-envelope" />
-              </InputGroupAddon>
-              <InputText v-bind="email" type="e-mail" class="w-1/2 lg:w-fit" :placeholder="props.placeholderInput"
-                :class="{ 'p-invalid': errors.email }" />
-              <Button icon="pi pi-chevron-right" iconPos="right"
-                type="submit" :label="props.buttonText" size="small" :disabled="errors.email || !email.value" />
-            </InputGroup>
-          </form>
-          <div v-if="isError || isSuccess" class="mt-2">
-            <InlineMessage v-if="isSuccess" severity="success" class="flex justify-start">{{ successMessage }}</InlineMessage>
-            <InlineMessage v-else severity="error" class="flex justify-start">Error messag</InlineMessage>
-          </div>
+  <section class="container mx-auto">
+    <div class="lg:flex justify-between p-4 lg:p-8 rounded surface-section border border-solid surface-border">
+      <div class="lg:w-2/4 flex items-center">
+        <h3 class="text-2xl max-w-xl">
+          {{ props.title }}
+        </h3>
+      </div>
+      <div class="lg:w-2/4 pt-2 lg:pt-0">
+        <form :id="formIdElement" :name="formIdElement" class="flex items-center w-full" @submit.prevent="onSubmit">
+          <InputGroup class="w-full">
+            <InputGroupAddon>
+              <i class="pi pi-envelope" />
+            </InputGroupAddon>
+            <InputText v-bind="email" type="e-mail" class="w-1/2 lg:w-fit" :placeholder="props.placeholderInput"
+              :class="{ 'p-invalid': errors.email }" />
+            <Button type="submit" :label="props.buttonText" :disabled="errors.email || !email.value" />
+          </InputGroup>
+        </form>
+        <div v-if="isError || isSuccess" class="mt-2">
+          <InlineMessage v-if="isSuccess" severity="success" class="flex justify-start">
+            {{ successMessage }}
+          </InlineMessage>
+          <InlineMessage v-else severity="error" class="flex justify-start">Error message</InlineMessage>
         </div>
       </div>
     </div>
