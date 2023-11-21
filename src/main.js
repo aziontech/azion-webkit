@@ -10,8 +10,7 @@ import './assets/main.css';
 import './assets/themes/scss/themes/azion-light/theme.scss';
 import './assets/themes/scss/themes/azion-dark/theme.scss';
 
-createApp(App).mount('#app');
-
-App.use(PrimeVue, { ripple: true });
-App.directive('tooltip', Tooltip)
-App.mount('#app');
+const app = createApp(App);
+app.use(PrimeVue, { ripple: true });
+app.directive('tooltip', Tooltip)
+app.mount('#app');
