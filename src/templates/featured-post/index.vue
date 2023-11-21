@@ -1,30 +1,39 @@
 <template>
-  <div class="container mx-auto block lg:flex items-center lg:pt-12 lg:pb-16">
-    <picture v-if="props.imgSrc" class="block p-0 m-0 lg:mr-10 block lg:min-w-[50%]">
-      <img fetchpriority="high" class="h-auto w-full" width="622" height="468" :alt="props.imgAlt" :src="props.imgSrc" />
-    </picture>
-    <div class="content-center p-4 pb-6 lg:p-0">
-      <div class="flex gap-2">
-        <Tag v-for="(tag, index) in props.tagList" :key="index" :value="tag" severity="info" />
+  <a :href="link" :title="linkText" :target="linkTarget" class="container container mx-auto block">
+    <div class="flex flex-col lg:flex-row gap-4 lg:gap-8 lg:items-center border border-solid surface-border surface-card hover:border-[#f3652b]">
+      <picture v-if="imgSrc" class="block p-0 m-0 lg:w-1/2 lg:border-r lg:border-solid lg:surface-border">
+        <img fetchpriority="high" class="w-full aspect-video" width="576" height="324" :alt="imgAlt" :src="imgSrc" />
+      </picture>
+      <div class="flex flex-col lg:items-start gap-4 lg:w-2/3 px-4 pb-4 lg:px-0 lg:pr-4 lg:py-4">
+        <p class="text-xs text-color-secondary"> {{ date }} &bull; {{ readTime }}</p>
+        <div class="flex gap-2">
+          <Tag v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
+        </div>
+        <h1 class="text-3xl font-bold text-color">
+          {{ title }}
+        </h1>
+        <p class="font-normal text-color-secondary">
+          {{ description }}
+        </p>
+        <div v-if="authors">
+          <AvatarGroup>
+            <Avatar v-for="(image, index) in authors.avatars" :key="index" :image="image" shape="circle" />
+          </AvatarGroup>
+          <p class="font-normal text-color-secondary pt-3">
+            {{ authors.title }}
+          </p>
+        </div>
       </div>
-      <h1 class="text-5xl font-bold text-color my-8">
-        {{ props.title }}
-      </h1>
-      <p class="text-xl font-normal text-color-secondary my-8">
-        {{ props.description }}
-      </p>
-      <a :href="props.link" :title="props.linkText" :target="props.linkTarget">
-        <Button severity="secondary" :label="props.linkText" icon="pi pi-chevron-right" iconPos="right" />
-      </a>
     </div>
-  </div>
+  </a>
 </template>
 
 <script setup>
-import Button from 'primevue/button';
 import Tag from 'primevue/tag';
+import Avatar from 'primevue/avatar'
+import AvatarGroup from 'primevue/avatargroup'
 
-const props = defineProps({
+defineProps({
   imgSrc: {
     type: String,
     required: false
@@ -36,7 +45,7 @@ const props = defineProps({
   },
   tagList: {
     type: Array,
-    required: false
+    required: false,
   },
   title: {
     type: String,
@@ -59,6 +68,18 @@ const props = defineProps({
     required: false,
     options: ['_blank', '_self'],
     default: '_self'
+  },
+  date: {
+    type: String,
+    required: true,
+  },
+  readTime: {
+    type: String,
+    required: true
+  },
+  authors: {
+    type: Object,
+    required: true
   }
 });
 </script>
