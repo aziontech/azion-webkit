@@ -6,29 +6,14 @@
           <a href="/" title="Home | Azion Technologies" class="block mr-6">
             <AzionLogoDefault class="w-[90px]" />
           </a>
-
           <!-- Custom Nav -->
-          <nav>
-            <Button text label="Products" icon-pos="right" icon="pi pi-angle-down" @click="toggle"/>
-            <OverlayPanel ref="op" class="top-12 z-50 absolute left-[18.5rem]">
+          <nav class="flex gap-2">
+            <Button text label="Products" icon-pos="right" icon="pi pi-angle-down" @click="toggleProducts"/>
+            <OverlayPanel ref="products">
               <div class="flex flex-row p-3 gap-4"> 
-                <!-- OPÇÃO Menu -->
-                <!-- <Menu :model="items[0].items" class="flex flex-col gap-2 border-none bg-transparent">
-                  <template #item="{ item, props}">
-                    <div class="p-2 flex justify-between w-full" @click="setActive(item, props.index)">
-                      <div class="flex-row gap-2">
-                        <span :class="item.icon" />
-                        <span class="ml-2">{{ item.label }}</span>
-                      </div>
-                      <div>
-                        <i class="pi pi-angle-right"/>
-                      </div>
-                    </div>
-                  </template>
-                </Menu> -->
-                <!-- OPÇÃO Buttons -->
+                <!-- Menu -->
                 <div class="flex flex-col gap-2">
-                  <Button text class="flex gap-2 justify-between w-full items-center" @click="active = 0" :class="{ '!text-color-secondary': active === 0 }">
+                  <Button text class="flex gap-2 justify-between w-full items-center" @click="active = 0" :class="{ '!text-color-secondary-overlay': active === 0 }">
                     <div class="flex gap-2 items-center"><i class="pi pi-box"/>Build</div><i class="pi pi-angle-right"/>
                   </Button>
                   <Button text class="flex gap-2 justify-between w-full items-center" @click="active = 1" :class="{ '!surface-hover': active === 1 }">
@@ -161,28 +146,72 @@
                 </div>
               </div>
             </OverlayPanel>
-            <Button text label="teste"/>
+            <Button text label="Products" icon-pos="right"/>
+            <Button text label="Products" icon-pos="right"/>
+            <Button text label="Products" icon-pos="right" icon="pi pi-angle-down" @click="toggleResources"/>
+            <OverlayPanel ref="resources">
+              <div class="flex flex-row p-3 gap-4"> 
+                <div class="flex w-full max-w-[500px]">
+                  <TabView
+                    v-model:activeIndex="active"
+                    :pt="{
+                      navContainer: { class: 'hidden' },
+                    }">
+                  >
+                    <TabPanel>
+                        <div class="grid grid-cols-2 gap-2 m-0 p-0 w-[500px]">
+                          <Button text class="flex gap-2 justify-between w-full items-center">
+                            <div class="flex flex-row gap-4 items-center">
+                              <i class="pi pi-box"/>
+                              <div class="flex flex-col items-start">
+                                <div class="flex gap-2 items-center">Edge Application</div>
+                                <div class="text-xs text-color-secondary">Description</div>
+                              </div>
+                            </div>
+                          </Button>
+                          <Button text class="flex gap-2 justify-between w-full items-center">
+                            <div class="flex flex-row gap-4 items-center">
+                              <i class="pi pi-box"/>
+                              <div class="flex flex-col items-start">
+                                <div class="flex gap-2 items-center">Edge Application</div>
+                                <div class="text-xs text-color-secondary">Description</div>
+                              </div>
+                            </div>
+                          </Button>
+                          <Button text class="flex gap-2 justify-between w-full items-center">
+                            <div class="flex flex-row gap-4 items-center">
+                              <i class="pi pi-box"/>
+                              <div class="flex flex-col items-start">
+                                <div class="flex gap-2 items-center">Edge Application</div>
+                                <div class="text-xs text-color-secondary">Description</div>
+                              </div>
+                            </div>
+                          </Button>
+                          <Button text class="flex gap-2 justify-between w-full items-center">
+                            <div class="flex flex-row gap-4 items-center">
+                              <i class="pi pi-box"/>
+                              <div class="flex flex-col items-start">
+                                <div class="flex gap-2 items-center">Edge Application</div>
+                                <div class="text-xs text-color-secondary">Description</div>
+                              </div>
+                            </div>
+                          </Button>
+                          <Button text class="flex gap-2 justify-between w-full items-center">
+                            <div class="flex flex-row gap-4 items-center">
+                              <i class="pi pi-box"/>
+                              <div class="flex flex-col items-start">
+                                <div class="flex gap-2 items-center">Edge Application</div>
+                                <div class="text-xs text-color-secondary">Description</div>
+                              </div>
+                            </div>
+                          </Button>
+                        </div>
+                    </TabPanel>
+                  </TabView>
+                </div>
+              </div>
+            </OverlayPanel>
           </nav>
-
-          <!-- MENUBAR Component -->
-          <!-- <nav>
-            <Menubar :model="items" class="border-0 surface-section">
-              <template #item="{ item, props, hasSubmenu, root }">
-                  <a v-ripple class="flex align-items-center" v-bind="props.action">
-                    <div class="flex p-40">
-                      <span :class="item.icon" />
-                      <span class="ml-2">
-                        {{ item.label }}
-                      </span>
-                      <span v-if="item.shortcut" class="ml-auto border-1 surface-border border-round surface-100 text-xs p-1">
-                        {{ item.shortcut }}
-                      </span>
-                      <i v-if="hasSubmenu" :class="['pi pi-angle-down text-primary', { 'pi-angle-down ml-2': root, 'pi-angle-right ml-auto': !root }]"></i>
-                  </div>
-                  </a>
-              </template>
-            </Menubar>
-          </nav> -->
         </div>
         <div class="flex gap-2">
           <a href="" title="Signin | Azion Technologies" class="p-button p-button-secondary p-button-text">
@@ -215,28 +244,19 @@
 <script setup>
 import { ref } from 'vue';
 import Button from 'primevue/button';
-import Menu from 'primevue/menu';
 import OverlayPanel from 'primevue/overlaypanel';
 import TabView from 'primevue/tabview';
 import TabPanel from 'primevue/tabpanel';
 import AzionLogoDefault from '../../assets/icons/azion-logo-default.vue';
 
-const items = ref([
-  {
-    items: [
-      { label: 'Build', icon: 'pi pi-box' },
-      { label: 'Secure', icon: 'pi pi-shield' },
-      { label: 'Deploy', icon: 'pi pi-code' },
-      { label: 'Observe', icon: 'pi pi-chart-line' },
-    ],
-    active: 0,
-  },
-]);
+const products = ref();
+const resources = ref();
 
-const op = ref();
-
-const toggle = (event) => {
-  op.value.toggle(event);
+const toggleProducts = (event) => {
+  products.value.toggle(event);
+};
+const toggleResources = (event) => {;
+  resources.value.toggle(event);
 };
 
 const active = ref(0);
