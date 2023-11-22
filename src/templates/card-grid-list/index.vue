@@ -1,10 +1,6 @@
 <template>
-  <div class="container mx-auto">
-    <div class="post-list grid md:grid-cols-3 lg:grid-cols-4 px-2 gap-4 pt-6">
-      <a class="no-underline flex" v-for="({ image, link, title, description, tagList }, index) in data" :href="link" :key="index">
-        <Card :imgSrc="image" :imgAlt="title" :tagList="tagList" :title="title" :description="description" />
-      </a>
-    </div>
+  <div class="container grid m-0 md:grid-cols-2 lg:grid-cols-3 gap-y-16">
+      <Card v-for="({ image, link, title, description, tagList }, index) in data" :href="link" :key="index" :imgSrc="image" :imgAlt="title" :tagList="tagList" :title="title" :description="description" />
   </div>
 </template>
 
