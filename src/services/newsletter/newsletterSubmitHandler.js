@@ -1,4 +1,4 @@
-export const submit = async (formData, email) => {
+export const newsletterSubrscribeHandler = async (formData, email) => {
   const { fetchLink, uri, pageName, acceptanceTermText } = formData
 
   const response = await fetch(fetchLink, {

@@ -27,7 +27,7 @@ import InputText from 'primevue/inputtext';
 import Button from 'primevue/button';
 import * as yup from 'yup'
 import { useForm } from 'vee-validate'
-import { submit } from '../../../services/newsletter/newsletterSubmitHandler'
+import { newsletterSubrscribeHandler } from '../../../services/newsletter/newsletterSubmitHandler'
 import stringConcatRamdomNumber from '../../../helpers/stringConcatRamdomNumber';
 import InlineMessage from 'primevue/inlinemessage'
 import { ref } from 'vue';
@@ -91,7 +91,7 @@ const { defineInputBinds, errors } = useForm({
 const email = defineInputBinds('email', { validateOnInput: true })
 
 const onSubmit = async () => {
-  const response = await submit(formData, email.value)
+  const response = await newsletterSubrscribeHandler(formData, email.value)
   isError.value = false
   isSuccess.value = false
 

@@ -1,7 +1,7 @@
 <template>
   <section class="newsletter-signup surface-section">
     <div class="lg:px-40 lg:py-28 py-8 px-4">
-      <div class="lg:flex justify-between lg:gap-4">
+      <div class="lg:flex justify-between lg:gap-16">
         <div class="lg:w-2/4">
           <Overline v-if="props.overline">
             {{ props.overline }}
@@ -42,7 +42,7 @@ import Overline from '../../overline/index.vue'
 import InlineMessage from 'primevue/inlinemessage'
 import * as yup from 'yup'
 import { useForm } from 'vee-validate'
-import { submit } from '../../../services/newsletter/newsletterSubmitHandler'
+import { newsletterSubrscribeHandler } from '../../../services/newsletter/newsletterSubmitHandler'
 import { ref } from 'vue';
 
 const formIdElement = stringConcatRamdomNumber('FormNewsletterSingleLine');
@@ -112,7 +112,7 @@ const { defineInputBinds, errors } = useForm({
 const email = defineInputBinds('email', { validateOnInput: true })
 
 const onSubmit = async () => {
-  const response = await submit(formData, email.value)
+  const response = await newsletterSubrscribeHandler(formData, email.value)
   isError.value = false
   isSuccess.value = false
 
