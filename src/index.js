@@ -1,6 +1,6 @@
 
 import ButtonBlockList from './templates/button-block-list/index.vue';
-import LinkButton from './templates/link-button/index.vue';
+import LinkButton from './templates/button/link.vue';
 import LinkButtonBlockList from './templates/button-block-list/link.vue';
 import SocialButtonBlockList from './templates/button-block-list/social.vue';
 import Card from './templates/card/index.vue';
@@ -16,6 +16,7 @@ import TitleFlexList from './templates/title-grid-list/index.vue';
 import TitleVerticalList from './templates/title-grid-list/vertical.vue';
 import ArticleHero from "./templates/post/hero/index.vue";
 import ReadableContent from "./templates/post/readable-content/index.vue";
+import TabMenuSearch from "./templates/tab-menu/with-search.vue"
 
 export {
   ButtonBlockList,
@@ -34,5 +35,6 @@ export {
   Overline,
   LinkButton,
   LinkButtonBlockList,
-  SocialButtonBlockList
+  SocialButtonBlockList,
+  TabMenuSearch,
 }

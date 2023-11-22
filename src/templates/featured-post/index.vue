@@ -1,5 +1,5 @@
 <template>
-  <a :href="link" :title="linkText" :target="linkTarget" class="container container mx-auto block">
+  <a :href="link" :title="linkText" :target="linkTarget" class="container block">
     <div class="flex flex-col lg:flex-row gap-4 lg:gap-8 lg:items-center border border-solid surface-border surface-card hover:border-[#f3652b]">
       <picture v-if="imgSrc" class="block p-0 m-0 lg:w-1/2 lg:border-r lg:border-solid lg:surface-border">
         <img fetchpriority="high" class="w-full aspect-video" width="576" height="324" :alt="imgAlt" :src="imgSrc" />

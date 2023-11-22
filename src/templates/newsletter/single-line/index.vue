@@ -1,5 +1,5 @@
 <template>
-  <section class="container mx-auto">
+  <section class="container">
     <div class="lg:flex justify-between p-4 lg:p-8 rounded surface-section border border-solid surface-border">
       <div class="lg:w-2/4 flex items-center">
         <h3 class="text-2xl max-w-xl">
