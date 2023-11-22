@@ -15,11 +15,11 @@
         <p class="font-normal text-color-secondary">
           {{ description }}
         </p>
-        <div v-if="authors">
+        <div v-if="authors" class="flex gap-2 items-center">
           <AvatarGroup>
             <Avatar v-for="(image, index) in authors.avatars" :key="index" :image="image" shape="circle" />
           </AvatarGroup>
-          <p class="font-normal text-color-secondary pt-3">
+          <p class="text-xs text-color-secondary">
             {{ authors.title }}
           </p>
         </div>
