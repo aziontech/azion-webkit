@@ -2,6 +2,7 @@
 import ButtonBlockList from './templates/button-block-list/index.vue';
 import LinkButton from './templates/button/link.vue';
 import LinkButtonBlockList from './templates/button-block-list/link.vue';
+import Button from './templates/button/index.vue'
 import SocialButtonBlockList from './templates/button-block-list/social.vue';
 import Card from './templates/card/index.vue';
 import CardGridList from './templates/card-grid-list/index.vue'
@@ -37,4 +38,5 @@ export {
   LinkButtonBlockList,
   SocialButtonBlockList,
   TabMenuSearch,
+  Button
 }
