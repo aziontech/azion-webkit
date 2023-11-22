@@ -247,6 +247,7 @@ import Button from 'primevue/button';
 import OverlayPanel from 'primevue/overlaypanel';
 import TabView from 'primevue/tabview';
 import TabPanel from 'primevue/tabpanel';
+import ToggleButton from 'primevue/togglebutton';
 import AzionLogoDefault from '../../assets/icons/azion-logo-default.vue';
 
 const products = ref();
