@@ -3,9 +3,7 @@
     <div class="lg:px-40 lg:py-28 py-8 px-4">
       <div class="lg:flex justify-between lg:gap-16">
         <div class="lg:w-2/4">
-          <Overline v-if="props.overline">
-            {{ props.overline }}
-          </Overline>
+          <Overline :label="props.overline" v-if="props.overline" />
           <h3 class="md:text-6xl text-3xl font-normal text-color max-w-xl mt-2 mb-0">
             {{ props.title }}
           </h3>
