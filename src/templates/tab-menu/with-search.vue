@@ -1,8 +1,11 @@
 <template>
-  <div class="container flex justify-between">
-    <TabMenu class="w-2/3" v-model:activeIndex="active" :model="tabList" />
-    <div class="w-1/3 flex justify-end">
-      <span class="p-input-icon-left w-full max-w-xs">
+  <div class="container flex justify-between flex-col lg:flex-row">
+    <div class="lg:w-2/3 w-ful">
+      <TabMenu class="sm:hidden lg:block overflow-y-auto" v-model:activeIndex="active" :model="mappedDataTabMenu" />
+      <Dropdown class="lg:hidden w-full" v-model="active" :options="mappedDataDropdown" optionLabel="name" />
+    </div>
+    <div class="w-full lg:w-1/3 flex justify-end pt-4 lg:pt-0">
+      <span class="p-input-icon-left w-full lg:max-w-xs">
         <i class="pi pi-search" />
         <InputText class="w-full " v-model="searchInput" :placeholder="inputPlaceholder" />
       </span>
@@ -13,11 +16,12 @@
 <script setup>
 import TabMenu from 'primevue/tabmenu';
 import InputText from 'primevue/inputtext';
+import Dropdown from 'primevue/dropdown';
 import { ref } from "vue";
 
 const active = ref(0);
 
-defineProps({
+const props = defineProps({
   tabList: {
     type: Array,
     required: true
@@ -36,4 +40,14 @@ defineProps({
 // }
 
 const searchInput = ref('')
+const { tabList } = props
+
+const mappedDataTabMenu = tabList.map(item => {
+  return { label: item }
+})
+
+const mappedDataDropdown = tabList.map(item => {
+  return { name: item }
+})
+
 </script>
