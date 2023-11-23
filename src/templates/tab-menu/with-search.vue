@@ -4,7 +4,7 @@
     <div class="w-1/3 flex justify-end">
       <span class="p-input-icon-left w-full max-w-xs">
         <i class="pi pi-search" />
-        <InputText class="w-full " v-model="searchInput" placeholder="Search articles..." />
+        <InputText class="w-full " v-model="searchInput" :placeholder="inputPlaceholder" />
       </span>
     </div>
   </div>
@@ -21,8 +21,19 @@ defineProps({
   tabList: {
     type: Array,
     required: true
-  }
+  },
+  inputPlaceholder: {
+    type: String,
+    required: false,
+    default: "Search articles..."
+  },
 });
+
+// interface Tablist {
+//   type: Array<{
+//   label: String
+// }>
+// }
 
 const searchInput = ref('')
 </script>
