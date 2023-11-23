@@ -9,7 +9,7 @@ const config = {
         '@storybook/addon-essentials',
         '@storybook/addon-interactions',
         '@storybook/addon-mdx-gfm',
-        'storybook-addon-vue-slots'
+        '@storybook-addon-vue-slots'
     ],
     framework: {
         name: '@storybook/vue3-vite',
