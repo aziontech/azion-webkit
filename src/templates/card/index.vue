@@ -1,7 +1,7 @@
 <template>
   <a :href="props.href" :title="props.title" class="no-underline flex group border-radius md:max-w-sm">
-    <Card class="overflow-hidden"
-      :pt="{ header: { class: 'border border-transparent	group-hover:border group-hover:border-solid group-hover:border-[#f3652b]' }, root: { class: 'shadow-none surface-ground flex flex-col gap-6 p-1' } }">
+    <Card class="p-0 mt-0"
+      :pt="{ header: { class: 'border border-transparent	group-hover:border group-hover:border-solid group-hover:border-[#f3652b]' }, root: { class: 'shadow-none surface-ground flex flex-col gap-6' } }">
       <template #header v-if="props.imgSrc">
         <img class="w-full aspect-video" lazy alt="`${imgAlt}`" :src="`https://assets.azion.com${props.imgSrc}`" />
       </template>
