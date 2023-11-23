@@ -1,8 +1,8 @@
-import LinkButton from '../templates/button/link.vue';
+import Button from '../templates/button/index.vue';
 
 export default {
-  title: 'Components/link-button',
-  component: LinkButton,
+  title: 'Components/Button',
+  component: Button,
   tags: ['autodocs'],
   argTypes: {}
 };
@@ -11,7 +11,6 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/vue/writing-stories/args
 export const Default = {
   args: {
-    text: 'link button text',
-    link: 'https://www.azion.com/en/'
+    label: 'link button text',
   }
 };
