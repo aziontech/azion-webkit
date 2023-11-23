@@ -1,5 +1,6 @@
 export default {
   title: 'Become an expert in Edge Computing',
-  buttonText: 'subscribe our newsletter',
+  buttonText: 'subscribe',
   placeholderInput: 'Your e-mail',
+  overline: "SIGN UP"
 };
