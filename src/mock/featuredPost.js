@@ -6,5 +6,8 @@ export default {
   description: "Here at Azion, we're very excited to announce that Azion Technologies has been named a “best fit for companies that need global edge performance…” in The Forrester New WaveTM: Edge Development Platforms, Q4 2021.",
   link: 'https://www.azion.com/en/blog/azion-listed-in-forrester-new-wave-edge-platforms/',
   linkText: "read more",
-  linkTarget: "_self"
+  linkTarget: "_self",
+  date: "JUL, 13, 2020",
+  readTime: "10 minutes",
+  authors: { avatars: ['https://assets.azion.com/static/images/uploads/vivian-seixas2.png'], title: 'Rafael Rigues' }
 };

@@ -1,10 +1,14 @@
 <template>
   <a :href="link" :title="linkText" :target="linkTarget" class="container block">
-    <div class="flex flex-col lg:flex-row gap-4 lg:gap-8 lg:items-center border border-solid surface-border surface-card hover:border-[#f3652b]">
-      <picture v-if="imgSrc" class="block p-0 m-0 lg:w-1/2 lg:border-r lg:border-solid lg:surface-border">
-        <img fetchpriority="high" class="w-full aspect-video" width="576" height="324" :alt="imgAlt" :src="imgSrc" />
-      </picture>
-      <div class="flex flex-col lg:items-start gap-4 lg:w-2/3 px-4 pb-4 lg:px-0 lg:pr-4 lg:py-4">
+    <div
+      class="flex flex-col lg:flex-row gap-4 lg:gap-8 lg:items-center border border-solid surface-border surface-card hover:border-[#f3652b]">
+      <div class="h-full lg:w-1/2 lg:border-r lg:border-solid lg:surface-border">
+        <picture v-if="imgSrc" class="p-0 m-0">
+          <img fetchpriority="high" class="w-full md:object-cover" width="576" height="324" :alt="imgAlt"
+            :src="imgSrc" />
+        </picture>
+      </div>
+      <div class="flex flex-col lg:w-1/2 lg:items-start gap-4 px-4 pb-4 lg:px-0 lg:pr-4  lg:py-2">
         <p class="text-xs text-color-secondary"> {{ date }} &bull; {{ readTime }}</p>
         <div class="flex gap-2">
           <Tag v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
