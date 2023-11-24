@@ -1,12 +1,13 @@
 <template>
-	<a :href="link" :title="text" target="_blank" rel="noopener noreferrer" class="p-button p-component p-button-sm min-w-fit no-underline">
-		{{ text }}
+	<a :href="link" :title="label" target="_blank" rel="noopener noreferrer" class="p-button p-component p-button-sm min-w-fit no-underline">
+		{{ label }}
 	</a>
 </template>
 
 <script setup>
-const props = defineProps({
-	text: {
+
+defineProps({
+	label: {
 		type: String,
 		required: true
 	},
@@ -15,7 +16,5 @@ const props = defineProps({
 		required: true
 	}
 });
-
-const { text } = props;
 </script>
 
