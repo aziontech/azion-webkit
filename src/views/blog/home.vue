@@ -1,6 +1,5 @@
 <template>
-  <Header />
-
+  <Header :menubar="menubarData.data"/>
   <main>
     <div class="py-8 mb-20 surface-ground">
       <FeaturedPost
@@ -13,37 +12,35 @@
         :linkText="featuredPostData.linkText"
         :linkTarget="featuredPostData.linkTarget" />
     </div>
-
+    <div class="container mx-auto py-8">
+      <TitleFlexList :dataList="titleFlexListData" />
+    </div>
     <div class="my-20">
       <NewsletterSingleLine
-        :title="newsletterData.title"
-        :buttonText="newsletterData.buttonText"
-        :placeholderInput="newsletterData.placeholderInput"
-        :onSubmit="newsletterData.onSubmit" />
+        :title="newsletterSingleLineData.title"
+        :buttonText="newsletterSingleLineData.buttonText"
+        :placeholderInput="newsletterSingleLineData.placeholderInput" />
     </div>
-
     <section>
       <div class="container mx-auto py-8">
-        <ButtonBlockList
-          :dataList="buttonBlockListData.dataList"
-          :onClick="buttonBlockListData.onclick" />
+        <ButtonBlockList :dataList="buttonBlockListData.dataList" />
       </div>
-
       <div class="py-8">
         <PostCardGridList :data="cardData" />
       </div>
     </section>
-
     <NewsletterWide
       class="py-8"
       :overline="newsletterWideData.overline"
       :title="newsletterWideData.title"
       :buttonText="newsletterWideData.buttonText"
-      :placeholderInput="newsletterWideData.placeholderInput"
-      :onSubmit="newsletterWideData.onSubmit" />
+      :placeholderInput="newsletterWideData.placeholderInput" />
   </main>
-
-  <Footer lang="en" :listData="footerData.listData" :cta="footerData.cta" :copyright="footerData.copyright" />
+  <Footer
+    lang="en"
+    :listData="footerData.listData"
+    :cta="footerData.cta"
+    :copyright="footerData.copyright" />
 </template>
 
 <script setup>
@@ -61,7 +58,7 @@
   ////////////////////////
   // MOCKING PARAMETERS /
   ///////////////////////
-
+  import menubarData from '../../mock/menubar.js';
   import featuredPostData from '../../mock/featuredPost.js';
   import buttonBlockListData from '../../mock/buttonBlockList.js';
   import newsletterData from '../../mock/newsletterSingleLine.js';
