@@ -2,7 +2,7 @@
   <div class="container flex justify-between flex-col lg:flex-row">
     <div class="lg:w-2/3 w-ful">
       <TabMenu class="sm:hidden lg:block overflow-y-auto" v-model:activeIndex="active" :model="mappedDataTabMenu" />
-      <Dropdown class="lg:hidden w-full" v-model="active" :options="mappedDataDropdown" optionLabel="name" />
+      <Dropdown class="lg:hidden w-full" v-model="active" :options="tabList" />
     </div>
     <div class="w-full lg:w-1/3 flex justify-end pt-4 lg:pt-0">
       <span class="p-input-icon-left w-full lg:max-w-xs">
@@ -44,10 +44,6 @@ const { tabList } = props
 
 const mappedDataTabMenu = tabList.map(item => {
   return { label: item }
-})
-
-const mappedDataDropdown = tabList.map(item => {
-  return { name: item }
 })
 
 </script>
