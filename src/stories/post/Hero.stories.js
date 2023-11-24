@@ -15,6 +15,18 @@ export const Default = {
     title: data.title,
     tagList: data.tagList,
     authors: data.authors,
+    breadcrumbItems: [
+      {
+        url: "/en/blog/",
+        target: "_self",
+        label: "Blog",
+      },
+      {
+        url: '',
+        target: "_self",
+        label: "This article",
+      },
+    ]
   }
 };
 

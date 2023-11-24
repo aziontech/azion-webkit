@@ -3,24 +3,24 @@ const listData = [
     title: "Resources",
     list: [
       {
-        desc: "Blog",
-        route: "/en/blog/"
+        title: "Blog",
+        link: "/en/blog/"
       },
       {
-        desc: "Documentation",
-        route: "/en/documentation/"
+        title: "Documentation",
+        link: "/en/documentation/"
       },
       {
-        desc: "Marketplace",
-        route: "/en/marketplace/"
+        title: "Marketplace",
+        link: "/en/marketplace/"
       },
       {
-        desc: "Compliance",
-        route: "/en/compliance/"
+        title: "Compliance",
+        link: "/en/compliance/"
       },
       {
-        desc: "Success Cases",
-        route: "/en/success-case/"
+        title: "Success Cases",
+        link: "/en/success-case/"
       }
     ]
   },
@@ -28,24 +28,24 @@ const listData = [
     title: "Company",
     list: [
       {
-        desc: "About us",
-        route: "/en/about-us/"
+        title: "About us",
+        link: "/en/about-us/"
       },
       {
-        desc: "Azion Edge Network",
-        route: "/en/products/edge-network/"
+        title: "Azion Edge Network",
+        link: "/en/products/edge-network/"
       },
       {
-        desc: "Careers",
-        route: "/en/careers",
+        title: "Careers",
+        link: "/en/careers",
       },
       {
-        desc: "Privacy Policy",
-        route: "/en/documentation/agreements/privacy-policy/"
+        title: "Privacy Policy",
+        link: "/en/documentation/agreements/privacy-policy/"
       },
       {
-        desc: "Roadmap",
-        route: "/en/roadmap/"
+        title: "Roadmap",
+        link: "/en/roadmap/"
       }
     ]
   },
@@ -53,12 +53,12 @@ const listData = [
     title: "Pricing",
     list: [
       {
-        desc: "Products",
-        route: "/en/pricing/"
+        title: "Products",
+        link: "/en/pricing/"
       },
       {
-        desc: "Support",
-        route: "/en/support/"
+        title: "Support",
+        link: "/en/support/"
       }
     ]
   },
@@ -66,51 +66,51 @@ const listData = [
     title: "Contact Us",
     list: [
       {
-        desc: "Sales",
-        route: "/en/pricing/"
+        title: "Sales",
+        link: "/en/pricing/"
       },
       {
-        desc: "Support",
-        route: "/en/support/"
+        title: "Support",
+        link: "/en/support/"
       },
       {
-        desc: "Facebook",
-        route: "https://www.facebook.com/aziontech",
+        title: "Facebook",
+        link: "https://www.facebook.com/aziontech",
         target: "_blank"
       },
       {
-        desc: "Twitter",
-        route: "https://twitter.com/aziontech",
+        title: "Twitter",
+        link: "https://twitter.com/aziontech",
         target: "_blank"
       },
       {
-        desc: "Linkedin",
-        route: "https://www.linkedin.com/company/aziontech",
+        title: "Linkedin",
+        link: "https://www.linkedin.com/company/aziontech",
         target: "_blank"
       },
       {
-        desc: "Instagram",
-        route: "https://www.instagram.com/aziontech",
+        title: "Instagram",
+        link: "https://www.instagram.com/aziontech",
         target: "_blank"
       },
       {
-        desc: "YouTube",
-        route: "https://www.youtube.com/aziontech",
+        title: "YouTube",
+        link: "https://www.youtube.com/aziontech",
         target: "_blank"
       },
       {
-        desc: "GitHub",
+        title: "GitHub",
         target: "_blank",
-        route: "https://github.com/aziontech"
+        link: "https://github.com/aziontech"
       },
       {
-        desc: "Discord",
+        title: "Discord",
         target: "_blank",
-        route: "https://discord.gg/Yp9N7RMVZy"
+        link: "https://discord.gg/Yp9N7RMVZy"
       },
       {
-        desc: "Medium",
-        route: "https://medium.com/aziontech",
+        title: "Medium",
+        link: "https://medium.com/aziontech",
         target: "_blank"
       }
     ]
