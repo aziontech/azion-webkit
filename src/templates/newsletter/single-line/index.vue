@@ -97,11 +97,7 @@ const { defineInputBinds, errors } = useForm({
 const email = defineInputBinds('email', { validateOnInput: true })
 
 const onSubmit = async () => {
-<<<<<<< HEAD
   const response = await newsletterSubrscribeHandler(formData, email.value)
-=======
-  const response = await submit(formData, email.value)
->>>>>>> 133c04a (FEAT: Newsletter Service)
   isError.value = false
   isSuccess.value = false
 
