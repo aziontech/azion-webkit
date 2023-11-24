@@ -1,4 +1,6 @@
 <template>
+  <Header />
+
   <main>
     <div class="py-8 mb-20 surface-ground">
       <FeaturedPost
@@ -31,13 +33,14 @@
         <PostCardGridList :data="cardData" />
       </div>
     </section>
-      <NewsletterWide
-        class="py-8"
-        :overline="newsletterData.overline"
-        :title="newsletterData.title"
-        :buttonText="newsletterData.buttonText"
-        :placeholderInput="newsletterData.placeholderInput"
-        />
+
+    <NewsletterWide
+      class="py-8"
+      :overline="newsletterWideData.overline"
+      :title="newsletterWideData.title"
+      :buttonText="newsletterWideData.buttonText"
+      :placeholderInput="newsletterWideData.placeholderInput"
+      :onSubmit="newsletterWideData.onSubmit" />
   </main>
 
   <Footer lang="en" :listData="footerData.listData" :cta="footerData.cta" :copyright="footerData.copyright" />
@@ -50,6 +53,7 @@
   import ButtonBlockList from '../../templates/button-block-list/index.vue';
   import FeaturedPost from '../../templates/featured-post/index.vue';
   import Footer from '../../templates/footer/index.vue';
+  import Header from '../../templates/header/index.vue';
   import PostCardGridList from '../../templates/card-grid-list/index.vue';
   import NewsletterSingleLine from '../../templates/newsletter/single-line/index.vue';
   import NewsletterWide from '../../templates/newsletter/wide/index.vue';

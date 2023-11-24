@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
-import PrimeVue from 'primevue/config';
-import Tooltip from 'primevue/tooltip';
+// import PrimeVue from 'primevue/config';
+// import Tooltip from 'primevue/tooltip';
 import App from './App.vue';
 
 import 'primeflex/primeflex.css';
