@@ -46,7 +46,6 @@
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/test-utils": "^2.3.0",
     "cypress": "^13.4.0",
-    "primevue-sass-theme": "git+https://github.com/primefaces/primevue-sass-theme.git#3.39.0",
     "eslint": "^8.34.0",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-storybook": "^0.6.15",
