@@ -18,6 +18,7 @@ import TitleVerticalList from './templates/title-grid-list/vertical.vue';
 import ArticleHero from "./templates/post/hero/index.vue";
 import ReadableContent from "./templates/post/readable-content/index.vue";
 import TabMenuSearch from "./templates/tab-menu/with-search.vue"
+import TagListBlock from "./templates/tag-block-list/index.vue";
 
 export {
   ButtonBlockList,
@@ -38,5 +39,6 @@ export {
   LinkButtonBlockList,
   SocialButtonBlockList,
   TabMenuSearch,
-  Button
+  Button,
+  TagListBlock
 }
