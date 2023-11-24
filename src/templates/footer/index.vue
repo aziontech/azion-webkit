@@ -1,96 +1,107 @@
 <template>
-  <footer class="pt-14 pb-6 px-2 xlg:p-0 surface-ground text-color">
-    <div class="container mx-auto">
-      <div class="flex flex-col lg:flex-row">
+  <footer class="py-12 px-4 surface-ground">
+    <div class="container mx-auto flex flex-col gap-9 lg:gap-8">
+      <div class="flex flex-col lg:flex-row gap-9 lg:gap-12">
         <div class="w-full lg:w-1/4">
-          <a :href="`/${lang}/`" title="Azion Technologies" class="azion-technologies mb-4 block">
+          <a :href="`/${lang}/`" title="Azion Technologies" class="mb-4 block">
             <AznTechLogo />
           </a>
           <p>
-            {{ cta.text}}
+            {{ cta.text }}
             <br>
             <span class="text-[#F3652B]">{{ cta.phone }}</span>
           </p>
         </div>
 
-        <div class="w-full lg:w-3/4 grid grid-cols-1 gap-8 md:gap-0 md:grid-cols-4 m-0 mt-12 lg:mt-0 lg:pl-[5%] leading-loose">
-          <div class=" list-none p-0" :key="index" v-for="({ title, list }, index) in listData">
-            <p class="mb-4 w-full mt-0 text-xs text-color-secondary">
+        <div class="w-full lg:w-3/4 grid grid-cols-1 gap-8 md:grid-cols-4 order-first lg:order-last">
+          <div :key="index" v-for="({ title, list }, index) in listData">
+            <p class="mb-4 w-full mt-0 text-xs text-color-secondary px-4">
               {{ title }}
             </p>
-            <ul class="grid list-none leading-loose p-0 m-0" :class="indicesListsLargerThanFive.includes(index) ? 'grid grid-cols-2' : 'grid-cols-1'">
-              <li v-for="({ route, desc, target }, index) in list" :key="index" class="mb-2 text-footer">
-                <a :href="`${route}`" class="text-medium text-sm text-color no-underline" rel="noopener" :target="target ? target : '_self'">
-                  {{ desc }}
-                </a>
+            <ul class="grid list-none p-0 m-0 gap-3"
+              :class="indicesListsLargerThanFive.includes(index) ? 'grid grid-cols-2' : 'grid-cols-1'">
+              <li v-for="({ link, title }, index) in list" :key="index">
+                <LinkButton :link="`${link}`" class="p-button-text px-4 whitespace-nowrap" :label="title" />
               </li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="my-8">
+      <div class="sm:hidden md:block">
         <Divider />
       </div>
-
-      <div class="flex justify-end">
-        <slot name="langSelector"></slot>
+      <div class="flex justify-between md:items-center sm:flex-col-reverse md:flex-row gap-8">
         <p class="text-xs">
           {{ copyright }}
         </p>
+        <div class="flex gap-3">
+          <Dropdown v-if="i18nPages" :modelValue="selectedLanguague" v-model="selectedLanguague" :options="i18nPages"
+            optionLabel="lang" />
+          <ThemeToggle />
+        </div>
       </div>
     </div>
   </footer>
 </template>
 
 <script setup>
-  import AznTechLogo from "../../assets/icons/azion-logo.vue";
-  import Divider from 'primevue/divider';
+import AznTechLogo from "../../assets/icons/azion-logo.vue";
+import Divider from 'primevue/divider';
+import ThemeToggle from '../theme-toggle/index.vue'
+import LinkButton from '../button/link.vue'
+import Dropdown from 'primevue/dropdown';
+import { ref } from 'vue'
 
+// interface List {
+//   link: string,
+//   title: string,
+//   target: "_blank" | null
+// }
 
-  // interface List {
-  //   route: string,
-  //   desc: string,
-  //   target: "_blank" | null
-  // }
+// interface ListData {
+//   title: string,
+//   list: Array<List>
+// }
 
-  // interface ListData {
-  //   title: string,
-  //   list: Array<List>
-  // }
+// interface props {
+//   copyright: string
+//   lang: string,
+//   listData: Array<ListData>
+// }
 
-  // interface props {
-  //   copyright: string
-  //   lang: string,
-  //   listData: Array<ListData>
-  // }
+// interface cta {
+//   text: String,
+//   phone: String
+// }
 
-  // interface cta {
-  //   text: String,
-  //   phone: String
-  // }
+const props = defineProps({
+  lang: {
+    type: String,
+    required: true
+  },
+  listData: {
+    type: Array,
+    required: true
+  },
+  copyright: {
+    type: String,
+    required: true
+  },
+  cta: {
+    type: Object,
+    required: true
+  },
+  i18nPages: {
+    type: Array,
+    required: false
+  }
+})
 
-  const props = defineProps({
-    lang: {
-      type: String,
-      required: true
-    },
-    listData: {
-      type: Array,
-      required: true
-    },
-    copyright: {
-      type: String,
-      required: true
-    },
-    cta: {
-      type: Object,
-      required: true
-    }
-  })
+const selectedLanguague = ref('English')
 
-  const indicesListsLargerThanFive = (props.listData || []).map((item, index) => {
-    if (item.list.length <= 5) return -1;
-    return index;
-  }).filter(index => index !== -1);
+const indicesListsLargerThanFive = (props.listData || []).map((item, index) => {
+  if (item.list.length <= 5) return -1;
+  return index;
+}).filter(index => index !== -1);
 </script>
