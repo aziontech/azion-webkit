@@ -1,10 +1,14 @@
 <template>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <Header :menubar="menubarData.data"/>
 =======
   <Header />
 
 >>>>>>> 1c569d6 (WIP: header blocks)
+=======
+  <Header :menubar="menubarData.data"/>
+>>>>>>> 6e493b3 (WIP: header)
   <main>
     <div class="py-8 mb-20 surface-ground">
       <FeaturedPost
