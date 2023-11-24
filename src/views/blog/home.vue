@@ -29,12 +29,13 @@
         <PostCardGridList :data="cardData" />
       </div>
     </section>
-    <NewsletterWide
-      class="py-8"
-      :overline="newsletterWideData.overline"
-      :title="newsletterWideData.title"
-      :buttonText="newsletterWideData.buttonText"
-      :placeholderInput="newsletterWideData.placeholderInput" />
+      <NewsletterWide
+        class="py-8"
+        :overline="newsletterData.overline"
+        :title="newsletterData.title"
+        :buttonText="newsletterData.buttonText"
+        :placeholderInput="newsletterData.placeholderInput"
+        />
   </main>
   <Footer
     lang="en"
