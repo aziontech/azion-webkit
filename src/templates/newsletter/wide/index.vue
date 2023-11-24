@@ -1,6 +1,6 @@
 <template>
-  <section class="newsletter-signup surface-section px-4">
-    <div class="container mx-auto lg:py-28 py-8">
+  <section class="newsletter-signup surface-section">
+    <div class="container mx-auto lg:py-28 py-8 px-4">
       <div class="lg:flex justify-between lg:gap-16">
         <div class="lg:w-2/4">
           <Overline :label="props.overline" v-if="props.overline" />

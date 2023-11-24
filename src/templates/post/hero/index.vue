@@ -1,7 +1,7 @@
 <template>
   <div class="surface-section">
     <div class="container mx-auto py-6 lg:py-14 flex flex-col px-4">
-      <div class="py-4 flex gap-4 lg:gap-8 flex-col max-w-6xl w-full mx-auto">
+      <div class="py-4 flex gap-4 lg:gap-8 flex-col w-full">
         <Breadcrumb :model="breadcrumbItems" />
         <h1 class="text-5xl font-bold text-color">
           {{ title }}
