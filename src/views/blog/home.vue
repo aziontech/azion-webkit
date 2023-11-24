@@ -1,5 +1,10 @@
 <template>
+<<<<<<< HEAD
   <Header :menubar="menubarData.data"/>
+=======
+  <Header />
+
+>>>>>>> 1c569d6 (WIP: header blocks)
   <main>
     <div class="py-8 mb-20 surface-ground">
       <FeaturedPost

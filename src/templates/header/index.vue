@@ -3,326 +3,94 @@
     <div class="container mx-auto">
       <div class="flex items-center justify-between">
         <div class="flex items-center">
-          <a href="/" title="Home | Azion Technologies" class="block mr-6">
+          <a
+            href="/"
+            title="Home | Azion Technologies"
+            class="block mr-6">
+
             <AzionLogoDefault class="w-[90px]" />
           </a>
-          <!-- Custom Nav -->
           <nav>
-            <Button text label="Products" icon-pos="right" icon="pi pi-angle-down" @click="toggle" />
-            <OverlayPanel ref="op" class="top-12 z-50 absolute left-[18.5rem]">
-              <div class="flex flex-row p-3 gap-4">
-                <div class="flex flex-col gap-2">
-                  <Button text class="flex gap-2 justify-between w-full items-center" @click="active = 0" :class="{ '!text-color-secondary-overlay': active === 0 }">
-                    <span class="flex gap-2 items-center">
-                      <i class="pi pi-code"></i>
-                      Build
-                    </span>
-                    <i class="pi pi-angle-right"></i>
-                  </Button>
-                  <Button text class="flex gap-2 justify-between w-full items-center" @click="active = 1" :class="{ '!surface-hover': active === 1 }">
-                    <span class="flex gap-2 items-center">
-                      <i class="pi pi-code"></i>
-                      Secure
-                    </span>
-                    <i class="pi pi-angle-right"></i>
-                  </Button>
-                  <Button text class="flex gap-2 justify-between w-full items-center" @click="active = 2" :class="{ '!surface-hover': active === 2 }">
-                    <span class="flex gap-2 items-center">
-                      <i class="pi pi-code"></i>
-                      Deploy
-                    </span>
-                    <i class="pi pi-angle-right"></i>
-                  </Button>
-                  <Button text class="flex gap-2 justify-between w-full items-center" @click="active = 3" :class="{ '!surface-hover': active === 3 }">
-                    <span class="flex gap-2 items-center">
-                      <i class="pi pi-code"></i>
-                      Observe
-                    </span>
-                    <i class="pi pi-angle-right"></i>
-                  </Button>
+            <ul class="flex gap-4">
+              <li v-for="(menuitem, index) in menudata.items">
+                <a
+                  v-if="!menuitem.items || !menuitem.items.length"
+                  :href="menuitem.href || ''"
+                  class="p-button p-button-text p-button-primary">
+
+                  {{ menuitem.label }}
+                </a>
+                <div v-if="menuitem.items && menuitem.items.length">
+                  <Button
+                    text
+                    :label="menuitem.label"
+                    icon-pos="right"
+                    icon="pi pi-angle-down"
+                    @click="(event) => { toggle(event, index) }" />
+
+                  <OverlayPanel ref="op" class="top-12 z-50 absolute left-[18.5rem]">
+                    <div class="flex flex-row p-3 gap-4">
+                      <div class="flex flex-col gap-2">
+                        <Button
+                          text
+                          v-for="(subitem, index) in menuitem.items"
+                          :class="{ '!text-color-secondary-overlay': menudata.active === index }"
+                          class="flex gap-2 justify-between w-full items-center"
+                          @click="menudata.active = index">
+
+                          <span class="flex gap-2 items-center">
+                            <i :class="subitem.icon"></i>
+                            {{ subitem.label }}
+                          </span>
+                          <i class="pi pi-angle-right"></i>
+                        </Button>
+                      </div>
+                      <div class="flex w-full max-w-[500px]">
+                        <TabView v-model:activeIndex="menudata.active" :pt="{ navContainer: { class: 'hidden' } }">
+                          <TabPanel v-for="subitem in menuitem.items">
+                            <div class="grid grid-cols-2 gap-2 m-0 p-0 w-[500px]">
+                              <a
+                                v-for="link in subitem.items"
+                                class="flex gap-2 justify-between w-full items-center p-button p-button-secondary p-button-text">
+
+                                <div class="flex flex-row gap-4 items-center">
+                                  <i :class="link.icon"></i>
+                                  <div class="flex flex-col items-start">
+                                    <div class="flex gap-2 items-center">{{ link.label }}</div>
+                                    <div class="text-xs text-color-secondary">{{ link.description }}</div>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                          </TabPanel>
+                        </TabView>
+                      </div>
+                    </div>
+                  </OverlayPanel>
                 </div>
-                <!-- Content -->
-                <div class="flex w-full max-w-[500px]">
-                  <TabView v-model:activeIndex="active" :pt="{ navContainer: { class: 'hidden' } }">
-                    <TabPanel>
-                        <div class="grid grid-cols-2 gap-2 m-0 p-0 w-[500px]">
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-box"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Application</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-box"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Application</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-box"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Application</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-box"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Application</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-box"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Application</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                        </div>
-                    </TabPanel>
-                    <TabPanel>
-                        <div class="grid grid-cols-2 gap-2 m-0 p-0 w-[500px]">
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-box"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Firewall</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-shield"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Firewall</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-shield"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Firewall</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-shield"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Firewall</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-shield"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Firewall</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                        </div>
-                    </TabPanel>
-                    <TabPanel>
-                        <div class="grid grid-cols-2 gap-2 m-0 p-0 w-[500px]">
-                          <img src="https://www.azion.com/static/images/uploads/thumbnailblogterraform440x343px-2.png">
-                        </div>
-                    </TabPanel>
-                    <TabPanel>
-                        <div class="grid grid-cols-2 gap-2 m-0 p-0 w-[500px]">
-                          oii
-                        </div>
-                    </TabPanel>
-                </TabView>
-                </div>
-              </div>
-            </OverlayPanel>
-            <a href="" title="Signin | Azion Technologies" class="p-button p-button-secondary p-button-text">
-              Pricing
-            </a>
-            <a href="" title="About us | Azion Technologies" class="p-button p-button-secondary p-button-text">
-              About us
-            </a>
-            <Button text label="Resources" icon-pos="right" icon="pi pi-angle-down" @click="toggle"/>
-            <OverlayPanel ref="op" class="top-12 z-50 absolute left-[18.5rem]">
-              <div class="flex flex-row p-3 gap-4">
-                <div class="flex flex-col gap-2">
-                  <Button text class="flex gap-2 justify-between w-full items-center" @click="active = 0" :class="{ '!text-color-secondary': active === 0 }">
-                    <span class="flex gap-2 items-center">
-                      <i class="pi pi-box"></i>
-                      Build
-                    </span>
-                    <i class="pi pi-angle-right"></i>
-                  </Button>
-                  <Button text class="flex gap-2 justify-between w-full items-center" @click="active = 1" :class="{ '!surface-hover': active === 1 }">
-                    <span class="flex gap-2 items-center">
-                      <i class="pi pi-shield"></i>
-                      Secure
-                    </span>
-                    <i class="pi pi-angle-right"></i>
-                  </Button>
-                  <Button text class="flex gap-2 justify-between w-full items-center" @click="active = 2" :class="{ '!surface-hover': active === 2 }">
-                    <span class="flex gap-2 items-center">
-                      <i class="pi pi-code"></i>
-                      Deploy
-                    </span>
-                    <i class="pi pi-angle-right"></i>
-                  </Button>
-                  <Button text class="flex gap-2 justify-between w-full items-center" @click="active = 3" :class="{ '!surface-hover': active === 3 }">
-                    <span class="flex gap-2 items-center">
-                      <i class="pi pi-chart-line"></i>
-                      Observe
-                    </span>
-                    <i class="pi pi-angle-right"></i>
-                  </Button>
-                </div>
-                <!-- Content -->
-                <div class="flex w-full max-w-[500px]">
-                  <TabView v-model:activeIndex="active" :pt="{ navContainer: { class: 'hidden' }}">
-                    <TabPanel>
-                        <div class="grid grid-cols-2 gap-2 m-0 p-0 w-[500px]">
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-box"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Application</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-box"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Application</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-box"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Application</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-box"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Application</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-box"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Application</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                        </div>
-                    </TabPanel>
-                    <TabPanel>
-                        <div class="grid grid-cols-2 gap-2 m-0 p-0 w-[500px]">
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-box"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Firewall</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-box"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Firewall</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-box"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Firewall</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-box"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Firewall</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                          <Button text class="flex gap-2 justify-between w-full items-center">
-                            <div class="flex flex-row gap-4 items-center">
-                              <i class="pi pi-box"></i>
-                              <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">Edge Firewall</div>
-                                <div class="text-xs text-color-secondary">Description</div>
-                              </div>
-                            </div>
-                          </Button>
-                        </div>
-                    </TabPanel>
-                    <TabPanel>
-                        <div class="grid grid-cols-2 gap-2 m-0 p-0 w-[500px]">
-                          <img src="https://www.azion.com/static/images/uploads/thumbnailblogterraform440x343px-2.png">
-                        </div>
-                    </TabPanel>
-                    <TabPanel>
-                        <div class="grid grid-cols-2 gap-2 m-0 p-0 w-[500px]">
-                          oii
-                        </div>
-                    </TabPanel>
-                </TabView>
-                </div>
-              </div>
-            </OverlayPanel>
-            <a href="" title="Signin | Azion Technologies" class="p-button p-button-secondary p-button-text">
-              Marketplace
-            </a>
+              </li>
+            </ul>
           </nav>
         </div>
         <div class="flex gap-2">
-          <a href="" title="Signin | Azion Technologies" class="p-button p-button-secondary p-button-text">
+          <a
+            target="_blank"
+            href="https://sso.azion.com/login"
+            title="Signin | Azion Technologies" class="p-button p-button-secondary p-button-text">
+
             Sign in
           </a>
-          <a href="" title="Contact | Azion Technologies" class="p-button p-button-secondary p-button-text">
+          <a
+            href=""
+            title="Contact | Azion Technologies" class="p-button p-button-secondary p-button-text">
+
             Contact
           </a>
-          <a href="" title="Free account | Azion Technologies" class="p-button p-button-secondary p-button-outlined">
+          <a
+            target="_blank"
+            href="https://manager.azion.com/signup"
+            title="Free account | Azion Technologies" class="p-button p-button-secondary p-button-outlined">
+
             Free account
           </a>
 
@@ -334,7 +102,7 @@
             offIcon="pi pi-moon"
             class="p-button p-button-secondary p-button-outlined p-[1.095rem]" />
 
-          <Button outlined severity="secondary" @click="">
+          <Button outlined severity="secondary">
             <i class="pi pi-search"></i>
           </Button>
         </div>
@@ -352,23 +120,201 @@ import TabPanel from 'primevue/tabpanel';
 import ToggleButton from 'primevue/togglebutton';
 import AzionLogoDefault from '../../assets/icons/azion-logo-default.vue';
 
-const active = ref(0);
-const items = ref([
-  {
-    items: [
-      { label: 'Build', icon: 'pi pi-box' },
-      { label: 'Secure', icon: 'pi pi-shield' },
-      { label: 'Deploy', icon: 'pi pi-code' },
-      { label: 'Observe', icon: 'pi pi-chart-line' },
-    ],
-    active: 0
-  },
-]);
+let buttonThemeCheck = ref(false);
+
+const menudata = ref({
+  active: 0,
+  items: [
+    {
+      label: 'Products',
+      items: [
+        {
+          label: 'Build',
+          icon: 'pi pi-box',
+          items: [
+            {
+              icon: '',
+              label: 'Edge Application',
+              description: 'Here will be a small description',
+              href: '#edgeapplication'
+            }, {
+              icon: '',
+              label: 'Application Acceleration',
+              description: '',
+              href: ''
+            },
+            {
+              icon: '',
+              label: 'Edge Caching',
+              description: '',
+              href: ''
+            }, {
+              icon: '',
+              label: 'Edge Functions',
+              description: '',
+              href: ''
+            },
+            {
+              icon: '',
+              label: 'Image Processor',
+              description: '',
+              href: ''
+            }, {
+              icon: '',
+              label: 'Load Balancer',
+              description: '',
+              href: ''
+            },
+            {
+              icon: '',
+              label: 'Edge QV',
+              description: '',
+              href: ''
+            },
+            {
+              icon: '',
+              label: 'Edge SQL',
+              description: '',
+              href: ''
+            },
+            {
+              icon: '',
+              label: 'Object Storage',
+              description: '',
+              href: ''
+            }
+          ]
+        },
+        {
+          label: 'Secure',
+          icon: 'pi pi-shield',
+          items: [
+            {
+              icon: '',
+              label: 'Edge Firewall',
+              description: '',
+              href: ''
+            },
+            {
+              icon: '',
+              label: 'DDoS Protection',
+              description: '',
+              href: ''
+            },
+            {
+              icon: '',
+              label: 'Network Layer Protection',
+              description: '',
+              href: ''
+            },
+            {
+              icon: '',
+              label: 'Web Application Firewall',
+              description: '',
+              href: ''
+            },
+            {
+              icon: '',
+              label: 'Web Application Firewall',
+              description: '',
+              href: ''
+            }
+          ]
+        },
+        {
+          label: 'Deploy',
+          icon: 'pi pi-code',
+          items: [
+            {
+              icon: '',
+              label: 'Edge Orchestrator',
+              description: '',
+              href: ''
+            },
+            {
+              icon: '',
+              label: 'Azion Edge Network',
+              description: '',
+              href: ''
+            },
+            {
+              icon: '',
+              label: 'Azion Live Map',
+              description: '',
+              href: ''
+            },
+            {
+              icon: '',
+              label: 'Roadmap',
+              description: '',
+              href: ''
+            }
+          ]
+        },
+        {
+          label: 'Observe',
+          icon: 'pi pi-chart-line',
+          items: [
+            {
+              icon: '',
+              label: 'Data Streaming',
+              description: '',
+              href: ''
+            },
+            {
+              icon: '',
+              label: 'Edge Pulse',
+              description: '',
+              href: ''
+            },
+            {
+              icon: '',
+              label: 'Real-Time Metrics',
+              description: '',
+              href: ''
+            },
+            {
+              icon: '',
+              label: 'Real-Time Events',
+              description: '',
+              href: ''
+            }
+          ]
+        }
+      ]
+    },
+    {
+      label: 'Pricing',
+      href: '#pricing',
+      items: []
+    },
+    {
+      label: 'About us',
+      href: '#aboutus',
+      items: []
+    },
+    {
+      label: 'Resources',
+      items: [
+        {
+          label: 'Documentation'
+        }
+      ]
+    },
+    {
+      label: 'Marketplace',
+      href: '#marketplace',
+      items: []
+    }
+  ]
+});
 
 const op = ref();
-const toggle = (event) => {
-  op.value.toggle(event);
+const toggle = (event, index) => {
+  try {
+    op.value[0].toggle(event);
+  } catch (error) {
+    console.error('Error in toggle method:', error);
+  }
 };
-
-const buttonThemeCheck = ref(false);
 </script>
