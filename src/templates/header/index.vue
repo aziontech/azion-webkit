@@ -24,10 +24,10 @@
                 :label="menuitem.label"
                 icon-pos="right"
                 icon="pi pi-angle-down"
-                class="hidden lg:flex"
+                class="hidden lg:flex hover:bg-header-button-hover"
                 @click="(event) => { toggle(event, menuitem.ref); menudata.active = 0; }"
                 :pt="{
-                  label: { class: 'text-white hover:bg-header-button-hover' },
+                  label: { class: 'text-white' },
                   icon: { class: 'text-white' }
                 }"/>
               <OverlayPanel :ref="menuitem.ref">
