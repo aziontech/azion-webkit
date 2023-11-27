@@ -14,19 +14,23 @@
             <a
               v-if="!menuitem.items || !menuitem.items.length"
               :href="menuitem.href || ''"
-              class="p-button p-button-text p-button-primary">
-
-              {{ menuitem.label }}
+              class="p-button p-button-text p-button-primary p-button-sm hover:bg-header-button-hover hidden lg:flex">
+              <div class="text-white">{{ menuitem.label }}</div>
             </a>
             <div v-if="menuitem.items && menuitem.items.length">
               <Button
                 text
+                size="small"
                 :label="menuitem.label"
                 icon-pos="right"
                 icon="pi pi-angle-down"
-                @click="(event) => { toggle(event, menuitem.ref); menudata.active = 0; }" />
-
-              <OverlayPanel :ref="menuitem.ref" class="top-12 z-50 absolute left-[18.5rem]">
+                class="hidden lg:flex"
+                @click="(event) => { toggle(event, menuitem.ref); menudata.active = 0; }"
+                :pt="{
+                  label: { class: 'text-white hover:bg-header-button-hover' },
+                  icon: { class: 'text-white' }
+                }"/>
+              <OverlayPanel :ref="menuitem.ref">
                 <div class="flex flex-row p-3 gap-4">
                   <div class="flex flex-col gap-2">
                     <Button
@@ -74,28 +78,34 @@
       <a
         target="_blank"
         href="https://sso.azion.com/login"
-        title="Signin | Azion Technologies" class="p-button p-button-primary p-button-text">
-
-        Sign in
+        title="Signin | Azion Technologies"
+        class="p-button p-button-primary p-button-text p-button-sm hidden lg:flex">
+        <div class="text-white">Sign in</div>
       </a>
       <a
         href=""
-        title="Contact | Azion Technologies" class="p-button p-button-primary p-button-text">
-
-        Contact
+        title="Contact | Azion Technologies"
+        class="p-button p-button-primary p-button-text p-button-sm hover:bg-header-button-hove hidden lg:flexr">
+        <div class="text-white">Contact</div>
       </a>
       <a
         target="_blank"
         href="https://manager.azion.com/signup"
-        title="Free account | Azion Technologies" class="p-button p-button-primary p-button-outlined">
-
-        Free account
+        title="Free account | Azion Technologies"
+        class="p-button p-button-primary p-button-outlined p-button-sm border-white text-white hover:bg-header-button-hover hidden lg:flex">
+        <div class="text-white">Free account</div>
       </a>
 
-      <ButtonThemeToggle />
-      <Button outlined>
-        <i class="pi pi-search"></i>
-      </Button>
+      <ButtonThemeToggle class="hidden lg:flex" />
+      <Button
+        outlined
+        icon="pi pi-search"
+        class="bg-header hover:bg-header-button-hover !text-white flex border-header"
+          :pt="{
+            label: { class: 'text-white' },
+            icon: { class: 'text-white' }
+          }"
+      />
       <MobileSidebar />
     </div>
   </header>
