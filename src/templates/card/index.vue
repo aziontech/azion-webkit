@@ -1,9 +1,9 @@
 <template>
   <a :href="props.href" :title="props.title" class="no-underline flex group border-radius md:max-w-sm">
     <Card class="p-0 mt-0"
-      :pt="{ header: { class: 'border border-transparent	group-hover:border group-hover:border-solid group-hover:border-[#f3652b]' }, root: { class: 'shadow-none surface-ground flex flex-col gap-6' } }">
+      :pt="{ header: { class: 'group-hover:shadow-[0_0_0_0.2rem_rgba(243,101,43,0.32)] rounded' }, root: { class: 'shadow-none surface-ground flex flex-col gap-6' } }">
       <template #header v-if="props.imgSrc">
-        <img class="w-full aspect-video" lazy alt="`${imgAlt}`" :src="`https://assets.azion.com${props.imgSrc}`" />
+        <img class="w-full aspect-video rounded" lazy alt="`${imgAlt}`" :src="`https://assets.azion.com${props.imgSrc}`" />
       </template>
       <template #content>
         <div class="flex flex-col justify-between gap-4">
