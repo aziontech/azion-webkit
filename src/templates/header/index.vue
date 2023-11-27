@@ -1,5 +1,5 @@
 <template>
-  <header class="p-3 bg-header text-white border-b surface-border items-center flex justify-between px-3 md:px-8 w-full h-[56px]">
+  <header class="p-3 bg-header text-white border-b surface-border items-center flex justify-between md:px-8 w-full h-[56px]">
     <div class="flex items-center">
       <a
         href="/"
