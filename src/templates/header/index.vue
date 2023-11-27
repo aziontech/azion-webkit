@@ -16,14 +16,13 @@
                 <a
                   v-if="!menuitem.items || !menuitem.items.length"
                   :href="menuitem.href || ''"
-                  class="p-button p-button-text p-button-secondary">
+                  class="p-button p-button-text p-button-primary">
 
                   {{ menuitem.label }}
                 </a>
                 <div v-if="menuitem.items && menuitem.items.length">
                   <Button
                     text
-                    severity="secondary"
                     :label="menuitem.label"
                     icon-pos="right"
                     icon="pi pi-angle-down"
@@ -34,7 +33,6 @@
                       <div class="flex flex-col gap-2">
                         <Button
                           text
-                          severity="secondary"
                           v-for="(subitem, index) in menuitem.items"
                           :class="{ '!text-color-secondary-overlay': menudata.active === index }"
                           class="flex gap-2 justify-between w-full items-center"
@@ -53,7 +51,7 @@
                             <div class="grid grid-cols-2 gap-2 m-0 p-0 w-[500px]">
                               <a
                                 v-for="link in subitem.items"
-                                class="flex gap-2 justify-between w-full items-center p-button p-button-secondary p-button-text">
+                                class="flex gap-2 justify-between w-full items-center p-button p-button-primary p-button-text">
 
                                 <div class="flex flex-row gap-4 items-center">
                                   <i :class="link.icon"></i>
@@ -78,31 +76,28 @@
           <a
             target="_blank"
             href="https://sso.azion.com/login"
-            title="Signin | Azion Technologies" class="p-button p-button-secondary p-button-text">
+            title="Signin | Azion Technologies" class="p-button p-button-primary p-button-text">
 
             Sign in
           </a>
           <a
             href=""
-            title="Contact | Azion Technologies" class="p-button p-button-secondary p-button-text">
+            title="Contact | Azion Technologies" class="p-button p-button-primary p-button-text">
 
             Contact
           </a>
           <a
             target="_blank"
             href="https://manager.azion.com/signup"
-            title="Free account | Azion Technologies" class="p-button p-button-secondary p-button-outlined">
+            title="Free account | Azion Technologies" class="p-button p-button-primary p-button-outlined">
 
             Free account
           </a>
 
           <ButtonThemeToggle />
-          <Button outlined severity="secondary">
+          <Button outlined>
             <i class="pi pi-search"></i>
           </Button>
-          <!-- <Button outlined severity="secondary">
-            <i class="pi pi-bars"></i>
-          </Button> -->
           <MobileSidebar />
         </div>
       </div>

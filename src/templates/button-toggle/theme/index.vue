@@ -6,7 +6,7 @@
     offLabel=""
     onIcon="pi pi-sun"
     offIcon="pi pi-moon"
-    class="p-button p-button-secondary p-button-outlined p-[1.095rem]" />
+    class="p-button p-button-outlined p-[1.095rem]" />
 </template>
 
 <script setup>
