@@ -37,7 +37,7 @@
                       text
                       size="small"
                       v-for="(subitem, index) in menuitem.items"
-                      :class="{ '!text-color-secondary-overlay': menudata.active === index }"
+                      :class="{ 'surface-hover': menudata.active === index }"
                       class="flex gap-2 justify-between w-full items-center"
                       @click="menudata.active = index">
                       <span class="flex gap-2 items-center">
