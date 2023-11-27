@@ -38,7 +38,7 @@
         <div class="flex gap-3">
           <Dropdown v-if="i18nPages" :modelValue="selectedLanguague" v-model="selectedLanguague" :options="i18nPages"
             optionLabel="lang" />
-          <ThemeToggle />
+          <ButtonThemeToggle />
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@
 <script setup>
 import AznTechLogo from "../../assets/icons/azion-logo.vue";
 import Divider from 'primevue/divider';
-import ThemeToggle from '../theme-toggle/index.vue'
+import ButtonThemeToggle from '../button-toggle/theme/index.vue';
 import LinkButton from '../button/link.vue'
 import Dropdown from 'primevue/dropdown';
 import { ref } from 'vue'
