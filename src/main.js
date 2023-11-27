@@ -5,6 +5,7 @@ import App from './App.vue';
 
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
+import './assets/icons/azionicons.scss'
 
 import './assets/main.css';
 import './assets/themes/scss/themes/azion-light/theme.scss';
