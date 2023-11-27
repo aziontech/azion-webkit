@@ -8,7 +8,7 @@
             :src="`${imgSrc}?ims=576x324`" />
         </picture>
       </div>
-      <div class="flex flex-col lg:justify-center lg:w-1/2 lg:items-start gap-4 px-4 md:px-20 pb-4 lg:pl-0 lg:py-4">
+      <div class="flex flex-col lg:justify-center lg:w-1/2 lg:items-start gap-4 px-4 md:px-8 pb-4 lg:pl-0 lg:py-4">
         <p class="text-xs text-color-secondary"> {{ date }} &bull; {{ readTime }}</p>
         <div class="flex gap-2">
           <Tag v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
