@@ -1,6 +1,6 @@
 <template>
   <header class="surface-section py-3">
-    <div class="px-4">
+    <div class="px-8">
       <div class="flex items-center justify-between">
         <div class="flex items-center">
           <a
