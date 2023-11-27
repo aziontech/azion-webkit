@@ -1,5 +1,5 @@
 <template>
-  <div class="surface-section flex justify-center py-6 lg:py-14 px-4 md:px-8 ">
+  <div class="surface-section flex justify-center py-6 lg:py-14 px-3 md:px-8 ">
     <div class="container flex flex-col ">
       <div class="py-4 flex gap-4 lg:gap-8 flex-col w-full">
         <Breadcrumb :model="breadcrumbItems" class="-ml-1" />

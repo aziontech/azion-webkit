@@ -1,5 +1,5 @@
 <template>
-  <section class="surface-section flex justify-center lg:py-28 py-8 px-4 md:px-8">
+  <section class="surface-section flex justify-center lg:py-28 py-8 px-3 md:px-8">
     <div class="container">
       <div class="lg:flex justify-between lg:gap-16">
         <div class="lg:w-2/4">
