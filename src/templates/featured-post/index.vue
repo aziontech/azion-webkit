@@ -1,7 +1,7 @@
 <template>
-  <a :href="link" :title="linkText" :target="linkTarget" class="container block">
+  <a :href="link" :title="linkText" :target="linkTarget" class="block">
     <div
-      class="flex flex-col lg:flex-row gap-4 lg:gap-8 border border-solid surface-border surface-card">
+      class="flex flex-col lg:flex-row gap-4 lg:gap-8 border border-solid surface-border surface-card rounded-md">
       <div class="h-full">
         <picture v-if="imgSrc" class="p-0 m-0">
           <img fetchpriority="high" class="w-full md:object-cover" width="576" height="324" :alt="imgAlt"
