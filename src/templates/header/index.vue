@@ -26,7 +26,7 @@
                     :label="menuitem.label"
                     icon-pos="right"
                     icon="pi pi-angle-down"
-                    @click="(event) => { toggle(event, menuitem.ref) }" />
+                    @click="(event) => { toggle(event, menuitem.ref); menudata.active = 0 }" />
 
                   <OverlayPanel :ref="menuitem.ref" class="top-12 z-50 absolute left-[18.5rem]">
                     <div class="flex flex-row p-3 gap-4">
@@ -99,6 +99,7 @@
             onLabel=""
             offLabel=""
             onIcon="pi pi-sun"
+
             offIcon="pi pi-moon"
             class="p-button p-button-secondary p-button-outlined p-[1.095rem]" />
 
@@ -120,8 +121,10 @@ import TabPanel from 'primevue/tabpanel';
 import ToggleButton from 'primevue/togglebutton';
 import AzionLogoDefault from '../../assets/icons/azion-logo-default.vue';
 
-let buttonThemeCheck = ref(false);
+let buttonThemeCheck = ref(false); // used to toggle button
 
+const productsPanel = ref(); // should pass like string name inside ref attr inside menudata
+const resourcesPanel = ref(); // should pass like string name inside ref attr inside menudata
 const menudata = ref({
   active: 0,
   items: [
@@ -305,10 +308,26 @@ const menudata = ref({
               label: 'Getting started',
               href: ''
             },
-            // {
-            //   label: '',
-            //   href: ''
-            // }
+            {
+              label: 'Dev Tools',
+              href: ''
+            },
+            {
+              label: 'Guides',
+              href: ''
+            },
+            {
+              label: 'API',
+              href: ''
+            },
+            {
+              label: 'Agreements',
+              href: ''
+            },
+            {
+              label: 'Changelog',
+              href: ''
+            }
           ]
         }
       ]
@@ -321,34 +340,10 @@ const menudata = ref({
   ]
 });
 
-for(var i = 0; i < menudata.value.items.length; i++) {
-  console.log(`loop index: `, i);
-  let item = menudata.value.items[i];
-
-  if(!item.items || !item.items.length) {
-    console.log('continue');
-    continue;
-  }
-
-  console.log(`item.ref to window: `, item.ref);
-  window[item.ref || ''] = ref();
-}
-
-
-// const productsPanel = ref();
-// const resourcesPanel = ref();
-
 const toggle = (event, refattr) => {
-  console.log('refattr: ', refattr);
-  console.log(window[refattr]);
-
   try {
-    window[refattr].value[0].toggle(event);
-    // if(refattr === 'productsPanel') {
-    //   productsPanel.value[0].toggle(event);
-    // } else if (refattr === 'resourcesPanel') {
-    //   resourcesPanel.value[0].toggle(event);
-    // }
+    if (refattr === 'productsPanel') productsPanel.value[0].toggle(event);
+    if (refattr === 'resourcesPanel') resourcesPanel.value[0].toggle(event);
   } catch (error) {
     console.error('Error in toggle method:', error);
   }
