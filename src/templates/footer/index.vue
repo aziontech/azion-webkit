@@ -1,6 +1,6 @@
 <template>
   <footer class="py-12 surface-ground">
-    <div class="flex flex-col gap-9 lg:gap-8 px-4">
+    <div class="flex flex-col gap-9 lg:gap-8 px-4 md:px-20">
       <div class="flex flex-col lg:flex-row gap-9 lg:gap-12">
         <div class="w-full lg:w-1/4">
           <a :href="`/${lang}/`" title="Azion Technologies" class="mb-4 block">
