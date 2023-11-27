@@ -1,11 +1,10 @@
 <template>
-  <header class="p-3 bg-header text-white border-b surface-border items-center flex justify-between md:px-8 w-full h-[56px]">
+  <header class="p-3 bg-header !text-white border-b surface-border items-center flex justify-between md:px-8 w-full h-[56px]">
     <div class="flex items-center">
       <a
         href="/"
         title="Home | Azion Technologies"
         class="block mr-6">
-
         <AzionLogoDefault class="w-[90px]" />
       </a>
       <nav>
@@ -15,7 +14,7 @@
               v-if="!menuitem.items || !menuitem.items.length"
               :href="menuitem.href || ''"
               class="p-button p-button-text p-button-primary p-button-sm hover:bg-header-button-hover hidden lg:flex">
-              <div class="text-white">{{ menuitem.label }}</div>
+              <span class="text-white">{{ menuitem.label }}</span>
             </a>
             <div v-if="menuitem.items && menuitem.items.length">
               <Button
@@ -55,10 +54,10 @@
                             v-for="link in subitem.items"
                             class="flex gap-2 w-full items-center p-button p-button-text p-button-sm">
                             <div class="flex flex-row gap-4 items-center">
-                              <i v-if="link.icon" :class="link.icon"/>
+                              <i v-if="link.icon" :class="link.icon"></i>
                               <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">{{ link.label }}</div>
-                                <div class="text-xs text-color-secondary">{{ link.description }}</div>
+                                <span class="flex gap-2 items-center">{{ link.label }}</span>
+                                <span class="text-xs text-color-secondary">{{ link.description }}</span>
                               </div>
                             </div>
                           </a>
@@ -79,20 +78,20 @@
         href="https://sso.azion.com/login"
         title="Signin | Azion Technologies"
         class="p-button p-button-primary p-button-text hover:bg-header-button-hover p-button-sm hidden lg:flex">
-        <div class="text-white">Sign in</div>
+        <span class="text-white">Sign in</span>
       </a>
       <a
         href=""
         title="Contact | Azion Technologies"
         class="p-button p-button-primary p-button-text p-button-sm hover:bg-header-button-hover hidden lg:flexr">
-        <div class="text-white">Contact</div>
+        <span class="text-white">Contact</span>
       </a>
       <a
         target="_blank"
         href="https://manager.azion.com/signup"
         title="Free account | Azion Technologies"
         class="p-button p-button-primary p-button-outlined p-button-sm border-white text-white hover:bg-header-button-hover hidden lg:flex">
-        <div class="text-white">Free account</div>
+        <span class="text-white">Free account</span>
       </a>
 
       <ButtonThemeToggle class="hidden lg:flex" />
@@ -349,4 +348,3 @@ const toggle = (event, refattr) => {
   }
 };
 </script>
-e
