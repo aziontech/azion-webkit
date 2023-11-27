@@ -1,6 +1,6 @@
 <template>
   <header class="surface-section py-3">
-    <div class="container mx-auto">
+    <div class="px-4">
       <div class="flex items-center justify-between">
         <div class="flex items-center">
           <a
@@ -16,23 +16,25 @@
                 <a
                   v-if="!menuitem.items || !menuitem.items.length"
                   :href="menuitem.href || ''"
-                  class="p-button p-button-text p-button-primary">
+                  class="p-button p-button-text p-button-secondary">
 
                   {{ menuitem.label }}
                 </a>
                 <div v-if="menuitem.items && menuitem.items.length">
                   <Button
                     text
+                    severity="secondary"
                     :label="menuitem.label"
                     icon-pos="right"
                     icon="pi pi-angle-down"
-                    @click="(event) => { toggle(event, menuitem.ref); menudata.active = 0 }" />
+                    @click="(event) => { toggle(event, menuitem.ref); menudata.active = 0; }" />
 
                   <OverlayPanel :ref="menuitem.ref" class="top-12 z-50 absolute left-[18.5rem]">
                     <div class="flex flex-row p-3 gap-4">
                       <div class="flex flex-col gap-2">
                         <Button
                           text
+                          severity="secondary"
                           v-for="(subitem, index) in menuitem.items"
                           :class="{ '!text-color-secondary-overlay': menudata.active === index }"
                           class="flex gap-2 justify-between w-full items-center"
@@ -94,14 +96,7 @@
             Free account
           </a>
 
-          <ToggleButton
-            v-model="buttonThemeCheck"
-            onLabel=""
-            offLabel=""
-            onIcon="pi pi-sun"
-
-            offIcon="pi pi-moon"
-            class="p-button p-button-secondary p-button-outlined p-[1.095rem]" />
+          <ButtonThemeToggle />
 
           <Button outlined severity="secondary">
             <i class="pi pi-search"></i>
@@ -118,10 +113,8 @@ import Button from 'primevue/button';
 import OverlayPanel from 'primevue/overlaypanel';
 import TabView from 'primevue/tabview';
 import TabPanel from 'primevue/tabpanel';
-import ToggleButton from 'primevue/togglebutton';
 import AzionLogoDefault from '../../assets/icons/azion-logo-default.vue';
-
-let buttonThemeCheck = ref(false); // used to toggle button
+import ButtonThemeToggle from '../button-toggle/theme/index.vue';
 
 const productsPanel = ref(); // should pass like string name inside ref attr inside menudata
 const resourcesPanel = ref(); // should pass like string name inside ref attr inside menudata
