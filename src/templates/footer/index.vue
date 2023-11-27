@@ -1,6 +1,6 @@
 <template>
   <footer class="py-12 surface-ground">
-    <div class="flex flex-col gap-9 lg:gap-8 px-4 md:px-20">
+    <div class="flex flex-col gap-9 lg:gap-8 px-4 md:px-8">
       <div class="flex flex-col lg:flex-row gap-9 lg:gap-12">
         <div class="w-full lg:w-1/4">
           <a :href="`/${lang}/`" title="Azion Technologies" class="mb-4 block">
@@ -13,8 +13,8 @@
           </p>
         </div>
 
-        <div class="w-full lg:w-3/4 grid grid-cols-1 gap-8 md:grid-cols-4">
-          <div :key="index" v-for="({ title, list }, index) in listData">
+        <div class="w-full lg:w-3/4 grid grid-cols-1 gap-8 md:grid-cols-5">
+          <div :key="index" v-for="({ title, list }, index) in listData" :class="indicesListsLargerThanFive.includes(index) ? 'col-span-2' : 'col-span-1'">
             <p class="mb-4 w-full mt-0 text-xs text-color-secondary px-4">
               {{ title }}
             </p>
