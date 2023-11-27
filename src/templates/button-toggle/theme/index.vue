@@ -13,13 +13,21 @@
 import { ref } from 'vue';
 import ToggleButton from 'primevue/togglebutton';
 
-let status = ref(false);
+const status = ref(false);
+const theme = {
+  light: 'azion-light',
+  dark: 'azion-dark'
+};
 
 function getHTML() {
   return document.querySelector('html');
 }
 
-function reset() {
+function getTheme() {
+  return status.value ? theme.light : theme.dark;
+}
+
+function resetTheme() {
   const html = getHTML();
 
   html.classList.remove('azion-light');
@@ -27,7 +35,7 @@ function reset() {
 };
 
 function onClick(){
-  reset();
-  getHTML().classList.add(status.value ? 'azion-light' : 'azion-dark');
+  resetTheme();
+  getHTML().classList.add(getTheme());
 }
 </script>
