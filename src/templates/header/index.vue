@@ -1,106 +1,102 @@
 <template>
-  <header class="bg-header text-white border-b surface-border py-3">
-    <div class="px-8">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center">
-          <a
-            href="/"
-            title="Home | Azion Technologies"
-            class="block mr-6">
+  <header class="p-3 bg-header text-white border-b surface-border items-center flex justify-between px-4 md:px-8 w-full h-[56px]">
+    <div class="flex items-center">
+      <a
+        href="/"
+        title="Home | Azion Technologies"
+        class="block mr-6">
 
-            <AzionLogoDefault class="w-[90px]" />
-          </a>
-          <nav>
-            <ul class="flex gap-4">
-              <li v-for="(menuitem) in menudata.items">
-                <a
-                  v-if="!menuitem.items || !menuitem.items.length"
-                  :href="menuitem.href || ''"
-                  class="p-button p-button-text p-button-primary">
+        <AzionLogoDefault class="w-[90px]" />
+      </a>
+      <nav>
+        <ul class="flex gap-4">
+          <li v-for="(menuitem) in menudata.items">
+            <a
+              v-if="!menuitem.items || !menuitem.items.length"
+              :href="menuitem.href || ''"
+              class="p-button p-button-text p-button-primary">
 
-                  {{ menuitem.label }}
-                </a>
-                <div v-if="menuitem.items && menuitem.items.length">
-                  <Button
-                    text
-                    :label="menuitem.label"
-                    icon-pos="right"
-                    icon="pi pi-angle-down"
-                    @click="(event) => { toggle(event, menuitem.ref); menudata.active = 0; }" />
+              {{ menuitem.label }}
+            </a>
+            <div v-if="menuitem.items && menuitem.items.length">
+              <Button
+                text
+                :label="menuitem.label"
+                icon-pos="right"
+                icon="pi pi-angle-down"
+                @click="(event) => { toggle(event, menuitem.ref); menudata.active = 0; }" />
 
-                  <OverlayPanel :ref="menuitem.ref" class="top-12 z-50 absolute left-[18.5rem]">
-                    <div class="flex flex-row p-3 gap-4">
-                      <div class="flex flex-col gap-2">
-                        <Button
-                          text
-                          v-for="(subitem, index) in menuitem.items"
-                          :class="{ '!text-color-secondary-overlay': menudata.active === index }"
-                          class="flex gap-2 justify-between w-full items-center"
-                          @click="menudata.active = index">
+              <OverlayPanel :ref="menuitem.ref" class="top-12 z-50 absolute left-[18.5rem]">
+                <div class="flex flex-row p-3 gap-4">
+                  <div class="flex flex-col gap-2">
+                    <Button
+                      text
+                      v-for="(subitem, index) in menuitem.items"
+                      :class="{ '!text-color-secondary-overlay': menudata.active === index }"
+                      class="flex gap-2 justify-between w-full items-center"
+                      @click="menudata.active = index">
 
-                          <span class="flex gap-2 items-center">
-                            <i :class="subitem.icon"></i>
-                            {{ subitem.label }}
-                          </span>
-                          <i class="pi pi-angle-right"></i>
-                        </Button>
-                      </div>
-                      <div class="flex w-full max-w-[500px]">
-                        <TabView v-model:activeIndex="menudata.active" :pt="{ navContainer: { class: 'hidden' } }">
-                          <TabPanel v-for="subitem in menuitem.items">
-                            <div class="grid grid-cols-2 gap-2 m-0 p-0 w-[500px]">
-                              <a
-                                v-for="link in subitem.items"
-                                class="flex gap-2 justify-between w-full items-center p-button p-button-primary p-button-text">
+                      <span class="flex gap-2 items-center">
+                        <i :class="subitem.icon"></i>
+                        {{ subitem.label }}
+                      </span>
+                      <i class="pi pi-angle-right"></i>
+                    </Button>
+                  </div>
+                  <div class="flex w-full max-w-[500px]">
+                    <TabView v-model:activeIndex="menudata.active" :pt="{ navContainer: { class: 'hidden' } }">
+                      <TabPanel v-for="subitem in menuitem.items">
+                        <div class="grid grid-cols-2 gap-2 m-0 p-0 w-[500px]">
+                          <a
+                            v-for="link in subitem.items"
+                            class="flex gap-2 justify-between w-full items-center p-button p-button-primary p-button-text">
 
-                                <div class="flex flex-row gap-4 items-center">
-                                  <i :class="link.icon"></i>
-                                  <div class="flex flex-col items-start">
-                                    <div class="flex gap-2 items-center">{{ link.label }}</div>
-                                    <div class="text-xs text-color-secondary">{{ link.description }}</div>
-                                  </div>
-                                </div>
-                              </a>
+                            <div class="flex flex-row gap-4 items-center">
+                              <i :class="link.icon"></i>
+                              <div class="flex flex-col items-start">
+                                <div class="flex gap-2 items-center">{{ link.label }}</div>
+                                <div class="text-xs text-color-secondary">{{ link.description }}</div>
+                              </div>
                             </div>
-                          </TabPanel>
-                        </TabView>
-                      </div>
-                    </div>
-                  </OverlayPanel>
+                          </a>
+                        </div>
+                      </TabPanel>
+                    </TabView>
+                  </div>
                 </div>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="flex gap-2">
-          <a
-            target="_blank"
-            href="https://sso.azion.com/login"
-            title="Signin | Azion Technologies" class="p-button p-button-primary p-button-text">
+              </OverlayPanel>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="flex gap-2">
+      <a
+        target="_blank"
+        href="https://sso.azion.com/login"
+        title="Signin | Azion Technologies" class="p-button p-button-primary p-button-text">
 
-            Sign in
-          </a>
-          <a
-            href=""
-            title="Contact | Azion Technologies" class="p-button p-button-primary p-button-text">
+        Sign in
+      </a>
+      <a
+        href=""
+        title="Contact | Azion Technologies" class="p-button p-button-primary p-button-text">
 
-            Contact
-          </a>
-          <a
-            target="_blank"
-            href="https://manager.azion.com/signup"
-            title="Free account | Azion Technologies" class="p-button p-button-primary p-button-outlined">
+        Contact
+      </a>
+      <a
+        target="_blank"
+        href="https://manager.azion.com/signup"
+        title="Free account | Azion Technologies" class="p-button p-button-primary p-button-outlined">
 
-            Free account
-          </a>
+        Free account
+      </a>
 
-          <ButtonThemeToggle />
-          <Button outlined>
-            <i class="pi pi-search"></i>
-          </Button>
-          <MobileSidebar />
-        </div>
-      </div>
+      <ButtonThemeToggle />
+      <Button outlined>
+        <i class="pi pi-search"></i>
+      </Button>
+      <MobileSidebar />
     </div>
   </header>
 </template>
