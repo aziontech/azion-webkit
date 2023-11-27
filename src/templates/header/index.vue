@@ -100,6 +100,7 @@
       <Button
         outlined
         icon="pi pi-search"
+        size="small"
         class="bg-header hover:bg-header-button-hover !text-white flex border-header"
           :pt="{
             label: { class: 'text-white' },

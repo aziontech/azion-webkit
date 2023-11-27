@@ -6,10 +6,11 @@
     offLabel=""
     onIcon="pi pi-sun"
     offIcon="pi pi-moon"
-    class="h-8 w-8 !text-white"
+    class="border-header bg-header"
+    size="small"
     :pt="{
-      label: { class: 'text-white border-color-header !bg-header hover:!bg-header-button-hover' },
-      icon: { class: 'text-white' }
+      icon: { class: 'text-white text-sm' },
+      root: { class: 'bg-header hover:bg-header-button-hover' }
     }" />
 </template>
 
