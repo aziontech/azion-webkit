@@ -12,7 +12,7 @@
           </a>
           <nav>
             <ul class="flex gap-4">
-              <li v-for="(menuitem, index) in menudata.items">
+              <li v-for="(menuitem) in menudata.items">
                 <a
                   v-if="!menuitem.items || !menuitem.items.length"
                   :href="menuitem.href || ''"
