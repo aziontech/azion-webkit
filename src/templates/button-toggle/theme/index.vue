@@ -28,14 +28,6 @@ function reset() {
 
 function onClick(){
   reset();
-
-  const html = getHTML();
-
-  if(status.value) {
-    html.classList.add('azion-light');
-  } else {
-    html.classList.add('azion-dark');
-    status.value = false;
-  }
+  getHTML().classList.add(status.value ? 'azion-light' : 'azion-dark');
 }
 </script>
