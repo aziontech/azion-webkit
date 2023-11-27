@@ -35,11 +35,11 @@
                   <div class="flex flex-col gap-2">
                     <Button
                       text
+                      size="small"
                       v-for="(subitem, index) in menuitem.items"
                       :class="{ '!text-color-secondary-overlay': menudata.active === index }"
                       class="flex gap-2 justify-between w-full items-center"
                       @click="menudata.active = index">
-
                       <span class="flex gap-2 items-center">
                         <i :class="subitem.icon"></i>
                         {{ subitem.label }}
@@ -53,10 +53,9 @@
                         <div class="grid grid-cols-2 gap-2 m-0 p-0 w-[500px]">
                           <a
                             v-for="link in subitem.items"
-                            class="flex gap-2 justify-between w-full items-center p-button p-button-primary p-button-text">
-
+                            class="flex gap-2 w-full items-center p-button p-button-text p-button-sm">
                             <div class="flex flex-row gap-4 items-center">
-                              <i :class="link.icon"></i>
+                              <i v-if="link.icon" :class="link.icon"/>
                               <div class="flex flex-col items-start">
                                 <div class="flex gap-2 items-center">{{ link.label }}</div>
                                 <div class="text-xs text-color-secondary">{{ link.description }}</div>
