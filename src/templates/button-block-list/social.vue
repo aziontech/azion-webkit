@@ -8,7 +8,7 @@
       </a>
       <a :href="`https://x.com/intent/tweet?url=${sharedURL}&via=@aziontech`" target="_blank" rel="noopener noreferrer"
         class="p-button p-component p-button-icon-only p-button-primary p-button-outlined">
-        <span class="p-button-icon pi pi-twitter" data-pc-section="icon"></span>
+        <span class="p-button-icon ai ai-twitter" data-pc-section="icon"></span>
       </a>
       <a :href="`https://www.linkedin.com/sharing/share-offsite/?url=${sharedURL}`" target="_blank"
         rel="noopener noreferrer" class="p-button p-component p-button-icon-only p-button-primary p-button-outlined">
