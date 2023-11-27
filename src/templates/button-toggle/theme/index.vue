@@ -21,11 +21,11 @@ const theme = {
 
 function getHTML() {
   return document.querySelector('html');
-}
+};
 
 function getTheme() {
   return status.value ? theme.light : theme.dark;
-}
+};
 
 function resetTheme() {
   const html = getHTML();
@@ -37,5 +37,5 @@ function resetTheme() {
 function onClick(){
   resetTheme();
   getHTML().classList.add(getTheme());
-}
+};
 </script>
