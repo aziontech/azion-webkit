@@ -79,13 +79,13 @@
         target="_blank"
         href="https://sso.azion.com/login"
         title="Signin | Azion Technologies"
-        class="p-button p-button-primary p-button-text p-button-sm hidden lg:flex">
+        class="p-button p-button-primary p-button-text hover:bg-header-button-hover p-button-sm hidden lg:flex">
         <div class="text-white">Sign in</div>
       </a>
       <a
         href=""
         title="Contact | Azion Technologies"
-        class="p-button p-button-primary p-button-text p-button-sm hover:bg-header-button-hove hidden lg:flexr">
+        class="p-button p-button-primary p-button-text p-button-sm hover:bg-header-button-hover hidden lg:flexr">
         <div class="text-white">Contact</div>
       </a>
       <a
