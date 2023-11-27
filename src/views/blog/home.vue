@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <main>
     <div class="py-8 mb-20 surface-ground">
       <FeaturedPost
@@ -49,6 +50,7 @@
   //////////////////////////
   import ButtonBlockList from '../../templates/button-block-list/index.vue';
   import FeaturedPost from '../../templates/featured-post/index.vue';
+  import Header from '../../templates/header/index.vue';
   import Footer from '../../templates/footer/index.vue';
   import PostCardGridList from '../../templates/card-grid-list/index.vue';
   import NewsletterSingleLine from '../../templates/newsletter/single-line/index.vue';

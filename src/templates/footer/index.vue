@@ -1,6 +1,6 @@
 <template>
   <footer class="py-12 surface-ground">
-    <div class="flex flex-col gap-9 lg:gap-8 px-4 md:px-8">
+    <div class="flex flex-col gap-9 lg:gap-8 px-4 md:px-20">
       <div class="flex flex-col lg:flex-row gap-9 lg:gap-12">
         <div class="w-full lg:w-1/4">
           <a :href="`/${lang}/`" title="Azion Technologies" class="mb-4 block">
@@ -38,7 +38,7 @@
         <div class="flex gap-3">
           <Dropdown v-if="i18nPages" :modelValue="selectedLanguague" v-model="selectedLanguague" :options="i18nPages"
             optionLabel="lang" />
-          <ThemeToggle />
+          <ButtonThemeToggle />
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@
 <script setup>
 import AznTechLogo from "../../assets/icons/azion-logo.vue";
 import Divider from 'primevue/divider';
-import ThemeToggle from '../theme-toggle/index.vue'
+import ButtonThemeToggle from '../button-toggle/theme/index.vue';
 import LinkButton from '../button/link.vue'
 import Dropdown from 'primevue/dropdown';
 import { ref } from 'vue'
