@@ -26,9 +26,9 @@
                     :label="menuitem.label"
                     icon-pos="right"
                     icon="pi pi-angle-down"
-                    @click="(event) => { toggle(event, index) }" />
+                    @click="(event) => { toggle(event, menuitem.ref) }" />
 
-                  <OverlayPanel ref="op" class="top-12 z-50 absolute left-[18.5rem]">
+                  <OverlayPanel :ref="menuitem.ref" class="top-12 z-50 absolute left-[18.5rem]">
                     <div class="flex flex-row p-3 gap-4">
                       <div class="flex flex-col gap-2">
                         <Button
@@ -127,6 +127,7 @@ const menudata = ref({
   items: [
     {
       label: 'Products',
+      ref: 'productsPanel',
       items: [
         {
           label: 'Build',
@@ -295,9 +296,20 @@ const menudata = ref({
     },
     {
       label: 'Resources',
+      ref: 'resourcesPanel',
       items: [
         {
-          label: 'Documentation'
+          label: 'Documentation',
+          items: [
+            {
+              label: 'Getting started',
+              href: ''
+            },
+            // {
+            //   label: '',
+            //   href: ''
+            // }
+          ]
         }
       ]
     },
@@ -309,10 +321,34 @@ const menudata = ref({
   ]
 });
 
-const op = ref();
-const toggle = (event, index) => {
+for(var i = 0; i < menudata.value.items.length; i++) {
+  console.log(`loop index: `, i);
+  let item = menudata.value.items[i];
+
+  if(!item.items || !item.items.length) {
+    console.log('continue');
+    continue;
+  }
+
+  console.log(`item.ref to window: `, item.ref);
+  window[item.ref || ''] = ref();
+}
+
+
+// const productsPanel = ref();
+// const resourcesPanel = ref();
+
+const toggle = (event, refattr) => {
+  console.log('refattr: ', refattr);
+  console.log(window[refattr]);
+
   try {
-    op.value[0].toggle(event);
+    window[refattr].value[0].toggle(event);
+    // if(refattr === 'productsPanel') {
+    //   productsPanel.value[0].toggle(event);
+    // } else if (refattr === 'resourcesPanel') {
+    //   resourcesPanel.value[0].toggle(event);
+    // }
   } catch (error) {
     console.error('Error in toggle method:', error);
   }
