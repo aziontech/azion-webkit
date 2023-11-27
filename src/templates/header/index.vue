@@ -117,8 +117,8 @@ import Button from 'primevue/button';
 import OverlayPanel from 'primevue/overlaypanel';
 import TabView from 'primevue/tabview';
 import TabPanel from 'primevue/tabpanel';
-import MobileSidebar from './mobile.vue';
 
+import MobileSidebar from './mobile.vue';
 import AzionLogoDefault from '../../assets/icons/azion-logo-default.vue';
 import ButtonThemeToggle from '../button-toggle/theme/index.vue';
 
