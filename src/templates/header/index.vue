@@ -97,10 +97,13 @@
           </a>
 
           <ButtonThemeToggle />
-
           <Button outlined severity="secondary">
             <i class="pi pi-search"></i>
           </Button>
+          <!-- <Button outlined severity="secondary">
+            <i class="pi pi-bars"></i>
+          </Button> -->
+          <MobileSidebar />
         </div>
       </div>
     </div>
@@ -109,10 +112,13 @@
 
 <script setup>
 import { ref } from 'vue';
+
 import Button from 'primevue/button';
 import OverlayPanel from 'primevue/overlaypanel';
 import TabView from 'primevue/tabview';
 import TabPanel from 'primevue/tabpanel';
+import MobileSidebar from './mobile.vue';
+
 import AzionLogoDefault from '../../assets/icons/azion-logo-default.vue';
 import ButtonThemeToggle from '../button-toggle/theme/index.vue';
 
@@ -342,3 +348,4 @@ const toggle = (event, refattr) => {
   }
 };
 </script>
+e
