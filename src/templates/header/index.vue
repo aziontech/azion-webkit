@@ -5,7 +5,6 @@
         href="/"
         title="Home | Azion Technologies"
         class="block mr-6">
-
         <AzionLogoDefault class="w-[90px]" />
       </a>
       <nav>
@@ -14,28 +13,32 @@
             <a
               v-if="!menuitem.items || !menuitem.items.length"
               :href="menuitem.href || ''"
-              class="p-button p-button-text p-button-primary">
-
-              {{ menuitem.label }}
+              class="p-button p-button-text p-button-primary p-button-sm hover:bg-header-button-hover hidden lg:flex">
+              <span class="text-white">{{ menuitem.label }}</span>
             </a>
             <div v-if="menuitem.items && menuitem.items.length">
               <Button
                 text
+                size="small"
                 :label="menuitem.label"
                 icon-pos="right"
                 icon="pi pi-angle-down"
-                @click="(event) => { toggle(event, menuitem.ref); menudata.active = 0; }" />
-
-              <OverlayPanel :ref="menuitem.ref" class="top-12 z-50 absolute left-[18.5rem]">
+                class="hidden lg:flex hover:bg-header-button-hover"
+                @click="(event) => { toggle(event, menuitem.ref); menudata.active = 0; }"
+                :pt="{
+                  label: { class: 'text-white' },
+                  icon: { class: 'text-white' }
+                }"/>
+              <OverlayPanel :ref="menuitem.ref">
                 <div class="flex flex-row p-3 gap-4">
                   <div class="flex flex-col gap-2">
                     <Button
                       text
+                      size="small"
                       v-for="(subitem, index) in menuitem.items"
-                      :class="{ '!text-color-secondary-overlay': menudata.active === index }"
+                      :class="{ 'surface-hover': menudata.active === index }"
                       class="flex gap-2 justify-between w-full items-center"
                       @click="menudata.active = index">
-
                       <span class="flex gap-2 items-center">
                         <i :class="subitem.icon"></i>
                         {{ subitem.label }}
@@ -49,13 +52,12 @@
                         <div class="grid grid-cols-2 gap-2 m-0 p-0 w-[500px]">
                           <a
                             v-for="link in subitem.items"
-                            class="flex gap-2 justify-between w-full items-center p-button p-button-primary p-button-text">
-
+                            class="flex gap-2 w-full items-center p-button p-button-text p-button-sm">
                             <div class="flex flex-row gap-4 items-center">
-                              <i :class="link.icon"></i>
+                              <i v-if="link.icon" :class="link.icon"></i>
                               <div class="flex flex-col items-start">
-                                <div class="flex gap-2 items-center">{{ link.label }}</div>
-                                <div class="text-xs text-color-secondary">{{ link.description }}</div>
+                                <span class="flex gap-2 items-center">{{ link.label }}</span>
+                                <span class="text-xs text-color-secondary">{{ link.description }}</span>
                               </div>
                             </div>
                           </a>
@@ -74,28 +76,35 @@
       <a
         target="_blank"
         href="https://sso.azion.com/login"
-        title="Signin | Azion Technologies" class="p-button p-button-primary p-button-text">
-
-        Sign in
+        title="Signin | Azion Technologies"
+        class="p-button p-button-primary p-button-text hover:bg-header-button-hover p-button-sm hidden lg:flex">
+        <span class="text-white">Sign in</span>
       </a>
       <a
         href=""
-        title="Contact | Azion Technologies" class="p-button p-button-primary p-button-text">
-
-        Contact
+        title="Contact | Azion Technologies"
+        class="p-button p-button-primary p-button-text p-button-sm hover:bg-header-button-hover hidden lg:flexr">
+        <span class="text-white">Contact</span>
       </a>
       <a
         target="_blank"
         href="https://manager.azion.com/signup"
-        title="Free account | Azion Technologies" class="p-button p-button-primary p-button-outlined">
-
-        Free account
+        title="Free account | Azion Technologies"
+        class="p-button p-button-primary p-button-outlined p-button-sm border-white text-white hover:bg-header-button-hover hidden lg:flex">
+        <span class="text-white">Free account</span>
       </a>
 
-      <ButtonThemeToggle />
-      <Button outlined>
-        <i class="pi pi-search"></i>
-      </Button>
+      <ButtonThemeToggle class="hidden lg:flex" />
+      <Button
+        outlined
+        icon="pi pi-search"
+        size="small"
+        class="bg-header hover:bg-header-button-hover !text-white flex border-header"
+          :pt="{
+            label: { class: 'text-white' },
+            icon: { class: 'text-white' }
+          }"
+      />
       <MobileSidebar />
     </div>
   </header>
@@ -339,4 +348,3 @@ const toggle = (event, refattr) => {
   }
 };
 </script>
-e

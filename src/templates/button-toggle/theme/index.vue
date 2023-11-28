@@ -6,7 +6,12 @@
     offLabel=""
     onIcon="pi pi-sun"
     offIcon="pi pi-moon"
-    class="p-button p-button-outlined p-[1.095rem]" />
+    class="border-header bg-header"
+    size="small"
+    :pt="{
+      icon: { class: 'text-white text-sm' },
+      root: { class: 'bg-header hover:bg-header-button-hover' }
+    }" />
 </template>
 
 <script setup>
