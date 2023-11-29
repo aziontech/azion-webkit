@@ -74,7 +74,7 @@
             <span class="ml-2">
               {{ item.label }}
             </span>
-            <Tag v-for="tag in item.tags" :key="tag" :value="tag" severity="info"/>
+            <Tag v-for="tag in item.tags" :key='tag' :value="tag" severity="info"/>
         </a>
       </template>
     </Menu>

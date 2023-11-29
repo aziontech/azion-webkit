@@ -9,7 +9,7 @@
       </a>
       <nav>
         <ul class="flex gap-4">
-          <li v-for="(menuitem) in menudata.items">
+          <li v-for="(menuitem, index) in menudata.items" :key="index">
             <a
               v-if="!menuitem.items || !menuitem.items.length"
               :href="menuitem.href || ''"
@@ -36,6 +36,7 @@
                       text
                       size="small"
                       v-for="(subitem, index) in menuitem.items"
+                      :key="index"
                       :class="{ 'surface-hover': menudata.active === index }"
                       class="flex gap-2 justify-between w-full items-center"
                       @click="menudata.active = index">
@@ -48,10 +49,10 @@
                   </div>
                   <div class="flex w-full max-w-[500px]">
                     <TabView v-model:activeIndex="menudata.active" :pt="{ navContainer: { class: 'hidden' } }">
-                      <TabPanel v-for="subitem in menuitem.items">
+                      <TabPanel v-for="(subitem, index) in menuitem.items" :key="index">
                         <div class="grid grid-cols-2 gap-2 m-0 p-0 w-[500px]">
                           <a
-                            v-for="link in subitem.items"
+                            v-for="(link, index) in subitem.items" :key="index"
                             class="flex gap-2 w-full items-center p-button p-button-text p-button-sm">
                             <div class="flex flex-row gap-4 items-center">
                               <i v-if="link.icon" :class="link.icon"></i>
@@ -83,7 +84,7 @@
       <a
         href=""
         title="Contact | Azion Technologies"
-        class="p-button p-button-primary p-button-text p-button-sm hover:bg-header-button-hover hidden lg:flexr">
+        class="p-button p-button-primary p-button-text p-button-sm hover:bg-header-button-hover hidden lg:flex">
         <span class="text-white">Contact</span>
       </a>
       <a
@@ -105,6 +106,7 @@
             icon: { class: 'text-white' }
           }"
       />
+
       <MobileSidebar />
     </div>
   </header>
