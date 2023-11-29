@@ -6,10 +6,10 @@ import Button from './templates/button/index.vue'
 import SocialButtonBlockList from './templates/button-block-list/social.vue';
 import Card from './templates/card/index.vue';
 import CardGridList from './templates/card-grid-list/index.vue'
+import CardGridListWithLoadMore from './templates/card-grid-list/withLoadMore.vue'
 import FeaturedPost from './templates/featured-post/index.vue';
 import Header from './templates/header/index.vue';
 import Footer from './templates/footer/index.vue';
-import PostCardGridList from './templates/card-grid-list/index.vue';
 import NewsletterSingleLine from './templates/newsletter/single-line/index.vue';
 import NewsletterCard from './templates/newsletter/card/index.vue';
 import NewsletterWide from './templates/newsletter/wide/index.vue';
@@ -24,11 +24,11 @@ import TagListBlock from "./templates/tag-block-list/index.vue";
 export {
   ButtonBlockList,
   Card,
+  CardGridListWithLoadMore,
   CardGridList,
   Footer,
   Header,
   FeaturedPost,
-  PostCardGridList,
   NewsletterSingleLine,
   NewsletterWide,
   TitleFlexList,
