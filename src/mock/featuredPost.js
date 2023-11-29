@@ -9,5 +9,8 @@ export default {
   linkTarget: "_self",
   date: "JUL, 13, 2020",
   readTime: "10 minutes",
-  authors: { avatars: ['https://assets.azion.com/static/images/uploads/vivian-seixas2.png'], title: 'Rafael Rigues' }
+  authors: {
+    avatars: ["https://assets.azion.com/static/images/uploads/whatsapp-image-2021-12-08-at-16-22-01.jpeg", "https://assets.azion.com/static/images/uploads/whatsapp-image-2021-12-08-at-16-22-01.jpeg", "https://assets.azion.com/static/images/uploads/whatsapp-image-2021-12-08-at-16-22-01.jpeg"],
+    title: "Writted by Rachel Kempf (Editor-in-Chief), Giovani Rinaldi (Developer & Systems Specialist), Nick Sandoval (Product Marketing Manager), and Giovani Rinaldi (Developer & Systems Specialist)."
+  },
 };
