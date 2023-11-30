@@ -32,7 +32,7 @@ const props = defineProps({
 const { data, defaultTab } = props;
 const cardDataList = ref([])
 const disableButton = ref(false)
-const LOADMORE_MAGIC_NUMBER = 1
+const LOADMORE_MAGIC_NUMBER = 3
 
 const createCardsContext = (array) => {
   cardDataList.value = []
@@ -40,7 +40,7 @@ const createCardsContext = (array) => {
   let addedItemsCount = 0
   disableButton.value = false
 
-  const addCards = (increaseCardNumberBy = 3) => {
+  const addCards = (increaseCardNumberBy = 12) => {
     const endRange = addedItemsCount + increaseCardNumberBy > cardLimit ? cardLimit : addedItemsCount + increaseCardNumberBy;
     const startRange = addedItemsCount;
 
