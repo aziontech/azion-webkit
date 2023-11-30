@@ -32,7 +32,7 @@ const props = defineProps({
 const { data, defaultTab } = props;
 const cardDataList = ref([])
 const disableButton = ref(false)
-const LOADMORE_MAGIC_NUMBER = 3
+const LOADMORE_MAGIC_NUMBER = 4
 
 const createCardsContext = (array) => {
   cardDataList.value = []
