@@ -20,6 +20,7 @@ import ArticleHero from "./templates/post/hero/index.vue";
 import ReadableContent from "./templates/post/readable-content/index.vue";
 import TabMenuSearch from "./templates/tab-menu/with-search.vue"
 import TagListBlock from "./templates/tag-block-list/index.vue";
+import EmptyState from "./templates/empty-state-block/index.vue";
 
 export {
   ButtonBlockList,
@@ -42,5 +43,6 @@ export {
   SocialButtonBlockList,
   TabMenuSearch,
   Button,
-  TagListBlock
+  TagListBlock,
+  EmptyState
 }
