@@ -3,7 +3,7 @@
     <Card class="p-0 mt-0"
       :pt="{ header: { class: 'group-hover:shadow-[0_0_0_0.2rem_rgba(243,101,43,0.32)] rounded' }, root: { class: 'shadow-none surface-ground flex flex-col gap-6' } }">
       <template #header v-if="props.imgSrc">
-        <img class="w-full aspect-video rounded" lazy alt="`${imgAlt}`" :src="`https://assets.azion.com${props.imgSrc}`" />
+        <img class="w-full aspect-video rounded" lazy alt="`${imgAlt}`" :src="`https://assets.azion.com${props.imgSrc}?ims=372x209`" />
       </template>
       <template #content>
         <div class="flex flex-col justify-between gap-4">
