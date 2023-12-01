@@ -1,7 +1,11 @@
 <template>
   <div class="container flex justify-between flex-col lg:flex-row">
     <div class="lg:w-2/3 w-ful">
-      <TabMenu class="sm:hidden lg:block overflow-y-auto" v-model:activeIndex="active" :model="mappedDataTabMenu" @click="$emit('categorieChanged', tabList[active]);
+      <TabMenu class="sm:hidden lg:block overflow-y-auto"
+      :pt="{
+        label: 'whitespace-nowrap'
+      }"
+      v-model:activeIndex="active" :model="mappedDataTabMenu" @click="$emit('categorieChanged', tabList[active]);
 "/>
       <Dropdown class="lg:hidden w-full" v-model="active" :options="tabList" />
     </div>
