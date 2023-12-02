@@ -1,8 +1,8 @@
 <template>
-  <TabMenuSearch :tabList="categories" @categorieChanged="handleFilterByCategoryEvent" />
+  <TabMenuSearch :tabList="categories" :inputPlaceholder="inputPlaceholder" @categorieChanged="handleFilterByCategoryEvent" />
   <CardGridList :data="cardDataList" />
   <div class="flex justify-center">
-    <Button label="load more" outlined @click="addCards(LOADMORE_MAGIC_NUMBER)" :disabled="disableButton" />
+    <Button :label="buttonText" outlined @click="addCards(LOADMORE_MAGIC_NUMBER)" :disabled="disableButton" />
   </div>
 </template>
 
@@ -26,6 +26,16 @@ const props = defineProps({
   defaultTab: {
     type: String,
     required: true
+  },
+  inputPlaceholder: {
+    type: String,
+    required: false,
+    default: "Search articles..."
+  },
+  buttonText: {
+    type: String,
+    required: false,
+    default: "Load more"
   }
 });
 
