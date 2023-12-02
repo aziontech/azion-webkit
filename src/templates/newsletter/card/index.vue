@@ -11,7 +11,7 @@
             :class="{ 'p-invalid': errors.email }" />
 
         </span>
-        <Button class='mt-4 w-full' type="submit" icon="pi pi-chevron-right" iconPos="right" :label="buttonText"
+        <Button class='mt-4 w-full' type="submit" :label="buttonText"
           size="small" :disabled="errors.email || !email.value" />
       </div>
     </form>

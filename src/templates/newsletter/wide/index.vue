@@ -14,14 +14,14 @@
               <InputGroupAddon>
                 <i class="pi pi-envelope" />
               </InputGroupAddon>
-              <InputText v-bind="email" type="e-mail" class="w-1/2 lg:w-fit"  :placeholder="props.placeholderEmail"
+              <InputText v-bind="email" type="e-mail" class="w-1/2 lg:w-fit" :placeholder="props.placeholderEmail"
                 :class="{ 'p-invalid': errors.email }" />
-              <Button icon="pi pi-chevron-right" iconPos="right" type="submit"  :label="buttonText"
-                size="small" :disabled="errors.email || !email.value" />
+              <Button type="submit" :label="buttonText" size="small" :disabled="errors.email || !email.value" />
             </InputGroup>
           </form>
           <div class="mt-2">
-            <InlineMessage v-if="isSuccess" severity="success" class="flex justify-start">{{ successMessage }}</InlineMessage>
+            <InlineMessage v-if="isSuccess" severity="success" class="flex justify-start">{{ successMessage }}
+            </InlineMessage>
             <InlineMessage v-if="isError" severity="error" class="flex justify-start"> Error message</InlineMessage>
           </div>
         </div>
