@@ -19,7 +19,7 @@ import TabMenu from 'primevue/tabmenu';
 import InputText from 'primevue/inputtext';
 import { ref } from "vue";
 
-const props = defineProps({
+defineProps({
   tabList: {
     type: Array,
     required: true
@@ -35,7 +35,6 @@ const props = defineProps({
   }
 });
 
-console.log(props.activeIndex)
 // interface Tablist {
 //   type: Array<{
 //   label: String
