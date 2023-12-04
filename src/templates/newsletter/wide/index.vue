@@ -3,7 +3,7 @@
     <div class="container">
       <div class="lg:flex justify-between lg:gap-16">
         <div class="lg:w-2/4">
-          <Overline :label="props.overline" v-if="props.overline" />
+          <span class="uppercase"> {{ props.overline }}</span>
           <h3 class="md:text-6xl text-3xl font-normal text-color max-w-xl mt-2 mb-0">
             {{ props.title }}
           </h3>
@@ -36,7 +36,6 @@ import InputGroup from 'primevue/inputgroup';
 import InputGroupAddon from 'primevue/inputgroupaddon'
 import Button from 'primevue/button';
 import stringConcatRamdomNumber from '../../../helpers/stringConcatRamdomNumber';
-import Overline from '../../overline/index.vue'
 import InlineMessage from 'primevue/inlinemessage'
 import * as yup from 'yup'
 import { useForm } from 'vee-validate'
