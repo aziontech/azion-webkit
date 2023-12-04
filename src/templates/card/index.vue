@@ -7,7 +7,7 @@
       </template>
       <template #content>
         <div class="flex flex-col justify-between gap-4">
-          <div class="flex gap-2" v-if="tagList?.length">
+          <div class="flex gap-2 flex-wrap" v-if="tagList?.length">
             <Tag v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
           </div>
           <h3 class="text-xl font-bold text-color">{{ title }}</h3>
