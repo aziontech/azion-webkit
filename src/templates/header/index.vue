@@ -14,7 +14,7 @@
               <a
                 v-if="!menuitem.items || !menuitem.items.length"
                 :href="menuitem.href || ''"
-                class="p-button p-button-text p-button-primary p-button-sm hover:bg-header-button-hover hidden lg:flex">
+                class="p-button p-button-text p-button-primary p-button-sm hover:bg-header-button-hover hidden lg:flex whitespace-nowrap">
                 <span class="text-white">{{ menuitem.label }}</span>
               </a>
               <div v-if="menuitem.items && menuitem.items.length">
@@ -24,7 +24,7 @@
                   :label="menuitem.label"
                   icon-pos="right"
                   icon="pi pi-angle-down"
-                  class="hidden lg:flex hover:bg-header-button-hover"
+                  class="hidden lg:flex hover:bg-header-button-hover whitespace-nowrap"
                   @click="(event) => { toggle(event, menuitem.ref); menudata.active = 0; }"
                   :pt="{
                     label: { class: 'text-white' },
@@ -79,7 +79,7 @@
           target="_blank"
           href="https://sso.azion.com/login"
           title="Signin | Azion Technologies"
-          class="p-button p-button-primary p-button-text hover:bg-header-button-hover p-button-sm hidden lg:flex">
+          class="p-button whitespace-nowrap p-button-primary p-button-text hover:bg-header-button-hover p-button-sm hidden lg:flex">
           <span class="text-white">Sign in</span>
         </a>
         <a
@@ -92,7 +92,7 @@
           target="_blank"
           href="https://manager.azion.com/signup"
           title="Free account | Azion Technologies"
-          class="p-button p-button-primary p-button-outlined p-button-sm border-white text-white hover:bg-header-button-hover hidden lg:flex">
+          class="p-button whitespace-nowrap p-button-primary p-button-outlined p-button-sm border-white text-white hover:bg-header-button-hover hidden lg:flex">
           <span class="text-white">Free account</span>
         </a>
 
@@ -101,7 +101,7 @@
           outlined
           icon="pi pi-search"
           size="small"
-          class="bg-header hover:bg-header-button-hover !text-white flex border-header"
+          class="bg-header whitespace-nowrap hover:bg-header-button-hover !text-white flex border-header"
             :pt="{
               label: { class: 'text-white' },
               icon: { class: 'text-white' }
