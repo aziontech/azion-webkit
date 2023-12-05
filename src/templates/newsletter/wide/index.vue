@@ -1,15 +1,15 @@
 <template>
-  <section class="surface-section flex justify-center lg:py-28 py-8 px-3 md:px-8">
+  <section class="surface-section flex justify-center py-12 px-3 md:px-8">
     <div class="container">
-      <div class="lg:flex justify-between lg:gap-16">
-        <div class="lg:w-2/4">
-          <span class="uppercase"> {{ props.overline }}</span>
-          <h3 class="md:text-6xl text-3xl font-normal text-color max-w-xl mt-2 mb-0">
+      <div class="flex flex-col gap-8 items-center">
+        <div class="max-w-md w-full text-center">
+          <span class="uppercase"><Overline :label="props.overline" /></span>
+          <h3 class="text-2xl font-normal text-color max-w-xl mt-2 mb-0">
             {{ props.title }}
           </h3>
         </div>
-        <div class="lg:w-2/4 flex flex-col justify-center mt-8 lg:mt-0">
-          <form @submit.prevent="onSubmit" :id="formIdElement" :name="formIdElement" class="lg:w-full">
+        <div class="w-full max-w-md flex flex-col justify-center gap-4">
+          <form @submit.prevent="onSubmit" :id="formIdElement" :name="formIdElement">
             <InputGroup>
               <InputGroupAddon>
                 <i class="pi pi-envelope" />
@@ -19,7 +19,7 @@
               <Button type="submit" :label="buttonText" size="small" :disabled="errors.email || !email.value" />
             </InputGroup>
           </form>
-          <div class="mt-2">
+          <div>
             <InlineMessage v-if="isSuccess" severity="success" class="flex justify-start">{{ successMessage }}
             </InlineMessage>
             <InlineMessage v-if="isError" severity="error" class="flex justify-start"> Error message</InlineMessage>
@@ -41,6 +41,7 @@ import * as yup from 'yup'
 import { useForm } from 'vee-validate'
 import { newsletterSubrscribeHandler } from '../../../services/newsletter/newsletterSubmitHandler'
 import { ref } from 'vue';
+import Overline from '../../overline/index.vue'
 
 const formIdElement = stringConcatRamdomNumber('FormNewsletterSingleLine');
 const isSuccess = ref(false);
