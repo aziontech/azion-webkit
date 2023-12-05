@@ -37,6 +37,14 @@ export default {
         fadeIn: 'fadeIn 220ms ease-in-out',
         fadeOut: 'fadeOut 220ms ease-in-out'
       },
+      container: {
+        padding: {
+          DEFAULT: '.75rem',
+          sm: '2rem',
+          xl: '5rem',
+          '2xl': '10rem'
+        }
+      },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },

@@ -1,7 +1,7 @@
 <template>
   <Header />
   <main>
-    <div class="flex justify-center py-12 px-4 md:px-8">
+    <div class="flex justify-center py-12">
       <div class="flex flex-col gap-11 container">
         <FeaturedPost :imgSrc="featuredPostData.imgSrc" :imgAlt="featuredPostData.imgAlt"
           :tagList="featuredPostData.tagList" :title="featuredPostData.title" :description="featuredPostData.description"
