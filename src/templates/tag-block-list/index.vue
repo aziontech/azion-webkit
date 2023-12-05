@@ -1,8 +1,6 @@
 <template>
-  <div class="flex gap-2 lg:gap-8">
-    <div>
-      <Tag class="mr-2" v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
-    </div>
+  <div class="flex gap-2">
+      <Tag v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
   </div>
 </template>
 
