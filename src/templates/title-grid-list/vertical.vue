@@ -9,9 +9,7 @@
         </a>
       </li>
     </ul>
-    <div>
-      <LinkButton class="p-button p-button-outlined" severity="primary" :label="buttonText" outlined :link="link" />
-    </div>
+    <LinkButton v-if="link" class="p-button p-button-outlined" severity="primary" :label="buttonText" outlined :link="link" />
   </section>
 </template>
 <script setup>
@@ -35,7 +33,7 @@ const props = defineProps({
   },
   link: {
     type: String,
-    required: true
+    required: false
   }
 })
 </script>
