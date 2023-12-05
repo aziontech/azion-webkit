@@ -1,6 +1,6 @@
 <template>
   <section class="surface-section flex justify-center py-12 px-3 md:px-8">
-    <div class="container">
+    <div>
       <div class="flex flex-col gap-8 items-center">
         <div class="max-w-md w-full text-center">
           <span class="uppercase"><Overline :label="props.overline" /></span>

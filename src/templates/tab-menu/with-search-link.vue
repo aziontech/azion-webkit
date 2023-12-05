@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex justify-between flex-col lg:flex-row">
+  <div class="flex justify-between flex-col lg:flex-row">
     <div class="lg:w-2/3 w-full">
       <TabMenu class="lg:block overflow-y-auto" :pt="{ label: 'whitespace-nowrap' }"
         :model="tabList" :url="tabList.url" :label="tabList.label" :activeIndex="activeIndex"
