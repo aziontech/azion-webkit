@@ -2,13 +2,13 @@
   <a :href="link" :title="linkText" :target="linkTarget" class="block">
     <div
       class="flex flex-col lg:flex-row gap-4 lg:gap-10">
-      <div class="h-full">
+      <div class="h-full min-w-[50%]">
         <picture v-if="imgSrc" class="p-0 m-0">
           <img fetchpriority="high" class="w-full md:object-cover rounded-md border border-solid surface-border " width="576" height="324" :alt="imgAlt"
             :src="`${imgSrc}?ims=576x324`" />
         </picture>
       </div>
-      <div class="flex flex-col max-w-lg lg:items-start gap-4">
+      <div class="flex flex-col lg:max-w-lg lg:items-start gap-4">
         <p v-if="date" class="text-xs text-color-secondary"> {{ date }} <span v-if="readTime">&bull; {{ readTime }}</span></p>
         <div class="flex gap-2">
           <Tag v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
