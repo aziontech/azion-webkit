@@ -43,7 +43,7 @@
               </a>
             </template>
           </Dropdown>
-          <ButtonThemeToggle />
+          <DropdownThemeSwitch />
         </div>
       </div>
     </div>
@@ -53,7 +53,7 @@
 <script setup>
 import AzionLogo from "../../assets/icons/azion-logo-default.vue";
 import Divider from 'primevue/divider';
-import ButtonThemeToggle from '../button-toggle/theme/index.vue';
+import DropdownThemeSwitch from '../dropdown-theme-switch/index.vue'
 import LinkButton from '../button/link.vue'
 import Dropdown from 'primevue/dropdown';
 
