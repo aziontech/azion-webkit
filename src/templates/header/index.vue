@@ -1,6 +1,5 @@
 <template>
-  <header class="w-full py-3 bg-header !text-white border-b surface-border items-center flex justify-center h-[56px]">
-    <div class="container">
+  <header class="w-full py-3 bg-header !text-white border-b surface-border md:px-8 h-[56px]">
       <div class="flex justify-between items-center">
         <div class="flex items-center">
           <a
@@ -112,7 +111,6 @@
           <MobileSidebar />
         </div>
       </div>
-    </div>
   </header>
 </template>
 
