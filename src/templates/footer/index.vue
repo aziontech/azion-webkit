@@ -43,7 +43,13 @@
         </div>
         <div class="flex gap-3">
           <Dropdown class="w-full" v-if="i18nPages" :options="i18nPages" :autoOptionFocus="false"
-            optionLabel="lang" :pt="{ item: { class: 'p-0' } }" :placeholder="activeLang.lang">
+            optionLabel="lang" :pt="{ item: { class: 'p-0' } }" :modelValue="activeLang.lang">
+            <template #value="slotProps">
+              <div
+                v-if="slotProps.value">
+                <div>{{ slotProps.value }}</div>
+              </div>
+            </template>
             <template #option="slotProps">
               <a :href="slotProps.option.slug" target="_self" class="w-full px-2 py-3">
                 {{ slotProps.option.lang }}
