@@ -12,13 +12,14 @@
             <span class="text-[#F3652B]">{{ cta.phone }}</span>
           </p>
         </div>
-        <div class="w-full lg:w-3/4 grid grid-cols-1 gap-8 md:grid-cols-5">
-          <div :key="index" v-for="({ title, list }, index) in listData" :class="indicesListsLargerThanFive.includes(index) ? 'col-span-2' : 'col-span-1'">
+        <div class="w-full lg:w-3/4 grid grid-cols-2 gap-8 md:grid-cols-5">
+          <div :key="index" v-for="({ title, list }, index) in listData"
+            :class="listData.length - 1 === index ? 'hidden md:block md:col-span-2' : 'col-span-1'">
             <p class="mb-4 w-full mt-0 text-xs text-color-secondary px-4">
               {{ title }}
             </p>
             <ul class="grid list-none p-0 m-0 gap-3"
-              :class="indicesListsLargerThanFive.includes(index) ? 'grid grid-cols-2' : 'grid-cols-1'">
+              :class="listData.length - 1 === index ? 'md:grid md:grid-cols-2' : 'grid-cols-1'">
               <li v-for="({ link, title }, index) in list" :key="index">
                 <LinkButton :link="`${link}`" class="p-button-text px-4 whitespace-nowrap" :label="title" />
               </li>
@@ -26,24 +27,44 @@
           </div>
         </div>
       </div>
-
-      <div class="sm:hidden md:block">
+      <div class="hidden md:block">
         <Divider />
       </div>
-      <div class="flex justify-between md:items-center sm:flex-col-reverse md:flex-row gap-8">
+      <div class="md:hidden">
+        <a :href="`https://www.facebook.com/aziontech`" target="_blank" rel="noopener noreferrer"
+          class="p-button p-component p-button-icon-only p-button-primary p-button-outlined">
+          <span class="p-button-icon pi pi-facebook" data-pc-section="icon"></span>
+        </a>
+        <a :href="`https://x.com/@aziontech`" target="_blank" rel="noopener noreferrer"
+          class="p-button p-component p-button-icon-only p-button-primary p-button-outlined">
+          <span class="p-button-icon ai ai-twitter" data-pc-section="icon"></span>
+        </a>
+        <a :href="`https://www.linkedin.com/company/aziontech/`" target="_blank"
+          rel="noopener noreferrer" class="p-button p-component p-button-icon-only p-button-primary p-button-outlined">
+          <span class="p-button-icon pi pi-linkedin" data-pc-section="icon"></span>
+        </a>
+        <a :href="`https://discord.gg/Yp9N7RMVZy`" target="_blank"
+          rel="noopener noreferrer" class="p-button p-component p-button-icon-only p-button-primary p-button-outlined">
+          <span class="p-button-icon pi pi-discord" data-pc-section="icon"></span>
+        </a>
+      </div>
+      <div class="flex justify-between md:items-center flex-col-reverse md:flex-row gap-8">
         <p class="text-xs">
           {{ copyright }}
         </p>
+        <div class="md:hidden">
+          <Divider />
+        </div>
         <div class="flex gap-3">
-          <Dropdown v-if="i18nPages" :options="i18nPages" :autoOptionFocus="false" optionLabel="lang"
-            :pt="{ item: { class: 'p-0' } }" :placeholder="modelValue.lang">
+          <Dropdown class="w-2/3 md:w-full" v-if="i18nPages" :options="i18nPages" :autoOptionFocus="false"
+            optionLabel="lang" :pt="{ item: { class: 'p-0' } }" :placeholder="activeLang.lang">
             <template #option="slotProps">
               <a :href="slotProps.option.slug" target="_self" class="w-full px-2 py-3">
                 {{ slotProps.option.lang }}
               </a>
             </template>
           </Dropdown>
-          <ButtonThemeToggle />
+          <DropdownThemeSwitch class="w-1/3 md:w-full" />
         </div>
       </div>
     </div>
@@ -53,7 +74,7 @@
 <script setup>
 import AzionLogo from "../../assets/icons/azion-logo-default.vue";
 import Divider from 'primevue/divider';
-import ButtonThemeToggle from '../button-toggle/theme/index.vue';
+import DropdownThemeSwitch from '../dropdown-theme-switch/index.vue'
 import LinkButton from '../button/link.vue'
 import Dropdown from 'primevue/dropdown';
 
@@ -102,10 +123,5 @@ const props = defineProps({
   }
 })
 
-const modelValue = props.i18nPages ? props.i18nPages.find(p => p.lang.toLowerCase() === props.lang.toLowerCase()) : null
-
-const indicesListsLargerThanFive = (props.listData || []).map((item, index) => {
-  if (item.list.length <= 5) return -1;
-  return index;
-}).filter(index => index !== -1);
+const activeLang = props.i18nPages ? props.i18nPages.find(p => p.lang.toLowerCase() === props.lang.toLowerCase()) : null
 </script>
