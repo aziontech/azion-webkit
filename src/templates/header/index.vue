@@ -1,5 +1,5 @@
 <template>
-  <header class="p-3 bg-header !text-white border-b surface-border items-center flex justify-between md:px-8 w-full h-[56px]">
+  <header class="p-2 bg-header !text-white border-b surface-border items-center flex justify-between md:px-8 w-full h-[56px]">
     <div class="flex items-center">
       <a
         href="/"
@@ -28,9 +28,9 @@
                 :pt="{
                   label: { class: 'text-white' },
                   icon: { class: 'text-white' }
-                }"/>
+                }" />
               <OverlayPanel :ref="menuitem.ref">
-                <div class="flex flex-row p-3 gap-4">
+                <div class="flex flex-row p-2 gap-4">
                   <div class="flex flex-col gap-2">
                     <Button
                       text
@@ -94,19 +94,15 @@
         class="p-button p-button-primary p-button-outlined p-button-sm border-white text-white hover:bg-header-button-hover hidden lg:flex">
         <span class="text-white">Free account</span>
       </a>
-
-      <ButtonThemeToggle class="hidden lg:flex" />
       <Button
         outlined
         icon="pi pi-search"
         size="small"
         class="bg-header hover:bg-header-button-hover !text-white flex border-header"
-          :pt="{
-            label: { class: 'text-white' },
-            icon: { class: 'text-white' }
-          }"
-      />
-
+        :pt="{
+          label: { class: 'text-white' },
+          icon: { class: 'text-white' }
+        }" />
       <MobileSidebar />
     </div>
   </header>
@@ -122,7 +118,6 @@ import TabPanel from 'primevue/tabpanel';
 
 import MobileSidebar from './mobile.vue';
 import AzionLogoDefault from '../../assets/icons/azion-logo-default.vue';
-import ButtonThemeToggle from '../button-toggle/theme/index.vue';
 
 const productsPanel = ref(); // should pass like string name inside ref attr inside menudata
 const resourcesPanel = ref(); // should pass like string name inside ref attr inside menudata
