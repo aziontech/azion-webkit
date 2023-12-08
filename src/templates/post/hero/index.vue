@@ -1,5 +1,4 @@
 <template>
-  <div class="flex justify-center">
     <div class="flex flex-col ">
       <div class="py-4 flex gap-4 lg:gap-8 flex-col w-full">
         <Breadcrumb :model="breadcrumbItems" class="-ml-1" />
@@ -20,7 +19,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script setup>
