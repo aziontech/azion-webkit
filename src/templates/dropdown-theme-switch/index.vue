@@ -3,10 +3,22 @@
     :options="themes"
     :modelValue="status"
     :autoOptionFocus="false"
-    :placeholder="activeItem"
     @update:modelValue="onClick"
-    optionLabel="label"
-    optionValue="value">
+    optionLabel="label">
+    <template #value="slotProps">
+      <div
+        v-if="slotProps.value"
+        class="flex gap-2 align-items-center">
+        <i :class="slotProps.value.icon"></i>
+        <div>{{ slotProps.value.label }}</div>
+      </div>
+    </template>
+    <template #option="slotProps">
+      <div class="flex gap-2 align-items-center">
+        <i :class="slotProps.option.icon"></i>
+        <div>{{ slotProps.option.label }}</div>
+      </div>
+    </template>
   </Dropdown>
 </template>
 
@@ -14,8 +26,10 @@
 import { ref } from 'vue';
 import Dropdown from 'primevue/dropdown';
 
-const status = ref(false);
-const activeItem = ref('Dark')
+const status = ref({
+    label: 'Dark',
+    icon: 'pi pi-moon'
+  });
 const theme = {
   light: 'azion-light',
   dark: 'azion-dark'
@@ -24,12 +38,10 @@ const theme = {
 const themes = [
   {
     label: 'Dark',
-    value: 'azion-dark',
     icon: 'pi pi-moon'
   },
   {
     label: 'Light',
-    value: 'azion-light',
     icon: 'pi pi-sun'
   },
 ]
@@ -39,7 +51,7 @@ function getHTML() {
 };
 
 function getTheme(selectedTheme) {
-  return selectedTheme === theme.light ? theme.light : theme.dark;
+  return selectedTheme === "Dark" ? theme.dark : theme.light;
 };
 
 function resetTheme() {
@@ -50,9 +62,12 @@ function resetTheme() {
 };
 
 function onClick(theme) {
-  resetTheme();
   status.value = theme
-  getHTML().classList.add(getTheme(theme));
 
+  console.log(theme.label)
+
+  resetTheme();
+  getHTML().classList.add(getTheme(theme));
+  console.log(getHTML().classList.add(getTheme(theme.label)))
 };
 </script>
