@@ -2,7 +2,7 @@
   <Header />
   <main>
     <div class="flex justify-center py-12 w-full">
-      <div class="flex flex-col gap-11 px-container w-full">
+      <div class="flex flex-col gap-11 px-3 md:px-8 lg:px-container w-full">
         <FeaturedPost :imgSrc="featuredPostData.imgSrc" :imgAlt="featuredPostData.imgAlt"
           :tagList="featuredPostData.tagList" :title="featuredPostData.title" :description="featuredPostData.description"
           :link="featuredPostData.link" linkText="read more" linkTarget="_self" date="JUL, 13, 2020" readTime="10 minutes"

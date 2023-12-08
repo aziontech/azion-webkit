@@ -58,10 +58,10 @@ export default {
     typography,
   ],
   plugins: [
-    function ({ addUtilities }) {
+    typography,
+    function ({ addUtilities, theme, variants }) {
       const newUtilities = {};
 
-      // Substitua os valores do clamp conforme necessário
       const minWidth = '0.75rem';
       const maxWidth = '10rem';
 
@@ -69,6 +69,18 @@ export default {
       newUtilities['.px-container'] = {
         paddingLeft: `clamp(${minWidth}, -1.6842rem + 12.1711vw, ${maxWidth})`,
         paddingRight: `clamp(${minWidth}, -1.6842rem + 12.1711vw, ${maxWidth})`,
+      };
+
+      // Adiciona uma classe para padding horizontal responsivo com valores específicos em breakpoints
+      newUtilities['@media (min-width: 640px) {.px-container-md}'] = {
+        paddingLeft: '8px', // Valor equivalente a px-8 no breakpoint md
+        paddingRight: '8px',
+      };
+
+      // Adiciona uma classe para padding horizontal responsivo com valores específicos em breakpoints
+      newUtilities['@media (min-width: 768px) {.px-container-lg}'] = {
+        paddingLeft: '4px', // Valor equivalente a px-3 no breakpoint default
+        paddingRight: '4px',
       };
 
       addUtilities(newUtilities, ['responsive', 'hover']);
