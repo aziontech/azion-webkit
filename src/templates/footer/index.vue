@@ -13,12 +13,13 @@
           </p>
         </div>
         <div class="w-full lg:w-3/4 grid grid-cols-2 gap-8 md:grid-cols-5">
-          <div :key="index" v-for="({ title, list }, index) in listData" :class="listData.length -1 === index ? 'md:col-span-2' : 'col-span-1'">
+          <div :key="index" v-for="({ title, list }, index) in listData"
+            :class="listData.length - 1 === index ? 'hidden md:block md:col-span-2' : 'col-span-1'">
             <p class="mb-4 w-full mt-0 text-xs text-color-secondary px-4">
               {{ title }}
             </p>
             <ul class="grid list-none p-0 m-0 gap-3"
-              :class="listData.length -1 === index ? 'md:grid md:grid-cols-2' : 'grid-cols-1'">
+              :class="listData.length - 1 === index ? 'md:grid md:grid-cols-2' : 'grid-cols-1'">
               <li v-for="({ link, title }, index) in list" :key="index">
                 <LinkButton :link="`${link}`" class="p-button-text px-4 whitespace-nowrap" :label="title" />
               </li>
@@ -26,9 +27,26 @@
           </div>
         </div>
       </div>
-
       <div class="hidden md:block">
         <Divider />
+      </div>
+      <div class="md:hidden">
+        <a :href="`https://www.facebook.com/aziontech`" target="_blank" rel="noopener noreferrer"
+          class="p-button p-component p-button-icon-only p-button-primary p-button-outlined">
+          <span class="p-button-icon pi pi-facebook" data-pc-section="icon"></span>
+        </a>
+        <a :href="`https://x.com/@aziontech`" target="_blank" rel="noopener noreferrer"
+          class="p-button p-component p-button-icon-only p-button-primary p-button-outlined">
+          <span class="p-button-icon ai ai-twitter" data-pc-section="icon"></span>
+        </a>
+        <a :href="`https://www.linkedin.com/company/aziontech/`" target="_blank"
+          rel="noopener noreferrer" class="p-button p-component p-button-icon-only p-button-primary p-button-outlined">
+          <span class="p-button-icon pi pi-linkedin" data-pc-section="icon"></span>
+        </a>
+        <a :href="`https://discord.gg/Yp9N7RMVZy`" target="_blank"
+          rel="noopener noreferrer" class="p-button p-component p-button-icon-only p-button-primary p-button-outlined">
+          <span class="p-button-icon pi pi-discord" data-pc-section="icon"></span>
+        </a>
       </div>
       <div class="flex justify-between md:items-center flex-col-reverse md:flex-row gap-8">
         <p class="text-xs">
@@ -38,8 +56,8 @@
           <Divider />
         </div>
         <div class="flex gap-3">
-          <Dropdown class="w-2/3 md:w-full" v-if="i18nPages" :options="i18nPages" :autoOptionFocus="false" optionLabel="lang"
-            :pt="{ item: { class: 'p-0' } }" :placeholder="activeLang.lang">
+          <Dropdown class="w-2/3 md:w-full" v-if="i18nPages" :options="i18nPages" :autoOptionFocus="false"
+            optionLabel="lang" :pt="{ item: { class: 'p-0' } }" :placeholder="activeLang.lang">
             <template #option="slotProps">
               <a :href="slotProps.option.slug" target="_self" class="w-full px-2 py-3">
                 {{ slotProps.option.lang }}
