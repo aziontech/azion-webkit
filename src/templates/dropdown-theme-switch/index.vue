@@ -1,6 +1,12 @@
 <template>
-  <Dropdown :options="themes" :modelValue="status" @update:modelValue="onClick" optionValue="value" :autoOptionFocus="false"
-    optionLabel="label" :placeholder="activeItem">
+  <Dropdown
+    :options="themes"
+    :modelValue="status"
+    :autoOptionFocus="false"
+    :placeholder="activeItem"
+    @update:modelValue="onClick"
+    optionLabel="label"
+    optionValue="value">
   </Dropdown>
 </template>
 
