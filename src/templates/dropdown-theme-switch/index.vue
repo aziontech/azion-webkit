@@ -1,16 +1,11 @@
 <template>
-  <!-- <ToggleButton @click="onClick" v-model="status" onLabel="" offLabel="" onIcon="pi pi-sun" offIcon="pi pi-moon"
-    class="border-header bg-header" size="small" :pt="{
-      icon: { class: 'text-white text-sm' },
-      root: { class: 'bg-header hover:bg-header-button-hover' }
-    }" /> -->
-  <Dropdown :options="themes" :modelValue="status" optionValue="value" :autoOptionFocus="false"
+  <Dropdown :options="themes" :modelValue="status" @update:modelValue="onClick" optionValue="value" :autoOptionFocus="false"
     optionLabel="label" :placeholder="activeItem">
   </Dropdown>
 </template>
 
 <script setup>
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
 import Dropdown from 'primevue/dropdown';
 
 const status = ref(false);
@@ -37,8 +32,8 @@ function getHTML() {
   return document.querySelector('html');
 };
 
-function getTheme() {
-  return status.value ? theme.light : theme.dark;
+function getTheme(selectedTheme) {
+  return selectedTheme === theme.light ? theme.light : theme.dark;
 };
 
 function resetTheme() {
@@ -48,11 +43,10 @@ function resetTheme() {
   html.classList.remove('azion-dark');
 };
 
-function onClick() {
+function onClick(theme) {
   resetTheme();
-  getHTML().classList.add(getTheme());
+  status.value = theme
+  getHTML().classList.add(getTheme(theme));
+
 };
-
-watch(status, () => console.log(status.value))
-
 </script>
