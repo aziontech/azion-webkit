@@ -39,10 +39,7 @@ export default {
       },
       container: {
         padding: {
-          DEFAULT: '.75rem',
-          sm: '2rem',
-          xl: '5rem',
-          '2xl': '10rem'
+          DEFAULT: 'clamp(0.75rem, -1.6842rem + 12.1711vw, 10rem);',
         }
       },
       keyframes: {
@@ -59,5 +56,22 @@ export default {
   },
   plugins: [
     typography,
+  ],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {};
+
+      // Substitua os valores do clamp conforme necessário
+      const minWidth = '0.75rem';
+      const maxWidth = '10rem';
+
+      // Adiciona uma classe para padding horizontal responsivo com clamp
+      newUtilities['.px-container'] = {
+        paddingLeft: `clamp(${minWidth}, -1.6842rem + 12.1711vw, ${maxWidth})`,
+        paddingRight: `clamp(${minWidth}, -1.6842rem + 12.1711vw, ${maxWidth})`,
+      };
+
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
   ],
 }

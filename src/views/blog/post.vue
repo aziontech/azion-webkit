@@ -6,7 +6,7 @@
     :tagList="hero.tagList"
     :authors="hero.authors"
     />
-    <div class="container mx-auto px-1 lg:px-16">
+    <div class="px-container mx-auto px-1 lg:px-16">
       <div class="lg:flex">
         <ReadableContent class="lg:w-2/3" />
         <div class="lg:w-1/3 lg:pl-20">
