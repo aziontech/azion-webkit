@@ -65,6 +65,6 @@ function onClick(theme) {
   status.value = theme
 
   resetTheme();
-  getHTML().classList.add(getTheme(theme));
+  getHTML().classList.add(getTheme(theme.label));
 };
 </script>
