@@ -34,7 +34,7 @@ const props = defineProps({
     default: "Share this post"
   },
   sharedURL: {
-    type: String,
+    type: URL,
     required: true
   }
 });
