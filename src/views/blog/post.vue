@@ -37,7 +37,7 @@
 //////////////////////////
 import PostHero from "../../templates/post/hero/index.vue";
 import ReadableContent from "../../templates/post/readable-content/index.vue"
-import TitleVerticalList from "../../templates/title-grid-list/vertical.vue"
+import TitleVerticalList from "../../templates/title-list/index.vue"
 import NewsletterCard from "../../templates/newsletter/card/index.vue"
 import Footer from '../../templates/footer/index.vue'
 import SocialBlockList from "../../templates/sharer-block/index.vue"
