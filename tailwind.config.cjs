@@ -53,24 +53,25 @@ export default {
     typography,
     function ({ addUtilities, variants }) {
       const newUtilities = {};
-
+  
       newUtilities['.px-container'] = {
         maxWidth: '1240px',
         margin: '0 auto',
         paddingLeft: '.75rem',
         paddingRight: '.75rem',
       };
-
-      newUtilities['@media (min-width: 640px) {.px-container}'] = {
+  
+      // Utilizando as variantes responsivas do Tailwind
+      newUtilities['@media (min-width: 640px) {.sm\\:px-container}'] = {
         paddingLeft: '2rem',
         paddingRight: '2rem',
       };
-
-      newUtilities['@media (min-width: 768px) {.px-container}'] = {
+  
+      newUtilities['@media (min-width: 768px) {.md\\:px-container}'] = {
         paddingLeft: '10rem',
         paddingRight: '10rem',
       };
-
+  
       addUtilities(newUtilities, ['responsive', 'hover']);
     },
   ],
