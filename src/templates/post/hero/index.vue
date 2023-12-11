@@ -1,26 +1,28 @@
 <template>
-    <div class="flex flex-col ">
-  <div class="surface-section flex justify-center py-6 lg:py-14 px-3 md:px-8 ">
-    <div class="flex flex-col ">
-      <div class="py-4 flex gap-4 lg:gap-8 flex-col w-full">
-        <Breadcrumb :model="breadcrumbItems" class="-ml-1" />
-        <h1 class="text-4xl font-medium text-color">
-          {{ title }}
-        </h1>
-        <TagBlockList :tagList="tagList" v-if="tagList" />
-        <p class="font-normal text-color-secondary ">
-          {{ date }}
-        </p>
-        <div v-if="authors">
-          <AvatarGroup>
-            <Avatar v-for="(image, index) in authors.avatars" :key="index" :image="image" shape="circle" />
-          </AvatarGroup>
-          <p class="font-normal text-color-secondary">
-            {{ authors.title }}
+  <div class="flex flex-col ">
+    <div class="surface-section flex justify-center py-6 lg:py-14 px-3 md:px-8 ">
+      <div class="flex flex-col ">
+        <div class="py-4 flex gap-4 lg:gap-8 flex-col w-full">
+          <Breadcrumb :model="breadcrumbItems" class="-ml-1" />
+          <h1 class="text-4xl font-medium text-color">
+            {{ title }}
+          </h1>
+          <TagBlockList :tagList="tagList" v-if="tagList" />
+          <p class="font-normal text-color-secondary ">
+            {{ date }}
           </p>
+          <div v-if="authors">
+            <AvatarGroup>
+              <Avatar v-for="(image, index) in authors.avatars" :key="index" :image="image" shape="circle" />
+            </AvatarGroup>
+            <p class="font-normal text-color-secondary">
+              {{ authors.title }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script setup>
