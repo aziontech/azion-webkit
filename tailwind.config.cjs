@@ -60,21 +60,10 @@ export default {
       const newUtilities = {};
   
       newUtilities['.px-container'] = {
-        maxWidth: '1240px',
+        maxWidth: '1536px',
         margin: '0 auto',
-        paddingLeft: '.75rem',
-        paddingRight: '.75rem',
-      };
-  
-      // Utilizando as variantes responsivas do Tailwind
-      newUtilities['@media (min-width: 640px) {.sm\\:px-container}'] = {
-        paddingLeft: '2rem',
-        paddingRight: '2rem',
-      };
-  
-      newUtilities['@media (min-width: 768px) {.md\\:px-container}'] = {
-        paddingLeft: '10rem',
-        paddingRight: '10rem',
+        paddingLeft: 'clamp(.75rem, 5vw, 10rem)',
+        paddingRight: 'clamp(.75rem, 5vw, 10rem)',
       };
   
       addUtilities(newUtilities, ['responsive', 'hover']);
