@@ -15,7 +15,7 @@ import NewsletterCard from './templates/newsletter/card/index.vue';
 import NewsletterWide from './templates/newsletter/wide/index.vue';
 import Overline from "./templates/overline/index.vue";
 import TitleFlexList from './templates/title-grid-list/index.vue';
-import TitleVerticalList from './templates/title-grid-list/vertical.vue';
+import TitleVerticalList from './templates/title-list/index.vue';
 import ArticleHero from "./templates/post/hero/index.vue";
 import ReadableContent from "./templates/post/readable-content/index.vue";
 import TabMenuSearch from "./templates/tab-menu/with-search.vue"
