@@ -64,10 +64,7 @@ function resetTheme() {
 function onClick(theme) {
   status.value = theme
 
-  console.log(theme.label)
-
   resetTheme();
   getHTML().classList.add(getTheme(theme));
-  console.log(getHTML().classList.add(getTheme(theme.label)))
 };
 </script>
