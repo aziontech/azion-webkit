@@ -39,7 +39,10 @@ export default {
       },
       container: {
         padding: {
-          DEFAULT: 'clamp(0.75rem, -1.6842rem + 12.1711vw, 10rem);',
+          DEFAULT: '.75rem',
+          sm: '2rem',
+          xl: '5rem',
+          '2xl': '10rem'
         }
       },
       keyframes: {
