@@ -93,6 +93,11 @@ import Dropdown from 'primevue/dropdown';
 //   phone: String
 // }
 
+// interface i18nPages {
+//   lang: String,
+//   slug: String
+// }
+
 const props = defineProps({
   lang: {
     type: String,
