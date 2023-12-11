@@ -1,8 +1,8 @@
 <template>
   <div class="flex gap-3 flex-col font-medium">
     <h3> {{ title }}</h3>
-    <div class="flex gap-2">
-      <IconLinkButton v-for="({ link, icon }, index) in data" :link="link" :icon="icon" :key="index"/>
+    <div class="flex gap-3">
+      <IconLinkButton v-for="({ link, icon, title }, index) in data" :link="link" :icon="icon" :key="index" :tooltipeText="title"/>
       <div id="clipboard" tabindex="-1" v-tooltip.focus.top="{ value: tooltipText, showDelay: 200 }">
         <Button severity="primary" id="clipboardButton" icon="pi pi-link" @click="copyToClipboard" outlined />
       </div>
