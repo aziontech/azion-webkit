@@ -32,7 +32,7 @@
         <Divider />
       </div>
       <div class="md:hidden flex gap-2" v-if="socialButtons">
-        <LinkIcon :data="socialButtons" />
+        <LinkIcon v-for="({ icon, link }, index) in socialButtons" :key="index" :icon="icon" :link="link" />
       </div>
       <div class="flex justify-between md:items-center flex-col-reverse md:flex-row gap-8">
         <p class="text-xs">
