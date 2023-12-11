@@ -1,5 +1,5 @@
 <template>
-  <span class="text-base font-normal uppercase" style="color: #F3652B; letter-spacing: .5rem;">
+  <span class="text-xs font-normal uppercase tracking-[.375rem] text-[#F3652B]">
     {{ label }}
   </span>
 </template>

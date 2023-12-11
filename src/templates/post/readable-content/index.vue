@@ -6,7 +6,7 @@
 
 <style lang="scss">
 .prose *:not(a, a > u) {
-  color: var(--text-color) !important;
+  color: var(--text-color-secondary) !important;
 }
 
 .prose {

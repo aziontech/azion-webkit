@@ -1,11 +1,13 @@
 <template>
+    <div class="flex flex-col ">
   <div class="surface-section flex justify-center py-6 lg:py-14 px-3 md:px-8 ">
     <div class="flex flex-col ">
       <div class="py-4 flex gap-4 lg:gap-8 flex-col w-full">
         <Breadcrumb :model="breadcrumbItems" class="-ml-1" />
-        <h1 class="text-5xl font-bold text-color">
+        <h1 class="text-4xl font-medium text-color">
           {{ title }}
         </h1>
+        <TagBlockList :tagList="tagList" v-if="tagList" />
         <p class="font-normal text-color-secondary ">
           {{ date }}
         </p>
@@ -19,13 +21,13 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script setup>
 import Avatar from 'primevue/avatar'
 import AvatarGroup from 'primevue/avatargroup'
 import Breadcrumb from 'primevue/breadcrumb';
+import TagBlockList from '../../tag-block-list/index.vue';
 
 // interface Authors {
 //   avatars: [url, url],
@@ -52,6 +54,10 @@ const props = defineProps({
   breadcrumbItems: {
     type: Array,
     required: true
+  },
+  tagList: {
+    type: Array,
+    required: false
   }
 })
 

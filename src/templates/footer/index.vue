@@ -12,38 +12,51 @@
             <span class="text-[#F3652B]">{{ cta.phone }}</span>
           </p>
         </div>
-        <div class="w-full lg:w-3/4 grid grid-cols-1 gap-8 md:grid-cols-5">
-          <div :key="index" v-for="({ title, list }, index) in listData" :class="indicesListsLargerThanFive.includes(index) ? 'col-span-2' : 'col-span-1'">
+        <div class="w-full lg:w-3/4 grid grid-cols-2 gap-8 md:grid-cols-5">
+          <div :key="index" v-for="({ title, list }, index) in listData"
+            :class="listData.length - 1 === index ? 'md:col-span-2' : 'col-span-1'">
             <p class="mb-4 w-full mt-0 text-xs text-color-secondary px-4">
               {{ title }}
             </p>
             <ul class="grid list-none p-0 m-0 gap-3"
-              :class="indicesListsLargerThanFive.includes(index) ? 'grid grid-cols-2' : 'grid-cols-1'">
-              <li v-for="({ link, title }, index) in list" :key="index">
+              :class="listData.length - 1 === index ? 'md:grid md:grid-cols-2' : 'grid-cols-1'">
+              <li v-for="({ link, title }, index) in list" :key="index"
+                :class="[0, 1].includes(index) ? 'block' : 'hidden md:block'">
                 <LinkButton :link="`${link}`" class="p-button-text px-4 whitespace-nowrap" :label="title" />
               </li>
             </ul>
           </div>
         </div>
       </div>
-
-      <div class="sm:hidden md:block">
+      <div class="hidden md:block">
         <Divider />
       </div>
-      <div class="flex justify-between md:items-center sm:flex-col-reverse md:flex-row gap-8">
+      <div class="md:hidden flex gap-2" v-if="socialButtons">
+        <LinkIcon :data="socialButtons" />
+      </div>
+      <div class="flex justify-between md:items-center flex-col-reverse md:flex-row gap-8">
         <p class="text-xs">
           {{ copyright }}
         </p>
+        <div class="md:hidden">
+          <Divider />
+        </div>
         <div class="flex gap-3">
-          <Dropdown v-if="i18nPages" :options="i18nPages" :autoOptionFocus="false" optionLabel="lang"
-            :pt="{ item: { class: 'p-0' } }" :placeholder="modelValue.lang">
+          <Dropdown class="w-full" v-if="i18nPages" :options="i18nPages" :autoOptionFocus="false"
+            optionLabel="lang" :pt="{ item: { class: 'p-0' } }" :modelValue="activeLang.lang">
+            <template #value="slotProps">
+              <div
+                v-if="slotProps.value">
+                <div>{{ slotProps.value }}</div>
+              </div>
+            </template>
             <template #option="slotProps">
               <a :href="slotProps.option.slug" target="_self" class="w-full px-2 py-3">
                 {{ slotProps.option.lang }}
               </a>
             </template>
           </Dropdown>
-          <ButtonThemeToggle />
+          <DropdownThemeSwitch />
         </div>
       </div>
     </div>
@@ -53,7 +66,8 @@
 <script setup>
 import AzionLogo from "../../assets/icons/azion-logo-default.vue";
 import Divider from 'primevue/divider';
-import ButtonThemeToggle from '../button-toggle/theme/index.vue';
+import DropdownThemeSwitch from '../dropdown-theme-switch/index.vue'
+import LinkIcon from "../button/link-icon.vue"
 import LinkButton from '../button/link.vue'
 import Dropdown from 'primevue/dropdown';
 
@@ -99,13 +113,12 @@ const props = defineProps({
   i18nPages: {
     type: Array,
     required: false
+  },
+  socialButtons: {
+    type: Array,
+    required: false
   }
 })
 
-const modelValue = props.i18nPages ? props.i18nPages.find(p => p.lang.toLowerCase() === props.lang.toLowerCase()) : null
-
-const indicesListsLargerThanFive = (props.listData || []).map((item, index) => {
-  if (item.list.length <= 5) return -1;
-  return index;
-}).filter(index => index !== -1);
+const activeLang = props.i18nPages ? props.i18nPages.find(p => p.lang.toLowerCase() === props.lang.toLowerCase()) : null
 </script>
