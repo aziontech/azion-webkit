@@ -1,5 +1,5 @@
 <template>
-  <TabMenuSearch :tabList="categories" :inputPlaceholder="inputPlaceholder" @categorieChanged="handleFilterByCategoryEvent" />
+  <TabMenuSearch :tabList="categories" :inputPlaceholder="inputPlaceholder" @indexChanged="handleFilterByCategoryEvent" />
   <CardGridList :data="cardDataList" />
   <div class="flex justify-center">
     <Button :label="buttonText" outlined @click="addCards(LOADMORE_MAGIC_NUMBER)" :disabled="disableButton" />
@@ -76,6 +76,8 @@ addCards()
 
 const handleFilterByCategoryEvent = (category) => {
   let categoryData
+
+  console.log(category)
 
   if (category === defaultTab) {
     categoryData = data
