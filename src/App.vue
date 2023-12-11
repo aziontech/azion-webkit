@@ -3,7 +3,7 @@
 
   <hr />
 
-  <!-- <BlogPost /> -->
+  <BlogPost />
 </template>
 
 <script setup>
