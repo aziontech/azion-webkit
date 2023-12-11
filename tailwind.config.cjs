@@ -37,11 +37,6 @@ export default {
         fadeIn: 'fadeIn 220ms ease-in-out',
         fadeOut: 'fadeOut 220ms ease-in-out'
       },
-      container: {
-        padding: {
-          DEFAULT: 'clamp(0.75rem, -1.6842rem + 12.1711vw, 10rem);',
-        }
-      },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
@@ -56,26 +51,27 @@ export default {
   },
   plugins: [
     typography,
-    function ({ addUtilities, theme, variants }) {
+    function ({ addUtilities, variants }) {
       const newUtilities = {};
 
-      // Substitua os valores do clamp conforme necessário
-      const minWidth = '0.75rem';
-      const maxWidth = '10rem';
-
-      // Adiciona uma classe para padding horizontal responsivo com clamp
       newUtilities['.px-container'] = {
-        paddingLeft: `clamp(${minWidth}, -1.6842rem + 12.1711vw, ${maxWidth})`,
-        paddingRight: `clamp(${minWidth}, -1.6842rem + 12.1711vw, ${maxWidth})`,
-      };
-
-      // Adiciona uma classe para padding horizontal fixo em .75rem no breakpoint sm
-      newUtilities['@media (min-width: 640px) {.sm\\:px-container}'] = {
+        maxWidth: '1240px',
+        margin: '0 auto',
         paddingLeft: '.75rem',
         paddingRight: '.75rem',
       };
 
-      addUtilities(newUtilities, variants('responsive', ['hover']));
+      newUtilities['@media (min-width: 640px) {.px-container}'] = {
+        paddingLeft: '2rem',
+        paddingRight: '2rem',
+      };
+
+      newUtilities['@media (min-width: 768px) {.px-container}'] = {
+        paddingLeft: '10rem',
+        paddingRight: '10rem',
+      };
+
+      addUtilities(newUtilities, ['responsive', 'hover']);
     },
   ],
 }

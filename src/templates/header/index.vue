@@ -1,6 +1,6 @@
 <template>
-  <header class="w-full py-3 bg-header !text-white border-b surface-border px-3 md:px-8 h-[56px]">
-      <div class="flex justify-between items-center">
+  <header class="py-3 bg-header !text-white border-b surface-border h-[56px] w-full">
+      <div class="flex justify-between items-center px-container">
         <div class="flex items-center">
           <a
             href="/"
