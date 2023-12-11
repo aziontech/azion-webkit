@@ -2,7 +2,7 @@ import NewsletterCardSmall from '../../templates/newsletter/card/index.vue';
 import data from '../../mock/newsletterSingleLine';
 
 export default {
-  title: 'Newsletter/Card/Small',
+  title: 'Blocks/Newsletter/Card/Small',
   component: NewsletterCardSmall,
   tags: ['autodocs'],
   argTypes: {}

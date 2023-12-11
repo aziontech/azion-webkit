@@ -2,7 +2,7 @@ import HeroArticle from '../../templates/post/hero/index.vue';
 import data from '../../mock/articleHero'
 
 export default {
-  title: 'Article/Hero',
+  title: 'Blocks/Article/Hero',
   component: HeroArticle,
   tags: ['autodocs'],
   argTypes: {}

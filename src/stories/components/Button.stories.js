@@ -1,13 +1,16 @@
-import ReadableContent from '../../templates/post/readable-content/index.vue';
+import Button from '../../templates/button/index.vue';
 
 export default {
-  title: 'Blocks/Article/ReadbleContent',
-  component: ReadableContent,
+  title: 'Components/Button',
+  component: Button,
   tags: ['autodocs'],
   argTypes: {}
 };
 
+
 // More on writing stories with args: https://storybook.js.org/docs/vue/writing-stories/args
 export const Default = {
-  args: {}
+  args: {
+    label: 'link button text',
+  }
 };
