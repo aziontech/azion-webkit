@@ -1,10 +1,10 @@
 <template>
-  <a :href="link" :title="linkText" :target="linkTarget" class="block">
+  <a :href="link" :title="linkText" :target="linkTarget" class="bloc group">
     <div
       class="flex flex-col lg:flex-row gap-4 lg:gap-10">
       <div class="h-full min-w-[50%]">
         <picture v-if="imgSrc" class="p-0 m-0">
-          <img fetchpriority="high" class="w-full md:object-cover rounded-md border border-solid surface-border " width="576" height="324" :alt="imgAlt"
+          <img fetchpriority="high" class="w-full md:object-cover rounded-md group-hover:shadow-[0_0_0_0.2rem_rgba(243,101,43,0.32)]" width="576" height="324" :alt="imgAlt"
             :src="`${imgSrc}?ims=576x324`" />
         </picture>
       </div>
