@@ -20,8 +20,8 @@
             </p>
             <ul class="grid list-none p-0 m-0 gap-3"
               :class="listData.length - 1 === index ? 'md:grid md:grid-cols-2' : 'grid-cols-1'">
-              <li v-for="({ link, title }, index) in list" :key="index"
-                :class="[0, 1].includes(index) ? 'block' : 'hidden md:block'">
+              <li v-for="({ link, title }, i) in list" :key="i"
+                :class="listData.length - 1 == index ? [0, 1].includes(i) ? 'block' : 'hidden md:block' : 'block'">
                 <LinkButton :link="`${link}`" class="p-button-text px-4 whitespace-nowrap" :label="title" />
               </li>
             </ul>
@@ -31,8 +31,8 @@
       <div class="hidden md:block">
         <Divider />
       </div>
-      <div class="md:hidden flex gap-2" v-if="socialButtons">
-        <LinkIcon :data="socialButtons" />
+      <div class="md:hidden flex gap-3" v-if="socialButtons">
+        <LinkIcon v-for="({ icon, link, title }, index) in socialButtons" :key="index" :icon="icon" :link="link" :tooltipText="title"/>
       </div>
       <div class="flex justify-between md:items-center flex-col-reverse md:flex-row gap-8">
         <p class="text-xs">
@@ -91,6 +91,11 @@ import Dropdown from 'primevue/dropdown';
 // interface cta {
 //   text: String,
 //   phone: String
+// }
+
+// interface i18nPages {
+//   lang: String,
+//   slug: String
 // }
 
 const props = defineProps({

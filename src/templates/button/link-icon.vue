@@ -1,15 +1,24 @@
 <template>
   <a :href="link" target="_blank" rel="noopener noreferrer"
     class="p-button p-component p-button-icon-only p-button-primary p-button-outlined"
-    v-for="({ icon, link }, index) in data" :key="index">
+    v-tooltip.top="{ value: tooltipText, showDelay: 200 }"
+  >
     <span :class="`p-button-icon ${icon}`" data-pc-section="icon"></span>
   </a>
 </template>
 
 <script setup>
 defineProps({
-  data: {
-    type: Array,
+  icon: {
+    type: String,
+    required: true
+  },
+  link: {
+    type: String,
+    required: true
+  },
+  tooltipText: {
+    type: String,
     required: true
   }
 })

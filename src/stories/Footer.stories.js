@@ -15,6 +15,7 @@ export const Default = {
     listData: footerData.listData,
     cta: footerData.cta,
     copyright: footerData.copyright,
-    i18nPages: [{ lang: 'English' }],
+    i18nPages: [{ lang: 'EN', slug: '/' }],
+    socialButtons: footerData.socialButtons
   }
 };

@@ -1,29 +1,19 @@
-export default {
-  title: 'CATEGORIES',
-  categories: [
-    {
-      label: "Networking",
-      severity: "secondary",
-      rounded: true,
-      size: "small"
-    },
-    {
-      label: "Security",
-      severity: "secondary",
-      rounded: true,
-      size: "small"
-    },
-    {
-      label: "News",
-      severity: "secondary",
-      rounded: true,
-      size: "small"
-    },
-    {
-      label: "Developers",
-      severity: "secondary",
-      rounded: true,
-      size: "small"
-    },
-  ]
-}
+export default [
+  {
+    title: 'Market Trends',
+    link: '/en/blog/market-trends/',
+    target: '_blank'
+  },
+  { title: 'Caching', link: '/en/blog/caching/', target: '_blank' },
+  { title: 'Routing', link: '/en/blog/routing/', target: '_blank' },
+  {
+    title: 'Orchestration',
+    link: '/en/blog/orchestration/',
+    target: '_blank'
+  },
+  {
+    title: 'Developers',
+    link: '/en/blog/developers/',
+    target: '_blank'
+  }
+]

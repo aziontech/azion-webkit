@@ -1,58 +1,152 @@
 export default [
   {
-    image: '/static/images/uploads/thumbblog-limitpayloadsize.png',
-    title: 'Azion Announces Solution That Blocks Oversized Requests',
-    description: "Find out why blocking oversized requests simplifies operations and gives you a competitive advantage. Get more Security and performance for your applications with Azion's Limit Payload Size solution.",
-    link: '/en/blog/azion-announces-solution-that-blocks-oversized-requests/',
-    tagList: [ 'Security', 'Developers' ],
-    authors: { avatars: ['https://assets.azion.com/static/images/uploads/vivian-seixas2.png'], title: 'Vivian Seixas' }
+    image: '/static/images/blog/ecommerce-black-friday/featured-img.png',
+    title: 'Prepare Your Store for the Biggest Black Friday',
+    description: 'Edge Computing is critical for pages to load quickly, decreasing the likelihood of rejection. See how to use this Technology to your advantage.',
+    link: '/en/blog/ecommerce-ready-black-friday/',
+    tagList: [ 'Serverless', 'Market Trends', 'Caching' ],
+    authors: { avatars: [Array], title: 'Azion Technologies' },
+    date: 'NOV, 2, 2022',
+    estimateReadTime: '15 minutes'
   },
   {
-    image: '/static/images/uploads/thumb-blog-multiport-kv.png',
-    title: 'Simultaneous Multiport Support Makes Your Edge Migration Easier',
-    description: 'New feature gives you more flexibility in the way your applications are delivered, and helps to avoid extra development costs.',
-    link: '/en/blog/edge-app-multiport-support/',
-    tagList: [ 'Developers', 'Company News' ],
-    authors: { avatars: ['https://assets.azion.com/static/images/uploads/vivian-seixas2.png'], title: 'Rafael Rigues' }
+    image: '/static/images/uploads/containersserverlessnewthumb.png',
+    title: 'Varnish vs. Nginx',
+    description: 'Caching contributes significantly to website speed and latency. This makes it crucial to choose the right proxy server to handle your website needs. Varnish and Nginx are two such services with distinct strengths and weaknesses that could make one a better fit for your website.',
+    link: '/en/blog/varnish-vs-nginx/',
+    tagList: [ 'Caching' ],
+    authors: { avatars: [Array], title: 'Frank Garland' },
+    date: 'NOV, 2, 2022',
+    estimateReadTime: '13 minutes'
   },
   {
-    image: '/static/images/uploads/thumb-blog-cipher-suites-1-1.png',
-    title: 'Discover How Azion Cipher Suites Manages Your TLS Ciphers at the Edge',
-    description: "Now Azion's graphical interface, Real-Time Manager, allows you to easily set up cipher suites for your edge applications with just a few clicks.",
-    link: '/en/blog/how-cipher-suites-manages-tls-ciphers-on-the-edge/',
-    tagList: [ 'Security' ],
-    authors: { avatars: ['https://assets.azion.com/static/images/uploads/vivian-seixas2.png'], title: 'Isidro Iturat Hernández' }
-  },
-  {
-    image: '/static/images/blog/edge-computing-trends/featured-img.png',
-    title: 'The Main Trends for Edge Computing',
-    description: 'Follow the trends of Edge Computing and see how your company can stand out by following them.',
-    link: '/en/blog/main-trends-edge-computing/',
+    image: '/static/images/uploads/des-520-faas-edge-computing-miniatura.png',
+    title: 'Pushing Computation to the Edge With Serverless Compute',
+    description: 'To fully harness the power of edge computing, edge-native applications must be capable of executing serverless compute logic when and where they’re needed.',
+    link: '/en/blog/pushing-computation-to-edge-serverless-compute/',
     tagList: [ 'Serverless' ],
-    authors: { avatars: ['https://assets.azion.com/static/images/uploads/vivian-seixas2.png'], title: 'Azion Technologies' }
+    authors: { avatars: [Array], title: 'Rachel Kempf' },
+    date: 'NOV, 2, 2022',
+    estimateReadTime: '21 minutes'
   },
   {
-    image: '/static/images/uploads/thumb-blog-let-s-encrypt-kv.png',
-    title: "Now It's Much Easier to Get a Let's Encrypt TLS Certificate at Azion",
-    description: "TLS certificates at your fingertips! See how much easier and faster it is to generate or renew a free SSL certificate from Let's Encrypt at Azion's Edge Computing Platform.",
-    link: '/en/blog/now-its-much-easier-to-get-a-lets-encrypt-tls-certificate-at-azion/',
-    tagList: [ 'Security', 'Developers' ],
-    authors: { avatars: ['https://assets.azion.com/static/images/uploads/vivian-seixas2.png'], title: 'Vivian Seixas' }
+    image: '/static/images/uploads/history-of-javascript.png',
+    title: 'History of JavaScript',
+    description: "Although JavaScript was designed quickly and intended for small front-end design tasks, it is now a rich and mature ecosystem which has transformed the modern Internet with dynamic sites and web applications. This post will take an in-depth look at JavaScript's basic concepts, origins, standardization efforts, and current capabilities.",
+    link: '/en/blog/history-of-javascript/',
+    tagList: [ 'Serverless' ],
+    authors: { avatars: [Array], title: 'Rachel Kempf' },
+    date: 'NOV, 2, 2022',
+    estimateReadTime: '21 minutes'
   },
   {
-    image: '/static/images/uploads/origin-shield-now-available-for-real-time-manager-and-api.png',
-    title: 'Origin Shield, Available for RTM and API',
-    description: 'Automate the configuration of your firewall rules and release or block access at its source only to specific IP addresses.',
-    link: '/en/blog/origin-shield-available-rtm-api/',
-    tagList: [ 'Security' ],
-    authors: { avatars: ['https://assets.azion.com/static/images/uploads/vivian-seixas2.png'], title: 'Rodrigo Costa' }
+    image: '/static/images/uploads/how-edge-computing-solves-four-key-iot-challenges.png',
+    title: 'How Edge Computing Solves Four Key IoT Challenges',
+    description: 'The rapid growth of IoT is dependent on the infrastructure needed to support it. While 5G often takes the spotlight for enabling new IoT use cases, edge computing is already working to solve many of the issues created by the exponential increase in IoTs.',
+    link: '/en/blog/how-edge-computing-solves-iot-challenges/',
+    tagList: [ 'Security', 'Market Trends', 'Serverless' ],
+    authors: { avatars: [Array], title: 'Rachel Kempf' },
+    date: 'NOV, 2, 2022',
+    estimateReadTime: '17 minutes'
   },
   {
-    image: '/static/images/uploads/thumbblog-10-technologies-mobile-1.png',
-    title: 'Three Edge-Driven Tech Trends Reshaping the Future of IT',
-    description: 'Discover three tech trends driven by edge computing and that will be great agents of evolution in IT: digital super resilience, Zero Trust, and phygital.',
-    link: '/en/blog/three-edge-driven-tech-trends-reshaping-future-it-and-transforming-business/',
-    tagList: [ 'Market Trends' ],
-    authors: { avatars: ['https://assets.azion.com/static/images/uploads/vivian-seixas2.png'], title: 'Isidro Iturat Hernández' }
-  }
+    image: '/static/images/uploads/introduction-to-event-driven-architecture.png',
+    title: 'Introduction to Event-Driven Architecture',
+    description: 'Increasingly process-intensive, time-sensitive, and data-hungry computing needs a new kind of application architecture—one that can provide real-time processing with scalability, resilience, and efficient resource use. Event-driven architecture provides these benefits by replacing the traditional request-response paradigm with one that automatically produces, detects, and reacts to events.',
+    link: '/en/blog/introduction-to-event-driven-architecture/',
+    tagList: [ 'Serverless' ],
+    authors: { avatars: [Array], title: 'Rachel Kempf' },
+    date: 'NOV, 2, 2022',
+    estimateReadTime: '18 minutes'
+  },
+  {
+    image: '/static/images/uploads/transformtheonlineshopping_2022_blogpost_v2.png',
+    title: 'Transform the online shopping experience with edge computing',
+    description: 'After a long period of uncertainty, caused by the COVID-19 pandemic, e-commerces are facing new challenges such as the exponential increase in online business, higher advertising costs, improving user experience, and threats to the security of your applications.',
+    link: '/en/blog/transform-online-shopping-experience-with-edge-computing/',
+    tagList: [ 'Serverless', 'Observability', 'Caching' ],
+    authors: { avatars: [Array], title: 'Rachel Kempf' },
+    date: 'NOV, 2, 2022',
+    estimateReadTime: '18 minutes'
+  },
+  {
+    image: '/static/images/uploads/what-is-data-streaming-1.png',
+    title: 'What Is Data Streaming?',
+    description: "An introduction to data streaming and analytics enablement, touching on the principles of monitoring and observability and showcasing Azion's suite of analytics tools.",
+    link: '/en/blog/what-is-data-streaming/',
+    tagList: [ 'Observability' ],
+    authors: { avatars: [Array], title: 'Frank Garland' },
+    date: 'NOV, 2, 2022',
+    estimateReadTime: '14 minutes'
+  },
+  {
+    image: '/static/images/uploads/ensure-your-availability-with-load-balancing-thumb.jpg',
+    title: 'Ensure Your Availability with Load Balancing',
+    description: 'Load balancing is the process of distributing tasks over a set of resources that allows solving network traffic problems.',
+    link: '/en/blog/ensure-your-availability-with-load-balancing/',
+    tagList: [ 'Routing & Networking' ],
+    authors: { avatars: [Array], title: 'Adriana Cedillo Morales' },
+    date: 'NOV, 2, 2022',
+    estimateReadTime: '13 minutes'
+  },
+  {
+    image: '/static/images/blog/ecommerce-black-friday/featured-img.png',
+    title: 'Prepare Your Store for the Biggest Black Friday',
+    description: 'Edge Computing is critical for pages to load quickly, decreasing the likelihood of rejection. See how to use this Technology to your advantage.',
+    link: '/en/blog/ecommerce-ready-black-friday/',
+    tagList: [ 'Serverless', 'Market Trends', 'Caching' ],
+    authors: { avatars: [Array], title: 'Azion Technologies' },
+    date: 'NOV, 2, 2022',
+    estimateReadTime: '15 minutes'
+  },
+  {
+    image: '/static/images/uploads/containersserverlessnewthumb.png',
+    title: 'Varnish vs. Nginx',
+    description: 'Caching contributes significantly to website speed and latency. This makes it crucial to choose the right proxy server to handle your website needs. Varnish and Nginx are two such services with distinct strengths and weaknesses that could make one a better fit for your website.',
+    link: '/en/blog/varnish-vs-nginx/',
+    tagList: [ 'Caching' ],
+    authors: { avatars: [Array], title: 'Frank Garland' },
+    date: 'NOV, 2, 2022',
+    estimateReadTime: '13 minutes'
+  },
+  {
+    image: '/static/images/blog/ecommerce-black-friday/featured-img.png',
+    title: 'Prepare Your Store for the Biggest Black Friday',
+    description: 'Edge Computing is critical for pages to load quickly, decreasing the likelihood of rejection. See how to use this Technology to your advantage.',
+    link: '/en/blog/ecommerce-ready-black-friday/',
+    tagList: [ 'Serverless', 'Market Trends', 'Caching' ],
+    authors: { avatars: [Array], title: 'Azion Technologies' },
+    date: 'NOV, 2, 2022',
+    estimateReadTime: '15 minutes'
+  },
+  {
+    image: '/static/images/uploads/containersserverlessnewthumb.png',
+    title: 'Varnish vs. Nginx',
+    description: 'Caching contributes significantly to website speed and latency. This makes it crucial to choose the right proxy server to handle your website needs. Varnish and Nginx are two such services with distinct strengths and weaknesses that could make one a better fit for your website.',
+    link: '/en/blog/varnish-vs-nginx/',
+    tagList: [ 'Caching' ],
+    authors: { avatars: [Array], title: 'Frank Garland' },
+    date: 'NOV, 2, 2022',
+    estimateReadTime: '13 minutes'
+  },
+  {
+    image: '/static/images/blog/ecommerce-black-friday/featured-img.png',
+    title: 'Prepare Your Store for the Biggest Black Friday',
+    description: 'Edge Computing is critical for pages to load quickly, decreasing the likelihood of rejection. See how to use this Technology to your advantage.',
+    link: '/en/blog/ecommerce-ready-black-friday/',
+    tagList: [ 'Serverless', 'Market Trends', 'Caching' ],
+    authors: { avatars: [Array], title: 'Azion Technologies' },
+    date: 'NOV, 2, 2022',
+    estimateReadTime: '15 minutes'
+  },
+  {
+    image: '/static/images/uploads/containersserverlessnewthumb.png',
+    title: 'Varnish vs. Nginx',
+    description: 'Caching contributes significantly to website speed and latency. This makes it crucial to choose the right proxy server to handle your website needs. Varnish and Nginx are two such services with distinct strengths and weaknesses that could make one a better fit for your website.',
+    link: '/en/blog/varnish-vs-nginx/',
+    tagList: [ 'Caching' ],
+    authors: { avatars: [Array], title: 'Frank Garland' },
+    date: 'NOV, 2, 2022',
+    estimateReadTime: '13 minutes'
+  },
 ]

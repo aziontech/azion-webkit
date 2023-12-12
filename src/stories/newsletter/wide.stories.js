@@ -2,7 +2,7 @@ import NewsletterWide from '../../templates/newsletter/wide/index.vue';
 import data from '../../mock/newsletterSingleLine';
 
 export default {
-  title: 'Newsletter/Wide',
+  title: 'Blocks/Newsletter/Wide',
   component: NewsletterWide,
   tags: ['autodocs'],
   argTypes: {}

@@ -122,7 +122,32 @@ const cta =
   text: "For support and sales, please call ", phone: "+1 (833) 33-AZION",
 }
 
-// const languageSelectorTitle = "Language: "
+const socialButtons = [
+  {
+    title: "Discord",
+    target: "_blank",
+    link: "https://discord.gg/Yp9N7RMVZy",
+    icon: "pi pi-discord"
+  },
+  {
+    title: "Facebook",
+    link: "https://www.facebook.com/aziontech",
+    target: "_blank",
+    icon: "pi pi-facebook"
+  },
+  {
+    title: "Twitter",
+    link: "https://twitter.com/aziontech",
+    target: "_blank",
+    icon: "ai ai-twitter"
+  },
+  {
+    title: "Linkedin",
+    link: "https://www.linkedin.com/company/aziontech",
+    target: "_blank",
+    icon: "pi pi-linkedin"
+  },
+]
 
 
 const copyright = "Copyright © 2023, Azion Technologies, Inc. or its affiliates. All rights reserved."
@@ -130,6 +155,6 @@ const copyright = "Copyright © 2023, Azion Technologies, Inc. or its affiliates
 export default {
   listData,
   cta,
-  // languageSelectorTitle,
-  copyright
+  copyright,
+  socialButtons
 }
