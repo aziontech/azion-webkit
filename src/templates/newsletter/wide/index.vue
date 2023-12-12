@@ -3,7 +3,7 @@
     <div>
       <div class="flex flex-col gap-8 items-center">
         <div class="max-w-md w-full text-center">
-          <span class="uppercase"><Overline :label="props.overline" /></span>
+          <Overline :label="props.overline" />
           <h3 class="text-2xl font-normal text-color max-w-xl mt-2 mb-0">
             {{ props.title }}
           </h3>
@@ -20,9 +20,12 @@
             </InputGroup>
           </form>
           <div>
-            <InlineMessage v-if="isSuccess" severity="success" class="flex justify-start">{{ successMessage }}
+            <InlineMessage v-if="isSuccess" severity="success" class="flex justify-start">
+              {{ responseMessages.successMessage }}
             </InlineMessage>
-            <InlineMessage v-if="isError" severity="error" class="flex justify-start"> Error message</InlineMessage>
+            <InlineMessage v-if="isError" severity="error" class="flex justify-start">
+              {{ responseMessages.errorMessage }}
+            </InlineMessage>
           </div>
         </div>
       </div>
@@ -76,10 +79,17 @@ const props = defineProps({
     type: Object,
     required: true
   },
-  successMessage: {
-    type: String,
-    required: false,
-    default: 'Thanks for subscribing to Azion newsletter'
+  responseMessages: {
+    successMessage: {
+      type: String,
+      required: false,
+      default: 'Thanks for subscribing to Azion newsletter'
+    },
+    errorMessage: {
+      type: String,
+      required: false,
+      default: 'Error while subscribing to Azion newsletter, try again later'
+    }
   }
 });
 

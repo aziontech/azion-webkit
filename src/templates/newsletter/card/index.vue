@@ -16,8 +16,12 @@
       </div>
     </form>
     <div class="mt-2">
-      <InlineMessage v-if="isSuccess" severity="success" class="flex justify-start">{{ successMessage }}</InlineMessage>
-      <InlineMessage v-if="isError" severity="error" class="flex justify-start">Error message</InlineMessage>
+      <InlineMessage v-if="isSuccess" severity="success" class="flex justify-start">
+        {{ responseMessages.successMessage }}
+      </InlineMessage>
+      <InlineMessage v-if="isError" severity="error" class="flex justify-start">
+        {{ responseMessages.errorMessage }}
+      </InlineMessage>
     </div>
   </section>
 </template>
@@ -57,10 +61,17 @@ const props = defineProps({
     type: Object,
     required: true
   },
-  successMessage: {
-    type: String,
-    required: false,
-    default: 'Thanks for subscribing to Azion newsletter'
+  responseMessages: {
+    successMessage: {
+      type: String,
+      required: false,
+      default: 'Thanks for subscribing to Azion newsletter'
+    },
+    errorMessage: {
+      type: String,
+      required: false,
+      default: 'Error while subscribing to Azion newsletter, try again later'
+    }
   }
 });
 

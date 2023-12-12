@@ -4,7 +4,7 @@ export const newsletterSubrscribeHandler = async (formData, email) => {
   const response = await fetch(fetchLink, {
     method: "POST",
     headers: {
-      Accept: "application/json",
+      Accept: "*/*",
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
@@ -12,7 +12,7 @@ export const newsletterSubrscribeHandler = async (formData, email) => {
         {
           objectTypeId: '0-1',
           name: 'email',
-          value: email
+          value: email.value
         }
       ],
       context: {
