@@ -2,9 +2,11 @@
   <div class="flex gap-3 flex-col font-medium">
     <h3> {{ title }}</h3>
     <div class="flex gap-3">
-      <IconLinkButton v-for="({ link, icon, title }, index) in data" :link="link" :icon="icon" :key="index" :tooltipeText="title"/>
+      <IconLinkButton v-for="({ link, icon, title }, index) in data"
+          :link="link" :icon="icon" :key="index" :tooltipText="title" />
       <div id="clipboard" tabindex="-1" v-tooltip.focus.top="{ value: tooltipText, showDelay: 200 }">
-        <Button severity="primary" id="clipboardButton" icon="pi pi-link" @click="copyToClipboard" outlined />
+        <Button severity="primary" id="clipboardButton" icon="pi pi-link" @click="copyToClipboard" outlined
+          v-tooltip.top="{ value: 'Clipboard', showDelay: 200 }" />
       </div>
     </div>
   </div>
@@ -36,11 +38,12 @@ const props = defineProps({
   sharedURL: {
     type: URL,
     required: true
-  }
+  },
 });
 
 const { sharedURL } = props;
 
+console.log()
 const copyToClipboard = () => {
   navigator.clipboard.writeText(sharedURL)
     .then(() => {
