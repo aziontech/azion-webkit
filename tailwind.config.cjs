@@ -60,15 +60,15 @@ export default {
       const newUtilities = {};
   
       newUtilities['.px-shell'] = {
-        paddingLeft: '.75rem',
-        paddingRight: '.75rem',
+        paddingLeft: 'clamp(0.75rem, 0.7484rem + 2.6076vw, 2rem);',
+        paddingRight: 'clamp(0.75rem, 0.7484rem + 2.6076vw, 2rem);',
       };
       
       newUtilities['.px-container'] = {
         maxWidth: '1536px',
         margin: '0 auto',
-        paddingLeft: '.75rem',
-        paddingRight: '.75rem',
+        paddingLeft: 'clamp(0.75rem, 0.7484rem + 2.6076vw, 2rem);',
+        paddingRight: 'clamp(0.75rem, 0.7484rem + 2.6076vw, 2rem);',
       };
 
       newUtilities['@media (min-width: 768px)'] = {
@@ -84,8 +84,8 @@ export default {
 
       newUtilities['@media (min-width: 1024px)'] = {
         '.px-container': {
-          paddingLeft: 'clamp(2rem, 4vw, 10rem)',
-          paddingRight: 'clamp(2rem, 4vw, 10rem)',
+          paddingLeft: 'clamp(2rem, -3.3683rem + 8.3879vw, 10rem);',
+          paddingRight: 'clamp(2rem, -3.3683rem + 8.3879vw, 10rem);',
         }
       };
   
