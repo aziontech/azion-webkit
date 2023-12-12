@@ -30,7 +30,7 @@
 import TabMenu from 'primevue/tabmenu';
 import InputText from 'primevue/inputtext';
 import Dropdown from 'primevue/dropdown';
-import { ref, defineEmits } from "vue";
+import { ref } from "vue";
 
 const props = defineProps({
   tabList: {

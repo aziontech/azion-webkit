@@ -4,7 +4,7 @@
       <div class="container">
         <div class="flex flex-col lg:flex-row gap-6 lg:gap-20 w-full">
           <div class="lg:w-2/3 flex flex-col gap-4 md:gap-10">
-            <PostHero :date="hero.date" :title="hero.title" :tagList="hero.tagList" :authors="hero.authors" />
+            <PostHero :date="hero.date" :title="hero.title" :tagList="hero.tagList" :authors="hero.authors" :breadcrumbItems="breadcrumbItems" />
             <ReadableContent />
           </div>
           <div class="lg:w-1/3 gap-4 lg:gap-11 flex flex-col">
@@ -51,4 +51,17 @@ import featuredPostList from "../../mock/verticalListData"
 import newsletterSingleLine from "../../mock/newsletterSingleLine"
 import hero from "../../mock/articleHero"
 import categories from "../../mock/categories"
+
+const breadcrumbItems = [
+  {
+    url: `/en/blog/`,
+    target: "_self",
+    label: "Blog",
+  },
+  {
+    url: './',
+    target: "_self",
+    label: 'This Article',
+  },
+]
 </script>
