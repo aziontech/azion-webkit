@@ -2,9 +2,9 @@
   <a :href="link" :title="linkText" :target="linkTarget" class="bloc group">
     <div
       class="flex flex-col lg:flex-row gap-4 lg:gap-10">
-      <div class="h-full min-w-[50%]">
+      <div class="h-full min-w-[50%] border surface-border rounded-md overflow-hidden">
         <picture v-if="imgSrc" class="p-0 m-0">
-          <img fetchpriority="high" class="w-full md:object-cover rounded-md group-hover:shadow-[0_0_0_0.2rem_rgba(243,101,43,0.32)]" width="576" height="324" :alt="imgAlt"
+          <img fetchpriority="high" class="w-full md:object-cover group-hover:scale-[1.05] transition-all duration-200" width="576" height="324" :alt="imgAlt"
             :src="`${imgSrc}?ims=576x324`" />
         </picture>
       </div>
@@ -13,7 +13,7 @@
         <div class="flex gap-2">
           <Tag v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
         </div>
-        <h1 class="text-3xl font-bold text-color">
+        <h1 class="text-3xl font-bold text-color group-hover:underline">
           {{ title }}
         </h1>
         <p class="font-normal text-color-secondary">
