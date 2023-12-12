@@ -59,11 +59,34 @@ export default {
     function ({ addUtilities, variants }) {
       const newUtilities = {};
   
+      newUtilities['.px-shell'] = {
+        paddingLeft: '.75rem',
+        paddingRight: '.75rem',
+      };
+      
       newUtilities['.px-container'] = {
         maxWidth: '1536px',
         margin: '0 auto',
-        paddingLeft: 'clamp(.75rem, 5vw, 10rem)',
-        paddingRight: 'clamp(.75rem, 5vw, 10rem)',
+        paddingLeft: '.75rem',
+        paddingRight: '.75rem',
+      };
+
+      newUtilities['@media (min-width: 768px)'] = {
+        '.px-shell': {
+          paddingLeft: '2rem',
+          paddingRight: '2rem',
+        },
+        '.px-container': {
+          paddingLeft: '2rem',
+          paddingRight: '2rem',
+        }
+      };
+
+      newUtilities['@media (min-width: 1024px)'] = {
+        '.px-container': {
+          paddingLeft: 'clamp(2rem, 4vw, 10rem)',
+          paddingRight: 'clamp(2rem, 4vw, 10rem)',
+        }
       };
   
       addUtilities(newUtilities, ['responsive', 'hover']);
