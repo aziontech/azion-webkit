@@ -1,6 +1,7 @@
 <template>
-  <header class="p-2 bg-header !text-white border-b surface-border items-center flex justify-between md:px-8 w-full h-[56px]">
-    <div class="flex items-center">
+  <header class="py-3 bg-header !text-white border-b surface-border h-[56px] w-full sticky top-0 z-40">
+    <div class="flex justify-between items-center px-shell">
+      <div class="flex items-center">
       <a
         href="/"
         title="Home | Azion Technologies"
@@ -13,7 +14,7 @@
             <a
               v-if="!menuitem.items || !menuitem.items.length"
               :href="menuitem.href || ''"
-              class="p-button p-button-text p-button-primary p-button-sm hover:bg-header-button-hover hidden lg:flex">
+              class="p-button p-button-text p-button-primary p-button-sm whitespace-nowrap hover:bg-header-button-hover hidden lg:flex">
               <span class="text-white">{{ menuitem.label }}</span>
             </a>
             <div v-if="menuitem.items && menuitem.items.length">
@@ -23,7 +24,7 @@
                 :label="menuitem.label"
                 icon-pos="right"
                 icon="pi pi-angle-down"
-                class="hidden lg:flex hover:bg-header-button-hover"
+                class="hidden lg:flex hover:bg-header-button-hover whitespace-nowrap"
                 @click="(event) => { toggle(event, menuitem.ref); menudata.active = 0; }"
                 :pt="{
                   label: { class: 'text-white' },
@@ -72,38 +73,39 @@
           </li>
         </ul>
       </nav>
-    </div>
-    <div class="flex gap-2">
-      <a
-        target="_blank"
-        href="https://sso.azion.com/login"
-        title="Signin | Azion Technologies"
-        class="p-button p-button-primary p-button-text hover:bg-header-button-hover p-button-sm hidden lg:flex">
-        <span class="text-white">Sign in</span>
-      </a>
-      <a
-        href=""
-        title="Contact | Azion Technologies"
-        class="p-button p-button-primary p-button-text p-button-sm hover:bg-header-button-hover hidden lg:flex">
-        <span class="text-white">Contact</span>
-      </a>
-      <a
-        target="_blank"
-        href="https://manager.azion.com/signup"
-        title="Free account | Azion Technologies"
-        class="p-button p-button-primary p-button-outlined p-button-sm border-white text-white hover:bg-header-button-hover hidden lg:flex">
-        <span class="text-white">Free account</span>
-      </a>
-      <Button
-        outlined
-        icon="pi pi-search"
-        size="small"
-        class="bg-header hover:bg-header-button-hover !text-white flex border-header"
-        :pt="{
-          label: { class: 'text-white' },
-          icon: { class: 'text-white' }
-        }" />
-      <MobileSidebar />
+      </div>
+      <div class="flex gap-2">
+        <a
+          target="_blank"
+          href="https://sso.azion.com/login"
+          title="Signin | Azion Technologies"
+          class="p-button p-button-primary whitespace-nowrap p-button-text hover:bg-header-button-hover p-button-sm hidden lg:flex">
+          <span class="text-white">Sign in</span>
+        </a>
+        <a
+          href=""
+          title="Contact | Azion Technologies"
+          class="p-button p-button-primary whitespace-nowrap p-button-text p-button-sm hover:bg-header-button-hover hidden lg:flex">
+          <span class="text-white">Contact</span>
+        </a>
+        <a
+          target="_blank"
+          href="https://manager.azion.com/signup"
+          title="Free account | Azion Technologies"
+          class="p-button p-button-primary whitespace-nowrap p-button-outlined p-button-sm border-white text-white hover:bg-header-button-hover hidden lg:flex">
+          <span class="text-white">Free account</span>
+        </a>
+        <Button
+          outlined
+          icon="pi pi-search"
+          size="small"
+          class="bg-header hover:bg-header-button-hover !text-white flex border-header"
+          :pt="{
+            label: { class: 'text-white' },
+            icon: { class: 'text-white' }
+          }" />
+        <MobileSidebar />
+      </div>
     </div>
   </header>
 </template>
