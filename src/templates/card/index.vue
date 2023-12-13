@@ -1,16 +1,21 @@
 <template>
   <a :href="link" :title="title" class="no-underline flex group border-radius md:max-w-sm">
     <Card class="p-0 mt-0"
-      :pt="{ header: { class: 'group-hover:shadow-[0_0_0_0.2rem_rgba(243,101,43,0.32)] rounded' }, root: { class: 'shadow-none surface-ground flex flex-col gap-6' } }">
+      @mouseover="isHovered = true"
+      @mouseout="isHovered = false"
+      :pt="{
+        header: { class: 'rounded border surface-border overflow-hidden' },
+        root: { class: 'shadow-none surface-ground flex flex-col gap-6' } 
+      }">
       <template #header v-if="imgSrc">
-        <img class="w-full aspect-video rounded" lazy alt="`${imgAlt}`" :src="`https://assets.azion.com${imgSrc}?ims=372x209`" />
+        <img class="w-full aspect-video group-hover:scale-[1.10] transition-all duration-300" lazy alt="`${imgAlt}`" :src="`https://assets.azion.com${imgSrc}?ims=372x209`" />
       </template>
       <template #content>
         <div class="flex flex-col justify-between gap-4">
           <div class="flex gap-2 flex-wrap" v-if="tagList?.length">
             <Tag v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
           </div>
-          <h3 class="text-xl font-bold text-color">{{ title }}</h3>
+          <h3 class="text-xl font-bold text-color group-hover:underline">{{ title }}</h3>
           <p class="text-sm text-color-secondary">{{ description }}</p>
           <p class="text-xs text-color-secondary">{{ date }} • {{ estimateReadTime }}</p>
           <div v-if="authors">
