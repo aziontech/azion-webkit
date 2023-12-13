@@ -4,7 +4,7 @@
       class="flex flex-col lg:flex-row gap-4 lg:gap-10">
       <div class="h-full min-w-[50%] border surface-border rounded-md overflow-hidden">
         <picture v-if="imgSrc" class="p-0 m-0">
-          <img fetchpriority="high" class="w-full md:object-cover group-hover:scale-[1.05] transition-all duration-200" width="576" height="324" :alt="imgAlt"
+          <img fetchpriority="high" class="w-full md:object-cover group-hover:scale-[1.05] transition-all duration-300" width="576" height="324" :alt="imgAlt"
             :src="`${imgSrc}?ims=576x324`" />
         </picture>
       </div>
