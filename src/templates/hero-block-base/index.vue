@@ -2,14 +2,14 @@
   <section class="py-16 surface-section">
     <div class="px-container flex flex-col w-full gap-10" :class="[
       { 'lg:flex-row': !centered },
-      { 'items-center text-center': centered },
+      { 'items-center': centered },
     ]">
       <div class=" w-full flex flex-col gap-8" :class="[
         { 'lg:max-w-xl': !centered },
-        { 'items-center text-center': centered },
+        { 'items-center': centered },
       ]">
         <div class="flex flex-col gap-4" :class="[
-          { 'max-w-2xl': centered },
+          { 'max-w-2xl text-center': centered },
           { 'max-w-xl': !centered}
         ]">
           <Overline :label="overline" />
@@ -20,7 +20,7 @@
           <div class="flex flex-row gap-3" :class="[
             { 'justify-center': centered },
           ]">
-          <div class="flex flex-col sm:flex-row gap-3 w-full text-center"
+          <div class="flex flex-col sm:flex-row gap-3 w-full"
           :class="{ 'justify-center': centered }"
           >
             <slot name="buttons" />
