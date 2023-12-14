@@ -77,8 +77,6 @@ addCards()
 const handleFilterByCategoryEvent = (category) => {
   let categoryData
 
-  console.log(category)
-
   if (category === defaultTab) {
     categoryData = data
   } else {
