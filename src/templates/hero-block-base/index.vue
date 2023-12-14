@@ -10,6 +10,7 @@
       ]">
         <div class="flex flex-col gap-4" :class="[
           { 'max-w-2xl': centered },
+          { 'max-w-xl': !centered}
         ]">
           <Overline :label="overline" />
           <h1 class="text-3xl">
@@ -19,9 +20,11 @@
           <div class="flex flex-row gap-3" :class="[
             { 'justify-center': centered },
           ]">
-          <slot name="buttons">
-
-          </slot>
+          <div class="flex flex-col sm:flex-row gap-3 w-full text-center"
+          :class="{ 'justify-center': centered }"
+          >
+            <slot name="buttons" />
+          </div>
           </div>
         </div>
         <slot name="content" />
