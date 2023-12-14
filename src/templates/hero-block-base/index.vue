@@ -4,7 +4,7 @@
       { 'lg:flex-row': !centered },
       { 'items-center': centered },
     ]">
-      <div class=" w-full flex flex-col gap-8" :class="[
+      <div class=" w-full flex flex-col gap-10" :class="[
         { 'lg:max-w-xl': !centered },
         { 'items-center': centered },
       ]">
