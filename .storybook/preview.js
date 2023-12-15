@@ -1,7 +1,5 @@
 /** @type { import('@storybook/vue3').Preview } */
 
-import { h } from 'vue';
-
 // required //
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
@@ -64,10 +62,8 @@ export const decorators = [
       setTheme(currentTheme);
     }
 
-    // Ajuste o plano de fundo conforme necessário
     document.body.style.background = 'transparent';
 
-    // Adiciona a classe 'surface-ground' ao elemento 'iframe' com a classe 'css-xzp052'
     const iframe = document.querySelector('.css-xzp052');
     if (iframe) {
       iframe.classList.add('surface-ground');
