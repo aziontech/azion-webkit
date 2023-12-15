@@ -1,5 +1,7 @@
 /** @type { import('@storybook/vue3').Preview } */
 
+import { h } from 'vue'; // Importe a função h do Vue
+
 // required //
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
@@ -10,33 +12,60 @@ import '../src/assets/themes/scss/themes/azion-light/theme.scss';
 import '../src/assets/themes/scss/themes/azion-dark/theme.scss';
 //end required //
 
-(function setTheme(theme) {
+// Função para definir o tema
+function setTheme(theme) {
     let html = window.document.querySelector('html');
+    // Remova todas as classes que começam com "azion-"
+    html.classList.forEach((className) => {
+        if (className.startsWith('azion-')) {
+            html.classList.remove(className);
+        }
+    });
+    // Adicione a nova classe do tema
     html.classList.add(`azion-${theme}`);
-})('dark');
-
-setTimeout(function() {
-    let sbdocs = document.querySelectorAll('.sbdocs');
-    if(sbdocs.length) {
-        for(var i = 0; i <= sbdocs.length; i++) {
-            let item = sbdocs[i];
-            item.style.background = 'transparent';
-        }
-    }
-}, 1000)
-
-const preview = {
-    parameters: {
-        actions: { argTypesRegex: '^on[A-Z].*' },
-        controls: {
-            matchers: {
-                color: /(background|color)$/i,
-                date: /Date$/i
-            }
-        }
-    }
 }
 
-export default preview
+// Defina o tema inicial
+let currentTheme = 'dark';
+setTheme(currentTheme);
 
+// Configuração do Storybook
+const parameters = {
+    actions: { argTypesRegex: '^on[A-Z].*' },
+    controls: {
+        matchers: {
+            color: /(background|color)$/i,
+            date: /Date$/i
+        }
+    },
+    // Adiciona um painel de controles para o tema
+    globalTypes: {
+        theme: {
+            name: 'Theme',
+            description: 'Choose a theme',
+            defaultValue: 'dark',
+            toolbar: {
+                icon: 'circlehollow',
+                // Array de opções possíveis
+                items: ['light', 'dark'],
+            },
+        },
+    },
+};
 
+export const decorators = [
+    (Story, context) => {
+        const { globals } = context;
+        const { theme } = globals;
+
+        if (theme !== currentTheme) {
+            currentTheme = theme;
+            setTheme(currentTheme);
+        }
+
+        // Renderiza o componente Story usando a função h
+        return h(Story, context.args, { default: () => h(Story, context.args) });
+    },
+];
+
+export default parameters;
