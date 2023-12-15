@@ -38,7 +38,6 @@ const parameters = {
             date: /Date$/i
         }
     },
-    // Adiciona um painel de controles para o tema
     globalTypes: {
         theme: {
             name: 'Theme',
@@ -46,7 +45,6 @@ const parameters = {
             defaultValue: 'dark',
             toolbar: {
                 icon: 'circlehollow',
-                // Array de opções possíveis
                 items: ['light', 'dark'],
             },
         },
@@ -63,8 +61,8 @@ export const decorators = [
             setTheme(currentTheme);
         }
 
-        // Renderiza o componente Story usando a função h
-        return h(Story, context.args, { default: () => h(Story, context.args) });
+        // Renderiza o componente Story diretamente
+        return Story();
     },
 ];
 
