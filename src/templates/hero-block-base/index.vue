@@ -23,7 +23,7 @@
           <div class="flex flex-col sm:flex-row gap-3 w-full"
           :class="{ 'justify-center': centered }"
           >
-            <slot name="buttons" />
+            <slot name="actions" />
           </div>
           </div>
         </div>
