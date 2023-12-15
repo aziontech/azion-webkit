@@ -1,7 +1,7 @@
 import TagBlockList from '../templates/tag-block-list/index.vue'
 
 export default {
-  title: 'Blocks/TabList',
+  title: 'Blocks/Tag List',
   component: TagBlockList,
   tags: ['autodocs'],
   argTypes: {}
