@@ -1,6 +1,6 @@
 /** @type { import('@storybook/vue3').Preview } */
 
-import { h } from 'vue'; // Importe a função h do Vue
+import { h } from 'vue';
 
 // required //
 import 'primeflex/primeflex.css';
@@ -12,26 +12,22 @@ import '../src/assets/themes/scss/themes/azion-light/theme.scss';
 import '../src/assets/themes/scss/themes/azion-dark/theme.scss';
 //end required //
 
-// Função para definir o tema
 function setTheme(theme) {
     let html = window.document.querySelector('html');
-    // Remova todas as classes que começam com "azion-"
     html.classList.forEach((className) => {
         if (className.startsWith('azion-')) {
             html.classList.remove(className);
         }
     });
-    // Adicione a nova classe do tema
     html.classList.add(`azion-${theme}`);
 }
 
-// Defina o tema inicial
 let currentTheme = 'dark';
 setTheme(currentTheme);
 
-// Configuração do Storybook
 const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
+    backgrounds: { disable: true },
     controls: {
         matchers: {
             color: /(background|color)$/i,
@@ -44,7 +40,7 @@ const parameters = {
             description: 'Choose a theme',
             defaultValue: 'dark',
             toolbar: {
-                icon: 'circlehollow',
+                icon: 'moon',
                 items: ['light', 'dark'],
             },
         },
@@ -60,8 +56,6 @@ export const decorators = [
             currentTheme = theme;
             setTheme(currentTheme);
         }
-
-        // Renderiza o componente Story diretamente
         return Story();
     },
 ];
