@@ -3,6 +3,7 @@
 // required //
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
+import "../src/assets/icons/azionicons.scss";
 
 import '../src/assets/main.css';
 // import "primevue/resources/themes/lara-light-blue/theme.css";
@@ -27,7 +28,7 @@ function setTheme(theme) {
             html.classList.remove(className);
         }
     });
-    
+
     html.classList.add(`azion-${theme}`);
 }
 
