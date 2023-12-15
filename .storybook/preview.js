@@ -19,7 +19,8 @@ function setTheme(theme) {
             html.classList.remove(className);
         }
     });
-    html.classList.add(`azion-${theme}`);
+    
+    html.classList.add(`azion-${theme}`, 'surface-ground');
 }
 
 let currentTheme = 'dark';
@@ -27,13 +28,6 @@ setTheme(currentTheme);
 
 const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
-    backgrounds: { disable: true },
-    controls: {
-        matchers: {
-            color: /(background|color)$/i,
-            date: /Date$/i
-        }
-    },
     globalTypes: {
         theme: {
             name: 'Theme',
@@ -41,7 +35,10 @@ const parameters = {
             defaultValue: 'dark',
             toolbar: {
                 icon: 'moon',
-                items: ['light', 'dark'],
+                items: [
+                    { value: 'light', icon: 'sun', title: 'Light' },
+                    { value: 'dark', icon: 'moon', title: 'Dark' },
+                ],
             },
         },
     },
