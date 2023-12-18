@@ -2,7 +2,11 @@
   <div class="m-w-[768px]">
     <ais-instant-search :search-client="searchClient" index-name="azion-site-en">
       <div class="max-w-[768px]">
-        <ais-search-box class="mb-4"/>
+        <ais-search-box
+          placeholder="Search Keywords"
+          :autofocus="true"
+          :show-loading-indicator="true"
+          class="mb-4"/>
 
         <TabMenu
           class="block mb-4"
@@ -11,9 +15,18 @@
           :model="algoliIndex"
           @click="eventHandler(activeIndex)" />
 
-        <IndexHit indexName="azion-site-en" label="site" />
-        <IndexHit indexName="azion-blog-en" label="blog" />
-        <IndexHit indexName="azion-cases-en" label="cases" />
+        <IndexHit
+          indexName="azion-site-en"
+          label="site"
+          v-if="activeIndex === 0 || activeIndex === 1" />
+        <IndexHit
+          indexName="azion-blog-en"
+          label="blog"
+          v-if="activeIndex === 0 || activeIndex === 3" />
+        <IndexHit
+          indexName="azion-cases-en"
+          label="cases"
+          v-if="activeIndex === 0 || activeIndex === 4" />
       </div>
     </ais-instant-search>
   </div>
@@ -33,15 +46,7 @@
   let activeIndex = ref(0);
   const eventHandler = (e) => {
     console.log('eventHandler', e);
-
-    // if (typeof e === 'number') {
-    //   activeOption.value = mappedData[activeIndex.value]
-    // } else {
-    //   activeIndex.value = e.value.activeIndex
-    // }
-
-
-    // emit('indexChanged', tabList[activeIndex.value])
+    activeIndex.value = e;
   };
 
   const algoliIndex = [
@@ -72,12 +77,11 @@
     width: 100%;
 
     input[type="search"] {
-      width: calc(100% - 3rem);
+      width: 100%;
       padding: .5rem .5rem;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
+      border-radius: 4px;
       border:  solid 1px var(--surface-border);
-      border-right: none;
+      outline: none;
     }
 
     .ais-SearchBox-reset {
@@ -85,13 +89,13 @@
     }
 
     .ais-SearchBox-submit {
-      padding: .925rem;
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
-      border:  solid 1px var(--surface-border);
+      display: none; // to remove btn
+      // padding: .925rem;
+      // border-top-right-radius: 4px;
+      // border-bottom-right-radius: 4px;
+      // border:  solid 1px var(--surface-border);
     }
   }
-
 
   // pagination number
   .ais-Pagination-list {

@@ -7,17 +7,21 @@
         </h2>
         <div>
           <div class="flex items-center justify-end gap-3 mb-2">
-            <a href="/" title="view site">view {{ props.label }}</a>
+            <a href="/" title="view site">
+              <small>
+                view {{ props.label }}
+              </small>
+            </a>
             <ais-hits-per-page :items="[
               { label: '4 hits per page', value: 4, default: true },
               { label: '8 hits per page', value: 8 },
-              { label: '16 hits per page', value: 16 }
+              { label: '16 hits per page', value: 16 },
+              { label: '32 hits per page', value: 32 }
             ]" />
           </div>
-          <ais-pagination />
+          <ais-pagination class="flex justify-end"/>
         </div>
       </div>
-
       <ais-hits>
         <template v-slot:item="{ item }" class="card mb-8">
           <div class="ais-Hits-item-card border surface-border rounded p-4 w-full">
@@ -61,7 +65,7 @@
 <style lang="scss" rel="stylesheet/scss">
 .ais-Pagination-list {
   display: flex;
-  gap: 1rem
+  gap: 1rem;
 }
 
 .ais-HitsPerPage-select {
