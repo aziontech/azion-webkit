@@ -1,18 +1,19 @@
 <template>
   <div class="m-w-[768px]">
     <ais-instant-search :search-client="searchClient" index-name="azion-site-en">
-      <TabMenu
-        class="block mb-4"
-        :pt="{
-          label: 'whitespace-nowrap'
-        }"
-        v-model:activeIndex="activeIndex"
-        :model="algoliIndex"
-        @click="eventHandler(activeIndex)" />
-
       <div class="max-w-[768px]">
         <ais-search-box class="mb-4"/>
+
+        <TabMenu
+          class="block mb-4"
+          :pt="{ label: 'whitespace-nowrap' }"
+          v-model:activeIndex="activeIndex"
+          :model="algoliIndex"
+          @click="eventHandler(activeIndex)" />
+
+        <IndexHit indexName="azion-site-en" label="site" />
         <IndexHit indexName="azion-blog-en" label="blog" />
+        <IndexHit indexName="azion-cases-en" label="cases" />
       </div>
     </ais-instant-search>
   </div>
@@ -44,34 +45,53 @@
   };
 
   const algoliIndex = [
-      { label: 'All' },
-      { label: 'Site' },
-      { label: 'Docs' },
-      { label: 'Blog' },
-      { label: 'Cases' }
+    { label: 'All' },
+    { label: 'Site' },
+    { label: 'Docs' },
+    { label: 'Blog' },
+    { label: 'Cases' }
   ];
 </script>
 
 <style lang="scss" rel="stylesheet/scss">
   /* form search  */
+
+  .azion-dark {
+    input[type="search"] {
+      background-color: #292929;
+    }
+  }
+
+  .azion-light {
+    input[type="search"] {
+      background-color: #f4f4f4;
+    }
+  }
+
   .ais-SearchBox-form {
     width: 100%;
 
     input[type="search"] {
       width: calc(100% - 3rem);
       padding: .5rem .5rem;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      border:  solid 1px var(--surface-border);
+      border-right: none;
     }
 
     .ais-SearchBox-reset {
       display: none;
     }
+
+    .ais-SearchBox-submit {
+      padding: .925rem;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border:  solid 1px var(--surface-border);
+    }
   }
 
-  .ais-SearchBox-submit {
-    padding: .825rem;
-    border: solid 1px #dedede;
-    border-radius: 4px;
-  }
 
   // pagination number
   .ais-Pagination-list {
