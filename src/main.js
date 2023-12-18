@@ -15,6 +15,6 @@ import './assets/themes/scss/themes/azion-dark/theme.scss';
 
 const app = createApp(App);
 app.use(InstantSearch);
-app.use(PrimeVue, { ripple: true });
+app.use(PrimeVue);
 app.directive('tooltip', Tooltip)
 app.mount('#app');
