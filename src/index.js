@@ -1,4 +1,5 @@
 
+// import AlgoliaSearch from './templates/algolia/index.vue';
 import ButtonBlockList from './templates/button-block-list/index.vue';
 import LinkButton from './templates/button/link.vue';
 import LinkButtonBlockList from './templates/button-block-list/link.vue';
@@ -24,6 +25,7 @@ import TagListBlock from "./templates/tag-block-list/index.vue";
 import EmptyState from "./templates/empty-state-block/index.vue";
 
 export {
+  // AlgoliaSearch,
   ButtonBlockList,
   Card,
   CardGridListWithLoadMore,
