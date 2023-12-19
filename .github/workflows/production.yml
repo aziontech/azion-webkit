@@ -41,7 +41,7 @@ jobs:
         run: npm run postinstall
 
       - name: BUILDING STORYBOOK
-        run: npm run build-storybook
+        run: npm run build-storybook; ls -la
 
       # - name: BUILD
       #   run: npm run build &&  mv dist/* ./
