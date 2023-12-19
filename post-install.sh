@@ -31,13 +31,13 @@ extract () {
 
 install () {
   echo 'Moving to node_modules'
-  mv ${folder}-${version} ${dest}
+  cp -R ${folder}-${version} ${dest}
 }
 
 
 # clean_download
-download
-extract
+# download
+# extract
 clean_node_modules
 install
-clean_download
+# clean_download
