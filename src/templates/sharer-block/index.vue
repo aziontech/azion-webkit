@@ -43,7 +43,6 @@ const props = defineProps({
 
 const { sharedURL } = props;
 
-console.log()
 const copyToClipboard = () => {
   navigator.clipboard.writeText(sharedURL)
     .then(() => {

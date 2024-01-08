@@ -1,5 +1,8 @@
 <template>
-	<a :href="link" :title="label" target="_blank" rel="noopener noreferrer" class="p-button p-component p-button-sm min-w-fit no-underline">
+	<a :href="link" :title="label" target="_blank" rel="noopener noreferrer"
+      class="p-button p-component p-button-sm min-w-fit no-underline"
+      :class="{'p-button-outlined' : outlined }"
+  >
 		{{ label }}
 	</a>
 </template>
@@ -14,7 +17,12 @@ defineProps({
 	link: {
 		type: String,
 		required: true
-	}
+	},
+  outlined: {
+    type: Boolean,
+    required: false,
+    default: false
+  }
 });
 </script>
 

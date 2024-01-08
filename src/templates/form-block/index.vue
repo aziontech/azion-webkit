@@ -1,0 +1,32 @@
+<template>
+  <div class="flex flex-column justify-center items-center">
+  <div class="border surface-border rounded-md max-w-xl">
+    <div class="p-8 flex flex-col gap-8">
+        <div class="flex flex-col gap-2">
+        <h5 class="text-xl font-medium"> {{ title }} </h5>
+        <p class="text-sm text-color-secondary"> {{ description }} </p>
+      </div>
+      <form>
+        <slot name="content" />
+      </form>
+    </div>
+    <div class="py-4 px-8 border-t surface-border flex flex-row gap-3 justify-end">
+      <slot name="actions" />
+    </div>
+  </div>
+</div>
+
+</template>
+
+<script setup>
+defineProps({
+  title: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  }
+})
+</script>
