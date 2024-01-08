@@ -1,9 +1,22 @@
 <template>
-  <AlgoliaSarch />
+  <Dialog
+    modal
+    v-model:visible="algoliaStore.isActive"
+    header="Search"
+    :onUpdate="(e)=> {
+      console.log('onUpdate callback');
+    }"
+    :style="{ width: '50rem' }"
+    :breakpoints="{ '1199px': '75vw', '575px': '90vw' }"
+    @onUpdate="() => {
+      console.log('updated')
+    }">
 
+    <AlgoliaSarch />
+  </Dialog>
   <Header />
 
-  <main>
+  <main>e
     <div class="flex justify-center py-12 w-full">
       <div class="flex flex-col gap-11 px-container w-full">
         <FeaturedPost :imgSrc="featuredPostData.imgSrc" :imgAlt="featuredPostData.imgAlt"
@@ -26,9 +39,16 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import { useAlgoliaStore } from '../../stores/algolia';
+const algoliaStore = useAlgoliaStore();
+const visible = ref(false);
+
 //////////////////////////
 // IMPORTING COMPONENTS //
 //////////////////////////
+import Dialog from 'primevue/dialog';
+
 import AlgoliaSarch from '../../templates/algolia/index.vue';
 import FeaturedPost from '../../templates/featured-post/index.vue';
 import Header from '../../templates/header/index.vue';

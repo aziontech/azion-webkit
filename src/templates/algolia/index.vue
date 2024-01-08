@@ -45,7 +45,6 @@
 
   let activeIndex = ref(0);
   const eventHandler = (e) => {
-    console.log('eventHandler', e);
     activeIndex.value = e;
   };
 

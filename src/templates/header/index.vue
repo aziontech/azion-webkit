@@ -97,9 +97,10 @@
         </a>
         <Button
           outlined
-          icon="pi pi-search"
           size="small"
+          icon="pi pi-search"
           class="bg-header hover:bg-header-button-hover !text-white flex border-header"
+          @click="algoliaStore.toggle()"
           :pt="{
             label: { class: 'text-white' },
             icon: { class: 'text-white' }
@@ -121,6 +122,9 @@ import TabPanel from 'primevue/tabpanel';
 import MobileSidebar from './mobile.vue';
 import AzionLogoDefault from '../../assets/icons/azion-logo-default.vue';
 
+import { useAlgoliaStore } from '../../stores/algolia';
+
+const algoliaStore = useAlgoliaStore();
 const productsPanel = ref(); // should pass like string name inside ref attr inside menudata
 const resourcesPanel = ref(); // should pass like string name inside ref attr inside menudata
 const menudata = ref({

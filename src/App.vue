@@ -1,5 +1,5 @@
 <template>
-  <HeroBlock
+  <!-- <HeroBlock
       overline="Overline"
       title="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariata"
       description="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con"
@@ -15,15 +15,16 @@
       <LinkButton label="Button" link="./" />
       <LinkButton label="Button" link="./" outlined />
     </template>
-  </HeroBlock>
+  </HeroBlock> -->
 
+  <BlogHome />
 </template>
 
 <script setup>
-  // import BlogHome from './views/blog/home.vue'
+  import BlogHome from './views/blog/home.vue'
   // import BlogPost from './views/blog/post.vue';
-  import HeroBlock from "./templates/hero-block-base/index.vue"
-  import LinkButton from "./templates/button/link.vue"
+  // import HeroBlock from "./templates/hero-block-base/index.vue"
+  // import LinkButton from "./templates/button/link.vue"
 </script>
 
 <style lang="scss">
