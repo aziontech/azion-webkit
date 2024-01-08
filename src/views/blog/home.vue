@@ -1,5 +1,8 @@
 <template>
+  <AlgoliaSarch />
+
   <Header />
+
   <main>
     <div class="flex justify-center py-12 w-full">
       <div class="flex flex-col gap-11 px-container w-full">
@@ -26,6 +29,7 @@
 //////////////////////////
 // IMPORTING COMPONENTS //
 //////////////////////////
+import AlgoliaSarch from '../../templates/algolia/index.vue';
 import FeaturedPost from '../../templates/featured-post/index.vue';
 import Header from '../../templates/header/index.vue';
 import Footer from '../../templates/footer/index.vue';

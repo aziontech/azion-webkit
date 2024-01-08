@@ -53,6 +53,8 @@ const emit = defineEmits(['indexChanged']);
 
 const { tabList } = props
 
+console.log(tabList);
+
 const mappedData = tabList.map((item, index) => {
   return { label: item, activeIndex: index }
 })
