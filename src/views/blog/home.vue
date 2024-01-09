@@ -1,55 +1,56 @@
 <template>
-  <Dialog
-    modal
-    v-model:visible="algoliaStore.isActive"
-    header="Search"
-    :onUpdate="(e)=> {
-      console.log('onUpdate callback');
-    }"
-    :style="{ width: '50rem' }"
-    :breakpoints="{ '1199px': '75vw', '575px': '90vw' }"
-    @onUpdate="() => {
-      console.log('updated')
-    }">
-
-    <AlgoliaSarch />
-  </Dialog>
   <Header />
 
-  <main>e
+  <main>
     <div class="flex justify-center py-12 w-full">
       <div class="flex flex-col gap-11 px-container w-full">
-        <FeaturedPost :imgSrc="featuredPostData.imgSrc" :imgAlt="featuredPostData.imgAlt"
-          :tagList="featuredPostData.tagList" :title="featuredPostData.title" :description="featuredPostData.description"
-          :link="featuredPostData.link" linkText="read more" linkTarget="_self" date="JUL, 13, 2020" readTime="10 minutes"
+        <FeaturedPost
+          linkText="read more"
+          linkTarget="_self"
+          date="JUL, 13, 2020"
+          readTime="10 minutes"
+          :imgSrc="featuredPostData.imgSrc"
+          :imgAlt="featuredPostData.imgAlt"
+          :tagList="featuredPostData.tagList"
+          :title="featuredPostData.title"
+          :description="featuredPostData.description"
+          :link="featuredPostData.link"
           :authors="featuredPostData.authors" />
 
-        <NewsletterSingleLine :title="newsletterData.title" :buttonText="newsletterData.buttonText"
-          :placeholderInput="newsletterData.placeholderInput" :onSubmit="newsletterData.onSubmit" :formData="{}" />
+        <NewsletterSingleLine
+          :title="newsletterData.title"
+          :buttonText="newsletterData.buttonText"
+          :placeholderInput="newsletterData.placeholderInput"
+          :onSubmit="newsletterData.onSubmit"
+          :formData="{}" />
 
-        <CardGridList :data="cardData" :categories="buttonBlockListData.dataList" />
+        <CardGridList
+          :data="cardData"
+          :categories="buttonBlockListData.dataList" />
       </div>
     </div>
 
-    <NewsletterWide class="py-8" :overline="newsletterData.overline" :title="newsletterData.title"
-      :buttonText="newsletterData.buttonText" :placeholderInput="newsletterData.placeholderInput" :formData="{}" />
+    <NewsletterWide
+      class="py-8"
+      :overline="newsletterData.overline"
+      :title="newsletterData.title"
+      :buttonText="newsletterData.buttonText"
+      :placeholderInput="newsletterData.placeholderInput"
+      :formData="{}" />
   </main>
 
-  <Footer lang="en" :listData="footerData.listData" :cta="footerData.cta" :copyright="footerData.copyright" />
+  <Footer
+    lang="en"
+    :listData="footerData.listData"
+    :cta="footerData.cta"
+    :copyright="footerData.copyright" />
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { useAlgoliaStore } from '../../stores/algolia';
-const algoliaStore = useAlgoliaStore();
-const visible = ref(false);
-
 //////////////////////////
 // IMPORTING COMPONENTS //
 //////////////////////////
-import Dialog from 'primevue/dialog';
 
-import AlgoliaSarch from '../../templates/algolia/index.vue';
 import FeaturedPost from '../../templates/featured-post/index.vue';
 import Header from '../../templates/header/index.vue';
 import Footer from '../../templates/footer/index.vue';

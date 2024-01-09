@@ -1,4 +1,6 @@
 <template>
+  <AlgoliaDialog :isDialogActive="isDialogActive" @close="closeDialog"/>
+
   <header class="py-3 bg-header !text-white border-b surface-border h-[56px] w-full sticky top-0 z-40">
     <div class="flex justify-between items-center px-shell">
       <div class="flex items-center">
@@ -100,7 +102,7 @@
           size="small"
           icon="pi pi-search"
           class="bg-header hover:bg-header-button-hover !text-white flex border-header"
-          @click="algoliaStore.toggle()"
+          @click="activeDialog"
           :pt="{
             label: { class: 'text-white' },
             icon: { class: 'text-white' }
@@ -119,15 +121,21 @@ import OverlayPanel from 'primevue/overlaypanel';
 import TabView from 'primevue/tabview';
 import TabPanel from 'primevue/tabpanel';
 
+import AlgoliaDialog from '../algolia-dialog/index.vue';
 import MobileSidebar from './mobile.vue';
 import AzionLogoDefault from '../../assets/icons/azion-logo-default.vue';
 
-import { useAlgoliaStore } from '../../stores/algolia';
+let isDialogActive = ref(false);
+let activeDialog = function() {
+  isDialogActive.value = true;
+};
+let closeDialog  = function() {
+  isDialogActive.value = false;
+};
 
-const algoliaStore = useAlgoliaStore();
-const productsPanel = ref(); // should pass like string name inside ref attr inside menudata
-const resourcesPanel = ref(); // should pass like string name inside ref attr inside menudata
-const menudata = ref({
+let productsPanel = ref(); // should pass like string name inside ref attr inside menudata
+let resourcesPanel = ref(); // should pass like string name inside ref attr inside menudata
+let menudata = ref({
   active: 0,
   items: [
     {
