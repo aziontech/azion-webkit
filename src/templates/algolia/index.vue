@@ -1,7 +1,7 @@
 <template>
   <div class="m-w-[768px]">
     <ais-instant-search :search-client="searchClient" index-name="azion-site-en">
-      <div class="max-w-[768px]">
+      <div>
         <ais-search-box
           placeholder="Search Keywords"
           :autofocus="true"
