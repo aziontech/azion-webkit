@@ -26,7 +26,8 @@ import TagListBlock from "./templates/tag-block-list/index.vue";
 import EmptyState from "./templates/empty-state-block/index.vue";
 
 export {
-  // AlgoliaSearch,
+  AlgoliaSearch,
+  AlgoliaDialog,
   ButtonBlockList,
   Card,
   CardGridListWithLoadMore,
