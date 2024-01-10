@@ -1,7 +1,7 @@
 ##########################################################
 # https://z4azz7gp65.map.azionedge.net/storybook-static/ #
 ##########################################################
-name: storybook publish
+name: pkg publish
 on:
   push:
     branches:
@@ -35,12 +35,5 @@ jobs:
         run: npm install
       - name: POST INSTALLING DEPENDENCIES
         run: npm run postinstall
-      - name: BUILDING STORYBOOK
-        run: npm run build-storybook
-      - name: PREPARE TO DEPLOYMENT
-        run: rm -rf vitest.config.js .storybook vite.config.js tailwind.config.cjs postcss.config.js pnpm-lock.yaml index.html CONTRIBUTING.md .prettierrc.json .eslintrc.cjs .nvmrc .github dist node_modules .editorconfig .gitignore docs primevue-sass-theme-3.40.1 LICENSE package-lock.json package.json post-install.sh README.md
-      - name: DEPLOYMENT STORYBOOK
-        uses: patrickwyler/gcs-bucket-sync-action@1.3
-        with:
-          secrets: ${{ secrets.GCP_BUCKET_KEY }}
-          bucket: ${{ secrets.GCP_BUCKET_NAME }}
+      - name: PUBLISH
+        run: npm publish
