@@ -1,7 +1,7 @@
 <template>
   <div class="mb-10">
     <ais-index :index-name="props.indexName">
-      <div class="flex items-center justify-between">
+      <div class="items-center justify-between">
         <h2 class="text-xl">
           {{ props.label.toUpperCase() }}
         </h2>
@@ -23,7 +23,7 @@
         </div>
       </div>
       <ais-hits>
-        <template v-slot:item="{ item }" class="card mb-8">
+        <template v-slot:item="{ item }">
           <div class="ais-Hits-item-card border surface-border rounded p-4 w-full">
             <a :href="`https://www.azion.com${item.url}`" :title="item.title">
               <h2 class="text-base">{{ item.title }}</h2>
@@ -80,8 +80,12 @@
 
   .ais-Hits-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
 
     .ais-Hits-item {
       display: flex;
