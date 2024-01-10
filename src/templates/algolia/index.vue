@@ -38,10 +38,20 @@
   import TabMenu from 'primevue/tabmenu';
   import IndexHit from './ais-index-hit.vue';
 
-  const searchClient = algoliasearch(
-    'PYJUZH6VNQ',
-    '7c1795c333053265edd2aeb199745797'
-  );
+  const props = defineProps({
+    isDialogActive: Boolean,
+    algoliaAppId: String,
+    algoliaApiKey: String,
+    algoliaIndex: Array
+  });
+
+  const {
+    algoliaAppId,
+    algoliaApiKey,
+    algoliaIndex
+  } = props;
+
+  const searchClient = algoliasearch(algoliaAppId, algoliaApiKey);
 
   let activeIndex = ref(0);
   const eventHandler = (e) => {
