@@ -1,6 +1,7 @@
 <template>
   <Dialog
     modal
+    position="top"
     v-model:visible="isDialogActive"
     class="w-[95vw] md:w-[85vw] lg:w-[75vw] xl:w-[65vw]"
     header="Search"
