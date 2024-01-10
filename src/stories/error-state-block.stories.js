@@ -7,10 +7,8 @@ export default {
   component: ErrorStateBlock,
   tags: ['autodocs'],
   argsType: {
-    title: String,
     overline: String,
     description: String,
-    centered: Boolean
   }
 }
 
