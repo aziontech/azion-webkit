@@ -21,7 +21,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@aziontech/azion-theme": "^0.0.1",
+    "@aziontech/azion-theme": "^0.0.2",
     "@tailwindcss/typography": "^0.5.10",
     "algoliasearch": "^4.21.1",
     "autoprefixer": "^10.4.16",
