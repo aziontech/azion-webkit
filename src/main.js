@@ -10,8 +10,8 @@ import 'primeicons/primeicons.css';
 import './assets/icons/azionicons.scss'
 
 import './assets/main.css';
-import './assets/themes/scss/themes/azion-light/theme.scss';
-import './assets/themes/scss/themes/azion-dark/theme.scss';
+import '../node_modules/@aziontech/azion-theme/azion-light/theme.scss';
+import '../node_modules/@aziontech/azion-theme/azion-dark/theme.scss';
 
 const app = createApp(App);
 

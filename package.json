@@ -1,6 +1,6 @@
 {
   "name": "@aziontech/azion-web-kit",
-  "version": "0.0.41",
+  "version": "0.0.42",
   "type": "module",
   "main": "./src/index.js",
   "private": false,
@@ -22,6 +22,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@aziontech/azion-theme": "^0.0.1",
     "@tailwindcss/typography": "^0.5.10",
     "algoliasearch": "^4.21.1",
     "autoprefixer": "^10.4.16",

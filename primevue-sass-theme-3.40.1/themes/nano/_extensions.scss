@@ -1,6 +1,0 @@
-@layer primevue {
-    .p-selectbutton > .p-button,
-    .p-togglebutton.p-button {
-        transition: background-color $transitionDuration, border-color $transitionDuration, box-shadow $transitionDuration;
-    }
-}
