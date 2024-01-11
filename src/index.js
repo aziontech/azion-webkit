@@ -1,6 +1,6 @@
 
 import AlgoliaSearch from './templates/algolia/index.vue';
-import AlgoliaDialog from './templates/algolia/dialog/index.vue';
+import AlgoliaDialog from './templates/algolia-dialog/index.vue';
 import ButtonBlockList from './templates/button-block-list/index.vue';
 import LinkButton from './templates/button/link.vue';
 import LinkButtonBlockList from './templates/button-block-list/link.vue';
