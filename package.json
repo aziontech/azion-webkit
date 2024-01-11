@@ -9,7 +9,6 @@
   },
   "repository": "https://github.com/aziontech/azion-web-kit.git",
   "scripts": {
-    "postinstall": "bash post-install.sh",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
