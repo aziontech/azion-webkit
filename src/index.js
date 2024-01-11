@@ -23,6 +23,7 @@ import ReadableContent from "./templates/post/readable-content/index.vue";
 import TabMenuSearch from "./templates/tab-menu/with-search.vue"
 import TabMenuSearchLink from "./templates/tab-menu/with-search-link.vue"
 import TagListBlock from "./templates/tag-block-list/index.vue";
+import ContentSection from "./templates/content-section-block/index.vue";
 import EmptyState from "./templates/empty-state-block/index.vue";
 import ErrorStateBlock from "./templates/error-state-block/index.vue"
 
@@ -52,5 +53,6 @@ export {
   TagListBlock,
   EmptyState,
   TabMenuSearchLink,
-  ErrorStateBlock
+  ErrorStateBlock,
+  ContentSection,
 }
