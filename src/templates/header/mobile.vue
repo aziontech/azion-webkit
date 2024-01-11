@@ -81,18 +81,16 @@
 
     <div class="fixed bottom-6 flex gap-2 items-center">
       <a
-        href=""
-        class="flex gap-2 justify-between p-button p-button-primary p-button-outlined p-button-sm border-white text-white hover:bg-header-button-hover whitespace-nowrap">
-        Contact
-        <i class="pi pi-chevron-right text-xs"></i>
+        v-for="(button, index) in bottomButtons"
+        :key="index"
+        :href="button.url"
+        :title="button.urlTitle"
+        :class="button.icon ?
+          'flex gap-2 justify-between p-button p-button-primary p-button-outlined p-button-sm border-white text-white hover:bg-header-button-hover whitespace-nowrap' :
+          'flex gap-2 p-button p-button-primary p-button-outlined p-button-sm  text-white hover:bg-header-button-hover whitespace-nowrap'">
+        {{ button.label }}
+        <i v-if="button.icon" :class="button.icon"></i>
       </a>
-      <a
-        target="_blank"
-        href="https://sso.azion.com/login"
-        class="flex gap-2 p-button p-button-primary p-button-outlined p-button-sm  text-white hover:bg-header-button-hover whitespace-nowrap">
-        Sign in
-      </a>
-      <!-- <ButtonThemeToggle /> -->
     </div>
   </Sidebar>
 </template>

@@ -340,5 +340,17 @@ let menuSecondaryMobile = [
   }
 ];
 
-let bottomButtonsMobile = [];
+let bottomButtonsMobile = [
+  {
+    label: 'Contact',
+    url: '#contact-page',
+    urlTitle: 'Contact Page',
+    icon: 'pi pi-chevron-right text-xs'
+  },
+  {
+    label: 'Sign In',
+    urlTitle: 'Azion Real Time Manager Sign In',
+    url: 'https://sso.azion.com/login'
+  }
+];
 </script>
