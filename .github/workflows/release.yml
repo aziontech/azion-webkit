@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   deploy:
-    name: DEPLOY | prod
+    name: Release Package
     runs-on: self-hosted
     container:
       image: ubuntu:latest
@@ -26,8 +26,9 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@aziontech'
           always-auth: true
+      - name: Github Package Login
+        run: |
+          git config --global user.name github-actions
+          git config --global user.email github-actions@github.com
       - name: Github Package Publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm publish
