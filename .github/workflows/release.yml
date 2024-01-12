@@ -11,7 +11,7 @@ jobs:
       image: ubuntu:latest
     steps:
       - name: Git install
-        run: apt-get install git-all -y
+        run: apt-get install git -y
       - name: Checkout
         uses: actions/checkout@v3
         with:
