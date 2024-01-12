@@ -19,10 +19,6 @@ jobs:
           clean: true
           fetch-depth: '0'
           lfs: 'false'
-      - name: Github Login
-        run: |
-          git config --global user.name github-actions
-          git config --global user.email github-actions@github.com
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -30,5 +26,9 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@aziontech'
           always-auth: true
+      - name: Github Login
+        run: |
+          git config --global user.name github-actions
+          git config --global user.email github-actions@github.com
       - name: Github Package Publish
         run: npm publish
