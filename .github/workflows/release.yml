@@ -9,7 +9,7 @@ jobs:
     name: azion-web-kit package publish
     runs-on: self-hosted
     container:
-      image: ubunt-latest
+      image: ubuntu-latest
 
     steps:
       - name: Checkout
