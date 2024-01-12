@@ -1,7 +1,7 @@
 ##########################################################
 # https://z4azz7gp65.map.azionedge.net/storybook-static/ #
 ##########################################################
-name: Main publish
+name: Storybook publish
 on:
   push:
     branches:
