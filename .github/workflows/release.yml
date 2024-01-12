@@ -42,9 +42,9 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
-          NPM_TOKEN: ${{ secrets.GIT_PKG }}
+          NPM_TOKEN: ${{ secrets.3 }}
           NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
-        run: npm install @semantic-release/changelog; @semantic-release/git; npx semantic-release
+        run: npx semantic-release
 
       - name: Deploying package
         run: npm publish
