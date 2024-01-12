@@ -46,7 +46,8 @@ jobs:
           GIT_COMMITTER_EMAIL: actions@github.com
 
       - name: Deploying package
-        run: npm publish
+        # run: npm publish
+        run: npx semantic-release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
 
