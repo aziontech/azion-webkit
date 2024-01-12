@@ -10,6 +10,10 @@ jobs:
     container:
       image: ubuntu:latest
     steps:
+      - uses: actions/checkout@v3
+      - run: |
+          git config --global user.name github-actions
+          git config --global user.email github-actions@github.com
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -26,9 +30,5 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@aziontech'
           always-auth: true
-      - name: Github Package Login
-        run: |
-          git config --global user.name github-actions
-          git config --global user.email github-actions@github.com
       - name: Github Package Publish
         run: npm publish
