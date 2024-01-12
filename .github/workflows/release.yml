@@ -42,7 +42,7 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
-          NPM_TOKEN: ${{ secrets.3 }}
+          NPM_TOKEN: ${{ secrets.GIT_PKG }}
           NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
         run: npx semantic-release
 
