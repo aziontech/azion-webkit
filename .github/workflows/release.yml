@@ -13,7 +13,10 @@ jobs:
 
     steps:
       - name: Ubuntu configure
-        run: apt-get update -y
+        run: apt-get upgrade -y
+
+      - name: Intalling git
+        run: apt-get install git
 
       - name: Checkout
         uses: actions/checkout@v3
