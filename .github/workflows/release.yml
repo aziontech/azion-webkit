@@ -7,9 +7,9 @@ on:
 jobs:
   deploy:
     name: azion-web-kit package publish
-    runs-on: self-hosted
-    container:
-      image: ubuntu-latest
+    runs-on: ubuntu-latest #self-hosted
+    # container:
+    #   image: ubuntu:latest
 
     steps:
       - name: Checkout
