@@ -10,8 +10,16 @@ jobs:
     container:
       image: ubuntu:latest
     steps:
+      - name: Set Main Ubuntu Repository
+        run: |
+          echo "deb http://archive.ubuntu.com/ubuntu/ $(lsb_release -cs) main restricted universe multiverse" > /etc/apt/sources.list
+          echo "deb http://archive.ubuntu.com/ubuntu/ $(lsb_release -cs)-updates main restricted universe multiverse" >> /etc/apt/sources.list
+          echo "deb http://archive.ubuntu.com/ubuntu/ $(lsb_release -cs)-backports main restricted universe multiverse" >> /etc/apt/sources.list
+          echo "deb http://security.ubuntu.com/ubuntu $(lsb_release -cs)-security main restricted universe multiverse" >> /etc/apt/sources.list
+
       - name: Git install
-        run: apt-get install git -y
+        run: apt-get update -y && apt-get install git-all -y
+
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -21,6 +29,7 @@ jobs:
           clean: true
           fetch-depth: '0'
           lfs: 'false'
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -28,9 +37,11 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@aziontech'
           always-auth: true
+
       - name: Github Login
         run: |
           git config --global user.name github-actions
           git config --global user.email github-actions@github.com
+
       - name: Github Package Publish
         run: npm publish
