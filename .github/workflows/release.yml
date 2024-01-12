@@ -7,16 +7,16 @@ on:
 jobs:
   deploy:
     name: azion-web-kit package publish
-    runs-on: ubuntu-latest #self-hosted
-    # container:
-    #   image: ubuntu:latest
+    runs-on: self-hosted
+    container:
+      image: ubuntu:latest
 
     steps:
       - name: Ubuntu configure
-        run: apt-get upgrade -y
+        run: apt-get update -y
 
       - name: Intalling git
-        run: apt-get install git
+        run: apt-get install git-all
 
       - name: Checkout
         uses: actions/checkout@v3
