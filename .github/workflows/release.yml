@@ -15,8 +15,11 @@ jobs:
       - name: Ubuntu configure
         run: apt-get update -y
 
-      - name: Intalling git
+      - name: Installing git
         run: apt-get install git-all -y
+
+      - name: Installing tzdata
+        run: apt-get install tzdata
 
       - name: Checkout
         uses: actions/checkout@v3
