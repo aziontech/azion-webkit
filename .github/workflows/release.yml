@@ -10,10 +10,6 @@ jobs:
     container:
       image: ubuntu:latest
     steps:
-      - uses: actions/checkout@v3
-      - run: |
-          git config --global user.name github-actions
-          git config --global user.email github-actions@github.com
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -23,6 +19,10 @@ jobs:
           clean: true
           fetch-depth: '0'
           lfs: 'false'
+      - name: Github Login
+        run: |
+          git config --global user.name github-actions
+          git config --global user.email github-actions@github.com
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
