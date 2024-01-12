@@ -12,10 +12,11 @@ jobs:
     steps:
       - name: Set Main Ubuntu Repository
         run: |
-          echo "deb http://archive.ubuntu.com/ubuntu/ $(lsb_release -cs) main restricted universe multiverse" > /etc/apt/sources.list
-          echo "deb http://archive.ubuntu.com/ubuntu/ $(lsb_release -cs)-updates main restricted universe multiverse" >> /etc/apt/sources.list
-          echo "deb http://archive.ubuntu.com/ubuntu/ $(lsb_release -cs)-backports main restricted universe multiverse" >> /etc/apt/sources.list
-          echo "deb http://security.ubuntu.com/ubuntu $(lsb_release -cs)-security main restricted universe multiverse" >> /etc/apt/sources.list
+          codename=$(lsb_release -cs)
+          echo "deb http://archive.ubuntu.com/ubuntu $codename main restricted universe multiverse" > /etc/apt/sources.list
+          echo "deb http://archive.ubuntu.com/ubuntu $codename-updates main restricted universe multiverse" >> /etc/apt/sources.list
+          echo "deb http://archive.ubuntu.com/ubuntu $codename-backports main restricted universe multiverse" >> /etc/apt/sources.list
+          echo "deb http://security.ubuntu.com/ubuntu $codename-security main restricted universe multiverse" >> /etc/apt/sources.list
 
       - name: Git install
         run: apt-get update -y && apt-get install git-all -y
