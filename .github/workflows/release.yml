@@ -44,7 +44,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
           NPM_TOKEN: ${{ secrets.GIT_PKG }}
           NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
-        run: npm install @semantic-release/changelog; npx semantic-release
+        run: npm install @semantic-release/changelog; @semantic-release/git; npx semantic-release
 
       - name: Deploying package
         run: npm publish
