@@ -2,7 +2,7 @@ import ContentTabs from '../templates/content-tabs-block/index.vue';
 import LinkButton from '../templates/button/link.vue';
 
 export default {
-  title: 'Blocks/Content Tabs Base',
+  title: 'Blocks/Content Tabs',
   component: ContentTabs,
   tags: ['autodocs'],
   argsType: {
@@ -12,19 +12,24 @@ export default {
 }
 
 const content = [{
-    title: 'Header 1',
-    description: "lorem ipsum dolor sit amet, consectetur",
-    tabName: 'Tab 1'
+    title: 'Power your big data, stream processing, SIEM, and serverless application platforms with real-time data analytics.',
+    description: "Data is gathered from various utilities like Edge Caching and WAF (Web Application Firewall) to your stream injector of choice.",
+    tabName: 'Data Streaming'
   },
   {
-    title: 'Header 2',
-    description: "lorem ipsum dolor sit amet, consectetur dolore mag dolor sit amet, consectetur",
-    tabName: 'Tab 2'
+    title: 'Power your big data, stream processing, SIEM, and serverless application platforms with real-time data analytics.',
+    description: "Data is gathered from various utilities like Edge Caching and WAF (Web Application Firewall) to your stream injector of choice.",
+    tabName: 'Real-Time Metrics'
   },
   {
-    title: 'Header 1',
-    description: "lorem ipsum dolor sit amet, consectetur dolore mag dolor sit amet, consectetur dol  Lorem ipsum dolor sit amet, consectetur",
-    tabName: 'Tab 3'
+    title: 'Power your big data, stream processing, SIEM, and serverless application platforms with real-time data analytics.',
+    description: "Data is gathered from various utilities like Edge Caching and WAF (Web Application Firewall) to your stream injector of choice.",
+    tabName: 'Real-Time Events'
+  },
+  {
+    title: 'Power your big data, stream processing, SIEM, and serverless application platforms with real-time data analytics.',
+    description: "Data is gathered from various utilities like Edge Caching and WAF (Web Application Firewall) to your stream injector of choice.",
+    tabName: 'Edge Pulse'
   },
 ]
 
@@ -43,11 +48,14 @@ const Template = (args) => ({
                 <template #main-0>
                   <img src="src/assets/images/mocks/_slot.png" />
                 </template>
+                <template #actions-0>
+                  <LinkButton label="Learn More" link="" outlined />
+                </template>
               </ContentTabs>`
 })
 
 export const Default = Template.bind({});
 Default.args = {
-    title: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariata',
+    title: 'Observe your apps',
     content: content,
 }
