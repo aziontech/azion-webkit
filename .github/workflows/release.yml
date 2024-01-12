@@ -1,15 +1,9 @@
 name: azion-web-kit package publish
+
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
-    inputs:
-      version-type:
-        description: 'Version type (patch, minor, major)'
-        required: true
-        default: 'patch'
-
 jobs:
   deploy:
     name: azion-web-kit package publish
@@ -36,54 +30,14 @@ jobs:
           scope: '@aziontech'
           always-auth: true
 
-      - name: Automatic Version Bump
-        run: |
-          npm version ${{ github.event.inputs.version-type }} -m "Upgrade to %s [skip ci]"
+      - name: Release
         env:
-          GIT_AUTHOR_NAME: github-actions
-          GIT_AUTHOR_EMAIL: actions@github.com
-          GIT_COMMITTER_NAME: github-actions
-          GIT_COMMITTER_EMAIL: actions@github.com
+          GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GIT_PKG }}
+          NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
+        run: npx semantic-release
 
       - name: Deploying package
-        # run: npm publish
-        run: npx semantic-release
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
-
-
-# name: azion-web-kit package publish
-# on:
-#   push:
-#     branches:
-#       - main
-# jobs:
-#   deploy:
-#     name: azion-web-kit package publish
-#     runs-on: self-hosted
-#     container:
-#       image: ubuntu:latest
-
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v3
-#         with:
-#           repository: aziontech/azion-web-kit
-#           ref: main
-#           path: '.'
-#           clean: true
-#           fetch-depth: '0'
-#           lfs: 'false'
-
-#       - name: Setup Node.js
-#         uses: actions/setup-node@v3
-#         with:
-#           node-version: 20.6.1
-#           registry-url: 'https://npm.pkg.github.com'
-#           scope: '@aziontech'
-#           always-auth: true
-
-#       - name: Deploying package
-#         run: npm publish
-#         env:
-#           NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
