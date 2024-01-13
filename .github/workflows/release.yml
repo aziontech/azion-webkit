@@ -4,10 +4,17 @@ on:
   push:
     branches:
       - main
+
 jobs:
   deploy:
     name: azion-web-kit package publish
-    runs-on: self-hosted
+
+    strategy:
+      matrix:
+        node: ['20.6. 1']
+        os: ['self-hosted']
+
+    runs-on: ${{ matrix.os }}
     container:
       image: ubuntu:latest
 
@@ -21,6 +28,14 @@ jobs:
       - name: Installing git
         run: apt-get install git-all -y
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@aziontech'
+          always-auth: true
+
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -30,20 +45,12 @@ jobs:
           clean: true
           fetch-depth: '0'
           lfs: 'false'
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20.6.1
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@aziontech'
-          always-auth: true
-
-      - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
           NPM_TOKEN: ${{ secrets.GIT_PKG }}
           NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
+
+      - name: Semantic release
         run: npx semantic-release
 
       - name: Deploying package
