@@ -3,7 +3,7 @@ import Error404Illustration from '../assets/svg/error-404.vue'
 import LinkButton from '../templates/button/link.vue';
 
 export default {
-  title: 'Blocks/Error Block Base',
+  title: 'Blocks/Error State',
   component: ErrorStateBlock,
   tags: ['autodocs'],
   argsType: {
