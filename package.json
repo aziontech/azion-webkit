@@ -1,14 +1,17 @@
 {
   "name": "@aziontech/azion-web-kit",
-  "version": "0.0.44",
+  "version": "0.0.45",
   "type": "module",
   "main": "./src/index.js",
   "private": false,
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://np:qm.pkg.github.com/"
   },
   "repository": "https://github.com/aziontech/azion-web-kit.git",
   "scripts": {
+    "clean-cache": "npm cache clean --force",
+    "clean": "rm -rf node_modules package-lock.json",
+    "reinstall": "npm run clean; npm install",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -23,7 +26,10 @@
   "dependencies": {
     "@aziontech/azion-theme": "^0.0.2",
     "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^10.0.1",
     "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/release-notes-generator": "^11.0.4",
     "@tailwindcss/typography": "^0.5.10",
     "algoliasearch": "^4.21.1",
     "autoprefixer": "^10.4.16",
@@ -31,7 +37,7 @@
     "instantsearch.css": "^8.1.0",
     "postcss": "^8.4.31",
     "s": "^1.0.0",
-    "semantic-release": "^22.0.12",
+    "semantic-release": "^23.0.0",
     "tailwind": "^4.0.0",
     "vee-validate": "^4.11.8",
     "vue": "^3.3.11",

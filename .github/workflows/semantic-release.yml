@@ -1,0 +1,73 @@
+# name: Release
+
+on:
+  repository_dispatch:
+    types: [semantic-release] # curl -v -H "Accept: application/vnd.github.everest-preview+json" -H "Authorization: token ${GITHUB_TOKEN}" https://api.github.com/repos/[org-name-or-username]/[repository]/dispatches -d '{ "event_type": "semantic-release" }'
+
+  push:
+    branches:
+      - main
+
+permissions: write-all
+
+jobs:
+  deploy:
+    name: Release
+
+    strategy:
+      matrix:
+        node: ['lts/*'] #['20.8.1']
+        os: ['self-hosted']
+
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
+
+    runs-on: ${{ matrix.os }}
+    container:
+      image: ubuntu:latest
+
+    steps:
+      - name: OS - configure
+        run: apt-get update -y
+
+      - name: OS - Installing tzdata, git cli dependencie
+        run: apt-get install tzdata
+
+      - name: OS - Installing git cli
+        run: apt-get install git-all -y
+
+      - name: Setup - actions/setup-node@v3
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@aziontech'
+          always-auth: true
+        env: # used to install azion-theme or anorthers azion github pkg
+          NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }}
+
+      - name: Installing release dependency list
+        run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog -D
+
+      # - name: Checkout
+      #   uses: actions/checkout@v3
+      #   with:
+      #     repository: aziontech/azion-web-kit
+      #     path: '.'
+      #     ref: main
+      #     fetch-depth: '0'
+      #     clean: true
+      #     lfs: 'false'
+      #     persist-credentials: false
+
+      - name: Publishing
+        run: |
+          rm -rf ./*;
+          git clone https://github.com/aziontech/azion-web-kit.git && cd azion-web-kit && ls -la;
+          npx semantic-release;
+        env:
+          GH_TOKEN: ${{ secrets.GIT_PKG }}
+          NPM_TOKEN: ${{ secrets.GIT_PKG }}
