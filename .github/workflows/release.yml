@@ -3,7 +3,6 @@
 on:
   repository_dispatch:
     types: [semantic-release] # curl -v -H "Accept: application/vnd.github.everest-preview+json" -H "Authorization: token ${GITHUB_TOKEN}" https://api.github.com/repos/[org-name-or-username]/[repository]/dispatches -d '{ "event_type": "semantic-release" }'
-
   push:
     branches:
       - main
