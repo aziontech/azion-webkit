@@ -43,25 +43,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@aziontech'
-          always-auth: true
-        env: # used to install azion-theme or anorthers azion github pkg
-          NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }}
 
       - name: Installing release dependency list
         run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog -D
-
-      # - name: Checkout
-      #   uses: actions/checkout@v3
-      #   with:
-      #     repository: aziontech/azion-web-kit
-      #     path: '.'
-      #     ref: main
-      #     fetch-depth: '0'
-      #     clean: true
-      #     lfs: 'false'
-      #     persist-credentials: false
 
       - name: Publishing
         run: |
