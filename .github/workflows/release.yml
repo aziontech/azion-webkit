@@ -47,11 +47,13 @@ jobs:
       - name: Installing release dependency list
         run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog -D
 
-      - name: Publishing
+      - name: Clone Repository
         run: |
-          rm -rf ./*;
-          git clone https://github.com/aziontech/azion-web-kit.git && cd azion-web-kit && ls -la;
-          npx semantic-release;
+          rm -rf ./*
+          git clone https://github.com/aziontech/azion-web-kit.git && cd azion-web-kit && ls -la
+
+      - name: Release
+        run: npx semantic-release
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
           NPM_TOKEN: ${{ secrets.GIT_PKG }}
