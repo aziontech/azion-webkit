@@ -1,4 +1,4 @@
-# name: Release
+name: Release
 
 on:
   repository_dispatch:
@@ -44,7 +44,7 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Installing release dependency list
-        run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog -D
+        run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog conventional-changelog-conventionalcommits -D
 
       - name: Release
         run: |
