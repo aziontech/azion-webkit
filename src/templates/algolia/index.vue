@@ -10,11 +10,18 @@
 
         <TabMenu
           class="block mb-4"
+          :model="algoliaModel"
           :pt="{ label: 'whitespace-nowrap' }"
           v-model:activeIndex="activeIndex"
-          :model="algoliIndex"
           @click="eventHandler(activeIndex)" />
 
+        <div v-for="(indexData, index) in algoliaIndex" :key="index">
+          <IndexHit
+            v-if="activeIndex === 0 || activeIndex === indexData.activeIndex"
+            :indexName="indexData.name"
+            :label="indexData.label" />
+        </div>
+        <!--
         <IndexHit
           indexName="azion-site-en"
           label="site"
@@ -27,6 +34,8 @@
           indexName="azion-cases-en"
           label="cases"
           v-if="activeIndex === 0 || activeIndex === 4" />
+        -->
+
       </div>
     </ais-instant-search>
   </div>
@@ -42,34 +51,22 @@
     isDialogActive: Boolean,
     algoliaAppId: String,
     algoliaApiKey: String,
-    algoliaIndex: Array
+    algoliaIndex: Array,
+    algoliaModel: Array
   });
 
-  const {
-    algoliaAppId,
-    algoliaApiKey,
-    algoliaIndex
-  } = props;
-
+  const { algoliaAppId, algoliaApiKey, algoliaModel, algoliaIndex } = props;
   const searchClient = algoliasearch(algoliaAppId, algoliaApiKey);
+
+  console.log('algolia/index.vue : ', algoliaIndex)
 
   let activeIndex = ref(0);
   const eventHandler = (e) => {
     activeIndex.value = e;
   };
-
-  const algoliIndex = [
-    { label: 'All' },
-    { label: 'Site' },
-    { label: 'Docs' },
-    { label: 'Blog' },
-    { label: 'Cases' }
-  ];
 </script>
 
 <style lang="scss" rel="stylesheet/scss">
-  /* form search  */
-
   .azion-dark {
     input[type="search"] {
       background-color: #292929;

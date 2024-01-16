@@ -3,6 +3,7 @@
     :algoliaAppId="algoliaAppId"
     :algoliaApiKey="algoliaApiKey"
     :algoliaIndex="algoliaIndex"
+    :algoliaModel="algoliaModel"
     :isDialogActive="isDialogActive"
     @close="closeDialog"/>
 
@@ -130,21 +131,18 @@ import MobileSidebar from './mobile.vue';
 import AzionLogoDefault from '../../assets/icons/azion-logo-default.vue';
 
 let isDialogActive = ref(false);
-let activeDialog = function() {
-  isDialogActive.value = true;
-};
-let closeDialog  = function() {
-  isDialogActive.value = false;
-};
+let activeDialog = () => { isDialogActive.value = true; };
+let closeDialog = () => { isDialogActive.value = false; };
 
-let props = defineProps({
+const props = defineProps({
   menuData: Object,
   menuSecondary: Array,
   menuSecondaryMobile: Object,
   bottomButtonsMobile: Array,
   algoliaAppId: String,
   algoliaApiKey: String,
-  algoliaIndex: Array
+  algoliaIndex: Array,
+  algoliaModel: Array
 });
 
 let productsPanel = ref(); // should pass like string name inside ref attr inside menudata
@@ -157,7 +155,8 @@ const {
   bottomButtonsMobile,
   algoliaAppId,
   algoliaApiKey,
-  algoliaIndex
+  algoliaIndex,
+  algoliaModel
 } = props;
 
 const toggle = (event, refattr) => {

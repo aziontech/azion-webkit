@@ -10,7 +10,8 @@
     <AlgoliaSarch
       :algoliaAppId="algoliaAppId"
       :algoliaApiKey="algoliaApiKey"
-      :algoliaIndex="algoliaIndex" />
+      :algoliaIndex="algoliaIndex"
+      :algoliaModel="algoliaModel" />
   </Dialog>
 </template>
 
@@ -23,17 +24,13 @@ const props = defineProps({
   isDialogActive: Boolean,
   algoliaAppId: String,
   algoliaApiKey: String,
-  algoliaIndex: Array
+  algoliaIndex: Array,
+  algoliaModel: Array
 });
 
 const emit = defineEmits(['close']);
 
-const {
-  algoliaAppId,
-  algoliaApiKey,
-  algoliaIndex
-} = props;
-
+const { algoliaAppId, algoliaApiKey, algoliaIndex, algoliaModel } = props;
 const isDialogActive = ref(props.isDialogActive);
 
 onUpdated(() => {
