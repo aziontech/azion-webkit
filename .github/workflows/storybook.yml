@@ -1,52 +1,52 @@
 ##########################################################
 # https://z4azz7gp65.map.azionedge.net/storybook-static/ #
 ##########################################################
-# name: Storybook Publish
+name: Storybook Publish
 
-# on:
-#   push:
-#     branches:
-      # - main
+on:
+  push:
+    branches:
+      - main
 
-# jobs:
-#   deploy:
-#     name: Storybook | prod
-#     runs-on: self-hosted
-#     container:
-#       image: ubuntu:latest
+jobs:
+  deploy:
+    name: Storybook | prod
+    runs-on: self-hosted
+    container:
+      image: ubuntu:latest
 
-#     steps:
-#       - name: CHECKOUT
-#         uses: actions/checkout@v3
-#         with:
-#           repository: aziontech/azion-web-kit
-#           # ref: main
-#           path: '.'
-#           clean: true
-#           fetch-depth: '0'
-#           lfs: 'false'
+    steps:
+      - name: CHECKOUT
+        uses: actions/checkout@v3
+        with:
+          repository: aziontech/azion-web-kit
+          ref: main
+          path: '.'
+          clean: true
+          fetch-depth: '0'
+          lfs: 'false'
 
-#       - name: Node.js Configuration
-#         uses: actions/setup-node@v3
-#         with:
-#           node-version: 20.6.1
-#           registry-url: 'https://npm.pkg.github.com'
-#           scope: '@aziontech'
-#           always-auth: true
-#         env:
-#           NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }}
+      - name: Node.js Configuration
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.6.1
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@aziontech'
+          always-auth: true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }}
 
-#       - name: Installing dependencies
-#         run: npm install
+      - name: Installing dependencies
+        run: npm install
 
-#       - name: Building Storybook
-#         run: npm run build-storybook
+      - name: Building Storybook
+        run: npm run build-storybook
 
-#       - name: PREPARING TO DEPLOY
-#         run: rm -rf vitest.config.js .storybook vite.config.js tailwind.config.cjs postcss.config.js pnpm-lock.yaml index.html CONTRIBUTING.md .prettierrc.json .eslintrc.cjs .nvmrc .github dist node_modules .editorconfig .gitignore docs primevue-sass-theme-3.40.1 LICENSE package-lock.json package.json post-install.sh README.md
+      - name: PREPARING TO DEPLOY
+        run: rm -rf vitest.config.js .storybook vite.config.js tailwind.config.cjs postcss.config.js pnpm-lock.yaml index.html CONTRIBUTING.md .prettierrc.json .eslintrc.cjs .nvmrc .github dist node_modules .editorconfig .gitignore docs primevue-sass-theme-3.40.1 LICENSE package-lock.json package.json post-install.sh README.md
 
-#       - name: Deployng Storybook
-#         uses: patrickwyler/gcs-bucket-sync-action@1.3
-#         with:
-#           secrets: ${{ secrets.GCP_BUCKET_KEY }}
-#           bucket: ${{ secrets.GCP_BUCKET_NAME }}
+      - name: Deployng Storybook
+        uses: patrickwyler/gcs-bucket-sync-action@1.3
+        with:
+          secrets: ${{ secrets.GCP_BUCKET_KEY }}
+          bucket: ${{ secrets.GCP_BUCKET_NAME }}
