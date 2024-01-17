@@ -39,7 +39,14 @@
                 </li>
               </ul>
               <p class="text-sm text-color-secondary">
-                {{ item.text.split('.')[0] }}...
+                <!--
+                  item.text used to site/blog/cases
+                  item.description used to documentation
+                -->
+                {{
+                  item.text ? item.text.split('.')[0] :
+                    item.description ? item.description.split('.')[0] : ''
+                }}
               </p>
             </a>
           </div>
