@@ -15,15 +15,15 @@ const logos = Array(12).fill({
 // More on writing stories with args: https://storybook.js.org/docs/vue/writing-stories/args
 export const Default = {
   args: {
-    centered: false,
+    isCentralized: false,
     title: 'Logo title',
     logos: logos
   }
 };
 
-export const Centered = {
+export const Centralized = {
   args: {
-    centered: true,
+    isCentralized: true,
     title: 'Logo title',
     logos: logos
   }

@@ -10,7 +10,7 @@ export default {
     overline: String,
     description: String,
     position: String,
-    isContentCentered: Boolean,
+    isContentCentralized: Boolean,
   }
 }
 

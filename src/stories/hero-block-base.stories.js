@@ -9,7 +9,7 @@ export default {
     title: String,
     overline: String,
     description: String,
-    centered: Boolean
+    isCentralized: Boolean
   }
 }
 
@@ -37,13 +37,13 @@ Default.args = {
     overline: 'Overline',
     title: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariata',
     description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con',
-    centered: false,
+    isCentralized: false,
 }
 
-export const Centered = Template.bind({});
-Centered.args = {
+export const Centralized = Template.bind({});
+Centralized.args = {
   overline: 'Overline',
   title: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariata',
   description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con',
-  centered: true,
+  isCentralized: true,
 }

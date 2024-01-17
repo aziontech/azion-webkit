@@ -5,12 +5,12 @@
       { 'lg:flex-row-reverse': position == 'right'}
     ]">
       <div class=" w-full flex flex-col gap-10" :class="[
-        { 'items-center' : isContentCentered }
+        { 'items-center' : isContentCentralized }
       ]">
         <div class="flex flex-col gap-4" :class="[
           { 'max-w-2xl': position == 'center' },
           { 'max-w-xl': position !== 'center' },
-          { 'items-center text-center' : isContentCentered }
+          { 'items-center text-center' : isContentCentralized }
         ]">
           <Overline :label="overline" />
           <h1 class="text-3xl">
@@ -57,7 +57,7 @@ defineProps({
     required: false,
     default: 'left'
   },
-  isContentCentered: {
+  isContentCentralized: {
     type: Boolean,
     required: false,
     default: false
