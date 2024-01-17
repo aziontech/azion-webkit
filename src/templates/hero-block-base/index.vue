@@ -1,16 +1,16 @@
 <template>
   <section class="py-16 surface-section">
     <div class="px-container flex flex-col w-full gap-10" :class="[
-      { 'lg:flex-row': !centered },
-      { 'items-center': centered },
+      { 'lg:flex-row': !isCentralized },
+      { 'items-center': isCentralized },
     ]">
       <div class=" w-full flex flex-col gap-10" :class="[
-        { 'lg:max-w-xl': !centered },
-        { 'items-center': centered },
+        { 'lg:max-w-xl': !isCentralized },
+        { 'items-center': isCentralized },
       ]">
         <div class="flex flex-col gap-4" :class="[
-          { 'max-w-2xl text-center': centered },
-          { 'max-w-xl': !centered}
+          { 'max-w-2xl text-center': isCentralized },
+          { 'max-w-xl': !isCentralized}
         ]">
           <Overline :label="overline" />
           <h1 class="text-3xl">
@@ -18,10 +18,10 @@
           </h1>
           <p class="text-color-secondary text-sm"> {{ description }}</p>
           <div class="flex flex-row gap-3" :class="[
-            { 'justify-center': centered },
+            { 'justify-center': isCentralized },
           ]">
           <div class="flex flex-col sm:flex-row gap-3 w-full"
-          :class="{ 'justify-center': centered }"
+          :class="{ 'justify-center': isCentralized }"
           >
             <slot name="actions" />
           </div>
@@ -52,7 +52,7 @@ defineProps({
     type: String,
     required: true
   },
-  centered: {
+  isCentralized: {
     type: Boolean,
     required: false,
     default: false
