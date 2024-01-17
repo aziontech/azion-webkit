@@ -3,39 +3,26 @@
     <ais-instant-search :search-client="searchClient" index-name="azion-site-en">
       <div>
         <ais-search-box
+          autofocus
+          show-loading-indicator
           placeholder="Search Keywords"
-          :autofocus="true"
-          :show-loading-indicator="true"
-          class="mb-4"/>
+          class="mb-5" />
 
-        <TabMenu
-          class="block mb-4"
-          :model="algoliaModel"
-          :pt="{ label: 'whitespace-nowrap' }"
-          v-model:activeIndex="activeIndex"
-          @click="eventHandler(activeIndex)" />
+        <div class="px-6">
+          <TabMenu
+            class="block mb-6"
+            :model="algoliaModel"
+            :pt="{ label: 'whitespace-nowrap' }"
+            v-model:activeIndex="activeIndex"
+            @click="eventHandler(activeIndex)" />
 
-        <div v-for="(indexData, index) in algoliaIndex" :key="index">
-          <IndexHit
-            v-if="activeIndex === 0 || activeIndex === indexData.activeIndex"
-            :indexName="indexData.name"
-            :label="indexData.label" />
+          <div v-for="(indexData, index) in algoliaIndex" :key="index">
+            <IndexHit
+              :label="indexData.label"
+              :indexName="indexData.name"
+              v-if="activeIndex === 0 || activeIndex === indexData.activeIndex" />
+          </div>
         </div>
-        <!--
-        <IndexHit
-          indexName="azion-site-en"
-          label="site"
-          v-if="activeIndex === 0 || activeIndex === 1" />
-        <IndexHit
-          indexName="azion-blog-en"
-          label="blog"
-          v-if="activeIndex === 0 || activeIndex === 3" />
-        <IndexHit
-          indexName="azion-cases-en"
-          label="cases"
-          v-if="activeIndex === 0 || activeIndex === 4" />
-        -->
-
       </div>
     </ais-instant-search>
   </div>
@@ -57,8 +44,6 @@
 
   const { algoliaAppId, algoliaApiKey, algoliaModel, algoliaIndex } = props;
   const searchClient = algoliasearch(algoliaAppId, algoliaApiKey);
-
-  console.log('algolia/index.vue : ', algoliaIndex)
 
   let activeIndex = ref(0);
   const eventHandler = (e) => {
@@ -84,22 +69,22 @@
 
     input[type="search"] {
       width: 100%;
-      padding: .5rem .5rem;
-      border-radius: 4px;
-      border:  solid 1px var(--surface-border);
+      padding: .725rem 1.5rem;
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
+      border-bottom: solid 1px var(--surface-border);
       outline: none;
     }
 
     .ais-SearchBox-reset {
-      display: none;
+      position: absolute;
+      right: 1.7rem;
+      fill: white;
+      top: 1.2rem;
     }
 
     .ais-SearchBox-submit {
-      display: none; // to remove btn
-      // padding: .925rem;
-      // border-top-right-radius: 4px;
-      // border-bottom-right-radius: 4px;
-      // border:  solid 1px var(--surface-border);
+      display: none;
     }
   }
 
