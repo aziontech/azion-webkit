@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col gap-2" :class="[{ 'items-center text-center': isCentralized }, { 'items-start': !isCentralized}]">
     <Tag v-if="tagLabel" :value="tagLabel" severity="info" />
-    <p class="text-6xl	font-bold	"> {{ bigNumber }} </p>
+    <p class="text-6xl tracking-[-1.5px] font-bold	"> {{ bigNumber }} </p>
     <p class="text-color-secondary"> {{ description }} </p>
 
   </div>
