@@ -1,4 +1,5 @@
 <template>
+  <!-- slotDialog -->
   <AlgoliaDialog
     :algoliaAppId="algoliaAppId"
     :algoliaApiKey="algoliaApiKey"
@@ -16,6 +17,8 @@
           class="block mr-6">
           <AzionLogoDefault class="w-[90px]" />
         </a>
+        <slot name="navigation" />
+        <!--
         <nav>
           <ul class="flex gap-4">
             <li v-for="(menuitem, index) in menuData.items" :key="index">
@@ -81,6 +84,7 @@
             </li>
           </ul>
         </nav>
+      -->
       </div>
       <div class="flex gap-2">
         <a

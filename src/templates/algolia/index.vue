@@ -3,8 +3,8 @@
     <ais-instant-search :search-client="searchClient" index-name="azion-site-en">
 
       <ais-search-box
-        autofocus
-        show-loading-indicator
+        :autofocus="true"
+        :show-loading-indicator="true"
         placeholder="Search Keywords"
         class="mb-5 sticky top-0 z-10" />
 
