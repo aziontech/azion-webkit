@@ -10,7 +10,7 @@
 
         <div class="px-6">
           <TabMenu
-            class="block mb-6"
+            class="block mb-2"
             :model="algoliaModel"
             :pt="{ label: 'whitespace-nowrap' }"
             v-model:activeIndex="activeIndex"

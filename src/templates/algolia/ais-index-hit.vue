@@ -1,45 +1,50 @@
 <template>
-  <div class="mb-10">
+  <div class="mb-6">
     <ais-index :index-name="props.indexName">
-      <div class="flex justify-between">
+      <div class="flex items-center justify-between">
         <h2 class="text-xl">
           {{ props.label.toUpperCase() }}
         </h2>
+
         <div>
-          <div class="flex items-center justify-end gap-3 mb-2">
-            <a href="/" title="View {{ props.label }}">
-              <small>
-                view {{ props.label }}
-              </small>
-            </a>
-            <ais-hits-per-page :items="[
-              { label: '4 hits per page', value: 4, default: true },
-              { label: '8 hits per page', value: 8 },
-              { label: '16 hits per page', value: 16 },
-              { label: '32 hits per page', value: 32 }
-            ]" />
-          </div>
-          <ais-pagination class="flex justify-end"/>
           <ais-stats>
             <template v-slot="{ hitsPerPage, nbPages, nbHits, page, processingTimeMS, query }">
-              <div class="text-right my-4">
+              <div class="flex items-center justify-end text-right mt-4 mb-2">
+                <a href="/" title="View {{ props.label }}">
+                  <small>
+                    view {{ props.label }}
+                  </small>
+                </a>
+                <ais-pagination class="flex justify-end mx-3"/>
                 <p>
                   <small>
-                    Page <strong>{{ page + 1 }} of {{ nbPages  }}</strong>
-                    <br>
-                    <strong>{{ nbHits }} hits</strong> retrieved in <strong>{{ processingTimeMS }}ms</strong> <span v-if="query">for <strong>"{{ query }}"</strong></span>
+                    {{ page + 1 }} - {{ nbPages  }}
                   </small>
                 </p>
+              </div>
+
+              <div class="flex items-center justify-end gap-3 mb-2">
+                <small>
+                  <strong>{{ nbHits }} hits</strong> retrieved in <strong>{{ processingTimeMS }}ms</strong> <span v-show="query">for <strong>"{{ query }}"</strong></span>
+                </small>
+                <ais-hits-per-page :items="[
+                  { label: '4 hits per page', value: 4, default: true },
+                  { label: '8 hits per page', value: 8 },
+                  { label: '16 hits per page', value: 16 },
+                  { label: '32 hits per page', value: 32 }
+                ]" />
               </div>
             </template>
           </ais-stats>
         </div>
       </div>
+
       <ais-stats>
         <template v-slot="{ hitsPerPage, nbPages, nbHits, page, processingTimeMS, query }">
-          <p v-if="nbPages === 0">
+          <p v-show="nbPages === 0">
             No results found for the term <strong>"{{ query }}"</strong>.
           </p>
+
           <ais-hits>
             <template v-slot:item="{ item }">
               <div  class="ais-Hits-item-card border surface-border rounded p-4 w-full">
@@ -76,6 +81,7 @@
               </div>
             </template>
           </ais-hits>
+
         </template>
       </ais-stats>
     </ais-index>
@@ -102,10 +108,50 @@
 }
 
 .ais-HitsPerPage-select {
-  padding: .5rem;
+  padding: .438rem .5rem;
   border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
+  font-size: 12px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.ais-Pagination-list {
+  gap: 0 !important;
+
+  .ais-Pagination-item--page {
+    display: none !important;
+  }
+
+  .ais-Pagination-item {
+    .ais-Pagination-link {
+      border: solid 1px var(--surface-border);
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .ais-Pagination-item--firstPage {
+    .ais-Pagination-link {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+  }
+
+  .ais-Pagination-item--lastPage {
+    .ais-Pagination-link {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+  }
 }
 
 .ais-Hits {
