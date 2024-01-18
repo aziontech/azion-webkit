@@ -127,6 +127,7 @@
   .ais-Pagination-item {
     .ais-Pagination-link {
       border: solid 1px var(--surface-border);
+      margin-left: -1px;
       width: 2rem;
       height: 2rem;
       display: flex;

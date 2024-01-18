@@ -1,29 +1,31 @@
 <template>
   <div class="m-w-[768px]">
     <ais-instant-search :search-client="searchClient" index-name="azion-site-en">
-      <div>
-        <ais-search-box
-          autofocus
-          show-loading-indicator
-          placeholder="Search Keywords"
-          class="mb-5" />
 
-        <div class="px-6">
-          <TabMenu
-            class="block mb-2"
-            :model="algoliaModel"
-            :pt="{ label: 'whitespace-nowrap' }"
-            v-model:activeIndex="activeIndex"
-            @click="eventHandler(activeIndex)" />
+      <ais-search-box
+        autofocus
+        show-loading-indicator
+        placeholder="Search Keywords"
+        class="mb-5 sticky top-0 z-10" />
 
-          <div v-for="(indexData, index) in algoliaIndex" :key="index">
-            <IndexHit
-              :label="indexData.label"
-              :indexName="indexData.name"
-              v-if="activeIndex === 0 || activeIndex === indexData.activeIndex" />
-          </div>
+      <div class="px-6">
+        <TabMenu
+          class="block mb-2 sticky"
+          :model="algoliaModel"
+          :pt="{ label: 'whitespace-nowrap' }"
+          v-model:activeIndex="activeIndex"
+          @click="eventHandler(activeIndex)" />
+      </div>
+
+      <div class="px-6">
+        <div v-for="(indexData, index) in algoliaIndex" :key="index">
+          <IndexHit
+            :label="indexData.label"
+            :indexName="indexData.name"
+            v-if="activeIndex === 0 || activeIndex === indexData.activeIndex" />
         </div>
       </div>
+
     </ais-instant-search>
   </div>
 </template>
