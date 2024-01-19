@@ -12,7 +12,8 @@ import CardGridListWithLoadMore from './templates/card-grid-list/withLoadMore.vu
 import FeaturedPost from './templates/featured-post/index.vue'
 
 import Header from './templates/header/index.vue'
-import HeaderSlotNavigation from './templates/header/slots/navigation-tabpanel.vue'
+import HeaderNavigation from './templates/header/navigation-tabpanel/index.vue'
+import HeaderDialogAlgoliaSearch from './templates/header/dialog-algolia-search/index.vue'
 
 import Footer from './templates/footer/index.vue'
 import NewsletterSingleLine from './templates/newsletter/single-line/index.vue'
@@ -40,7 +41,8 @@ export {
   Footer,
 
   Header,
-  HeaderSlotNavigation,
+  HeaderNavigation,
+  HeaderDialogAlgoliaSearch,
 
   FeaturedPost,
   NewsletterSingleLine,

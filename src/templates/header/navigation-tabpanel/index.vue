@@ -85,8 +85,6 @@
     }
   })
 
-  console.log(props.menuData)
-
   const { menuData } = props
   let productsPanel = ref() // should pass like string name inside ref attr inside menudata
   let resourcesPanel = ref() // should pass like string name inside ref attr inside menudata

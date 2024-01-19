@@ -51,7 +51,7 @@ function openDialog() {
 };
 
 function closeDialog() {
-  isDialogActive.value = alse;
+  isDialogActive.value = false;
   emit('close');
 };
 
