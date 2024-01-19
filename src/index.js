@@ -26,9 +26,11 @@ import TagListBlock from "./templates/tag-block-list/index.vue";
 import ContentSection from "./templates/content-section-block/index.vue";
 import EmptyState from "./templates/empty-state-block/index.vue";
 import ErrorStateBlock from "./templates/error-state-block/index.vue"
+import ContentQuoteBlock from "./templates/content-quote-block/index.vue"
 
 export {
   AlgoliaSearch,
+  ContentQuoteBlock,
   AlgoliaDialog,
   ButtonBlockList,
   Card,
