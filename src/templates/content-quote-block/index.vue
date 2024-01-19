@@ -22,11 +22,18 @@
   </div>
   <div v-else>
     <div class="flex flex-col gap-12 items-center">
-      <template v-for="({text, image, label}, i) in data" :key="i">
+      <template v-for="({text, imageLight, imageDark, label}, i) in data" :key="i">
         <div class="flex gap-16">
           <p class="max-w-md text-xl">{{ text }}</p>
           <div class="flex flex-col gap-3 items-center">
-            <img :src="image" class="grayscale" />
+            <ImageSwitcher>
+              <template #lightImage>
+                <img :src="`${imageLight}?ims=x40`" loading="lazy" height="40" />
+              </template>
+              <template #darkImage>
+                <img :src="`${imageDark}?ims=x40`" loading="lazy" height="40"/>
+              </template>
+            </ImageSwitcher>
             <p class="text-xs text-color-secondary"> {{ label }}</p>
           </div>
         </div>

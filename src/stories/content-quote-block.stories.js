@@ -31,13 +31,13 @@ const multipleData = [
   {
     text: "”Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con”",
     label: "Date and/or research.",
-    imageLight: "src/assets/svg/arezzo-logo.svg",
+    imageLight: "https://www.azion.com/static/images/landingpage/uploads/logo-forrester.svg",
     imageDark: "https://www.azion.com/static/images/v3/home/logo-digmais.png"
   },
   {
     text: "”Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con”",
     label: "Date and/or research.",
-    imageLight: "https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg",
+    imageLight: "https://www.azion.com/static/images/landingpage/uploads/logo-forrester.svg",
     imageDark: "https://www.azion.com/static/images/v3/home/logo-digmais.png"
   },
   {
