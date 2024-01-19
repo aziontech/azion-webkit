@@ -1,22 +1,30 @@
 <template>
   <section>
     <Carousel :value="cards" :numVisible="3" :numScroll="2" :responsiveOptions="responsiveOptions" :circular="true"
-      :autoplayInterval="autoplayInterval" >
+      :autoplayInterval="autoplayInterval">
       <template #item="slotProps">
         <div class="h-full border-1 rounded-md surface-border flex flex-col gap-4 mx-6 p-6">
           <template v-if="slotProps.data.isCompany">
             <div>
-              <img loading="lazy" width="auto" height="36" :src="`${slotProps.data.image}?ims=x36`"
-                :alt="slotProps.data.name">
+              <ImageSwitcher>
+                <template #darkImage>
+                  <img loading="lazy" width="auto" height="36" :alt="slotProps.data.name"
+                    :src="`${slotProps.data.logoDark}?ims=x36`">
+                </template>
+                <template #lightImage>
+                  <img loading="lazy" width="auto" height="36" :alt="slotProps.data.name"
+                    :src="`${slotProps.data.logoLight}?ims=x36`">
+                </template>
+              </ImageSwitcher>
             </div>
           </template>
           <template v-else>
             <div class="flex gap-3">
-              <template v-if="slotProps.data.image">
-                <Avatar :image="`${slotProps.data.image}?ims=x36`" class="h-9" />
+              <template v-if="slotProps.data.avatar">
+                <Avatar :image="`${slotProps.data.avatar}?ims=x36`" class="h-9" />
               </template>
               <template v-else>
-                <Avatar :label="slotProps.data.name.charAt(0)" class="h-9 surface-border"/>
+                <Avatar :label="slotProps.data.name.charAt(0)" class="h-9 surface-border" />
               </template>
               <div>
                 <p class="text-sm"> {{ slotProps.data.name }}</p>
@@ -36,6 +44,7 @@
 <script setup>
 import Carousel from 'primevue/carousel';
 import Avatar from 'primevue/avatar';
+import ImageSwitcher from "../theme-aware-image-switcher/index.vue"
 import { ref } from 'vue';
 
 defineProps({
