@@ -6,7 +6,14 @@
         <div class="flex flex-col items-center gap-7 max-w-xl text-center">
           <p class="text-xl">{{ slotProps.data.text }}</p>
           <div class="flex flex-col gap-3 items-center">
-            <img :src="slotProps.data.image" />
+            <ImageSwitcher>
+              <template #lightImage>
+                <img :src="`${slotProps.data.imageLight}?ims=x40`" loading="lazy" height="40" />
+              </template>
+              <template #darkImage>
+                <img :src="`${slotProps.data.imageDark}?ims=x40`" loading="lazy" height="40"/>
+              </template>
+            </ImageSwitcher>
             <p class="text-xs text-color-secondary"> {{ slotProps.data.label }}</p>
           </div>
         </div>
@@ -19,7 +26,7 @@
         <div class="flex gap-16">
           <p class="max-w-md text-xl">{{ text }}</p>
           <div class="flex flex-col gap-3 items-center">
-            <img :src="image" />
+            <img :src="image" class="grayscale" />
             <p class="text-xs text-color-secondary"> {{ label }}</p>
           </div>
         </div>
@@ -30,6 +37,7 @@
 
 <script setup>
 import Carousel from "primevue/carousel"
+import ImageSwitcher from "../theme-aware-image-switcher/index.vue"
 
 defineProps({
   isCarousel: {
