@@ -13,6 +13,11 @@
       }
     }">
 
+    <KeyboardKey
+      keyname="esc"
+      class="absolute z-50 right-2 top-2"
+      @clicked="escClick" />
+
     <AlgoliaSarch
       :algoliaAppId="algoliaAppId"
       :algoliaApiKey="algoliaApiKey"
@@ -25,6 +30,7 @@
 import { ref, onUpdated } from 'vue';
 import Dialog from 'primevue/dialog';
 import AlgoliaSarch from '../algolia/index.vue';
+import KeyboardKey from '../keyboard-key/index.vue'
 
 const props = defineProps({
   isDialogActive: Boolean,
@@ -38,8 +44,6 @@ const emit = defineEmits(['close']);
 
 const { algoliaAppId, algoliaApiKey, algoliaIndex, algoliaModel } = props;
 const isDialogActive = ref(props.isDialogActive);
-// const isMobile = /iPhone|iPad|Android/i.test(window.navigator.userAgent);
-// const isMac = /(Mac)/i.test(window.navigator.userAgent);
 
 onUpdated(() => {
   isDialogActive.value = isDialogActive.value === props.isDialogActive ? isDialogActive.value : props.isDialogActive;
@@ -47,7 +51,7 @@ onUpdated(() => {
 
 function openDialog() {
   isDialogActive.value = true;
-  emit('close');
+  emit('open');
 };
 
 function closeDialog() {
@@ -55,7 +59,8 @@ function closeDialog() {
   emit('close');
 };
 
-// function keydownCode(e) {
-//   return (e.metaKey ? e.metaKey : e.ctrlKey) && e.keyCode;
-// }
+function escClick(e) {
+  isDialogActive.value = false;
+  emit('close');
+}
 </script>
