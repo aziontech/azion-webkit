@@ -5,7 +5,6 @@
         <slot name="visualid" />
         <slot name="navigation" />
       </div>
-
       <div class="flex gap-2">
         <a
           v-for="(menu, index) in menuSecondary"
@@ -23,40 +22,23 @@
         </a>
 
         <slot name="dialog" />
-
-        <MobileSidebar
-          :menuData="menuData.items"
-          :menuSecondary="menuSecondaryMobile"
-          :bottomButtons="bottomButtonsMobile" />
+        <slot name="mobile-right-sidebar" />
       </div>
     </div>
   </header>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import MobileSidebar from './mobile.vue'
+import { ref } from 'vue'
 
 const props = defineProps({
-  menuData: Object,
-  menuSecondary: Array,
-  menuSecondaryMobile: Object,
-  bottomButtonsMobile: Array,
-  algoliaAppId: String,
-  algoliaApiKey: String,
-  algoliaIndex: Array,
-  algoliaModel: Array
+  menuSecondary: Array
 });
 
 let productsPanel = ref() // should pass like string name inside ref attr inside menudata
 let resourcesPanel = ref() // should pass like string name inside ref attr inside menudata
 
-const {
-  menuData,
-  menuSecondary,
-  menuSecondaryMobile,
-  bottomButtonsMobile,
-} = props;
+const { menuSecondary } = props;
 
 const toggle = (event, refattr) => {
   try {

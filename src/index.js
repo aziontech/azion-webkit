@@ -15,6 +15,7 @@ import Header from './templates/header/index.vue'
 import HeaderLogoAzion from './templates/header/visualid/azion/index.vue'
 import HeaderNavigation from './templates/header/navigation-tabpanel/index.vue'
 import HeaderDialogAlgoliaSearch from './templates/header/dialog-algolia-search/index.vue'
+import MobileRightSidebar from './templates/header/mobile.vue'
 
 import Footer from './templates/footer/index.vue'
 import NewsletterSingleLine from './templates/newsletter/single-line/index.vue'
@@ -45,6 +46,7 @@ export {
   HeaderLogoAzion,
   HeaderNavigation,
   HeaderDialogAlgoliaSearch,
+  MobileRightSidebar,
 
   FeaturedPost,
   NewsletterSingleLine,

@@ -53,6 +53,19 @@ function activeDialog() {
 }
 
 function closeDialog() {
-  isDialogActive.value = false
+  q.value = false
 }
+
+window.addEventListener('keydown', (event) => {
+  if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
+    activeDialog();
+
+    setTimeout(function() {
+      document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0]?.focus();
+    }, 800)
+  }
+});
+
+
+
 </script>
