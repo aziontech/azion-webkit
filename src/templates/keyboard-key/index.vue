@@ -1,6 +1,6 @@
 <template>
   <kbd>
-    <Button outlined @click="handle">
+    <Button outlined @click="emitClicked">
       <small>
         {{ keyname }}
       </small>
@@ -19,7 +19,7 @@
   const emit = defineEmits(['clicked'])
   const { keyname } = props
 
-  function handle(event) {
+  function emitClicked(event) {
     emit('clicked', event)
   }
 </script>
