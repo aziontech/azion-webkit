@@ -5,7 +5,7 @@
       <ais-search-box
         :autofocus="true"
         :show-loading-indicator="true"
-        placeholder="Search Keywords"
+        placeholder="Digite your search"
         class="mb-5 sticky top-0 z-10" />
 
       <div class="px-6">

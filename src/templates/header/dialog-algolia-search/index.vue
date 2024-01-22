@@ -53,7 +53,7 @@ function activeDialog() {
 }
 
 function closeDialog() {
-  q.value = false
+  isDialogActive.value = false
 }
 
 window.addEventListener('keydown', (event) => {
@@ -61,11 +61,8 @@ window.addEventListener('keydown', (event) => {
     activeDialog();
 
     setTimeout(function() {
-      document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0]?.focus();
+      document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0]?.focus()
     }, 800)
   }
-});
-
-
-
+})
 </script>
