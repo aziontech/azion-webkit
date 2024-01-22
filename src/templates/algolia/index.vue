@@ -3,9 +3,9 @@
     <ais-instant-search :search-client="searchClient" index-name="azion-site-en">
 
       <ais-search-box
-        autofocus
-        show-loading-indicator
-        placeholder="Search Keywords"
+        :autofocus="true"
+        :show-loading-indicator="true"
+        placeholder="Digite your search"
         class="mb-5 sticky top-0 z-10" />
 
       <div class="px-6">
