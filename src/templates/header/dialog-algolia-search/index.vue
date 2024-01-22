@@ -10,7 +10,7 @@
     <Button
       outlined
       size="small"
-      icon="pi pi-search"4
+      icon="pi pi-search"
       class="bg-header hover:bg-header-button-hover !text-white flex border-header"
       @click="activeDialog"
       :pt="{

@@ -12,6 +12,7 @@ import CardGridListWithLoadMore from './templates/card-grid-list/withLoadMore.vu
 import FeaturedPost from './templates/featured-post/index.vue'
 
 import Header from './templates/header/index.vue'
+import HeaderLogoAzion from './templates/header/visualid/azion/index.vue'
 import HeaderNavigation from './templates/header/navigation-tabpanel/index.vue'
 import HeaderDialogAlgoliaSearch from './templates/header/dialog-algolia-search/index.vue'
 
@@ -41,6 +42,7 @@ export {
   Footer,
 
   Header,
+  HeaderLogoAzion,
   HeaderNavigation,
   HeaderDialogAlgoliaSearch,
 

@@ -2,15 +2,7 @@
   <header class="py-3 bg-header !text-white border-b surface-border h-[56px] w-full sticky top-0 z-40">
     <div class="flex justify-between items-center px-shell">
       <div class="flex items-center">
-
-        <a
-          href="/"
-          title="Home | Azion Technologies"
-          class="block mr-6">
-          <AzionLogoDefault class="w-[90px]" />
-        </a>
-        <!-- <slot name="logo"> -->
-
+        <slot name="visualid" />
         <slot name="navigation" />
       </div>
 
@@ -44,7 +36,6 @@
 <script setup>
 import { ref } from 'vue';
 import MobileSidebar from './mobile.vue'
-import AzionLogoDefault from '../../assets/icons/azion-logo-default.vue'
 
 const props = defineProps({
   menuData: Object,
