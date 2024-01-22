@@ -9,7 +9,6 @@
 </template>
 
 <script setup>
-  import { defineEmits } from 'vue'
   import Button from 'primevue/button'
 
   const props = defineProps({
