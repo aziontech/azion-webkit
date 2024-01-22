@@ -48,6 +48,14 @@ const {
 
 let isDialogActive = ref(false)
 
+function disableBodyScroll() {
+  document.querySelectorAll('html')[0].style.overflow = 'hidden'
+}
+
+function enableBodyScroll() {
+  document.querySelectorAll('html')[0].style.overflow = 'auto'
+}
+
 function focusSearchInput() {
   setTimeout(function() {
     document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0]?.focus()
@@ -57,10 +65,12 @@ function focusSearchInput() {
 function activeDialog() {
   isDialogActive.value = true
   focusSearchInput();
+  disableBodyScroll()
 }
 
 function closeDialog() {
   isDialogActive.value = false
+  enableBodyScroll()
 }
 
 window.addEventListener('keydown', (event) => {
