@@ -18,6 +18,7 @@ import HeaderDialogAlgoliaSearch from './templates/header/dialog-algolia-search/
 import MobileRightSidebar from './templates/header/mobile.vue'
 
 import Footer from './templates/footer/index.vue'
+import KeyboardKey from './templates/keyboard-key/index.vue'
 import NewsletterSingleLine from './templates/newsletter/single-line/index.vue'
 import NewsletterCard from './templates/newsletter/card/index.vue'
 import NewsletterWide from './templates/newsletter/wide/index.vue'
@@ -51,6 +52,7 @@ export {
   MobileRightSidebar,
 
   FeaturedPost,
+  KeyboardKey,
   NewsletterSingleLine,
   NewsletterWide,
   TitleFlexList,
