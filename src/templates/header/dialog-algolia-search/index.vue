@@ -48,8 +48,15 @@ const {
 
 let isDialogActive = ref(false)
 
+function focusSearchInput() {
+  setTimeout(function() {
+    document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0]?.focus()
+  }, 800)
+}
+
 function activeDialog() {
   isDialogActive.value = true
+  focusSearchInput();
 }
 
 function closeDialog() {
@@ -59,10 +66,6 @@ function closeDialog() {
 window.addEventListener('keydown', (event) => {
   if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
     activeDialog();
-
-    setTimeout(function() {
-      document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0]?.focus()
-    }, 800)
   }
 })
 </script>
