@@ -1,57 +1,10 @@
 <template>
   <div class="mb-6">
     <ais-index :index-name="props.indexName">
-      <div class="flex items-center justify-between">
+      <div class="lg:flex items-center justify-between">
         <h2 class="text-xl">
           {{ props.label.toUpperCase() }}
         </h2>
-
-        <div>
-          <ais-stats>
-            <template v-slot="{ hitsPerPage, nbPages, nbHits, page, processingTimeMS, query }">
-              <div v-if="nbPages" class="flex items-center justify-end text-right mt-4 mb-2">
-                <!--
-                <a
-                  href="/"
-                  title="View {{ props.label }}"
-                  class="p-button p-button-secondary p-button-text">
-
-                  view {{ props.label }}
-                </a>
-                -->
-
-                <ais-hits-per-page :items="[
-                  { label: '4 hits per page', value: 4, default: true },
-                  { label: '8 hits per page', value: 8 },
-                  { label: '16 hits per page', value: 16 },
-                  { label: '32 hits per page', value: 32 }
-                ]" />
-
-                <ais-pagination class="flex justify-end mx-3"/>
-
-                <p>
-                  <small>
-                    {{ page + 1 }} / {{ nbPages  }}
-                  </small>
-                </p>
-              </div>
-
-              <!--
-              <div class="flex items-center justify-end gap-3 mb-2">
-                <small>
-                  <strong>{{ nbHits }} hits</strong> retrieved in <strong>{{ processingTimeMS }}ms</strong> <span v-show="query">for <strong>"{{ query }}"</strong></span>
-                </small>
-                <ais-hits-per-page :items="[
-                  { label: '4 hits per page', value: 4, default: true },
-                  { label: '8 hits per page', value: 8 },
-                  { label: '16 hits per page', value: 16 },
-                  { label: '32 hits per page', value: 32 }
-                ]" />
-              </div>
-              -->
-            </template>
-          </ais-stats>
-        </div>
       </div>
 
       <ais-stats>
@@ -103,6 +56,52 @@
             </template>
           </ais-hits>
 
+          <div>
+            <ais-stats class="flex justify-end">
+              <template v-slot="{ hitsPerPage, nbPages, nbHits, page, processingTimeMS, query }">
+                <div v-if="nbPages" class="flex items-center mt-4 mb-2">
+                  <!--
+                  <a
+                    href="/"
+                    title="View {{ props.label }}"
+                    class="p-button p-button-secondary p-button-text">
+
+                    view {{ props.label }}
+                  </a>
+                  -->
+
+                  <ais-hits-per-page :items="[
+                    { label: '4 hits per page', value: 4, default: true },
+                    { label: '8 hits per page', value: 8 },
+                    { label: '16 hits per page', value: 16 },
+                    { label: '32 hits per page', value: 32 }
+                  ]" />
+
+                  <ais-pagination class="flex justify-end mx-3"/>
+
+                  <p>
+                    <small>
+                      {{ page + 1 }} / {{ nbPages  }}
+                    </small>
+                  </p>
+                </div>
+
+                <!--
+                <div class="flex items-center justify-end gap-3 mb-2">
+                  <small>
+                    <strong>{{ nbHits }} hits</strong> retrieved in <strong>{{ processingTimeMS }}ms</strong> <span v-show="query">for <strong>"{{ query }}"</strong></span>
+                  </small>
+                  <ais-hits-per-page :items="[
+                    { label: '4 hits per page', value: 4, default: true },
+                    { label: '8 hits per page', value: 8 },
+                    { label: '16 hits per page', value: 16 },
+                    { label: '32 hits per page', value: 32 }
+                  ]" />
+                </div>
+                -->
+              </template>
+            </ais-stats>
+          </div>
         </template>
       </ais-stats>
     </ais-index>
