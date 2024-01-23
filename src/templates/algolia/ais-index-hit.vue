@@ -71,18 +71,18 @@
                   <h2 class="text-base">
                     {{ item.title }}
                   </h2>
-                  <ul class="flex flex-wrap mt-2 mb-4">
-                    <li class="text-color-secondary mr-3">
+                  <ul class="flex flex-wrap mt-1 mb-4">
+                    <li class="text-color-secondary mr-1">
                       <small class="flex gap-2">
                         Home <span>></span>
                       </small>
                     </li>
-                    <li class="text-color-secondary mr-3">
+                    <li class="text-color-secondary mr-1">
                       <small class="flex gap-2">
                         {{ props.label }} <span>></span>
                       </small>
                     </li>
-                    <li class="text-color-secondary mr-3">
+                    <li class="text-color-secondary">
                       <small class="flex gap-2">
                         {{ item.title }}
                       </small>
