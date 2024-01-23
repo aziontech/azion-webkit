@@ -61,16 +61,17 @@ onUpdated(() => {
       console.log(event.target.value)
     })
   }, 800)
+})
 
 function openDialog() {
   isDialogActive.value = true
   emit('open')
-};
+}
 
 function closeDialog() {
   isDialogActive.value = false
   emit('close')
-};
+}
 
 function escKeydown(e) {
   // if condition to validate if have or not query value
