@@ -47,13 +47,14 @@ const {
 } = props;
 
 let isDialogActive = ref(false)
+const HTML = document.querySelectorAll('html')[0]
 
 function disableBodyScroll() {
-  document.querySelectorAll('html')[0].style.overflow = 'hidden'
+  HTML.style.overflow = 'hidden'
 }
 
 function enableBodyScroll() {
-  document.querySelectorAll('html')[0].style.overflow = 'auto'
+  HTML.style.overflow = 'auto'
 }
 
 function focusSearchInput() {
@@ -64,6 +65,7 @@ function focusSearchInput() {
 
 function activeDialog() {
   isDialogActive.value = true
+
   focusSearchInput();
   disableBodyScroll()
 }
@@ -72,6 +74,11 @@ function closeDialog() {
   isDialogActive.value = false
   enableBodyScroll()
 }
+
+/////////////////////////////////
+// CAPTURE cmd + k or ctrl + k //
+/////////////////////////////////
+
 
 window.addEventListener('keydown', (event) => {
   if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
