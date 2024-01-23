@@ -1,16 +1,18 @@
 <template>
   <div class="m-w-[768px]">
-    <ais-instant-search :search-client="searchClient" index-name="azion-site-en">
+    <ais-instant-search
+      :search-client="searchClient"
+      index-name="azion-site-en">
 
       <ais-search-box
         :autofocus="true"
         :show-loading-indicator="true"
         placeholder="Digite your search"
-        class="mb-5 sticky top-0 z-10" />
+        class="sticky top-0 z-10" />
 
-      <div class="px-6">
+      <div class="px-6 py-4 sticky top-[48px] surface-section">
         <TabMenu
-          class="block mb-2 sticky"
+          class="block mb-2"
           :model="algoliaModel"
           :pt="{ label: 'whitespace-nowrap' }"
           v-model:activeIndex="activeIndex"
