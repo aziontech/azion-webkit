@@ -17,15 +17,15 @@
       v-if="!hasInputValue"
       keyname="esc"
       class="absolute z-50 right-2 top-2"
-      @clicked="escKeydown" />
+      @clicked="toggleDialog(false)" />
 
     <AlgoliaSarch
       :algoliaAppId="algoliaAppId"
       :algoliaApiKey="algoliaApiKey"
       :algoliaIndex="algoliaIndex"
       :algoliaModel="algoliaModel"
-      @keyup="captureKeyup"
-      @keydown="captureKeydown" />
+      @keyup="pressKeyboardKey"
+      @keydown="pressKeyboardKey" />
   </Dialog>
 </template>
 
@@ -53,27 +53,19 @@ onUpdated(() => {
   isDialogActive.value = isDialogActive.value === props.isDialogActive ? isDialogActive.value : props.isDialogActive
 })
 
-function openDialog() {
+function toggleDialog(action) {
+  if(!action) {
+    isDialogActive.value = false
+    emit('close')
+
+    return
+  }
+
   isDialogActive.value = true
   emit('open')
 }
 
-function closeDialog() {
-  isDialogActive.value = false
-  emit('close')
-}
-
-function escKeydown(e) {
-  // if condition to validate if have or not query value
-  closeDialog()
-}
-
-function captureKeydown() {
-  let algoliaSearchInput = document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0]
-  algoliaSearchInput.value?.length ? hasInputValue.value = true : hasInputValue.value = false;
-}
-
-function captureKeyup() {
+function pressKeyboardKey() {
   let algoliaSearchInput = document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0]
   algoliaSearchInput.value?.length ? hasInputValue.value = true : hasInputValue.value = false;
 }
