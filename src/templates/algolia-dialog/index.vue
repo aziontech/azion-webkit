@@ -35,6 +35,7 @@ import Dialog from 'primevue/dialog'
 import AlgoliaSarch from '../algolia/index.vue'
 import KeyboardKey from '../keyboard-key/index.vue'
 
+const emit = defineEmits(['close'])
 const hasInputValue = ref(false)
 const props = defineProps({
   isDialogActive: Boolean,
@@ -42,9 +43,7 @@ const props = defineProps({
   algoliaApiKey: String,
   algoliaIndex: Array,
   algoliaModel: Array
-});
-
-const emit = defineEmits(['close'])
+})
 
 const { algoliaAppId, algoliaApiKey, algoliaIndex, algoliaModel } = props
 const isDialogActive = ref(props.isDialogActive)
