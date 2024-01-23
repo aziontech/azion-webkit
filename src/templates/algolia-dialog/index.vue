@@ -14,6 +14,7 @@
     }">
 
     <KeyboardKey
+      v-if="!hasInputValue"
       keyname="esc"
       class="absolute z-50 right-2 top-2"
       @clicked="escKeydown" />
@@ -22,7 +23,9 @@
       :algoliaAppId="algoliaAppId"
       :algoliaApiKey="algoliaApiKey"
       :algoliaIndex="algoliaIndex"
-      :algoliaModel="algoliaModel" />
+      :algoliaModel="algoliaModel"
+      @keyup="captureKeyup"
+      @keydown="captureKeydown" />
   </Dialog>
 </template>
 
@@ -32,6 +35,7 @@ import Dialog from 'primevue/dialog'
 import AlgoliaSarch from '../algolia/index.vue'
 import KeyboardKey from '../keyboard-key/index.vue'
 
+const hasInputValue = ref(false)
 const props = defineProps({
   isDialogActive: Boolean,
   algoliaAppId: String,
@@ -47,6 +51,16 @@ const isDialogActive = ref(props.isDialogActive)
 
 onUpdated(() => {
   isDialogActive.value = isDialogActive.value === props.isDialogActive ? isDialogActive.value : props.isDialogActive
+
+  console.log('on update:', isDialogActive.value)
+
+  if(!isDialogActive) return
+
+  setTimeout(function() {
+    document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0].addEventListener('change', (event) => {
+      console.log(event.target.value)
+    })
+  }, 800)
 });
 
 function openDialog() {
@@ -62,5 +76,15 @@ function closeDialog() {
 function escKeydown(e) {
   // if condition to validate if have or not query value
   closeDialog()
+}
+
+function captureKeydown() {
+  let algoliaSearchInput = document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0]
+  algoliaSearchInput.value?.length ? hasInputValue.value = true : hasInputValue.value = false;
+}
+
+function captureKeyup() {
+  let algoliaSearchInput = document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0]
+  algoliaSearchInput.value?.length ? hasInputValue.value = true : hasInputValue.value = false;
 }
 </script>
