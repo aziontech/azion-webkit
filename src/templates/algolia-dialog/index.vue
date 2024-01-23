@@ -61,7 +61,6 @@ onUpdated(() => {
       console.log(event.target.value)
     })
   }, 800)
-});
 
 function openDialog() {
   isDialogActive.value = true
