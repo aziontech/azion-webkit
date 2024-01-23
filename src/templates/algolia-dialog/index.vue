@@ -51,7 +51,6 @@ const isDialogActive = ref(props.isDialogActive)
 
 onUpdated(() => {
   isDialogActive.value = isDialogActive.value === props.isDialogActive ? isDialogActive.value : props.isDialogActive
-<<<<<<< HEAD
 
   console.log('on update:', isDialogActive.value)
 
@@ -63,32 +62,20 @@ onUpdated(() => {
     })
   }, 800)
 })
-=======
-});
->>>>>>> ab43cd8 (refactor: name function)
 
 function openDialog() {
   isDialogActive.value = true
   emit('open')
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> ab43cd8 (refactor: name function)
 
 function closeDialog() {
   isDialogActive.value = false
   emit('close')
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> ab43cd8 (refactor: name function)
 
 function escKeydown(e) {
   // if condition to validate if have or not query value
   closeDialog()
-<<<<<<< HEAD
 }
 
 function captureKeydown() {
@@ -99,7 +86,5 @@ function captureKeydown() {
 function captureKeyup() {
   let algoliaSearchInput = document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0]
   algoliaSearchInput.value?.length ? hasInputValue.value = true : hasInputValue.value = false;
-=======
->>>>>>> ab43cd8 (refactor: name function)
 }
 </script>
