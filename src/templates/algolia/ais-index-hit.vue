@@ -10,7 +10,7 @@
 
           <ais-stats>
             <template v-slot="{ hitsPerPage, nbPages, nbHits, page, processingTimeMS, query }">
-              <div class="flex items-center justify-end text-right mt-4 mb-2">
+              <div v-if="nbPages" class="flex items-center justify-end text-right mt-4 mb-2">
                 <!--
                 <a
                   href="/"
@@ -57,7 +57,7 @@
 
       <ais-stats>
         <template v-slot="{ hitsPerPage, nbPages, nbHits, page, processingTimeMS, query }">
-          <p v-show="nbPages === 0">
+          <p v-show="nbPages === 0" class="py-4">
             No results found for the term <strong>"{{ query }}"</strong>.
           </p>
 
@@ -193,5 +193,9 @@
       display: flex;
     }
   }
+}
+
+.ais-Stats-text {
+  display: none;
 }
 </style>
