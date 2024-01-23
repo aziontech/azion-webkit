@@ -51,16 +51,6 @@ const isDialogActive = ref(props.isDialogActive)
 
 onUpdated(() => {
   isDialogActive.value = isDialogActive.value === props.isDialogActive ? isDialogActive.value : props.isDialogActive
-
-  console.log('on update:', isDialogActive.value)
-
-  if(!isDialogActive) return
-
-  setTimeout(function() {
-    document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0].addEventListener('change', (event) => {
-      console.log(event.target.value)
-    })
-  }, 800)
 })
 
 function openDialog() {
