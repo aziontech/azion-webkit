@@ -67,6 +67,6 @@ function toggleDialog(action) {
 
 function pressKeyboardKey() {
   let algoliaSearchInput = document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0]
-  algoliaSearchInput.value?.length ? hasInputValue.value = true : hasInputValue.value = false;
+  algoliaSearchInput.value?.length ? hasInputValue.value = true : hasInputValue.value = false
 }
 </script>
