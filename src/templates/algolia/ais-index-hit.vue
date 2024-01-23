@@ -7,7 +7,6 @@
         </h2>
 
         <div>
-
           <ais-stats>
             <template v-slot="{ hitsPerPage, nbPages, nbHits, page, processingTimeMS, query }">
               <div v-if="nbPages" class="flex items-center justify-end text-right mt-4 mb-2">

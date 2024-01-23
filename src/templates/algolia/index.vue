@@ -6,27 +6,30 @@
 
       <ais-search-box
         :autofocus="true"
-        :show-loading-indicator="true"
+        :show-loading-indicator="false"
         placeholder="Digite your search"
         class="sticky top-0 z-10" />
+        <ais-stats>
+          <template v-slot="{ hitsPerPage, nbPages, nbHits, page, processingTimeMS, query }">
+              <div v-if="query.length" class="px-6 py-4 sticky top-[48px] surface-section">
+                <TabMenu
+                  class="block mb-2"
+                  :model="algoliaModel"
+                  :pt="{ label: 'whitespace-nowrap' }"
+                  v-model:activeIndex="activeIndex"
+                  @click="eventHandler(activeIndex)" />
+              </div>
 
-      <div class="px-6 py-4 sticky top-[48px] surface-section">
-        <TabMenu
-          class="block mb-2"
-          :model="algoliaModel"
-          :pt="{ label: 'whitespace-nowrap' }"
-          v-model:activeIndex="activeIndex"
-          @click="eventHandler(activeIndex)" />
-      </div>
-
-      <div class="px-6">
-        <div v-for="(indexData, index) in algoliaIndex" :key="index">
-          <IndexHit
-            :label="indexData.label"
-            :indexName="indexData.name"
-            v-if="activeIndex === 0 || activeIndex === indexData.activeIndex" />
-        </div>
-      </div>
+              <div v-if="query.length" class="px-6">
+                <div v-for="(indexData, index) in algoliaIndex" :key="index">
+                  <IndexHit
+                    :label="indexData.label"
+                    :indexName="indexData.name"
+                    v-if="activeIndex === 0 || activeIndex === indexData.activeIndex" />
+                </div>
+              </div>
+            </template>
+          </ais-stats>
 
     </ais-instant-search>
   </div>
