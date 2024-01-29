@@ -125,5 +125,5 @@ const props = defineProps({
   }
 })
 
-const activeLang = props.i18nPages ? props.i18nPages.find(p => p.lang.toLowerCase() === props.lang.toLowerCase()) : null
+const activeLang = props.i18nPages ? props.i18nPages.find(p => p.langPrefix.toLowerCase() === props.lang.toLowerCase()) : null
 </script>
