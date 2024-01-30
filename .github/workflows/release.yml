@@ -38,14 +38,14 @@ jobs:
       - name: OS - Installing git cli
         run: apt-get install git-all -y
 
-      - name: CHECKOUT Repositorie
-        uses: actions/checkout@v3
-        with:
-          repository: aziontech/azion-web-kit
-          ref: 'main'
-          path: '.'
-          clean: 'true'
-          fetch-depth: '0'
+      # - name: CHECKOUT Repositorie
+      #   uses: actions/checkout@v3
+      #   with:
+      #     repository: aziontech/azion-web-kit
+      #     ref: 'main'
+      #     path: '.'
+      #     clean: 'true'
+      #     fetch-depth: '0'
 
       - name: Setup
         uses: actions/setup-node@v3
@@ -60,6 +60,8 @@ jobs:
       - name: Semantic Release
         shell: bash
         run: |
+          rm -rf ./*
+          git clone https://github.com/aziontech/azion-web-kit.git && cd azion-web-kit && ls -la
           npx semantic-release
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
@@ -68,6 +70,7 @@ jobs:
       - name: Publish
         shell: bash
         run: |
+          git clone https://github.com/aziontech/azion-web-kit.git && cd azion-web-kit && ls -la
           npm publish
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
