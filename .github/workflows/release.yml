@@ -42,7 +42,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-          cache: npm
+          # cache: npm
 
       - name: Installing release dependency list
         run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog conventional-changelog-conventionalcommits -D
