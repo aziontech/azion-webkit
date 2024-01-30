@@ -1,4 +1,4 @@
-name: Release
+name: Publish Package to npm.pkg.github
 
 on:
   repository_dispatch:
@@ -38,10 +38,11 @@ jobs:
       - name: OS - Installing git cli
         run: apt-get install git-all -y
 
-      - name: Setup - actions/setup-node@v3
+      - name: Setup
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
+          cache: npm
 
       - name: Installing release dependency list
         run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog conventional-changelog-conventionalcommits -D
