@@ -1,5 +1,5 @@
 <template>
-  <article class="prose max-w-[100ch]">
+  <article class="prose prose-lg">
     <slot />
   </article>
 </template>
