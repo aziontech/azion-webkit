@@ -1,37 +1,41 @@
 <template>
-  <div class="flex flex-col gap-6 lg:gap-10 ">
-    <div class="pb-4 flex gap-4 lg:gap-8 flex-col w-full">
-      <Breadcrumb :model="breadcrumbItems" class="-ml-1" />
-      <h1 class="text-4xl font-medium text-color">
-        {{ title }}
-      </h1>
-      <p class="font-normal text-color-secondary">
-        {{ date }}
-      </p>
-      <p class="font-normal text-color-secondary">
-        {{ description }}
-      </p>
-      <div v-if="authors" class="flex gap-8">
-        <template v-for="({avatar, title, role}, index) in authors" :key="index">
-          <div class="flex gap-3">
-            <Avatar size="xlarge" :image="avatar" shape="circle" />
-            <div>
-              <p class="font-normal text-sm">
-                {{ title }}
-              </p>
-              <p class="font-normal text-xs text-color-secondary">
-                {{ role }}
-              </p>
+    <div class="flex flex-col gap-10 ">
+      <div class="flex gap-8 flex-col w-full">
+        <Breadcrumb :model="breadcrumbItems" class="-ml-1" />
+        <div class="flex flex-col gap-6">
+          <h1 class="text-4xl font-medium text-color">
+            {{ title }}
+          </h1>
+          <p class="font-normal text-2xl text-color-secondary">
+            {{ description }}
+          </p>
+        </div>
+        <p class="font-normal text-xs text-color-secondary">
+          {{ date }}
+        </p>
+        <div v-if="authors" class="flex flex-col md:flex-row gap-4 md:gap-8">
+          <template v-for="({avatar, title, role}, index) in authors" :key="index">
+            <div class="flex gap-3 md:max-w-56 items-center">
+              <div class="w-8 flex items-center">
+                <Avatar size="xlarge" :image="avatar" shape="circle" />
+              </div>
+              <div>
+                <p class="font-normal text-sm">
+                  {{ title }}
+                </p>
+                <p class="font-normal text-xs text-color-secondary">
+                  {{ role }}
+                </p>
+              </div>
             </div>
-          </div>
-        </template>
+          </template>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 md:gap-0 md:flex-row md:justify-between md:items-center">
+        <TagBlockList :tagList="tagList" v-if="tagList" />
+        <slot name="sharer"/>
       </div>
     </div>
-  </div>
-  <div class="flex justify-between items-center">
-    <TagBlockList :tagList="tagList" v-if="tagList" />
-    <slot name="sharer"/>
-  </div>
 </template>
 
 <script setup>
