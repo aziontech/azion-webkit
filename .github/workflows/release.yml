@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node: ['lts/*'] #['20.8.1']
+        node: ['20.8.1']
         os: ['self-hosted']
 
     permissions:
