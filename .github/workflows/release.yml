@@ -72,6 +72,5 @@ jobs:
         run: |
           npm publish
         env:
-          GH_TOKEN: ${{ secrets.GIT_PKG }}
-          NPM_TOKEN: ${{ secrets.GIT_PKG }}
+          NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
 
