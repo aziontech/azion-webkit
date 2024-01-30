@@ -3,7 +3,33 @@
   "version": "0.0.64",
   "type": "module",
   "main": "./src/index.js",
+  "author": "aziontech",
+  "contributors": [
+    {
+      "name":"Robson Junior",
+      "url": "https://www.robsonjunior.dev/"
+    },
+    {
+      "name":"Luis Igreja"
+    }
+  ],
   "private": false,
+  "release": {
+    "branches": [
+      "+([0-9])?(.{+([0-9]),x}).x",
+      "main",
+      "next",
+      "next-major",
+      {
+        "name": "beta",
+        "prerelease": true
+      },
+      {
+        "name": "alpha",
+        "prerelease": true
+      }
+    ]
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
@@ -25,26 +51,26 @@
   },
   "dependencies": {
     "@aziontech/azion-theme": "^0.0.2",
+    "instantsearch.css": "^8.1.0",
+    "vue-instantsearch": "^4.13.1",
+    "@tailwindcss/typography": "^0.5.10",
+    "algoliasearch": "^4.21.1",
+    "autoprefixer": "^10.4.16",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
+    "postcss": "^8.4.31",
+    "s": "^1.0.0",
+    "semantic-release": "^23.0.0",
+    "tailwind": "^4.0.0",
+    "vue": "^3.3.11",
+    "vee-validate": "^4.11.8",
+    "yup": "^1.3.2"
+  },
+  "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^10.0.1",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^9.2.6",
     "@semantic-release/release-notes-generator": "^11.0.4",
-    "@tailwindcss/typography": "^0.5.10",
-    "algoliasearch": "^4.21.1",
-    "autoprefixer": "^10.4.16",
-    "conventional-changelog-conventionalcommits": "^7.0.2",
-    "instantsearch.css": "^8.1.0",
-    "postcss": "^8.4.31",
-    "s": "^1.0.0",
-    "semantic-release": "^23.0.0",
-    "tailwind": "^4.0.0",
-    "vee-validate": "^4.11.8",
-    "vue": "^3.3.11",
-    "vue-instantsearch": "^4.13.1",
-    "yup": "^1.3.2"
-  },
-  "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
     "@storybook/addon-essentials": "^7.5.3",
     "@storybook/addon-interactions": "^7.5.3",
