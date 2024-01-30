@@ -1,5 +1,6 @@
 {
   "branches": ["main"],
+  "dryRun": false,
   "debug": false,
   "plugins": [
     [
@@ -37,7 +38,6 @@
         }
       }
     ],
-    "@semantic-release/changelog",
     [
       "@semantic-release/git",
       {
@@ -48,6 +48,7 @@
         "message": "chore(release): ${nextRelease.version} \n\n[skip ci]\n${nextRelease.notes}"
       }
     ],
+    "@semantic-release/changelog",
     "@semantic-release/github"
   ]
 }
