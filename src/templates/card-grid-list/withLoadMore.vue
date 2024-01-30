@@ -1,5 +1,9 @@
 <template>
-  <TabMenuSearch :tabList="categories" :inputPlaceholder="inputPlaceholder" @indexChanged="handleFilterByCategoryEvent" />
+  <TabMenuSearch
+    :tabList="categories" :inputPlaceholder="inputPlaceholder"
+    @indexChanged="handleFilterByCategoryEvent"
+    :algoliaAppId="algoliaAppId" :algoliaApiKey="algoliaApiKey"
+    :algoliaIndex="algoliaIndex" :algoliaModel="algoliaModel" />
   <CardGridList :data="cardDataList" />
   <div class="flex justify-center">
     <Button :label="buttonText" outlined @click="addCards(LOADMORE_MAGIC_NUMBER)" :disabled="disableButton" />
@@ -36,8 +40,14 @@ const props = defineProps({
     type: String,
     required: false,
     default: "Load more"
-  }
+  },
+  algoliaAppId: String,
+  algoliaApiKey: String,
+  algoliaIndex: Array,
+  algoliaModel: Array
 });
+
+console.log(props.algoliaIndex)
 
 const { data, defaultTab } = props;
 const cardDataList = ref([])

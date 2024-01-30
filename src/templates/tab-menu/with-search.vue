@@ -4,7 +4,9 @@
       <TabMenu class="hidden lg:block overflow-y-auto" :pt="{
         label: 'whitespace-nowrap'
       }" v-model:activeIndex="activeIndex" :model="mappedData" @click="eventHandler(activeIndex)" />
-      <Dropdown class="lg:hidden w-full" @change="eventHandler" v-model="activeOption" :options="mappedData" optionLabel="label">
+      <Dropdown class="lg:hidden w-full"
+        @change="eventHandler" v-model="activeOption"
+        :options="mappedData" optionLabel="label">
         <template #value="slotProps">
           <div v-if="slotProps.value">
             <div>{{ slotProps.value.label }}</div>
@@ -20,17 +22,26 @@
     <div class="w-full lg:w-1/3 flex justify-end pt-4 lg:pt-0">
       <span class="p-input-icon-left w-full lg:max-w-xs">
         <i class="pi pi-search" />
-        <InputText class="w-full " v-model="searchInput" :placeholder="inputPlaceholder" />
+        <button
+            class="p-inputtext enabled:focus:shadow-none p-component w-full text-left"
+            @click="activeDialog"
+        >
+          {{ inputPlaceholder }}
+        </button>
       </span>
+      <AlgoliaDialog
+        :isDialogActive="isDialogActive" @close="closeDialog"
+        :algoliaAppId="algoliaAppId" :algoliaApiKey="algoliaApiKey" :algoliaIndex="algoliaIndex" :algoliaModel="algoliaModel"
+      />
     </div>
   </div>
 </template>
 
 <script setup>
 import TabMenu from 'primevue/tabmenu';
-import InputText from 'primevue/inputtext';
 import Dropdown from 'primevue/dropdown';
-import { ref } from "vue";
+import AlgoliaDialog from '../algolia-dialog/index.vue'
+import { ref, onMounted } from "vue";
 
 const props = defineProps({
   tabList: {
@@ -42,6 +53,10 @@ const props = defineProps({
     required: false,
     default: "Search articles..."
   },
+  algoliaAppId: String,
+  algoliaApiKey: String,
+  algoliaIndex: Array,
+  algoliaModel: Array
 });
 
 // interface Tablist {
@@ -59,7 +74,6 @@ const mappedData = tabList.map((item, index) => {
 
 const activeIndex = ref(0);
 const activeOption = ref(mappedData[activeIndex.value])
-const searchInput = ref('');
 
 const eventHandler = (e) => {
   if (typeof e === 'number') {
@@ -69,6 +83,35 @@ const eventHandler = (e) => {
   }
 
   emit('indexChanged', tabList[activeIndex.value])
+}
+
+let HTML
+onMounted(() => {
+  HTML = document.querySelectorAll('html')[0]
+})
+
+let isDialogActive = ref(false)
+
+function setHtmlOverflow(overflow) {
+  HTML.style.overflow = overflow
+}
+
+function focusSearchInput() {
+  setTimeout(function () {
+    document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0]?.focus()
+  }, 800)
+}
+
+function activeDialog() {
+  isDialogActive.value = true
+
+  focusSearchInput();
+  setHtmlOverflow('hidden')
+}
+
+function closeDialog() {
+  isDialogActive.value = false
+  setHtmlOverflow('auto')
 }
 
 </script>
