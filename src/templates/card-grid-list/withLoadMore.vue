@@ -1,9 +1,4 @@
 <template>
-  <TabMenuSearch
-    :tabList="categories" :inputPlaceholder="inputPlaceholder"
-    @indexChanged="handleFilterByCategoryEvent"
-    :algoliaAppId="algoliaAppId" :algoliaApiKey="algoliaApiKey"
-    :algoliaIndex="algoliaIndex" :algoliaModel="algoliaModel" />
   <CardGridList :data="cardDataList" />
   <div class="flex justify-center">
     <Button :label="buttonText" outlined @click="addCards(LOADMORE_MAGIC_NUMBER)" :disabled="disableButton" />
@@ -12,9 +7,8 @@
 
 <script setup>
 import CardGridList from "./index.vue"
-import TabMenuSearch from "../tab-menu/with-search.vue"
 import Button from "primevue/button"
-import { ref } from "vue";
+import { ref, watch } from "vue";
 
 const props = defineProps({
   data: {
@@ -22,37 +16,26 @@ const props = defineProps({
     required: true,
     deafault: []
   },
-  categories: {
-    type: Array,
-    required: true,
-    deafault: []
-  },
-  defaultTab: {
-    type: String,
-    required: true
-  },
-  inputPlaceholder: {
-    type: String,
-    required: false,
-    default: "Search articles..."
-  },
   buttonText: {
     type: String,
     required: false,
     default: "Load more"
   },
-  algoliaAppId: String,
-  algoliaApiKey: String,
-  algoliaIndex: Array,
-  algoliaModel: Array
+  loadMoreNumber: {
+    type: Number,
+    required: false,
+    default: 12
+  },
 });
 
-console.log(props.algoliaIndex)
-
-const { data, defaultTab } = props;
-const cardDataList = ref([])
+const { data, loadMoreNumber } = props;
+const cardDataList = ref([]);
 const disableButton = ref(false)
-const LOADMORE_MAGIC_NUMBER = 12
+const LOADMORE_MAGIC_NUMBER = loadMoreNumber
+
+watch(() => props.data, (newValue) => {
+  eventHandler(newValue);
+});
 
 const createCardsContext = (array) => {
   cardDataList.value = []
@@ -60,7 +43,7 @@ const createCardsContext = (array) => {
   let addedItemsCount = 0
   disableButton.value = false
 
-  const addCards = (increaseCardNumberBy = 12) => {
+  const addCards = (increaseCardNumberBy = loadMoreNumber) => {
     const endRange = addedItemsCount + increaseCardNumberBy > cardLimit ? cardLimit : addedItemsCount + increaseCardNumberBy;
     const startRange = addedItemsCount;
 
@@ -77,24 +60,11 @@ const createCardsContext = (array) => {
   return addCards
 }
 
-function getDataByCategory(data, categories) {
-  return data.filter(item => item.tagList.includes(categories))
-}
-
 let addCards = createCardsContext(data)
 addCards()
 
-const handleFilterByCategoryEvent = (category) => {
-  let categoryData
-
-  if (category === defaultTab) {
-    categoryData = data
-  } else {
-    categoryData = getDataByCategory(data, category)
-  }
-
-  addCards = createCardsContext(categoryData)
-
+const eventHandler = (array) => {
+  addCards = createCardsContext(array)
   addCards()
 }
 </script>
