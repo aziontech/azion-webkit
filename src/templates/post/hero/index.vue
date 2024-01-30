@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col gap-10 ">
+    <div class="flex flex-col gap-10">
       <div class="flex gap-8 flex-col w-full">
         <Breadcrumb :model="breadcrumbItems" class="-ml-1" />
         <div class="flex flex-col gap-6">
