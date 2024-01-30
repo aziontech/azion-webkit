@@ -61,7 +61,7 @@ jobs:
         shell: bash
         run: |
           rm -rf ./*
-          git clone https://github.com/aziontech/azion-web-kit.git && cp -R ./azion-web-kit/* . && rm -rf ./azion-web-kit && ls -la && npx semantic-release
+          git clone https://github.com/aziontech/azion-web-kit.git && cd ./azion-web-kit && ls -la && npx semantic-release
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
           NPM_TOKEN: ${{ secrets.GIT_PKG }}
