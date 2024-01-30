@@ -70,6 +70,7 @@ jobs:
       - name: Publish
         shell: bash
         run: |
+          ls -la
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
