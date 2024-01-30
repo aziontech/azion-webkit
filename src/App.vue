@@ -1,5 +1,6 @@
 <template>
-  <!-- <HeroBlock
+  <!--
+    <HeroBlock
       overline="Overline"
       title="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariata"
       description="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con"
@@ -15,7 +16,8 @@
       <LinkButton label="Button" link="./" />
       <LinkButton label="Button" link="./" outlined />
     </template>
-  </HeroBlock> -->
+  </HeroBlock>
+  -->
 
   <BlogHome />
 </template>
