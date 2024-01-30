@@ -54,18 +54,19 @@ jobs:
           # cache: npm
 
       - name: Installing release dependency list
+        shell: bash
         run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog conventional-changelog-conventionalcommits -D
 
       - name: Semantic Release
+        shell: bash
         run: |
-          rm -rf ./*
-          git clone https://github.com/aziontech/azion-web-kit.git && cd azion-web-kit && ls -la
           npx semantic-release
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
           NPM_TOKEN: ${{ secrets.GIT_PKG }}
 
       - name: Publish
+        shell: bash
         run: |
           npm publish
         env:
