@@ -64,7 +64,9 @@ jobs:
           git clone https://github.com/aziontech/azion-web-kit.git && cd ./azion-web-kit && ls -la && npx semantic-release
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
+          GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
           NPM_TOKEN: ${{ secrets.GIT_PKG }}
+          NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
 
       # - name: Publish
       #   shell: bash
