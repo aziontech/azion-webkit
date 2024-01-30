@@ -9,14 +9,13 @@ import Sharer from './templates/sharer-block/index.vue'
 import Card from './templates/card/index.vue'
 import CardGridList from './templates/card-grid-list/index.vue'
 import CardGridListWithLoadMore from './templates/card-grid-list/withLoadMore.vue'
+import CardGridBlock from './templates/card-grid-block/index.vue'
 import FeaturedPost from './templates/featured-post/index.vue'
-
 import Header from './templates/header/index.vue'
 import HeaderLogoAzion from './templates/header/visualid/azion/index.vue'
 import HeaderNavigation from './templates/header/navigation-tabpanel/index.vue'
 import HeaderDialogAlgoliaSearch from './templates/header/dialog-algolia-search/index.vue'
 import MobileRightSidebar from './templates/header/mobile.vue'
-
 import Footer from './templates/footer/index.vue'
 import KeyboardKey from './templates/keyboard-key/index.vue'
 import NewsletterSingleLine from './templates/newsletter/single-line/index.vue'
@@ -44,13 +43,12 @@ export {
   CardGridListWithLoadMore,
   CardGridList,
   Footer,
-
+  CardGridBlock,
   Header,
   HeaderLogoAzion,
   HeaderNavigation,
   HeaderDialogAlgoliaSearch,
   MobileRightSidebar,
-
   FeaturedPost,
   KeyboardKey,
   NewsletterSingleLine,
