@@ -1,6 +1,5 @@
 {
   "branches": ["main"],
-  "dryRun": false,
   "debug": false,
   "plugins": [
     [
