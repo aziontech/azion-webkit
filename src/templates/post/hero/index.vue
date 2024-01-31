@@ -32,7 +32,13 @@
         </div>
       </div>
       <div class="flex flex-col gap-4 md:gap-0 md:flex-row md:justify-between md:items-center">
-        <TagBlockList :tagList="tagList" v-if="tagList" />
+        <div class="flex gap-2" v-if="tagList">
+          <template v-for="({ tag, tagLink }, index) in tagList" :key="index">
+            <a :href="tagLink" :title="tag" target="_blank" rel="noopener noreferrer">
+              <Tag :value="tag" severity="info" />
+            </a>
+          </template>
+        </div>
         <slot name="sharer"/>
       </div>
     </div>
@@ -41,7 +47,7 @@
 <script setup>
 import Avatar from 'primevue/avatar'
 import Breadcrumb from 'primevue/breadcrumb';
-import TagBlockList from '../../tag-block-list/index.vue';
+import Tag from 'primevue/tag';
 
 // interface Authors {
 //   avatars: [url, url],
