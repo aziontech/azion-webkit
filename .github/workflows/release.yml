@@ -53,7 +53,7 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }}
+          NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
 
       - name: Node.js installing project dependencies
         run: npm install
