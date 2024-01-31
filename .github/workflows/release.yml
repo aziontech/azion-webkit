@@ -33,7 +33,10 @@ jobs:
         run: apt-get update -y
 
       - name: OS - Installing packages
-        run: apt-get install tzdata git-all -y
+        run: apt-get install tzdata
+
+      - name: OS - Installing Git CLI
+        run: apt-get install git-all -y
 
       - name: Node.js Setup
         uses: actions/setup-node@v3
