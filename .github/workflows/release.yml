@@ -48,7 +48,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
           GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
           NPM_TOKEN: ${{ secrets.GIT_PKG }}
-          NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
 
       - name: Node.js installing project dependencies
         run: npm install
