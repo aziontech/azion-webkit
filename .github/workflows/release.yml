@@ -29,15 +29,6 @@ jobs:
       image: ubuntu:latest
 
     steps:
-      # - name: OS - Update
-      #   run: apt-get update -y
-
-      # - name: OS - Installing packages
-      #   run: apt-get install tzdata
-
-      # - name: OS - Installing Git CLI
-      #   run: apt-get install git-all -y
-
       - name: CHECKOUT project
         uses: actions/checkout@v3
         with:
@@ -54,14 +45,15 @@ jobs:
           node-version: ${{ matrix.node }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
+          GH_TOKEN: ${{ secrets.GIT_PKG }}
+          GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
+          NPM_TOKEN: ${{ secrets.GIT_PKG }}
+          NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
 
       - name: Node.js installing project dependencies
         run: npm install
-        # shell: bash
-
 
       - name: Release
-        # shell: bash
         run: npx semantic-release
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
