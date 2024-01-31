@@ -42,7 +42,7 @@
               "ISSUE-",
               "UXE-"
             ],
-            "issueUrlFormat": "https://aziontech.atlassian.net/browse/{id}"
+            "issueUrlFormat": "https://github.com/aziontech/azion-web-kit/issues/{id}"
           }
         }
       }
