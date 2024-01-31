@@ -26,9 +26,18 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     container:
-      image: ubuntu:latest
+      image: ubuntu:lateest
 
     steps:
+      - name: OS - Update
+        run: apt-get update -y
+
+      - name: OS - Installing packages
+        run: apt-get install tzdata
+
+      - name: OS - Installing Git CLI
+        run: apt-get install git-all -y
+
       - name: CHECKOUT project
         uses: actions/checkout@v3
         with:
