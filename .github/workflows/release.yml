@@ -41,7 +41,7 @@ jobs:
       - name: CHECKOUT project
         uses: actions/checkout@v3
         with:
-          repository: aziontech/site-astrobuild
+          repository: aziontech/azion-web-kit
           ref: main
           path: '.'
           clean: true
