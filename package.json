@@ -14,22 +14,6 @@
     }
   ],
   "private": false,
-  "release": {
-    "branches": [
-      "+([0-9])?(.{+([0-9]),x}).x",
-      "main",
-      "next",
-      "next-ma  jor",
-      {
-        "name": "beta",
-        "prerelease": true
-      },
-      {
-        "name": "alpha",
-        "prerelease": true
-      }
-    ]
-  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },

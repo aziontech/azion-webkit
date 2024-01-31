@@ -29,29 +29,40 @@ jobs:
       image: ubuntu:latest
 
     steps:
-      - name: OS - Update
-        run: apt-get update -y
+      # - name: OS - Update
+      #   run: apt-get update -y
 
-      - name: OS - Installing packages
-        run: apt-get install tzdata
+      # - name: OS - Installing packages
+      #   run: apt-get install tzdata
 
-      - name: OS - Installing Git CLI
-        run: apt-get install git-all -y
+      # - name: OS - Installing Git CLI
+      #   run: apt-get install git-all -y
+
+      - name: CHECKOUT project
+        uses: actions/checkout@v3
+        with:
+          repository: aziontech/site-astrobuild
+          ref: main
+          path: '.'
+          clean: true
+          fetch-depth: '0'
+          lfs: 'false'
 
       - name: Node.js Setup
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }}
 
-      - name: Node.js Installing release dependencies
-        shell: bash
-        run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog conventional-changelog-conventionalcommits -D
+      - name: Node.js installing project dependencies
+        run: npm install
+        # shell: bash
+
 
       - name: Release
-        shell: bash
-        run: |
-          rm -rf ./*
-          git clone https://github.com/aziontech/azion-web-kit.git && cd ./azion-web-kit && npx semantic-release
+        # shell: bash
+        run: npx semantic-release
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
           GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
