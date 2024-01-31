@@ -29,50 +29,30 @@ jobs:
       image: ubuntu:latest
 
     steps:
-      - name: OS - figure
+      - name: OS - Update
         run: apt-get update -y
 
-      - name: OS - Installing tzdata, git cli dependencie
-        run: apt-get install tzdata
+      - name: OS - Installing packages
+        run: apt-get install tzdata install git-all -y
 
-      - name: OS - Installing git cli
-        run: apt-get install git-all -y
-
-      # - name: CHECKOUT Repositorie
-      #   uses: actions/checkout@v3
-      #   with:
-      #     repository: aziontech/azion-web-kit
-      #     ref: 'main'
-      #     path: '.'
-      #     clean: 'true'
-      #     fetch-depth: '0'
-
-      - name: Setup
+      - name: Node.js Setup
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-          # cache: npm
+          cache: npm
 
-      - name: Installing release dependency list
+      - name: Node.js Installing release dependencies
         shell: bash
         run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog conventional-changelog-conventionalcommits -D
 
-      - name: Semantic Release
+      - name: Release
         shell: bash
         run: |
           rm -rf ./*
-          git clone https://github.com/aziontech/azion-web-kit.git && cd ./azion-web-kit && ls -la && npx semantic-release
+          git clone https://github.com/aziontech/azion-web-kit.git && cd ./azion-web-kit && npx semantic-release
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
           GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
           NPM_TOKEN: ${{ secrets.GIT_PKG }}
           NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
-
-      # - name: Publish
-      #   shell: bash
-      #   run: |
-      #     ls -la
-      #     npm publish
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
 
