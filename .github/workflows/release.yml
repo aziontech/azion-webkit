@@ -26,7 +26,7 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     container:
-      image: ubuntu:lateest
+      image: ubuntu:latest
 
     steps:
       - name: OS - Update
