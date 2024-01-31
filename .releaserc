@@ -13,7 +13,7 @@
       {
         "preset": "conventionalcommits",
         "parserOpts": {
-          "headerPattern": "^(\\[ISSUE-.*])?\\s?(\\w+):\\s(.*)$",
+          "headerPattern": "^(\\[(NOISSUE|ISSUE|UXE)-.*])?\\s?(\\w+):\\s(.*)$",
           "headerCorrespondence": [
             "scope",
             "type",
@@ -27,7 +27,7 @@
       {
         "preset": "conventionalcommits",
         "parserOpts": {
-          "headerPattern": "^(\\[ISSUE-.*])?\\s?(\\w+):\\s(.*)$",
+          "headerPattern": "^(\\[(NOISSUE|ISSUE|UXE)-.*])?\\s?(\\w+):\\s(.*)$",
           "headerCorrespondence": [
             "scope",
             "type",
@@ -38,9 +38,11 @@
           "preset": {
             "name": "conventionalchangelog",
             "issuePrefixes": [
-              "ISSUE-"
+              "NOISSUE",
+              "ISSUE-",
+              "UXE-"
             ],
-            "issueUrlFormat": "https://github.com/aziontech/azion-web-kit/issues/{id}"
+            "issueUrlFormat": "https://aziontech.atlassian.net/browse/{id}"
           }
         }
       }
