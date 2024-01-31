@@ -1,16 +1,16 @@
 {
   "name": "@aziontech/azion-web-kit",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "type": "module",
   "main": "./src/index.js",
   "author": "aziontech",
   "contributors": [
     {
-      "name":"Robson Junior",
+      "name": "Robson Junior",
       "url": "https://www.robsonjunior.dev/"
     },
     {
-      "name":"Luis Igreja"
+      "name": "Luis Igreja"
     }
   ],
   "private": false,

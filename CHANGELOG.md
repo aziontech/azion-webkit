@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/aziontech/azion-web-kit/compare/v1.0.4...v1.0.5) (2024-01-31)
+
+
+### Bug Fixes
+
+* testing launch version ([6887782](https://github.com/aziontech/azion-web-kit/commit/6887782e0c0a6caf259891bcc3a10fdf2faed63e))
+
 ## [1.0.4](https://github.com/aziontech/azion-web-kit/compare/v1.0.3...v1.0.4) (2024-01-31)
 
 
