@@ -49,7 +49,6 @@ jobs:
           lfs: 'false'
 
       - name: Node.js Setup
-        shell: bash
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
