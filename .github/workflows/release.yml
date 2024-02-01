@@ -71,7 +71,7 @@ jobs:
 
       - name: Node.js Installing release dependencies
         shell: bash
-        run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog conventional-changelog-conventionalcommits -D
+        run: npm install -g semantic-release @semantic-release/git @semantic-release/npm @semantic-release/changelog conventional-changelog-conventionalcommits -D
 
       - name: Release
         shell: bash
