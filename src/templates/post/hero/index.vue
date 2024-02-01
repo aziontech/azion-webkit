@@ -1,12 +1,12 @@
 <template>
-    <div class="flex flex-col gap-10">
-      <div class="flex gap-8 flex-col w-full">
+    <div class="flex flex-col gap-8 lg:gap-10">
+      <div class="flex gap-6 lg:gap-8 flex-col w-full">
         <Breadcrumb :model="breadcrumbItems" class="-ml-1" />
-        <div class="flex flex-col gap-6">
-          <h1 class="text-4xl font-medium text-color">
+        <div class="flex flex-col gap-5 lg:gap-6">
+          <h1 class="text-3xl lg:text-4xl font-medium text-color">
             {{ title }}
           </h1>
-          <p class="font-normal text-2xl text-color-secondary">
+          <p class="font-normal text-xl lg:text-2xl text-color-secondary">
             {{ description }}
           </p>
         </div>
@@ -31,8 +31,8 @@
           </template>
         </div>
       </div>
-      <div class="flex flex-col gap-4 md:gap-0 md:flex-row md:justify-between md:items-center">
-        <div class="flex gap-2" v-if="tagList">
+      <div class="flex gap-4 md:gap-0 flex-wrap justify-between items-center">
+        <div class="flex flex-wrap gap-2" v-if="tagList">
           <template v-for="({ tag, tagLink }, index) in tagList" :key="index">
             <a :href="tagLink" :title="tag" target="_blank" rel="noopener noreferrer">
               <Tag :value="tag" severity="info" />
