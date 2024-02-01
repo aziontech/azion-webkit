@@ -1,3 +1,11 @@
+## [1.0.9](https://github.com/aziontech/azion-web-kit/compare/v1.0.8...v1.0.9) (2024-02-01)
+
+
+### Bug Fixes
+
+* remove first ident ([197d6af](https://github.com/aziontech/azion-web-kit/commit/197d6af37dddf4d75f26b897ad5afcfa026030b2))
+* rollback .releaserc and trigger ([d87ad8b](https://github.com/aziontech/azion-web-kit/commit/d87ad8b296c209617d007a14ef6724984d925764))
+
 ## [1.0.8](https://github.com/aziontech/azion-web-kit/compare/v1.0.7...v1.0.8) (2024-02-01)
 
 
