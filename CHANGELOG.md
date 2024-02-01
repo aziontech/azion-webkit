@@ -1,3 +1,11 @@
+## [1.0.7](https://github.com/aziontech/azion-web-kit/compare/v1.0.6...v1.0.7) (2024-02-01)
+
+
+### Bug Fixes
+
+* issueUrlFormat ([58ee015](https://github.com/aziontech/azion-web-kit/commit/58ee015c8a57a039cd465aed5606dc4ff25c010e))
+* pipe ([f5c25d7](https://github.com/aziontech/azion-web-kit/commit/f5c25d7831ebcb0bca0111246512fedc593bd4f3))
+
 ## [1.0.5](https://github.com/aziontech/azion-web-kit/compare/v1.0.4...v1.0.5) (2024-01-31)
 
 
