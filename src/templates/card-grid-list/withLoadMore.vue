@@ -1,7 +1,7 @@
 <template>
-  <CardGridList :data="cardDataList" />
+  <CardGridList :data="cardDataList" :pt="pt.content"/>
   <div class="flex justify-center">
-    <Button :label="buttonText" outlined @click="addCards(LOADMORE_MAGIC_NUMBER)" :disabled="disableButton" />
+    <Button :label="buttonText" outlined @click="addCards(LOADMORE_MAGIC_NUMBER)" :disabled="disableButton"/>
   </div>
 </template>
 
@@ -25,6 +25,11 @@ const props = defineProps({
     type: Number,
     required: false,
     default: 12
+  },
+  pt: {
+    type: Object,
+    required: false,
+    default: () => ({})
   },
 });
 
