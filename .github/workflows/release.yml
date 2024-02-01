@@ -38,6 +38,16 @@ jobs:
       - name: OS - Installing Git CLI
         run: apt-get install git-all -y
 
+      - name: GIT checkout
+        uses: actions/checkout@v3
+        with:
+          repository: aziontech/azion-web-kit
+          ref: 'main'
+          path: '.'
+          clean: 'true'
+          fetch-depth: '0'
+          lfs: 'false'
+
       - name: Node.js Setup
         uses: actions/setup-node@v3
         with:
@@ -47,16 +57,6 @@ jobs:
           always-auth: true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }} # necessary to use npm install to internal git repository
-
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          repository: aziontech/azion-web-kit
-          ref: 'main'
-          path: '.'
-          clean: 'true',
-          fetch-depth: '0'
-          lfd: 'false'
 
       - name: Node.js Install dependencies
         run: npm install
