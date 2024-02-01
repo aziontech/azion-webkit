@@ -50,11 +50,11 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v3
-        ref: 'main'
-        path: '.'
-        clean: true,
-        fetch-depth: 0
-        lfd: false
+          ref: 'main'
+          path: '.'
+          clean: true,
+          fetch-depth: 0
+          lfd: false
 
       - name: Node.js Install dependencies
         run: npm install
