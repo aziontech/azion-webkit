@@ -48,15 +48,38 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }} # necessary to use npm install to internal git repository
 
+      - name: Checkout
+        uses: actions/checkout@v3
+        ref: 'main'
+        path: '.'
+        clean: true,
+        fetch-depth: 0
+        lfd: false
+
+      - name: Node.js Install dependencies
+        run: npm install
+
       - name: Release
-        shell: bash
-        run: |
-          rm -rf ./*
-          git clone https://github.com/aziontech/azion-web-kit.git && cd ./azion-web-kit && npm install
-          npx semantic-release
+        run: npx semantic-release
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
           GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
           NPM_TOKEN: ${{ secrets.GIT_PKG }}
           NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
+
+
+# Used when checkout trigger
+# the error ENOGITREPO
+#
+#      - name: Release
+#        shell: bash
+#        run: |
+#          rm -rf ./*
+#          git clone https://github.com/aziontech/azion-web-kit.git && cd ./azion-web-kit && npm install
+#          npx semantic-release
+#        env:
+#          GH_TOKEN: ${{ secrets.GIT_PKG }}
+#          GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
+#          NPM_TOKEN: ${{ secrets.GIT_PKG }}
+#          NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
 
