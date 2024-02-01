@@ -1,40 +1,33 @@
 <template>
   <a :href="link" :target="linkTarget" class="bloc group">
-    <div
-      class="flex flex-col lg:flex-row gap-4 lg:gap-10">
+    <div class="flex flex-col lg:flex-row gap-4 lg:gap-10">
       <div class="h-full min-w-[50%] border surface-border rounded-md overflow-hidden">
         <picture v-if="image" class="p-0 m-0">
           <img fetchpriority="high" class="w-full md:object-cover group-hover:scale-[1.05] transition-all duration-300" width="576" height="324" :alt="title"
             :src="`https://assets.azion.com${image}?ims=576x324`" />
         </picture>
       </div>
-      <div class="flex flex-col lg:max-w-lg lg:items-start gap-4">
-        <p v-if="date" class="text-xs text-color-secondary"> {{ date }} <span v-if="estimateReadTime">• {{ estimateReadTime }}</span></p>
+      <div class="flex flex-col lg:max-w-lg lg:items-start gap-5">
         <div class="flex gap-2">
           <Tag v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
         </div>
-        <h1 class="text-3xl font-bold text-color group-hover:underline">
-          {{ title }}
-        </h1>
-        <p class="font-normal text-color-secondary">
-          {{ description }}
-        </p>
-        <div v-if="authors" class="flex flex-wrap flex-col md:flex-row gap-4 md:gap-8">
-          <template v-for="({avatar, title, role}, index) in authors" :key="index">
-            <div class="flex gap-3 md:w-56 items-center">
-              <div class="w-8 flex items-center">
-                <Avatar size="xlarge" :image="avatar" shape="circle" />
-              </div>
-              <div>
-                <p class="font-normal text-sm">
-                  {{ title }}
-                </p>
-                <p class="font-normal text-xs text-color-secondary">
-                  {{ role }}
-                </p>
-              </div>
-            </div>
+        <div class="flex flex-col gap-3 lg:gap-4">
+          <h1 class="text-2xl lg:text-3xl font-bold text-color group-hover:underline">
+            {{ title }}
+          </h1>
+          <p class="font-normal text-color-secondary">
+            {{ description }}
+          </p>
+        </div>
+        <div class="flex md:flex-row gap-2.5 items-center">
+          <template v-if="authors">
+            <AvatarGroup>
+              <Avatar v-for="({avatar}, index) in authors" :key="index" size="xlarge" :image="avatar" shape="circle" />
+            </AvatarGroup>
           </template>
+          <p v-if="date" class="text-xs text-color-secondary">
+            {{ date }} <span v-if="estimateReadTime">• {{ estimateReadTime }} </span>
+          </p>
         </div>
       </div>
     </div>
@@ -44,6 +37,7 @@
 <script setup>
 import Tag from 'primevue/tag';
 import Avatar from 'primevue/avatar'
+import AvatarGroup from 'primevue/avatargroup';
 
 defineProps({
   tagList: {
