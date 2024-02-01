@@ -48,10 +48,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }} # necessary to use npm install to internal git repository
 
-      # - name: Node.js Installing release dependencies
-      #   shell: bash
-      #   run: npm install -g semantic-release @semantic-release/git @semantic-release/npm @semantic-release/changelog conventional-changelog-conventionalcommits -D
-
       - name: Release
         shell: bash
         run: |
