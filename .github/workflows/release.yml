@@ -58,8 +58,8 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }}
 
-      - name: Node.js installing project dependencies
-        run: npm install
+      # - name: Node.js installing project dependencies
+      #   run: npm install
 
       # - name: Release
       #   run: npx semantic-release
