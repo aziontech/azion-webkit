@@ -32,36 +32,36 @@
 </template>
 
 <script setup>
-  //////////////////////////
-  // IMPORTING COMPONENTS //
-  //////////////////////////
-  import PostHero from "../../templates/post/hero/index.vue";
-  import ReadableContent from "../../templates/post/readable-content/index.vue"
-  import TitleVerticalList from "../../templates/title-list/index.vue"
-  import NewsletterCard from "../../templates/newsletter/card/index.vue"
-  import Footer from '../../templates/footer/index.vue'
-  import SocialBlockList from "../../templates/sharer-block/index.vue"
+//////////////////////////
+// IMPORTING COMPONENTS //
+//////////////////////////
+import PostHero from "../../templates/post/hero/index.vue";
+import ReadableContent from "../../templates/post/readable-content/index.vue"
+import TitleVerticalList from "../../templates/title-list/index.vue"
+import NewsletterCard from "../../templates/newsletter/card/index.vue"
+import Footer from '../../templates/footer/index.vue'
+import SocialBlockList from "../../templates/sharer-block/index.vue"
 
-  ////////////////////////
-  // MOCKING PARAMETERS /
-  ///////////////////////
+////////////////////////
+// MOCKING PARAMETERS /
+///////////////////////
 
-  import footerData from '../../mock/footer.js';
-  import featuredPostList from "../../mock/verticalListData"
-  import newsletterSingleLine from "../../mock/newsletterSingleLine"
-  import hero from "../../mock/articleHero"
-  import categories from "../../mock/categories"
+import footerData from '../../mock/footer.js';
+import featuredPostList from "../../mock/verticalListData"
+import newsletterSingleLine from "../../mock/newsletterSingleLine"
+import hero from "../../mock/articleHero"
+import categories from "../../mock/categories"
 
-  const breadcrumbItems = [
-    {
-      url: `/en/blog/`,
-      target: "_self",
-      label: "Blog",
-    },
-    {
-      url: './',
-      target: "_self",
-      label: 'This Article',
-    },
-  ]
+const breadcrumbItems = [
+  {
+    url: `/en/blog/`,
+    target: "_self",
+    label: "Blog",
+  },
+  {
+    url: './',
+    target: "_self",
+    label: 'This Article',
+  },
+]
 </script>
