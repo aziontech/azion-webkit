@@ -4,11 +4,11 @@
     @indexChanged="handleFilterByCategoryEvent"
     :algoliaAppId="algoliaAppId" :algoliaApiKey="algoliaApiKey"
     :algoliaIndex="algoliaIndex" :algoliaModel="algoliaModel" />
-  <CardGridList :data="dataList" :buttonText="buttonText" :loadMoreNumber="loadMoreNumber" />
+  <CardGridListLoadMore :data="dataList" :buttonText="buttonText" :loadMoreNumber="loadMoreNumber" :pt="pt"/>
 </template>
 
 <script setup>
-import CardGridList from "../card-grid-list/withLoadMore.vue"
+import CardGridListLoadMore from "../card-grid-list/withLoadMore.vue"
 import TabMenuSearch from "../tab-menu/with-search.vue"
 import { ref } from "vue";
 
@@ -41,6 +41,11 @@ const props = defineProps({
     type: Number,
     required: false,
     default: 12
+  },
+  pt: {
+    type: Object,
+    required: false,
+    default: () => ({})
   },
   algoliaAppId: String,
   algoliaApiKey: String,
