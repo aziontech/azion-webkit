@@ -50,11 +50,13 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          repository: aziontech/azion-web-kit
           ref: 'main'
           path: '.'
-          clean: true,
-          fetch-depth: 0
-          lfd: false
+          clean: 'true',
+          fetch-depth: '0'
+          lfd: 'false'
 
       - name: Node.js Install dependencies
         run: npm install
