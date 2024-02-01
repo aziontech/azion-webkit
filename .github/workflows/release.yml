@@ -38,15 +38,15 @@ jobs:
       - name: OS - Installing Git CLI
         run: apt-get install git-all -y
 
-      - name: GIT checkout
-        uses: actions/checkout@v3
-        with:
-          repository: aziontech/azion-web-kit
-          ref: 'main'
-          path: '.'
-          clean: 'true'
-          fetch-depth: '0'
-          lfs: 'false'
+      # - name: CHECKOUT project
+      #   uses: actions/checkout@v3
+      #   with:
+      #     repository: aziontech/azion-web-kit
+      #     ref: main
+      #     path: '.'
+      #     clean: true
+      #     fetch-depth: '0'
+      #     lfs: 'false'
 
       - name: Node.js Setup
         uses: actions/setup-node@v3
@@ -56,32 +56,30 @@ jobs:
           scope: '@aziontech'
           always-auth: true
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }} # necessary to use npm install to internal git repository
+          NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }}
 
-      - name: Node.js Install dependencies
+      - name: Node.js installing project dependencies
         run: npm install
 
+      # - name: Release
+      #   run: npx semantic-release
+      #   env:
+      #     GH_TOKEN: ${{ secrets.GIT_PKG }}
+      #     GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
+      #     NPM_TOKEN: ${{ secrets.GIT_PKG }}
+      #     NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
+
+      - name: Node.js Installing release dependencies
+        shell: bash
+        run: npm install -g semantic-release @semantic-release/git @semantic-release/npm @semantic-release/changelog conventional-changelog-conventionalcommits -D
+
       - name: Release
-        run: npx semantic-release
+        shell: bash
+        run: |
+          rm -rf ./*
+          git clone https://github.com/aziontech/azion-web-kit.git && cd ./azion-web-kit && npx semantic-release
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
           GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
           NPM_TOKEN: ${{ secrets.GIT_PKG }}
           NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
-
-
-# Used when checkout trigger
-# the error ENOGITREPO
-#
-#      - name: Release
-#        shell: bash
-#        run: |
-#          rm -rf ./*
-#          git clone https://github.com/aziontech/azion-web-kit.git && cd ./azion-web-kit && npm install
-#          npx semantic-release
-#        env:
-#          GH_TOKEN: ${{ secrets.GIT_PKG }}
-#          GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
-#          NPM_TOKEN: ${{ secrets.GIT_PKG }}
-#          NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
-
