@@ -2,11 +2,12 @@
   <a :href="link" :target="linkTarget" class="block group">
     <div class="flex flex-col lg:flex-row gap-4 lg:gap-10">
       <div class="h-full min-w-[50%] border surface-border rounded-md overflow-hidden">
-        <picture v-if="image" class="p-0 m-0 block overflow-hidden w-full h-[384px]">
+        <picture v-if="image" class="p-0 m-0 block overflow-hidden w-full max-h-96">
           <img
             fetchpriority="high"
             class="w-full md:object-cover group-hover:scale-[1.05] transition-all duration-300"
-            width="576" height="324"
+            width="576"
+            height="324"
             :alt="title"
             :src="`https://assets.azion.com${image}`" />
         </picture>
@@ -40,7 +41,7 @@
 
 <script setup>
 import Tag from 'primevue/tag';
-import Avatar from 'primevue/avatar'
+import Avatar from 'primevue/avatar';
 import AvatarGroup from 'primevue/avatargroup';
 
 defineProps({
@@ -81,6 +82,6 @@ defineProps({
   estimateReadTime: {
     type: String,
     required: true
-  },
+  }
 });
 </script>

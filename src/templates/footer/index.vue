@@ -1,5 +1,6 @@
 <template>
-  <footer class="py-12 surface-ground border-t border-solid surface-border">
+  <!-- border-t border-solid surface-border removed footer classes -->
+  <footer class="py-12 surface-ground">
     <div class="flex flex-col gap-9 lg:gap-8 px-shell">
       <div class="flex flex-col lg:flex-row gap-9 lg:gap-12">
         <div class="w-full lg:w-1/4">
@@ -64,11 +65,11 @@
 </template>
 
 <script setup>
-import AzionLogo from "../../assets/icons/azion-logo-default.vue";
+import AzionLogo from '../../assets/icons/azion-logo-default.vue';
 import Divider from 'primevue/divider';
-import DropdownThemeSwitch from '../dropdown-theme-switch/index.vue'
-import LinkIcon from "../button/link-icon.vue"
-import LinkButton from '../button/link.vue'
+import DropdownThemeSwitch from '../dropdown-theme-switch/index.vue';
+import LinkIcon from '../button/link-icon.vue';
+import LinkButton from '../button/link.vue';
 import Dropdown from 'primevue/dropdown';
 
 // interface List {

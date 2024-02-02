@@ -1,5 +1,8 @@
 <template>
-  <header class="py-3 bg-header !text-white border-b surface-border h-[56px] w-full sticky top-0 z-40">
+  <!--
+  removed class border-b surface-border to test without border
+  -->
+  <header class="py-3 bg-header !text-white h-[56px] w-full sticky top-0 z-40">
     <div class="flex justify-between items-center px-shell">
       <div class="flex items-center">
         <slot name="visualid" />
