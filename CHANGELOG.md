@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/aziontech/azion-web-kit/compare/v1.0.2...v1.0.3) (2024-02-02)
+
+
+### Bug Fixes
+
+* images url path to internal blog repo ([989c1e6](https://github.com/aziontech/azion-web-kit/commit/989c1e67edd65978bbefe7dcd52f9c9ca856621c))
+
 ## [1.0.2](https://github.com/aziontech/azion-web-kit/compare/v1.0.1...v1.0.2) (2024-02-02)
 
 
