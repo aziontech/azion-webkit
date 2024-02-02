@@ -1,5 +1,5 @@
 export default {
-  imgSrc: 'https://www.azion.com/static/images/uploads/thumbnailblogterraform440x343px-2.png',
+  imgSrc: '/assets/blog/images/uploads/thumbnailblogterraform440x343px-2.png',
   imgAlt: 'Test Azion Listed in Forrester New Wave Report for Edge Development Platforms',
   tagList: ['Featured', 'Edge Computing'],
   title: 'Azion Listed in Forrester New Wave Report for Edge Development Platforms',
@@ -10,7 +10,11 @@ export default {
   date: "JUL, 13, 2020",
   readTime: "10 minutes",
   authors: {
-    avatars: ["https://assets.azion.com/static/images/uploads/whatsapp-image-2021-12-08-at-16-22-01.jpeg", "https://assets.azion.com/static/images/uploads/whatsapp-image-2021-12-08-at-16-22-01.jpeg", "https://assets.azion.com/static/images/uploads/whatsapp-image-2021-12-08-at-16-22-01.jpeg"],
+    avatars: [
+      "/assets/blog/images/uploads/whatsapp-image-2021-12-08-at-16-22-01.jpeg",
+      "/assets/blog/images/uploads/whatsapp-image-2021-12-08-at-16-22-01.jpeg",
+      "/assets/blog/images/uploads/whatsapp-image-2021-12-08-at-16-22-01.jpeg"
+    ],
     title: "Writted by Rachel Kempf (Editor-in-Chief), Giovani Rinaldi (Developer & Systems Specialist), Nick Sandoval (Product Marketing Manager), and Giovani Rinaldi (Developer & Systems Specialist)."
-  },
+  }
 };

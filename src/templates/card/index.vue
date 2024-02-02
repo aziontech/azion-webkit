@@ -8,7 +8,7 @@
         root: { class: 'shadow-none surface-ground flex flex-col gap-6' }
       }">
       <template #header v-if="imgSrc">
-        <img class="w-full aspect-video group-hover:scale-[1.10] transition-all duration-300" lazy alt="`${imgAlt}`" :src="`https://assets.azion.com${imgSrc}?ims=372x209`" />
+        <img class="w-full aspect-video group-hover:scale-[1.10] transition-all duration-300" lazy alt="`${imgAlt}`" :src="`${imgSrc}?ims=372x209`" />
       </template>
       <template #content>
         <div class="flex flex-col justify-between gap-4">

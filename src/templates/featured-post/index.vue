@@ -9,7 +9,7 @@
             width="576"
             height="324"
             :alt="title"
-            :src="`https://assets.azion.com${image}`" />
+            :src="image" />
         </picture>
       </div>
       <div class="flex flex-col lg:max-w-lg lg:items-start gap-5">
