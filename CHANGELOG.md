@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/aziontech/azion-web-kit/compare/v1.0.1...v1.0.2) (2024-02-02)
+
+
+### Bug Fixes
+
+* footer copyright updated and removed header and footer border divide ([6050788](https://github.com/aziontech/azion-web-kit/commit/60507886a1f6e143b1c887952a6cc7de8769fcdc))
+
 ## [1.0.1](https://github.com/aziontech/azion-web-kit/compare/v1.0.0...v1.0.1) (2024-02-02)
 
 
