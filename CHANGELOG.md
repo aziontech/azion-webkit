@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/aziontech/azion-web-kit/compare/v1.0.0...v1.0.1) (2024-02-02)
+
+
+### Bug Fixes
+
+* featuredPost without ims ([6a81c72](https://github.com/aziontech/azion-web-kit/commit/6a81c7272bd6b07c334ad69315399d909023dc40))
+
 ## 1.0.0 (2024-02-02)
 
 
