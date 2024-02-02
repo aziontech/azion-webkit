@@ -1,10 +1,14 @@
 <template>
-  <a :href="link" :target="linkTarget" class="bloc group">
+  <a :href="link" :target="linkTarget" class="block group">
     <div class="flex flex-col lg:flex-row gap-4 lg:gap-10">
       <div class="h-full min-w-[50%] border surface-border rounded-md overflow-hidden">
-        <picture v-if="image" class="p-0 m-0">
-          <img fetchpriority="high" class="w-full md:object-cover group-hover:scale-[1.05] transition-all duration-300" width="576" height="324" :alt="title"
-            :src="`https://assets.azion.com${image}?ims=576x324`" />
+        <picture v-if="image" class="p-0 m-0 block overflow-hidden w-full h-[384px]">
+          <img
+            fetchpriority="high"
+            class="w-full md:object-cover group-hover:scale-[1.05] transition-all duration-300"
+            width="576" height="324"
+            :alt="title"
+            :src="`https://assets.azion.com${image}`" />
         </picture>
       </div>
       <div class="flex flex-col lg:max-w-lg lg:items-start gap-5">
