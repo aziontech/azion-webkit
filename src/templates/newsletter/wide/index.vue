@@ -9,7 +9,7 @@
           </h3>
         </div>
         <div class="w-full max-w-md flex flex-col justify-center gap-4">
-          <form @submit.prevent="onSubmit" :id="formIdElement" :name="formIdElement">
+          <form @submit.prevent="onSubmit" id="newslleterWide" name="newsletterWide">
             <InputGroup>
               <InputGroupAddon>
                 <i class="pi pi-envelope" />
@@ -38,7 +38,6 @@ import InputText from 'primevue/inputtext';
 import InputGroup from 'primevue/inputgroup';
 import InputGroupAddon from 'primevue/inputgroupaddon'
 import Button from 'primevue/button';
-import stringConcatRamdomNumber from '../../../helpers/stringConcatRamdomNumber';
 import InlineMessage from 'primevue/inlinemessage'
 import * as yup from 'yup'
 import { useForm } from 'vee-validate'
@@ -46,7 +45,6 @@ import { newsletterSubrscribeHandler } from '../../../services/newsletter/newsle
 import { ref } from 'vue';
 import Overline from '../../overline/index.vue'
 
-const formIdElement = stringConcatRamdomNumber('FormNewsletterSingleLine');
 const isSuccess = ref(false);
 const isError = ref(false);
 

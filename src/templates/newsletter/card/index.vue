@@ -3,7 +3,7 @@
     <h5 class="max-w-xl mt-0 mb-0 lg:text-xl font-medium">
       {{ title }}
     </h5>
-    <form @submit.prevent="onSubmit" :id="formIdElement" class="mt-4">
+    <form @submit.prevent="onSubmit" name="newslleterCard" id="newslleterCard" class="mt-4">
       <div class="mt-4">
         <span class="p-input-icon-left w-full">
           <i class="pi pi-envelope" />
@@ -32,12 +32,9 @@ import Button from 'primevue/button';
 import * as yup from 'yup'
 import { useForm } from 'vee-validate'
 import { newsletterSubrscribeHandler } from '../../../services/newsletter/newsletterSubmitHandler'
-import stringConcatRamdomNumber from '../../../helpers/stringConcatRamdomNumber';
 import InlineMessage from 'primevue/inlinemessage'
 import { ref } from 'vue';
 
-
-const formIdElement = stringConcatRamdomNumber('FormNewsletterSingleLine');
 
 const isSuccess = ref(false);
 const isError = ref(false);
