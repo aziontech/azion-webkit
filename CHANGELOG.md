@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/aziontech/azion-web-kit/compare/v1.0.3...v1.0.4) (2024-02-03)
+
+
+### Bug Fixes
+
+* Hydration missmatch newsletter ([0b2e6a0](https://github.com/aziontech/azion-web-kit/commit/0b2e6a09900ccd7799996dab8bbc08ee5321fe0e))
+
 ## [1.0.3](https://github.com/aziontech/azion-web-kit/compare/v1.0.2...v1.0.3) (2024-02-02)
 
 
