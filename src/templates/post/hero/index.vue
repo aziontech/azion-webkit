@@ -1,7 +1,14 @@
 <template>
     <div class="flex flex-col gap-8 lg:gap-10">
       <div class="flex gap-6 lg:gap-8 flex-col w-full">
-        <Breadcrumb :model="breadcrumbItems" class="-ml-1" />
+        <Breadcrumb :model="breadcrumbItems" class="-ml-1">
+          <template #item="{ item, props }">
+            <a v-if="item.url" :href="item.url" :target="item.target" v-bind="props.action">
+                <span class="text-color">{{ item.label }}</span>
+            </a>
+            <p v-else class="p-menuitem-link"> <span class="text-color"> {{ item.label }} </span></p>
+          </template>
+        </Breadcrumb>
         <div class="flex flex-col gap-5 lg:gap-6">
           <h1 class="text-3xl lg:text-4xl font-medium text-color">
             {{ title }}
