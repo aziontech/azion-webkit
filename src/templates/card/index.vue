@@ -7,8 +7,11 @@
         header: { class: 'rounded border surface-border overflow-hidden' },
         root: { class: 'shadow-none surface-ground flex flex-col gap-6' }
       }">
-      <template #header v-if="imgSrc">
-        <img class="w-full aspect-video group-hover:scale-[1.10] transition-all duration-300" lazy alt="`${imgAlt}`" :src="`${imgSrc}?ims=372x209`" />
+      <template #header>
+        <picture v-if="imgSrc" >
+          <img height="209" width="372" loading="lazy" :alt="`${imgAlt}`" :src="`${imgSrc}?ims=372x209`"
+               class="w-full aspect-video group-hover:scale-[1.10] transition-all duration-300" />
+        </picture>
       </template>
       <template #content>
         <div class="flex flex-col justify-between gap-4">
@@ -20,7 +23,7 @@
           <p class="text-xs text-color-secondary">{{ date }} • {{ estimateReadTime }}</p>
           <div v-if="authors">
             <AvatarGroup>
-              <Avatar v-for="(image, index) in authors.avatars" :key="index" :image="`${image}?ims=28x28`" shape="circle" />
+              <Avatar v-for="({avatar, role, title }, index) in authors" :ariaLabel="`${title} - ${role}`" :key="index" :image="`${avatar}?ims=28x28`" shape="circle" />
             </AvatarGroup>
           </div>
         </div>
