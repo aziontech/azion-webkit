@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         node: ['20.8.1']
-        os: ['self-hosted']
+        os: ['self-hosted', 'stage']
 
     permissions:
       contents: write
