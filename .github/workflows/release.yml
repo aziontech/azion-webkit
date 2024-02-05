@@ -12,19 +12,14 @@ permissions: write-all
 jobs:
   deploy:
     name: Release
-
-    strategy:
-      matrix:
-        node: ['20.8.1']
-        os: ['self-hosted', 'stage']
-
+    
     permissions:
       contents: write
       issues: write
       pull-requests: write
       id-token: write
 
-    runs-on: ${{ matrix.os }}
+    runs-on: [self-hosted, stage]
     container:
       image: ubuntu:latest
 
@@ -51,7 +46,7 @@ jobs:
       - name: Node.js Setup
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
+          node-version: '20.8.1'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@aziontech'
           always-auth: true
