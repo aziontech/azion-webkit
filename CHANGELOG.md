@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/aziontech/azion-web-kit/compare/v1.0.4...v1.0.5) (2024-02-05)
+
+
+### Bug Fixes
+
+* pipeline add stage to os ([cf32807](https://github.com/aziontech/azion-web-kit/commit/cf3280753d35e541d64c4d90a48c16ef0efba6b7))
+
 ## [1.0.4](https://github.com/aziontech/azion-web-kit/compare/v1.0.3...v1.0.4) (2024-02-03)
 
 
