@@ -3,6 +3,7 @@
     :href="href"
     :title="hrefTitle"
     :target="target"
+    aria-label="Azion Logo"
     class="block mr-6">
 
     <AzionLogoDefault class="w-[90px]" />
@@ -12,7 +13,7 @@
 <script setup>
 import AzionLogoDefault from '../../../../assets/icons/azion-logo-default.vue'
 
-const props = defineProps({
+defineProps({
   href: {
     type: String
   },

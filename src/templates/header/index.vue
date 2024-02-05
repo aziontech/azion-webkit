@@ -32,23 +32,9 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
 const props = defineProps({
   menuSecondary: Array
 });
 
-let productsPanel = ref() // should pass like string name inside ref attr inside menudata
-let resourcesPanel = ref() // should pass like string name inside ref attr inside menudata
-
 const { menuSecondary } = props;
-
-const toggle = (event, refattr) => {
-  try {
-    if (refattr === 'productsPanel') productsPanel.value[0].toggle(event)
-    if (refattr === 'resourcesPanel') resourcesPanel.value[0].toggle(event)
-  } catch (error) {
-    console.error('Error in toggle method:', error)
-  }
-};
 </script>
