@@ -17,6 +17,7 @@ import HeaderNavigation from './templates/header/navigation-tabpanel/index.vue'
 import HeaderDialogAlgoliaSearch from './templates/header/dialog-algolia-search/index.vue'
 import MobileRightSidebar from './templates/header/mobile.vue'
 import Footer from './templates/footer/index.vue'
+import DropdownThemeSwitch from './templates/dropdown-theme-switch/index.vue'
 import KeyboardKey from './templates/keyboard-key/index.vue'
 import NewsletterSingleLine from './templates/newsletter/single-line/index.vue'
 import NewsletterCard from './templates/newsletter/card/index.vue'
@@ -43,6 +44,7 @@ export {
   CardGridListWithLoadMore,
   CardGridList,
   Footer,
+  DropdownThemeSwitch,
   CardGridBlock,
   Header,
   HeaderLogoAzion,
