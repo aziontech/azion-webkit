@@ -4,7 +4,7 @@
     <div class="flex flex-col gap-9 lg:gap-8 px-shell">
       <div class="flex flex-col lg:flex-row gap-9 lg:gap-12">
         <div class="w-full lg:w-1/4">
-          <a :href="`/${lang}/`" title="Azion Technologies" class="mb-4 block">
+          <a :href="`/${lang}/`" title="Azion Technologies" class="mb-4 block" aria-label="Azion logo">
             <AzionLogo class="h-[26px]" />
           </a>
           <p>
