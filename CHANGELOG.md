@@ -1,3 +1,11 @@
+## [1.0.6](https://github.com/aziontech/azion-web-kit/compare/v1.0.5...v1.0.6) (2024-02-06)
+
+
+### Bug Fixes
+
+* desktop menu it is not opening ([d52f796](https://github.com/aziontech/azion-web-kit/commit/d52f796c907519a4c2ddbc7ee97e562e2ecd3873))
+* mobile menu not opening ([5d33a99](https://github.com/aziontech/azion-web-kit/commit/5d33a99120208488c59eb91022badfe25a8da974))
+
 ## [1.0.5](https://github.com/aziontech/azion-web-kit/compare/v1.0.4...v1.0.5) (2024-02-05)
 
 
