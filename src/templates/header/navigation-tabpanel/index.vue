@@ -25,7 +25,6 @@
               icon: { class: 'text-white' }
             }" />
 
-
           <OverlayPanel :ref="menuitem.ref">
             <div class="flex flex-row p-2 gap-4">
               <div class="flex flex-col gap-2">
@@ -89,7 +88,7 @@
   });
 
   const { menuData } = props;
-  const active = ref(menuData.active);
+  const active = ref(0);
 
   let productsPanel = ref(); // should pass like string name inside ref attr inside menudata
   let resourcesPanel = ref(); // should pass like string name inside ref attr inside menudata
