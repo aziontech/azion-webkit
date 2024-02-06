@@ -8,14 +8,14 @@
   <Sidebar
     v-model:visible="visibleRight"
     position="right"
-    class="py-5 pb-20 h-[calc(100%-56px)] top-[28px] border-l surface-border w-64 md:w-80"
+    class="py-5 pb-20 h-[calc(100%-56px)] top-[28px] border-l surface-border w-full"
     :show-close-icon="false"
     :pt="{
       header: { class: 'hidden' }
     }">
 
     <PanelMenu
-      :model="menuData"
+      :model="menuData.items"
       :pt="{
         headerContent: {
           class: ['hover:surface-hover rounded-md md:px-4 px-2 py-2 border-none']
@@ -96,14 +96,14 @@
 </template>
 
 <script setup>
-import { onUpdated, ref } from "vue";
+import { onUpdated, ref } from 'vue';
+
 import Button from 'primevue/button';
 import Divider from 'primevue/divider';
 import Menu from 'primevue/menu';
 import PanelMenu from 'primevue/panelmenu';
 import Sidebar from 'primevue/sidebar';
 import Tag from 'primevue/tag';
-// import ButtonThemeToggle from '../button-toggle/theme/index.vue';
 
 let props = defineProps({
   menuData: Object,
@@ -111,12 +111,7 @@ let props = defineProps({
   bottomButtons: Array
 });
 
-const {
-  menuData,
-  menuSecondary,
-  bottomButtons
-} = props;
-
+const { menuData, menuSecondary, bottomButtons } = props;
 const visibleRight = ref(false);
 
 function getHTMLElement() {
