@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import { ref, onBeforeMount } from 'vue';
+import { ref, onMounted } from 'vue';
 import Dropdown from 'primevue/dropdown';
 
 const theme = {
@@ -49,13 +49,13 @@ const themes = [
 let systemColorScheme; /** onMounted variables, needed for Astro to use browser api */
 let colorScheme;
 
-onBeforeMount(() => {
+onMounted(() => {
   systemColorScheme = window.matchMedia('(prefers-color-scheme: dark)');
   colorScheme = localStorage.getItem("prefers-color-scheme");
 
   if (colorScheme && colorScheme !== 'System') {
-  selectedTheme.value = themes.find(theme => theme.label === colorScheme);
-}
+    selectedTheme.value = themes.find(theme => theme.label === colorScheme);
+  }
 })
 
 function getHTML() {
