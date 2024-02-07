@@ -15,10 +15,7 @@
       </template>
       <template #content>
         <div class="flex flex-col justify-between gap-4">
-          <div class="flex gap-2 flex-wrap" v-if="tagList?.length">
-            <Tag v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
-          </div>
-          <h3 class="text-xl font-bold text-color group-hover:underline">{{ title }}</h3>
+          <h3 class="text-xl font-bold text-color">{{ title }}</h3>
           <p class="text-sm text-color-secondary">{{ description }}</p>
           <p class="text-xs text-color-secondary">{{ date }} • {{ estimateReadTime }}</p>
           <div v-if="authors">
@@ -34,7 +31,6 @@
 
 <script setup>
 import Card from 'primevue/card';
-import Tag from 'primevue/tag';
 import Avatar from 'primevue/avatar'
 import AvatarGroup from 'primevue/avatargroup'
 
@@ -46,10 +42,6 @@ defineProps({
   imgAlt: {
     type: String,
     required: false,
-  },
-  tagList: {
-    type: Array,
-    required: false
   },
   title: {
     type: String,

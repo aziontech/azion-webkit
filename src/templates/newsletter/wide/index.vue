@@ -1,9 +1,8 @@
 <template>
-  <section class="surface-section flex justify-center py-12 px-3 md:px-8">
+  <section class="border border-top surface-border surface-section flex justify-center py-12 px-3 md:px-8">
     <div>
       <div class="flex flex-col gap-8 items-center">
         <div class="max-w-md w-full text-center">
-          <Overline :label="props.overline" />
           <h3 class="text-2xl font-normal text-color max-w-xl mt-2 mb-0">
             {{ props.title }}
           </h3>
@@ -43,17 +42,11 @@ import * as yup from 'yup'
 import { useForm } from 'vee-validate'
 import { newsletterSubrscribeHandler } from '../../../services/newsletter/newsletterSubmitHandler'
 import { ref } from 'vue';
-import Overline from '../../overline/index.vue'
 
 const isSuccess = ref(false);
 const isError = ref(false);
 
 const props = defineProps({
-  overline: {
-    type: String,
-    required: false,
-    default: ''
-  },
   title: {
     type: String,
     required: true
