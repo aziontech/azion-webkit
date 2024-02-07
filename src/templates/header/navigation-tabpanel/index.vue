@@ -25,16 +25,20 @@
               icon: { class: 'text-white' }
             }" />
 
-          <OverlayPanel :ref="menuitem.ref" :pt="{ content: { class: 'p-0' }}">
-            <div class="flex flex-row gap-4">
-              <div class="flex flex-col gap-2 border-r surface-border p-5 surface-50">
+          <OverlayPanel
+            class="z-40"
+            :ref="menuitem.ref"
+            :pt="{ content: { class: 'p-0' }}">
+
+            <div class="flex flex-row">
+              <div class="flex flex-col gap-1 border-r surface-border p-3 surface-50">
                 <Button
                   text
                   size="small"
                   v-for="(subitem, index) in menuitem.items"
                   :key="index"
                   :class="{ 'surface-hover': active === index }"
-                  class="flex gap-2 justify-between w-full items-center"
+                  class="flex gap-2 justify-between w-full items-centerm min-w-44"
                   @click="active = index">
 
                   <span class="flex gap-2 items-center">
@@ -45,7 +49,7 @@
                 </Button>
               </div>
 
-              <div class="w-full max-w-[1090px]">
+              <div class="w-full max-w-[1090px] p-3">
                 <TabView
                   v-model:activeIndex="active"
                   :pt="{ navContainer: { class: 'hidden' } }">
@@ -55,7 +59,7 @@
                     v-for="(subitem, index) in menuitem.items">
 
                     <div>
-                      <ul class="grid grid-cols-2 gap-2 m-0 p-0">
+                      <ul class="grid grid-cols-2 m-0 p-0">
                         <li
                           class="block"
                           :key="index"
@@ -87,7 +91,7 @@
                             </div>
                           </a>
 
-                          <ul class="block pl-[2.25rem] mt-4">
+                          <ul class="block pl-[2.25rem] mt-2">
                             <li
                               class="block"
                               :key="i"
