@@ -4,9 +4,9 @@
         <Breadcrumb :model="breadcrumbItems" class="-ml-1">
           <template #item="{ item, props }">
             <a v-if="item.url" :href="item.url" :target="item.target" v-bind="props.action">
-                <span class="text-color">{{ item.label }}</span>
+                <span class="text-color-secondary">{{ item.label }}</span>
             </a>
-            <p v-else class="p-menuitem-link"> <span class="text-color"> {{ item.label }} </span></p>
+            <p v-else class="p-menuitem-link"> <span class="text-color-secondary"> {{ item.label }} </span></p>
           </template>
         </Breadcrumb>
         <div class="flex flex-col gap-5 lg:gap-6">

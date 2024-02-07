@@ -1,6 +1,6 @@
 <template>
   <div class="transition-all surface-ground grid m-0 p-0 justify-between gap-6 lg:gap-16"  :class="pt.class">
-      <Card v-for="({ image, link, title, description, tagList, authors, estimateReadTime, date }, index) in data" :link="link" :key="index" :imgSrc="image" :imgAlt="title" :tagList="tagList" :title="title" :description="description" :authors="authors" :estimateReadTime="estimateReadTime" :date="date" />
+      <Card v-for="({ image, link, title, description, authors, estimateReadTime, date }, index) in data" :link="link" :key="index" :imgSrc="image" :imgAlt="title" :title="title" :description="description" :authors="authors" :estimateReadTime="estimateReadTime" :date="date" />
   </div>
 </template>
 

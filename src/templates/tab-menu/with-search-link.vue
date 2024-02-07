@@ -1,20 +1,14 @@
 <template>
-  <div class="flex justify-between flex-col lg:flex-row">
-    <div class="lg:w-2/3 w-full">
-      <TabMenu class="lg:block overflow-y-auto" :pt="{ label: 'whitespace-nowrap' }"
+  <div class="flex justify-between gap-3">
+    <div class="flex items-center">
+      <TabMenu class="lg:block overflow-y-auto" :pt="{ label: 'whitespace-nowrap', menu: {
+        class: 'flex-wrap'
+      } }"
         :model="tabList" :url="tabList.url" :label="tabList.label" :activeIndex="activeIndex"
       />
     </div>
-    <div class="w-full lg:w-1/3 flex justify-end pt-4 lg:pt-0">
-      <span class="p-input-icon-left w-full lg:max-w-xs">
-        <i class="pi pi-search" />
-        <button
-            class="p-inputtext enabled:focus:shadow-none p-component w-full text-left"
-            @click="activeDialog"
-        >
-          {{ inputPlaceholder }}
-        </button>
-      </span>
+    <div class="w-8">
+      <Button class="" @click="activeDialog" icon="pi pi-search" outlined />
       <AlgoliaDialog
         :isDialogActive="isDialogActive" @close="closeDialog"
         :algoliaAppId="algoliaAppId" :algoliaApiKey="algoliaApiKey" :algoliaIndex="algoliaIndex" :algoliaModel="algoliaModel"
@@ -26,6 +20,7 @@
 <script setup>
 import TabMenu from 'primevue/tabmenu';
 import AlgoliaDialog from '../algolia-dialog/index.vue'
+import Button from 'primevue/button';
 import { ref, onMounted } from "vue";
 
 defineProps({

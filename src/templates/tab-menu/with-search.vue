@@ -1,10 +1,10 @@
 <template>
-  <div class="flex justify-between flex-col lg:flex-row">
-    <div class="lg:w-2/3 w-ful">
-      <TabMenu class="hidden lg:block overflow-y-auto" :pt="{
+  <div class="flex max-[1360px]:justify-end items-center gap-2">
+    <div class="flex min-[1360px]:max-w-[95%] w-full max-[1360px]:justify-end">
+      <TabMenu class="max-[1360px]:hidden min-[1360px]:block w-full" :pt="{
         label: 'whitespace-nowrap'
       }" v-model:activeIndex="activeIndex" :model="mappedData" @click="eventHandler(activeIndex)" />
-      <Dropdown class="lg:hidden w-full"
+      <Dropdown class="min-[1360px]:hidden w-full md:w-fit min-w-56"
         @change="eventHandler" v-model="activeOption"
         :options="mappedData" optionLabel="label">
         <template #value="slotProps">
@@ -19,16 +19,8 @@
         </template>
       </Dropdown>
     </div>
-    <div class="w-full lg:w-1/3 flex justify-end pt-4 lg:pt-0">
-      <span class="p-input-icon-left w-full lg:max-w-xs">
-        <i class="pi pi-search" />
-        <button
-            class="p-inputtext enabled:focus:shadow-none p-component w-full text-left"
-            @click="activeDialog"
-        >
-          {{ inputPlaceholder }}
-        </button>
-      </span>
+    <div class="w-8">
+      <Button class="" @click="activeDialog" icon="pi pi-search" outlined />
       <AlgoliaDialog
         :isDialogActive="isDialogActive" @close="closeDialog"
         :algoliaAppId="algoliaAppId" :algoliaApiKey="algoliaApiKey" :algoliaIndex="algoliaIndex" :algoliaModel="algoliaModel"
@@ -40,6 +32,7 @@
 <script setup>
 import TabMenu from 'primevue/tabmenu';
 import Dropdown from 'primevue/dropdown';
+import Button from 'primevue/button'
 import AlgoliaDialog from '../algolia-dialog/index.vue'
 import { ref, onMounted } from "vue";
 
