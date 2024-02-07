@@ -25,9 +25,9 @@
               icon: { class: 'text-white' }
             }" />
 
-          <OverlayPanel :ref="menuitem.ref">
-            <div class="flex flex-row p-2 gap-4">
-              <div class="flex flex-col gap-2">
+          <OverlayPanel :ref="menuitem.ref" :pt="{ content: { class: 'p-0' }}">
+            <div class="flex flex-row gap-4">
+              <div class="flex flex-col gap-2 border-r surface-border p-5 surface-50">
                 <Button
                   text
                   size="small"
@@ -45,7 +45,7 @@
                 </Button>
               </div>
 
-              <div class="w-full max-w-[500px]">
+              <div class="w-full max-w-[1090px]">
                 <TabView
                   v-model:activeIndex="active"
                   :pt="{ navContainer: { class: 'hidden' } }">
@@ -54,29 +54,69 @@
                     :key="index"
                     v-for="(subitem, index) in menuitem.items">
 
-                    <div class="m-0 p-0">
-                      <a
-                        href="#"
-                        :key="index"
-                        v-for="(link, index) in subitem.items"
-                        class="w-full p-button p-button-text p-button-sm">
+                    <div>
+                      <ul class="grid grid-cols-2 gap-2 m-0 p-0">
+                        <li
+                          class="block"
+                          :key="index"
+                          v-for="(link, index) in subitem.items">
+                          <a
+                            href="#"
+                            class="p-button p-button-text p-button-sm w-full">
 
-                        <div class="flex gap-3">
-                          <div v-if="link.icon">
-                            <span class="py-1 px-1.5 flex rounded-md surface-200">
-                              <i :class="link.icon" class="text-xs"></i>
-                            </span>
-                          </div>
-                          <div class="flex flex-col gap-2">
-                            <p class="text-left">
-                              {{ link.label }}
-                            </p>
-                            <p class="text-xs text-color-secondary text-left">
-                              {{ link.description }}
-                            </p>
-                          </div>
-                        </div>
-                      </a>
+                            <div class="flex gap-3">
+                              <div v-if="link.icon">
+                                <span class="py-1 px-1.5 flex rounded-md surface-200">
+                                  <i
+                                    :class="link.icon"
+                                    class="text-xs">
+                                  </i>
+                                </span>
+                              </div>
+                              <div class="flex flex-col gap-1">
+                                <p class="text-left">
+                                  {{ link.label }}
+                                </p>
+                                <p
+                                  v-if="link.description"
+                                  class="text-xs text-color-secondary text-left">
+
+                                  {{ link.description }}
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+
+                          <ul class="block pl-[2.25rem] mt-4">
+                            <li
+                              class="block"
+                              :key="i"
+                              v-for="(sublink, i) in link.items">
+
+                              <a
+                                href="#"
+                                class="w-full p-button p-button-text p-button-sm text-xs mb-2">
+
+                                <div class="flex gap-3">
+                                  <div v-if="sublink.icon">
+                                    <span class="py-1 px-1.5 flex rounded-md surface-200">
+                                      <i
+                                        :class="sublink.icon"
+                                        class="text-xs">
+                                      </i>
+                                    </span>
+                                  </div>
+                                  <div>
+                                    <p class="text-left">
+                                      {{ sublink.label }}
+                                    </p>
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
                     </div>
                   </TabPanel>
                 </TabView>
