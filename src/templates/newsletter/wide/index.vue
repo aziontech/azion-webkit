@@ -1,5 +1,5 @@
 <template>
-  <section class="border border-top surface-border surface-section flex justify-center py-12 px-3 md:px-8">
+  <section class="border border-t surface-border surface-section flex justify-center py-12 px-3 md:px-8">
     <div>
       <div class="flex flex-col gap-8 items-center">
         <div class="max-w-md w-full text-center">
