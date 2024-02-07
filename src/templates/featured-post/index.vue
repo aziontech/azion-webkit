@@ -13,9 +13,6 @@
         </picture>
       </div>
       <div class="flex flex-col lg:max-w-lg lg:items-start gap-5">
-        <div class="flex gap-2">
-          <Tag v-for="(tag, index) in tagList" :key="index" :value="tag" severity="info" />
-        </div>
         <div class="flex flex-col gap-3 lg:gap-4">
           <h1 class="text-2xl lg:text-3xl font-bold text-color group-hover:underline">
             {{ title }}
@@ -40,15 +37,10 @@
 </template>
 
 <script setup>
-import Tag from 'primevue/tag';
 import Avatar from 'primevue/avatar';
 import AvatarGroup from 'primevue/avatargroup';
 
 defineProps({
-  tagList: {
-    type: Array,
-    required: false,
-  },
   description: {
     type: String,
     required: true
