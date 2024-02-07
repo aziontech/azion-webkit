@@ -81,13 +81,13 @@
     "prettier": "^2.8.4",
     "primeflex": "^3.3.1",
     "primeicons": "^6.0.1",
-    "primevue": "^3.35.0",
+    "primevue": "3.47.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.68.0",
     "start-server-and-test": "^2.0.0",
     "storybook": "^7.5.3",
-    "tailwindcss": "^3.3.3",
+    "tailwindcss": "^3.4.1",
     "vite": "^4.4.9",
     "vitest": "^0.29.1"
   }
