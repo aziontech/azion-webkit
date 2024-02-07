@@ -16,7 +16,7 @@ export const newsletterSubrscribeHandler = async (formData, email) => {
         }
       ],
       context: {
-        pageUri: `www.azion.com/${uri}`,
+        pageUri: `www.azion.com${uri}`,
         pageName: `${pageName}`
       },
       legalConsentOptions: {
