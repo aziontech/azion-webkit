@@ -45,20 +45,35 @@
                 </Button>
               </div>
 
-              <div class="flex w-full max-w-[500px]">
-                <TabView v-model:activeIndex="active" :pt="{ navContainer: { class: 'hidden' } }">
-                  <TabPanel v-for="(subitem, index) in menuitem.items" :key="index">
-                    <div class="grid grid-cols-2 gap-2 m-0 p-0 w-[500px]">
+              <div class="w-full max-w-[500px]">
+                <TabView
+                  v-model:activeIndex="active"
+                  :pt="{ navContainer: { class: 'hidden' } }">
+
+                  <TabPanel
+                    :key="index"
+                    v-for="(subitem, index) in menuitem.items">
+
+                    <div class="m-0 p-0">
                       <a
+                        href="#"
                         :key="index"
                         v-for="(link, index) in subitem.items"
-                        class="flex gap-2 w-full items-center p-button p-button-text p-button-sm">
+                        class="w-full p-button p-button-text p-button-sm">
 
-                        <div class="flex flex-row gap-4 items-center">
-                          <i v-if="link.icon" :class="link.icon"></i>
-                          <div class="flex flex-col items-start">
-                            <span class="flex gap-2 items-center">{{ link.label }}</span>
-                            <span class="text-xs text-color-secondary">{{ link.description }}</span>
+                        <div class="flex gap-3">
+                          <div v-if="link.icon">
+                            <span class="py-1 px-1.5 flex rounded-md surface-200">
+                              <i :class="link.icon" class="text-xs"></i>
+                            </span>
+                          </div>
+                          <div class="flex flex-col gap-2">
+                            <p class="text-left">
+                              {{ link.label }}
+                            </p>
+                            <p class="text-xs text-color-secondary text-left">
+                              {{ link.description }}
+                            </p>
                           </div>
                         </div>
                       </a>
