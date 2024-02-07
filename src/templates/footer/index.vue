@@ -1,6 +1,5 @@
 <template>
-  <!-- border-t border-solid surface-border removed footer classes -->
-  <footer class="py-12 surface-ground">
+  <footer class="py-12 surface-ground border-t border-solid surface-border">
     <div class="flex flex-col gap-9 lg:gap-8 px-shell">
       <div class="flex flex-col lg:flex-row gap-9 lg:gap-12">
         <div class="w-full lg:w-1/4">
