@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/aziontech/azion-web-kit/compare/v1.0.9...v1.0.10) (2024-02-08)
+
+
+### Bug Fixes
+
+* mobile close button on sidebar ([ece882a](https://github.com/aziontech/azion-web-kit/commit/ece882a65d02a5292f21ddc35c3b92a215c6318c))
+
 ## [1.0.9](https://github.com/aziontech/azion-web-kit/compare/v1.0.8...v1.0.9) (2024-02-08)
 
 
