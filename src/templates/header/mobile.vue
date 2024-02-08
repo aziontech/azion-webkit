@@ -12,11 +12,20 @@
   <Sidebar
     v-model:visible="visibleRight"
     position="right"
-    class="py-5 pb-20 h-[calc(100%-56px)] top-[28px] border-l surface-border w-full"
+    class="pr-4 pb-20 h-[100%] border-l surface-border w-full text-sm"
     :show-close-icon="false"
     :pt="{
       header: { class: 'hidden' }
     }">
+
+  <div class="flex justify-end mb-4">
+    <Button
+      outlined
+      @click="visibleRight=false"
+      class="flex-none w-8 h-8"
+      icon="pi pi-times"
+      size="small" />
+  </div>
 
     <PanelMenu
       :model="menuData.items"
@@ -33,29 +42,50 @@
     }">
       <template #item="{ item }">
           <a v-if="item.href" :href="href">
-            <div class="p-menuitem- link !py-0">
+            <div class="p-menuitem-link !py-0 flex">
               <div class="flex gap-2">
-                <span v-if="item.icon" class="py-1 px-1.5 flex rounded-md surface-200">
-                  <i :class="item.icon" class="text-xs"></i>
-                </span>
-                <p class="text-color">
-                  {{ item.label }}
-                </p>
+                <div>
+                  <span v-if="item.icon" class="py-1 px-1.5 flex rounded-md surface-200">
+                    <i :class="item.icon" class="text-xs"></i>
+                  </span>
+                </div>
+                <div>
+                  <p class="text-color text-sm">
+                    {{ item.label }}
+                  </p>
+                  <small class="text-xs">
+                    {{ item.description }}
+                  </small>
+                </div>
               </div>
-              <p v-if="item.description" class="pl-5">
-                <small>
-                  {{ item.description }}
-                </small>
-              </p>
+
+              <span
+                v-if="item.items && item.items.length"
+                class="pi pi-angle-down text-primary ml-auto"></span>
             </div>
           </a>
+
           <a v-else :href="item.url" :target="item.target">
-            <div class="p-menuitem-link !py-0">
-              <span v-if="item.icon" class="mr-2" :class="item.icon"></span>
-              <span>
-                {{ item.label }}
-              </span>
-              <span v-if="item.items" class="pi pi-angle-down text-primary ml-auto"></span>
+            <div class="p-menuitem-link !py-0 flex">
+              <div class="flex gap-2">
+                <div>
+                  <span v-if="item.icon" class="py-1 px-1.5 flex rounded-md surface-200">
+                    <i :class="item.icon" class="text-xs"></i>
+                  </span>
+                </div>
+                <div>
+                  <p class="text-color text-sm">
+                    {{ item.label }}
+                  </p>
+                  <small class="text-xs">
+                    {{ item.description }}
+                  </small>
+                </div>
+              </div>
+
+              <span
+                v-if="item.items && item.items.length"
+                class="pi pi-angle-down text-primary ml-auto"></span>
             </div>
           </a>
       </template>
