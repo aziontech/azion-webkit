@@ -8,13 +8,12 @@
     @close="closeDialog"/>
 
     <Button
-      outlined
       size="small"
       icon="pi pi-search"
-      class="bg-header hover:bg-header-button-hover !text-white flex border-header"
+      class="text-white flex-none border-header w-8 h-8 bg-header hover:bg-header-button-hover"
       @click="activeDialog"
       :pt="{
-        label: { class: 'text-white' },
+        label: { class: 'text-white hover:bg-header-button-hover' },
         icon: { class: 'text-white' }
       }" />
 </template>

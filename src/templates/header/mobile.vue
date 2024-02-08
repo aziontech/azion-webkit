@@ -1,9 +1,13 @@
 <template>
   <Button
+    @click="visibleRight=true"
+    class="lg:hidden text-white flex-none border-header w-8 h-8 bg-header hover:bg-header-button-hover"
     icon="pi pi-bars"
-    outlined
-    @click="visibleRight = true"
-    class="flex lg:hidden"/>
+    size="small"
+    :pt="{
+      label: { class: 'text-white hover:bg-header-button-hover' },
+      icon: { class: 'text-white' }
+    }" />
 
   <Sidebar
     v-model:visible="visibleRight"
@@ -26,24 +30,31 @@
         content: {
           class: ['p-0 m-0 py-2 md:px-2']
         }
-      }">
+    }">
       <template #item="{ item }">
-          <a
-            v-if="item.href"
-            :href="href"
-            @click="navigate">
-            <div class="p-menuitem-link !py-0">
-              <span :class="item.icon"></span>
-              <span class="text-color">{{ item.label }}</span>
+          <a v-if="item.href" :href="href">
+            <div class="p-menuitem- link !py-0">
+              <div class="flex gap-2">
+                <span v-if="item.icon" class="py-1 px-1.5 flex rounded-md surface-200">
+                  <i :class="item.icon" class="text-xs"></i>
+                </span>
+                <p class="text-color">
+                  {{ item.label }}
+                </p>
+              </div>
+              <p v-if="item.description" class="pl-5">
+                <small>
+                  {{ item.description }}
+                </small>
+              </p>
             </div>
           </a>
-          <a
-            v-else
-            :href="item.url"
-            :target="item.target">
+          <a v-else :href="item.url" :target="item.target">
             <div class="p-menuitem-link !py-0">
               <span v-if="item.icon" class="mr-2" :class="item.icon"></span>
-              <span>{{ item.label }}</span>
+              <span>
+                {{ item.label }}
+              </span>
               <span v-if="item.items" class="pi pi-angle-down text-primary ml-auto"></span>
             </div>
           </a>
@@ -67,7 +78,6 @@
           v-bind="props.action"
           :target="item.target"
           :href="item.url"
-          @click="navigate"
           class="p-2 flex gap-2">
 
             <span v-if="item.icon" :class="item.icon"></span>
@@ -88,6 +98,7 @@
         :class="button.icon ?
           'flex gap-2 justify-between p-button p-button-primary p-button-outlined p-button-sm border-white text-white hover:bg-header-button-hover whitespace-nowrap' :
           'flex gap-2 p-button p-button-primary p-button-outlined p-button-sm  text-white hover:bg-header-button-hover whitespace-nowrap'">
+
         {{ button.label }}
         <i v-if="button.icon" :class="button.icon"></i>
       </a>
@@ -97,7 +108,6 @@
 
 <script setup>
 import { onUpdated, ref } from 'vue';
-
 import Button from 'primevue/button';
 import Divider from 'primevue/divider';
 import Menu from 'primevue/menu';
@@ -116,17 +126,17 @@ const visibleRight = ref(false);
 
 function getHTMLElement() {
   return document.querySelector('html');
-}
+};
 
 function pageScroll(action) {
   const overflow = action === 'stop' ? 'hidden' : 'auto';
   getHTMLElement().style.overflow = overflow;
 
   return overflow;
-}
+};
 
 onUpdated(() => {
   visibleRight.value ? pageScroll('stop') : pageScroll('auto');
-})
+});
 </script>
 
