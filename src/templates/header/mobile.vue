@@ -18,27 +18,27 @@
       header: { class: 'hidden' }
     }">
 
-  <div class="flex justify-end mb-4">
-    <Button
-      outlined
-      @click="visibleRight=false"
-      class="flex-none w-8 h-8"
-      icon="pi pi-times"
-      size="small" />
-  </div>
+    <div class="flex justify-end mb-4">
+      <Button
+        outlined
+        @click="visibleRight=false"
+        class="flex-none w-8 h-8"
+        icon="pi pi-times"
+        size="small" />
+    </div>
 
-  <PanelMenu
-    :model="menuData.items"
-    :pt="{
-      headerContent: {
-        class: ['hover:surface-hover rounded-md md:px-4 px-2 py-2 border-none']
-      },
-      menuContent: {
-        class: ['border-none']
-      },
-      content: {
-        class: ['p-0 m-0 py-2 md:px-2']
-      }
+    <PanelMenu
+      :model="menuData.items"
+      :pt="{
+        headerContent: {
+          class: ['hover:surface-hover rounded-md md:px-4 px-2 py-2 border-none']
+        },
+        menuContent: {
+          class: ['border-none']
+        },
+        content: {
+          class: ['p-0 m-0 py-2 md:px-2']
+        }
     }">
       <template #item="{ item }">
           <a v-if="item.href" :href="href">
