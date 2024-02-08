@@ -5,7 +5,7 @@
       @mouseout="isHovered = false"
       :pt="{
         header: { class: 'rounded border surface-border overflow-hidden' },
-        root: { class: 'shadow-none surface-ground flex flex-col gap-6' }
+        root: { class: 'shadow-none bg-transparent flex flex-col gap-6' }
       }">
       <template #header>
         <picture v-if="imgSrc" >
@@ -18,11 +18,13 @@
           <h3 class="text-xl font-bold text-color">{{ title }}</h3>
           <p class="text-sm text-color-secondary">{{ description }}</p>
           <p class="text-xs text-color-secondary">{{ date }} • {{ estimateReadTime }}</p>
-          <div v-if="authors">
-            <AvatarGroup>
-              <Avatar v-for="({avatar, role, title }, index) in authors" :ariaLabel="`${title} - ${role}`" :key="index" :image="`${avatar}?ims=28x28`" shape="circle" />
-            </AvatarGroup>
-          </div>
+            <div v-if="authors">
+              <AvatarGroup>
+                <Avatar v-for="({avatar, role, title }, index) in authors" :ariaLabel="`${title} - ${role}`" :key="index" :image="`${avatar}?ims=28x28`" shape="circle" v-tooltip.bottom="{ value: `${title}`, showDelay: 200 }"
+                tabindex="1"
+                />
+              </AvatarGroup>
+            </div>
         </div>
       </template>
     </Card>
