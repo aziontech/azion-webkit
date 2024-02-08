@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/aziontech/azion-web-kit/compare/v1.0.8...v1.0.9) (2024-02-08)
+
+
+### Bug Fixes
+
+* card bg, dropdown and tabmenu interation card grid list and more ([#56](https://github.com/aziontech/azion-web-kit/issues/56)) ([f92090a](https://github.com/aziontech/azion-web-kit/commit/f92090a91c0506747e40d02c5e58ab874fd0be56))
+
 ## [1.0.8](https://github.com/aziontech/azion-web-kit/compare/v1.0.7...v1.0.8) (2024-02-08)
 
 
