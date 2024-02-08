@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/aziontech/azion-web-kit/compare/v1.0.7...v1.0.8) (2024-02-08)
+
+
+### Bug Fixes
+
+* margin right block label ([db81acd](https://github.com/aziontech/azion-web-kit/commit/db81acd1048551c63ba397b5eab26a905d2b3e18))
+
 ## [1.0.7](https://github.com/aziontech/azion-web-kit/compare/v1.0.6...v1.0.7) (2024-02-08)
 
 
