@@ -94,7 +94,7 @@
 
                       <div class="border-l surface-border p-3 surface-50 min-h-52">
                         <div v-if="index === 0">
-                          <strong class="text-xs text-color-secondary  mb-6 block">{{ menuitem.rightBlock.label }}</strong>
+                          <strong class="text-xs text-color-secondary mb-4 block">{{ menuitem.rightBlock.label }}</strong>
                           <div class="grid gap-4 p-3">
                             <article v-for="(block, idx) in menuitem.rightBlock.items" :key="idx" class="flex gap-4 w-96">
                               <figure class="w-[160px] h-[90px] overflow-hidden rounded border surface-border">
