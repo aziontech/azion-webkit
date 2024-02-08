@@ -1,14 +1,25 @@
 <template>
-  <div class="flex justify-between gap-3">
-    <div class="flex items-center">
-      <TabMenu class="lg:block overflow-y-auto" :pt="{ label: 'whitespace-nowrap', menu: {
-        class: 'flex-wrap'
-      } }"
+  <div class="flex md:justify-between gap-3">
+    <div class="flex w-full items-center">
+      <TabMenu class="hidden md:block w-full"
+        :pt="{ label: 'whitespace-nowrap', menu: { class: 'flex-wrap'}}"
         :model="tabList" :url="tabList.url" :label="tabList.label" :activeIndex="activeIndex"
       />
+      <Dropdown class="md:hidden w-full" :options="tabList" optionLabel="label" :modelValue="tabList[activeIndex]">
+        <template #value="slotProps">
+          <div v-if="slotProps.value">
+            <div>{{ slotProps.value.label }}</div>
+          </div>
+        </template>
+        <template #option="slotProps">
+            <a :href="slotProps.option.url" target="_self" class="w-full px-2 py-3">
+              {{ slotProps.option.label }}
+            </a>
+        </template>
+      </Dropdown>
     </div>
-    <div class="w-8">
-      <Button class="" @click="activeDialog" icon="pi pi-search" outlined />
+    <div class="min-w-fit flex item-center md:items-start">
+      <Button  size="small" @click="activeDialog" icon="pi pi-search" outlined :label="inputPlaceholder"/>
       <AlgoliaDialog
         :isDialogActive="isDialogActive" @close="closeDialog"
         :algoliaAppId="algoliaAppId" :algoliaApiKey="algoliaApiKey" :algoliaIndex="algoliaIndex" :algoliaModel="algoliaModel"
@@ -21,6 +32,7 @@
 import TabMenu from 'primevue/tabmenu';
 import AlgoliaDialog from '../algolia-dialog/index.vue'
 import Button from 'primevue/button';
+import Dropdown from 'primevue/dropdown'
 import { ref, onMounted } from "vue";
 
 defineProps({
