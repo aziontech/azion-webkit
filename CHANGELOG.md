@@ -1,3 +1,12 @@
+## [1.0.7](https://github.com/aziontech/azion-web-kit/compare/v1.0.6...v1.0.7) (2024-02-08)
+
+
+### Bug Fixes
+
+* desktop menu behavior, add icons, refactor to child use inside ([c34bff6](https://github.com/aziontech/azion-web-kit/commit/c34bff6acc39fcb003f56eb7568a14f00c0449ab))
+* header menu desktop ([8107aea](https://github.com/aziontech/azion-web-kit/commit/8107aeaa9dd5982e1546e52e326000582c0835be))
+* right block with props ([fdf03df](https://github.com/aziontech/azion-web-kit/commit/fdf03df93146abc205649af081056726c766f1b5))
+
 ## [1.0.6](https://github.com/aziontech/azion-web-kit/compare/v1.0.5...v1.0.6) (2024-02-06)
 
 
