@@ -1,10 +1,10 @@
 <template>
-  <div class="flex max-[1360px]:justify-end items-center gap-2">
-    <div class="flex min-[1360px]:max-w-[95%] w-full max-[1360px]:justify-end">
-      <TabMenu class="max-[1360px]:hidden min-[1360px]:block w-full" :pt="{
-        label: 'whitespace-nowrap'
-      }" v-model:activeIndex="activeIndex" :model="mappedData" @click="eventHandler(activeIndex)" />
-      <Dropdown class="min-[1360px]:hidden w-full md:w-fit min-w-56"
+  <div class="flex gap-2">
+    <div class="flex w-full">
+      <TabMenu class="hidden md:block w-full" :pt="{
+        label: 'whitespace-nowrap',  menu: { class: 'flex-wrap'}}"
+        v-model:activeIndex="activeIndex" :model="mappedData" @click="eventHandler(activeIndex)" />
+      <Dropdown class="md:hidden w-full md:w-fit min-w-56"
         @change="eventHandler" v-model="activeOption"
         :options="mappedData" optionLabel="label">
         <template #value="slotProps">
@@ -19,8 +19,8 @@
         </template>
       </Dropdown>
     </div>
-    <div class="w-8">
-      <Button class="" @click="activeDialog" icon="pi pi-search" outlined />
+    <div class="min-w-fit flex items-center md:items-start">
+      <Button  size="small" @click="activeDialog" icon="pi pi-search" outlined :label="inputPlaceholder"/>
       <AlgoliaDialog
         :isDialogActive="isDialogActive" @close="closeDialog"
         :algoliaAppId="algoliaAppId" :algoliaApiKey="algoliaApiKey" :algoliaIndex="algoliaIndex" :algoliaModel="algoliaModel"
