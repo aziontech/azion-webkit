@@ -5,7 +5,8 @@
     :algoliaIndex="algoliaIndex"
     :algoliaModel="algoliaModel"
     :isDialogActive="isDialogActive"
-    @close="closeDialog"/>
+    @close="closeDialog"
+    :inputPlaceholder="inputPlaceholder" />
 
     <Button
       size="small"
@@ -35,6 +36,11 @@ const props = defineProps({
   },
   algoliaModel: {
     type: Array
+  },
+  inputPlaceholder: {
+    type: String,
+    required: false,
+    default: "Search Azion"
   }
 })
 

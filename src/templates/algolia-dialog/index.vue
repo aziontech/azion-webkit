@@ -25,6 +25,7 @@
       :algoliaApiKey="algoliaApiKey"
       :algoliaIndex="algoliaIndex"
       :algoliaModel="algoliaModel"
+      :inputPlaceholder="inputPlaceholder"
       @keyup="pressKeyboardKey"
       @keydown="pressKeyboardKey" />
   </Dialog>
@@ -43,7 +44,12 @@ const props = defineProps({
   algoliaAppId: String,
   algoliaApiKey: String,
   algoliaIndex: Array,
-  algoliaModel: Array
+  algoliaModel: Array,
+  inputPlaceholder: {
+    type: String,
+    required: false,
+    default: "Search Azion"
+  }
 })
 
 const { algoliaAppId, algoliaApiKey, algoliaIndex, algoliaModel } = props

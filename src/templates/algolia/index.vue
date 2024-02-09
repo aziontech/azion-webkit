@@ -7,7 +7,7 @@
       <ais-search-box
         :autofocus="true"
         :show-loading-indicator="false"
-        placeholder="Digite your search"
+        :placeholder="inputPlaceholder"
         class="sticky top-0 z-10" />
         <ais-stats>
           <template v-slot="{ hitsPerPage, nbPages, nbHits, page, processingTimeMS, query }">
@@ -46,7 +46,12 @@
     algoliaAppId: String,
     algoliaApiKey: String,
     algoliaIndex: Array,
-    algoliaModel: Array
+    algoliaModel: Array,
+    inputPlaceholder: {
+      type: String,
+      required: false,
+      default: "Search Azion"
+    }
   });
 
   const { algoliaAppId, algoliaApiKey, algoliaModel, algoliaIndex } = props;
