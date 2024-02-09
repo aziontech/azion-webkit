@@ -1,3 +1,11 @@
+## [1.0.14](https://github.com/aziontech/azion-web-kit/compare/v1.0.13...v1.0.14) (2024-02-09)
+
+
+### Bug Fixes
+
+* item.href not href to configure the destiny ([46b05bf](https://github.com/aziontech/azion-web-kit/commit/46b05bfe7d8c548b8b20961208c605e184f96dce))
+* menu mobile with links ([c8e3ce2](https://github.com/aziontech/azion-web-kit/commit/c8e3ce264741ada236e49ab0d2994574011e4473))
+
 ## [1.0.13](https://github.com/aziontech/azion-web-kit/compare/v1.0.12...v1.0.13) (2024-02-09)
 
 
