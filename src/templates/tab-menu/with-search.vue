@@ -20,7 +20,10 @@
       </Dropdown>
     </div>
     <div class="min-w-fit flex items-center md:items-start">
-      <Button  size="small" @click="activeDialog" icon="pi pi-search" outlined :label="inputPlaceholder"/>
+      <Button class="h-8" size="small" @click="activeDialog" outlined>
+        <span class="p-button-icon md:mr-2 pi pi-search" />
+        <span class="md:block hidden"> {{ inputPlaceholder }} </span>
+      </Button>
       <AlgoliaDialog
         :isDialogActive="isDialogActive" @close="closeDialog"
         :algoliaAppId="algoliaAppId" :algoliaApiKey="algoliaApiKey" :algoliaIndex="algoliaIndex" :algoliaModel="algoliaModel"
