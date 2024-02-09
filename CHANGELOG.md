@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/aziontech/azion-web-kit/compare/v1.0.10...v1.0.11) (2024-02-09)
+
+
+### Bug Fixes
+
+* new on blog should be param ([e5f42f5](https://github.com/aziontech/azion-web-kit/commit/e5f42f5f528b6d995b96e212ada585d63c4bde7d))
+
 ## [1.0.10](https://github.com/aziontech/azion-web-kit/compare/v1.0.9...v1.0.10) (2024-02-08)
 
 
