@@ -42,20 +42,7 @@
           <Divider />
         </div>
         <div class="flex gap-3">
-          <Dropdown class="w-full" v-if="i18nPages" :options="i18nPages" :autoOptionFocus="false"
-            optionLabel="lang" :pt="{ item: { class: 'p-0' } }" :modelValue="activeLang.lang">
-            <template #value="slotProps">
-              <div
-                v-if="slotProps.value">
-                <div>{{ slotProps.value }}</div>
-              </div>
-            </template>
-            <template #option="slotProps">
-              <a :href="slotProps.option.slug" target="_self" class="w-full px-2 py-3">
-                {{ slotProps.option.lang }}
-              </a>
-            </template>
-          </Dropdown>
+          <slot name="action" />
           <slot name="theme-switch"/>
         </div>
       </div>
@@ -68,7 +55,6 @@ import AzionLogo from '../../assets/icons/azion-logo-default.vue';
 import Divider from 'primevue/divider';
 import LinkIcon from '../button/link-icon.vue';
 import LinkButton from '../button/link.vue';
-import Dropdown from 'primevue/dropdown';
 
 // interface List {
 //   link: string,
@@ -91,13 +77,7 @@ import Dropdown from 'primevue/dropdown';
 //   text: String,
 //   phone: String
 // }
-
-// interface i18nPages {
-//   lang: String,
-//   slug: String
-// }
-
-const props = defineProps({
+defineProps({
   lang: {
     type: String,
     required: true
@@ -114,15 +94,9 @@ const props = defineProps({
     type: Object,
     required: true
   },
-  i18nPages: {
-    type: Array,
-    required: false
-  },
   socialButtons: {
     type: Array,
     required: false
   }
 })
-
-const activeLang = props.i18nPages ? props.i18nPages.find(p => p.langPrefix.toLowerCase() === props.lang.toLowerCase()) : null
 </script>

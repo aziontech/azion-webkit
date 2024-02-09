@@ -18,6 +18,7 @@ import HeaderDialogAlgoliaSearch from './templates/header/dialog-algolia-search/
 import MobileRightSidebar from './templates/header/mobile.vue'
 import Footer from './templates/footer/index.vue'
 import DropdownThemeSwitch from './templates/dropdown-theme-switch/index.vue'
+import DropdownLangSelector from './templates/dropdown-lang-selector/index.vue'
 import KeyboardKey from './templates/keyboard-key/index.vue'
 import NewsletterSingleLine from './templates/newsletter/single-line/index.vue'
 import NewsletterCard from './templates/newsletter/card/index.vue'
@@ -45,6 +46,7 @@ export {
   CardGridList,
   Footer,
   DropdownThemeSwitch,
+  DropdownLangSelector,
   CardGridBlock,
   Header,
   HeaderLogoAzion,
