@@ -24,7 +24,7 @@
           <template v-for="({avatar, title, role}, index) in authors" :key="index">
             <div class="flex gap-3 md:max-w-56 items-center">
               <div class="w-8 flex items-center">
-                <Avatar size="xlarge" :image="avatar" :ariaLabel="`${title} - ${role}`" shape="circle" />
+                <Avatar size="xlarge" :image="`${avatar}?ims=40x40`" :ariaLabel="`${title} - ${role}`" shape="circle" />
               </div>
               <div>
                 <p class="font-normal text-sm">

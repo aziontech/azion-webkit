@@ -24,7 +24,7 @@
         <div class="flex md:flex-row gap-2.5 items-center">
           <template v-if="authors">
             <AvatarGroup>
-              <Avatar v-for="({avatar, title, role}, index) in authors" :ariaLabel="`${title} - ${role}`" :key="index" size="xlarge" :image="avatar" shape="circle" />
+              <Avatar v-for="({avatar, title, role}, index) in authors" :ariaLabel="`${title} - ${role}`" :key="index" size="xlarge" :image="`${avatar}?ims=40x40`" shape="circle" />
             </AvatarGroup>
           </template>
           <p v-if="date" class="text-xs text-color-secondary">

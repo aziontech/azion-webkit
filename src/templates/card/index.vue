@@ -20,7 +20,7 @@
           <p class="text-xs text-color-secondary">{{ date }} • {{ estimateReadTime }}</p>
             <div v-if="authors">
               <AvatarGroup>
-                <Avatar v-for="({avatar, role, title }, index) in authors" :ariaLabel="`${title} - ${role}`" :key="index" :image="`${avatar}?ims=28x28`" shape="circle" v-tooltip.bottom="{ value: `${title}`, showDelay: 200 }"
+                <Avatar v-for="({avatar, role, title }, index) in authors" :ariaLabel="`${title} - ${role}`" :key="index" :image="`${avatar}?ims=40x40`" shape="circle" v-tooltip.bottom="{ value: `${title}`, showDelay: 200 }"
                 tabindex="1"
                 />
               </AvatarGroup>

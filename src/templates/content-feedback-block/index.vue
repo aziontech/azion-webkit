@@ -21,7 +21,7 @@
           <template v-else>
             <div class="flex gap-3">
               <template v-if="slotProps.data.avatar">
-                <Avatar :image="`${slotProps.data.avatar}?ims=x36`" class="h-9" />
+                <Avatar :image="`${avatar}?ims=40x40`" class="h-9" />
               </template>
               <template v-else>
                 <Avatar :label="slotProps.data.name.charAt(0)" class="h-9 surface-border" />
