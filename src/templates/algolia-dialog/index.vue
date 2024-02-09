@@ -54,7 +54,6 @@ onUpdated(() => {
 })
 
 function toggleDialog(action) {
-  console.log(action)
   if(!action) {
     isDialogActive.value = false
     emit('close')
