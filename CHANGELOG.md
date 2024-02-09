@@ -1,3 +1,10 @@
+## [1.0.19](https://github.com/aziontech/azion-web-kit/compare/v1.0.18...v1.0.19) (2024-02-09)
+
+
+### Bug Fixes
+
+* algolia i18n input placeholder ([1187209](https://github.com/aziontech/azion-web-kit/commit/1187209856e10f8389a9845b650f4a698890f9c3))
+
 ## [1.0.18](https://github.com/aziontech/azion-web-kit/compare/v1.0.17...v1.0.18) (2024-02-09)
 
 
