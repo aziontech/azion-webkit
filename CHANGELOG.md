@@ -1,3 +1,10 @@
+## [1.0.21](https://github.com/aziontech/azion-web-kit/compare/v1.0.20...v1.0.21) (2024-02-09)
+
+
+### Bug Fixes
+
+* add ims to avatar image ([d763749](https://github.com/aziontech/azion-web-kit/commit/d763749750997273a071b55bf2609e4206d0a679))
+
 ## [1.0.20](https://github.com/aziontech/azion-web-kit/compare/v1.0.19...v1.0.20) (2024-02-09)
 
 
