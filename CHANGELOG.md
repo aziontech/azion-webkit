@@ -1,3 +1,10 @@
+## [1.0.13](https://github.com/aziontech/azion-web-kit/compare/v1.0.12...v1.0.13) (2024-02-09)
+
+
+### Bug Fixes
+
+* update theme ([0c88ca3](https://github.com/aziontech/azion-web-kit/commit/0c88ca352832af4f54dabfa189d6bd8e4b2e8dfc))
+
 ## [1.0.12](https://github.com/aziontech/azion-web-kit/compare/v1.0.11...v1.0.12) (2024-02-09)
 
 
