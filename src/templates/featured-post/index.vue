@@ -14,7 +14,7 @@
       </div>
       <div class="flex flex-col lg:max-w-lg lg:items-start gap-5">
         <div class="flex flex-col gap-3 lg:gap-4">
-          <h1 class="text-2xl lg:text-3xl font-bold text-color group-hover:underline">
+          <h1 class="text-2xl lg:text-3xl font-bold text-color">
             {{ title }}
           </h1>
           <p class="font-normal text-color-secondary">
