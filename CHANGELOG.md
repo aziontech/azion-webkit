@@ -1,3 +1,10 @@
+## [1.0.18](https://github.com/aziontech/azion-web-kit/compare/v1.0.17...v1.0.18) (2024-02-09)
+
+
+### Bug Fixes
+
+* target for header successs ([dedf3a4](https://github.com/aziontech/azion-web-kit/commit/dedf3a4b80fca2a7143599a8921c7d75b9d36e43))
+
 ## [1.0.17](https://github.com/aziontech/azion-web-kit/compare/v1.0.16...v1.0.17) (2024-02-09)
 
 
