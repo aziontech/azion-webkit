@@ -1,3 +1,10 @@
+## [1.0.20](https://github.com/aziontech/azion-web-kit/compare/v1.0.19...v1.0.20) (2024-02-09)
+
+
+### Bug Fixes
+
+* remove underline from featured-post ([873544e](https://github.com/aziontech/azion-web-kit/commit/873544e04df4593bf82c634b30fcf7c0e2785b24))
+
 ## [1.0.19](https://github.com/aziontech/azion-web-kit/compare/v1.0.18...v1.0.19) (2024-02-09)
 
 
