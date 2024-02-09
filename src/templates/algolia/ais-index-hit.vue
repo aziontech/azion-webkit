@@ -17,7 +17,7 @@
             <template v-slot:item="{ item }">
               <div class="ais-Hits-item-card border surface-border rounded p-4 w-full">
                 <a
-                  :href="`https://www.azion.com${item.url}`"
+                  :href="item.url"
                   :title="item.title">
 
                   <h2 class="text-base">
