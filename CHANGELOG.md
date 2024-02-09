@@ -1,3 +1,10 @@
+## [1.0.12](https://github.com/aziontech/azion-web-kit/compare/v1.0.11...v1.0.12) (2024-02-09)
+
+
+### Bug Fixes
+
+* remove concat algolia item.url ([2e8c50c](https://github.com/aziontech/azion-web-kit/commit/2e8c50c65bcd08aecc3cd6b04d6a7d2d9af2ac6a))
+
 ## [1.0.11](https://github.com/aziontech/azion-web-kit/compare/v1.0.10...v1.0.11) (2024-02-09)
 
 
