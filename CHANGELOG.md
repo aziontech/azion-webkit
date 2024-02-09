@@ -1,3 +1,10 @@
+## [1.0.17](https://github.com/aziontech/azion-web-kit/compare/v1.0.16...v1.0.17) (2024-02-09)
+
+
+### Bug Fixes
+
+* inverter footer button position ([cb3a8c4](https://github.com/aziontech/azion-web-kit/commit/cb3a8c4937ce12df1e9a68380338564de5595b98))
+
 ## [1.0.16](https://github.com/aziontech/azion-web-kit/compare/v1.0.15...v1.0.16) (2024-02-09)
 
 
