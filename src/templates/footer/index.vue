@@ -34,17 +34,17 @@
       <div class="md:hidden flex gap-3" v-if="socialButtons">
         <LinkIcon v-for="({ icon, link, title }, index) in socialButtons" :key="index" :icon="icon" :link="link" :tooltipText="title"/>
       </div>
-      <div class="flex justify-between md:items-center flex-col-reverse md:flex-row gap-8">
-        <p class="text-xs">
-          {{ copyright }}
-        </p>
-        <div class="md:hidden">
-          <Divider />
-        </div>
+      <div class="flex justify-between md:items-center flex-col md:flex-row gap-8">
         <div class="flex gap-3">
           <slot name="action" />
           <slot name="theme-switch"/>
         </div>
+        <div class="md:hidden">
+          <Divider />
+        </div>
+        <p class="text-xs">
+          {{ copyright }}
+        </p>
       </div>
     </div>
   </footer>
