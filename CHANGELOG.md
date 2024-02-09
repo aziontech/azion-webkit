@@ -1,3 +1,10 @@
+## [1.0.16](https://github.com/aziontech/azion-web-kit/compare/v1.0.15...v1.0.16) (2024-02-09)
+
+
+### Bug Fixes
+
+* newsletter border ([4bbfd51](https://github.com/aziontech/azion-web-kit/commit/4bbfd5106563840561e41f273bd5e320b21eeb20))
+
 ## [1.0.15](https://github.com/aziontech/azion-web-kit/compare/v1.0.14...v1.0.15) (2024-02-09)
 
 
