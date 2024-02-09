@@ -41,7 +41,7 @@
         }
     }">
       <template #item="{ item }">
-          <a v-if="item.href" :href="href">
+          <a v-if="item.href" :href="item.href">
             <div class="p-menuitem-link !py-0 flex">
               <div class="flex gap-2">
                 <div>
