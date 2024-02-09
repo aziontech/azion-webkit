@@ -1,3 +1,10 @@
+## [1.0.15](https://github.com/aziontech/azion-web-kit/compare/v1.0.14...v1.0.15) (2024-02-09)
+
+
+### Bug Fixes
+
+* button card search size mobile ([5454d6a](https://github.com/aziontech/azion-web-kit/commit/5454d6a600434c678f435eb1a26c396d315b71ef))
+
 ## [1.0.14](https://github.com/aziontech/azion-web-kit/compare/v1.0.13...v1.0.14) (2024-02-09)
 
 
