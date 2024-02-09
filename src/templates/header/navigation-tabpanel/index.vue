@@ -106,7 +106,7 @@
                                 <p class="text-sm">
                                  {{ block.description }}
                                 </p>
-                                <a :href="block.link.href" :title="block.link.label" class="p-button p-button-link p-button-sm p-0 mt-2">
+                                <a :href="block.link.href" target="_blank" :title="block.link.label" class="p-button p-button-link p-button-sm p-0 mt-2">
                                   {{ block.link.label }}
                                   <i class="pi pi-angle-right"></i>
                                 </a>
