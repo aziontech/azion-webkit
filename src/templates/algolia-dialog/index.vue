@@ -7,6 +7,7 @@
     v-model:visible="isDialogActive"
     class="w-[95vw] md:w-[85vw] lg:w-[75vw] xl:w-[65vw]"
     @hide="toggleDialog(false)"
+    dismissableMask
     :pt="{
       content: {
         class: 'p-0'
@@ -53,6 +54,7 @@ onUpdated(() => {
 })
 
 function toggleDialog(action) {
+  console.log(action)
   if(!action) {
     isDialogActive.value = false
     emit('close')
