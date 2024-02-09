@@ -41,7 +41,8 @@
         }
     }">
       <template #item="{ item }">
-          <a v-if="item.href" :href="item.href">
+        <div v-if="item.href" class="flex">
+          <a :href="item.href" :title="item.label">
             <div class="p-menuitem-link !py-0 flex">
               <div class="flex gap-2">
                 <div>
@@ -58,14 +59,16 @@
                   </small>
                 </div>
               </div>
-
-              <span
-                v-if="item.items && item.items.length"
-                class="pi pi-angle-down text-primary ml-auto"></span>
             </div>
           </a>
 
-          <a v-else :href="item.url" :target="item.target">
+          <span
+            v-if="item.items && item.items.length"
+            class="pi pi-angle-down text-primary ml-auto pr-4"></span>
+        </div>
+
+        <div v-else class="flex">
+          <a :href="item.url" :title="item.label" :target="item.target">
             <div class="p-menuitem-link !py-0 flex">
               <div class="flex gap-2">
                 <div>
@@ -82,12 +85,12 @@
                   </small>
                 </div>
               </div>
-
-              <span
-                v-if="item.items && item.items.length"
-                class="pi pi-angle-down text-primary ml-auto"></span>
             </div>
           </a>
+          <span
+            v-if="item.items && item.items.length"
+            class="pi pi-angle-down text-primary ml-auto pr-4"></span>
+        </div>
       </template>
     </PanelMenu>
 
