@@ -1,3 +1,10 @@
+## [1.0.22](https://github.com/aziontech/azion-web-kit/compare/v1.0.21...v1.0.22) (2024-02-15)
+
+
+### Bug Fixes
+
+* acessibility corrections ([#58](https://github.com/aziontech/azion-web-kit/issues/58)) ([153016f](https://github.com/aziontech/azion-web-kit/commit/153016feab48b994cdf882f3a0c393ba452f80fc))
+
 ## [1.0.21](https://github.com/aziontech/azion-web-kit/compare/v1.0.20...v1.0.21) (2024-02-09)
 
 
