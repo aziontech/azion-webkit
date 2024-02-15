@@ -6,10 +6,9 @@
           <a :href="`/${lang}/`" title="Azion Technologies" class="mb-4 block" aria-label="Azion logo">
             <AzionLogo class="h-[26px]" />
           </a>
-          <p>
-            {{ cta.text }}
-            <br>
-            <span class="text-[#F3652B]">{{ cta.phone }}</span>
+          <p class="flex lg:flex-col">
+            {{ cta.text }}&nbsp;
+            <span class="text-color-secondary">{{ cta.phone }}</span>
           </p>
         </div>
         <div class="w-full lg:w-3/4 grid grid-cols-2 gap-8 md:grid-cols-5">
@@ -32,7 +31,7 @@
         <Divider />
       </div>
       <div class="md:hidden flex gap-3" v-if="socialButtons">
-        <LinkIcon v-for="({ icon, link, title }, index) in socialButtons" :key="index" :icon="icon" :link="link" :tooltipText="title"/>
+        <LinkIcon v-for="({ icon, link, title }, index) in socialButtons" :aria-label="title" :key="index" :icon="icon" :link="link" :tooltipText="title"/>
       </div>
       <div class="flex justify-between md:items-center flex-col md:flex-row gap-8">
         <div class="flex gap-3">

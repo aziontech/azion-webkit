@@ -20,7 +20,7 @@
       </Dropdown>
     </div>
     <div class="min-w-fit flex items-center md:items-start">
-      <Button class="h-8" size="small" @click="activeDialog" outlined>
+      <Button class="h-8" size="small" @click="activeDialog" outlined aria-label="Search posts">
         <span class="p-button-icon md:mr-2 pi pi-search" />
         <span class="md:block hidden"> {{ inputPlaceholder }} </span>
       </Button>
