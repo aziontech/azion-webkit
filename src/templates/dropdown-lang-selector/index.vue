@@ -1,5 +1,5 @@
 <template>
-  <Dropdown class="w-full" v-if="i18nPages" :options="i18nPages" :autoOptionFocus="false" optionLabel="lang"
+  <Dropdown class="w-full" v-if="i18nPages" :options="i18nPages" :aria-label="activeLang.lang" :autoOptionFocus="false" optionLabel="lang"
     :pt="{ item: { class: 'p-0' } }" :modelValue="activeLang.lang">
     <template #value="slotProps">
       <div v-if="slotProps.value">

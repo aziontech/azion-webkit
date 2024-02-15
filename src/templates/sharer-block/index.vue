@@ -2,7 +2,7 @@
   <div class="flex gap-3">
     <div id="clipboard" tabindex="-1" v-tooltip.focus.top="{ value: tooltipText, showDelay: 200 }">
       <Button severity="primary" id="clipboardButton" icon="pi pi-link" @click="copyToClipboard" outlined
-        v-tooltip.top="{ value: 'Clipboard', showDelay: 200 }" />
+        v-tooltip.top="{ value: 'Clipboard', showDelay: 200 }" aria-label="clipboard"  />
     </div>
     <IconLinkButton v-for="({ link, icon, title }, index) in data" :aria-label="title" :link="link" :icon="icon" :key="index"
       :tooltipText="title" />
