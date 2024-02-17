@@ -25,7 +25,7 @@
         <span class="md:block hidden"> {{ inputPlaceholder }} </span>
       </Button>
       <AlgoliaDialog
-        :isDialogActive="isDialogActive" @close="closeDialog"
+        :isDialogActive="isDialogActive" @close="closeDialog" :inputPlaceholder="inputPlaceholder"
         :algoliaAppId="algoliaAppId" :algoliaApiKey="algoliaApiKey" :algoliaIndex="algoliaIndex" :algoliaModel="algoliaModel"
       />
     </div>
