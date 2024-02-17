@@ -1,3 +1,11 @@
+## [1.0.23](https://github.com/aziontech/azion-web-kit/compare/v1.0.22...v1.0.23) (2024-02-17)
+
+
+### Bug Fixes
+
+* tab search search input placeholder ([63ba66a](https://github.com/aziontech/azion-web-kit/commit/63ba66a12cce5e442f53828ec9c7b810a470e364))
+* tab search search input placeholder ([e3cd190](https://github.com/aziontech/azion-web-kit/commit/e3cd1902820d7b65e9614c12985347e4c2406244))
+
 ## [1.0.22](https://github.com/aziontech/azion-web-kit/compare/v1.0.21...v1.0.22) (2024-02-15)
 
 
