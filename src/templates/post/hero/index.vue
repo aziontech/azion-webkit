@@ -10,9 +10,11 @@
               <p v-else class="p-menuitem-link"> <span class="text-color-secondary"> {{ item.label }} </span></p>
             </template>
           </Breadcrumb>
+          <meta itemprop="name" :content="title" />
           <h1 itemprop="headline" class="text-3xl lg:text-4xl font-medium text-color">
             {{ title }}
           </h1>
+          <meta itemprop="alternateName" :content="description" />
           <h2  itemprop="alternateHeadline" class="font-normal text-xl lg:text-2xl text-color-secondary">
             {{ description }}
           </h2>
