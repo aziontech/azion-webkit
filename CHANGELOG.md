@@ -1,3 +1,10 @@
+## [1.0.25](https://github.com/aziontech/azion-web-kit/compare/v1.0.24...v1.0.25) (2024-02-19)
+
+
+### Bug Fixes
+
+* trigger ([5a19172](https://github.com/aziontech/azion-web-kit/commit/5a19172767c433d072763e112ca447ee19fb2d69))
+
 ## [1.0.24](https://github.com/aziontech/azion-web-kit/compare/v1.0.23...v1.0.24) (2024-02-19)
 
 
