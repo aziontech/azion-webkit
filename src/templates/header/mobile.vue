@@ -19,13 +19,8 @@
       header: { class: 'hidden' }
     }">
 
-    <div class="flex justify-end mb-4">
-      <Button
-        outlined
-        @click="visibleRight=false"
-        class="flex-none w-8 h-8"
-        icon="pi pi-times"
-        size="small" />
+    <div class="flex justify-end py-4">
+      <Button outlined @click="visibleRight=false" class="flex-none w-8 h-8" icon="pi pi-times" size="small" />
     </div>
 
     <PanelMenu
@@ -43,7 +38,7 @@
     }">
       <template #item="{ item }">
         <div v-if="item.href" class="flex">
-          <a :href="item.href" :title="item.label">
+          <a :href="item.href" :title="item.label" class="py-2">
             <div class="p-menuitem-link !py-0 flex">
               <div class="flex gap-2">
                 <div>
@@ -69,7 +64,7 @@
         </div>
 
         <div v-else class="flex">
-          <a :href="item.url" :title="item.label" :target="item.target">
+          <a :href="item.url" :title="item.label" :target="item.target" class="py-2">
             <div class="p-menuitem-link !py-0 flex">
               <div class="flex gap-2">
                 <div>
@@ -79,7 +74,7 @@
                 </div>
                 <div>
                   <p class="text-color text-sm">
-                    {{ item.label }}
+                    <strong>{{ item.label }}</strong>
                   </p>
                   <small class="text-xs">
                     {{ item.description }}
