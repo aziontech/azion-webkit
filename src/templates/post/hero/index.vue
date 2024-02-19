@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col gap-8 lg:gap-10">
-      <div class="flex gap-6 lg:gap-8 flex-col w-full">
+      <div itemscope itemtype="http://schema.org/BlogPosting" class="flex gap-6 lg:gap-8 flex-col w-full">
         <div class="flex flex-col gap-5 lg:gap-6">
           <Breadcrumb :model="breadcrumbItems" class="-ml-1">
             <template #item="{ item, props }">
@@ -10,14 +10,16 @@
               <p v-else class="p-menuitem-link"> <span class="text-color-secondary"> {{ item.label }} </span></p>
             </template>
           </Breadcrumb>
-          <h1 class="text-3xl lg:text-4xl font-medium text-color">
+          <meta itemprop="name" :content="title" />
+          <h1 itemprop="headline" class="text-3xl lg:text-4xl font-medium text-color">
             {{ title }}
           </h1>
-          <p class="font-normal text-xl lg:text-2xl text-color-secondary">
+          <meta itemprop="alternateName" :content="description" />
+          <h2  itemprop="alternateHeadline" class="font-normal text-xl lg:text-2xl text-color-secondary">
             {{ description }}
-          </p>
+          </h2>
         </div>
-        <p class="font-normal text-xs text-color-secondary">
+        <p itemprop="datePublished" class="font-normal text-xs text-color-secondary">
           {{ date }}
         </p>
         <div v-if="authors" class="flex flex-col md:flex-row gap-4 md:gap-8">
@@ -26,7 +28,7 @@
               <div class="w-8 flex items-center">
                 <Avatar size="xlarge" :image="`${avatar}?ims=40x40`" :ariaLabel="`${title} - ${role}`" shape="circle" />
               </div>
-              <div>
+              <div itemprop="author">
                 <p class="font-normal text-sm">
                   {{ title }}
                 </p>
@@ -39,7 +41,7 @@
         </div>
       </div>
       <div class="flex gap-4 md:gap-0 flex-wrap justify-between items-center">
-        <div class="flex flex-wrap gap-2" v-if="tagList">
+        <div class="flex flex-wrap gap-2" v-if="tagList" itemprop="keywords">
           <template v-for="({ tag, tagLink }, index) in tagList" :key="index">
             <a :href="tagLink" :title="tag" target="_blank" rel="noopener noreferrer">
               <Tag :value="tag" severity="info" />
