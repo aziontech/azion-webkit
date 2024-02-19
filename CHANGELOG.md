@@ -1,3 +1,11 @@
+## [1.0.24](https://github.com/aziontech/azion-web-kit/compare/v1.0.23...v1.0.24) (2024-02-19)
+
+
+### Bug Fixes
+
+* mobile items space and close position ([1769576](https://github.com/aziontech/azion-web-kit/commit/1769576b6f8be15c2e7cdb5f48224eb846c13bcd))
+* search pagination clickable area ([bff637e](https://github.com/aziontech/azion-web-kit/commit/bff637efe0e38aa495f5a4e80b1a1b6716d49488))
+
 ## [1.0.23](https://github.com/aziontech/azion-web-kit/compare/v1.0.22...v1.0.23) (2024-02-17)
 
 
