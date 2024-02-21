@@ -15,7 +15,7 @@
             {{ title }}
           </h1>
           <meta itemprop="alternateName" :content="description" />
-          <h2  itemprop="alternateHeadline" class="font-normal text-xl lg:text-2xl text-color-secondary">
+          <h2  itemprop="alternativeHeadline" class="font-normal text-xl lg:text-2xl text-color-secondary">
             {{ description }}
           </h2>
         </div>
