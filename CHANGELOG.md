@@ -1,3 +1,10 @@
+## [1.0.26](https://github.com/aziontech/azion-web-kit/compare/v1.0.25...v1.0.26) (2024-02-21)
+
+
+### Bug Fixes
+
+* blogPosting scheme error ([9204ec2](https://github.com/aziontech/azion-web-kit/commit/9204ec2c31680164e5182d5ac9447f0c4d44a9eb))
+
 ## [1.0.25](https://github.com/aziontech/azion-web-kit/compare/v1.0.24...v1.0.25) (2024-02-19)
 
 
