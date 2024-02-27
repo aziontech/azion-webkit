@@ -1,4 +1,3 @@
-
 import AlgoliaSearch from './templates/algolia/index.vue'
 import AlgoliaDialog from './templates/algolia-dialog/index.vue'
 import ButtonBlockList from './templates/button-block-list/index.vue'
@@ -35,6 +34,7 @@ import ContentSection from "./templates/content-section-block/index.vue"
 import EmptyState from "./templates/empty-state-block/index.vue"
 import ErrorStateBlock from "./templates/error-state-block/index.vue"
 import ContentQuoteBlock from "./templates/content-quote-block/index.vue"
+import HeroBlockBase from './templates/hero-block-base/index.vue';
 
 export {
   AlgoliaSearch,
@@ -72,5 +72,6 @@ export {
   EmptyState,
   TabMenuSearchLink,
   ErrorStateBlock,
-  ContentSection
+  ContentSection,
+  HeroBlockBase
 }
