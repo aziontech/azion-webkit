@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/aziontech/azion-web-kit/compare/v1.0.26...v1.1.0) (2024-02-27)
+
+
+### Features
+
+* new overline design ([6be1807](https://github.com/aziontech/azion-web-kit/commit/6be1807618c5099d4a1663aa9993522ebdbc7dad))
+
 ## [1.0.26](https://github.com/aziontech/azion-web-kit/compare/v1.0.25...v1.0.26) (2024-02-21)
 
 
