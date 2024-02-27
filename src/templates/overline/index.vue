@@ -1,5 +1,5 @@
 <template>
-  <span class="text-xs font-normal uppercase tracking-[.375rem] text-[#F3652B]">
+  <span class=" text-xs text-color-secondary font-mono uppercase leading-none tracking-widest">
     {{ label }}
   </span>
 </template>

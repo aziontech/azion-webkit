@@ -13,6 +13,13 @@ export default {
       transitionProperty: {
         width: "width"
       },
+      fontFamily: {
+        'mono': '"Roboto Mono"', 
+      },
+      letterSpacing: {
+        widest: '0.12em',
+      },
+
       width: {
         'slide': '300px',
       },
