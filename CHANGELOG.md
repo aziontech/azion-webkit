@@ -1,3 +1,11 @@
+## [1.1.2](https://github.com/aziontech/azion-web-kit/compare/v1.1.1...v1.1.2) (2024-02-28)
+
+
+### Bug Fixes
+
+* add justify-center and overline is not required ([684b207](https://github.com/aziontech/azion-web-kit/commit/684b20788c7acaec354403636b9eb43f38e08bbe))
+* adding iconPos and icon prop ([9e7d506](https://github.com/aziontech/azion-web-kit/commit/9e7d506ac847769a4a27b0e74b7e7d50a9c4a1b7))
+
 ## [1.1.1](https://github.com/aziontech/azion-web-kit/compare/v1.1.0...v1.1.1) (2024-02-28)
 
 
