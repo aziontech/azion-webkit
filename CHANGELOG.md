@@ -1,3 +1,11 @@
+## [1.1.3](https://github.com/aziontech/azion-web-kit/compare/v1.1.2...v1.1.3) (2024-02-28)
+
+
+### Bug Fixes
+
+* adjust vifs ([447d610](https://github.com/aziontech/azion-web-kit/commit/447d6105fa00eaf691cd430dfeff11baeeea91af))
+* removendo zindex ([708dbb1](https://github.com/aziontech/azion-web-kit/commit/708dbb1837db8fae6f22a6584e93d6323066fad0))
+
 ## [1.1.2](https://github.com/aziontech/azion-web-kit/compare/v1.1.1...v1.1.2) (2024-02-28)
 
 
