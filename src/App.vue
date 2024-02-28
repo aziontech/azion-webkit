@@ -1,6 +1,6 @@
 <template>
   <div class="surface-section py-20">
-    <div class="px-container w-full gap-40">
+    <div class="px-container w-full flex flex-col gap-20">
       <ContentSectionBlock
           v-bind="{
               overline:'Get Started',
