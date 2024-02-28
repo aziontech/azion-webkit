@@ -7,16 +7,19 @@
       <div class=" w-full flex flex-col gap-10 z-10" :class="[
         { 'lg:max-w-xl': !isCentralized },
         { 'items-center': isCentralized },
+        { 'justify-center': justify === 'center' }
       ]">
         <div class="flex flex-col gap-4" :class="[
           { 'max-w-3xl text-center gap-8': isCentralized },
           { 'max-w-2xl': !isCentralized}
         ]">
-          <Overline v-if="overline" :label="overline" />
+          <Overline v-if="overline && overline.length" :label="overline" />
           <h1 class="text-4xl font-medium">
             {{ title }}
           </h1>
-          <p v-if="description" class="text-color-secondary text-base leading-relaxed text-balance"> {{ description }}</p>
+          <p v-if="description" class="text-color-secondary text-base leading-relaxed text-balance">
+            {{ description }}
+          </p>
         </div>
         <div
           v-if="$slots.actions"
@@ -27,6 +30,7 @@
         </div>
         <slot name="content" />
       </div>
+
       <div class="w-full">
         <slot name="main" />
       </div>
@@ -35,26 +39,29 @@
 </template>
 
 <script setup>
-import Overline from "../../templates/overline/index.vue"
+  import Overline from "../../templates/overline/index.vue"
 
-defineProps({
-  overline: {
-    type: String,
-    required: true
-  },
-  title: {
-    type: String,
-    required: true
-  },
-  description: {
-    type: String,
-    required: true
-  },
-  isCentralized: {
-    type: Boolean,
-    required: false,
-    default: false
-  }
-})
-
+  defineProps({
+    overline: {
+      type: String,
+      required: false
+    },
+    title: {
+      type: String,
+      required: true
+    },
+    description: {
+      type: String,
+      required: true
+    },
+    justify: {
+      type: String,
+      required: false
+    },
+    isCentralized: {
+      type: Boolean,
+      required: false,
+      default: false
+    }
+  });
 </script>

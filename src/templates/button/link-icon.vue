@@ -1,8 +1,11 @@
 <template>
-  <a :href="link" target="_blank" rel="noopener noreferrer"
+  <a
+    :href="link"
+    target="_blank"
+    rel="noopener noreferrer"
     class="p-button p-component p-button-icon-only p-button-primary p-button-outlined"
-    v-tooltip.top="{ value: tooltipText, showDelay: 200 }"
-  >
+    v-tooltip.top="{ value: tooltipText, showDelay: 200 }">
+
     <span :class="`p-button-icon ${icon}`" data-pc-section="icon"></span>
   </a>
 </template>
