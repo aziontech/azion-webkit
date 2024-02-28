@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="px-container flex flex-col w-full gap-20" :class="[
+    <div class="px-container flex flex-col w-full gap-10 md:gap-20" :class="[
       { 'lg:flex-row': position !== 'center' },
       { 'lg:flex-row-reverse': position == 'right'}
     ]">
@@ -18,19 +18,17 @@
           </h1>
           <p class="text-color-secondary text-base leading-relaxed text-balance"> {{ description }}</p>
         </div>
-            <div
-              v-if="$slots.actions"
-              class="flex flex-col sm:flex-row gap-3 w-full"
-              :class="[
-                { 'justify-center' : isContentCentralized }
-              ]">
-              <slot name="actions" />
-            </div>
+        <div
+          v-if="$slots.actions"
+          class="flex flex-col sm:flex-row gap-3 w-full"
+          :class="[
+            { 'items-center text-center' : isContentCentralized }
+          ]">
+          <slot name="actions" />
+        </div>
         <slot name="content" />
       </div>
-      <div class="w-full" :class="[
-        { 'flex flex-col justify-center': position !== 'center'}
-      ]">
+      <div class="w-full" :class="[{ 'flex flex-col justify-center': position !== 'center'}]">
         <slot name="main" />
       </div>
     </div>

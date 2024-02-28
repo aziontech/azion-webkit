@@ -4,7 +4,7 @@
     :title="label"
     target="_blank"
     rel="noopener noreferrer"
-    class="p-button p-component p-button-sm min-w-fit no-underline flex gap-2"
+    class="p-button p-component p-button-sm min-w-fit no-underline justify-center md:justify-start gap-2 px-4"
     :class="{'p-button-outlined' : outlined }">
 
     <span

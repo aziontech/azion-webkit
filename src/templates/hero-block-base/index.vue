@@ -1,5 +1,5 @@
 <template>
-  <section class="py-16">
+  <section class="pt-16">
     <div class="px-container flex flex-col w-full gap-10" :class="[
       { 'lg:flex-row': !isCentralized },
       { 'items-center': isCentralized },
