@@ -61,6 +61,7 @@ export {
 
   FeaturedPost,
   Footer,
+  FormContactUs,
 
   Header,
   HeaderDialogAlgoliaSearch,
@@ -91,7 +92,5 @@ export {
   TagListBlock,
   TitleFlexList,
   TitleVerticalList,
-
-  FormContactUs,
 }
 
