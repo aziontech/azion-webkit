@@ -1,6 +1,6 @@
 <template>
   <div class="surface-section py-20">
-    <div class="px-container w-full flex flex-col gap-0">
+    <div class="px-container w-full flex flex-col gap-40">
       <ContentSectionBlock
             v-bind="{
                 overline:'Market Recognition',
@@ -68,7 +68,27 @@
                     </Card>
                 </div>
             </template>
-        </ContentSectionBlock>
+      </ContentSectionBlock>
+      <ContentSectionBlock
+            v-bind="{
+                overline:'Market Recognition',
+                title:'What analysts say about Azion',
+                position:'center',
+                isContentCentralized:'true'}"
+        >
+            <template #content>
+              <ContentQuoteBlock
+                class="p-8 w-fit"
+                :data="{
+                    0:{text:'Appointed Azion’s serverless edge platform heightens business agility by empowering developers to build and scale their applications.',
+                    label:'Frost & Sullivan Best Practices Award, North.',
+                    imageLight:'src/mock/logos/light/frostandsullivan-logo.svg',
+                    imageDark:'src/mock/logos/dark/frostandsullivan-logo.svg'}
+                }"
+                :is-carousel="true"
+              />
+            </template>
+      </ContentSectionBlock>
     </div>
   </div>
 </template>
