@@ -3,18 +3,18 @@
     <Carousel :value="data" :numVisible="1" :numScroll="1" :circular="true" :autoplayInterval="3000"
     :pt="{ item: { class: 'flex justify-center '}}">
       <template #item="slotProps">
-        <div class="flex flex-col items-center gap-7 max-w-xl text-center">
-          <p class="text-xl">{{ slotProps.data.text }}</p>
+        <div class="flex flex-col items-center gap-7 max-w-xl text-center text-balance">
+          <p class="text-base leading-relaxed">{{ slotProps.data.text }}</p>
           <div class="flex flex-col gap-3 items-center">
             <ImageSwitcher>
               <template #lightImage>
-                <img :src="`${slotProps.data.imageLight}?ims=x40`" loading="lazy" height="40" />
+                <img :src="`${slotProps.data.imageLight}?ims=x40`" loading="lazy" width="160" />
               </template>
               <template #darkImage>
-                <img :src="`${slotProps.data.imageDark}?ims=x40`" loading="lazy" height="40"/>
+                <img :src="`${slotProps.data.imageDark}?ims=x40`" loading="lazy" width="160"/>
               </template>
             </ImageSwitcher>
-            <p class="text-xs text-color-secondary"> {{ slotProps.data.label }}</p>
+            <p class="text-xs text-color-secondary leading-normal"> {{ slotProps.data.label }}</p>
           </div>
         </div>
       </template>
@@ -23,18 +23,18 @@
   <div v-else>
     <div class="flex flex-col gap-12 items-center">
       <template v-for="({text, imageLight, imageDark, label}, i) in data" :key="i">
-        <div class="flex gap-16">
-          <p class="max-w-md text-xl">{{ text }}</p>
-          <div class="flex flex-col gap-3 items-center">
+        <div class="flex gap-16 items-center">
+          <p class="max-w-md text-sm leading-relaxed">{{ text }}</p>
+          <div class="flex flex-col gap-3 items-start min-w-[180px]">
             <ImageSwitcher>
               <template #lightImage>
-                <img :src="`${imageLight}?ims=x40`" loading="lazy" height="40" />
+                <img :src="`${imageLight}?ims=x40`" loading="lazy" width="160"/>
               </template>
               <template #darkImage>
-                <img :src="`${imageDark}?ims=x40`" loading="lazy" height="40"/>
+                <img :src="`${imageDark}?ims=x40`" loading="lazy" width="160"/>
               </template>
             </ImageSwitcher>
-            <p class="text-xs text-color-secondary"> {{ label }}</p>
+            <p class="text-xs text-color-secondary leading-normal"> {{ label }}</p>
           </div>
         </div>
       </template>
