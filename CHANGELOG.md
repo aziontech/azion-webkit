@@ -1,3 +1,10 @@
+## [1.1.8](https://github.com/aziontech/azion-web-kit/compare/v1.1.7...v1.1.8) (2024-02-28)
+
+
+### Bug Fixes
+
+* hero and section block with content section ([af7e8ec](https://github.com/aziontech/azion-web-kit/commit/af7e8ec46abcdab7cbbc3923e987d7a01b990453))
+
 ## [1.1.7](https://github.com/aziontech/azion-web-kit/compare/v1.1.6...v1.1.7) (2024-02-28)
 
 
