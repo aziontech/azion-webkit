@@ -1,14 +1,27 @@
 <template>
-  <TabMenuSearch
-    :tabList="categories" :inputPlaceholder="inputPlaceholder"
-    @indexChanged="handleFilterByCategoryEvent"
-    :algoliaAppId="algoliaAppId" :algoliaApiKey="algoliaApiKey"
-    :algoliaIndex="algoliaIndex" :algoliaModel="algoliaModel" />
-  <CardGridListLoadMore :data="dataList" :buttonText="buttonText" :loadMoreNumber="loadMoreNumber" :pt="pt"/>
+  <template v-if="isSearchEnabled">
+    <TabMenuSearch
+      :tabList="categories" :inputPlaceholder="inputPlaceholder"
+      @indexChanged="handleFilterByCategoryEvent"
+      :algoliaAppId="algoliaAppId" :algoliaApiKey="algoliaApiKey"
+      :algoliaIndex="algoliaIndex" :algoliaModel="algoliaModel"
+    />
+  </template>
+  <template v-else>
+    <TabMenu :tabList="categories" @indexChanged="handleFilterByCategoryEvent" />
+  </template>
+  <template v-if="isLoadMoreEnabled">
+    <CardGridListLoadMore :data="dataList" :buttonText="buttonText" :loadMoreNumber="loadMoreNumber" :pt="pt" :cardType="cardType"/>
+  </template>
+  <template v-else>
+    <CardGridList :data="dataList" :cardType="cardType" :pt="pt"/>
+  </template>
 </template>
 
 <script setup>
-import CardGridListLoadMore from "../card-grid-list/withLoadMore.vue"
+import CardGridListLoadMore from "../card-grid-list/withLoadMore.vue";
+import TabMenu from "../tab-menu/index.vue"
+import CardGridList from "../card-grid-list/index.vue"
 import TabMenuSearch from "../tab-menu/with-search.vue"
 import { ref } from "vue";
 
@@ -45,12 +58,26 @@ const props = defineProps({
   pt: {
     type: Object,
     required: false,
-    default: () => ({})
+    default: () => { return { class: "md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4" }}
   },
   algoliaAppId: String,
   algoliaApiKey: String,
   algoliaIndex: Array,
-  algoliaModel: Array
+  algoliaModel: Array,
+  isSearchEnabled: {
+    type: Boolean,
+    required: false,
+    default: false
+  },
+  isLoadMoreEnabled: {
+    type: Boolean,
+    required: false,
+    default: false
+  },
+  cardType: {
+    type: String,
+    required: true
+  }
 });
 
 const { data, defaultTab } = props;

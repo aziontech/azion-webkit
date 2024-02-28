@@ -17,7 +17,7 @@ export const newsletterSubrscribeHandler = async (formData, email) => {
         {
           objectTypeId: '0-1',
           name: 'firstname',
-          value: email.value
+          value: ''
         }
       ],
       context: {
