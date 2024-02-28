@@ -3,7 +3,6 @@ import AlgoliaSearch from './templates/algolia/index.vue';
 import ArticleHero from "./templates/post/hero/index.vue";
 import Button from './templates/button/index.vue';
 import ButtonBlockList from './templates/button-block-list/index.vue';
-import Card from './templates/card/index.vue';
 import CardGridBlock from './templates/card-grid-block/index.vue';
 import CardGridList from './templates/card-grid-list/index.vue';
 import CardGridListWithLoadMore from './templates/card-grid-list/withLoadMore.vue';
@@ -36,7 +35,7 @@ import TabMenuSearchLink from "./templates/tab-menu/with-search-link.vue";
 import TagListBlock from "./templates/tag-block-list/index.vue";
 import TitleFlexList from './templates/title-grid-list/index.vue';
 import TitleVerticalList from './templates/title-list/index.vue';
-
+import FormContactUs from './templates/forms/contact-us.vue'
 
 export {
   AlgoliaDialog,
@@ -46,10 +45,10 @@ export {
   Button,
   ButtonBlockList,
 
-  Card,
   CardGridBlock,
-  CardGridList,
   CardGridListWithLoadMore,
+  CardGridList,
+
   ContentLogoBlock,
   ContentQuoteBlock,
   ContentSection,
@@ -62,6 +61,7 @@ export {
 
   FeaturedPost,
   Footer,
+  FormContactUs,
 
   Header,
   HeaderDialogAlgoliaSearch,

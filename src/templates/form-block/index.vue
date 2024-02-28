@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-column justify-center items-center">
-  <div class="border surface-border rounded-md max-w-xl">
+  <div class="flex flex-column">
+  <div class="border surface-border rounded-md">
     <div class="p-8 flex flex-col gap-8">
         <div class="flex flex-col gap-2">
         <h5 class="text-xl font-medium"> {{ title }} </h5>
