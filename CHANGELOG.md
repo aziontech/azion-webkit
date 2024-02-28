@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/aziontech/azion-web-kit/compare/v1.1.0...v1.1.1) (2024-02-28)
+
+
+### Bug Fixes
+
+* gap-10 to gap-20 content-section-block ([7d6fd98](https://github.com/aziontech/azion-web-kit/commit/7d6fd98c35f9ae99eed391bbfe43ce7bc50a2583))
+* hover navigation tabpanel ([59db8c7](https://github.com/aziontech/azion-web-kit/commit/59db8c7d874d28803182fb1a944bf4876211f1ca))
+
 ## [1.1.0](https://github.com/aziontech/azion-web-kit/compare/v1.0.26...v1.1.0) (2024-02-27)
 
 
