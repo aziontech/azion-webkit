@@ -3,8 +3,8 @@
     <Carousel :value="data" :numVisible="1" :numScroll="1" :circular="true" :autoplayInterval="3000"
     :pt="{ item: { class: 'flex justify-center '}}">
       <template #item="slotProps">
-        <div class="flex flex-col items-center gap-7 max-w-xl text-center text-balance">
-          <p class="text-base leading-relaxed">{{ slotProps.data.text }}</p>
+        <div class="flex flex-col items-center gap-7 max-w-xl text-center">
+          <p class="text-base leading-relaxed text-balance">{{ slotProps.data.text }}</p>
           <div class="flex flex-col gap-3 items-center">
             <ImageSwitcher>
               <template #lightImage>
