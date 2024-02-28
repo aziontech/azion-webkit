@@ -4,7 +4,7 @@
       { 'lg:flex-row': !isCentralized },
       { 'items-center': isCentralized },
     ]">
-      <div class=" w-full flex flex-col gap-10 z-10" :class="[
+      <div class="w-full flex flex-col gap-10" :class="[
         { 'lg:max-w-xl': !isCentralized },
         { 'items-center': isCentralized },
         { 'justify-center': justify === 'center' }
