@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/aziontech/azion-web-kit/compare/v1.1.5...v1.1.6) (2024-02-28)
+
+
+### Bug Fixes
+
+* link button icon, content section padding and hero block base ([2085a44](https://github.com/aziontech/azion-web-kit/commit/2085a44dfb4b7b9e36b965b5006e1d9cebd6fba0))
+
 ## [1.1.5](https://github.com/aziontech/azion-web-kit/compare/v1.1.4...v1.1.5) (2024-02-28)
 
 
