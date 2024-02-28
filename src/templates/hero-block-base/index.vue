@@ -9,8 +9,8 @@
         { 'items-center': isCentralized },
         { 'justify-center': justify === 'center' }
       ]">
-        <div class="flex flex-col gap-4" :class="[
-          { 'max-w-3xl text-center gap-8': isCentralized },
+        <div class="flex flex-col gap-5" :class="[
+          { 'max-w-3xl text-center': isCentralized },
           { 'max-w-2xl': !isCentralized}
         ]">
           <Overline v-if="overline && overline.length" :label="overline" />
