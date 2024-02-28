@@ -1,12 +1,13 @@
 <template>
-  <nav>
+  <nav class="hidden lg:flex">
     <ul class="flex gap-4">
       <li v-for="(menuitem, index) in menuData.items" :key="index">
         <a
           v-if="!menuitem.items || !menuitem.items.length"
           :href="menuitem.href || ''"
           :title="menuitem.label || ''"
-          class="p-button p-button-text p-button-primary p-button-sm whitespace-nowrap hover:bg-header-button-hover hidden lg:flex">
+          class="p-button p-button-text p-button-primary p-button-sm whitespace-nowrap text-white bg-header hover:bg-header-button-hover">
+
           <span class="text-white">
             {{ menuitem.label }}
           </span>
@@ -19,7 +20,7 @@
             :label="menuitem.label"
             icon-pos="right"
             icon="pi pi-angle-down"
-            class="hidden lg:flex hover:bg-header-button-hover whitespace-nowrap"
+            class="whitespace-nowrap text-white bg-header active:bg-header-button-hover hover:bg-header-button-hover"
             @click="(event) => { toggle(event, menuitem.ref); active = 0; }"
             :pt="{
               label: { class: 'text-white' },

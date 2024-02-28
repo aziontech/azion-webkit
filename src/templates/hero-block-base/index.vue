@@ -7,28 +7,34 @@
       <div class=" w-full flex flex-col gap-10" :class="[
         { 'lg:max-w-xl': !isCentralized },
         { 'items-center': isCentralized },
+        { 'justify-center': justify === 'center' }
       ]">
         <div class="flex flex-col gap-4" :class="[
           { 'max-w-2xl text-center': isCentralized },
           { 'max-w-xl': !isCentralized}
         ]">
-          <Overline :label="overline" />
-          <h1 class="text-3xl">
+
+          <Overline v-if="overline && overline.length" :label="overline" />
+          <h1 class="text-3xl font-medium">
             {{ title }}
           </h1>
-          <p class="text-color-secondary text-sm"> {{ description }}</p>
-          <div class="flex flex-row gap-3" :class="[
-            { 'justify-center': isCentralized },
-          ]">
-          <div class="flex flex-col sm:flex-row gap-3 w-full"
-          :class="{ 'justify-center': isCentralized }"
-          >
-            <slot name="actions" />
-          </div>
+          <p class="text-color-secondary text-sm">
+            {{ description }}
+          </p>
+          <div
+            class="flex flex-row gap-3"
+            :class="[{ 'justify-center': isCentralized }]">
+
+            <div
+              class="flex flex-col sm:flex-row gap-3 w-full"
+              :class="{ 'justify-center': isCentralized }">
+              <slot name="actions" />
+            </div>
           </div>
         </div>
         <slot name="content" />
       </div>
+
       <div class="w-full">
         <slot name="main" />
       </div>
@@ -37,26 +43,29 @@
 </template>
 
 <script setup>
-import Overline from "../../templates/overline/index.vue"
+  import Overline from "../../templates/overline/index.vue"
 
-defineProps({
-  overline: {
-    type: String,
-    required: true
-  },
-  title: {
-    type: String,
-    required: true
-  },
-  description: {
-    type: String,
-    required: true
-  },
-  isCentralized: {
-    type: Boolean,
-    required: false,
-    default: false
-  }
-})
-
+  defineProps({
+    overline: {
+      type: String,
+      required: false
+    },
+    title: {
+      type: String,
+      required: true
+    },
+    description: {
+      type: String,
+      required: true
+    },
+    justify: {
+      type: String,
+      required: false
+    },
+    isCentralized: {
+      type: Boolean,
+      required: false,
+      default: false
+    }
+  });
 </script>
