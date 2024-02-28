@@ -16,7 +16,7 @@
           <h1 class="text-3xl font-medium">
             {{ title }}
           </h1>
-          <p class="text-color-secondary text-sm"> {{ description }}</p>
+          <p class="text-color-secondary text-base leading-relaxed text-balance"> {{ description }}</p>
         </div>
             <div v-if="$slots.actions" class="flex flex-col sm:flex-row gap-3 w-full justify-center">
               <slot name="actions" />
