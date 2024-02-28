@@ -1,31 +1,29 @@
 <template>
-  <section class="py-16 surface-section">
+  <section class="py-16">
     <div class="px-container flex flex-col w-full gap-10" :class="[
       { 'lg:flex-row': !isCentralized },
       { 'items-center': isCentralized },
     ]">
-      <div class=" w-full flex flex-col gap-10" :class="[
+      <div class=" w-full flex flex-col gap-10 z-10" :class="[
         { 'lg:max-w-xl': !isCentralized },
         { 'items-center': isCentralized },
       ]">
         <div class="flex flex-col gap-4" :class="[
-          { 'max-w-2xl text-center': isCentralized },
-          { 'max-w-xl': !isCentralized}
+          { 'max-w-3xl text-center gap-8': isCentralized },
+          { 'max-w-2xl': !isCentralized}
         ]">
-          <Overline :label="overline" />
-          <h1 class="text-3xl">
+          <Overline v-if="overline" :label="overline" />
+          <h1 class="text-4xl font-medium">
             {{ title }}
           </h1>
-          <p class="text-color-secondary text-sm"> {{ description }}</p>
-          <div class="flex flex-row gap-3" :class="[
-            { 'justify-center': isCentralized },
-          ]">
-          <div class="flex flex-col sm:flex-row gap-3 w-full"
+          <p v-if="description" class="text-color-secondary text-base leading-relaxed text-balance"> {{ description }}</p>
+        </div>
+        <div
+          v-if="$slots.actions"
+          class="flex flex-col sm:flex-row gap-3 w-full"
           :class="{ 'justify-center': isCentralized }"
-          >
-            <slot name="actions" />
-          </div>
-          </div>
+        >
+          <slot name="actions" />
         </div>
         <slot name="content" />
       </div>
