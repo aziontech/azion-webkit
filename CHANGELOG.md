@@ -1,3 +1,15 @@
+## [1.1.4](https://github.com/aziontech/azion-web-kit/compare/v1.1.3...v1.1.4) (2024-02-28)
+
+
+### Bug Fixes
+
+* ajuste gap entre slots ([df7f918](https://github.com/aziontech/azion-web-kit/commit/df7f91823afa936e0880ca7b61e41b6fbb231ed5))
+* ajustes classes description ([40362a5](https://github.com/aziontech/azion-web-kit/commit/40362a5503382f6c995e6e3e6baa21a8cb7fae7e))
+* ajustes design section block ([471f9eb](https://github.com/aziontech/azion-web-kit/commit/471f9ebd2e95db4f78eb38e91ab0d12acfdc86ff))
+* gaps to gap5 ([e8b154b](https://github.com/aziontech/azion-web-kit/commit/e8b154bbef068a2db5346b5142d6fb2a009a975d))
+* update app content for tests ([b00093c](https://github.com/aziontech/azion-web-kit/commit/b00093c69b52a55e76a7c94a1ed072dfd168fdfd))
+* update app content for tests ([db74388](https://github.com/aziontech/azion-web-kit/commit/db74388434b3444501b462adb5944bf424803674))
+
 ## [1.1.3](https://github.com/aziontech/azion-web-kit/compare/v1.1.2...v1.1.3) (2024-02-28)
 
 
