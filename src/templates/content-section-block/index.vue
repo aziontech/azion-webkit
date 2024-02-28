@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="px-container flex flex-col w-full gap-10" :class="[
+    <div class="px-container flex flex-col w-full gap-20" :class="[
       { 'lg:flex-row': position !== 'center' },
       { 'lg:flex-row-reverse': position == 'right'}
     ]">
