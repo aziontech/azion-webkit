@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/aziontech/azion-web-kit/compare/v1.1.6...v1.1.7) (2024-02-28)
+
+
+### Bug Fixes
+
+* export ContentLogoBlock ([998cad1](https://github.com/aziontech/azion-web-kit/commit/998cad12cca496297cded9110f3d25a9b9a0cc98))
+
 ## [1.1.6](https://github.com/aziontech/azion-web-kit/compare/v1.1.5...v1.1.6) (2024-02-28)
 
 
