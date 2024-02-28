@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/aziontech/azion-web-kit/compare/v1.1.4...v1.1.5) (2024-02-28)
+
+
+### Bug Fixes
+
+* centralized button ([a51e6bf](https://github.com/aziontech/azion-web-kit/commit/a51e6bfd69861f657a0a2084be988cd37214985a))
+
 ## [1.1.4](https://github.com/aziontech/azion-web-kit/compare/v1.1.3...v1.1.4) (2024-02-28)
 
 
