@@ -3,6 +3,7 @@
     <div class="px-container w-full flex flex-col gap-40">
       <HeroBlockBase
         v-bind="{
+          overline:'teste de overline',
           title:'Edge platform to build, secure, and scale applications anywhere',
           description:'Over 100+ Azion edge locations around the globe, plus your remote devices, on-premises, and cloud infrastructure.',
           isCentralized:true
@@ -20,6 +21,7 @@
       </HeroBlockBase>
       <HeroBlockBase
         v-bind="{
+          overline:'teste de overline',
           title:'Encontre, teste e implemente softwares habilitados para o edge que rodam em qualquer lugar.',
           description:'Over 100+ Azion edge locations around the globe, plus your remote devices, on-premises, and cloud infrastructure.',
           isCentralized:false
