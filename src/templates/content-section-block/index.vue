@@ -12,11 +12,17 @@
           { 'max-w-xl': position !== 'center' },
           { 'items-center text-center' : isContentCentralized }
         ]">
-          <Overline :label="overline" />
-          <h1 class="text-3xl font-medium">
-            {{ title }}
-          </h1>
-          <p class="text-color-secondary text-base leading-relaxed text-balance"> {{ description }}</p>
+          <Overline v-if="overline && overline.length" :label="overline" />
+          <h1 v-if="titleTag === 'h1'" class="text-3xl font-medium">{{ title }}</h1>
+          <h2 v-if="titleTag === 'h2'" class="text-3xl font-medium">{{ title }}</h2>
+          <h3 v-if="titleTag === 'h3'" class="text-3xl font-medium">{{ title }}</h3>
+          <h4 v-if="titleTag === 'h4'" class="text-3xl font-medium">{{ title }}</h4>
+          <h5 v-if="titleTag === 'h5'" class="text-3xl font-medium">{{ title }}</h5>
+          <h6 v-if="titleTag === 'h6'" class="text-3xl font-medium">{{ title }}</h6>
+
+          <p
+            v-if="description"
+            class="text-color-secondary text-base leading-relaxed text-balance"> {{ description }}</p>
         </div>
         <div
           v-if="$slots.actions"
@@ -36,7 +42,7 @@
 </template>
 
 <script setup>
-import Overline from "../../templates/overline/index.vue"
+import Overline from "../../templates/overline/index.vue";
 
 defineProps({
   overline: {
@@ -46,6 +52,11 @@ defineProps({
   title: {
     type: String,
     required: true
+  },
+  titleTag: {
+    type: String,
+    required: false,
+    default: 'h2'
   },
   description: {
     type: String,
@@ -62,5 +73,5 @@ defineProps({
     required: false,
     default: false
   }
-})
+});
 </script>
