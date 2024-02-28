@@ -1,3 +1,10 @@
+## [1.1.9](https://github.com/aziontech/azion-web-kit/compare/v1.1.8...v1.1.9) (2024-02-28)
+
+
+### Bug Fixes
+
+* abstractions; feat: components for cases ([#66](https://github.com/aziontech/azion-web-kit/issues/66)) ([c74e3b6](https://github.com/aziontech/azion-web-kit/commit/c74e3b6a8746eab124572bb3a26e9033e2be4499))
+
 ## [1.1.8](https://github.com/aziontech/azion-web-kit/compare/v1.1.7...v1.1.8) (2024-02-28)
 
 
