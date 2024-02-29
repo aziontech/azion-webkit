@@ -3,6 +3,7 @@
     <div class="px-container flex flex-col w-full gap-10" :class="[
       { 'lg:flex-row': !isCentralized },
       { 'items-center': isCentralized },
+      { 'flex-col-reverse': isReverse }
     ]">
       <div class="w-full flex flex-col gap-10" :class="[
         { 'lg:max-w-xl': !isCentralized },
@@ -53,6 +54,11 @@
       type: String,
       required: false
     },
+    isReverse: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
     title: {
       type: String,
       required: true
@@ -64,7 +70,7 @@
     },
     description: {
       type: String,
-      required: true
+      required: false
     },
     justify: {
       type: String,
