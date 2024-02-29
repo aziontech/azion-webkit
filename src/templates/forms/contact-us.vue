@@ -9,10 +9,7 @@
           </div>
           <div class="flex flex-column gap-2">
             <label class="text-sm" for="email">{{ t.email }}</label>
-            <span class="p-input-icon-left w-full">
-              <i class="pi pi-envelope" />
-              <InputText v-model="email" id="email" class="w-full" />
-            </span>
+            <InputText v-model="email" id="email" class="w-full" />
           </div>
           <div class="flex flex-column gap-2">
             <label class="text-sm" for="segment">{{ t.segment }}</label>
@@ -37,12 +34,12 @@
     </template>
     <template #actions>
       <div class="w-full flex flex-col gap-8">
-        <div class="flex flex-col md:flex-row gap-2 justify-between w-full">
+        <div class="flex flex-col md:flex-row gap-6 justify-between w-full">
           <div class="flex gap-2 items-center">
             <Checkbox v-model="termsAcceptance" id="terms" :binary="true" />
             <label for="terms" class="text-sm"> {{ t.terms }}</label>
           </div>
-          <Button size="small" @click="onSubmit()"> {{ t.buttonText }} </Button>
+          <Button class="justify-center lg:justify-start" size="small" @click="onSubmit()"> {{ t.buttonText }} </Button>
         </div>
         <p class="text-color-secondary text-sm"> {{ t.azionPrivacy }} </p>
       </div>
