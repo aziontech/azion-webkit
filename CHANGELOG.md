@@ -1,3 +1,10 @@
+## [1.5.0](https://github.com/aziontech/azion-web-kit/compare/v1.4.0...v1.5.0) (2024-02-29)
+
+
+### Features
+
+* producst card ([3492419](https://github.com/aziontech/azion-web-kit/commit/349241913a551d1ca1d138e788235819147229c9))
+
 ## [1.4.0](https://github.com/aziontech/azion-web-kit/compare/v1.3.0...v1.4.0) (2024-02-29)
 
 
