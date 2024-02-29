@@ -1,3 +1,10 @@
+## [1.1.13](https://github.com/aziontech/azion-web-kit/compare/v1.1.12...v1.1.13) (2024-02-29)
+
+
+### Bug Fixes
+
+* overline on footer ([64d7d56](https://github.com/aziontech/azion-web-kit/commit/64d7d56c28479f48d3e79ab45050ef31908b53fc))
+
 ## [1.1.12](https://github.com/aziontech/azion-web-kit/compare/v1.1.11...v1.1.12) (2024-02-29)
 
 
