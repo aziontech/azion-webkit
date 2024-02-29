@@ -1,3 +1,10 @@
+## [1.3.0](https://github.com/aziontech/azion-web-kit/compare/v1.2.0...v1.3.0) (2024-02-29)
+
+
+### Features
+
+* add isReverse attr ([427d308](https://github.com/aziontech/azion-web-kit/commit/427d308aef923ff73e9b2920c946a9cc9d3f5ff1))
+
 ## [1.2.0](https://github.com/aziontech/azion-web-kit/compare/v1.1.13...v1.2.0) (2024-02-29)
 
 
