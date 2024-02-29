@@ -118,7 +118,7 @@
   // Imports Components
   import Card from 'primevue/card'
 
-  // Imports Templates 
+  // Imports Templates
   import ContentSectionBlock from './templates/content-section-block/index.vue'
   import LinkButton from './templates/button/link.vue';
   import Stats from './templates/stats/index.vue';
