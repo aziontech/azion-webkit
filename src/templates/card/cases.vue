@@ -2,7 +2,7 @@
   <a :href="link" :title="description" class="no-underline flex group w-full md:max-w-sm">
     <Card
       :pt="{
-        root: { class: 'w-full p-6 shadow-none bg-transparent flex flex-col gap-9 rounded-md border surface-border overflow-hidden group:' }
+        root: { class: 'w-full p-6 shadow-none bg-transparent flex flex-col gap-9 rounded-md border surface-border overflow-hidden group-hover:border-current' }
       }">
       <template #header>
         <div class="flex justify-between items-center">
@@ -17,7 +17,7 @@
       </template>
     </Card>
   </a>
-</template>
+</template>``
 
 <script setup>
 import Card from 'primevue/card';

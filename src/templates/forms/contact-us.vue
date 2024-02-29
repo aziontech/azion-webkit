@@ -1,32 +1,32 @@
 <template>
   <FormBlock :title="t.title" :description="t.description">
     <template #content>
-      <form @submit.prevent="onSubmit" id="contact-us" class="w-full">
+      <form id="contact-us" class="w-full">
         <div class="flex flex-col gap-8">
-          <div class="flex flex-column gap-4">
+          <div class="flex flex-column gap-2">
             <label class="text-sm" for="name">{{ t.name }}</label>
             <InputText id="name" v-model="name" />
           </div>
-          <div class="flex flex-column gap-4">
+          <div class="flex flex-column gap-2">
             <label class="text-sm" for="email">{{ t.email }}</label>
             <span class="p-input-icon-left w-full">
               <i class="pi pi-envelope" />
               <InputText v-model="email" id="email" class="w-full" />
             </span>
           </div>
-          <div class="flex flex-column gap-4">
+          <div class="flex flex-column gap-2">
             <label class="text-sm" for="segment">{{ t.segment }}</label>
             <Dropdown
               id="segment" v-model="segment" :options="t.segmentData" optionLabel="label"
               :placeholder="t.segmentPlaceholder" class="w-full md:w-14rem" />
           </div>
-          <div class="flex flex-column gap-4">
+          <div class="flex flex-column gap-2">
             <label class="text-sm" for="message">{{ t.message }}</label>
             <Textarea name="message" v-model="message" rows="5" cols="30" />
           </div>
         </div>
       </form>
-      <div class="mt-2">
+      <div class="mt-2" v-if="responseStatus !== 'default'">
         <InlineMessage v-if="responseStatus === 'success'" severity="success" class="flex justify-start">
           {{ responseMessages.success }}
         </InlineMessage>
@@ -37,8 +37,8 @@
     </template>
     <template #actions>
       <div class="w-full flex flex-col gap-8">
-        <div class="flex flex-wrap justify-between w-full">
-          <div class="flex gap-2 align-items-center">
+        <div class="flex flex-col md:flex-row gap-2 justify-between w-full">
+          <div class="flex gap-2 items-center">
             <Checkbox v-model="termsAcceptance" id="terms" :binary="true" />
             <label for="terms" class="text-sm"> {{ t.terms }}</label>
           </div>

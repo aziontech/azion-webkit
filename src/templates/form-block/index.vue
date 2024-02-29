@@ -6,9 +6,9 @@
         <h5 class="text-xl font-medium"> {{ title }} </h5>
         <p class="text-sm text-color-secondary"> {{ description }} </p>
       </div>
-      <form>
+      <template v-if="$slots.content">
         <slot name="content" />
-      </form>
+      </template>
     </div>
     <div class="py-4 px-8 border-t surface-border flex flex-row gap-3 justify-end">
       <slot name="actions" />

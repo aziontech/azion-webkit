@@ -15,6 +15,7 @@ import EmptyState from "./templates/empty-state-block/index.vue";
 import ErrorStateBlock from "./templates/error-state-block/index.vue";
 import FeaturedPost from './templates/featured-post/index.vue';
 import Footer from './templates/footer/index.vue';
+import FormContactUs from './templates/forms/contact-us.vue'
 import Header from './templates/header/index.vue';
 import HeaderDialogAlgoliaSearch from './templates/header/dialog-algolia-search/index.vue';
 import HeaderLogoAzion from './templates/header/visualid/azion/index.vue';
@@ -35,7 +36,6 @@ import TabMenuSearchLink from "./templates/tab-menu/with-search-link.vue";
 import TagListBlock from "./templates/tag-block-list/index.vue";
 import TitleFlexList from './templates/title-grid-list/index.vue';
 import TitleVerticalList from './templates/title-list/index.vue';
-import FormContactUs from './templates/forms/contact-us.vue'
 
 export {
   AlgoliaDialog,
