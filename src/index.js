@@ -6,6 +6,7 @@ import ButtonBlockList from './templates/button-block-list/index.vue';
 import CardGridBlock from './templates/card-grid-block/index.vue';
 import CardGridList from './templates/card-grid-list/index.vue';
 import CardGridListWithLoadMore from './templates/card-grid-list/withLoadMore.vue';
+import CardProduct from "./templates/card/products.vue"
 import ContentLogoBlock from './templates/content-logo-block/index.vue';
 import ContentQuoteBlock from './templates/content-quote-block/index.vue';
 import ContentSection from "./templates/content-section-block/index.vue";
@@ -49,6 +50,7 @@ export {
   CardGridBlock,
   CardGridListWithLoadMore,
   CardGridList,
+  CardProduct,
 
   ContentLogoBlock,
   ContentQuoteBlock,

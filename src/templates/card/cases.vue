@@ -17,7 +17,7 @@
       </template>
     </Card>
   </a>
-</template>``
+</template>
 
 <script setup>
 import Card from 'primevue/card';
