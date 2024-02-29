@@ -1,3 +1,17 @@
+## [1.2.0](https://github.com/aziontech/azion-web-kit/compare/v1.1.13...v1.2.0) (2024-02-29)
+
+
+### Features
+
+* added 7 items bento ([f995771](https://github.com/aziontech/azion-web-kit/commit/f99577193f480e3033565b888fe12e32f4678fe4))
+* update app for tests ([eb370a4](https://github.com/aziontech/azion-web-kit/commit/eb370a4839439d54b70a063af6c7dd41e95b00ee))
+
+
+### Bug Fixes
+
+* update classes ([332c61e](https://github.com/aziontech/azion-web-kit/commit/332c61e20622827c673c79841d3a8b44714e8b32))
+* update classes ([721a97f](https://github.com/aziontech/azion-web-kit/commit/721a97f9741138d13d85b0d0502d36d1c94b8a2d))
+
 ## [1.1.13](https://github.com/aziontech/azion-web-kit/compare/v1.1.12...v1.1.13) (2024-02-29)
 
 
