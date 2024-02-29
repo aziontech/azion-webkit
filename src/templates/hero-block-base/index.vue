@@ -32,8 +32,7 @@
         <div
           v-if="$slots.actions"
           class="flex flex-col sm:flex-row gap-3 w-full"
-          :class="{ 'justify-center': isCentralized }"
-        >
+          :class="{ 'justify-center': isCentralized }">
           <slot name="actions" />
         </div>
         <slot name="content" />
