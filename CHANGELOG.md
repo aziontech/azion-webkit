@@ -1,3 +1,10 @@
+## [1.4.0](https://github.com/aziontech/azion-web-kit/compare/v1.3.0...v1.4.0) (2024-02-29)
+
+
+### Features
+
+* reverse theme colors ([a3a0bb3](https://github.com/aziontech/azion-web-kit/commit/a3a0bb3aa47a42c5d10ef8f4f79f808fc5a4f2ff))
+
 ## [1.3.0](https://github.com/aziontech/azion-web-kit/compare/v1.2.0...v1.3.0) (2024-02-29)
 
 
