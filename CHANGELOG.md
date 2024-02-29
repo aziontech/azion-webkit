@@ -1,3 +1,10 @@
+## [1.1.10](https://github.com/aziontech/azion-web-kit/compare/v1.1.9...v1.1.10) (2024-02-29)
+
+
+### Bug Fixes
+
+* hydration + card hover ([cc24cd9](https://github.com/aziontech/azion-web-kit/commit/cc24cd984ff2db266ff96271a60388f85b684bc7))
+
 ## [1.1.9](https://github.com/aziontech/azion-web-kit/compare/v1.1.8...v1.1.9) (2024-02-28)
 
 
