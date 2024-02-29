@@ -1,3 +1,10 @@
+## [1.1.12](https://github.com/aziontech/azion-web-kit/compare/v1.1.11...v1.1.12) (2024-02-29)
+
+
+### Bug Fixes
+
+* export GridBentoBlock ([c5b815d](https://github.com/aziontech/azion-web-kit/commit/c5b815d4dd2a3b43efc9c182e8e27b3eeedc34d5))
+
 ## [1.1.11](https://github.com/aziontech/azion-web-kit/compare/v1.1.10...v1.1.11) (2024-02-29)
 
 
