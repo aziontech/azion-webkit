@@ -1,94 +1,115 @@
 <template>
   <div class="surface-section py-20">
-    <div class="px-container w-full flex flex-col gap-40">
+    <div class="px-container w-full flex flex-col gap-20">
       <ContentSectionBlock
-            v-bind="{
-                overline:'Market Recognition',
-                title:'What analysts say about Azion',
-                position:'center',
-                isContentCentralized:'true'}"
+          v-bind="{
+              overline:'Get Started',
+              title:'Sign-up and get U$300 to use for 12 months',
+              description:'All products and features, no upfront commitment required—cancel anytime.',
+              position:'center',
+              isContentCentralized:'true'}"
+      >
+        <template #actions>
+            <LinkButton label="Free Account" link="" />
+            <LinkButton label="Talk to an Expert" link="" outlined />
+        </template>
+      </ContentSectionBlock>
+      <ContentSectionBlock
+                v-bind="{
+                    overline:'Results with Azion',
+                    title:'Our customers succeed, we succeed',
+                    position:'center',
+                    isContentCentralized:'true'}"
         >
             <template #main>
-                <div class="grid gap-6 md:gap-8 grid-cols-2">
-                    <Card class="w-fit">
-                        <template #content>
-                            <ContentQuoteBlock
-                            class="p-8 w-fit"
-                                :data="{
-                                    0:{text:'Azion Named Strong Performer and a good fit for large enterprises seeking to accelerate innovation at the edge with serverless full-stack applications.',
-                                    label:'Edge Development Platforms, Q4 2021.',
-                                    imageLight:'src/mock/logos/light/forrester-logo.svg',
-                                    imageDark:'src/mock/logos/dark/forrester-logo.svg'}
+                <Card>
+                    <template #content>
+                        <div class="flex flex-wrap gap-8 justify-center md:flex-row lg:justify-between w-full py-10 md:px-10 px-4">
+                            <Stats
+                                v-bind="{
+                                    bigNumber:'80%',
+                                    description:'Better TCO',
+                                    isCentralized:true
                                 }"
-                                :is-carousel="false"
                             />
-                        </template>
-                    </Card>
-                    <Card class="w-fit">
-                        <template #content>
-                            <ContentQuoteBlock
-                            class="p-8 w-fit"
-                                :data="{
-                                    0:{text:'Azion Named a Leader and identified as the only purpose-built edge platform whose capabilities meet all the key criteria described in the report',
-                                    label:'GigaOms Radar for Edge Platforms.',
-                                    imageLight:'src/mock/logos/light/gigaom-logo.svg',
-                                    imageDark:'src/mock/logos/dark/gigaom-logo.svg'}
+                            <Stats
+                                v-bind="{
+                                    bigNumber:'20%',
+                                    description:'Faster Deployments',
+                                    isCentralized:true
                                 }"
-                                :is-carousel="false"
                             />
-                        </template>
-                    </Card>
-                    <Card class="w-fit">
-                        <template #content>
-                            <ContentQuoteBlock
-                            class="p-8 w-fit"
-                                :data="{
-                                    0:{text:'Gartner clients state that Azion excels in providing a consultative approach toward orchestration and serverless edge application environments.',
-                                    label:'Gartner Competitive Landscape for CDN and Edge Services.',
-                                    imageLight:'src/mock/logos/light/gartner-logo.svg',
-                                    imageDark:'src/mock/logos/dark/gartner-logo.svg'}
+                            <Stats
+                                v-bind="{
+                                    bigNumber:'100%',
+                                    description:'Availability',
+                                    isCentralized:true
                                 }"
-                                :is-carousel="false"
                             />
-                        </template>
-                    </Card>
-                    <Card class="w-fit">
-                        <template #content>
-                            <ContentQuoteBlock
-                            class="p-8 w-fit"
-                                :data="{
-                                    0:{text:'Appointed Azion’s serverless edge platform heightens business agility by empowering developers to build and scale their applications.',
-                                    label:'Frost & Sullivan Best Practices Award, North.',
-                                    imageLight:'src/mock/logos/light/frostandsullivan-logo.svg',
-                                    imageDark:'src/mock/logos/dark/frostandsullivan-logo.svg'}
+                            <Stats
+                                v-bind="{
+                                    bigNumber:'10x',
+                                    description:'Faster Applications',
+                                    isCentralized:true
                                 }"
-                                :is-carousel="false"
                             />
-                        </template>
-                    </Card>
+                            <Stats
+                                v-bind="{
+                                    bigNumber:'15m',
+                                    description:'Response Time',
+                                    isCentralized:true
+                                }"
+                            />
+                        </div>
+                    </template>
+                </Card>
+            </template>
+        </ContentSectionBlock>
+  </div>
+    <div class="px-container w-full flex flex-col gap-40">
+      <HeroBlockBase
+        v-bind="{
+          overline:'teste de overline',
+          title:'Edge platform to build, secure, and scale applications anywhere',
+          description:'Over 100+ Azion edge locations around the globe, plus your remote devices, on-premises, and cloud infrastructure.',
+          isCentralized:true
+        }"
+      >
+            <template #main>
+                <div class="flex justify-center items-center border surface-border h-52">
+                  Teste
                 </div>
             </template>
-      </ContentSectionBlock>
-      <ContentSectionBlock
-            v-bind="{
-                overline:'Market Recognition',
-                title:'What analysts say about Azion',
-                position:'center',
-                isContentCentralized:'true'}"
-        >
+            <template #actions>
+                <LinkButton label="Free Account" link="" />
+                <LinkButton label="Talk to an Expert" link="" outlined />
+            </template>
+      </HeroBlockBase>
+      <HeroBlockBase
+        v-bind="{
+          overline:'teste de overline',
+          title:'Encontre, teste e implemente softwares habilitados para o edge que rodam em qualquer lugar.',
+          description:'Over 100+ Azion edge locations around the globe, plus your remote devices, on-premises, and cloud infrastructure.',
+          isCentralized:false
+        }"
+      >
             <template #content>
-              <ContentQuoteBlock
-                class="p-8 w-fit"
-                :data="{
-                    0:{text:'Appointed Azion’s serverless edge platform heightens business agility by empowering developers to build and scale their applications.',
-                    label:'Frost & Sullivan Best Practices Award, North.',
-                    imageLight:'src/mock/logos/light/frostandsullivan-logo.svg',
-                    imageDark:'src/mock/logos/dark/frostandsullivan-logo.svg'}
-                }"
-                :is-carousel="true"
+              <ContentLogoBlock
+                :is-centralized="false"
+                title="Logo title"
+                :logos="{0:{imageSrc:'https://www.azion.com/static/images/v3/home/logo-rbs.png',alt:'Item 1'},1:{imageSrc:'https://www.azion.com/static/images/v3/home/logo-rbs.png',alt:'Item 1'},2:{imageSrc:'https://www.azion.com/static/images/v3/home/logo-rbs.png',alt:'Item 1'},3:{imageSrc:'https://www.azion.com/static/images/v3/home/logo-rbs.png',alt:'Item 1'},4:{imageSrc:'https://www.azion.com/static/images/v3/home/logo-rbs.png',alt:'Item 1'},5:{imageSrc:'https://www.azion.com/static/images/v3/home/logo-rbs.png',alt:'Item 1'},6:{imageSrc:'https://www.azion.com/static/images/v3/home/logo-rbs.png',alt:'Item 1'},7:{imageSrc:'https://www.azion.com/static/images/v3/home/logo-rbs.png',alt:'Item 1'},8:{imageSrc:'https://www.azion.com/static/images/v3/home/logo-rbs.png',alt:'Item 1'},9:{imageSrc:'https://www.azion.com/static/images/v3/home/logo-rbs.png',alt:'Item 1'},10:{imageSrc:'https://www.azion.com/static/images/v3/home/logo-rbs.png',alt:'Item 1'},11:{imageSrc:'https://www.azion.com/static/images/v3/home/logo-rbs.png',alt:'Item 1'}}"
               />
             </template>
-      </ContentSectionBlock>
+            <template #main>
+                <div class="flex justify-center items-center border surface-border h-52">
+                  Teste
+                </div>
+            </template>
+            <template #actions>
+                <LinkButton label="Free Account" link="" />
+                <LinkButton label="Talk to an Expert" link="" outlined />
+            </template>
+      </HeroBlockBase>
     </div>
   </div>
 </template>
@@ -97,7 +118,8 @@
   // Imports Components
   import Card from 'primevue/card'
 
-  // Imports Templates 
+  // Imports Templates
   import ContentSectionBlock from './templates/content-section-block/index.vue'
-  import ContentQuoteBlock from './templates/content-quote-block/index.vue'
+  import LinkButton from './templates/button/link.vue';
+  import Stats from './templates/stats/index.vue';
 </script>

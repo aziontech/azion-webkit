@@ -1,3 +1,102 @@
+## [1.1.13](https://github.com/aziontech/azion-web-kit/compare/v1.1.12...v1.1.13) (2024-02-29)
+
+
+### Bug Fixes
+
+* overline on footer ([64d7d56](https://github.com/aziontech/azion-web-kit/commit/64d7d56c28479f48d3e79ab45050ef31908b53fc))
+
+## [1.1.12](https://github.com/aziontech/azion-web-kit/compare/v1.1.11...v1.1.12) (2024-02-29)
+
+
+### Bug Fixes
+
+* export GridBentoBlock ([c5b815d](https://github.com/aziontech/azion-web-kit/commit/c5b815d4dd2a3b43efc9c182e8e27b3eeedc34d5))
+
+## [1.1.11](https://github.com/aziontech/azion-web-kit/compare/v1.1.10...v1.1.11) (2024-02-29)
+
+
+### Bug Fixes
+
+* prose headings weight, form sections, form button ([6b21c54](https://github.com/aziontech/azion-web-kit/commit/6b21c54664f453ec0e18d39bb3a7cf6361193cdd))
+
+## [1.1.10](https://github.com/aziontech/azion-web-kit/compare/v1.1.9...v1.1.10) (2024-02-29)
+
+
+### Bug Fixes
+
+* hydration + card hover ([cc24cd9](https://github.com/aziontech/azion-web-kit/commit/cc24cd984ff2db266ff96271a60388f85b684bc7))
+
+## [1.1.9](https://github.com/aziontech/azion-web-kit/compare/v1.1.8...v1.1.9) (2024-02-28)
+
+
+### Bug Fixes
+
+* abstractions; feat: components for cases ([#66](https://github.com/aziontech/azion-web-kit/issues/66)) ([c74e3b6](https://github.com/aziontech/azion-web-kit/commit/c74e3b6a8746eab124572bb3a26e9033e2be4499))
+
+## [1.1.8](https://github.com/aziontech/azion-web-kit/compare/v1.1.7...v1.1.8) (2024-02-28)
+
+
+### Bug Fixes
+
+* hero and section block with content section ([af7e8ec](https://github.com/aziontech/azion-web-kit/commit/af7e8ec46abcdab7cbbc3923e987d7a01b990453))
+
+## [1.1.7](https://github.com/aziontech/azion-web-kit/compare/v1.1.6...v1.1.7) (2024-02-28)
+
+
+### Bug Fixes
+
+* export ContentLogoBlock ([998cad1](https://github.com/aziontech/azion-web-kit/commit/998cad12cca496297cded9110f3d25a9b9a0cc98))
+
+## [1.1.6](https://github.com/aziontech/azion-web-kit/compare/v1.1.5...v1.1.6) (2024-02-28)
+
+
+### Bug Fixes
+
+* link button icon, content section padding and hero block base ([2085a44](https://github.com/aziontech/azion-web-kit/commit/2085a44dfb4b7b9e36b965b5006e1d9cebd6fba0))
+
+## [1.1.5](https://github.com/aziontech/azion-web-kit/compare/v1.1.4...v1.1.5) (2024-02-28)
+
+
+### Bug Fixes
+
+* centralized button ([a51e6bf](https://github.com/aziontech/azion-web-kit/commit/a51e6bfd69861f657a0a2084be988cd37214985a))
+
+## [1.1.4](https://github.com/aziontech/azion-web-kit/compare/v1.1.3...v1.1.4) (2024-02-28)
+
+
+### Bug Fixes
+
+* ajuste gap entre slots ([df7f918](https://github.com/aziontech/azion-web-kit/commit/df7f91823afa936e0880ca7b61e41b6fbb231ed5))
+* ajustes classes description ([40362a5](https://github.com/aziontech/azion-web-kit/commit/40362a5503382f6c995e6e3e6baa21a8cb7fae7e))
+* ajustes design section block ([471f9eb](https://github.com/aziontech/azion-web-kit/commit/471f9ebd2e95db4f78eb38e91ab0d12acfdc86ff))
+* gaps to gap5 ([e8b154b](https://github.com/aziontech/azion-web-kit/commit/e8b154bbef068a2db5346b5142d6fb2a009a975d))
+* update app content for tests ([b00093c](https://github.com/aziontech/azion-web-kit/commit/b00093c69b52a55e76a7c94a1ed072dfd168fdfd))
+* update app content for tests ([db74388](https://github.com/aziontech/azion-web-kit/commit/db74388434b3444501b462adb5944bf424803674))
+
+## [1.1.3](https://github.com/aziontech/azion-web-kit/compare/v1.1.2...v1.1.3) (2024-02-28)
+
+
+### Bug Fixes
+
+* adjust vifs ([447d610](https://github.com/aziontech/azion-web-kit/commit/447d6105fa00eaf691cd430dfeff11baeeea91af))
+* removendo zindex ([708dbb1](https://github.com/aziontech/azion-web-kit/commit/708dbb1837db8fae6f22a6584e93d6323066fad0))
+
+## [1.1.2](https://github.com/aziontech/azion-web-kit/compare/v1.1.1...v1.1.2) (2024-02-28)
+
+
+### Bug Fixes
+
+* add justify-center and overline is not required ([684b207](https://github.com/aziontech/azion-web-kit/commit/684b20788c7acaec354403636b9eb43f38e08bbe))
+* adding iconPos and icon prop ([9e7d506](https://github.com/aziontech/azion-web-kit/commit/9e7d506ac847769a4a27b0e74b7e7d50a9c4a1b7))
+
+## [1.1.1](https://github.com/aziontech/azion-web-kit/compare/v1.1.0...v1.1.1) (2024-02-28)
+
+
+### Bug Fixes
+
+* gap-10 to gap-20 content-section-block ([7d6fd98](https://github.com/aziontech/azion-web-kit/commit/7d6fd98c35f9ae99eed391bbfe43ce7bc50a2583))
+* hover navigation tabpanel ([59db8c7](https://github.com/aziontech/azion-web-kit/commit/59db8c7d874d28803182fb1a944bf4876211f1ca))
+
 ## [1.1.0](https://github.com/aziontech/azion-web-kit/compare/v1.0.26...v1.1.0) (2024-02-27)
 
 

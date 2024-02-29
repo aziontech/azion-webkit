@@ -12,12 +12,13 @@
           </p>
         </div>
         <div class="w-full lg:w-3/4 grid grid-cols-2 gap-8 md:grid-cols-5">
-          <div :key="index" v-for="({ title, list }, index) in listData"
+          <div
+            :key="index"
+            v-for="({ title, list }, index) in listData"
             :class="listData.length - 1 === index ? 'md:col-span-2' : 'col-span-1'">
-            <p class="mb-4 w-full mt-0 text-xs text-color-secondary px-4">
-              {{ title }}
-            </p>
-            <ul class="grid list-none p-0 m-0 gap-3"
+            <!-- <p class="mb-4 w-full mt-0 text-xs text-color-secondary px-4"></p> -->
+            <Overline class="px-4" :label="title" />
+            <ul class="grid list-none p-0 m-0 mt-4 gap-3"
               :class="listData.length - 1 === index ? 'md:grid md:grid-cols-2' : 'grid-cols-1'">
               <li v-for="({ link, title }, i) in list" :key="i"
                 :class="listData.length - 1 == index ? [0, 1].includes(i) ? 'block' : 'hidden md:block' : 'block'">
@@ -52,6 +53,7 @@
 <script setup>
 import AzionLogo from '../../assets/icons/azion-logo-default.vue';
 import Divider from 'primevue/divider';
+import Overline from '../overline/index.vue';
 import LinkIcon from '../button/link-icon.vue';
 import LinkButton from '../button/link.vue';
 
