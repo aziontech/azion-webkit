@@ -1,3 +1,10 @@
+## [1.1.11](https://github.com/aziontech/azion-web-kit/compare/v1.1.10...v1.1.11) (2024-02-29)
+
+
+### Bug Fixes
+
+* prose headings weight, form sections, form button ([6b21c54](https://github.com/aziontech/azion-web-kit/commit/6b21c54664f453ec0e18d39bb3a7cf6361193cdd))
+
 ## [1.1.10](https://github.com/aziontech/azion-web-kit/compare/v1.1.9...v1.1.10) (2024-02-29)
 
 
