@@ -12,17 +12,19 @@
         {{ title }}
       </p>
 
-      <picture
-          class="flex flex-wrap m-0 gap-y-6 gap-x-8"
-          :class="{ 'justify-center': isCentralized }">
 
-        <img
-          v-for="({imageSrc, alt}) in logos"
-          :key="alt"
-          :src="`${imageSrc}?ims=x24`"
-          :alt="alt"
-          class="h-6">
-      </picture>
+
+      <div
+        class="flex flex-wrap m-0 gap-y-6 gap-x-8"
+        :class="{ 'justify-center': isCentralized }">
+
+        <div
+          :key="logo.imageSrc"
+          v-for="logo in logos">
+
+          <span v-html="logo.imageSrc"></span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
