@@ -38,6 +38,7 @@ import TabMenuSearchLink from './templates/tab-menu/with-search-link.vue'
 import TagListBlock from './templates/tag-block-list/index.vue';
 import TitleFlexList from './templates/title-grid-list/index.vue';
 import TitleVerticalList from './templates/title-list/index.vue';
+import UnorderedList from './fragments/list/unordered-list.vue';
 
 export {
   AlgoliaDialog,
@@ -97,5 +98,7 @@ export {
   TagListBlock,
   TitleFlexList,
   TitleVerticalList,
+
+  UnorderedList
 }
 
