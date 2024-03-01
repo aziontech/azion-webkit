@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/aziontech/azion-web-kit/compare/v1.6.0...v1.6.1) (2024-03-01)
+
+
+### Bug Fixes
+
+* responsive content-quote-block ([1e9b03c](https://github.com/aziontech/azion-web-kit/commit/1e9b03c98047e95ef0ca87272f898a7393dbad5b))
+
 ## [1.6.0](https://github.com/aziontech/azion-web-kit/compare/v1.5.1...v1.6.0) (2024-03-01)
 
 
