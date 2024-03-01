@@ -1,3 +1,11 @@
+## [1.7.2](https://github.com/aziontech/azion-web-kit/compare/v1.7.1...v1.7.2) (2024-03-01)
+
+
+### Bug Fixes
+
+* content-section overline ([735c810](https://github.com/aziontech/azion-web-kit/commit/735c8109634730e7e2fd089d0638f1b4affbe102))
+* content-section overline ([590a93b](https://github.com/aziontech/azion-web-kit/commit/590a93b63494d00d197346758bab46715ff9cfc0))
+
 ## [1.7.1](https://github.com/aziontech/azion-web-kit/compare/v1.7.0...v1.7.1) (2024-03-01)
 
 
