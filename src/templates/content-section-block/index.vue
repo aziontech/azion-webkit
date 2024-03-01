@@ -7,42 +7,53 @@
       <div class=" w-full flex flex-col gap-8" :class="[
         { 'items-center' : isContentCentralized }
       ]">
-        <div class="flex flex-col gap-5" :class="[
-          { 'max-w-2xl': position == 'center' },
-          { 'max-w-xl': position !== 'center' },
-          { 'items-center text-center' : isContentCentralized }
+        <div class="flex flex-col gap-5 " :class="[
+          { 'items-center text-center max-w-2xl' : isContentCentralized },
+          { 'justify-center h-full': textCenter }
         ]">
-          <Overline v-if="overline && overline.length" :label="overline" />
-          <h1 v-if="titleTag === 'h1'" class="text-3xl font-medium">{{ title }}</h1>
-          <h2 v-if="titleTag === 'h2'" class="text-3xl font-medium">{{ title }}</h2>
-          <h3 v-if="titleTag === 'h3'" class="text-3xl font-medium">{{ title }}</h3>
-          <h4 v-if="titleTag === 'h4'" class="text-3xl font-medium">{{ title }}</h4>
-          <h5 v-if="titleTag === 'h5'" class="text-3xl font-medium">{{ title }}</h5>
-          <h6 v-if="titleTag === 'h6'" class="text-3xl font-medium">{{ title }}</h6>
+          <template v-if="overline && overline.length">
+            <Overline :label="overline" />
+          </template>
+          <template v-if="title">
+            <h1 v-if="titleTag === 'h1'" class="text-3xl font-medium">{{ title }}</h1>
+            <h2 v-if="titleTag === 'h2'" class="text-3xl font-medium">{{ title }}</h2>
+            <h3 v-if="titleTag === 'h3'" class="text-xl font-medium">{{ title }}</h3>
+            <h4 v-if="titleTag === 'h4'" class="text-3xl font-medium">{{ title }}</h4>
+            <h5 v-if="titleTag === 'h5'" class="text-3xl font-medium">{{ title }}</h5>
+            <h6 v-if="titleTag === 'h6'" class="text-3xl font-medium">{{ title }}</h6>
+          </template>
+          <template v-if="description">
+            <p class="text-color-secondary text-base leading-relaxed text-balance">
+              {{ description }}
+            </p>
+          </template>
+        </div>
+        <template v-if="$slots.actions">
+            <div
+              class="flex flex-col sm:flex-row gap-3 w-full"
+              :class="[
+                { 'justify-center items-center text-center' : isContentCentralized }
+              ]">
+              <slot name="actions" />
+            </div>
+          </template>
 
-          <p
-            v-if="description"
-            class="text-color-secondary text-base leading-relaxed text-balance"> {{ description }}</p>
-        </div>
-        <div
-          v-if="$slots.actions"
-          class="flex flex-col sm:flex-row gap-3 w-full"
-          :class="[
-            { 'items-center text-center' : isContentCentralized }
-          ]">
-          <slot name="actions" />
-        </div>
-        <slot name="content" />
+
+        <template v-if="$slots.content">
+          <slot name="content" />
+        </template>
       </div>
-      <div class="w-full" :class="[{ 'flex flex-col justify-center': position !== 'center'}]">
-        <slot name="main" />
-      </div>
+      <template v-if="$slots.main">
+        <div class="w-full" :class="[{ 'flex flex-col justify-center': position !== 'center'}]">
+          <slot name="main" />
+        </div>
+      </template>
     </div>
   </section>
 </template>
 
 <script setup>
-import Overline from "../../fragments/text/overline.vue";
+import Overline from "../../templates/overline/index.vue";
 
 defineProps({
   overline: {
@@ -51,7 +62,7 @@ defineProps({
   },
   title: {
     type: String,
-    required: true
+    required: false
   },
   titleTag: {
     type: String,
@@ -69,6 +80,11 @@ defineProps({
     default: 'left'
   },
   isContentCentralized: {
+    type: Boolean,
+    required: false,
+    default: false
+  },
+  textCenter: {
     type: Boolean,
     required: false,
     default: false

@@ -15,7 +15,7 @@
     </template>
     <template #content>
       <template v-if="$slots.content || $slots.actions">
-        <div class="flex flex-col gap-8" :class="[
+        <div class="flex flex-col gap-8 justify-between" :class="[
           {'p-4 md:p-6' : spacing === 'compact'},
           {'p-5 md:p-8' : spacing === 'base'},
           {'p-6 md:p-10' : spacing === 'relaxed'},
