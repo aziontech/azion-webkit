@@ -21,9 +21,9 @@
     </Carousel>
   </div>
   <div v-else>
-    <div class="flex flex-col gap-12 items-center">
+    <div class="px-container flex flex-col gap-12 items-center">
       <template v-for="({text, imageLight, imageDark, label}, i) in data" :key="i">
-        <div class="lg:flex lg:gap-16 items-center">
+        <div class="flex flex-col lg:flex-row text-center lg:text-start lg:gap-16 items-center justify-center">
           <p class="max-w-md text-sm leading-relaxed">{{ text }}</p>
           <div class="flex flex-col gap-3 items-start min-w-[180px] mt-4 lg:mt-0">
             <ImageSwitcher>
@@ -34,7 +34,9 @@
                 <img :src="`${imageDark}?ims=x40`" loading="lazy" width="160"/>
               </template>
             </ImageSwitcher>
-            <p class="text-xs text-color-secondary leading-normal"> {{ label }}</p>
+            <template v-if="label">
+              <p class="text-xs text-color-secondary leading-normal"> {{ label }}</p>
+            </template>
           </div>
         </div>
       </template>
