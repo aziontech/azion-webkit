@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/aziontech/azion-web-kit/compare/v1.5.0...v1.5.1) (2024-03-01)
+
+
+### Bug Fixes
+
+* bento grid usability ([abd148e](https://github.com/aziontech/azion-web-kit/commit/abd148e532dab9a92c153c44e24dbbe715eb41dc))
+
 ## [1.5.0](https://github.com/aziontech/azion-web-kit/compare/v1.4.0...v1.5.0) (2024-02-29)
 
 
