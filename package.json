@@ -4,6 +4,10 @@
   "type": "module",
   "main": "./src/index.js",
   "author": "aziontech",
+  "exports": {
+    ".": "./src/index.js",
+    "./fragments": "./src/fragments.js"
+  },
   "contributors": [
     {
       "name": "Robson Junior",

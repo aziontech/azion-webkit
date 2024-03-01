@@ -53,7 +53,7 @@
 <script setup>
 import AzionLogo from '../../assets/icons/azion-logo-default.vue';
 import Divider from 'primevue/divider';
-import Overline from '../overline/index.vue';
+import Overline from '../../fragments/text/overline.vue';
 import LinkIcon from '../button/link-icon.vue';
 import LinkButton from '../button/link.vue';
 
