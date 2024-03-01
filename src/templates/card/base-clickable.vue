@@ -1,7 +1,9 @@
 <template>
   <a :href="link" :title="title" class="no-underline flex group border-radius md:max-w-sm group">
     <Card :pt="{
-      root: { class: 'w-full shadow-none bg-transparent flex flex-col rounded-md border surface-border border surface-border overflow-hidden group-hover:border-current h-full' }
+      root: { class: 'w-full shadow-none bg-transparent flex flex-col rounded-md border surface-border border surface-border overflow-hidden group-hover:border-current h-full' },
+      body: { class: 'h-full' },
+      content: { class: 'h-full' }
     }">
       <template v-if="$slots.header" #header>
         <div class="flex flex-col gap-8" :class="[

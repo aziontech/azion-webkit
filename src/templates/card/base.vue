@@ -1,6 +1,8 @@
 <template>
   <Card :pt="{
-    root: { class: 'w-full shadow-none bg-transparent flex flex-col rounded-md border surface-border overflow-hidden h-full' }
+    root: { class: 'w-full shadow-none bg-transparent flex flex-col rounded-md border surface-border overflow-hidden h-full' },
+    body: { class: 'h-full' },
+    content: { class: 'h-full' }
   }">
     <template v-if="$slots.header" #header>
       <div class="flex flex-col gap-8" :class="[
