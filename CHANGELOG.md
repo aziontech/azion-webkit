@@ -1,3 +1,10 @@
+## [1.6.0](https://github.com/aziontech/azion-web-kit/compare/v1.5.1...v1.6.0) (2024-03-01)
+
+
+### Features
+
+* unordered list ([07f95c3](https://github.com/aziontech/azion-web-kit/commit/07f95c3367dd8e860d80ffaf403226f2e9e08213))
+
 ## [1.5.1](https://github.com/aziontech/azion-web-kit/compare/v1.5.0...v1.5.1) (2024-03-01)
 
 
