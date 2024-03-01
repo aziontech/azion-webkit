@@ -1,3 +1,10 @@
+## [1.7.3](https://github.com/aziontech/azion-web-kit/compare/v1.7.2...v1.7.3) (2024-03-01)
+
+
+### Bug Fixes
+
+* content quote block mobile ([c2ba66e](https://github.com/aziontech/azion-web-kit/commit/c2ba66e3b10fe9f8e8b6ebb7a155bbce664c64bf))
+
 ## [1.7.2](https://github.com/aziontech/azion-web-kit/compare/v1.7.1...v1.7.2) (2024-03-01)
 
 
