@@ -1,3 +1,11 @@
+## [1.7.1](https://github.com/aziontech/azion-web-kit/compare/v1.7.0...v1.7.1) (2024-03-01)
+
+
+### Bug Fixes
+
+* card h-full ([4cd7497](https://github.com/aziontech/azion-web-kit/commit/4cd749760c0979680040c5be2799ce41698f94b0))
+* content block + base justify between ([6d19b91](https://github.com/aziontech/azion-web-kit/commit/6d19b9193c79687ffa8d19716801b893f3e52944))
+
 ## [1.7.0](https://github.com/aziontech/azion-web-kit/compare/v1.6.1...v1.7.0) (2024-03-01)
 
 
