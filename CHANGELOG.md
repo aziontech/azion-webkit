@@ -1,3 +1,10 @@
+## [1.7.0](https://github.com/aziontech/azion-web-kit/compare/v1.6.1...v1.7.0) (2024-03-01)
+
+
+### Features
+
+* card composition ([5d84570](https://github.com/aziontech/azion-web-kit/commit/5d845704db2760c09560ce6dce173a25fe5533aa))
+
 ## [1.6.1](https://github.com/aziontech/azion-web-kit/compare/v1.6.0...v1.6.1) (2024-03-01)
 
 
