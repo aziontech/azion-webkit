@@ -23,9 +23,9 @@
   <div v-else>
     <div class="flex flex-col gap-12 items-center">
       <template v-for="({text, imageLight, imageDark, label}, i) in data" :key="i">
-        <div class="flex gap-16 items-center">
+        <div class="lg:flex lg:gap-16 items-center">
           <p class="max-w-md text-sm leading-relaxed">{{ text }}</p>
-          <div class="flex flex-col gap-3 items-start min-w-[180px]">
+          <div class="flex flex-col gap-3 items-start min-w-[180px] mt-4 lg:mt-0">
             <ImageSwitcher>
               <template #lightImage>
                 <img :src="`${imageLight}?ims=x40`" loading="lazy" width="160"/>
