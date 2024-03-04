@@ -1,8 +1,8 @@
 <template>
   <Card :pt="{
-    root: { class: 'w-full shadow-none bg-transparent flex flex-col rounded-md border surface-border overflow-hidden h-full' },
-    body: { class: 'h-full' },
-    content: { class: 'h-full' }
+    root: { class: 'w-full shadow-none bg-transparent flex flex-col rounded-md border surface-border overflow-hidden', class: [[{ 'h-full' : grid}]] },
+    body: { class: [{ 'h-full' : grid}] },
+    content: { class: [{ 'h-full' : grid}] }
   }">
     <template v-if="$slots.header" #header>
       <div class="flex flex-col gap-8" :class="[
@@ -19,6 +19,7 @@
           {'p-4 md:p-6' : spacing === 'compact'},
           {'p-5 md:p-8' : spacing === 'base'},
           {'p-6 md:p-10' : spacing === 'relaxed'},
+          {'h-full' : grid }
         ]">
           <div class="flex flex-col gap-3">
             <slot name="content"/>
@@ -47,5 +48,9 @@ defineProps({
     options: ['compact', 'relaxed', 'base'],
     default: 'base'
   },
+  grid: {
+    type: Boolean,
+    required: false
+  }
 })
 </script>
