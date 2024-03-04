@@ -1,0 +1,29 @@
+<template>
+  <ul class="lg:flex rounded border surface-border">
+    <li
+      class="flex flex-col gap-5 p-10 w-1/2"
+      v-for="item in items" :key="item.title">
+
+      <strong class="text-6xl text-center">
+        {{ item.title }}
+      </strong>
+      <p class="text-sm text-color text-center">
+        {{ item.description }}
+      </p>
+    </li>
+  </ul>
+</template>
+
+<script setup>
+  const props = defineProps({
+    /*
+    {
+      title: { type: String, required: true },
+      description: { type: String, required: true }
+    }
+    */
+    items: { type: Array, required: true }
+  });
+
+  const { items } = props;
+</script>

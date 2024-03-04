@@ -1,6 +1,7 @@
 import AlgoliaDialog from './templates/algolia-dialog/index.vue';
 import AlgoliaSearch from './templates/algolia/index.vue';
 import ArticleHero from './templates/post/hero/index.vue';
+import BigNumbers from './templates/big-numbers/index.vue';
 import Button from './templates/button/index.vue';
 import ButtonBlockList from './templates/button-block-list/index.vue';
 import CardBase from './templates/card/base.vue'
@@ -44,6 +45,7 @@ export {
   AlgoliaSearch,
   ArticleHero,
 
+  BigNumbers,
   Button,
   ButtonBlockList,
 
