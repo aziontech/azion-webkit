@@ -1,7 +1,7 @@
 <template>
   <ul class="lg:flex rounded border surface-border">
     <li
-      class="flex flex-col gap-5 p-10 w-1/2"
+      class="flex flex-col gap-5 p-10 lg:w-1/2"
       v-for="item in items" :key="item.title">
 
       <strong class="text-6xl text-center">
