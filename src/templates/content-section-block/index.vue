@@ -44,9 +44,7 @@
         </template>
       </div>
       <template v-if="$slots.main">
-        <div class="w-full" :class="[{ 'flex flex-col justify-center': position !== 'center'}]">
-          <slot name="main" />
-        </div>
+        <slot name="main" />
       </template>
     </div>
   </section>
