@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/aziontech/azion-web-kit/compare/v1.8.1...v1.8.2) (2024-03-04)
+
+
+### Bug Fixes
+
+* content section block main unwrapped ([d29e579](https://github.com/aziontech/azion-web-kit/commit/d29e5791b2c0004c06c2893c66456505519039ff))
+
 ## [1.8.1](https://github.com/aziontech/azion-web-kit/compare/v1.8.0...v1.8.1) (2024-03-04)
 
 
