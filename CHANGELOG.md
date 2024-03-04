@@ -1,3 +1,10 @@
+## [1.8.0](https://github.com/aziontech/azion-web-kit/compare/v1.7.3...v1.8.0) (2024-03-04)
+
+
+### Features
+
+* add big numbers block ([70e40b9](https://github.com/aziontech/azion-web-kit/commit/70e40b99cac20ff5e2a0cecaae4270add1988f82))
+
 ## [1.7.3](https://github.com/aziontech/azion-web-kit/compare/v1.7.2...v1.7.3) (2024-03-01)
 
 
