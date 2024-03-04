@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/aziontech/azion-web-kit/compare/v1.8.0...v1.8.1) (2024-03-04)
+
+
+### Bug Fixes
+
+* big numbers mobile responsive ([55e8aef](https://github.com/aziontech/azion-web-kit/commit/55e8aef15920040184a38a1dad154d4661063223))
+
 ## [1.8.0](https://github.com/aziontech/azion-web-kit/compare/v1.7.3...v1.8.0) (2024-03-04)
 
 
