@@ -1,3 +1,15 @@
+## [1.9.0](https://github.com/aziontech/azion-web-kit/compare/v1.8.5...v1.9.0) (2024-03-05)
+
+
+### Features
+
+* font-weight for title card ([f71fe5f](https://github.com/aziontech/azion-web-kit/commit/f71fe5fc5c558e70c31b5c8ef1d63a6f731b1300))
+
+
+### Bug Fixes
+
+* card titlte font weight and font size ([2f3828c](https://github.com/aziontech/azion-web-kit/commit/2f3828ccaa8e219b5736b382d332361d429a636c))
+
 ## [1.8.5](https://github.com/aziontech/azion-web-kit/compare/v1.8.4...v1.8.5) (2024-03-05)
 
 

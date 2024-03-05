@@ -1,6 +1,6 @@
 {
   "name": "@aziontech/azion-web-kit",
-  "version": "1.8.5",
+  "version": "1.9.0",
   "type": "module",
   "main": "./src/index.js",
   "author": "aziontech",
