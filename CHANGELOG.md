@@ -1,3 +1,10 @@
+## [1.8.5](https://github.com/aziontech/azion-web-kit/compare/v1.8.4...v1.8.5) (2024-03-05)
+
+
+### Bug Fixes
+
+* card growth ([026a6a3](https://github.com/aziontech/azion-web-kit/commit/026a6a359aabcf20864780b38b8946559b157198))
+
 ## [1.8.4](https://github.com/aziontech/azion-web-kit/compare/v1.8.3...v1.8.4) (2024-03-05)
 
 
