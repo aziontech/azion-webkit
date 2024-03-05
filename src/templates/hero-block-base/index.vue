@@ -35,7 +35,7 @@
           :class="{ 'justify-center': isCentralized }">
           <slot name="actions" />
         </div>
-        <template v-if="$slots.main">
+        <template v-if="$slots.content">
           <slot name="content" />
         </template>
 
