@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-column">
-  <div class="border surface-border rounded-md">
-    <div class="p-4 md:p-8 flex flex-col gap-8">
+  <div class="border surface-border rounded-md p-4 md:p-8 flex flex-col gap-8">
+    <div class="flex flex-col gap-8">
         <div class="flex flex-col gap-2">
         <h5 class="text-xl font-medium"> {{ title }} </h5>
         <p class="text-sm text-color-secondary"> {{ description }} </p>
@@ -10,7 +10,7 @@
         <slot name="content" />
       </template>
     </div>
-    <div class="p-4 md:px-8 flex flex-row gap-3 justify-end">
+    <div class="flex flex-row gap-3 justify-end">
       <slot name="actions" />
     </div>
   </div>

@@ -3,19 +3,20 @@
     <template #content>
       <form id="contact-us" class="w-full">
         <div class="flex flex-col gap-8">
-          <div class="flex flex-column gap-2">
+          <div class="flex flex-column gap-2 max-w-xl">
             <label class="text-sm" for="name">{{ t.name }}</label>
-            <InputText id="name" v-model="name" />
+            <InputText id="name" v-model="name" :placeholder="t.namePlaceholder" />
           </div>
-          <div class="flex flex-column gap-2">
+          <div class="flex flex-column gap-2 max-w-xl">
             <label class="text-sm" for="email">{{ t.email }}</label>
-            <InputText v-model="email" id="email" class="w-full" />
+            <InputText v-model="email" id="email" class="w-full"
+              :placeholder="t.emailPlaceholder"/>
           </div>
-          <div class="flex flex-column gap-2">
+          <div class="flex flex-column gap-2 max-w-xs">
             <label class="text-sm" for="segment">{{ t.segment }}</label>
             <Dropdown
               id="segment" v-model="segment" :options="t.segmentData" optionLabel="label"
-              :placeholder="t.segmentPlaceholder" class="w-full md:w-14rem" />
+              :placeholder="t.segmentPlaceholder"/>
           </div>
           <div class="flex flex-column gap-2">
             <label class="text-sm" for="message">{{ t.message }}</label>
