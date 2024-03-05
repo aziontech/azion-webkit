@@ -1,3 +1,11 @@
+## [1.8.4](https://github.com/aziontech/azion-web-kit/compare/v1.8.3...v1.8.4) (2024-03-05)
+
+
+### Bug Fixes
+
+* quote framents ([859a8b2](https://github.com/aziontech/azion-web-kit/commit/859a8b226b7e7f8f20b712ea14f6361bd6b4eb21))
+* slot main to content ([00f3c0a](https://github.com/aziontech/azion-web-kit/commit/00f3c0a89a7e72c47c216e34217bc8a3d824efa4))
+
 ## [1.8.3](https://github.com/aziontech/azion-web-kit/compare/v1.8.2...v1.8.3) (2024-03-04)
 
 
