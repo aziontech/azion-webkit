@@ -35,12 +35,16 @@
           :class="{ 'justify-center': isCentralized }">
           <slot name="actions" />
         </div>
-        <slot name="content" />
-      </div>
+        <template v-if="$slots.main">
+          <slot name="content" />
+        </template>
 
-      <div class="w-full">
-        <slot name="main" />
       </div>
+      <template v-if="$slots.main">
+        <div class="w-full">
+          <slot name="main" />
+        </div>
+      </template>
     </div>
   </section>
 </template>
