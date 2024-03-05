@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/aziontech/azion-web-kit/compare/v1.9.0...v1.9.1) (2024-03-05)
+
+
+### Bug Fixes
+
+* forms ([072295f](https://github.com/aziontech/azion-web-kit/commit/072295fa685b4970ee123c10188b7454d52884b6))
+
 ## [1.9.0](https://github.com/aziontech/azion-web-kit/compare/v1.8.5...v1.9.0) (2024-03-05)
 
 
