@@ -1,3 +1,3 @@
 <template>
-  <p class="text-base"> <slot /> </p>
+  <p class="text-xl font-medium"> <slot /> </p>
 </template>
