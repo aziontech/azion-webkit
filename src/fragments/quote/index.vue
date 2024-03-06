@@ -35,22 +35,18 @@ defineProps({
   text: {
     type: String,
     required: true,
-    default: false
   },
   imageLight: {
     type: String,
     required: true,
-    default: false
   },
   imageDark: {
     type: String,
     required: true,
-    default: false
   },
   label: {
     type: String,
     required: false,
-    default: false
   }
 })
 </script>
