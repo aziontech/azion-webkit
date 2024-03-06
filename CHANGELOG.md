@@ -1,3 +1,10 @@
+## [1.11.2](https://github.com/aziontech/azion-web-kit/compare/v1.11.1...v1.11.2) (2024-03-06)
+
+
+### Bug Fixes
+
+* card focus + content section + overflow clip for card base ([1bd6352](https://github.com/aziontech/azion-web-kit/commit/1bd63521a1a06aad256259e65d078470cd3932bb))
+
 ## [1.11.1](https://github.com/aziontech/azion-web-kit/compare/v1.11.0...v1.11.1) (2024-03-06)
 
 
