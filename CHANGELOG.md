@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/aziontech/azion-web-kit/compare/v1.9.1...v1.9.2) (2024-03-06)
+
+
+### Bug Fixes
+
+* keyup enter behavior on tab-menu ([007d768](https://github.com/aziontech/azion-web-kit/commit/007d7688f32230d0f858442cd0647bcdd62b3bd5))
+
 ## [1.9.1](https://github.com/aziontech/azion-web-kit/compare/v1.9.0...v1.9.1) (2024-03-05)
 
 
