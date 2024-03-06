@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/aziontech/azion-web-kit/compare/v1.11.0...v1.11.1) (2024-03-06)
+
+
+### Bug Fixes
+
+* tab menu space ([3602b68](https://github.com/aziontech/azion-web-kit/commit/3602b68f65609cb70f0b12e0a7bb4a9935ae9032))
+
 ## [1.11.0](https://github.com/aziontech/azion-web-kit/compare/v1.10.0...v1.11.0) (2024-03-06)
 
 
