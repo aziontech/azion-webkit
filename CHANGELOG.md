@@ -1,3 +1,10 @@
+## [1.11.0](https://github.com/aziontech/azion-web-kit/compare/v1.10.0...v1.11.0) (2024-03-06)
+
+
+### Features
+
+* constraint and truncated for card description ([905bc3f](https://github.com/aziontech/azion-web-kit/commit/905bc3f79900fc707caa2f7514d3eacc56f65cae))
+
 ## [1.10.0](https://github.com/aziontech/azion-web-kit/compare/v1.9.2...v1.10.0) (2024-03-06)
 
 
