@@ -1,5 +1,5 @@
 <template>
-  <a :href="link" :title="title" class="no-underline flex group border-radius md:max-w-sm">
+  <a :href="link" :title="title" class="no-underline flex group border-radius md:max-w-sm focus:outline-[rgba(243,100,43,.624)]">
     <Card class="p-0 mt-0"
       @mouseover="isHovered = true"
       @mouseout="isHovered = false"

@@ -1,7 +1,7 @@
 <template>
-  <a :href="link" :title="title" class="no-underline flex group border-radius md:max-w-sm group">
+  <a :href="link" :title="title" class="no-underline flex group border-radius md:max-w-sm group focus:outline-[rgba(243,100,43,.624)]">
     <Card :pt="{
-      root: { class: 'w-full shadow-none bg-transparent flex flex-col rounded-md border surface-border border surface-border overflow-hidden group-hover:border-current h-full' },
+      root: { class: 'w-full shadow-none bg-transparent flex flex-col rounded-md border surface-border border surface-border overflow-clip group-hover:border-current h-full' },
       body: { class: 'h-full' },
       content: { class: 'h-full' }
     }">

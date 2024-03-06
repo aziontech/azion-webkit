@@ -7,7 +7,7 @@
       <div class=" w-full flex flex-col gap-8" :class="[
         { 'items-center' : isContentCentralized }
       ]">
-        <div class="flex flex-col gap-5 " :class="[
+        <div class="flex flex-col gap-5 max-w-2xl" :class="[
           { 'items-center text-center max-w-2xl' : isContentCentralized },
           { 'justify-center h-full': textCenter }
         ]">

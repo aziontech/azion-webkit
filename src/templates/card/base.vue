@@ -1,6 +1,6 @@
 <template>
-  <Card :pt="{
-    root: { class: 'w-full shadow-none bg-transparent flex flex-col rounded-md border surface-border overflow-hidden', class: [[{ 'flex flex-col h-full' : grid}]] },
+  <Card class="w-full shadow-none bg-transparent flex flex-col rounded-md border surface-border overflow-clip focus:outline-[rgba(243,100,43,.624)]" :pt="{
+    root: { class: [[{ 'flex flex-col h-full' : grid}]] },
     body: { class: [{ 'flex flex-col grow' : grid}] },
     content: { class: [{ 'flex flex-col grow' : grid}] }
   }">
