@@ -1,3 +1,10 @@
+## [1.13.0](https://github.com/aziontech/azion-web-kit/compare/v1.12.0...v1.13.0) (2024-03-06)
+
+
+### Features
+
+* add icon-text-segment fragment ([714c6a9](https://github.com/aziontech/azion-web-kit/commit/714c6a9cc6e2022a723e4e1f253424b2bb5976e0))
+
 ## [1.12.0](https://github.com/aziontech/azion-web-kit/compare/v1.11.2...v1.12.0) (2024-03-06)
 
 
