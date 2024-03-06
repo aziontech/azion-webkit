@@ -3,7 +3,7 @@
     <TabMenu class="hidden md:block w-full" :pt="{
       label: 'whitespace-nowrap', menu: { class: 'flex-wrap' }
     }" v-model:activeIndex="activeIndex"
-      :model="mappedData" @click="eventHandler(activeIndex)" @keyup.enter="eventHandler(activeIndex)" />
+      :model="mappedData" @click="eventHandler(activeIndex)" @keyup.enter="eventHandler(activeIndex)" @keyup.space="eventHandler(activeIndex)" />
     <Dropdown class="md:hidden w-full md:w-fit min-w-56" @change="eventHandler" v-model="activeOption"
       :options="mappedData" optionLabel="label">
       <template #value="slotProps">
@@ -57,6 +57,4 @@ const eventHandler = (e) => {
 
   emit('indexChanged', tabList[activeIndex.value])
 }
-
-
 </script>
