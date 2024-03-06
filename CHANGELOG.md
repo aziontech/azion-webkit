@@ -1,3 +1,11 @@
+## [1.12.0](https://github.com/aziontech/azion-web-kit/compare/v1.11.2...v1.12.0) (2024-03-06)
+
+
+### Features
+
+* adding StatHighlightBanner fragment ([df9e051](https://github.com/aziontech/azion-web-kit/commit/df9e0512223374516cea4b16a5205ad372ec51f1))
+* adding StatHighlightBanner fragment ([9f83271](https://github.com/aziontech/azion-web-kit/commit/9f83271085422c87d571e3d30f7b60dae3147d13))
+
 ## [1.11.2](https://github.com/aziontech/azion-web-kit/compare/v1.11.1...v1.11.2) (2024-03-06)
 
 
