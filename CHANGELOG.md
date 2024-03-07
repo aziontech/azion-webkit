@@ -1,3 +1,10 @@
+## [1.13.2](https://github.com/aziontech/azion-web-kit/compare/v1.13.1...v1.13.2) (2024-03-07)
+
+
+### Bug Fixes
+
+* cards,quote, content-logo-block and hero-block-base ([a9a727b](https://github.com/aziontech/azion-web-kit/commit/a9a727bcbd9274a70b86526b6a0a1df1764057f8))
+
 ## [1.13.1](https://github.com/aziontech/azion-web-kit/compare/v1.13.0...v1.13.1) (2024-03-07)
 
 
