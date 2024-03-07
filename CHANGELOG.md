@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/aziontech/azion-web-kit/compare/v1.13.0...v1.13.1) (2024-03-07)
+
+
+### Bug Fixes
+
+* remove overflow clip ([289d36d](https://github.com/aziontech/azion-web-kit/commit/289d36d861c2992e6aa16c90a61dffde26c9441f))
+
 ## [1.13.0](https://github.com/aziontech/azion-web-kit/compare/v1.12.0...v1.13.0) (2024-03-06)
 
 
