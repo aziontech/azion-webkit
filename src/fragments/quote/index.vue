@@ -1,10 +1,12 @@
 
 <template>
-  <div class="flex flex-col lg:flex-row text-center lg:text-start lg:gap-16 items-center justify-center">
-    <p class="max-w-md text-sm leading-relaxed">
+  <div class="flex flex-col text-center lg:text-start lg:gap-x-16 gap-y-6 items-center justify-center"
+      :class="[{'lg:flex-row' : direction === 'row'}, {'lg:flex-col' : direction === 'column'}]"
+  >
+    <p class="max-w-md text-sm leading-relaxed" :class="[{'text-center' : direction === 'column'}]">
       {{ text }}
     </p>
-    <div class="flex flex-col gap-3 items-start min-w-[180px] mt-4 lg:mt-0">
+    <div class="flex flex-col gap-3 items-start min-w-[180px] mt-4 lg:mt-0" :class="[{'items-center' : direction === 'column'}]">
       <ImageSwitcher>
         <template #lightImage>
           <img
@@ -20,7 +22,7 @@
         </template>
       </ImageSwitcher>
       <template v-if="label">
-        <p class="text-xs text-color-secondary leading-normal">
+        <p class="text-xs text-color-secondary leading-normal" :class="[{'text-center' : direction === 'column'}]">
           {{ label }}
         </p>
       </template>
@@ -47,6 +49,11 @@ defineProps({
   label: {
     type: String,
     required: false,
+  },
+  direction: {
+    type: String,
+    required: false,
+    default: 'row'
   }
 })
 </script>

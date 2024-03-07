@@ -8,7 +8,7 @@
       <div class="w-full flex flex-col gap-10" :class="[
         { 'lg:max-w-xl': !isCentralized },
         { 'items-center': isCentralized },
-        { 'justify-center': justify === 'center' }
+        { 'justify-center text-center lg:text-left': justify === 'center' }
       ]">
         <div class="flex flex-col gap-5" :class="[
           { 'max-w-3xl text-center': isCentralized },

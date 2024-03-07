@@ -22,7 +22,7 @@
           :key="logo.imageSrc"
           v-for="logo in logos">
 
-          <span v-html="logo.imageSrc"></span>
+          <span class="flex h-6 w-full *:h-full *:w-auto" v-html="logo.imageSrc"></span>
         </div>
       </div>
     </div>
