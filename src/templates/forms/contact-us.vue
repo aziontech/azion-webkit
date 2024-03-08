@@ -42,7 +42,7 @@
           </div>
           <Button class="justify-center lg:justify-start" size="small" @click="onSubmit()"> {{ t.buttonText }} </Button>
         </div>
-        <p class="text-color-secondary text-sm"> {{ t.azionPrivacy }} </p>
+        <p class="text-color-secondary text-sm" v-html="t.azionPrivacy " />
       </div>
     </template>
   </FormBlock>

@@ -4,7 +4,9 @@
     <div class="flex flex-col gap-8">
         <div class="flex flex-col gap-2">
         <h5 class="text-xl font-medium"> {{ title }} </h5>
-        <p class="text-sm text-color-secondary"> {{ description }} </p>
+        <template v-if="description">
+          <p class="text-sm text-color-secondary"> {{ description }} </p>
+        </template>
       </div>
       <template v-if="$slots.content">
         <slot name="content" />
@@ -26,7 +28,7 @@ defineProps({
   },
   description: {
     type: String,
-    required: true
+    required: false
   }
 })
 </script>

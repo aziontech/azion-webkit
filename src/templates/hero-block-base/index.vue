@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-16">
+  <section class="lg:pt-16 pt-4">
     <div class="px-container flex flex-col w-full gap-10" :class="[
       { 'lg:flex-row': !isCentralized },
       { 'items-center': isCentralized },
@@ -8,11 +8,11 @@
       <div class="w-full flex flex-col gap-10" :class="[
         { 'lg:max-w-xl': !isCentralized },
         { 'items-center': isCentralized },
-        { 'justify-center text-center lg:text-left': justify === 'center' }
+        { 'items-center text-center lg:text-left': justify === 'center' }
       ]">
         <div class="flex flex-col gap-5" :class="[
           { 'max-w-3xl text-center': isCentralized },
-          { 'max-w-2xl': !isCentralized}
+          { 'max-w-2xl': !isCentralized},
         ]">
           <Overline v-if="overline && overline.length" :label="overline" />
           <h1 v-if="titleTag === 'h1'" class="text-4xl font-medium">{{ title }}</h1>

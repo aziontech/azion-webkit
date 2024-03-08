@@ -11,17 +11,12 @@
 
         {{ title }}
       </p>
-
-
-
       <div
         class="flex flex-wrap m-0 gap-y-6 gap-x-8"
         :class="{ 'justify-center': isCentralized }">
-
         <div
           :key="logo.imageSrc"
           v-for="logo in logos">
-
           <span class="flex h-6 w-full *:h-full *:w-auto" v-html="logo.imageSrc"></span>
         </div>
       </div>
