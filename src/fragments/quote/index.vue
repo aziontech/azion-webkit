@@ -6,7 +6,7 @@
     <p class="max-w-md text-sm leading-relaxed" :class="[{'text-center' : direction === 'column'}]">
       {{ text }}
     </p>
-    <div class="flex flex-col gap-3 items-start min-w-[180px] mt-4 lg:mt-0" :class="[{'items-center' : direction === 'column'}]">
+    <div class="flex flex-col gap-3 items-center lg:items-start min-w-[180px] mt-4 lg:mt-0" :class="[{'items-center' : direction === 'column'}]">
       <ImageSwitcher>
         <template #lightImage>
           <img

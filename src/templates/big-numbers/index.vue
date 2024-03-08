@@ -1,10 +1,10 @@
 <template>
-  <ul class="lg:flex rounded" :class="[{ 'border surface-border' : border}]">
-    <li class="flex flex-col gap-5 p-10 lg:w-1/2" v-for="item in items" :key="item.title">
+  <ul class="flex flex-col md:flex-row md:flex-wrap justify-center rounded" :class="[{ 'border surface-border' : border}]">
+    <li class="flex flex-col gap-5 p-10 justify-evenly" v-for="item in items" :key="item.title">
       <strong class="text-6xl text-center">
         {{ item.title }}
       </strong>
-      <p class="text-sm text-color text-center">
+      <p class="text-sm text-color-secondary text-center">
         {{ item.description }}
       </p>
     </li>

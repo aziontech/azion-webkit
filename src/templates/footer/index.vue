@@ -6,9 +6,9 @@
           <a :href="`/${lang}/`" title="Azion Technologies" class="mb-4 block" aria-label="Azion logo">
             <AzionLogo class="h-[26px]" />
           </a>
-          <p class="flex lg:flex-col">
-            {{ cta.text }}&nbsp;
-            <span class="text-color-secondary">{{ cta.phone }}</span>
+          <p>
+            {{ cta.text }}
+            <span class="text-color-secondary whitespace-nowrap">{{ cta.phone }}</span>
           </p>
         </div>
         <div class="w-full lg:w-3/4 grid grid-cols-2 gap-8 md:grid-cols-5">

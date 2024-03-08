@@ -3,7 +3,7 @@
     class="flex"
     :class="{'justify-center': isCentralized}">
 
-    <div class="flex flex-col gap-4 max-w-md">
+    <div class="flex flex-col gap-4 max-w-2xl">
       <p
         v-if="title"
         class="text-color-secondary text-xs"
@@ -17,7 +17,11 @@
         <div
           :key="logo.imageSrc"
           v-for="logo in logos">
-          <span class="flex h-6 w-full *:h-full *:w-auto" v-html="logo.imageSrc"></span>
+          <span class="flex w-full *:h-full *:w-auto" :class="[
+            { 'h-5' : size === 'small'},
+            { 'h-6' : size === 'default'},
+            { 'h-7' : size === 'large'}
+          ]" v-html="logo.imageSrc"></span>
         </div>
       </div>
     </div>
@@ -45,5 +49,11 @@ defineProps({
     type: Array,
     required: true,
   },
+  size: {
+    type: String,
+    required: false,
+    options: ["small", "default", "large"],
+    default: "default"
+  }
 })
 </script>
