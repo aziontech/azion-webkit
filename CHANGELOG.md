@@ -1,3 +1,10 @@
+## [1.13.3](https://github.com/aziontech/azion-web-kit/compare/v1.13.2...v1.13.3) (2024-03-08)
+
+
+### Bug Fixes
+
+* new release ([ce3eb2b](https://github.com/aziontech/azion-web-kit/commit/ce3eb2b58a6ae87b91f8ac55fd2bc5a8e5b6b5c4))
+
 ## [1.13.2](https://github.com/aziontech/azion-web-kit/compare/v1.13.1...v1.13.2) (2024-03-07)
 
 
