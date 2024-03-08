@@ -1,3 +1,10 @@
+## [1.13.5](https://github.com/aziontech/azion-web-kit/compare/v1.13.4...v1.13.5) (2024-03-08)
+
+
+### Bug Fixes
+
+* home fixes + footer ([b77c180](https://github.com/aziontech/azion-web-kit/commit/b77c18018dd9bb6871076192a372db8f4b7a594a))
+
 ## [1.13.4](https://github.com/aziontech/azion-web-kit/compare/v1.13.3...v1.13.4) (2024-03-08)
 
 
