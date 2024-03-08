@@ -47,7 +47,6 @@
         </InlineMessage>
       </div>
     </template>
-
     <template #actions>
       <div class="w-full flex flex-col gap-8">
         <div class="flex flex-col md:flex-row gap-6 justify-between w-full">
