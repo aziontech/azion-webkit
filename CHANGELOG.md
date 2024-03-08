@@ -1,3 +1,10 @@
+## [1.13.6](https://github.com/aziontech/azion-web-kit/compare/v1.13.5...v1.13.6) (2024-03-08)
+
+
+### Bug Fixes
+
+* privacy policy link ([65b3f91](https://github.com/aziontech/azion-web-kit/commit/65b3f918f49f7b2da69833d7f17cfede0fa21364))
+
 ## [1.13.5](https://github.com/aziontech/azion-web-kit/compare/v1.13.4...v1.13.5) (2024-03-08)
 
 
