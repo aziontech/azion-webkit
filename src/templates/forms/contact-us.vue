@@ -42,7 +42,10 @@
           </div>
           <Button class="justify-center lg:justify-start" size="small" @click="onSubmit()"> {{ t.buttonText }} </Button>
         </div>
-        <p class="text-color-secondary text-sm" v-html="t.azionPrivacy " />
+        <p class="text-color-secondary text-sm">
+          {{ t.azionPrivacy.description}}
+          <a class="text-[#F3652B] hover:underline"  target="_blank" :href="t.azionPrivacy.link"> {{ t.azionPrivacy.buttonText}}</a>
+        </p>
       </div>
     </template>
   </FormBlock>
