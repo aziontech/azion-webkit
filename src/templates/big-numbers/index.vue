@@ -1,9 +1,6 @@
 <template>
-  <ul class="lg:flex rounded border surface-border">
-    <li
-      class="flex flex-col gap-5 p-10 lg:w-1/2"
-      v-for="item in items" :key="item.title">
-
+  <ul class="lg:flex rounded" :class="[{ 'border surface-border' : border}]">
+    <li class="flex flex-col gap-5 p-10 lg:w-1/2" v-for="item in items" :key="item.title">
       <strong class="text-6xl text-center">
         {{ item.title }}
       </strong>
@@ -15,15 +12,16 @@
 </template>
 
 <script setup>
-  const props = defineProps({
-    /*
-    {
-      title: { type: String, required: true },
-      description: { type: String, required: true }
-    }
-    */
-    items: { type: Array, required: true }
-  });
-
-  const { items } = props;
+defineProps({
+  /*
+  {
+    title: { type: String, required: true },
+    description: { type: String, required: true }
+  }
+  */
+  items: { type: Array, required: true },
+  border: {
+    type: Boolean, required: false, default: true
+  }
+});
 </script>
