@@ -1,3 +1,10 @@
+## [1.13.4](https://github.com/aziontech/azion-web-kit/compare/v1.13.3...v1.13.4) (2024-03-08)
+
+
+### Bug Fixes
+
+* big numbers border ([f5eb058](https://github.com/aziontech/azion-web-kit/commit/f5eb0581163a85e2b3aa05e8453953667eb8bf67))
+
 ## [1.13.3](https://github.com/aziontech/azion-web-kit/compare/v1.13.2...v1.13.3) (2024-03-08)
 
 
