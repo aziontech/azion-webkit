@@ -1,3 +1,10 @@
+## [1.13.7](https://github.com/aziontech/azion-web-kit/compare/v1.13.6...v1.13.7) (2024-03-08)
+
+
+### Bug Fixes
+
+* hero text ([094a121](https://github.com/aziontech/azion-web-kit/commit/094a121fed76c52a2a451287dbb5eda6e7f82874))
+
 ## [1.13.6](https://github.com/aziontech/azion-web-kit/compare/v1.13.5...v1.13.6) (2024-03-08)
 
 
