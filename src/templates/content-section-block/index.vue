@@ -17,7 +17,7 @@
           <template v-if="title">
             <h1 v-if="titleTag === 'h1'" class="text-3xl font-medium">{{ title }}</h1>
             <h2 v-if="titleTag === 'h2'" class="text-3xl font-medium">{{ title }}</h2>
-            <h3 v-if="titleTag === 'h3'" class="text-xl font-medium">{{ title }}</h3>
+            <h3 v-if="titleTag === 'h3'" class="text-3xl font-medium">{{ title }}</h3>
             <h4 v-if="titleTag === 'h4'" class="text-3xl font-medium">{{ title }}</h4>
             <h5 v-if="titleTag === 'h5'" class="text-3xl font-medium">{{ title }}</h5>
             <h6 v-if="titleTag === 'h6'" class="text-3xl font-medium">{{ title }}</h6>
