@@ -1,3 +1,10 @@
+## [1.13.9](https://github.com/aziontech/azion-web-kit/compare/v1.13.8...v1.13.9) (2024-03-09)
+
+
+### Bug Fixes
+
+* menu right block ([e1e1ebe](https://github.com/aziontech/azion-web-kit/commit/e1e1ebe9a0cc2769ba9283561b37df6f585784cf))
+
 ## [1.13.8](https://github.com/aziontech/azion-web-kit/compare/v1.13.7...v1.13.8) (2024-03-09)
 
 
