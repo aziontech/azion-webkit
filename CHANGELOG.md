@@ -1,3 +1,10 @@
+## [1.13.10](https://github.com/aziontech/azion-web-kit/compare/v1.13.9...v1.13.10) (2024-03-09)
+
+
+### Bug Fixes
+
+* cardtitle with tagTitle param ([af0464d](https://github.com/aziontech/azion-web-kit/commit/af0464d4474d650f354997671aa2cb5703849f94))
+
 ## [1.13.9](https://github.com/aziontech/azion-web-kit/compare/v1.13.8...v1.13.9) (2024-03-09)
 
 
