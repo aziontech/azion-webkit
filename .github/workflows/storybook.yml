@@ -6,7 +6,7 @@ name: Storybook Publish
 on:
   push:
     branches:
-      - main
+      - main-storybook
 
 jobs:
   deploy:
@@ -29,7 +29,7 @@ jobs:
       - name: Node.js Configuration
         uses: actions/setup-node@v3
         with:
-          node-version: 20.6.1
+          node-version: 20.8.1
           registry-url: 'https://npm.pkg.github.com'
           scope: '@aziontech'
           always-auth: true
