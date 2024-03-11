@@ -13,7 +13,7 @@
           :href="menu.link"
           :title="menu.title"
           :class="menu.destak ?
-            'p-button p-button-secondary whitespace-nowrap p-button-outlined p-button-sm border-white text-white hover:bg-header-button-hover hidden lg:flex' :
+            'p-button  whitespace-nowrap p-button-sm hidden lg:flex' :
             'p-button p-button-primary whitespace-nowrap p-button-text hover:bg-header-button-hover p-button-sm hidden lg:flex'">
 
           <span class="text-white">
