@@ -1,3 +1,10 @@
+## [1.13.17](https://github.com/aziontech/azion-web-kit/compare/v1.13.16...v1.13.17) (2024-03-11)
+
+
+### Bug Fixes
+
+* mobile menu spacements ([97d023b](https://github.com/aziontech/azion-web-kit/commit/97d023bef9406abfc77087ce95227420599fcaeb))
+
 ## [1.13.16](https://github.com/aziontech/azion-web-kit/compare/v1.13.15...v1.13.16) (2024-03-11)
 
 
