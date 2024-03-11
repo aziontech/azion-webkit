@@ -1,3 +1,10 @@
+## [1.13.12](https://github.com/aziontech/azion-web-kit/compare/v1.13.11...v1.13.12) (2024-03-11)
+
+
+### Bug Fixes
+
+* typo schema ([f2371fd](https://github.com/aziontech/azion-web-kit/commit/f2371fd9dd7b9e2cc1df85dcbd63009dfc77ed66))
+
 ## [1.13.11](https://github.com/aziontech/azion-web-kit/compare/v1.13.10...v1.13.11) (2024-03-11)
 
 
