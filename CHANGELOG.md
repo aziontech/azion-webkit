@@ -1,3 +1,10 @@
+## [1.13.14](https://github.com/aziontech/azion-web-kit/compare/v1.13.13...v1.13.14) (2024-03-11)
+
+
+### Bug Fixes
+
+* footer phone number br ([187d6ee](https://github.com/aziontech/azion-web-kit/commit/187d6ee7f1411a736f6f374bf50a664e306c30bf))
+
 ## [1.13.13](https://github.com/aziontech/azion-web-kit/compare/v1.13.12...v1.13.13) (2024-03-11)
 
 
