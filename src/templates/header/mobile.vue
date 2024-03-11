@@ -37,8 +37,8 @@
         }
     }">
       <template #item="{ item }">
-        <div v-if="item.href" class="flex">
-          <a :href="item.href" :title="item.label" class="py-2">
+        <div v-if="item.href" class="flex gap-4 my-2">
+          <a :href="item.href" :title="item.label" class="">
             <div class="p-menuitem-link !py-0 flex">
               <div class="flex gap-2">
                 <div>
@@ -63,8 +63,8 @@
             class="pi pi-angle-down text-primary ml-auto pr-4"></span>
         </div>
 
-        <div v-else class="flex">
-          <a :href="item.url" :title="item.label" :target="item.target" class="py-2">
+        <div v-else class="flex gap-4">
+          <a :href="item.url" :title="item.label" :target="item.target" class="">
             <div class="p-menuitem-link !py-0 flex">
               <div class="flex gap-2">
                 <div>
