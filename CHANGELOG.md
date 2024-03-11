@@ -1,3 +1,10 @@
+## [1.13.16](https://github.com/aziontech/azion-web-kit/compare/v1.13.15...v1.13.16) (2024-03-11)
+
+
+### Bug Fixes
+
+* card-title font size ([60927b6](https://github.com/aziontech/azion-web-kit/commit/60927b65658d0670c9fd5e398a534ffd5d960714))
+
 ## [1.13.15](https://github.com/aziontech/azion-web-kit/compare/v1.13.14...v1.13.15) (2024-03-11)
 
 
