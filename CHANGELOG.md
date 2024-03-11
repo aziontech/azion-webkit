@@ -1,3 +1,10 @@
+## [1.13.15](https://github.com/aziontech/azion-web-kit/compare/v1.13.14...v1.13.15) (2024-03-11)
+
+
+### Bug Fixes
+
+* mobile menu Free Account button ([92b30ed](https://github.com/aziontech/azion-web-kit/commit/92b30ed4cdc6b153ea9061403bc7888f3bd1a1cd))
+
 ## [1.13.14](https://github.com/aziontech/azion-web-kit/compare/v1.13.13...v1.13.14) (2024-03-11)
 
 
