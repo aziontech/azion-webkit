@@ -1,3 +1,10 @@
+## [1.13.11](https://github.com/aziontech/azion-web-kit/compare/v1.13.10...v1.13.11) (2024-03-11)
+
+
+### Bug Fixes
+
+* line-height icon-text-segment ([ae1b421](https://github.com/aziontech/azion-web-kit/commit/ae1b421b4eb132214b18c0a8138f6a65e96534fe))
+
 ## [1.13.10](https://github.com/aziontech/azion-web-kit/compare/v1.13.9...v1.13.10) (2024-03-09)
 
 
