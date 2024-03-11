@@ -6,7 +6,7 @@
           <a :href="`/${lang}/`" title="Azion Technologies" class="mb-4 block" aria-label="Azion logo">
             <AzionLogo class="h-[26px]" />
           </a>
-          <p>
+          <p class="wrap">
             {{ cta.text }}
             <span class="text-color-secondary whitespace-nowrap">{{ cta.phone }}</span>
           </p>
