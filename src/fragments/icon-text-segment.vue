@@ -30,7 +30,7 @@
       </div>
       <p
         v-if="description"
-        class="text-xs font-normal text-color-secondary leading-none mt-2">
+        class="text-xs font-normal text-color-secondary mt-2">
 
         {{ description }}
       </p>
