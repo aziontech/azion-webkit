@@ -31,7 +31,7 @@
         <i class="ai ai-edge-storage"></i>
         <i class="ai ai-edge-sql"></i>
         <i class="ai ai-edge-kv"></i>
-        <i class="ai ai-edge-orchestration"></i>
+        <i class="ai ai-edge-orchestrator"></i>
 
       </div>
       <ContentSectionBlock
