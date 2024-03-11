@@ -53,7 +53,7 @@
                     <div class="flex flex-row">
                       <ul class="grid grid-cols-2 m-0 p-3 min-h-52">
                         <li v-for="(link, index) in subitem.items" :key="index">
-                          <a :href="link.href" :title="link.label" class="p-button p-button-text p-button-sm w-full">
+                          <a :href="link.href" :title="link.label" class="p-button p-button-text p-button-sm w-full hover:surface-hover">
 
                             <div class="flex gap-3">
                               <div v-if="link.icon">
