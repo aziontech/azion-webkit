@@ -1,3 +1,15 @@
+## [1.14.0](https://github.com/aziontech/azion-web-kit/compare/v1.13.17...v1.14.0) (2024-03-11)
+
+
+### Features
+
+* update icons ([49ab0d2](https://github.com/aziontech/azion-web-kit/commit/49ab0d21f9c42cdd63efcd7d251242a79d42ff22))
+
+
+### Bug Fixes
+
+* update orchestrator name ([e5dd986](https://github.com/aziontech/azion-web-kit/commit/e5dd9860f0fff4e5238927ff8d55ddb3fc17cb93))
+
 ## [1.13.17](https://github.com/aziontech/azion-web-kit/compare/v1.13.16...v1.13.17) (2024-03-11)
 
 
