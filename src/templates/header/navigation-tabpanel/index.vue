@@ -32,7 +32,7 @@
             class="left-8 lg:left-36"
             :ref="menuitem.ref"
             :pt="{ 
-              content: { class: 'fixed p-0 flex flex-row border surface-border rounded-md surface-section' },
+              content: { class: 'fixed p-0 flex flex-row border surface-border rounded-md surface-50' },
               root: { class: 'left-8 lg:left-36 top-12 z-50'}
             }"
           >
@@ -58,8 +58,8 @@
               <TabView v-model:activeIndex="active" :pt="{ navContainer: { class: 'hidden' } }">
                 <TabPanel v-for="(subitem, jIndex) in menuitem.items" :key="jIndex">
                   <div class="flex flex-row">
-                    <ul class="grid md:grid-cols-1 lg:grid-cols-2 m-0 p-3">
-                      <li v-for="(link, index) in subitem.items" :key="index">
+                    <ul class="grid grid-cols-1 lg:grid-cols-2 m-0 p-3 h-fit min-h-16">
+                      <li v-for="(link, index) in subitem.items" :key="index" class="h-fit">
                         <a :href="link.href" :title="link.label" class="p-button p-button-text p-button-sm w-full hover:surface-hover">
 
                           <div class="flex gap-3">
