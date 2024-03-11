@@ -124,8 +124,8 @@
         :key="index"
         :href="button.url"
         :title="button.urlTitle"
-        :class="button.icon ?
-          'flex gap-2 justify-between p-button p-button-primary p-button-outlined p-button-sm border-white text-white hover:bg-header-button-hover whitespace-nowrap' :
+        :class="button.destak ?
+          'flex gap-2 justify-between p-button p-button-primary p-button-sm whitespace-nowrap' :
           'flex gap-2 p-button p-button-primary p-button-outlined p-button-sm  text-white hover:bg-header-button-hover whitespace-nowrap'">
 
         {{ button.label }}
