@@ -3,7 +3,7 @@
   <div class="border surface-border rounded-md p-4 md:p-8 flex flex-col gap-8">
     <div class="flex flex-col gap-8">
         <div class="flex flex-col gap-2">
-        <h5 class="text-xl font-medium"> {{ title }} </h5>
+        <p class="text-xl font-medium"> {{ title }} </p>
         <template v-if="description">
           <p class="text-sm text-color-secondary"> {{ description }} </p>
         </template>

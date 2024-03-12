@@ -12,13 +12,13 @@
           <img
             :src="`${imageLight}?ims=x40`"
             loading="lazy"
-            width="160" />
+            width="160" :alt="alt" />
         </template>
         <template #darkImage>
           <img
             :src="`${imageDark}?ims=x40`"
             loading="lazy"
-            width="160" />
+            width="160" :alt="alt" />
         </template>
       </ImageSwitcher>
       <template v-if="label">
@@ -54,6 +54,10 @@ defineProps({
     type: String,
     required: false,
     default: 'row'
+  },
+  alt: {
+    type: String,
+    required: false,
   }
 })
 </script>

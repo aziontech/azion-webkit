@@ -20,7 +20,7 @@
           </div>
           <div class="flex flex-column gap-2">
             <label class="text-sm" for="message">{{ t.message }}</label>
-            <Textarea name="message" v-model="message" rows="5" cols="30" />
+            <Textarea id="message" v-model="message" rows="5" cols="30" />
           </div>
         </div>
       </form>
@@ -37,14 +37,14 @@
       <div class="w-full flex flex-col gap-8">
         <div class="flex flex-col md:flex-row gap-6 justify-between w-full">
           <div class="flex gap-2 items-center">
-            <Checkbox v-model="termsAcceptance" id="terms" :binary="true" />
-            <label for="terms" class="text-sm"> {{ t.terms }}</label>
+            <Checkbox v-model="termsAcceptance" aria-labelledby="terms" :binary="true" />
+            <label id="terms" class="text-sm"> {{ t.terms }}</label>
           </div>
           <Button class="justify-center lg:justify-start" size="small" @click="onSubmit()"> {{ t.buttonText }} </Button>
         </div>
         <p class="text-color-secondary text-sm">
           {{ t.azionPrivacy.description}}
-          <a class="text-[#F3652B] hover:underline"  target="_blank" :href="t.azionPrivacy.link"> {{ t.azionPrivacy.buttonText}}</a>
+          <a class="text-[--text-color-link] font-medium hover:underline"  target="_blank" :href="t.azionPrivacy.link"> {{ t.azionPrivacy.buttonText}}</a>
         </p>
       </div>
     </template>
