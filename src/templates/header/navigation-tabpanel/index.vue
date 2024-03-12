@@ -28,7 +28,7 @@
             }" />
 
           <OverlayPanel 
-            unstyled="true"
+            unstyled
             class="left-8 lg:left-36"
             :ref="menuitem.ref"
             :pt="{ 
@@ -123,7 +123,7 @@
 
                       <div v-if="index === 3">
                         <Overline :label="menuitem.rightBlock.label" />
-                        <div class="grid gap-4 p-3 w-1/3">
+                        <div class="grid gap-4 p-3 w-full">
                           <article v-for="(block, idx) in menuitem.rightBlock.items" :key="idx" class="w-full">
                             <figure class="w-[160px] h-[90px] mb-4 overflow-hidden rounded border surface-border">
                               <img :src="`${block.img.src}`" :alt="block.img.alt" class="w-full" width="160" height="90" lazy />
