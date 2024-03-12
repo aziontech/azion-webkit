@@ -1,7 +1,7 @@
 <template>
   <Button
     @click="visibleRight=true"
-    class="lg:hidden text-white flex-none border-header w-8 h-8 bg-header hover:bg-header-button-hover"
+    class="lg:hidden flex text-white flex-none border-header w-8 h-8 bg-header hover:bg-header-button-hover"
     icon="pi pi-bars"
     size="small"
     aria-label="Menu"
