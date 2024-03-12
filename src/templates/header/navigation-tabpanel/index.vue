@@ -32,7 +32,7 @@
             class="left-8 lg:left-36"
             :ref="menuitem.ref"
             :pt="{ 
-              content: { class: 'fixed p-0 flex flex-row border surface-border rounded-md surface-50 w-full', style: 'maxWidth: 1052px' },
+              content: { class: 'fixed p-0 flex flex-row border surface-border rounded-md surface-50 w-full max-w-[1052px]' },
               root: { class: 'left-8 lg:left-36 top-12 z-50'}
             }"
           >
@@ -57,7 +57,7 @@
               <TabView v-model:activeIndex="active" :pt="{ navContainer: { class: 'hidden' } }">
                 <TabPanel v-for="(subitem, jIndex) in menuitem.items" :key="jIndex">
                   <div class="flex flex-row">
-                    <ul class="grid grid-cols-1 lg:grid-cols-2 m-0 p-3 h-fit min-h-20" style="max-width: 627px;">
+                    <ul class="grid grid-cols-1 lg:grid-cols-2 m-0 p-3 h-fit min-h-20 max-w-[627px]">
                       <li v-for="(link, index) in subitem.items" :key="index" class="h-fit">
                         <a :href="link.href" :title="link.label" class="p-button p-button-text p-button-sm w-full hover:surface-hover">
 
@@ -99,12 +99,12 @@
                       </li>
                     </ul>
 
-                    <div class="border-l surface-border p-6 gap-3 flex-col min-h-52 hidden md:flex w-full" style="max-width: 340px;">
+                    <div class="border-l surface-border p-6 gap-3 flex-col min-h-52 hidden md:flex w-full max-w-[340px]">
                       <div v-if="index === 0">
                         <Overline :label="menuitem.rightBlock.label" class="mb-6 flex"/>
                         <div class="flex flex-col gap-4 m-0 w-full">
                           <article v-for="(block, idx) in menuitem.rightBlock.items" :key="idx" class="flex gap-4 w-full">
-                            <figure class="mb-4 overflow-hidden rounded border surface-border h-fit" style="width: 280px;">
+                            <figure class="mb-4 overflow-hidden rounded border surface-border h-fit w-[280px]">
                               <img :src="`${block.img.src}`" :alt="block.img.alt" class="w-full" lazy />
                             </figure>
                             <div class="w-full flex flex-col">
