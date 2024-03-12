@@ -1,3 +1,14 @@
+## [1.14.2](https://github.com/aziontech/azion-web-kit/compare/v1.14.1...v1.14.2) (2024-03-12)
+
+
+### Bug Fixes
+
+* ajuste altura dos items ([237058a](https://github.com/aziontech/azion-web-kit/commit/237058a126381368943ce3085d27bd020e2837df))
+* ajuste breakpoint menu mobile ([f244fcb](https://github.com/aziontech/azion-web-kit/commit/f244fcb1d19a1e9d4028521b5bb76f95fc07d601))
+* ajuste cor do hover item menu ([0c1874d](https://github.com/aziontech/azion-web-kit/commit/0c1874d86a862bc13ba0ada43416bcaae31e4343))
+* ajustes de responsividade header ([6c756d4](https://github.com/aziontech/azion-web-kit/commit/6c756d4f97cc883bd70f7889695b14e17265e845))
+* responsivo menu ([96ed594](https://github.com/aziontech/azion-web-kit/commit/96ed5941ac565080ffdf771835f7251521598aa0))
+
 ## [1.14.1](https://github.com/aziontech/azion-web-kit/compare/v1.14.0...v1.14.1) (2024-03-12)
 
 
