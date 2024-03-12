@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/aziontech/azion-web-kit/compare/v1.14.0...v1.14.1) (2024-03-12)
+
+
+### Bug Fixes
+
+* accebility issues ([25423ff](https://github.com/aziontech/azion-web-kit/commit/25423ff83f02703b0c4a70dc7bbde99f035a02e9))
+
 ## [1.14.0](https://github.com/aziontech/azion-web-kit/compare/v1.13.17...v1.14.0) (2024-03-11)
 
 
