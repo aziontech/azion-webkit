@@ -31,11 +31,11 @@
             unstyled
             :ref="menuitem.ref"
             :pt="{ 
-              content: { class: 'fixed p-0 flex flex-row border surface-border rounded-md surface-50 w-full max-w-[calc(100%-4rem)] lg:max-w-[calc(100%-11rem)] xl:max-w-[1052px]' },
+              content: { class: 'fixed p-0 hidden lg:flex flex-row border surface-border rounded-md surface-100 w-full max-w-[calc(100%-4rem)] lg:max-w-[calc(100%-11rem)] xl:max-w-[1052px]' },
               root: { class: 'left-8 lg:left-36 top-12 z-50'}
             }"
           >
-            <div class="flex flex-col gap-1 border-r surface-border p-3">
+            <div class="flex flex-col gap-1 border-r surface-border p-3 surface-50 rounded-l-md">
               <Button
                 text
                 size="small"
@@ -98,7 +98,7 @@
                       </li>
                     </ul>
 
-                    <div class="border-l surface-border p-6 gap-3 flex-col min-h-52 hidden lg:flex w-full max-w-[340px]">
+                    <div class="border-l surface-border p-6 gap-3 flex-col min-h-52 hidden lg:flex w-full max-w-[340px] surface-50 rounded-r-md">
                       <div v-if="index === 0">
                         <Overline :label="menuitem.rightBlock.label" class="mb-6 flex"/>
                         <div class="flex flex-col gap-4 m-0 w-full">
