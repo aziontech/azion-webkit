@@ -13,7 +13,7 @@
           imageDark="https://www.azion.com/assets/pages/products/images/edge-application/omelete-co-logo-white.png"
           alt="Alternative text for image"
           direction="row"
-          :display="true"
+          display
         />
       </div>
     </div>

@@ -57,7 +57,7 @@ defineProps({
     default: 'row'
   },
   display: {
-    type: boolean,
+    type: Boolean,
     required: false,
     default: false,
   },
