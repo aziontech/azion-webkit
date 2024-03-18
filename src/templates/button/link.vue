@@ -2,7 +2,7 @@
 	<a
     :href="link"
     :title="label"
-    target="_blank"
+    :target="target"
     rel="noopener noreferrer"
     class="p-button p-component p-button-sm min-w-fit no-underline justify-center md:justify-start gap-2 px-4"
     :class="{'p-button-outlined' : outlined }">
@@ -43,6 +43,12 @@
       type: Boolean,
       required: false,
       default: false
+    },
+    target: {
+      type: String,
+      options: ["_blank", "_self"],
+      default: "_self",
+      required: false
     }
   });
 </script>

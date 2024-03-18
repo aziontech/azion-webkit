@@ -7,8 +7,8 @@
         header: { class: 'rounded border surface-border overflow-hidden' },
         root: { class: 'shadow-none bg-transparent flex flex-col gap-6' }
       }">
-      <template #header>
-        <picture v-if="imgSrc" >
+      <template #header v-if="imgSrc" >
+        <picture>
           <img height="209" width="372" loading="lazy" :alt="`${imgAlt}`" :src="`${imgSrc}?ims=372x209`"
                class="w-full aspect-video group-hover:scale-[1.10] transition-all duration-300" />
         </picture>
@@ -17,7 +17,12 @@
         <div class="flex flex-col justify-between gap-4">
           <h3 class="text-xl font-bold text-color">{{ title }}</h3>
           <p class="text-sm text-color-secondary">{{ description }}</p>
-          <p class="text-xs text-color-secondary">{{ date }} • {{ estimateReadTime }}</p>
+          <p class="text-xs text-color-secondary">
+            {{ date }}
+            <template v-if="estimateReadTime">
+              • {{ estimateReadTime }}
+            </template>
+          </p>
             <div v-if="authors">
               <AvatarGroup>
                 <Avatar v-for="({avatar, role, title }, index) in authors" :ariaLabel="`${title} - ${role}`" :key="index" :image="`${avatar}?ims=40x40`" shape="circle" v-tooltip.bottom="{ value: `${title}`, showDelay: 200 }"
@@ -62,7 +67,7 @@ defineProps({
   },
   estimateReadTime: {
     type: String,
-    required: true
+    required: false
   },
   link: {
     type: String,
