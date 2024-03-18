@@ -1,3 +1,10 @@
+## [1.14.3](https://github.com/aziontech/azion-web-kit/compare/v1.14.2...v1.14.3) (2024-03-18)
+
+
+### Bug Fixes
+
+* blog card + link button target ([2735182](https://github.com/aziontech/azion-web-kit/commit/2735182f0c328f9a4ce3bb8a6d17f9ac8ebd3b31))
+
 ## [1.14.2](https://github.com/aziontech/azion-web-kit/compare/v1.14.1...v1.14.2) (2024-03-12)
 
 
