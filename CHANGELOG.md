@@ -1,3 +1,10 @@
+## [1.15.0](https://github.com/aziontech/azion-web-kit/compare/v1.14.3...v1.15.0) (2024-03-19)
+
+
+### Features
+
+* card-description, tile and grid-bento variations ([6dacc57](https://github.com/aziontech/azion-web-kit/commit/6dacc57e09c3e80b436aa7fcbede5ab51b9f06f0))
+
 ## [1.14.3](https://github.com/aziontech/azion-web-kit/compare/v1.14.2...v1.14.3) (2024-03-18)
 
 
