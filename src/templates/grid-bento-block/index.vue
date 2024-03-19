@@ -36,13 +36,18 @@ const grids = {
   },
   "2-columns-6-items": {
     array: Array(6),
-    columns: "md:md:grid-cols-5",
+    columns: "md:grid-cols-5",
     rows: (i) => i === 0 || i === 3 || i === 4 ? 'md:col-span-3' : 'md:col-span-2'
   },
   "3-columns-7-items": {
     array: Array(7),
-    columns: "md:md:grid-cols-3",
+    columns: "md:grid-cols-3",
     rows: (i) => i === 3 ? 'md:col-span-3' : 'cols-span-1'
+  },
+  "4-columns-5-items": {
+    array: Array(5),
+    columns: "md:grid-cols-2 lg:grid-cols-4",
+    rows: (i) => i < 3 ? 'md:row-span-2' : ''
   }
 }
 </script>
