@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col h-full">
-    <div class="flex flex-col h-full border surface-border gap-5 justify-center items-center rounded-md p-8">
+    <div class="flex flex-col h-full gap-5 justify-center items-center rounded-md p-8 max-w-xl">
       <slot name="illustration" />
       <div class="flex flex-col gap-8">
         <div class="flex flex-col gap-2">
