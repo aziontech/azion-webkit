@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/aziontech/azion-web-kit/compare/v1.15.0...v1.15.1) (2024-03-20)
+
+
+### Bug Fixes
+
+* remove empty state border + added max-w ([9ce7865](https://github.com/aziontech/azion-web-kit/commit/9ce78652264821ba6e2fb78e6ee2f9d8d1df389c))
+
 ## [1.15.0](https://github.com/aziontech/azion-web-kit/compare/v1.14.3...v1.15.0) (2024-03-19)
 
 
