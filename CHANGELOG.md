@@ -1,3 +1,10 @@
+## [1.15.2](https://github.com/aziontech/azion-web-kit/compare/v1.15.1...v1.15.2) (2024-03-22)
+
+
+### Bug Fixes
+
+* add hs-forms to forms to trigger events ([8954259](https://github.com/aziontech/azion-web-kit/commit/89542591e33ce84d7425648eaaf1a02345d252e7))
+
 ## [1.15.1](https://github.com/aziontech/azion-web-kit/compare/v1.15.0...v1.15.1) (2024-03-20)
 
 
