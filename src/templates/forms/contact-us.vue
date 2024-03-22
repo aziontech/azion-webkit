@@ -1,7 +1,7 @@
 <template>
   <FormBlock :title="t.title" :description="t.description">
     <template #content>
-      <form id="contact-us" class="w-full">
+      <form id="contact-us" class="w-full hs-form">
         <div class="flex flex-col gap-8">
           <div class="flex flex-column gap-2 max-w-xl">
             <label class="text-sm" for="name">{{ t.name }}</label>
