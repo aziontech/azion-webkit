@@ -1,3 +1,15 @@
+## [1.16.0](https://github.com/aziontech/azion-web-kit/compare/v1.15.3...v1.16.0) (2024-03-26)
+
+
+### Features
+
+* job application form ([8501e22](https://github.com/aziontech/azion-web-kit/commit/8501e22fc5b9269ce1281b12de25e9c114d7d214))
+
+
+### Bug Fixes
+
+* form description ([91447fb](https://github.com/aziontech/azion-web-kit/commit/91447fbc50044d6559829ed5ffb4e710f18088f9))
+
 ## [1.15.3](https://github.com/aziontech/azion-web-kit/compare/v1.15.2...v1.15.3) (2024-03-22)
 
 
