@@ -1,5 +1,5 @@
 <template>
-  <FormBlock :title="t.title">
+  <FormBlock :title="t.title" :description="t.description">
     <template #content>
       <form id="contact-us" class="w-full hs-form" @submit.prevent="onSubmit">
         <div class="flex flex-col gap-8">
