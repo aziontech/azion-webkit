@@ -20,6 +20,7 @@ import FeaturedPost from './templates/featured-post/index.vue';
 import Footer from './templates/footer/index.vue';
 import FormContactUs from './templates/forms/contact-us.vue';
 import FormBePartner from './templates/forms/be-partner.vue';
+import FormJobApp from './templates/forms/job-application.vue';
 import GridBentoBlock from './templates/grid-bento-block/index.vue';
 import Header from './templates/header/index.vue';
 import HeaderDialogAlgoliaSearch from './templates/header/dialog-algolia-search/index.vue';
@@ -70,6 +71,7 @@ export {
   Footer,
   FormContactUs,
   FormBePartner,
+  FormJobApp,
 
   GridBentoBlock,
 
