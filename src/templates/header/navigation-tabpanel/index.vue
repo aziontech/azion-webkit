@@ -27,39 +27,49 @@
               icon: { class: 'text-white' }
             }" />
 
-          <OverlayPanel 
+          <OverlayPanel
             unstyled
             :ref="menuitem.ref"
-            :pt="{ 
+            :pt="{
               content: { class: 'fixed p-0 hidden lg:flex flex-row border surface-border rounded-md surface-100 w-full max-w-[calc(100%-4rem)] lg:max-w-[calc(100%-11rem)] xl:max-w-[1052px]' },
               root: { class: 'left-8 lg:left-36 top-12 z-50'}
             }"
           >
             <div class="flex flex-col gap-1 border-r surface-border p-3 surface-50 rounded-l-md">
-              <Button
-                text
-                size="small"
-                v-for="(subitem, index) in menuitem.items"
-                :key="index"
-                :class="{ 'surface-hover': active === index }"
-                class="flex gap-2 justify-between w-full items-centerm min-w-[175px]"
-                @click="active = index">
-
-                <span class="flex gap-2 items-center">
-                  <i :class="subitem.icon"></i>
-                  {{ subitem.label }}
-                </span>
-                <i class="pi pi-angle-right"></i>
-              </Button>
+              <template v-for="(subitem, index) in menuitem.items" v-bind:key="index">
+                <template v-if="subitem.items">
+                  <Button
+                    text
+                    size="small"
+                    :class="{ 'surface-hover': active === index }"
+                    class="flex gap-2 justify-between w-full items-centerm min-w-52"
+                    @click="active = index">
+                    <span class="flex gap-2 items-center">
+                      <i :class="subitem.icon"></i>
+                      {{ subitem.label }}
+                    </span>
+                    <i class="pi pi-angle-right"></i>
+                  </Button>
+                </template>
+                <template v-else>
+                  <a class="p-button p-component p-button-text p-button-sm flex gap-2 hover:surface-hover justify-between w-full items-centerm min-w-52"
+                     :href="subitem.href"
+                  >
+                    <span class="flex gap-2 items-center">
+                      <i :class="subitem.icon"></i>
+                        {{ subitem.label }}
+                    </span>
+                 </a>
+                </template>
+              </template>
             </div>
 
-              <TabView v-model:activeIndex="active" :pt="{ navContainer: { class: 'hidden' } }">
+              <TabView v-model:activeIndex="active" :pt="{ navContainer: { class: 'hidden' }, root: { class: 'w-full'} }">
                 <TabPanel v-for="(subitem, jIndex) in menuitem.items" :key="jIndex">
                   <div class="flex flex-row">
-                    <ul class="grid grid-cols-1 lg:grid-cols-2 m-0 p-3 h-fit min-h-20 max-w-[627px]">
-                      <li v-for="(link, index) in subitem.items" :key="index" class="h-fit">
+                    <ul class="grid grid-cols-1 xl:grid-cols-2 m-0 p-3 h-fit min-h-20 max-w-[627px] w-full">
+                      <li v-for="(link, index) in subitem.items" :key="index" class="flex flex-col gap-2">
                         <a :href="link.href" :title="link.label" class="p-button p-button-text p-button-sm w-full hover:surface-hover">
-
                           <div class="flex gap-3">
                             <div v-if="link.icon">
                               <span class="py-1 px-1.5 flex rounded-md surface-200">
@@ -67,34 +77,43 @@
                               </span>
                             </div>
                             <div class="flex flex-col gap-1">
-                              <p class="text-left">
-                                {{ link.label }}
-                              </p>
+                              <div class="flex gap-2 items-center">
+                                <p class="text-left">
+                                  {{ link.label }}
+                                </p>
+                                <template v-if="link.tag">
+                                  <Tag :value="link.tag" severity="info" />
+                                </template>
+                              </div>
                               <p v-if="link.description" class="text-xs text-color-secondary text-left">
                                 {{ link.description }}
                               </p>
                             </div>
                           </div>
                         </a>
-
-                        <ul class="grid pl-[2.25rem] mt-2">
-                          <li v-for="(sublink, subIndex) in link.items" :key="subIndex">
-                            <a :href="sublink.href" :title="sublink.label" class="w-full p-button p-button-text p-button-sm text-xs mb-2">
-                              <div class="flex gap-3">
-                                <div v-if="sublink.icon">
-                                  <span class="py-1 px-1.5 flex rounded-md surface-200">
-                                    <i :class="sublink.icon" class="text-xs"></i>
-                                  </span>
+                        <div class="pl-9 flex flex-col gap-2" v-if="link.items">
+                          <template v-if="link.overline">
+                            <Overline :label="link.overline" class="px-[10.5px]" />
+                          </template>
+                          <ul>
+                            <li v-for="(sublink, subIndex) in link.items" :key="subIndex" class="flex- flex-col gap-2">
+                              <a :href="sublink.href" :title="sublink.label" class="w-full p-button p-button-text p-button-sm text-xs hover:surface-hover">
+                                <div class="flex gap-3">
+                                  <div v-if="sublink.icon">
+                                    <span class="py-1 px-1.5 flex rounded-md surface-200">
+                                      <i :class="sublink.icon" class="text-xs"></i>
+                                    </span>
+                                  </div>
+                                  <div>
+                                    <p class="text-left">
+                                      {{ sublink.label }}
+                                    </p>
+                                  </div>
                                 </div>
-                                <div>
-                                  <p class="text-left">
-                                    {{ sublink.label }}
-                                  </p>
-                                </div>
-                              </div>
-                            </a>
-                          </li>
-                        </ul>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
                       </li>
                     </ul>
 
@@ -158,7 +177,7 @@
   import OverlayPanel from 'primevue/overlaypanel';
   import TabView from 'primevue/tabview';
   import TabPanel from 'primevue/tabpanel';
-
+  import Tag from 'primevue/tag';
   import Overline from '../../../fragments/text/overline.vue';
 
   const props = defineProps({

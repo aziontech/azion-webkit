@@ -27,19 +27,28 @@
       :model="menuData.items"
       :pt="{
         headerContent: {
-          class: ['hover:surface-hover rounded-md md:px-4 px-2 py-2 border-none']
+          class: ['hover:surface-hover rounded-md p-2 border-none']
+        },
+        menuItem: {
+          class: ['flex flex-col gap-2']
         },
         menuContent: {
           class: ['border-none']
         },
+        menu: {
+          class: ['flex flex-col gap-2']
+        },
         content: {
-          class: ['p-0 m-0 py-2 md:px-2']
+          class: ['m-0 p-2']
+        },
+        submenu: {
+          class: ['flex flex-col gap-2']
         }
     }">
       <template #item="{ item }">
-        <div v-if="item.href" class="flex gap-4 my-2">
-          <a :href="item.href" :title="item.label" class="">
-            <div class="p-menuitem-link !py-0 flex">
+        <div v-if="item.href" class="flex gap-6">
+          <a :href="item.href" :title="item.label" :class="[{ 'w-full' : !item.items}]">
+            <div class="p-menuitem-link p-0 flex">
               <div class="flex gap-2">
                 <div>
                   <span v-if="item.icon" class="py-1 px-1.5 flex rounded-md surface-200">
@@ -47,9 +56,14 @@
                   </span>
                 </div>
                 <div>
-                  <p class="text-color text-sm">
-                    {{ item.label }}
-                  </p>
+                  <div class="flex gap-2 items-center">
+                    <p class="text-left text-sm">
+                      {{ item.label }}
+                    </p>
+                    <template v-if="item.tag">
+                      <Tag :value="item.tag" severity="info" />
+                    </template>
+                  </div>
                   <small class="text-xs">
                     {{ item.description }}
                   </small>
@@ -65,7 +79,7 @@
 
         <div v-else class="flex gap-4">
           <a :href="item.url" :title="item.label" :target="item.target" class="">
-            <div class="p-menuitem-link !py-0 flex">
+            <div class="p-menuitem-link p-0 flex">
               <div class="flex gap-2">
                 <div>
                   <span v-if="item.icon" class="py-1 px-1.5 flex rounded-md surface-200">
