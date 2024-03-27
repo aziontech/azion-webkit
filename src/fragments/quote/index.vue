@@ -31,7 +31,6 @@
 </template>
 
 <script setup>
-import { boolean } from "yup";
 import ImageSwitcher from "../../templates/theme-aware-image-switcher/index.vue"
 
 defineProps({
