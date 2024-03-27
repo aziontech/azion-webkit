@@ -1,3 +1,11 @@
+## [1.16.1](https://github.com/aziontech/azion-web-kit/compare/v1.16.0...v1.16.1) (2024-03-27)
+
+
+### Bug Fixes
+
+* ajustes de header ([#71](https://github.com/aziontech/azion-web-kit/issues/71)) ([5a61678](https://github.com/aziontech/azion-web-kit/commit/5a61678e041c74fb5d3eefe8cc3baf9f518fee80))
+* trigger bot ([e4273cd](https://github.com/aziontech/azion-web-kit/commit/e4273cd39d6f38a93cc0f87c2fb78208b9869516))
+
 ## [1.16.0](https://github.com/aziontech/azion-web-kit/compare/v1.15.3...v1.16.0) (2024-03-26)
 
 
