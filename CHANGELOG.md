@@ -1,3 +1,10 @@
+## [1.16.2](https://github.com/aziontech/azion-web-kit/compare/v1.16.1...v1.16.2) (2024-03-27)
+
+
+### Bug Fixes
+
+* Image elements do not have explicit width and height ([248cbbc](https://github.com/aziontech/azion-web-kit/commit/248cbbcea83e240f4a1899db133739987decf694))
+
 ## [1.16.1](https://github.com/aziontech/azion-web-kit/compare/v1.16.0...v1.16.1) (2024-03-27)
 
 
