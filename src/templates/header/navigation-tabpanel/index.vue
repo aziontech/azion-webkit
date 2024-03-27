@@ -116,7 +116,6 @@
                         </div>
                       </li>
                     </ul>
-
                     <div class="border-l surface-border p-6 gap-3 flex-col min-h-52 hidden lg:flex w-full max-w-[340px] surface-50 rounded-r-md">
                       <div v-if="index === 0">
                         <Overline :label="menuitem.rightBlock.label" class="mb-6 flex"/>
