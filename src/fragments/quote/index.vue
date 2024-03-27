@@ -12,13 +12,13 @@
           <img
             :src="`${imageLight}?ims=x40`"
             loading="lazy"
-            width="160" :alt="alt" />
+            width="160" height="40" :alt="alt" />
         </template>
         <template #darkImage>
           <img
             :src="`${imageDark}?ims=x40`"
             loading="lazy"
-            width="160" :alt="alt" />
+            width="160" height="40" :alt="alt" />
         </template>
       </ImageSwitcher>
       <template v-if="label">
