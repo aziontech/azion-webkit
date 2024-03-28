@@ -1,3 +1,10 @@
+## [1.16.4](https://github.com/aziontech/azion-web-kit/compare/v1.16.3...v1.16.4) (2024-03-28)
+
+
+### Bug Fixes
+
+* trigger bot ([bc027e4](https://github.com/aziontech/azion-web-kit/commit/bc027e43f965d95d6c496350b82863078754487c))
+
 ## [1.16.3](https://github.com/aziontech/azion-web-kit/compare/v1.16.2...v1.16.3) (2024-03-28)
 
 
