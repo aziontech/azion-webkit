@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center gap-7 max-w-xl text-center">
-    <p class="text-base leading-relaxed text-balance">{{ slotProps.data.text }}</p>
+    <p class="text-2xl leading-normal text-balance">{{ slotProps.data.text }}</p>
     <div class="flex flex-col gap-3 items-center">
       <ImageSwitcher>
         <template #lightImage>
