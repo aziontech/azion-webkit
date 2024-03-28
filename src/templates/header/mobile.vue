@@ -57,14 +57,14 @@
                 </div>
                 <div>
                   <div class="flex gap-2 items-center">
-                    <p class="text-left text-sm">
+                    <p class="text-left text-sm font-medium">
                       {{ item.label }}
                     </p>
                     <template v-if="item.tag">
                       <Tag :value="item.tag" severity="info" />
                     </template>
                   </div>
-                  <small class="text-xs">
+                  <small class="text-xs text-color-secondary">
                     {{ item.description }}
                   </small>
                 </div>
@@ -87,10 +87,10 @@
                   </span>
                 </div>
                 <div>
-                  <p class="text-color text-sm">
-                    <strong>{{ item.label }}</strong>
+                  <p class="text-color text-sm font-medium">
+                    {{ item.label }}
                   </p>
-                  <small class="text-xs">
+                  <small class="text-xs text-color-secondary">
                     {{ item.description }}
                   </small>
                 </div>
@@ -124,7 +124,7 @@
           class="p-2 flex gap-2">
 
             <span v-if="item.icon" :class="item.icon"></span>
-            <span class="ml-2">
+            <span class="ml-2 font-medium">
               {{ item.label }}
             </span>
             <Tag v-for="tag in item.tags" :key='tag' :value="tag" severity="info"/>

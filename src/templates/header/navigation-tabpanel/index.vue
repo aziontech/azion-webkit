@@ -31,9 +31,10 @@
             unstyled
             :ref="menuitem.ref"
             :pt="{
-              content: { class: 'fixed p-0 hidden lg:flex flex-row border surface-border rounded-md surface-100 w-full max-w-[calc(100%-4rem)] lg:max-w-[calc(100%-11rem)] xl:max-w-[1052px]' },
+              content: { class: 'fixed p-0 hidden lg:flex flex-row border surface-border rounded-md surface-100 w-full max-w-[calc(100%-4rem)] lg:max-w-[calc(100%-11rem)] xl:w-[calc(90%-11rem)] xl:max-w-[1052]' },
               root: { class: 'left-8 lg:left-36 top-12 z-50'}
             }"
+                :breakpoints="{'960px': '75vw', '640px': '100vw'}"
           >
             <div class="flex flex-col gap-1 border-r surface-border p-3 surface-50 rounded-l-md">
               <template v-for="(subitem, index) in menuitem.items" v-bind:key="index">
@@ -66,7 +67,7 @@
 
               <TabView v-model:activeIndex="active" :pt="{ navContainer: { class: 'hidden' }, root: { class: 'w-full'} }">
                 <TabPanel v-for="(subitem, jIndex) in menuitem.items" :key="jIndex">
-                  <div class="flex flex-row">
+                  <div class="flex flex-row justify-between ">
                     <ul class="grid grid-cols-1 xl:grid-cols-2 m-0 p-3 h-fit min-h-20 max-w-[627px] w-full">
                       <li v-for="(link, index) in subitem.items" :key="index" class="flex flex-col gap-2">
                         <a :href="link.href" :title="link.label" class="p-button p-button-text p-button-sm w-full hover:surface-hover">
@@ -78,14 +79,14 @@
                             </div>
                             <div class="flex flex-col gap-1">
                               <div class="flex gap-2 items-center">
-                                <p class="text-left">
+                                <p class="text-left font-medium">
                                   {{ link.label }}
                                 </p>
                                 <template v-if="link.tag">
-                                  <Tag :value="link.tag" severity="info" />
+                                  <Tag :value="link.tag" severity="primary" />
                                 </template>
                               </div>
-                              <p v-if="link.description" class="text-xs text-color-secondary text-left">
+                              <p v-if="link.description" class="font-normal text-xs text-color-secondary text-left">
                                 {{ link.description }}
                               </p>
                             </div>
@@ -105,7 +106,7 @@
                                     </span>
                                   </div>
                                   <div>
-                                    <p class="text-left">
+                                    <p class="text-left font-medium">
                                       {{ sublink.label }}
                                     </p>
                                   </div>
