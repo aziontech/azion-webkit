@@ -1,3 +1,10 @@
+## [1.16.3](https://github.com/aziontech/azion-web-kit/compare/v1.16.2...v1.16.3) (2024-03-28)
+
+
+### Bug Fixes
+
+* header size xl screens ([f857071](https://github.com/aziontech/azion-web-kit/commit/f8570719a21b61555c8fa48824a9e34d2e692c9e))
+
 ## [1.16.2](https://github.com/aziontech/azion-web-kit/compare/v1.16.1...v1.16.2) (2024-03-27)
 
 
