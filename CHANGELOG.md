@@ -1,3 +1,10 @@
+## [1.16.5](https://github.com/aziontech/azion-web-kit/compare/v1.16.4...v1.16.5) (2024-04-01)
+
+
+### Bug Fixes
+
+* text color secondary for logos on logo block ([ba6decd](https://github.com/aziontech/azion-web-kit/commit/ba6decd18c7e826f84f4493708b2eebe50d3bedd))
+
 ## [1.16.4](https://github.com/aziontech/azion-web-kit/compare/v1.16.3...v1.16.4) (2024-03-28)
 
 
