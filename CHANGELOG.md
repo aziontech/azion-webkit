@@ -1,3 +1,10 @@
+## [1.17.0](https://github.com/aziontech/azion-web-kit/compare/v1.16.6...v1.17.0) (2024-04-01)
+
+
+### Features
+
+* avatar with title/description ([54d74d5](https://github.com/aziontech/azion-web-kit/commit/54d74d5945fb5bfe5afbb9840cd34c3e883583ea))
+
 ## [1.16.6](https://github.com/aziontech/azion-web-kit/compare/v1.16.5...v1.16.6) (2024-04-01)
 
 
