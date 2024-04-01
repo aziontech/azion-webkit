@@ -12,7 +12,7 @@
         {{ title }}
       </p>
       <div
-        class="flex flex-wrap m-0 gap-y-6 gap-x-8"
+        class="flex flex-wrap m-0 gap-y-6 gap-x-8 text-color-secondary"
         :class="{ 'justify-center': isCentralized }">
         <div
           :key="logo.imageSrc"
