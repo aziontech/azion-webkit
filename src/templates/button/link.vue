@@ -5,7 +5,10 @@
     :target="target"
     rel="noopener noreferrer"
     class="p-button p-component p-button-sm min-w-fit no-underline justify-center md:justify-start gap-2 px-4"
-    :class="{'p-button-outlined' : outlined }">
+    :class="[
+      {'p-button-outlined' : outlined },
+      {'p-button-secondary' : severity === 'secondary'}
+    ]">
 
     <span
       v-if="iconPos === 'left'"
@@ -43,6 +46,11 @@
       type: Boolean,
       required: false,
       default: false
+    },
+    severity: {
+      type: String,
+      required: false,
+      options: ['secondary']
     },
     target: {
       type: String,
