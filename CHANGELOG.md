@@ -1,3 +1,10 @@
+## [1.16.6](https://github.com/aziontech/azion-web-kit/compare/v1.16.5...v1.16.6) (2024-04-01)
+
+
+### Bug Fixes
+
+* link button secondary ([ff7f9c6](https://github.com/aziontech/azion-web-kit/commit/ff7f9c6acff9128f1ee36ebf4379cd90b69eb374))
+
 ## [1.16.5](https://github.com/aziontech/azion-web-kit/compare/v1.16.4...v1.16.5) (2024-04-01)
 
 
