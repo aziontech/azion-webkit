@@ -5,7 +5,8 @@
       { 'lg:flex-row-reverse': position == 'right'}
     ]">
       <div class=" w-full flex flex-col gap-8" :class="[
-        { 'items-center' : isContentCentralized }
+        { 'items-center' : isContentCentralized },
+        { 'flex-col-reverse	' : reverse, 'flex-col' : !reverse}
       ]">
         <div class="flex flex-col gap-5 max-w-2xl" :class="[
           { 'items-center text-center max-w-2xl' : isContentCentralized },
@@ -83,6 +84,11 @@ defineProps({
     default: false
   },
   textCenter: {
+    type: Boolean,
+    required: false,
+    default: false
+  },
+  reverse: {
     type: Boolean,
     required: false,
     default: false
