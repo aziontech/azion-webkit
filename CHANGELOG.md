@@ -1,3 +1,10 @@
+## [1.18.1](https://github.com/aziontech/azion-web-kit/compare/v1.18.0...v1.18.1) (2024-04-02)
+
+
+### Bug Fixes
+
+* wrap buttons + content on reverse ([10b707d](https://github.com/aziontech/azion-web-kit/commit/10b707d86783c729852e34e8ab1cb7b0152d00c5))
+
 ## [1.18.0](https://github.com/aziontech/azion-web-kit/compare/v1.17.0...v1.18.0) (2024-04-02)
 
 
