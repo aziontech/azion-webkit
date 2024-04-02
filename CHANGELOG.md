@@ -1,3 +1,10 @@
+## [1.18.0](https://github.com/aziontech/azion-web-kit/compare/v1.17.0...v1.18.0) (2024-04-02)
+
+
+### Features
+
+* new variation to content section block ([f919358](https://github.com/aziontech/azion-web-kit/commit/f919358cf1a65bb3cab723a3541dba0b1a74aa41))
+
 ## [1.17.0](https://github.com/aziontech/azion-web-kit/compare/v1.16.6...v1.17.0) (2024-04-01)
 
 
