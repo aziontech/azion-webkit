@@ -4,7 +4,7 @@
     :title="hrefTitle"
     :target="target"
     aria-label="Azion Logo"
-    class="block mr-6">
+    class="block mr-3 p-button p-button-text px-2 -ml-2">
 
     <AzionLogoDefault class="w-[90px]" />
   </a>
