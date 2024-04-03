@@ -2,11 +2,11 @@
   <section class="lg:pt-16 pt-4">
     <div class="px-container flex flex-col w-full gap-10" :class="[
       { 'lg:flex-row': !isCentralized },
-      { 'items-center': isCentralized },
+      { 'items-center  justify-center': isCentralized },
       { 'flex-col-reverse': isReverse }
     ]">
       <div class="w-full flex flex-col gap-10" :class="[
-        { 'lg:max-w-xl': !isCentralized },
+        { 'lg:max-w-xl justify-center': !isCentralized },
         { 'items-center': isCentralized },
         { 'items-center text-center lg:text-left': justify === 'center' }
       ]">
