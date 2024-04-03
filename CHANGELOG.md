@@ -1,3 +1,10 @@
+## [1.19.2](https://github.com/aziontech/azion-web-kit/compare/v1.19.1...v1.19.2) (2024-04-03)
+
+
+### Bug Fixes
+
+* template prop validation + text-pretty for titles ([b156c41](https://github.com/aziontech/azion-web-kit/commit/b156c414e7b3f4c8fbedef6c90547cccc1ec8c77))
+
 ## [1.19.1](https://github.com/aziontech/azion-web-kit/compare/v1.19.0...v1.19.1) (2024-04-03)
 
 
