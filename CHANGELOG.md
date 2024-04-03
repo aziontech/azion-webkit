@@ -1,3 +1,10 @@
+## [1.19.3](https://github.com/aziontech/azion-web-kit/compare/v1.19.2...v1.19.3) (2024-04-03)
+
+
+### Bug Fixes
+
+* justify-center if hero isnt centralized ([a367c70](https://github.com/aziontech/azion-web-kit/commit/a367c70291d99ed071c77d7e2211129e86cc9bc5))
+
 ## [1.19.2](https://github.com/aziontech/azion-web-kit/compare/v1.19.1...v1.19.2) (2024-04-03)
 
 
