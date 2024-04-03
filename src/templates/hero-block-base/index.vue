@@ -15,14 +15,14 @@
           { 'max-w-2xl': !isCentralized},
         ]">
           <Overline v-if="overline && overline.length" :label="overline" />
-          <h1 v-if="titleTag === 'h1'" class="font-medium text-4xl" :class="[
+          <h1 v-if="titleTag === 'h1'" class="font-medium text-4xl text-pretty" :class="[
             { 'md:text-5xl' : isDisplay }
           ]">{{ title }}</h1>
-          <h2 v-if="titleTag === 'h2'" class="text-4xl font-medium">{{ title }}</h2>
-          <h3 v-if="titleTag === 'h3'" class="text-4xl font-medium">{{ title }}</h3>
-          <h4 v-if="titleTag === 'h4'" class="text-4xl font-medium">{{ title }}</h4>
-          <h5 v-if="titleTag === 'h5'" class="text-4xl font-medium">{{ title }}</h5>
-          <h6 v-if="titleTag === 'h6'" class="text-4xl font-medium">{{ title }}</h6>
+          <h2 v-if="titleTag === 'h2'" class="text-4xl font-medium text-pretty">{{ title }}</h2>
+          <h3 v-if="titleTag === 'h3'" class="text-4xl font-medium text-pretty">{{ title }}</h3>
+          <h4 v-if="titleTag === 'h4'" class="text-4xl font-medium text-pretty">{{ title }}</h4>
+          <h5 v-if="titleTag === 'h5'" class="text-4xl font-medium text-pretty">{{ title }}</h5>
+          <h6 v-if="titleTag === 'h6'" class="text-4xl font-medium text-pretty">{{ title }}</h6>
 
           <p
             v-if="description"
