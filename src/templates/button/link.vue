@@ -7,7 +7,8 @@
     class="p-button p-component p-button-sm min-w-fit no-underline justify-center md:justify-start gap-2 px-4"
     :class="[
       {'p-button-outlined' : outlined },
-      {'p-button-secondary' : severity === 'secondary'}
+      {'p-button-secondary' : severity === 'secondary'},
+      {'p-button-info' : severity === 'info'},
     ]">
 
     <span
@@ -50,7 +51,7 @@
     severity: {
       type: String,
       required: false,
-      options: ['secondary']
+      options: ['secondary', 'info']
     },
     target: {
       type: String,
