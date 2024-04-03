@@ -1,3 +1,10 @@
+## [1.19.0](https://github.com/aziontech/azion-web-kit/compare/v1.18.1...v1.19.0) (2024-04-03)
+
+
+### Features
+
+* new link button variant ([fe160af](https://github.com/aziontech/azion-web-kit/commit/fe160af5a07b682923acbe24bbccd8c48e0d7dfa))
+
 ## [1.18.1](https://github.com/aziontech/azion-web-kit/compare/v1.18.0...v1.18.1) (2024-04-02)
 
 
