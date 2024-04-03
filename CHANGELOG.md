@@ -1,3 +1,10 @@
+## [1.19.1](https://github.com/aziontech/azion-web-kit/compare/v1.19.0...v1.19.1) (2024-04-03)
+
+
+### Bug Fixes
+
+* link button small variation ([a2d24c2](https://github.com/aziontech/azion-web-kit/commit/a2d24c2fc5848a7ef112e4c84155e672b6a03b7b))
+
 ## [1.19.0](https://github.com/aziontech/azion-web-kit/compare/v1.18.1...v1.19.0) (2024-04-03)
 
 
