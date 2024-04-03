@@ -9,6 +9,7 @@
       {'p-button-outlined' : outlined },
       {'p-button-secondary' : severity === 'secondary'},
       {'p-button-info' : severity === 'info'},
+      {'p-button-sm' : size === 'small' }
     ]">
 
     <span
@@ -58,6 +59,11 @@
       options: ["_blank", "_self"],
       default: "_self",
       required: false
+    },
+    size: {
+      type: String,
+      required: false,
+      options: ['small']
     }
   });
 </script>
