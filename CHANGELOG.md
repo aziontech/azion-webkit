@@ -1,3 +1,10 @@
+## [1.19.4](https://github.com/aziontech/azion-web-kit/compare/v1.19.3...v1.19.4) (2024-04-04)
+
+
+### Bug Fixes
+
+* mobile button color variation ([320587d](https://github.com/aziontech/azion-web-kit/commit/320587df010b5e1aed6fe484f48a1388d1ddea13))
+
 ## [1.19.3](https://github.com/aziontech/azion-web-kit/compare/v1.19.2...v1.19.3) (2024-04-03)
 
 
