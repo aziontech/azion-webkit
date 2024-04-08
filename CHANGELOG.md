@@ -1,3 +1,10 @@
+## [1.19.5](https://github.com/aziontech/azion-web-kit/compare/v1.19.4...v1.19.5) (2024-04-08)
+
+
+### Bug Fixes
+
+* header overlay panels accepting N values ([c3d7287](https://github.com/aziontech/azion-web-kit/commit/c3d7287ce21c7314bda64d9c74612d1b7f105589))
+
 ## [1.19.4](https://github.com/aziontech/azion-web-kit/compare/v1.19.3...v1.19.4) (2024-04-04)
 
 
