@@ -1,3 +1,10 @@
+## [1.20.0](https://github.com/aziontech/azion-web-kit/compare/v1.19.5...v1.20.0) (2024-04-08)
+
+
+### Features
+
+* banner new fragment ([#74](https://github.com/aziontech/azion-web-kit/issues/74)) ([49547dd](https://github.com/aziontech/azion-web-kit/commit/49547ddb14a3d9aa2a307e6fee5f9eb37d8e2ac0))
+
 ## [1.19.5](https://github.com/aziontech/azion-web-kit/compare/v1.19.4...v1.19.5) (2024-04-08)
 
 
