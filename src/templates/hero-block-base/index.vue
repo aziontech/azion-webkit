@@ -1,5 +1,5 @@
 <template>
-  <section class="lg:pt-16 pt-4">
+  <section class="lg:pt-16 pt-4 flex">
     <div class="px-container flex flex-col w-full gap-10" :class="[
       { 'lg:flex-row': !isCentralized },
       { 'items-center  justify-center': isCentralized },
@@ -10,6 +10,16 @@
         { 'items-center': isCentralized },
         { 'items-center text-center lg:text-left': justify === 'center' }
       ]">
+        <template v-if="bannerNews">
+          <Banner
+            :class="[
+              { 'justify-center': isCentralized },
+              ]"
+            :description="bannerNews.description"
+            :cta="bannerNews.cta.label"
+            :link="bannerNews.cta.link"
+          />
+        </template>
         <div class="flex flex-col gap-5" :class="[
           { 'max-w-3xl text-center': isCentralized },
           { 'max-w-2xl': !isCentralized},
@@ -53,8 +63,13 @@
 
 <script setup>
   import Overline from "../../fragments/text/overline.vue"
+  import Banner from "../../fragments/banner/index.vue"
 
   defineProps({
+    bannerNews: {
+      type: Object,
+      required: false,
+    },
     overline: {
       type: String,
       required: false
