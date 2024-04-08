@@ -6,36 +6,36 @@
           v-if="!menuitem.items || !menuitem.items.length"
           :href="menuitem.href || ''"
           :title="menuitem.label || ''"
-          class="p-button p-button-text p-button-primary p-button-sm whitespace-nowrap text-white bg-header hover:bg-header-button-hover">
-
+          class="p-button p-button-text p-button-primary p-button-sm whitespace-nowrap text-white active:bg-header-button-hover hover:bg-header-button-hover"
+        >
           <span class="text-white">
             {{ menuitem.label }}
           </span>
         </a>
 
         <div v-if="menuitem.items && menuitem.items.length">
-          <Button
-            text
-            size="small"
-            :label="menuitem.label"
-            icon-pos="right"
-            icon="pi pi-angle-down"
-            class="whitespace-nowrap text-white bg-header active:bg-header-button-hover hover:bg-header-button-hover"
+          <a
+            tabindex="0"
+            class="p-button p-button-text p-button-primary p-button-sm whitespace-nowrap active:bg-header-button-hover hover:bg-header-button-hover"
             @click="(event) => { toggle(event, menuitem.ref); active = 0; }"
-            :pt="{
-              label: { class: 'text-white' },
-              icon: { class: 'text-white' }
-            }" />
+          >
+            <div class="flex flex-row gap-2 text-white items-center">
+              <span>
+                {{ menuitem.label }}
+              </span>
+              <i class="pi pi-angle-down text-sm"/>
+            </div>
+          </a>
 
           <OverlayPanel
             unstyled
             :id="menuitem.ref"
             ref="itemRefs"
             :pt="{
-              content: { class: 'fixed p-0 hidden lg:flex flex-row border surface-border rounded-md surface-100 w-full max-w-[calc(100%-4rem)] lg:max-w-[calc(100%-11rem)] xl:w-[calc(90%-11rem)] xl:max-w-[1052]' },
+              content: { class: 'fixed p-0 hidden lg:flex flex-row border surface-border rounded-md surface-0 w-full max-w-[calc(100%-4rem)] lg:max-w-[calc(100%-11rem)] xl:w-[calc(90%-11rem)] xl:max-w-[1052]' },
               root: { class: 'left-8 lg:left-36 top-12 z-50'}
             }"
-                :breakpoints="{'960px': '75vw', '640px': '100vw'}"
+            :breakpoints="{'960px': '75vw', '640px': '100vw'}"
           >
             <div class="flex flex-col gap-1 border-r surface-border p-3 surface-50 rounded-l-md">
               <template v-for="(subitem, index) in menuitem.items" v-bind:key="index">
