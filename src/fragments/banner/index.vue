@@ -1,10 +1,12 @@
 <template>
-  <div class="gap-2 flex flex-col md:flex-row items-center text-center px-3 py-2 rounded-md border surface-border max-w-2xl">
-    <Tag value="News" class="mr-2" />
-    <p class="text-sm text-color-secondary">
-      {{ description }}
+  <div class="gap-2 flex flex-col md:flex-row items-center px-3 p-2 rounded-md border surface-border max-w-3xl">
+    <Tag value="News" />
+    <div class="flex items-center justify-center flex-wrap gap-1">
+      <p class="text-sm text-color-secondary text-center">
+        {{ description }}
+      </p>
       <a :href="link" class="text-sm font-medium" style="color: var(--text-color-link)" target="_blank">{{ cta }}</a>
-    </p>
+    </div>
   </div>
 </template>
 
