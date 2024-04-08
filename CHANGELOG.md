@@ -1,3 +1,10 @@
+## [1.20.1](https://github.com/aziontech/azion-web-kit/compare/v1.20.0...v1.20.1) (2024-04-08)
+
+
+### Bug Fixes
+
+* hero banner ([354a132](https://github.com/aziontech/azion-web-kit/commit/354a1321e6af78faca9677aaf50a86fba1b03cca))
+
 ## [1.20.0](https://github.com/aziontech/azion-web-kit/compare/v1.19.5...v1.20.0) (2024-04-08)
 
 
