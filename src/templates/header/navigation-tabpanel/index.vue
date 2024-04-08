@@ -29,7 +29,8 @@
 
           <OverlayPanel
             unstyled
-            :ref="menuitem.ref"
+            :id="menuitem.ref"
+            ref="itemRefs"
             :pt="{
               content: { class: 'fixed p-0 hidden lg:flex flex-row border surface-border rounded-md surface-100 w-full max-w-[calc(100%-4rem)] lg:max-w-[calc(100%-11rem)] xl:w-[calc(90%-11rem)] xl:max-w-[1052]' },
               root: { class: 'left-8 lg:left-36 top-12 z-50'}
@@ -43,7 +44,7 @@
                     text
                     size="small"
                     :class="{ 'surface-hover': active === index }"
-                    class="flex gap-2 justify-between w-full items-centerm min-w-52"
+                    class="flex gap-2 justify-between w-full text-left min-w-52"
                     @click="active = index">
                     <span class="flex gap-2 items-center">
                       <i :class="subitem.icon"></i>
@@ -118,7 +119,7 @@
                       </li>
                     </ul>
                     <div class="border-l surface-border p-6 gap-3 flex-col min-h-52 hidden lg:flex w-full max-w-[340px] surface-50 rounded-r-md">
-                      <div v-if="index === 0">
+                      <div v-if="menuitem.rightBlock.type === 'cases'">
                         <Overline :label="menuitem.rightBlock.label" class="mb-6 flex"/>
                         <div class="flex flex-col gap-4 m-0 w-full">
                           <article v-for="(block, idx) in menuitem.rightBlock.items" :key="idx" class="flex gap-4 w-full">
@@ -138,7 +139,7 @@
                         </div>
                       </div>
 
-                      <div v-if="index === 3">
+                      <div v-if="menuitem.rightBlock.type === 'featured'">
                         <Overline :label="menuitem.rightBlock.label" class="mb-6 flex" />
                         <div class="grid gap-4 m-0 w-full">
                           <article v-for="(block, idx) in menuitem.rightBlock.items" :key="idx" class="w-full">
@@ -188,14 +189,14 @@
 
   const { menuData } = props;
   const active = ref(0);
+  let itemRefs = ref([])
 
-  let productsPanel = ref(); // should pass like string name inside ref attr inside menudata
-  let resourcesPanel = ref(); // should pass like string name inside ref attr inside menudata
-
-  const toggle = (event, refattr) => {
+  const toggle = (event, refAttr) => {
     try {
-      if (refattr === 'productsPanel') productsPanel.value[0].toggle(event);
-      if (refattr === 'resourcesPanel') resourcesPanel.value[0].toggle(event);
+      if (refAttr)  {
+        const activeTab  = itemRefs.value.find(i => i.$params.attrs.id === refAttr)
+        activeTab.toggle(event)
+      }
     } catch (error) {
       console.error('Error in toggle method:', error);
     };
