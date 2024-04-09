@@ -1,6 +1,6 @@
 <template>
-  <div class="items-center px-3 p-2 rounded-md border surface-border max-w-3xl w-fit">
-      <div class="w-fit text-center" style="display: inline-block;">
+  <div class="px-3 p-2 rounded-md border surface-border max-w-3xl">
+      <div class="text-center">
         <Tag value="News" class="mr-1.5" />
         <span class="text-sm text-color-secondary text-center *:">
           {{ description }}
