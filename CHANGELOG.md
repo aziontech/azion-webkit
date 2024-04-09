@@ -1,3 +1,10 @@
+## [1.20.2](https://github.com/aziontech/azion-web-kit/compare/v1.20.1...v1.20.2) (2024-04-09)
+
+
+### Bug Fixes
+
+* banner new responsivity ([#75](https://github.com/aziontech/azion-web-kit/issues/75)) ([f42ff05](https://github.com/aziontech/azion-web-kit/commit/f42ff0548e4c52ff15b39599dd0cba81108e4889))
+
 ## [1.20.1](https://github.com/aziontech/azion-web-kit/compare/v1.20.0...v1.20.1) (2024-04-08)
 
 
