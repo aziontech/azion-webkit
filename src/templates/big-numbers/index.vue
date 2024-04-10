@@ -1,6 +1,6 @@
 <template>
-  <ul class="flex flex-col md:flex-row md:flex-wrap justify-center rounded" :class="[{ 'border surface-border' : border}]">
-    <li class="flex flex-col gap-5 p-10 justify-evenly" v-for="item in items" :key="item.title">
+  <ul class="flex flex-col md:flex-row items-center md:items-start flex-wrap justify-center rounded px-8 gap-y-6 py-10" :class="[{ 'border surface-border' : border}]">
+    <li class="flex flex-col gap-5 justify-evenly min-w-32 md:px-4 max-w-64" v-for="item in items" :key="item.title">
       <strong class="text-6xl text-center">
         {{ item.title }}
       </strong>
