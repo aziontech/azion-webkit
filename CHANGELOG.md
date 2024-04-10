@@ -1,3 +1,10 @@
+## [1.20.3](https://github.com/aziontech/azion-web-kit/compare/v1.20.2...v1.20.3) (2024-04-10)
+
+
+### Bug Fixes
+
+* big numbers responsivity ([#76](https://github.com/aziontech/azion-web-kit/issues/76)) ([3ca2f7d](https://github.com/aziontech/azion-web-kit/commit/3ca2f7df9088377204f699ad3366f11ead1b1325))
+
 ## [1.20.2](https://github.com/aziontech/azion-web-kit/compare/v1.20.1...v1.20.2) (2024-04-09)
 
 
