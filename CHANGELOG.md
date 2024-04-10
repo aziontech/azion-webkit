@@ -1,3 +1,10 @@
+## [1.20.4](https://github.com/aziontech/azion-web-kit/compare/v1.20.3...v1.20.4) (2024-04-10)
+
+
+### Bug Fixes
+
+* export tab menu ([d9bd100](https://github.com/aziontech/azion-web-kit/commit/d9bd1007126bf50f901b85e22bc76856431fb259))
+
 ## [1.20.3](https://github.com/aziontech/azion-web-kit/compare/v1.20.2...v1.20.3) (2024-04-10)
 
 
