@@ -38,6 +38,7 @@ import NewsletterSingleLine from './templates/newsletter/single-line/index.vue';
 import NewsletterWide from './templates/newsletter/wide/index.vue';
 import ReadableContent from './templates/post/readable-content/index.vue';
 import Sharer from './templates/sharer-block/index.vue';
+import TabMenu from './templates/tab-menu/index.vue'
 import TabMenuSearch from './templates/tab-menu/with-search.vue';
 import TabMenuSearchLink from './templates/tab-menu/with-search-link.vue'
 import TagListBlock from './templates/tag-block-list/index.vue';
@@ -101,6 +102,7 @@ export {
 
   Sharer,
 
+  TabMenu,
   TabMenuSearch,
   TabMenuSearchLink,
   TagListBlock,
