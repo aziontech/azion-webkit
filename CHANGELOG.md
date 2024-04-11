@@ -1,3 +1,10 @@
+## [1.20.5](https://github.com/aziontech/azion-web-kit/compare/v1.20.4...v1.20.5) (2024-04-11)
+
+
+### Bug Fixes
+
+* expose event handler to parent coponent ([552b2ea](https://github.com/aziontech/azion-web-kit/commit/552b2ea73f9ddf9290a877c18be7601f2dfe062f))
+
 ## [1.20.4](https://github.com/aziontech/azion-web-kit/compare/v1.20.3...v1.20.4) (2024-04-10)
 
 
