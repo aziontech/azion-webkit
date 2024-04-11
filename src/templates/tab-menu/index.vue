@@ -23,7 +23,7 @@
 <script setup>
 import TabMenu from 'primevue/tabmenu';
 import Dropdown from 'primevue/dropdown';
-import { ref } from "vue";
+import { ref, defineExpose } from "vue";
 
 const props = defineProps({
   tabList: {
@@ -49,7 +49,11 @@ const activeIndex = ref(0);
 const activeOption = ref(mappedData[activeIndex.value])
 
 const eventHandler = (e) => {
-  if (typeof e === 'number') {
+  if (typeof e === 'string') {
+    const index = mappedData.find(({ label }) => label.toLowerCase() == e.toLowerCase())
+    activeIndex.value = index?.activeIndex ? index.activeIndex : 0
+  }
+  else if (typeof e === 'number') {
     activeOption.value = mappedData[activeIndex.value]
   } else {
     activeIndex.value = e.value.activeIndex
@@ -57,4 +61,9 @@ const eventHandler = (e) => {
 
   emit('indexChanged', tabList[activeIndex.value])
 }
+
+defineExpose({
+  eventHandler
+})
+
 </script>
