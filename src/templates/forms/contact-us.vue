@@ -120,7 +120,12 @@ const onSubmit = async () => {
           objectTypeId: '0-1',
           name: 'message',
           value: message.value
-        }
+        },
+        {
+          objectTypeId: '0-1',
+          name: 'role',
+          value: segment.value
+        },
       ],
       context: {
         pageUri: requester,
