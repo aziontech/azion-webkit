@@ -1,3 +1,10 @@
+## [1.20.6](https://github.com/aziontech/azion-web-kit/compare/v1.20.5...v1.20.6) (2024-04-12)
+
+
+### Bug Fixes
+
+* send field segmento_de_neg_cio ([1606f78](https://github.com/aziontech/azion-web-kit/commit/1606f78a38dce4bd947728d85291d8287fc553fc))
+
 ## [1.20.5](https://github.com/aziontech/azion-web-kit/compare/v1.20.4...v1.20.5) (2024-04-11)
 
 
