@@ -123,7 +123,7 @@ const onSubmit = async () => {
         },
         {
           objectTypeId: '0-1',
-          name: 'role',
+          name: 'segmento_de_neg_cio',
           value: segment.value
         },
       ],
