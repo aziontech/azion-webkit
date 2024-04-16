@@ -6,6 +6,9 @@
         root: {
           class: 'surface-200',
         },
+        // menuitem: {
+        //     class: 'p-highlight', @Luis aqui tem que fazer a condicional se for na mesma rota coloca esse estilo.
+        // },
         button: {
           class: 'hidden',
         }
@@ -48,118 +51,105 @@
     </PanelMenu>
   </template>
   
-  <script setup>
-  import Menubar from 'primevue/menubar';
-  import PanelMenu from 'primevue/panelmenu';
-  
-  const menuName = 'Learning Center';
+<script setup>
+import Menubar from 'primevue/menubar';
+import PanelMenu from 'primevue/panelmenu';
 
-  const items = [
+const menuName = 'Learning Center';
+
+const items = [
     {
-      label: 'What is IAM?',
+        label: 'What is IAM?',
     },
     {
-      label: 'What is SASE?',
+        label: 'What is SASE?',
     },
     {
-      label: 'Authentication',
-      items: [
+        label: 'Authentication',
+        items: [
         {
-          label: 'Item 1',
+            label: 'Item 1',
         },
         {
-          label: 'Item 2',
+            label: 'Item 2',
         },
         {
-          label: 'Item 3',
+            label: 'Item 3',
         },
         {
-          label: 'Item 4',
-          items: [
+            label: 'Item 4',
+            items: [
             {
-              label: 'Item 4.1',
+                label: 'Item 4.1',
             },
             {
-              label: 'Item 4.2',
+                label: 'Item 4.2',
             }
-          ]
+            ]
         }
-      ]
+        ]
     },
     {
-      label: 'Remote access',
-      items: [
+        label: 'Remote access',
+        items: [
         {
-          label: 'Item 1',
+            label: 'Item 1',
         },
         {
-          label: 'Item 2',
+            label: 'Item 2',
         },
         {
-          label: 'Item 3',
+            label: 'Item 3',
         },
         {
-          label: 'Item 4',
-          items: [
+            label: 'Item 4',
+            items: [
             {
-              label: 'Item 4.1',
+                label: 'Item 4.1',
             },
             {
-              label: 'Item 4.2',
+                label: 'Item 4.2',
             }
-          ]
+            ]
         }
-      ]
+        ]
     },
     {
-      label: 'Access glossary',
-      items: [
+        label: 'Access glossary',
+        items: [
         {
-          label: 'Item 1',
+            label: 'Item 1',
         },
         {
-          label: 'Item 2',
+            label: 'Item 2',
         },
         {
-          label: 'Item 3',
+            label: 'Item 3',
         },
         {
-          label: 'Item 4',
-          items: [
+            label: 'Item 4',
+            items: [
             {
-              label: 'Item 4.1',
+                label: 'Item 4.1',
             },
             {
-              label: 'Item 4.2',
+                label: 'Item 4.2',
             }
-          ]
+            ]
         }
-      ]
+        ]
     },
+];
+
+const mobile = [
     {
-      label: 'What is IAM?',
-    },
-    {
-      label: 'What is IAM?',
-    },
-    {
-      label: 'What is IAM?',
-    },
-    {
-      label: 'What is IAM?',
-    },
-  ];
-  
-  const mobile = [
-    {
-      label: 'What is IAM?',
-      items: []
+        label: 'What is IAM?', // @Luis aqui fazer a condicional de colocar o mesmo label do que está na rota
+        items: []
     }
-  ];
-  
-  items.forEach(item => mobile[0].items.push(item));
-  
-  const mergedItems = [...items];
-  
-  </script>
+];
+
+items.forEach(item => mobile[0].items.push(item));
+
+const mergedItems = [...items];
+</script>
   
