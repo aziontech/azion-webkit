@@ -13,9 +13,7 @@
     >
       <template #start>
         <Button text tabindex="1">
-          <div>
-            <div class="text-lg font-medium leading-relaxed">Learning Center</div>
-          </div>
+            <div class="text-lg font-medium leading-relaxed">{{ menuName }}</div>
         </Button>
       </template>
       <template #item="{ item, props, hasSubmenu, root }">
@@ -54,6 +52,8 @@
   import Menubar from 'primevue/menubar';
   import PanelMenu from 'primevue/panelmenu';
   
+  const menuName = 'Learning Center';
+
   const items = [
     {
       label: 'What is IAM?',
@@ -135,6 +135,18 @@
           ]
         }
       ]
+    },
+    {
+      label: 'What is IAM?',
+    },
+    {
+      label: 'What is IAM?',
+    },
+    {
+      label: 'What is IAM?',
+    },
+    {
+      label: 'What is IAM?',
     },
   ];
   
