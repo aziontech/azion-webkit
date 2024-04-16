@@ -145,7 +145,6 @@
     }
   ];
   
-  // Adicionando os itens de 'items' para 'teste[0].items'
   items.forEach(item => mobile[0].items.push(item));
   
   const mergedItems = [...items];
