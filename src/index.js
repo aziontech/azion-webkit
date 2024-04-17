@@ -32,6 +32,7 @@ import HeroBlockBase from './templates/hero-block-base/index.vue';
 import KeyboardKey from './templates/keyboard-key/index.vue';
 import LinkButton from './templates/button/link.vue';
 import LinkButtonBlockList from './templates/button-block-list/link.vue';
+import MenuNavigation from './templates/menu-navigation-block/index.vue';
 import MobileRightSidebar from './templates/header/mobile.vue';
 import NewsletterCard from './templates/newsletter/card/index.vue';
 import NewsletterSingleLine from './templates/newsletter/single-line/index.vue';
@@ -84,7 +85,6 @@ export {
   HeaderDialogAlgoliaSearch,
   HeaderLogoAzion,
   HeaderNavigation,
-
   HeroBlockBase,
 
   KeyboardKey,
@@ -93,6 +93,7 @@ export {
   LinkButtonBlockList,
 
   MobileRightSidebar,
+  MenuNavigation,
 
   NewsletterCard,
   NewsletterSingleLine,

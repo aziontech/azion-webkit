@@ -23,7 +23,7 @@
 <script setup>
 import TabMenu from 'primevue/tabmenu';
 import Dropdown from 'primevue/dropdown';
-import { ref, defineExpose } from "vue";
+import { ref } from "vue";
 
 const props = defineProps({
   tabList: {
