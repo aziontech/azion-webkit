@@ -1,28 +1,19 @@
 <template>
     <Menubar
-      :model="mergedItems"
-      class="px-container w-full border-none hidden lg:flex gap-5"
+      :model="menuItems"
+      class="w-full border-none hidden lg:flex gap-5"
       :pt="{
         root: {
-          class: 'surface-200',
-        },
-        // menuitem: {
-        //     class: 'p-highlight', @Luis aqui tem que fazer a condicional se for na mesma rota coloca esse estilo.
-        // },
-        button: {
-          class: 'hidden',
+          class: 'surface-ground'
         }
       }"
     >
       <template #start>
-        <Button text tabindex="1">
-            <div class="text-lg font-medium leading-relaxed">{{ menuName }}</div>
-        </Button>
+        <p class="text-lg font-medium leading-relaxed">{{ menuTitle }}</p>
       </template>
-      <template #item="{ item, props, hasSubmenu, root }">
-        <a class="flex align-items-center p-3 leading-relaxed" v-bind="props.action">
+      <template #item="{ item, hasSubmenu, root }">
+        <a class="flex align-items-center p-3 leading-relaxed" :href="item.url">
           <span class="text-sm">{{ item.label }}</span>
-          <span v-if="item.shortcut" class="ml-auto border-1 surface-border border-round surface-100 text-xs p-1">{{ item.shortcut }}</span>
           <i v-if="hasSubmenu" :class="['pi pi-angle-down', { 'pi-angle-down ml-2': root, 'pi-angle-right ml-auto': !root }]"></i>
         </a>
       </template>
@@ -32,10 +23,10 @@
       class="block lg:hidden"
       :pt="{
         root: {
-          class: 'w-full surface-c',
+          class: 'w-full',
         },
         headerContent: {
-          class: 'w-full border-none px-2 py-3 flex items-center min-h-11 bg-[var(--surface-200)] text-sm',
+          class: 'w-full border-none py-1 flex items-center min-h-8 text-sm',
         },
         menuContent: {
           class: 'border-none text-sm',
@@ -50,106 +41,31 @@
       </template>
     </PanelMenu>
   </template>
-  
+
 <script setup>
 import Menubar from 'primevue/menubar';
 import PanelMenu from 'primevue/panelmenu';
+import { ref } from 'vue'
 
-const menuName = 'Learning Center';
+const props = defineProps({
+  menuTitle: {
+    type: String,
+    required: true,
+  },
+  menuItems: {
+    type: Array,
+    required: true
+  },
+  mobileLabel: {
+    type: String,
+    required: false
+  }
+})
 
-const items = [
+const mobile = ref([
     {
-        label: 'What is IAM?',
-    },
-    {
-        label: 'What is SASE?',
-    },
-    {
-        label: 'Authentication',
-        items: [
-        {
-            label: 'Item 1',
-        },
-        {
-            label: 'Item 2',
-        },
-        {
-            label: 'Item 3',
-        },
-        {
-            label: 'Item 4',
-            items: [
-            {
-                label: 'Item 4.1',
-            },
-            {
-                label: 'Item 4.2',
-            }
-            ]
-        }
-        ]
-    },
-    {
-        label: 'Remote access',
-        items: [
-        {
-            label: 'Item 1',
-        },
-        {
-            label: 'Item 2',
-        },
-        {
-            label: 'Item 3',
-        },
-        {
-            label: 'Item 4',
-            items: [
-            {
-                label: 'Item 4.1',
-            },
-            {
-                label: 'Item 4.2',
-            }
-            ]
-        }
-        ]
-    },
-    {
-        label: 'Access glossary',
-        items: [
-        {
-            label: 'Item 1',
-        },
-        {
-            label: 'Item 2',
-        },
-        {
-            label: 'Item 3',
-        },
-        {
-            label: 'Item 4',
-            items: [
-            {
-                label: 'Item 4.1',
-            },
-            {
-                label: 'Item 4.2',
-            }
-            ]
-        }
-        ]
-    },
-];
-
-const mobile = [
-    {
-        label: 'What is IAM?', // @Luis aqui fazer a condicional de colocar o mesmo label do que está na rota
-        items: []
+        label: props.mobileLabel,
+        items: props.menuItems
     }
-];
-
-items.forEach(item => mobile[0].items.push(item));
-
-const mergedItems = [...items];
+]);
 </script>
-  
