@@ -1,37 +1,52 @@
 <template>
-  <div class="mb-6">
+  <div class="mb-[28px]">
     <ais-index :index-name="props.indexName">
       <div class="lg:flex items-center justify-between">
-        <h2 class="text-xl">
-          {{ props.label.toUpperCase() }}
+        <h2 class="text-2xl font-medium capitalize">
+          {{ props.label }}
         </h2>
+        <ais-stats class="flex justify-end">
+          <template v-slot="{ hitsPerPage, nbPages, nbHits, page, processingTimeMS, query }">
+            <div v-if="nbPages" class="flex items-center gap-3">
+              <ais-hits-per-page class="hidden" :items="[
+                { label: '4 per page', value: 4, default: true },
+                { label: '12 per page', value: 12 },
+                { label: '24 per page', value: 24 }
+              ]" />
+
+              <div class="flex flex-row gap-3 items-center">
+                <p class="text-xs text-color-secondary">{{ nbHits }} results</p>
+                <ais-pagination/>
+                <p class="text-xs text-color-secondary">{{ page + 1 }} - {{ nbPages  }}</p>
+              </div>
+            </div>
+          </template>
+        </ais-stats>
       </div>
 
       <ais-stats>
         <template v-slot="{ hitsPerPage, nbPages, nbHits, page, processingTimeMS, query }">
-          <p v-show="nbPages === 0" class="py-4">
-            No results found for the term <strong>"{{ query }}"</strong>.
+          <p v-show="nbPages === 0" class="py-4 text-color-secondary text-sm">
+            No results found for the term <strong class="text-color font-normal">"{{ query }}"</strong>.
           </p>
 
           <ais-hits>
             <template v-slot:item="{ item }">
-              <div class="ais-Hits-item-card border surface-border rounded p-4 w-full">
-                <a
-                  :href="item.url"
-                  :title="item.title">
+              <a
+                class="ais-Hits-item-card border surface-border rounded p-5 w-full flex flex-col gap-3"
+                :href="item.url"
+                :title="item.title"
+              >
 
-                  <h2 class="text-base">
+                <div class="flex flex-col gap-3">
+                  <h2 class="text-base font-normal">
                     {{ item.title }}
                   </h2>
-                  <ul class="flex flex-wrap mt-1 mb-4">
-                    <li class="text-color-secondary mr-1">
-                      <small class="flex gap-2">
-                        Home <span>></span>
-                      </small>
-                    </li>
-                    <li class="text-color-secondary mr-1">
-                      <small class="flex gap-2">
-                        {{ props.label }} <span>></span>
+
+                  <ul class="flex items-center flex-wrap text-xs">
+                    <li class="text-color-secondary mr-0.5">
+                      <small class="flex gap-0.5 capitalize items-center">
+                        {{ props.label }} <i class="pi pi-angle-right text-[8px]"></i>
                       </small>
                     </li>
                     <li class="text-color-secondary">
@@ -40,39 +55,21 @@
                       </small>
                     </li>
                   </ul>
+                </div>
 
-                  <p class="text-sm text-color-secondary">
-                    <!--
-                      item.text used to site/blog/cases
-                      item.description used to documentation
-                    -->
-                    {{
-                      item.text ? item.text.slice(0, 160) :
-                        item.description ? item.description.slice(0, 220) : ''
-                    }} ...
-                  </p>
-                </a>
-              </div>
+                <p class="text-sm text-color-secondary leading-relaxed">
+                  <!--
+                    item.text used to site/blog/cases
+                    item.description used to documentation
+                  -->
+                  {{
+                    item.text ? item.text.slice(0, 160) :
+                      item.description ? item.description.slice(0, 220) : ''
+                  }} ...
+                </p>
+              </a>
             </template>
           </ais-hits>
-
-          <div>
-            <ais-stats class="flex justify-end">
-              <template v-slot="{ hitsPerPage, nbPages, nbHits, page, processingTimeMS, query }">
-                <div v-if="nbPages" class="flex items-center mt-4 mb-2">
-                  <ais-hits-per-page :items="[
-                    { label: '4 hits per page', value: 4 },
-                    { label: '8 hits per page', value: 8, default: true },
-                    { label: '16 hits per page', value: 16 },
-                    { label: '32 hits per page', value: 32 }
-                  ]" />
-
-                  <ais-pagination class="flex justify-end mx-3"/>
-                  <p><small>{{ page + 1 }} / {{ nbPages  }}</small></p>
-                </div>
-              </template>
-            </ais-stats>
-          </div>
         </template>
       </ais-stats>
     </ais-index>
@@ -115,12 +112,24 @@
     display: none !important;
   }
 
+  .ais-Pagination-item--previousPage {
+    .ais-Pagination-link {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+  }
+  .ais-Pagination-item--nextPage {
+    .ais-Pagination-link {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+  }
   .ais-Pagination-item {
     .ais-Pagination-link {
       border: solid 1px var(--surface-border);
       margin-left: -1px;
-      width: 2.725rem;
-      height: 2.725rem;
+      width: 2rem;
+      height: 2rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -132,6 +141,7 @@
   }
 
   .ais-Pagination-item--firstPage {
+    display: none;
     .ais-Pagination-link {
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px;
@@ -139,6 +149,7 @@
   }
 
   .ais-Pagination-item--lastPage {
+    display: none;
     .ais-Pagination-link {
       border-top-right-radius: 4px;
       border-bottom-right-radius: 4px;
