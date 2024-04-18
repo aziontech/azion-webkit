@@ -1,3 +1,10 @@
+## [1.21.2](https://github.com/aziontech/azion-web-kit/compare/v1.21.1...v1.21.2) (2024-04-18)
+
+
+### Bug Fixes
+
+* menu navigation block links ([f883ecc](https://github.com/aziontech/azion-web-kit/commit/f883ecc10a5212a176a4b3f5ccc5e40d73827a9d))
+
 ## [1.21.1](https://github.com/aziontech/azion-web-kit/compare/v1.21.0...v1.21.1) (2024-04-17)
 
 
