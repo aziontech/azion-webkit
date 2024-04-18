@@ -3,6 +3,9 @@
     <Menubar :model="mappedData" class="w-full border-none hidden lg:flex gap-5" :pt="{
       root: {
         class: 'surface-ground'
+      },
+      submenu: {
+        class: 'rounded-md'
       }
     }">
       <template #start>
