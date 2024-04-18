@@ -1,20 +1,29 @@
 <template>
-  <Menubar :model="menuItems" class="w-full border-none hidden lg:flex gap-5" :pt="{
-    root: {
-      class: 'surface-ground'
-    }
-  }">
-    <template #start>
-      <p class="text-lg font-medium leading-relaxed">{{ menuTitle }}</p>
-    </template>
-    <template #item="{ item, hasSubmenu, root }">
-      <a class="flex align-items-center p-3 leading-relaxed" :href="item.url">
-        <span class="text-sm">{{ item.label }}</span>
-        <i v-if="hasSubmenu"
-          :class="['pi pi-angle-down', { 'pi-angle-down ml-2': root, 'pi-angle-right ml-auto': !root }]"></i>
-      </a>
-    </template>
-  </Menubar>
+  <div :class="[{'px-container' : isContainer }]">
+    <Menubar :model="mappedData" class="w-full border-none hidden lg:flex gap-5" :pt="{
+      root: {
+        class: 'surface-ground'
+      }
+    }">
+      <template #start>
+        <p class="text-lg font-medium leading-relaxed">{{ menuTitle }}</p>
+      </template>
+      <template #item="{ item, hasSubmenu, root }">
+        <template v-if="item.url">
+          <a class="flex align-items-center p-3 leading-relaxed cursor-pointer" :href="item.url">
+            <span class="text-sm">{{ item.label }}</span>
+          </a>
+        </template>
+        <template v-else>
+          <a class="flex align-items-center p-3 leading-relaxed cursor-pointer">
+            <span class="text-sm">{{ item.label }}</span>
+            <i v-if="hasSubmenu"
+              :class="['pi pi-angle-down', { 'pi-angle-down ml-2': root, 'pi-angle-right ml-auto': !root }]"></i>
+          </a>
+        </template>
+      </template>
+    </Menubar>
+  </div>
   <PanelMenu :model="mobile" class="block lg:hidden" :pt="{
     root: {
       class: 'w-full',
@@ -27,11 +36,18 @@
     }
   }">
     <template #item="{ item }">
-      <a class="flex align-items-center cursor-pointer text-color px-3 py-2 w-full" :href="item.url"
-        :target="item.target">
-        <span class="ml-2">{{ item.label }}</span>
-        <span v-if="item.items" class="pi pi-angle-down text-primary ml-auto" />
-      </a>
+      <template v-if="item.url">
+        <a class="flex align-items-center cursor-pointer text-color px-3 py-2 w-full"
+          :href="item.url" target="_self">
+          <span class="ml-2">{{ item.label }}</span>
+        </a>
+      </template>
+      <template v-else>
+        <a class="flex align-items-center cursor-pointer text-color px-3 py-2 w-full" target="_self">
+          <span class="ml-2">{{ item.label }}</span>
+          <span v-if="item.items" class="pi pi-angle-down text-primary ml-auto" />
+        </a>
+      </template>
     </template>
   </PanelMenu>
 </template>
@@ -39,7 +55,7 @@
 <script setup>
 import Menubar from 'primevue/menubar';
 import PanelMenu from 'primevue/panelmenu';
-import { ref } from 'vue'
+import { onBeforeMount, ref } from 'vue'
 
 const props = defineProps({
   menuTitle: {
@@ -53,13 +69,27 @@ const props = defineProps({
   mobileLabel: {
     type: String,
     required: false
+  },
+  isContainer: {
+    type: Boolean,
+    required: false
   }
 })
 
-const mobile = ref([
-  {
-    label: props.mobileLabel,
-    items: props.menuItems
-  }
-]);
+const mappedData = ref()
+const mobile = ref();
+
+onBeforeMount(() => {
+  mappedData.value = props.menuItems.map(({label, url, items}) => {
+    if (url) return { label, url }
+    return { label, items }
+  })
+
+  mobile.value = [
+    {
+      label: props.mobileLabel,
+      items: mappedData.value
+    }
+  ]
+})
 </script>
