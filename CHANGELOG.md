@@ -1,3 +1,10 @@
+## [1.21.4](https://github.com/aziontech/azion-web-kit/compare/v1.21.3...v1.21.4) (2024-04-19)
+
+
+### Bug Fixes
+
+* carousel alt tag ([e391eca](https://github.com/aziontech/azion-web-kit/commit/e391eca9e4a2660408a5d7ece49b65df75f68992))
+
 ## [1.21.3](https://github.com/aziontech/azion-web-kit/compare/v1.21.2...v1.21.3) (2024-04-18)
 
 
