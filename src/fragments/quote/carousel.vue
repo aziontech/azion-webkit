@@ -6,10 +6,10 @@
     <div class="flex flex-col gap-3 items-center">
       <ImageSwitcher>
         <template #lightImage>
-          <img :src="`${slotProps.data.imageLight}?ims=x40`" loading="lazy" width="160" />
+          <img :src="`${slotProps.data.imageLight}?ims=x40`" loading="lazy" width="160" :alt="slotProps.data.alt" />
         </template>
         <template #darkImage>
-          <img :src="`${slotProps.data.imageDark}?ims=x40`" loading="lazy" width="160"/>
+          <img :src="`${slotProps.data.imageDark}?ims=x40`" loading="lazy" width="160" :alt="slotProps.data.alt"/>
         </template>
       </ImageSwitcher>
       <p class="text-xs text-color-secondary leading-normal"> {{ slotProps.data.label }}</p>
