@@ -1,3 +1,10 @@
+## [1.21.5](https://github.com/aziontech/azion-web-kit/compare/v1.21.4...v1.21.5) (2024-04-19)
+
+
+### Bug Fixes
+
+* set width size to featured post on LG > screens ([0b5b807](https://github.com/aziontech/azion-web-kit/commit/0b5b807eb6291942f1d97a2942cb122a978d067f))
+
 ## [1.21.4](https://github.com/aziontech/azion-web-kit/compare/v1.21.3...v1.21.4) (2024-04-19)
 
 
