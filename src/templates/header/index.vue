@@ -21,7 +21,9 @@
           </span>
         </a>
 
-        <slot name="dialog" />
+        <div v-if="$slots.dialog" class="min-w-8">
+          <slot name="dialog" />
+        </div>
         <slot name="mobile-right-sidebar" />
       </div>
     </div>
