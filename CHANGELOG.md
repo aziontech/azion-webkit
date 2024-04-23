@@ -1,3 +1,10 @@
+## [1.21.6](https://github.com/aziontech/azion-web-kit/compare/v1.21.5...v1.21.6) (2024-04-23)
+
+
+### Bug Fixes
+
+* header cls ([967f22b](https://github.com/aziontech/azion-web-kit/commit/967f22b2abdba1c5d439ac5aa1499611cf05f336))
+
 ## [1.21.5](https://github.com/aziontech/azion-web-kit/compare/v1.21.4...v1.21.5) (2024-04-19)
 
 
