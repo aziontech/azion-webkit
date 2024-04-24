@@ -1,3 +1,10 @@
+## [1.22.0](https://github.com/aziontech/azion-web-kit/compare/v1.21.6...v1.22.0) (2024-04-24)
+
+
+### Features
+
+* simple footer ([b8d1dac](https://github.com/aziontech/azion-web-kit/commit/b8d1dacddd6f598e667f3a410f36b4098a3957e5))
+
 ## [1.21.6](https://github.com/aziontech/azion-web-kit/compare/v1.21.5...v1.21.6) (2024-04-23)
 
 
