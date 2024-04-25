@@ -172,8 +172,6 @@ const handlePOST = async (values) => {
     body: JSON.stringify(values),
   };
 
-  console.log(values)
-
   return fetch(url, request).then(function (response) {
     if (!response.ok) {
       throw new Error({
