@@ -15,7 +15,7 @@
       </template>
       <template #content>
         <div class="flex flex-col justify-between gap-4">
-          <h3 class="text-xl font-bold text-color">{{ title }}</h3>
+          <h2 class="text-xl font-bold text-color">{{ title }}</h2>
           <p class="text-sm text-color-secondary">{{ description }}</p>
           <template v-if="date || estimateReadTime">
             <p class="text-xs text-color-secondary">

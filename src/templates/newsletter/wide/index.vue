@@ -3,9 +3,9 @@
     <div>
       <div class="flex flex-col gap-8 items-center">
         <div class="max-w-md w-full text-center">
-          <h3 class="text-2xl font-normal text-color max-w-xl mt-2 mb-0">
+          <p class="text-2xl font-normal text-color max-w-xl mt-2 mb-0">
             {{ props.title }}
-          </h3>
+          </p>
         </div>
         <div class="w-full max-w-md flex flex-col justify-center gap-4">
           <form @submit.prevent="onSubmit" id="newslleterWide" name="newsletterWide">

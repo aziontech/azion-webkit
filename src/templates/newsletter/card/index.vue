@@ -1,8 +1,8 @@
 <template>
   <section class="newsletter-signup border border-solid surface-section surface-border p-7 rounded max-w-md">
-    <h5 class="max-w-xl mt-0 mb-0 lg:text-xl font-medium">
+    <p class="max-w-xl mt-0 mb-0 lg:text-xl font-medium">
       {{ title }}
-    </h5>
+    </p>
     <form @submit.prevent="onSubmit" name="newslleterCard" id="newslleterCard" class="mt-4">
       <div class="mt-4">
         <span class="p-input-icon-left w-full">
