@@ -5,7 +5,7 @@
         class: 'surface-ground'
       },
       submenu: {
-        class: 'rounded-md'
+        class: 'rounded-md w-max max-w-xs'
       }
     }">
       <template #start>
