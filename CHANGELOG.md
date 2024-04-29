@@ -1,3 +1,10 @@
+## [1.22.2](https://github.com/aziontech/azion-web-kit/compare/v1.22.1...v1.22.2) (2024-04-29)
+
+
+### Bug Fixes
+
+* content logo block aspect ratio ([2cc2686](https://github.com/aziontech/azion-web-kit/commit/2cc26867a73166c9a3758947349e76a491725291))
+
 ## [1.22.1](https://github.com/aziontech/azion-web-kit/compare/v1.22.0...v1.22.1) (2024-04-29)
 
 
