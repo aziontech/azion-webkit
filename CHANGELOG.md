@@ -1,3 +1,11 @@
+## [1.22.1](https://github.com/aziontech/azion-web-kit/compare/v1.22.0...v1.22.1) (2024-04-29)
+
+
+### Bug Fixes
+
+* headings ([4a26a50](https://github.com/aziontech/azion-web-kit/commit/4a26a50e0e7e7031c42bf895c6c75f854594e471))
+* sub menu width ([b368d2c](https://github.com/aziontech/azion-web-kit/commit/b368d2c891e6b9e9c972cc89d77cd31f2167fe0e))
+
 ## [1.22.0](https://github.com/aziontech/azion-web-kit/compare/v1.21.6...v1.22.0) (2024-04-24)
 
 
