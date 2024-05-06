@@ -1,6 +1,6 @@
 <template>
   <div class="surface-section py-20 px-container">
-    <BigNumbers :items="items" :border="false" />
+    <BigNumbers :items="items" :border="false" :centralized="false" />
   </div>
 </template>
 
