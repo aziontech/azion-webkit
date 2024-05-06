@@ -23,10 +23,9 @@
               <span>
                 {{ menuitem.label }}
               </span>
-              <i class="pi pi-angle-down text-sm"/>
+              <i class="pi pi-angle-down transition text-sm" :class="activeMenu == menuitem.ref && 'rotate-180'"/>
             </div>
           </a>
-
           <OverlayPanel
             unstyled
             :id="menuitem.ref"
@@ -47,19 +46,19 @@
                     class="flex gap-2 justify-between w-full text-left min-w-52"
                     @click="active = index">
                     <span class="flex gap-2 items-center">
-                      <i :class="subitem.icon"></i>
                       {{ subitem.label }}
+                      <i :class="subitem.icon"></i>
                     </span>
                     <i class="pi pi-angle-right"></i>
                   </Button>
                 </template>
                 <template v-else>
                   <a class="p-button p-component p-button-text p-button-sm flex gap-2 hover:surface-hover justify-between w-full items-centerm min-w-52"
-                     :href="subitem.href"
+                     :href="subitem.href" :target="subitem.external ? '_blank' : 'self'"
                   >
-                    <span class="flex gap-2 items-center">
-                      <i :class="subitem.icon"></i>
-                        {{ subitem.label }}
+                    <span class="w-full flex gap-2 items-center justify-between">
+                      {{ subitem.label }}
+                      <i :class="subitem.icon" class="text-sm"></i>
                     </span>
                  </a>
                 </template>
@@ -71,7 +70,7 @@
                   <div class="flex flex-row justify-between ">
                     <ul class="grid grid-cols-1 xl:grid-cols-2 m-0 p-3 h-fit min-h-20 max-w-[627px] w-full">
                       <li v-for="(link, index) in subitem.items" :key="index" class="flex flex-col gap-2">
-                        <a :href="link.href" :title="link.label" class="p-button p-button-text p-button-sm w-full hover:surface-hover">
+                        <a :href="link.href" :title="link.label" class="p-button p-button-text p-button-sm h-full w-full hover:surface-hover p-3 flex flex-col justify-start items-start">
                           <div class="flex gap-3">
                             <div v-if="link.icon">
                               <span class="py-1 px-1.5 flex rounded-md surface-200">
@@ -79,7 +78,7 @@
                               </span>
                             </div>
                             <div class="flex flex-col gap-1">
-                              <div class="flex gap-2 items-center">
+                              <div class="flex gap-2 items-center min-h-[1.625rem]">
                                 <p class="text-left font-medium">
                                   {{ link.label }}
                                 </p>
@@ -189,6 +188,7 @@
 
   const { menuData } = props;
   const active = ref(0);
+  const activeMenu = ref(null)
   let itemRefs = ref([])
 
   const toggle = (event, refAttr) => {
@@ -196,6 +196,8 @@
       if (refAttr)  {
         const activeTab  = itemRefs.value.find(i => i.$params.attrs.id === refAttr)
         activeTab.toggle(event)
+
+        activeMenu.value = activeMenu.value == refAttr ? null : refAttr
       }
     } catch (error) {
       console.error('Error in toggle method:', error);
