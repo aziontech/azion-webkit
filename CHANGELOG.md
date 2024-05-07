@@ -1,3 +1,11 @@
+## [1.22.4](https://github.com/aziontech/azion-web-kit/compare/v1.22.3...v1.22.4) (2024-05-07)
+
+
+### Bug Fixes
+
+* test pipe with coventional commits changelog ([383b29e](https://github.com/aziontech/azion-web-kit/commit/383b29ee70f59db539b05d314a6cbdeb3ae50eea))
+* test pipe with coventional commits changelog ([aa8a75d](https://github.com/aziontech/azion-web-kit/commit/aa8a75d9700830ff62fc8568be1dde652fb474d1))
+
 ## [1.22.2](https://github.com/aziontech/azion-web-kit/compare/v1.22.1...v1.22.2) (2024-04-29)
 
 
