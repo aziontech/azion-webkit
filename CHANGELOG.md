@@ -1,3 +1,10 @@
+## [1.22.5](https://github.com/aziontech/azion-web-kit/compare/v1.22.4...v1.22.5) (2024-05-07)
+
+
+### Bug Fixes
+
+* header btn height + remove chroven transition ([8b47390](https://github.com/aziontech/azion-web-kit/commit/8b473908a10557ec7f441eb2b2df3ad82c467f34))
+
 ## [1.22.4](https://github.com/aziontech/azion-web-kit/compare/v1.22.3...v1.22.4) (2024-05-07)
 
 
