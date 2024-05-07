@@ -1,7 +1,7 @@
 <template>
   <ul class="flex flex-col md:flex-row items-center md:items-start flex-wrap justify-center rounded px-8 gap-y-6 py-10" :class="[{ 'border surface-border' : border}]">
     <li class="flex flex-col gap-2 justify-evenly min-w-32 md:px-4 max-w-64" v-for="item in items" :key="item.title">
-      <p class="text-base text-color-secondary" 
+      <p class="text-base text-color-secondary font-medium" 
         :class="[
             {'text-center' : centralized },
             {'text-left' : !centralized }
@@ -15,7 +15,7 @@
           ]">
         {{ item.title }}
       </strong>
-      <p class="text-base text-color-secondary"
+      <p class="text-base text-color-secondary font-medium"
       :class="[
             {'text-center' : centralized },
             {'text-left' : !centralized }
