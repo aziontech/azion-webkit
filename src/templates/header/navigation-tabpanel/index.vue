@@ -23,7 +23,7 @@
               <span>
                 {{ menuitem.label }}
               </span>
-              <i class="pi pi-angle-down transition text-sm" :class="activeMenu == menuitem.ref && 'rotate-180'"/>
+              <i class="pi pi-angle-down text-sm" :class="activeMenu == menuitem.ref && 'rotate-180'"/>
             </div>
           </a>
           <OverlayPanel
@@ -70,7 +70,7 @@
                   <div class="flex flex-row justify-between ">
                     <ul class="grid grid-cols-1 xl:grid-cols-2 m-0 p-3 h-fit min-h-20 max-w-[627px] w-full">
                       <li v-for="(link, index) in subitem.items" :key="index" class="flex flex-col gap-2">
-                        <a :href="link.href" :title="link.label" class="p-button p-button-text p-button-sm h-full w-full hover:surface-hover p-3 flex flex-col justify-start items-start">
+                        <a :href="link.href" :title="link.label" class="p-button p-button-text p-button-sm w-full hover:surface-hover p-3 flex flex-col justify-start items-start">
                           <div class="flex gap-3">
                             <div v-if="link.icon">
                               <span class="py-1 px-1.5 flex rounded-md surface-200">
