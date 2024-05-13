@@ -1,3 +1,10 @@
+## [1.22.7](https://github.com/aziontech/azion-web-kit/compare/v1.22.6...v1.22.7) (2024-05-13)
+
+
+### Bug Fixes
+
+* Ajustes de espaçamento hero home ([62cb5c3](https://github.com/aziontech/azion-web-kit/commit/62cb5c34b371d3be4ec5cc183abd882f9dd32746))
+
 ## [1.22.6](https://github.com/aziontech/azion-web-kit/compare/v1.22.5...v1.22.6) (2024-05-13)
 
 
