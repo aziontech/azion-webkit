@@ -1,6 +1,6 @@
 <template>
   <section class="lg:pt-16 pt-4 flex">
-    <div class="px-container flex flex-col w-full gap-10" :class="[
+    <div class="px-container flex flex-col w-full gap-10 mt-0 lg:mt-10 xl:mt-16 2xl:my-24" :class="[
       { 'lg:flex-row': !isCentralized },
       { 'items-center  justify-center': isCentralized },
       { 'flex-col-reverse': isReverse }
