@@ -1,3 +1,10 @@
+## [1.22.6](https://github.com/aziontech/azion-web-kit/compare/v1.22.5...v1.22.6) (2024-05-13)
+
+
+### Bug Fixes
+
+* ReadbleContent with flex css prop inline component ([be5c3ed](https://github.com/aziontech/azion-web-kit/commit/be5c3edc8bfebb6d936b71c9b941d91ff61a556a))
+
 ## [1.22.5](https://github.com/aziontech/azion-web-kit/compare/v1.22.4...v1.22.5) (2024-05-07)
 
 
