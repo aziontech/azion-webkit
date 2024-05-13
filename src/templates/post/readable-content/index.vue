@@ -3,3 +3,16 @@
     <slot />
   </article>
 </template>
+
+<style lang="scss">
+  .heading-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .anchor-link {
+      top: .75rem;
+      position: relative;
+    }
+  }
+</style>
