@@ -1,6 +1,7 @@
 import UnorderedList from './fragments/list/unordered-list.vue';
 import CardTitle from './fragments/text/card-title.vue';
 import CardDescription from './fragments/text/card-description.vue';
+import CardBgImage from './fragments/background/card-bg-image.vue';
 import IconTextSegment from './fragments/icon-text-segment.vue'
 import Overline from './fragments/text/overline.vue';
 import Quote from './fragments/quote/index.vue';
@@ -15,6 +16,7 @@ export {
   UnorderedList,
   CardTitle,
   CardDescription,
+  CardBgImage,
   IconTextSegment,
   Overline,
   Quote,
