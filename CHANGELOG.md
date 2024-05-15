@@ -1,3 +1,10 @@
+## [1.23.0](https://github.com/aziontech/azion-web-kit/compare/v1.22.7...v1.23.0) (2024-05-15)
+
+
+### Features
+
+* card-bg-image fragment ([04ea14f](https://github.com/aziontech/azion-web-kit/commit/04ea14ff8998a9671d58ea9631a07717986a12dd))
+
 ## [1.22.7](https://github.com/aziontech/azion-web-kit/compare/v1.22.6...v1.22.7) (2024-05-13)
 
 
