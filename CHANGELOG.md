@@ -1,3 +1,10 @@
+## [1.24.1](https://github.com/aziontech/azion-web-kit/compare/v1.24.0...v1.24.1) (2024-05-15)
+
+
+### Bug Fixes
+
+* footer mobile ([4c8285f](https://github.com/aziontech/azion-web-kit/commit/4c8285fffff809399b8db127aece634e056bb04c))
+
 ## [1.24.0](https://github.com/aziontech/azion-web-kit/compare/v1.23.0...v1.24.0) (2024-05-15)
 
 
