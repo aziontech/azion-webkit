@@ -1,3 +1,10 @@
+## [1.24.0](https://github.com/aziontech/azion-web-kit/compare/v1.23.0...v1.24.0) (2024-05-15)
+
+
+### Features
+
+* new footer ([#80](https://github.com/aziontech/azion-web-kit/issues/80)) ([06f6f4c](https://github.com/aziontech/azion-web-kit/commit/06f6f4cd727a00a46d27d1df8e4dec0bc0c0f959))
+
 ## [1.23.0](https://github.com/aziontech/azion-web-kit/compare/v1.22.7...v1.23.0) (2024-05-15)
 
 
