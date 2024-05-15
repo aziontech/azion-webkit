@@ -2,26 +2,25 @@
   <footer class="py-12 surface-ground border-t border-solid surface-border">
     <div class="flex flex-col gap-9 lg:gap-8 px-shell">
       <div class="flex flex-col lg:flex-row gap-9 lg:gap-12">
-        <div class="w-full lg:w-1/4">
-          <a :href="`/${lang}/`" title="Azion Technologies" class="mb-4 block" aria-label="Azion logo">
-            <AzionLogo class="h-[26px]" />
-          </a>
-          <p class="wrap">
-            {{ cta.text }}
-            <span class="text-color-secondary whitespace-nowrap">{{ cta.phone }}</span>
-          </p>
+        <div class="w-full flex flex-col justify-between">
+          <div class="flex flex-col gap-8">
+            <a :href="`/${lang}/`" title="Azion Technologies" class="mb-4 block" aria-label="Azion logo">
+              <AzionLogo class="h-[26px]" />
+            </a>
+            <p class="text-color-secondary text-sm">
+              {{ cta.text }}
+              <span class="text-color whitespace-nowrap">{{ cta.phone }}</span>
+            </p>
+          </div>
+          <div class="flex gap-3" v-if="socialButtons">
+            <LinkIcon v-for="({ icon, link, title }, index) in socialButtons" :aria-label="title" :key="index" :icon="icon" :link="link" :tooltipText="title"/>
+          </div>
         </div>
-        <div class="w-full lg:w-3/4 grid grid-cols-2 gap-8 md:grid-cols-5">
-          <div
-            :key="index"
-            v-for="({ title, list }, index) in listData"
-            :class="listData.length - 1 === index ? 'md:col-span-2' : 'col-span-1'">
-            <!-- <p class="mb-4 w-full mt-0 text-xs text-color-secondary px-4"></p> -->
+        <div class="w-full lg:w-3/4 flex gap-16 justify-end">
+          <div :key="index" v-for="({ title, list }, index) in listData" class="max-w-44 w-full">
             <Overline class="px-4" :label="title" />
-            <ul class="grid list-none p-0 m-0 mt-4 gap-3"
-              :class="listData.length - 1 === index ? 'md:grid md:grid-cols-2' : 'grid-cols-1'">
-              <li v-for="({ link, title }, i) in list" :key="i"
-                :class="listData.length - 1 == index ? [0, 1].includes(i) ? 'block' : 'hidden md:block' : 'block'">
+            <ul class="list-none p-0 m-0 mt-4 gap-3">
+              <li v-for="({ link, title }, i) in list" :key="i">
                 <LinkButton :link="`${link}`" class="p-button-text px-4 whitespace-nowrap" :label="title" />
               </li>
             </ul>
@@ -30,9 +29,6 @@
       </div>
       <div class="hidden md:block">
         <Divider />
-      </div>
-      <div class="md:hidden flex gap-3" v-if="socialButtons">
-        <LinkIcon v-for="({ icon, link, title }, index) in socialButtons" :aria-label="title" :key="index" :icon="icon" :link="link" :tooltipText="title"/>
       </div>
       <div class="flex justify-between md:items-center flex-col md:flex-row gap-8">
         <div class="flex gap-3">
@@ -51,7 +47,7 @@
 </template>
 
 <script setup>
-import AzionLogo from '../../assets/icons/azion-logo-default.vue';
+import AzionLogo from '../../assets/icons/azion-icon-logo.vue';
 import Divider from 'primevue/divider';
 import Overline from '../../fragments/text/overline.vue';
 import LinkIcon from '../button/link-icon.vue';
