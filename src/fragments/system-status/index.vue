@@ -42,8 +42,8 @@ const TRANSLATIONS = {
         "pt-br": "Interrupção Parcial do Sistema"
     },
     "Major System Outage": {
-        es: "Interrupción Importante del Sistema",
-        "pt-br": "Interrupção Importante do Sistema"
+        es: "Interrupción Grave del Sistema",
+        "pt-br": "Interrupção Grave do Sistema"
     }
 };
 
