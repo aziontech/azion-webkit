@@ -20,6 +20,10 @@ const props = defineProps({
 
 const { lang } = props
 
+const redirectToLink = () => {
+  window.open(this.link, '_blank')
+}
+
 const TRANSLATIONS = {
     "All Systems Operational": {
         es: "Todos los sistemas operativos",
