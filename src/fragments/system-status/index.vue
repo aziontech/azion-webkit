@@ -26,7 +26,7 @@ const TRANSLATIONS = {
         "pt-br": "Todos os sistemas operacionais"
     },
     "Service under Maintenance": {
-        es: "Servicio bajo Mantenimiento",
+        es: "Servicio en mantenimiento",
         "pt-br": "Serviço em Manutenção"
     },
     "Partially Degraded Service": {
