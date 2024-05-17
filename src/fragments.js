@@ -9,6 +9,7 @@ import QuoteCarousel from './fragments/quote/carousel.vue';
 import StatHighlightBanner from './fragments/stat-highlight-banner.vue';
 import Tile from './fragments/tile/index.vue';
 import Avatar from './fragments/Avatar/index.vue';
+import SystemStatus from './fragments/system-status/index.vue'
 
 export default {}
 
@@ -22,6 +23,7 @@ export {
   Quote,
   QuoteCarousel,
   StatHighlightBanner,
+  SystemStatus,
   Tile,
   Avatar
 }
