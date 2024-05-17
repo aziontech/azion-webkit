@@ -38,7 +38,6 @@ import MobileRightSidebar from './templates/header/mobile.vue';
 import NewsletterCard from './templates/newsletter/card/index.vue';
 import NewsletterSingleLine from './templates/newsletter/single-line/index.vue';
 import NewsletterWide from './templates/newsletter/wide/index.vue';
-import PanelExpansable from './templates/panel-expansable/index.vue';
 import ReadableContent from './templates/post/readable-content/index.vue';
 import Sharer from './templates/sharer-block/index.vue';
 import TabMenu from './templates/tab-menu/index.vue'
@@ -101,9 +100,6 @@ export {
   NewsletterCard,
   NewsletterSingleLine,
   NewsletterWide,
-
-  PanelExpansable,
-
 
   ReadableContent,
 
