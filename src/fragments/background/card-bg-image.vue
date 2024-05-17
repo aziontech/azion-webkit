@@ -4,7 +4,7 @@
       <img :alt="alt" :src="image" class="w-full h-full object-cover" />
     </div>
     <div class="absolute w-full h-full top-0 left-0 overflow-hidden rounded" :class="[
-      { 'bg-gradient-to-t from-[--surface-100] from-30% to-[rgba(23,_23,_23,_0.4)] to-100%' : !customGradient },
+      { 'gradient' : !customGradient },
       { customGradient : customGradient }
     ]" />
     <slot name="content" />
@@ -29,3 +29,10 @@ defineProps({
 })
 
 </script>
+
+<style scoped>
+.gradient {
+    background: linear-gradient(to bottom, var(--surface-100) 0%, transparent 80%),
+                linear-gradient(to top, var(--surface-100) 30%, transparent 100%);
+}
+</style>
