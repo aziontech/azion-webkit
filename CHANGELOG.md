@@ -1,3 +1,10 @@
+## [1.25.1](https://github.com/aziontech/azion-web-kit/compare/v1.25.0...v1.25.1) (2024-05-17)
+
+
+### Bug Fixes
+
+* remove component ([db6be14](https://github.com/aziontech/azion-web-kit/commit/db6be14376c3d067aca8c7911ebc14b67efd019f))
+
 ## [1.25.0](https://github.com/aziontech/azion-web-kit/compare/v1.24.1...v1.25.0) (2024-05-17)
 
 
