@@ -1,3 +1,10 @@
+## [1.26.1](https://github.com/aziontech/azion-web-kit/compare/v1.26.0...v1.26.1) (2024-05-17)
+
+
+### Bug Fixes
+
+* header new props + closing on esc and clicking outside of the box ([10c4e3a](https://github.com/aziontech/azion-web-kit/commit/10c4e3a5dd48792e59c809abb9560e03991ffed5))
+
 ## [1.26.0](https://github.com/aziontech/azion-web-kit/compare/v1.25.1...v1.26.0) (2024-05-17)
 
 
