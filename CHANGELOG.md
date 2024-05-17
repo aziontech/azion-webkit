@@ -1,3 +1,10 @@
+## [1.26.0](https://github.com/aziontech/azion-web-kit/compare/v1.25.1...v1.26.0) (2024-05-17)
+
+
+### Features
+
+* system status ([#81](https://github.com/aziontech/azion-web-kit/issues/81)) ([b3284b2](https://github.com/aziontech/azion-web-kit/commit/b3284b2484cd69f2c11d6a288498771ab4fb6242))
+
 ## [1.25.1](https://github.com/aziontech/azion-web-kit/compare/v1.25.0...v1.25.1) (2024-05-17)
 
 
