@@ -3,7 +3,7 @@
     <slot name="action"/>
   </div>
   <div class="px-container">
-    <Dialog v-model:visible="visible" modal :style="customStyle">
+    <Dialog v-model:visible="visible" modal dismissableMask closeOnEscape :showHeader="showHeader" :style="customStyle">
       <template #header v-if="$slots.header">
         <slot name="header" />
       </template>
@@ -24,6 +24,11 @@ defineProps({
     type: String,
     required: false,
     default: ''
+  },
+  showHeader: {
+    type: Boolean,
+    required: false,
+    default: true
   }
 })
 
