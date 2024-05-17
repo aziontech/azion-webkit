@@ -1,3 +1,10 @@
+## [1.25.0](https://github.com/aziontech/azion-web-kit/compare/v1.24.1...v1.25.0) (2024-05-17)
+
+
+### Features
+
+* base modal ([2aea623](https://github.com/aziontech/azion-web-kit/commit/2aea623475c970715058a71686d77f8e4013487f))
+
 ## [1.24.1](https://github.com/aziontech/azion-web-kit/compare/v1.24.0...v1.24.1) (2024-05-15)
 
 
