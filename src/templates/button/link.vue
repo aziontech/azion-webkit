@@ -4,7 +4,7 @@
     :title="label"
     :target="target"
     rel="noopener noreferrer"
-    class="p-button p-component p-button-sm min-w-fit no-underline justify-center md:justify-start gap-2 px-4"
+    class="p-button p-component p-button-sm w-fit no-underline justify-center md:justify-start gap-2 px-4"
     :class="[
       {'p-button-outlined' : outlined },
       {'p-button-secondary' : severity === 'secondary'},
