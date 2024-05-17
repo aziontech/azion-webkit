@@ -54,7 +54,7 @@
                 </template>
                 <template v-else>
                   <a class="p-button p-component p-button-text p-button-sm flex gap-2 hover:surface-hover justify-between w-full items-centerm min-w-52"
-                     :href="subitem.href" :target="subitem.external ? '_blank' : 'self'"
+                     :href="subitem.href" :target="subitem.external ? '_blank' : '_self'"
                   >
                     <span class="w-full flex gap-2 items-center justify-between">
                       {{ subitem.label }}
