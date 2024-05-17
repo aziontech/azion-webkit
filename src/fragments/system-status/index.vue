@@ -1,6 +1,6 @@
 <template>
     <LinkButton outlined class="surface-section w-fit hover:surface-hover whitespace-nowrap h-8 flex-row items-center" icon="pi pi-circle-fill" iconPos="left"
-    size="small" :label="label" @click="redirectToLink" link="https://status.azion.com/" target="_blank" :customIconStyle="`color: ${color}`" />
+    size="small" :label="label" link="https://status.azion.com/" target="_blank" :customIconStyle="`color: ${color}`" />
 </template>
 
 <script setup>
