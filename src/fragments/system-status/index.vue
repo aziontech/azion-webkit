@@ -1,14 +1,10 @@
 <template>
-    <PrimeButton outlined class="surface-section w-fit hover:surface-hover whitespace-nowrap" icon="pi pi-circle-fill"
-    size="small" :label="label" :pt="{
-      root: { class: 'h-8 flex-row items-center' },
-      label: { class: 'font-normal text-sm' },
-      icon: { style: `color: ${color}`, class: 'text-xs' }
-    }" @click="redirectToLink" />
+    <LinkButton outlined class="surface-section w-fit hover:surface-hover whitespace-nowrap h-8 flex-row items-center" icon="pi pi-circle-fill" iconPos="left"
+    size="small" :label="label" @click="redirectToLink" link="https://status.azion.com/" target="_blank" :customIconStyle="`color: ${color}`" />
 </template>
 
 <script setup>
-import PrimeButton from 'primevue/button'
+import LinkButton from "../../templates/button/link.vue"
 import { onBeforeMount, ref } from 'vue';
 
 const props = defineProps({
@@ -19,10 +15,6 @@ const props = defineProps({
 })
 
 const { lang } = props
-
-const redirectToLink = () => {
-  window.open(this.link, '_blank')
-}
 
 const TRANSLATIONS = {
     "All Systems Operational": {

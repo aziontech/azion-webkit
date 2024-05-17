@@ -7,6 +7,7 @@
             <a :href="`/${lang}/`" title="Azion Technologies" class="mb-4 block" aria-label="Azion logo">
               <AzionLogo class="h-[26px]" />
             </a>
+            <slot name="system-status" />
             <p class="text-color-secondary text-sm">
               {{ cta.text }}
               <span class="text-color whitespace-nowrap">{{ cta.phone }}</span>

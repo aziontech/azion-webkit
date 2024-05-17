@@ -9,20 +9,16 @@
       {'p-button-outlined' : outlined },
       {'p-button-secondary' : severity === 'secondary'},
       {'p-button-info' : severity === 'info'},
-      {'p-button-sm' : size === 'small' }
+      {'p-button-sm' : size === 'small' },
+      {'flex flex-row-reverse' : iconPos === 'left'},
     ]">
-
-    <span
-      v-if="iconPos === 'left'"
-      :class="`pi p-button-icon ${icon}`"
-      data-pc-section="icon"></span>
 
     {{ label }}
 
     <span
-      v-if="iconPos === 'right'"
+      v-if="iconPos" :style="customIconStyle"
       :class="`pi p-button-icon ${icon}`"
-      data-pc-section="icon"></span>
+      data-pc-section="icon" />
 	</a>
 </template>
 
@@ -32,9 +28,14 @@
       type: String,
       required: false
     },
-    iconPos: {
+    customIconStyle: {
       type: String,
       required: false
+    },
+    iconPos: {
+      type: String,
+      required: false,
+      options: ['left', 'right']
     },
     label: {
       type: String,
