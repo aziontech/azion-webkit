@@ -1,3 +1,10 @@
+## [1.26.2](https://github.com/aziontech/azion-web-kit/compare/v1.26.1...v1.26.2) (2024-05-17)
+
+
+### Bug Fixes
+
+* link button w-fit ([428a59e](https://github.com/aziontech/azion-web-kit/commit/428a59ee42744baec59fd22656f35118cd3b5a42))
+
 ## [1.26.1](https://github.com/aziontech/azion-web-kit/compare/v1.26.0...v1.26.1) (2024-05-17)
 
 
