@@ -1,3 +1,10 @@
+## [1.26.3](https://github.com/aziontech/azion-web-kit/compare/v1.26.2...v1.26.3) (2024-05-17)
+
+
+### Bug Fixes
+
+* header _self assignment ([0b093ea](https://github.com/aziontech/azion-web-kit/commit/0b093eae1e7cf22ab85d687b0e9d58b9ea76f1f6))
+
 ## [1.26.2](https://github.com/aziontech/azion-web-kit/compare/v1.26.1...v1.26.2) (2024-05-17)
 
 
