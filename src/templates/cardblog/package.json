@@ -1,0 +1,9 @@
+{
+  "main": "./cardblog.cjs.js",
+  "module": "./cardblog.esm.js",
+  "unpkg": "./cardblog.min.js",
+  "types": "./CardBlog.d.ts",
+  "browser": {
+    "./sfc": "./CardBlog.vue"
+  }
+}
