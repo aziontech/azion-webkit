@@ -15,6 +15,10 @@ const CORE_DEPENDENCIES = {
   '@aziontech/webkit/aisdialog': '@aziontech.webkit.aisdialog',
   '@aziontech/webkit/aisindexhit': '@aziontech.webkit.aisindexhit',
   '@aziontech/webkit/bignumbers': '@aziontech.webkit.bignumbers',
+  '@aziontech/webkit/cardbase': '@aziontech.webkit.cardbase',
+  '@aziontech/webkit/cardbaseclickable': '@aziontech.webkit.cardbaseclickable',
+  '@aziontech/webkit/cardblog': '@aziontech.webkit.cardblog',
+  '@aziontech/webkit/cardcases': '@aziontech.webkit.cardcases',
   '@aziontech/webkit/cardgridblock': '@aziontech.webkit.cardgridblock',
   '@aziontech/webkit/cardgridlist': '@aziontech.webkit.cardgridlist',
   '@aziontech/webkit/cardgridlistwithloadmore': '@aziontech.webkit.cardgridlistwithloadmore',
@@ -51,7 +55,7 @@ const CORE_DEPENDENCIES = {
   '@aziontech/webkit/tabmenuwithsearchlink': '@aziontech.webkit.tabmenuwithsearchlink',
   '@aziontech/webkit/titlelist': '@aziontech.webkit.titlelist',
   '@aziontech/webkit/themeswitcher': '@aziontech.webkit.themeswitcher',
-  '@aziontech/webkit/themeswitcherawareimage': '@aziontech.webkit.themeswitcherawareimage',
+  '@aziontech/webkit/themeswitcherawareimage': '@aziontech.webkit.themeswitcherawareimage'
 };
 
 // dependencies

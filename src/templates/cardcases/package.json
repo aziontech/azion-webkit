@@ -1,0 +1,9 @@
+{
+  "main": "./cardcases.cjs.js",
+  "module": "./cardcases.esm.js",
+  "unpkg": "./cardcases.min.js",
+  "types": "./CardCases.d.ts",
+  "browser": {
+    "./sfc": "./CardCases.vue"
+  }
+}
