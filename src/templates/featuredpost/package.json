@@ -1,0 +1,9 @@
+{
+  "main": "./featuredpost.cjs.js",
+  "module": "./featuredpost.esm.js",
+  "unpkg": "./featuredpost.min.js",
+  "types": "./FeaturedPost.d.ts",
+  "browser": {
+    "./sfc": "./FeaturedPost.vue"
+  }
+}

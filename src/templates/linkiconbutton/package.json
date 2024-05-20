@@ -1,0 +1,9 @@
+{
+  "main": "./linkiconbutton.cjs.js",
+  "module": "./linkiconbutton.esm.js",
+  "unpkg": "./linkiconbutton.min.js",
+  "types": "./LinkIconButton.d.ts",
+  "browser": {
+    "./sfc": "./LinkIconButton.vue"
+  }
+}

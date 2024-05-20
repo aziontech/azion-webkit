@@ -1,13 +1,7 @@
 {
-  "name": "@aziontech/azion-web-kit",
-  "version": "1.22.7",
-  "type": "module",
-  "main": "./src/index.js",
+  "name": "@aziontech/webkit",
   "author": "aziontech",
-  "exports": {
-    ".": "./src/index.js",
-    "./fragments": "./src/fragments.js"
-  },
+  "version": "2.0.0",
   "contributors": [
     {
       "name": "Robson Junior",
@@ -26,13 +20,25 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "repository": "https://github.com/aziontech/azion-web-kit.git",
+  "keywords": [
+    "primevue",
+    "vue",
+    "vue.js",
+    "vue3",
+    "ui library",
+    "component library",
+    "tailwind",
+    "unstyled"
+  ],
+  "repository": "https://github.com/aziontech/webkit.git",
   "scripts": {
     "clean-cache": "npm cache clean --force",
     "clean": "rm -rf node_modules package-lock.json",
     "reinstall": "npm run clean; npm install",
     "dev": "vite",
     "build": "vite build",
+    "build:package": "NODE_ENV=production rollup -c && node build-meta",
+    "build:lib": "npm run build:package",
     "preview": "vite preview",
     "test:unit": "vitest",
     "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
@@ -48,10 +54,9 @@
     "@vee-validate/yup": "^4.12.6",
     "algoliasearch": "^4.21.1",
     "autoprefixer": "^10.4.16",
+    "fs-extra": "^11.2.0",
     "instantsearch.css": "^8.1.0",
-    "postcss": "^8.4.31",
     "s": "^1.0.0",
-    "semantic-release": "^23.0.0",
     "tailwind": "^4.0.0",
     "vee-validate": "^4.11.8",
     "vue": "^3.3.11",
@@ -59,6 +64,7 @@
     "yup": "^1.3.2"
   },
   "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.3",
     "@rushstack/eslint-patch": "^1.2.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^10.0.1",
@@ -83,13 +89,18 @@
     "eslint-plugin-storybook": "^0.6.15",
     "eslint-plugin-vue": "^9.9.0",
     "jsdom": "^21.1.0",
+    "postcss": "^8.4.31",
     "prettier": "^2.8.4",
     "primeflex": "^3.3.1",
     "primeicons": "^6.0.1",
     "primevue": "3.47.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-vue": "^6.0.0-beta.9",
     "sass": "^1.68.0",
+    "semantic-release": "^23.0.0",
     "start-server-and-test": "^2.0.0",
     "storybook": "^7.6.17",
     "tailwindcss": "^3.4.1",

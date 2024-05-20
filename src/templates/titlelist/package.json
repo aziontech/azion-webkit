@@ -1,0 +1,9 @@
+{
+  "main": "./titlelist.cjs.js",
+  "module": "./titlelist.esm.js",
+  "unpkg": "./titlelist.min.js",
+  "types": "./TitleList.d.ts",
+  "browser": {
+    "./sfc": "./TitleList.vue"
+  }
+}

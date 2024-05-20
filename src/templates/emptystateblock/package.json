@@ -1,0 +1,9 @@
+{
+  "main": "./emptystateblock.cjs.js",
+  "module": "./emptystateblock.esm.js",
+  "unpkg": "./emptystateblock.min.js",
+  "types": "./EmptyStateBlock.d.ts",
+  "browser": {
+    "./sfc": "./EmptyStateBlock.vue"
+  }
+}

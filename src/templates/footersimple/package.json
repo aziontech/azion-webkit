@@ -1,0 +1,9 @@
+{
+  "main": "./footersimple.cjs.js",
+  "module": "./footersimple.esm.js",
+  "unpkg": "./footersimple.min.js",
+  "types": "./FooterSimple.d.ts",
+  "browser": {
+    "./sfc": "./FooterSimple.vue"
+  }
+}

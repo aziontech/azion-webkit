@@ -1,0 +1,9 @@
+{
+  "main": "./errorstateblock.cjs.js",
+  "module": "./errorstateblock.esm.js",
+  "unpkg": "./errorstateblock.min.js",
+  "types": "./ErrorStateBlock.d.ts",
+  "browser": {
+    "./sfc": "./ErrorStateBlock.vue"
+  }
+}
