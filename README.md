@@ -1,13 +1,13 @@
 <h1 align="center">
-  azion-web-kit
+  Webkit
 </h1>
 
 <p align="center">
-  <img src="./doc/images/cover.png" alt="Cover azion-web-kit repository"/>
+  <img src="./doc/images/cover.png" alt="Cover @aziontech/webkit repository"/>
 </p>
 
 <p align="center">
-  The azion-web-kit project is the better way to develop/create/update an app, page, landing to the company front-end necessities.
+  The @aziontech/webkit project is the better way to develop/create/update an app, page, landing to the company front-end necessities.
 </p>
 
 ## HOW TO INSTALL
@@ -37,7 +37,7 @@ or add in the package.json file inside your project in the dependencies key.
 ``` json
 {
   "dependencies": {
-    "@aziontech/azion-web-kit": "^1.0.8",
+    "@aziontech/webkit": "2.0.0",
     ....
   }
 }

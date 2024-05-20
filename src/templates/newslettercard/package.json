@@ -1,0 +1,9 @@
+{
+  "main": "./newslettercard.cjs.js",
+  "module": "./newslettercard.esm.js",
+  "unpkg": "./newslettercard.min.js",
+  "types": "./NewsletterCard.d.ts",
+  "browser": {
+    "./sfc": "./NewsletterCard.vue"
+  }
+}

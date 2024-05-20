@@ -1,0 +1,9 @@
+{
+  "main": "./newsletterwide.cjs.js",
+  "module": "./newsletterwide.esm.js",
+  "unpkg": "./newsletterwide.min.js",
+  "types": "./NewsletterWide.d.ts",
+  "browser": {
+    "./sfc": "./NewsletterWide.vue"
+  }
+}

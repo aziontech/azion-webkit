@@ -1,0 +1,9 @@
+{
+  "main": "./formblock.cjs.js",
+  "module": "./formblock.esm.js",
+  "unpkg": "./formblock.min.js",
+  "types": "./FormBlock.d.ts",
+  "browser": {
+    "./sfc": "./FormBlock.vue"
+  }
+}
