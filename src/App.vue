@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import BigNumbers from './templates/big-numbers/index.vue';
+import BigNumbers from '@aziontech/webkit/bignumbers.vue';
 
 const items = [
   { titleup:'Até', title: '1,6x', description: 'mais rápido que o Macbook Air (M1)' },

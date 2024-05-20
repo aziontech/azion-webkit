@@ -1,0 +1,9 @@
+{
+  "main": "./cardgridlistwithloadmore.cjs.js",
+  "module": "./cardgridlistwithloadmore.esm.js",
+  "unpkg": "./cardgridlistwithloadmore.min.js",
+  "types": "./CardGridListWithLoadMore.d.ts",
+  "browser": {
+    "./sfc": "./CardGridListWithLoadMore.vue"
+  }
+}
