@@ -1,0 +1,9 @@
+{
+  "main": "./banner.cjs.js",
+  "module": "./banner.esm.js",
+  "unpkg": "./banner.min.js",
+  "types": "./Banner.d.ts",
+  "browser": {
+    "./sfc": "./Banner.vue"
+  }
+}
