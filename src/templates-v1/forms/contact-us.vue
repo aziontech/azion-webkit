@@ -58,7 +58,7 @@ import Textarea from 'primevue/textarea';
 import Dropdown from "primevue/dropdown";
 import Checkbox from 'primevue/checkbox';
 import InlineMessage from 'primevue/inlinemessage'
-import FormBlock from "../form-block/index.vue"
+import FormBlock from "@aziontech/webkit/formblock";
 import { hbspPostHandler } from "../../services/hubspot-service"
 import { ref } from 'vue'
 

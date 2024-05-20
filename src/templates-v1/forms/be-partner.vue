@@ -70,10 +70,10 @@ import InputText from "primevue/inputtext";
 import Button from "primevue/button";
 import Dropdown from "primevue/dropdown";
 import Checkbox from 'primevue/checkbox';
-import InlineMessage from 'primevue/inlinemessage'
-import FormBlock from "../form-block/index.vue"
-import { hbspPostHandler } from "../../services/hubspot-service"
-import { ref } from 'vue'
+import InlineMessage from 'primevue/inlinemessage';
+import FormBlock from "@aziontech/webkit/formblock";
+import { hbspPostHandler } from "../../services/hubspot-service";
+import { ref } from 'vue';
 
 const props = defineProps({
   t: {

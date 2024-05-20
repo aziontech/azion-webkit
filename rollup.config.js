@@ -16,6 +16,8 @@ const CORE_DEPENDENCIES = {
   '@aziontech/webkit/aisindexhit': '@aziontech.webkit.aisindexhit',
   '@aziontech/webkit/bignumbers': '@aziontech.webkit.bignumbers',
   '@aziontech/webkit/cardgridblock': '@aziontech.webkit.cardgridblock',
+  '@aziontech/webkit/cardgridlist': '@aziontech.webkit.cardgridlist',
+  '@aziontech/webkit/cardgridlistwithloadmore': '@aziontech.webkit.cardgridlistwithloadmore',
   '@aziontech/webkit/contentfeedback': '@aziontech.webkit.contentfeedback',
   '@aziontech/webkit/contentlogo': '@aziontech.webkit.contentlogo',
   '@aziontech/webkit/contentquote': '@aziontech.webkit.contentquote',

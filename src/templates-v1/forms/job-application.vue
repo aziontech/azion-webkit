@@ -88,7 +88,7 @@ import InputText from "primevue/inputtext";
 import Button from "primevue/button";
 import InlineMessage from 'primevue/inlinemessage'
 import FileUpload from 'primevue/fileupload';
-import FormBlock from "../form-block/index.vue";
+import FormBlock from "@aziontech/webkit/formblock";
 import { ref } from 'vue';
 import { useForm } from 'vee-validate';
 import * as yup from 'yup';
