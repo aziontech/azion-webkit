@@ -1,0 +1,9 @@
+{
+  "main": "./tabmenuwithsearch.cjs.js",
+  "module": "./tabmenuwithsearch.esm.js",
+  "unpkg": "./tabmenuwithsearch.min.js",
+  "types": "./TabMenuWithSearch.d.ts",
+  "browser": {
+    "./sfc": "./TabMenuWithSearch.vue"
+  }
+}
