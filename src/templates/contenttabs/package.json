@@ -1,0 +1,9 @@
+{
+  "main": "./contenttabs.cjs.js",
+  "module": "./contenttabs.esm.js",
+  "unpkg": "./contenttabs.min.js",
+  "types": "./ContentTabs.d.ts",
+  "browser": {
+    "./sfc": "./ContentTabs.vue"
+  }
+}

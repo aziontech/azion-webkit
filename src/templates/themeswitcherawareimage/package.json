@@ -1,0 +1,9 @@
+{
+  "main": "./imageswitcher.cjs.js",
+  "module": "./imageswitcher.esm.js",
+  "unpkg": "./imageswitcher.min.js",
+  "types": "./ImageSwitcher.d.ts",
+  "browser": {
+    "./sfc": "./ImageSwitcher.vue"
+  }
+}

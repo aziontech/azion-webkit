@@ -1,0 +1,9 @@
+{
+  "main": "./herobase.cjs.js",
+  "module": "./herobase.esm.js",
+  "unpkg": "./herobase.min.js",
+  "types": "./HeroBase.d.ts",
+  "browser": {
+    "./sfc": "./HeroBase.vue"
+  }
+}

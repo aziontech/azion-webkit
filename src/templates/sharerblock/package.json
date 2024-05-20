@@ -1,0 +1,9 @@
+{
+  "main": "./sharerblock.cjs.js",
+  "module": "./sharerblock.esm.js",
+  "unpkg": "./sharerblock.min.js",
+  "types": "./SharerBlock.d.ts",
+  "browser": {
+    "./sfc": "./SharerBlock.vue"
+  }
+}

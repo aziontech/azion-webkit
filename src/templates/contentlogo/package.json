@@ -1,0 +1,9 @@
+{
+  "main": "./contentlogo.cjs.js",
+  "module": "./contentlogo.esm.js",
+  "unpkg": "./contentlogo.min.js",
+  "types": "./ContentLogo.d.ts",
+  "browser": {
+    "./sfc": "./ContentLogo.vue"
+  }
+}

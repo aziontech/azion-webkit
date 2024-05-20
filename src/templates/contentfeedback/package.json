@@ -1,0 +1,9 @@
+{
+  "main": "./contentfeedback.cjs.js",
+  "module": "./contentfeedback.esm.js",
+  "unpkg": "./contentfeedback.min.js",
+  "types": "./ContentFeedback.d.ts",
+  "browser": {
+    "./sfc": "./ContentFeedback.vue"
+  }
+}

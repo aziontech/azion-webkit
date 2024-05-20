@@ -1,0 +1,9 @@
+{
+  "main": "./algoliaindexhit.cjs.js",
+  "module": "./algoliaindexhit.esm.js",
+  "unpkg": "./algoliaindexhit.min.js",
+  "types": "./AlgoliaIndexHit.d.ts",
+  "browser": {
+    "./sfc": "./AlgoliaIndexHit.vue"
+  }
+}

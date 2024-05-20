@@ -1,0 +1,9 @@
+{
+  "main": "./selectlang.cjs.js",
+  "module": "./selectlang.esm.js",
+  "unpkg": "./selectlang.min.js",
+  "types": "./SelectLang.d.ts",
+  "browser": {
+    "./sfc": "./SelectLang.vue"
+  }
+}
