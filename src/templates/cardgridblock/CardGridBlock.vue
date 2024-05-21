@@ -19,10 +19,10 @@
 </template>
 
 <script setup>
-import CardGridListLoadMore from "../card-grid-list/withLoadMore.vue";
-import TabMenu from "../tab-menu/index.vue"
-import CardGridList from "../card-grid-list/index.vue"
-import TabMenuSearch from "../tab-menu/with-search.vue"
+import CardGridListLoadMore from "@aziontech/webkit/cardgridlistwithloadmore";
+import TabMenu from "@aziontech/webkit/tabmenu";
+import CardGridList from "@aziontech/webkit/cardgridlist";
+import TabMenuSearch from "@aziontech/webkit/tabmenuwithsearch";
 import { ref } from "vue";
 
 const props = defineProps({
