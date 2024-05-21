@@ -6,7 +6,7 @@
  * @module `themeswitcher`
  */
 import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { ClassComponent, GlobalComponentConstructor } from '../../ts-helpers';
 
 /**
  * Defines valid properties in ThemeSwitcher component.

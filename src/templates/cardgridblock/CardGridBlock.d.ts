@@ -6,7 +6,7 @@
  * @module `cardgridblock`
  */
 import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { ClassComponent, GlobalComponentConstructor } from '../../ts-helpers';
 
 export interface CardGridBlockProps {
   data: [];
