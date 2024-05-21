@@ -69,7 +69,9 @@ const GLOBAL_COMPONENT_DEPENDENCIES = {
 };
 
 // externals
-const EXTERNAL = ['vue'];
+const EXTERNAL = [
+  'vue'
+];
 
 const EXTERNAL_COMPONENT = [
   ...EXTERNAL,
@@ -77,7 +79,7 @@ const EXTERNAL_COMPONENT = [
 ];
 
 const BABEL_PLUGIN_OPTIONS = {
-  extensions: ['.vue'],// ['.js', '.vue'],
+  extensions: ['.js', '.vue'],
   exclude: 'node_modules/**',
   presets: ['@babel/preset-env'],
   plugins: [],
