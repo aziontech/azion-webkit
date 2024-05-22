@@ -30,8 +30,8 @@
 
 <script setup>
 import Carousel from 'primevue/carousel';
-import QuoteCarousel from '../../fragments/quote/carousel.vue';
-import Quote from '../../fragments/quote/index.vue';
+import QuoteCarousel from '../quotecarousel/QuoteCarousel.vue'
+import Quote from '../quote/Quote.vue';
 
 defineProps({
   isCarousel: {

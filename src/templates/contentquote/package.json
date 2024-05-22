@@ -1,7 +1,5 @@
 {
-  "main": "./contentquoteblock.cjs.js",
-  "module": "./contentquoteblock.esm.js",
-  "unpkg": "./contentquoteblock.min.js",
+  "main": "./contentquote.js",
   "types": "./ContentQuote.d.ts",
   "browser": {
     "./sfc": "./ContentQuote.vue"

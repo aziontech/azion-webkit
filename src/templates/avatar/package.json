@@ -1,0 +1,7 @@
+{
+  "main": "./avatar.js",
+  "types": "./Avatar.d.ts",
+  "browser": {
+    "./sfc": "./Avatar.vue"
+  }
+}

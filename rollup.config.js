@@ -6,11 +6,43 @@ import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 import vue from 'rollup-plugin-vue';
 
+// import commonjs from '@rollup/plugin-commonjs';
+// import resolve from '@rollup/plugin-node-resolve';
+
 import pkg from './package.json';
 
 let entries = [];
 
+// const CORE_DEPENDENCIES_PRIMEVUE = {};
+
 const CORE_DEPENDENCIES = {
+  'primevue/avatar': 'primevue.avatar',
+  'primevue/avatargroup': 'primevue.avatargroup',
+  'primevue/button': 'primevue.button',
+  'primevue/breadcrumb': 'primevue.breadcrumb',
+  'primevue/carousel': 'primevue.carousel',
+  'primevue/card': 'primevue.card',
+  'primevue/checkbox': 'primevue.checkbox',
+  'primevue/dialog': 'primevue.dialog',
+  'primevue/divider': 'primevue.divider',
+  'primevue/dropdown': 'primevue.dropdown',
+  'primevue/fileupload': 'primevue.fileupload',
+  'primevue/inputtext': 'primevue.inputtext',
+  'primevue/inputgroup': 'primevue.inputgroup',
+  'primevue/inputgroup': 'primevue.inputgroupaddon',
+  'primevue/inlinemessage': 'primevue.inlinemessage',
+  'primevue/overlaypanel': 'primevue.overlaypanel',
+  'primevue/dropdown': 'primevue.dropdown',
+  'primevue/overlaypanel': 'primevue.overlaypanel',
+  'primevue/panelmenu': 'primevue.panelmenu',
+  'primevue/menu': 'primevue.menu',
+  'primevue/sidebar': 'primevue.sidebar',
+  'primevue/tag': 'primevue.tag',
+  'primevue/tabmenu': 'primevue.tabmenu',
+  'primevue/tabview': 'primevue/tabview',
+  'primevue/textarea': 'primevue.textarea',
+  'primevue/togglebutton': 'primevue.togglebutton',
+
   '@aziontech/webkit/ais': '@aziontech.webkit.ais',
   '@aziontech/webkit/aisdialog': '@aziontech.webkit.aisdialog',
   '@aziontech/webkit/aisindexhit': '@aziontech.webkit.aisindexhit',
@@ -70,7 +102,10 @@ const GLOBAL_COMPONENT_DEPENDENCIES = {
 
 // externals
 const EXTERNAL = [
-  'vue'
+  'vue',
+  'veeValidate',
+  'yup',
+  'algoliasearch'
 ];
 
 const EXTERNAL_COMPONENT = [
@@ -79,7 +114,7 @@ const EXTERNAL_COMPONENT = [
 ];
 
 const BABEL_PLUGIN_OPTIONS = {
-  extensions: ['.js', '.vue'],
+  extensions: ['.vue'],
   exclude: 'node_modules/**',
   presets: ['@babel/preset-env'],
   plugins: [],
@@ -101,6 +136,8 @@ const TERSER_PLUGIN_OPTIONS = {
 };
 
 const PLUGINS = [
+  // resolve(),
+  // commonjs(),
   vue(),
   postcss(POSTCSS_PLUGIN_OPTIONS),
   babel(BABEL_PLUGIN_OPTIONS)
@@ -126,7 +163,8 @@ function addEntry(folder, inFile, outFile) {
       input,
       plugins: [
         ...plugins,
-        isMinify && terser(TERSER_PLUGIN_OPTIONS)
+        isMinify && terser(TERSER_PLUGIN_OPTIONS),
+        // useCorePlugin && corePlugin()
       ],
       external,
       inlineDynamicImports

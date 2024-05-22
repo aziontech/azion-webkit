@@ -1,7 +1,5 @@
 {
-  "main": "./readablecontent.cjs.js",
-  "module": "./readablecontent.esm.js",
-  "unpkg": "./readablecontent.min.js",
+  "main": "./readablecontent.js",
   "types": "./ReadableContent.d.ts",
   "browser": {
     "./sfc": "./ReadableContent.vue"

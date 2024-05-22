@@ -44,7 +44,7 @@
 <script setup>
 import Carousel from 'primevue/carousel';
 import Avatar from 'primevue/avatar';
-import ImageSwitcher from "@aziontech/webkit/themeswitcherawareimage"
+import ImageSwitcher from "../themeswitcherawareimage/ImageSwitcher.vue";
 import { ref } from 'vue';
 
 defineProps({

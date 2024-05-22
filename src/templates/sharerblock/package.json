@@ -1,7 +1,5 @@
 {
-  "main": "./sharerblock.cjs.js",
-  "module": "./sharerblock.esm.js",
-  "unpkg": "./sharerblock.min.js",
+  "main": "./sharerblock.js",
   "types": "./SharerBlock.d.ts",
   "browser": {
     "./sfc": "./SharerBlock.vue"

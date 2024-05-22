@@ -1,9 +1,0 @@
-{
-  "main": "./listunordered.cjs.js",
-  "module": "./listunordered.esm.js",
-  "unpkg": "./listunordered.min.js",
-  "types": "./ListUnordered.d.ts",
-  "browser": {
-    "./sfc": "./ListUnordered.vue"
-  }
-}

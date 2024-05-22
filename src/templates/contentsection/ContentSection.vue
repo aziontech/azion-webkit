@@ -52,7 +52,7 @@
 </template>
 
 <script setup>
-import Overline from "../../fragments/text/overline.vue";
+import Overline from "../overline/Overline.vue";
 
 defineProps({
   overline: {

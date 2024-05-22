@@ -1,9 +1,0 @@
-{
-  "main": "./tile.cjs.js",
-  "module": "./tile.esm.js",
-  "unpkg": "./tile.min.js",
-  "types": "./Tile.d.ts",
-  "browser": {
-    "./sfc": "./Tile.vue"
-  }
-}

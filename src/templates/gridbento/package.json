@@ -1,7 +1,5 @@
 {
-  "main": "./gridbento.cjs.js",
-  "module": "./gridbento.esm.js",
-  "unpkg": "./gridbento.min.js",
+  "main": "./gridbento.js",
   "types": "./GridBento.d.ts",
   "browser": {
     "./sfc": "./GridBento.vue"

@@ -88,11 +88,13 @@ import InputText from "primevue/inputtext";
 import Button from "primevue/button";
 import InlineMessage from 'primevue/inlinemessage'
 import FileUpload from 'primevue/fileupload';
-import FormBlock from "@aziontech/webkit/formblock";
+
 import { ref } from 'vue';
 import { useForm } from 'vee-validate';
 import * as yup from 'yup';
 import { toTypedSchema } from '@vee-validate/yup';
+
+import FormBlock from "../formblock/FormBlock.vue";
 
 const props = defineProps({
   t: {

@@ -15,7 +15,7 @@
   </section>
 </template>
 <script setup>
-import LinkButton from '@/templates/button/link/LinkButton.vue';
+import LinkButton from '../linkbutton/LinkButton.vue';
 
 // interface listItem {
 //   title: string,

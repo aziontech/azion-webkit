@@ -1,7 +1,5 @@
 {
-  "main": "./cardbase.cjs.js",
-  "module": "./cardbase.esm.js",
-  "unpkg": "./cardbase.min.js",
+  "main": "./cardbase.js",
   "types": "./CardBase.d.ts",
   "browser": {
     "./sfc": "./CardBase.vue"

@@ -1,7 +1,5 @@
 {
-  "main": "./keyboardkey.cjs.js",
-  "module": "./keyboardkey.esm.js",
-  "unpkg": "./keyboardkey.min.js",
+  "main": "./keyboardkey.js",
   "types": "./KeyboardKey.d.ts",
   "browser": {
     "./sfc": "./KeyboardKey.vue"

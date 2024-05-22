@@ -1,0 +1,7 @@
+{
+  "main": "./quotecarousel.js",
+  "types": "./QuoteCarousel.d.ts",
+  "browser": {
+    "./sfc": "./QuoteCarousel.vue"
+  }
+}

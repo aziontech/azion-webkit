@@ -71,7 +71,7 @@ import Button from "primevue/button";
 import Dropdown from "primevue/dropdown";
 import Checkbox from 'primevue/checkbox';
 import InlineMessage from 'primevue/inlinemessage';
-import FormBlock from "@aziontech/webkit/formblock";
+import FormBlock from "../formblock/FormBlock.vue";
 import { hbspPostHandler } from "../../services/hubspot-service";
 import { ref } from 'vue';
 

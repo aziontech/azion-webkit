@@ -1,0 +1,7 @@
+{
+  "main": "./stathighlightbanner.js",
+  "types": "./StatHighlightBanner.d.ts",
+  "browser": {
+    "./sfc": "./StatHighlightBanner.vue"
+  }
+}

@@ -1,7 +1,5 @@
 {
-  "main": "./formbepartner.cjs.js",
-  "module": "./formbepartner.esm.js",
-  "unpkg": "./formbepartner.min.js",
+  "main": "./formbepartner.js",
   "types": "./FormBePartner.d.ts",
   "browser": {
     "./sfc": "./FormBePartner.vue"

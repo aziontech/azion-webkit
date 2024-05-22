@@ -1,7 +1,5 @@
 {
-  "main": "./formcontactus.cjs.js",
-  "module": "./formcontactus.esm.js",
-  "unpkg": "./formcontactus.min.js",
+  "main": "./formcontactus.js",
   "types": "./FormContactUs.d.ts",
   "browser": {
     "./sfc": "./FormContactUs.vue"

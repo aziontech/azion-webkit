@@ -34,8 +34,8 @@
 <script setup>
 import { ref, onUpdated } from 'vue';
 import Dialog from 'primevue/dialog';
-import AlgoliaInstantSearch from '@aziontech/webkit/ais';
-import KeyboardKey from '@aziontech/webkit/keyboardkey';
+import AlgoliaInstantSearch from '../ais/AlgoliaInstantSearch.vue';
+import KeyboardKey from '../keyboardkey/KeyboardKey.vue';
 
 const emit = defineEmits(['close'])
 const hasInputValue = ref(false)

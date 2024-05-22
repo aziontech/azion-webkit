@@ -1,0 +1,7 @@
+{
+  "main": "./quote.js",
+  "types": "./Quote.d.ts",
+  "browser": {
+    "./sfc": "./Quote.vue"
+  }
+}
