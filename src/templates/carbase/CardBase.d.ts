@@ -7,7 +7,7 @@
  * @module cardbase
  */
 import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../../ts-helpers';
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
 
 /**
  * Defines valid properties in cardbase component.
