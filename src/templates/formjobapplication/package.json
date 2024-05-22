@@ -1,7 +1,5 @@
 {
-  "main": "./formjobapplication.cjs.js",
-  "module": "./formjobapplication.esm.js",
-  "unpkg": "./formjobapplication.min.js",
+  "main": "./formjobapplication.js",
   "types": "./FormJobApplication.d.ts",
   "browser": {
     "./sfc": "./FormJobApplication.vue"

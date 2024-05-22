@@ -1,9 +1,0 @@
-{
-  "main": "./quote.cjs.js",
-  "module": "./quote.esm.js",
-  "unpkg": "./quote.min.js",
-  "types": "./Quote.d.ts",
-  "browser": {
-    "./sfc": "./Quote.vue"
-  }
-}

@@ -33,7 +33,7 @@
 
 <script setup>
 import TabMenu from 'primevue/tabmenu';
-import AlgoliaDialog from '@aziontech/webkit/aisdialog';
+import AlgoliaDialog from '../aisdialog/AlgoliaDialog.vue';
 import Button from 'primevue/button';
 import Dropdown from 'primevue/dropdown'
 import { ref, onMounted } from "vue";

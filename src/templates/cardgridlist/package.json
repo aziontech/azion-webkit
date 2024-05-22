@@ -1,7 +1,5 @@
 {
-  "main": "./cardgridlist.cjs.js",
-  "module": "./cardgridlist.esm.js",
-  "unpkg": "./cardgridlist.min.js",
+  "main": "./cardgridlist.js",
   "types": "./CardGridList.d.ts",
   "browser": {
     "./sfc": "./CardGridList.vue"

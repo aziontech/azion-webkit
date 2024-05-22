@@ -1,7 +1,5 @@
 {
-  "main": "./heroblogpost.cjs.js",
-  "module": "./heroblogpost.esm.js",
-  "unpkg": "./heroblogpost.min.js",
+  "main": "./heroblogpost.js",
   "types": "./HeroBlogPost.d.ts",
   "browser": {
     "./sfc": "./HeroBlogPost.vue"

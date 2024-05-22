@@ -1,0 +1,7 @@
+{
+  "main": "./icontextsegment.js",
+  "types": "./IconTextSegment.d.ts",
+  "browser": {
+    "./sfc": "./IconTextSegment.vue"
+  }
+}

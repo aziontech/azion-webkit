@@ -1,9 +1,0 @@
-{
-  "main": "./icontextsegment.cjs.js",
-  "module": "./icontextsegment.esm.js",
-  "unpkg": "./icontextsegment.min.js",
-  "types": "./IconTextSegment.d.ts",
-  "browser": {
-    "./sfc": "./IconTextSegment.vue"
-  }
-}

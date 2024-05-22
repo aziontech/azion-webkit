@@ -1,7 +1,5 @@
 {
-  "main": "./footer.cjs.js",
-  "module": "./footer.esm.js",
-  "unpkg": "./footer.min.js",
+  "main": "./footer.js",
   "types": "./Footer.d.ts",
   "browser": {
     "./sfc": "./Footer.vue"

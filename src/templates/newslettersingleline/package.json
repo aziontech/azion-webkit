@@ -1,7 +1,5 @@
 {
-  "main": "./newslettersingleline.cjs.js",
-  "module": "./newslettersingleline.esm.js",
-  "unpkg": "./newslettersingleline.min.js",
+  "main": "./newslettersingleline.js",
   "types": "./NewsletterSingleLine.d.ts",
   "browser": {
     "./sfc": "./NewsletterSingleLine.vue"

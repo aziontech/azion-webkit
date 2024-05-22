@@ -1,7 +1,5 @@
 {
-  "main": "./themeswitcher.cjs.js",
-  "module": "./themeswitcher.esm.js",
-  "unpkg": "./themeswitcher.min.js",
+  "main": "./themeswitcher.js",
   "types": "./ThemeSwitcher.d.ts",
   "browser": {
     "./sfc": "./ThemeSwitcher.vue"

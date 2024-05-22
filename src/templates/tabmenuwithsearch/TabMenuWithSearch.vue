@@ -36,7 +36,7 @@
 import TabMenu from 'primevue/tabmenu';
 import Dropdown from 'primevue/dropdown';
 import Button from 'primevue/button';
-import AlgoliaDialog from '@aziontech/webkit/aisdialog';
+import AlgoliaDialog from '../aisdialog/AlgoliaDialog.vue';
 import { ref, onMounted } from "vue";
 
 const props = defineProps({

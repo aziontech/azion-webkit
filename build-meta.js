@@ -24,8 +24,6 @@ function copyDependencies(inFolder, outFolder, subFolder) {
 }
 
 copyDependencies('./src/templates/', 'dist/');
-copyDependencies('./src/fragments/', 'dist/');
-
 fs.copySync(path.resolve(__dirname, './src/assets'), 'dist/src/assets');
 fs.copySync(path.resolve(__dirname, './README.md'), 'dist/README.md');
 fs.copySync(path.resolve(__dirname, './LICENSE'), 'dist/LICENSE');

@@ -1,7 +1,5 @@
 {
-  "main": "./algoliainstantsearch.cjs.js",
-  "module": "./algoliainstantsearch.esm.js",
-  "unpkg": "./algoliainstantsearch.min.js",
+  "main": "./algoliainstantsearch.js",
   "types": "./AlgoliaInstantSearch.d.ts",
   "browser": {
     "./sfc": "./AlgoliaInstantSearch.vue"

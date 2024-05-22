@@ -35,7 +35,7 @@ import InputText from 'primevue/inputtext';
 import Button from 'primevue/button';
 import * as yup from 'yup';
 import { useForm } from 'vee-validate';
-import { newsletterSubrscribeHandler } from '../../../services/newsletter/newsletterSubmitHandler';
+import { newsletterSubrscribeHandler } from '../../services/newsletter/newsletterSubmitHandler';
 import InlineMessage from 'primevue/inlinemessage';
 import { ref } from 'vue';
 

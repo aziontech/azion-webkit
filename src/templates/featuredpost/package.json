@@ -1,7 +1,5 @@
 {
-  "main": "./featuredpost.cjs.js",
-  "module": "./featuredpost.esm.js",
-  "unpkg": "./featuredpost.min.js",
+  "main": "./featuredpost.js",
   "types": "./FeaturedPost.d.ts",
   "browser": {
     "./sfc": "./FeaturedPost.vue"

@@ -1,7 +1,5 @@
 {
-  "main": "./menunavigationblock.cjs.js",
-  "module": "./menunavigationblock.esm.js",
-  "unpkg": "./menunavigationblock.min.js",
+  "main": "./menunavigationblock.js",
   "types": "./MenuNavigationBlock.d.ts",
   "browser": {
     "./sfc": "./MenuNavigationBlock.vue"

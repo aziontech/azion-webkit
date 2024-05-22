@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import CardGridList from "./index.vue"
+import CardGridList from "../cardgridlist/CardGridList.vue"
 import Button from "primevue/button"
 import { ref, watch } from "vue";
 

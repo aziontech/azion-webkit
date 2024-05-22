@@ -1,7 +1,5 @@
 {
-  "main": "./linkbutton.cjs.js",
-  "module": "./linkbutton.esm.js",
-  "unpkg": "./linkbutton.min.js",
+  "main": "./linkbutton.js",
   "types": "./LinkButton.d.ts",
   "browser": {
     "./sfc": "./LinkButton.vue"

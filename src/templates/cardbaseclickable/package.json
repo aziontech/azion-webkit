@@ -1,7 +1,5 @@
 {
-  "main": "./cardbaseclickable.cjs.js",
-  "module": "./cardbaseclickable.esm.js",
-  "unpkg": "./cardbaseclickable.min.js",
+  "main": "./cardbaseclickable.js",
   "types": "./CardBaseClickable.d.ts",
   "browser": {
     "./sfc": "./CardBaseClickable.vue"

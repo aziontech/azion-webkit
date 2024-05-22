@@ -1,7 +1,5 @@
 {
-  "main": "./tabmenuwithsearchlink.cjs.js",
-  "module": "./tabmenuwithsearchlink.esm.js",
-  "unpkg": "./tabmenuwithsearchlink.min.js",
+  "main": "./tabmenuwithsearchlink.js",
   "types": "./TabMenuWithSearchLink.d.ts",
   "browser": {
     "./sfc": "./TabMenuWithSearchLink.vue"

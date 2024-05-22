@@ -62,8 +62,8 @@
 </template>
 
 <script setup>
-  import Overline from "../../fragments/text/overline.vue"
-  import Banner from "../../fragments/banner/index.vue"
+  import Overline from "../overline/Overline.vue"
+  import Banner from "../banner/Banner.vue"
 
   defineProps({
     bannerNews: {

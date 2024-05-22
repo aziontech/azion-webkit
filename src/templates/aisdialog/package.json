@@ -1,7 +1,5 @@
 {
-  "main": "./algoliadialog.cjs.js",
-  "module": "./algoliadialog.esm.js",
-  "unpkg": "./algoliadialog.min.js",
+  "main": "./algoliadialog.js",
   "types": "./AlgoliaDialog.d.ts",
   "browser": {
     "./sfc": "./AlgoliaDialog.vue"

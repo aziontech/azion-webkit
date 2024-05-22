@@ -51,11 +51,12 @@
 </template>
 
 <script setup>
-import AzionLogo from '../../assets/icons/azion-logo-default.vue';
 import Divider from 'primevue/divider';
-import Overline from '@/fragments/text/overline.vue';
-import LinkIcon from '@/templates/button/link-icon.vue';
-import LinkButton from '@/templates/button/link/LinkButton.vue';
+
+import AzionLogo from '../../assets/icons/azion-logo-default.vue';
+import Overline from '../overline/Overline.vue';
+import LinkIcon from '../linkiconbutton/LinkIconButton.vue';
+import LinkButton from '../linkbutton/LinkButton.vue';
 
 // interface List {
 //   link: string,

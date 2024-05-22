@@ -16,8 +16,8 @@
 </template>
 
 <script setup>
-import CardBlog from '@aziontech/webkit/cardblog';
-import CardCases from '@aziontech/webkit/cardcases';
+import CardBlog from '../cardblog/CardBlog.vue';
+import CardCases from '../cardcases/CardCases.vue';
 
 defineProps({
   data: {

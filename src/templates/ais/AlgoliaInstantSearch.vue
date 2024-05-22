@@ -39,7 +39,7 @@
   import { ref } from 'vue';
   import algoliasearch from 'algoliasearch';
   import TabMenu from 'primevue/tabmenu';
-  import AlgoliaIndexHit from '@aziontech/webkit/aisindexhit';
+  import AlgoliaIndexHit from '../aisindexhit/AlgoliaIndexHit.vue';
 
   const props = defineProps({
     isDialogActive: Boolean,

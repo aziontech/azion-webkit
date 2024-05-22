@@ -1,5 +1,5 @@
 {
-  "main": "./bignumbers.cjs.js",
+  "main": "./bignumbers.js",
   "module": "./bignumbers.esm.js",
   "unpkg": "./bignumbers.min.js",
   "types": "./BigNumbers.d.ts",
