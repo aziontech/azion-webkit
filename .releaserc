@@ -1,6 +1,6 @@
 {
   "branches": [
-    "main",
+    "dev",
     {
       "name": "stage",
       "prerelease": true,
