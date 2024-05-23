@@ -30,7 +30,8 @@
     },
     customIconStyle: {
       type: String,
-      required: false
+      required: false,
+      options: ['left', 'right']
     },
     iconPos: {
       type: String,

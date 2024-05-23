@@ -1,0 +1,7 @@
+{
+  "main": "./modal.js",
+  "types": "./Modal.d.ts",
+  "browser": {
+    "./sfc": "./Modal.vue"
+  }
+}

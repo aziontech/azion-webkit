@@ -1,3 +1,66 @@
+## [1.26.3](https://github.com/aziontech/azion-web-kit/compare/v1.26.2...v1.26.3) (2024-05-17)
+
+
+### Bug Fixes
+
+* header _self assignment ([0b093ea](https://github.com/aziontech/azion-web-kit/commit/0b093eae1e7cf22ab85d687b0e9d58b9ea76f1f6))
+
+## [1.26.2](https://github.com/aziontech/azion-web-kit/compare/v1.26.1...v1.26.2) (2024-05-17)
+
+
+### Bug Fixes
+
+* link button w-fit ([428a59e](https://github.com/aziontech/azion-web-kit/commit/428a59ee42744baec59fd22656f35118cd3b5a42))
+
+## [1.26.1](https://github.com/aziontech/azion-web-kit/compare/v1.26.0...v1.26.1) (2024-05-17)
+
+
+### Bug Fixes
+
+* header new props + closing on esc and clicking outside of the box ([10c4e3a](https://github.com/aziontech/azion-web-kit/commit/10c4e3a5dd48792e59c809abb9560e03991ffed5))
+
+## [1.26.0](https://github.com/aziontech/azion-web-kit/compare/v1.25.1...v1.26.0) (2024-05-17)
+
+
+### Features
+
+* system status ([#81](https://github.com/aziontech/azion-web-kit/issues/81)) ([b3284b2](https://github.com/aziontech/azion-web-kit/commit/b3284b2484cd69f2c11d6a288498771ab4fb6242))
+
+## [1.25.1](https://github.com/aziontech/azion-web-kit/compare/v1.25.0...v1.25.1) (2024-05-17)
+
+
+### Bug Fixes
+
+* remove component ([db6be14](https://github.com/aziontech/azion-web-kit/commit/db6be14376c3d067aca8c7911ebc14b67efd019f))
+
+## [1.25.0](https://github.com/aziontech/azion-web-kit/compare/v1.24.1...v1.25.0) (2024-05-17)
+
+
+### Features
+
+* base modal ([2aea623](https://github.com/aziontech/azion-web-kit/commit/2aea623475c970715058a71686d77f8e4013487f))
+
+## [1.24.1](https://github.com/aziontech/azion-web-kit/compare/v1.24.0...v1.24.1) (2024-05-15)
+
+
+### Bug Fixes
+
+* footer mobile ([4c8285f](https://github.com/aziontech/azion-web-kit/commit/4c8285fffff809399b8db127aece634e056bb04c))
+
+## [1.24.0](https://github.com/aziontech/azion-web-kit/compare/v1.23.0...v1.24.0) (2024-05-15)
+
+
+### Features
+
+* new footer ([#80](https://github.com/aziontech/azion-web-kit/issues/80)) ([06f6f4c](https://github.com/aziontech/azion-web-kit/commit/06f6f4cd727a00a46d27d1df8e4dec0bc0c0f959))
+
+## [1.23.0](https://github.com/aziontech/azion-web-kit/compare/v1.22.7...v1.23.0) (2024-05-15)
+
+
+### Features
+
+* card-bg-image fragment ([04ea14f](https://github.com/aziontech/azion-web-kit/commit/04ea14ff8998a9671d58ea9631a07717986a12dd))
+
 ## [1.22.7](https://github.com/aziontech/azion-web-kit/compare/v1.22.6...v1.22.7) (2024-05-13)
 
 
