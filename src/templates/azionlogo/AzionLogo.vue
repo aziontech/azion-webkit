@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import AzionLogoDefault from '../../../../assets/icons/azion-logo-default.vue'
+import AzionLogoDefault from '../../src/assets/icons/azion-logo-default.vue'
 
 defineProps({
   href: {

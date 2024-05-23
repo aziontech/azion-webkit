@@ -1,0 +1,7 @@
+{
+  "main": "./headermenutabpanel.js",
+  "types": "./HeaderMenuTabPanel.d.ts",
+  "browser": {
+    "./sfc": "./HeaderMenuTabPanel.vue.vue"
+  }
+}

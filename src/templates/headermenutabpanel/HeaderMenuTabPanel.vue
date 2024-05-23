@@ -178,7 +178,7 @@
   import TabView from 'primevue/tabview';
   import TabPanel from 'primevue/tabpanel';
   import Tag from 'primevue/tag';
-  import Overline from '../../../fragments/text/overline.vue';
+  import Overline from '../overline/Overline.vue';
 
   const props = defineProps({
     menuData: {
