@@ -1,0 +1,53 @@
+name: Publish Package to npm.pkg.github
+
+on:
+  repository_dispatch:
+    types: [semantic-release] # curl -v -H "Accept: application/vnd.github.everest-preview+json" -H "Authorization: token ${GITHUB_TOKEN}" https://api.github.com/repos/[org-name-or-username]/[repository]/dispatches -d '{ "event_type": "semantic-release" }'
+  push:
+    branches:
+      - dev
+
+permissions: write-all
+
+jobs:
+  deploy:
+    name: Release
+
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
+
+    runs-on: ubuntu-latest
+    container:
+      image: node:20-alpine3.18
+
+    steps:
+      - name: OS - Installing dep
+        run: apk add curl git bash jq
+
+      - name: Node.js Setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.8.1'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@aziontech'
+          always-auth: true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }}
+
+      - name: Node.js Installing release dependencies
+        shell: bash
+        run: npm install -g semantic-release @semantic-release/git @semantic-release/npm @semantic-release/changelog conventional-changelog-conventionalcommits@7.0.2 -D
+
+      - name: Release
+        shell: bash
+        run: |
+          rm -rf ./*
+          git clone https://github.com/aziontech/webkit.git && cd ./webkit && node build-package.js && cd dist && npx semantic-release
+        env:
+          GH_TOKEN: ${{ secrets.GIT_PKG }}
+          GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
+          NPM_TOKEN: ${{ secrets.GIT_PKG }}
+          NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
