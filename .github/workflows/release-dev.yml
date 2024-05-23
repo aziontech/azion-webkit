@@ -45,7 +45,7 @@ jobs:
         shell: bash
         run: |
           rm -rf ./*
-          git clone https://github.com/aziontech/webkit.git && cd ./webkit && node build-package.js && cd dist && npx semantic-release
+          git clone && cd ./webkit && npm run build:package && cd dist && npx semantic-release
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
           GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
