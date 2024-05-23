@@ -1,11 +1,11 @@
 <template>
   <footer class="py-12 surface-ground border-t border-solid surface-border">
     <div class="flex flex-col gap-9 lg:gap-8 px-shell">
-      <div class="flex flex-col md:flex-row justify-between w-full gap-9 lg:gap-12">
+      <div class="flex flex-col lg:flex-row justify-between w-full gap-9 lg:gap-12">
         <div class="w-full flex flex-col justify-between gap-4">
           <div class="flex flex-col gap-4">
             <a :href="`/${lang}/`" title="Azion Technologies" class="mb-4 block" aria-label="Azion logo">
-              <AzionLogo class="h-[26px]" />
+              <AzionIconLogo class="h-[26px]" />
             </a>
             <slot name="system-status" />
             <p class="text-color-secondary text-sm">
@@ -14,10 +14,16 @@
             </p>
           </div>
           <div class="flex gap-3" v-if="socialButtons">
-            <LinkIcon v-for="({ icon, link, title }, index) in socialButtons" :aria-label="title" :key="index" :icon="icon" :link="link" :tooltipText="title"/>
+            <LinkIconButton
+              v-for="({ icon, link, title }, index) in socialButtons"
+              :aria-label="title"
+              :key="index"
+              :icon="icon"
+              :link="link"
+              :tooltipText="title" />
           </div>
         </div>
-        <div class="w-full flex flex-wrap md:flex-nowrap gap-16 md:justify-end -ml-[16px] md:ml-0">
+        <div class="w-full flex flex-wrap md:flex-nowrap gap-4 lg:gap-8 lg:justify-end -ml-[16px] lg:ml-0">
           <div :key="index" v-for="({ title, list }, index) in listData" class="max-w-44 w-full">
             <Overline class="px-4" :label="title" />
             <ul class="list-none p-0 m-0 mt-4 gap-3">
@@ -48,10 +54,10 @@
 </template>
 
 <script setup>
-import AzionLogo from '../../assets/icons/azion-icon-logo.vue';
 import Divider from 'primevue/divider';
+import AzionIconLogo from '../../src/assets/icons/azion-icon-logo.vue';
 import Overline from '../overline/Overline.vue';
-import LinkIcon from '../linkiconbutton/LinkIconButton.vue';
+import LinkIconButton from '../linkiconbutton/LinkIconButton.vue';
 import LinkButton from '../linkbutton/LinkButton.vue';
 
 // interface List {
