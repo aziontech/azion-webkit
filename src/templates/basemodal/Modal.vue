@@ -9,7 +9,7 @@
       </template>
       <slot name="content" />
       <template #footer v-if="$slots.footer">
-        <slot name="header" />
+        <slot name="footer" />
       </template>
     </Dialog>
   </div>

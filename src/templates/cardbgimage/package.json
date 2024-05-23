@@ -1,0 +1,7 @@
+{
+  "main": "./cardBgImage.js",
+  "types": "./CardBgImage.d.ts",
+  "browser": {
+    "./sfc": "./CardBgImage.vue"
+  }
+}
