@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center gap-3 w-full">
+  <div class="flex justify-center gap-3 w-full h-full max-h-[440px]">
     <template v-for="(card, index) in cards" :key="index">
       <CardBase :class="[{ 'grow bg-[var(--surface-0)]': activeIndex === index }, `transition-all duration-300 ease-out overflow-hidden min-w-56`]"
         :style="activeIndex !== index ? `width: calc(100% / ${cards.length}) !important` : ''"
@@ -7,14 +7,21 @@
         <template #content>
           <Tile> {{ index + 1 }} </Tile>
           <CardTitle> {{ card.title }} </CardTitle>
-          <div class="relative">
-            <div class="absolute w-full h-full top-0 left-0 overflow-hidden surface-ground" :class="activeIndex === index ? 'hidden' : 'block'" />
+          <div v-if="activeIndex === index">
             <CardDescription> {{ card.description }} </CardDescription>
             <slot name="content" :slotProps="card" />
           </div>
         </template>
+        <template #actions>
+          <div class="flex justify-between w-full">
+            <div>
+              <slot name="actions" :slotProps="card"></slot>
+            </div>
+            <Button class="self-end" size="small" icon="pi pi-arrow-right" aria-label="Next card" :pt="{icon: { class: activeIndex === index ? 'text-[var(--orange-500)]' : '' }}" />
+          </div>
+        </template>
         <template #content-raw v-if="$slots['content-raw']">
-          <div>
+          <div v-if="activeIndex === index">
             <slot name="content-raw" :slotProps="card" />
           </div>
         </template>
@@ -29,6 +36,7 @@ import CardBase from '../card/base.vue'
 import Tile from '../../fragments/tile/index.vue';
 import CardTitle from '../../fragments/text/card-title.vue';
 import CardDescription from '../../fragments/text/card-description.vue';
+import Button from 'primevue/button'
 
 const props = defineProps({
   activeIndex: {
