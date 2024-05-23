@@ -30,7 +30,6 @@
               </div>
             </template>
           </ais-stats>
-
     </ais-instant-search>
   </div>
 </template>
