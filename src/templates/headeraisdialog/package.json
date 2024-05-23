@@ -1,0 +1,7 @@
+{
+  "main": "./headeraisdialog.js",
+  "types": "./HeaderAisDialog.d.ts",
+  "browser": {
+    "./sfc": "./HeaderAisDialog.vue"
+  }
+}
