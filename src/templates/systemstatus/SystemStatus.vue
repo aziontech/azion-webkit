@@ -11,8 +11,8 @@
 </template>
 
 <script setup>
-import LinkButton from "../../templates/button/link.vue"
 import { onBeforeMount, ref } from 'vue';
+import LinkButton from '../linkbutton/LinkButton.vue';
 
 const props = defineProps({
   lang: {
