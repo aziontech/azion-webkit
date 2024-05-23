@@ -27,8 +27,7 @@
     "vue3",
     "ui library",
     "component library",
-    "tailwind",
-    "unstyled"
+    "tailwind"
   ],
   "repository": "https://github.com/aziontech/webkit.git",
   "scripts": {
@@ -36,8 +35,7 @@
     "clean": "rm -rf node_modules package-lock.json",
     "reinstall": "npm run clean; npm install",
     "dev": "vite",
-    "build": "vite build",
-    "build:package": "NODE_ENV=production rollup -c && node build-meta",
+    "build:package": "NODE_ENV=production node build-package",
     "build:lib": "npm run build:package",
     "preview": "vite preview",
     "test:unit": "vitest",
@@ -50,8 +48,6 @@
   },
   "dependencies": {
     "@aziontech/azion-theme": "^1.2.2",
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
     "@tailwindcss/typography": "^0.5.10",
     "@vee-validate/yup": "^4.12.6",
     "algoliasearch": "^4.21.1",
@@ -67,7 +63,6 @@
     "yup": "^1.3.2"
   },
   "devDependencies": {
-    "@rollup/plugin-babel": "^6.0.3",
     "@rushstack/eslint-patch": "^1.2.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^10.0.1",
@@ -99,9 +94,6 @@
     "primevue": "3.47.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rollup-plugin-postcss": "^4.0.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-vue": "^6.0.0-beta.9",
     "sass": "^1.68.0",
     "semantic-release": "^23.0.0",
     "start-server-and-test": "^2.0.0",
