@@ -55,7 +55,7 @@
 
 <script setup>
 import Divider from 'primevue/divider';
-import AzionIconLogo from '../../assets/icons/azion-icon-logo.vue';
+import AzionIconLogo from '../src/assets/icons/azion-icon-logo.vue';
 import Overline from '../overline/Overline.vue';
 import LinkIconButton from '../linkiconbutton/LinkIconButton.vue';
 import LinkButton from '../linkbutton/LinkButton.vue';
