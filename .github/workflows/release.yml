@@ -1,3 +1,4 @@
+
 name: Publish Package to npm.pkg.github
 
 on:
@@ -19,24 +20,11 @@ jobs:
       pull-requests: write
       id-token: write
 
-    # runs-on: [self-hosted, stage]
-    # container:
-    #   image: ubuntu:latest
-
     runs-on: ubuntu-latest
     container:
       image: node:20-alpine3.18
 
     steps:
-      # - name: OS - Update
-      #   run: apt-get update -y
-
-      # - name: OS - Installing packages
-      #   run: apt-get install tzdata
-
-      # - name: OS - Installing Git CLI
-      #   run: apt-get install git-all -y
-
       - name: OS - Installing dep
         run: apk add curl git bash jq
 
@@ -58,7 +46,7 @@ jobs:
         shell: bash
         run: |
           rm -rf ./*
-          git clone https://github.com/aziontech/azion-web-kit.git && cd ./azion-web-kit && npx semantic-release
+          npm install fs-extra && git clone --branch dev https://github.com/aziontech/webkit.git && cd ./webkit && npm run build:package && cd dist && npx semantic-release
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
           GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
