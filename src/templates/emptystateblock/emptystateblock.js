@@ -1,2 +1,2 @@
-import EmptyStateBlock from './EmptyStateBlock';
+import EmptyStateBlock from './EmptyStateBlock.vue';
 export default EmptyStateBlock;
