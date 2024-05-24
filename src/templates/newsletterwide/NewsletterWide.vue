@@ -40,7 +40,7 @@ import Button from 'primevue/button';
 import InlineMessage from 'primevue/inlinemessage';
 import * as yup from 'yup';
 import { useForm } from 'vee-validate';
-import { newsletterSubrscribeHandler } from '../../services/newsletter/newsletterSubmitHandler';
+import { newsletterSubrscribeHandler } from '../src/services/newsletter/newsletterSubmitHandler';
 import { ref } from 'vue';
 
 const isSuccess = ref(false);

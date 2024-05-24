@@ -1,7 +1,0 @@
-{
-  "main": "./heroblogpost.js",
-  "types": "./HeroBlogPost.d.ts",
-  "browser": {
-    "./sfc": "./HeroBlogPost.vue"
-  }
-}
