@@ -46,7 +46,7 @@ jobs:
         shell: bash
         run: |
           rm -rf ./*
-          npm install fs-extra && git clone --branch dev https://github.com/aziontech/webkit.git && cd ./webkit && npm run build:package && cd dist && npx semantic-release
+          npm install fs-extra && git clone --branch main https://github.com/aziontech/webkit.git && cd ./webkit && npm run build:package && cd dist && npx semantic-release
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
           GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
