@@ -1,7 +1,5 @@
 {
-  "main": "./bignumbers.js",
-  "module": "./bignumbers.esm.js",
-  "unpkg": "./bignumbers.min.js",
+  "main": "./bigNumbers.js",
   "types": "./BigNumbers.d.ts",
   "browser": {
     "./sfc": "./BigNumbers.vue"
