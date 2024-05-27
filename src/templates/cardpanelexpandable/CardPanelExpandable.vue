@@ -32,10 +32,10 @@
 
 <script setup>
 import { ref } from 'vue';
-import CardBase from '../card/base.vue'
-import Tile from '../../fragments/tile/index.vue';
-import CardTitle from '../../fragments/text/card-title.vue';
-import CardDescription from '../../fragments/text/card-description.vue';
+import CardBase from '../cardbase/CardBase.vue'
+import Tile from '../tile/Tile.vue';
+import CardTitle from '../cardtitle/CardTitle.vue';
+import CardDescription from '../carddescription/CardDescription.vue';
 import Button from 'primevue/button'
 
 const props = defineProps({
