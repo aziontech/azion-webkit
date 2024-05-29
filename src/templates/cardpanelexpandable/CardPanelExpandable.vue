@@ -1,15 +1,18 @@
 <template>
-  <div class="flex justify-center gap-3 w-full h-full max-h-[440px]">
+  <div class="flex flex-col xl:flex-row justify-center gap-6 xl:gap-3 w-full max-w-3xl xl:max-w-full" :class="maxHeight">
     <template v-for="(card, index) in cards" :key="index">
-      <CardBase :class="[{ 'grow bg-[var(--surface-0)]': activeIndex === index }, `transition-all duration-300 ease-out overflow-hidden min-w-56`]"
-        :style="activeIndex !== index ? `width: calc(100% / ${cards.length}) !important` : ''"
-        @click="activeIndex = index">
+      <CardBase :grid="isGrid" :class="[`transition-all duration-300 ease-out overflow-hidden xl:min-w-44`, { 'w-movable' : activeIndex !== index}]"
+          @click="activeIndex = index" :style="dynamicWidth" :backgroundColor="activeIndex === index ? 'black' : 'default'" hover="black">
         <template #content>
           <Tile> {{ index + 1 }} </Tile>
-          <CardTitle> {{ card.title }} </CardTitle>
-          <div v-if="activeIndex === index">
-            <CardDescription> {{ card.description }} </CardDescription>
-            <slot name="content" :slotProps="card" />
+          <CardTitle > {{ card.title }} </CardTitle>
+          <div class="h-full flex flex-col justify-between">
+            <div :class="activeIndex === index ? 'visible' : 'hidden truncate'">
+              <CardDescription class="overflow-hidden"> {{ card.description }} </CardDescription>
+              <div v-if="activeIndex === index & $slots.content">
+                <slot name="content" :slotProps="card" />
+              </div>
+            </div>
           </div>
         </template>
         <template #actions>
@@ -17,7 +20,10 @@
             <div>
               <slot name="actions" :slotProps="card"></slot>
             </div>
-            <Button class="self-end" size="small" icon="pi pi-arrow-right" aria-label="Next card" :pt="{icon: { class: activeIndex === index ? 'text-[var(--orange-500)]' : '' }}" />
+            <Tile>
+              <i class="pi self-end text-sm pi-arrow-right hidden xl:block" :class="activeIndex === index && 'text-orange-500'" />
+              <i class="pi self-end text-sm xl:hidden" :class="activeIndex === index ? 'text-orange-500 pi-arrow-up' : 'pi-arrow-down'" />
+            </Tile>
           </div>
         </template>
         <template #content-raw v-if="$slots['content-raw']">
@@ -31,12 +37,11 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import CardBase from '../cardbase/CardBase.vue'
 import Tile from '../tile/Tile.vue';
 import CardTitle from '../cardtitle/CardTitle.vue';
 import CardDescription from '../carddescription/CardDescription.vue';
-import Button from 'primevue/button'
 
 const props = defineProps({
   activeIndex: {
@@ -47,9 +52,34 @@ const props = defineProps({
   cards: {
     type: Array,
     required: true
+  },
+  maxHeight: {
+    type: String,
+    required: false
   }
 })
 
 const activeIndex = ref(props.activeIndex)
+const widthValue = ref(`calc(100% / ${props.cards.length + 1} )`)
+const dynamicWidth = computed(() => ({
+  '--dynamic-width': widthValue.value,
+}))
 
+const isGrid = ref(false);
+const checkWindowWidth = () => {
+  isGrid.value = window.innerWidth > 1280;
+};
+
+onMounted(() => {
+  checkWindowWidth();
+  window.addEventListener('resize', checkWindowWidth);
+});
 </script>
+
+<style>
+@media (min-width: 1280px) {
+  .w-movable {
+    width: var(--dynamic-width, 80px) !important;
+  }
+}
+</style>
