@@ -7,10 +7,10 @@
           <Tile> {{ index + 1 }} </Tile>
           <CardTitle > {{ card.title }} </CardTitle>
           <div class="h-full flex flex-col justify-between">
-            <div :class="activeIndex === index ? 'visible' : 'hidden truncate'">
+            <div :class="activeIndex === index ? 'visible' : 'hidden truncate'" class="flex flex-col gap-2">
               <CardDescription class="overflow-hidden"> {{ card.description }} </CardDescription>
-              <div v-if="activeIndex === index & $slots.content">
-                <slot name="content" :slotProps="card" />
+              <div v-if="activeIndex === index && $slots.content">
+                <slot name="content" :data="card" />
               </div>
             </div>
           </div>
@@ -18,7 +18,9 @@
         <template #actions>
           <div class="flex justify-between w-full">
             <div>
-              <slot name="actions" :slotProps="card"></slot>
+              <div v-if="activeIndex === index">
+                <slot name="actions" :data="card" />
+              </div>
             </div>
             <Tile>
               <i class="pi self-end text-sm pi-arrow-right hidden xl:block" :class="activeIndex === index && 'text-orange-500'" />
@@ -28,7 +30,7 @@
         </template>
         <template #content-raw v-if="$slots['content-raw']">
           <div v-if="activeIndex === index">
-            <slot name="content-raw" :slotProps="card" />
+            <slot name="content-raw" :data="card" />
           </div>
         </template>
       </CardBase>
