@@ -1,9 +1,16 @@
 <template>
-  <Card class="w-full shadow-none bg-transparent flex flex-col rounded-md border surface-border group focus:outline-[rgba(243,100,43,.624)]" :pt="{
-    root: { class: [[{ 'flex flex-col h-full' : grid}]] },
-    body: { class: [{ 'flex flex-col grow' : grid}] },
-    content: { class: [{ 'flex flex-col grow' : grid}] }
-  }">
+  <Card class="w-full shadow-none flex flex-col rounded-md border group"
+    :class="[
+      { 'hover:bg-[var(--surface-0)] hover:border-[var(--primary-color)]' : hover == 'black' },
+      { 'bg-[var(--surface-0)] surface-border focus:outline-[rgba(243,100,43,.624)]' : backgroundColor == 'black'},
+      { 'bg-transparent surface-border focus:outline-[rgba(243,100,43,.624)]' : backgroundColor == 'default'}
+    ]"
+    :pt="{
+      root: { class: [[{ 'flex flex-col h-full' : grid}]] },
+      body: { class: [{ 'flex flex-col grow' : grid}] },
+      content: { class: [{ 'flex flex-col grow' : grid}] }
+    }"
+  >
     <template v-if="$slots.header" #header>
       <div class="flex flex-col gap-8" :class="[
           {'p-4 md:p-6' : spacing === 'compact'},
@@ -50,6 +57,17 @@ defineProps({
   grid: {
     type: Boolean,
     required: false
+  },
+  backgroundColor: {
+    type: String,
+    required: false,
+    default: 'default',
+    options: ['black', 'default']
+  },
+  hover: {
+    type: String,
+    required: false,
+    options: ['black']
   }
 })
 </script>
