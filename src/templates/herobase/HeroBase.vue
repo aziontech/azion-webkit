@@ -8,7 +8,8 @@
       <div class="w-full flex flex-col gap-10" :class="[
         { 'lg:max-w-xl': !isCentralized },
         { 'items-center': isCentralized },
-        { 'items-center text-center lg:text-left': justify === 'center' }
+        { 'items-center text-center lg:text-left': align === 'center' },
+        { 'justify-center' : justify === 'center'}
       ]">
         <template v-if="bannerNews">
           <Banner
@@ -94,7 +95,13 @@
     },
     justify: {
       type: String,
-      required: false
+      required: false,
+      options: ['center']
+    },
+    align: {
+      type: String,
+      required: false,
+      options: ['center']
     },
     isCentralized: {
       type: Boolean,
