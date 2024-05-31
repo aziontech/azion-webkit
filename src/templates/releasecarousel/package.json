@@ -1,0 +1,7 @@
+{
+  "main": "./releasecarousel.js",
+  "types": "./ReleaseCarousel.d.ts",
+  "browser": {
+    "./sfc": "./ReleaseCarousel.vue"
+  }
+}

@@ -3,7 +3,7 @@
   <div class="flex flex-col text-center lg:text-start lg:gap-x-16 gap-y-6 items-center justify-center"
       :class="[{'lg:flex-row' : direction === 'row'}, {'lg:flex-col' : direction === 'column'}]"
   >
-    <p class="max-w-md" :class="[{'text-center': direction === 'column', 'text-2xl leading-normal': display, 'text-sm leading-relaxed': !display }]">
+    <p class="max-w-md text-xl font-medium leading-normal" :class="[{'text-center': direction === 'column' }]">
       {{ text }}
     </p>
     <div class="flex flex-col gap-3 lg:items-start min-w-[180px] mt-4 lg:mt-0" :class="[{'lg:items-center' : direction === 'column'}]">
@@ -54,11 +54,6 @@ defineProps({
     type: String,
     required: false,
     default: 'row'
-  },
-  display: {
-    type: Boolean,
-    required: false,
-    default: false,
   },
   alt: {
     type: String,

@@ -11,7 +11,11 @@
       }">
 
       <template #item="slotProps">
-        <QuoteCarousel :slotProps="slotProps" />
+        <Quote
+          :text="slotProps.data.text"
+          :imageLight="slotProps.data.imageLight"
+          :imageDark="slotProps.data.imageDark"
+          :label="slotProps.data.label" />
       </template>
     </Carousel>
   </div>
@@ -29,8 +33,6 @@
 </template>
 
 <script setup>
-import Carousel from 'primevue/carousel';
-import QuoteCarousel from '../quotecarousel/QuoteCarousel.vue'
 import Quote from '../quote/Quote.vue';
 
 defineProps({

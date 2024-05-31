@@ -1,53 +1,46 @@
 <template>
-  <a :href="link" :title="title" class="no-underline flex group border-radius group focus:outline-[rgba(243,100,43,.624)]">
-    <Card :pt="{
-      root: { class: 'w-full shadow-none bg-transparent flex flex-col rounded-md border surface-border border surface-border overflow-clip group-hover:border-current h-full' },
-      body: { class: 'h-full' },
-      content: { class: 'h-full' }
-    }">
-      <template v-if="$slots.header" #header>
-        <div class="flex flex-col gap-8" :class="[
-          { 'p-4 md:p-6': spacing === 'compact' },
-          { 'p-5 md:p-8': spacing === 'base' },
-          { 'p-6 md:p-10': spacing === 'relaxed' },
-        ]">
-          <slot name="header" />
-        </div>
+  <a :href="link" :title="title" class="no-underline flex border-radius cursor-pointer h-full" :target="target" :aria-label="ariaLabel">
+    <CardBase v-bind="props">
+      <template  v-if="$slots.header" #header>
+        <slot name="header" />
       </template>
-      <template #content>
-        <template v-if="$slots.content || $slots.actions">
-          <div class="flex flex-col gap-8" :class="[
-            { 'p-4 md:p-6': spacing === 'compact' },
-            { 'p-5 md:p-8': spacing === 'base' },
-            { 'p-6 md:p-10': spacing === 'relaxed' },
-          ]">
-            <div class="flex flex-col gap-3">
-              <slot name="content" />
-            </div>
-            <template v-if="$slots.actions">
-              <div class="flex flex-col md:flex-row flex-wrap gap-2">
-                <slot name="actions" />
-              </div>
-            </template>
-          </div>
-        </template>
-        <template v-if="$slots['content-raw']">
-          <slot name="content-raw" />
-        </template>
+      <template  v-if="$slots.content" #content>
+        <slot name="content" />
       </template>
-    </Card>
+      <template  v-if="$slots.actions" #actions>
+        <slot name="actions" />
+      </template>
+      <template  v-if="$slots['content-raw']" #content-raw>
+        <slot name="content-raw" />
+      </template>
+    </CardBase>
   </a>
 </template>
 
 <script setup>
-import Card from "primevue/card"
+import CardBase from "../cardbase"
 
-defineProps({
+const props = defineProps({
   spacing: {
     type: String,
     required: false,
     options: ['compact', 'relaxed', 'base'],
     default: 'base'
+  },
+  grid: {
+    type: Boolean,
+    required: false
+  },
+  backgroundColor: {
+    type: String,
+    required: false,
+    default: 'default',
+    options: ['outlined', 'shape', 'default']
+  },
+  hover: {
+    type: String,
+    required: false,
+    options: ['outlined']
   },
   link: {
     type: String,
@@ -56,6 +49,16 @@ defineProps({
   title: {
     type: String,
     required: false
+  },
+  ariaLabel: {
+    type: String,
+    required: false
+  },
+  target: {
+    type: String,
+    required: false,
+    default: '_self',
+    options: ['_blank', '_self']
   }
 })
 </script>

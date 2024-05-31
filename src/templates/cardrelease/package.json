@@ -1,0 +1,7 @@
+{
+  "main": "./cardrelease.js",
+  "types": "./CardRelease.d.ts",
+  "browser": {
+    "./sfc": "./CardRelease.vue"
+  }
+}
