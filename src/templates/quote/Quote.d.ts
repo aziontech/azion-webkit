@@ -23,7 +23,6 @@ export interface QuoteProps {
   /**
    * @defautValue false
    */
-  display?: boolean;
   alt?: string;
 }
 

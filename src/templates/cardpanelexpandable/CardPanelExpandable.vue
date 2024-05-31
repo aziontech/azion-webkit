@@ -2,7 +2,7 @@
   <div class="flex flex-col xl:flex-row justify-center gap-6 xl:gap-3 w-full max-w-3xl xl:max-w-full" :class="maxHeight">
     <template v-for="(card, index) in cards" :key="index">
       <CardBase :grid="isGrid" :class="[`transition-all duration-300 ease-out overflow-hidden xl:min-w-44`, { 'w-movable' : activeIndex !== index}]"
-          @click="activeIndex = index" :style="dynamicWidth" :backgroundColor="activeIndex === index ? 'black' : 'default'" hover="black">
+          @click="activeIndex = index" :style="dynamicWidth" :backgroundColor="activeIndex === index ? 'outlined' : 'default'" hover="outlined">
         <template #content>
           <Tile> {{ index + 1 }} </Tile>
           <CardTitle > {{ card.title }} </CardTitle>

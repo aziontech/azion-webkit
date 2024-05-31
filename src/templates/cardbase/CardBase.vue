@@ -1,8 +1,10 @@
 <template>
   <Card class="w-full shadow-none flex flex-col rounded-md border group"
     :class="[
-      { 'hover:bg-[var(--surface-0)] hover:border-[var(--primary-color)]' : hover == 'black' },
-      { 'bg-[var(--surface-0)] surface-border focus:outline-[rgba(243,100,43,.624)]' : backgroundColor == 'black'},
+      { 'hover:bg-[var(--surface-0)] hover:border-[var(--primary-color)]' : hover == 'outlined' },
+      { 'hover:transform hover:-translate-y-6  transition-transform duration-300' : hover == 'slide-up'},
+      { 'bg-[var(--surface-0)] surface-border focus:outline-[rgba(243,100,43,.624)]' : backgroundColor == 'outlined'},
+      { 'bg-[var(--surface-50)] border-transparent focus:outline-[rgba(243,100,43,.624)]' : backgroundColor == 'shape'},
       { 'bg-transparent surface-border focus:outline-[rgba(243,100,43,.624)]' : backgroundColor == 'default'}
     ]"
     :pt="{
@@ -27,7 +29,7 @@
           {'p-5 md:p-8' : spacing === 'base'},
           {'p-6 md:p-10' : spacing === 'relaxed'},
         ]">
-          <div class="flex flex-col gap-3">
+          <div class="flex flex-col gap-3 grow">
             <slot name="content"/>
           </div>
           <template v-if="$slots.actions">
@@ -62,12 +64,12 @@ defineProps({
     type: String,
     required: false,
     default: 'default',
-    options: ['black', 'default']
+    options: ['outlined', 'shape', 'default']
   },
   hover: {
     type: String,
     required: false,
-    options: ['black']
+    options: ['outlined', 'slide-up']
   }
 })
 </script>
