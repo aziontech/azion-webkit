@@ -55,7 +55,7 @@ const responsiveOptions = ref([
 const isLargeScreen = ref(true)
 
 const checkScreenSize = () => {
-  isLargeScreen.value = window.innerWidth >= 758;
+  isLargeScreen.value = window.innerWidth >= 767;
 };
 
 onBeforeMount(() => {
