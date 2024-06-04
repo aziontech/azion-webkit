@@ -1,6 +1,6 @@
 {
   "branches": [
-    "dev",
+    "main",
     {
       "name": "stage",
       "prerelease": true,
@@ -40,7 +40,7 @@
             "issuePrefixes": [
               "ISSUE-"
             ],
-            "issueUrlFormat": "https://github.com/aziontech/azion-web-kit/issues/{id}"
+            "issueUrlFormat": "https://github.com/aziontech/webkit/issues/{id}"
           }
         }
       }
