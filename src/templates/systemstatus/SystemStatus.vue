@@ -74,7 +74,7 @@ const OPERATIONAL_STATUS = {
 
 const status = ref('');
 const label = ref('');
-const color = ref(STATUS_PAGE_COLORS.none);
+const color = ref();
 
 onBeforeMount(() => {
   checkComponentStatus()
@@ -105,7 +105,8 @@ async function getStatus(checkStatusPage) {
       method: 'GET',
     })
 
-    status = response.json()
+    const normalizedResponse = await response.json()
+    status = normalizedResponse.status
   } else {
     status = OPERATIONAL_STATUS
   }
