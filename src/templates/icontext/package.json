@@ -1,0 +1,7 @@
+{
+  "main": "./icontext.js",
+  "types": "./IconText.d.ts",
+  "browser": {
+    "./sfc": "./IconText.vue"
+  }
+}

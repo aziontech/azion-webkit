@@ -1,6 +1,7 @@
 <template>
   <Card class="w-full shadow-none flex flex-col rounded-md border group"
     :class="[
+      { 'hover:border-[var(--primary-color)]' : hover == 'default' },
       { 'hover:bg-[var(--surface-0)] hover:border-[var(--primary-color)]' : hover == 'outlined' },
       { 'hover:transform hover:-translate-y-6  transition-transform duration-300' : hover == 'slide-up'},
       { 'bg-[var(--surface-0)] surface-border focus:outline-[rgba(243,100,43,.624)]' : backgroundColor == 'outlined'},
@@ -69,7 +70,7 @@ defineProps({
   hover: {
     type: String,
     required: false,
-    options: ['outlined', 'slide-up']
+    options: ['default', 'outlined', 'slide-up']
   }
 })
 </script>
