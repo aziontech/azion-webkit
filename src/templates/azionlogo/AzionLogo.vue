@@ -4,9 +4,9 @@
     :title="hrefTitle"
     :target="target"
     aria-label="Azion Logo"
-    class="block mr-3 p-button p-button-text px-2 -ml-2">
+    class="block mr-3 p-0">
 
-    <div class="w-[90px]">
+    <div class="w-20">
       <svg viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd"
           d="M68.8751 0L64.3906 23.4146H87.711L92.1955 0H68.8751ZM72.5179 4.42392H86.8522L84.0623 18.9907H69.728L72.5179 4.42392Z"
