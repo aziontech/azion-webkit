@@ -1,27 +1,39 @@
 <template>
   <ul :class="[
-    {'flex flex-col gap-10' : direction === 'vertical'},
+    {'flex flex-col gap-6' : direction === 'vertical'},
     {'grid grid-cols-3 gap-20' : direction === 'horizontal'}
   ]">
     <template v-for="({ icon, title, description }, index) in data" v-bind:key="index">
-      <li class="flex flex-col gap-3 justify-center">
+      <li class="flex flex-col gap-4 justify-center">
         <template v-if="title || icon">
           <div class="flex" :class="[
             {'flex-col gap-3' : direction === 'horizontal'},
             {'flex-row gap-2' : direction === 'vertical'}
           ]">
             <template v-if="icon">
-              <div class="bg-[--surface-200] rounded h-6 w-6 flex justify-center items-center">
+              <Tile v-bind="{ severity }">
                 <i class="text-xs" :class="icon"/>
-              </div>
+              </Tile>
             </template>
             <template v-if="title">
               <p class="font-medium text-base"> {{ title }} </p>
             </template>
           </div>
         </template>
-        <template v-if="description">
-          <p class="text-color-secondary text-base"> {{ description }} </p>
+        <template v-if="Array.isArray(description) && description.length > 0">
+          <ul class="flex flex-col gap-3">
+            <template v-for="({ label, icon }, index) in description" :key="index">
+              <li class="flex flex-row gap-2">
+                <Tile v-bind="{ severity }" v-if="icon">
+                  <i class="text-xs" :class="icon"/>
+                </Tile>
+                <p class="text-color-secondary text-sm"> {{ label }} </p>
+              </li>
+            </template>
+          </ul>
+        </template>
+        <template v-else>
+          <p class="text-color-secondary text-sm"> {{ description }} </p>
         </template>
       </li>
     </template>
@@ -29,6 +41,7 @@
 </template>
 
 <script setup>
+import Tile from "../tile"
 
 defineProps({
   data: {
@@ -40,6 +53,12 @@ defineProps({
     type: String,
     required: false,
     default: 'vertical'
+  },
+  severity: {
+    type: String,
+    required: false,
+    default: 'default',
+    options: ['default', 'primary']
   }
 })
 </script>

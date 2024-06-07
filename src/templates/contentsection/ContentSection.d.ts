@@ -37,6 +37,10 @@ export interface ContentSectionProps {
    * @defaultValue false
    */
   reverse?: boolean;
+    /**
+   * @defaultValue false
+   */
+  isSticky?: boolean;
 }
 
 /**
