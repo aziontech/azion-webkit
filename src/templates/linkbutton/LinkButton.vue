@@ -7,7 +7,7 @@
     class="p-button p-component p-button-sm w-fit no-underline justify-center md:justify-start gap-2 px-4"
     :class="[
       {'p-button-outlined' : outlined },
-      {'p-button-text': text },
+      {'p-button-text hover:surface-hover': text },
       {'p-button-secondary' : severity === 'secondary'},
       {'p-button-info' : severity === 'info'},
       {'p-button-sm' : size === 'small' },

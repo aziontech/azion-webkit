@@ -2,11 +2,10 @@
   <div class="flex gap-3">
     <div>
       <Tile v-bind="{ severity }">
-        <i :class="icon">
-        </i>
+        <i :class="icon" />
       </Tile>
     </div>
-    <div>
+    <div class="max-w-lg">
       <div class="flex gap-3 items-center">
         <p class="text-sm font-medium leading-tight">
           {{ title }}

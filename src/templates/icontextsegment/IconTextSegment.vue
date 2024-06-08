@@ -3,7 +3,7 @@
     :href="href"
     :title="title"
     class="p-3 group hover:surface-hover rounded-md transition-all">
-    <IconText v-bind="{ title, description, icon, tag, tagSeverity }" />
+    <IconText v-bind="{ title, description, icon, tag, tagSeverity, severity }" />
   </a>
 </template>
 
@@ -36,6 +36,12 @@
       type: String,
       required: false,
       default: 'info'
+    },
+    severity: {
+      type: String,
+      required: false,
+      default: 'default',
+      options: ['default', 'primary']
     }
   });
 </script>
