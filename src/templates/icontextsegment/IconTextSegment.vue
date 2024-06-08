@@ -2,46 +2,15 @@
   <a
     :href="href"
     :title="title"
-    class="flex gap-3 p-3 group hover:surface-hover rounded-md transition-all">
-
-    <div>
-      <span class="w-[26px] h-[26px] flex items-center justify-center rounded surface-200 group-hover:bg-[var(--surface-100)]">
-        <i
-          :class="icon"
-          class="text-sm text-color-secondary group-hover:text-[var(--text-color)]">
-        </i>
-      </span>
-    </div>
-    <div>
-      <div class="flex gap-3 items-center">
-        <p class="text-sm font-medium leading-tight">
-          {{ title }}
-        </p>
-        <Tag
-          v-if="tag"
-          :value="tag"
-          :severity="tagSeverity"
-          :pt="{
-            root: {
-              class: 'h-6'
-            }
-          }"
-        />
-      </div>
-      <p
-        v-if="description"
-        class="text-xs font-normal text-color-secondary mt-2">
-
-        {{ description }}
-      </p>
-    </div>
+    class="p-3 group hover:surface-hover rounded-md transition-all">
+    <IconText v-bind="{ title, description, icon, tag, tagSeverity, severity }" />
   </a>
 </template>
 
 <script setup>
-  import Tag from 'primevue/tag';
+  import IconText from "../icontext"
 
-  const props = defineProps({
+  defineProps({
     href: {
       type: String,
       required: true,
@@ -67,8 +36,12 @@
       type: String,
       required: false,
       default: 'info'
+    },
+    severity: {
+      type: String,
+      required: false,
+      default: 'default',
+      options: ['default', 'primary']
     }
   });
-
-  const { href, title, description, icon, tag, tagSeverity} = props;
 </script>

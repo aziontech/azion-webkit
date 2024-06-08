@@ -48,6 +48,11 @@ export interface LinkButtonProps {
    * @defaultValue false
    */
   outlined?: boolean;
+    /**
+   * When enabled, it add the borders
+   * @defaultValue false
+   */
+  text?: boolean;
 }
 
 /**
