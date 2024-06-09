@@ -1,4 +1,5 @@
-<template>
+ <template>
+  <!-- open sidebar button -->
   <Button
     @click="visibleRight=true"
     class="lg:hidden flex text-white flex-none border-header w-8 h-8 bg-header hover:bg-header-button-hover"
@@ -8,101 +9,25 @@
     :pt="{
       label: { class: 'text-white hover:bg-header-button-hover' },
       icon: { class: 'text-white' }
-    }" />
+    }"
+  />
 
   <Sidebar
     v-model:visible="visibleRight"
     position="right"
-    class="pr-4 pb-20 h-[100%] border-l surface-border w-full text-sm"
+    class="md:pt-3 pb-20 h-[100%] border-l surface-border w-[20rem] md:w-[22rem] text-sm"
     :show-close-icon="false"
     :pt="{
       header: { class: 'hidden' }
-    }">
-
-    <div class="flex justify-end py-4">
+    }"
+  >
+    <!-- close sidebar button -->
+    <div class="flex justify-end pb-6 pr-2 md:pr-0">
       <Button outlined @click="visibleRight=false" class="flex-none w-8 h-8" icon="pi pi-times" size="small" />
     </div>
 
-    <PanelMenu
-      :model="menuData.items"
-      :pt="{
-        headerContent: {
-          class: ['hover:surface-hover rounded-md p-2 border-none']
-        },
-        menuItem: {
-          class: ['flex flex-col gap-2']
-        },
-        menuContent: {
-          class: ['border-none']
-        },
-        menu: {
-          class: ['flex flex-col gap-2']
-        },
-        content: {
-          class: ['m-0 p-2']
-        },
-        submenu: {
-          class: ['flex flex-col gap-2']
-        }
-    }">
-      <template #item="{ item }">
-        <div v-if="item.href" class="flex gap-6">
-          <a :href="item.href" :title="item.label" :class="[{ 'w-full' : !item.items}]">
-            <div class="p-menuitem-link p-0 flex">
-              <div class="flex gap-2">
-                <div>
-                  <span v-if="item.icon" class="py-1 px-1.5 flex rounded-md surface-200">
-                    <i :class="item.icon" class="text-xs"></i>
-                  </span>
-                </div>
-                <div>
-                  <div class="flex gap-2 items-center">
-                    <p class="text-left text-sm font-medium">
-                      {{ item.label }}
-                    </p>
-                    <template v-if="item.tag">
-                      <Tag :value="item.tag" severity="info" />
-                    </template>
-                  </div>
-                  <small class="text-xs text-color-secondary">
-                    {{ item.description }}
-                  </small>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <span
-            v-if="item.items && item.items.length"
-            class="pi pi-angle-down text-primary ml-auto pr-4"></span>
-        </div>
-
-        <div v-else class="flex gap-4">
-          <a :href="item.url" :title="item.label" :target="item.target" class="">
-            <div class="p-menuitem-link p-0 flex">
-              <div class="flex gap-2">
-                <div>
-                  <span v-if="item.icon" class="py-1 px-1.5 flex rounded-md surface-200">
-                    <i :class="item.icon" class="text-xs"></i>
-                  </span>
-                </div>
-                <div>
-                  <p class="text-color text-sm font-medium">
-                    {{ item.label }}
-                  </p>
-                  <small class="text-xs text-color-secondary">
-                    {{ item.description }}
-                  </small>
-                </div>
-              </div>
-            </div>
-          </a>
-          <span
-            v-if="item.items && item.items.length"
-            class="pi pi-angle-down text-primary ml-auto pr-4"></span>
-        </div>
-      </template>
-    </PanelMenu>
+    <!-- slot to receive custom menu -->
+    <slot name="main-content" />
 
     <template v-if="menuSecondary">
       <Divider class="my-8" />
@@ -132,6 +57,7 @@
         </template>
       </Menu>
     </template>
+
     <template v-if="bottomButtons">
       <div class="fixed bottom-6 flex gap-2 items-center">
         <a
@@ -152,36 +78,35 @@
 </template>
 
 <script setup>
-import { onUpdated, ref } from 'vue';
-import Button from 'primevue/button';
-import Divider from 'primevue/divider';
-import Menu from 'primevue/menu';
-import PanelMenu from 'primevue/panelmenu';
-import Sidebar from 'primevue/sidebar';
-import Tag from 'primevue/tag';
+  import { onUpdated, ref } from 'vue';
+  import Button from 'primevue/button';
+  import Divider from 'primevue/divider';
+  import Menu from 'primevue/menu';
+  import Sidebar from 'primevue/sidebar';
+  import Tag from 'primevue/tag';
 
-let props = defineProps({
-  menuData: Object,
-  menuSecondary: Array,
-  bottomButtons: Array
-});
+  let props = defineProps({
+    menuData: Object,
+    menuSecondary: Array,
+    bottomButtons: Array
+  });
 
-const { menuData, menuSecondary, bottomButtons } = props;
-const visibleRight = ref(false);
+  const { menuData, menuSecondary, bottomButtons } = props;
+  const visibleRight = ref(false);
 
-function getHTMLElement() {
-  return document.querySelector('html');
-};
+  function getHTMLElement() {
+    return document.querySelector('html');
+  };
 
-function pageScroll(action) {
-  const overflow = action === 'stop' ? 'hidden' : 'auto';
-  getHTMLElement().style.overflow = overflow;
+  function pageScroll(action) {
+    const overflow = action === 'stop' ? 'hidden' : 'auto';
+    getHTMLElement().style.overflow = overflow;
 
-  return overflow;
-};
+    return overflow;
+  };
 
-onUpdated(() => {
-  visibleRight.value ? pageScroll('stop') : pageScroll('auto');
-});
+  onUpdated(() => {
+    visibleRight.value ? pageScroll('stop') : pageScroll('auto');
+  });
 </script>
 

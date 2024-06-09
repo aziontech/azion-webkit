@@ -24,6 +24,7 @@
         <div v-if="$slots.dialog" class="min-w-8">
           <slot name="dialog" />
         </div>
+
         <slot name="mobile-right-sidebar" />
       </div>
     </div>
@@ -32,7 +33,7 @@
 
 <script setup>
 const props = defineProps({
-  menuSecondary: Array
+  menuSecondary: Object
 });
 
 const { menuSecondary } = props;
