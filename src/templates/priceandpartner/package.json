@@ -1,0 +1,7 @@
+{
+  "main": "./priceandpartner.js",
+  "types": "./PriceAndPartner.d.ts",
+  "browser": {
+    "./sfc": "./PriceAndPartner.vue"
+  }
+}

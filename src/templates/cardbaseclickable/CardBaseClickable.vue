@@ -40,7 +40,8 @@ const props = defineProps({
   hover: {
     type: String,
     required: false,
-    options: ['outlined']
+    default: 'default',
+    options: ['default', 'outlined']
   },
   link: {
     type: String,
