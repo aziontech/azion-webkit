@@ -6,7 +6,7 @@
     rel="noopener noreferrer"
     class="p-button p-component p-button-sm w-fit no-underline justify-center md:justify-start gap-2 px-4"
     :class="[
-      {'p-button-outlined' : outlined },
+      {'p-button-outlined hover:surface-hover' : outlined },
       {'p-button-text hover:surface-hover': text },
       {'p-button-secondary' : severity === 'secondary'},
       {'p-button-info' : severity === 'info'},
