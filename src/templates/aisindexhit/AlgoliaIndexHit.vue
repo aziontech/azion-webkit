@@ -32,7 +32,7 @@
 
           <ais-hits>
             <template v-slot:item="{ item }">
-              <CardBaseClickable :hover="outlined" :href="item.url" :title="item.title" class="ais-Hits-item-card w-full" spacing="compact">
+              <CardBaseClickable hover="outlined" :href="item.url" :title="item.title" class="ais-Hits-item-card w-full" spacing="compact">
                 <template #content>
                   <div class="flex flex-col gap-3">
                     <h2 class="text-base font-normal">
