@@ -4,7 +4,7 @@
     :title="hrefTitle"
     :target="target"
     aria-label="Azion Logo"
-    class="block mr-3 p-0">
+    class="block p-0">
 
     <div class="w-20">
       <svg viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg">
