@@ -32,42 +32,40 @@
 
           <ais-hits>
             <template v-slot:item="{ item }">
-              <a
-                class="ais-Hits-item-card border surface-border rounded p-5 w-full flex flex-col gap-3"
-                :href="item.url"
-                :title="item.title"
-              >
+              <CardBaseClickable hover="outlined" :href="item.url" :title="item.title" class="ais-Hits-item-card w-full" spacing="compact">
+                <template #content>
+                  <div class="flex flex-col gap-3">
+                    <h2 class="text-base font-normal">
+                      {{ item.title }}
+                    </h2>
 
-                <div class="flex flex-col gap-3">
-                  <h2 class="text-base font-normal">
-                    {{ item.title }}
-                  </h2>
+                    <ul class="flex items-center flex-wrap text-xs">
+                      <li class="text-color-secondary mr-0.5">
+                        <small class="flex gap-0.5 capitalize items-center">
+                          {{ props.label }} <i class="pi pi-angle-right text-[8px]"></i>
+                        </small>
+                      </li>
+                      <li class="text-color-secondary">
+                        <small class="flex gap-2">
+                          {{ item.title }}
+                        </small>
+                      </li>
+                    </ul>
+                  </div>
 
-                  <ul class="flex items-center flex-wrap text-xs">
-                    <li class="text-color-secondary mr-0.5">
-                      <small class="flex gap-0.5 capitalize items-center">
-                        {{ props.label }} <i class="pi pi-angle-right text-[8px]"></i>
-                      </small>
-                    </li>
-                    <li class="text-color-secondary">
-                      <small class="flex gap-2">
-                        {{ item.title }}
-                      </small>
-                    </li>
-                  </ul>
-                </div>
+                  <p class="text-sm text-color-secondary leading-relaxed">
+                    <!--
+                      item.text used to site/blog/cases
+                      item.description used to documentation
+                    -->
+                    {{
+                      item.text && item.text.length > 160 ? `${item.text.slice(0, 160)}...` : item.text ? item.text :
+                        item.description && item.description.length > 220  ? `${item.description.slice(0, 220)}...` : item.description ? item.description : ''
+                    }}
+                  </p>
 
-                <p class="text-sm text-color-secondary leading-relaxed">
-                  <!--
-                    item.text used to site/blog/cases
-                    item.description used to documentation
-                  -->
-                  {{
-                    item.text ? item.text.slice(0, 160) :
-                      item.description ? item.description.slice(0, 220) : ''
-                  }} ...
-                </p>
-              </a>
+                </template>
+              </CardBaseClickable>
             </template>
           </ais-hits>
         </template>
@@ -77,6 +75,8 @@
 </template>
 
 <script setup>
+  import CardBaseClickable from '../cardbaseclickable';
+
   const props = defineProps({
     indexName: {
       require: true,
