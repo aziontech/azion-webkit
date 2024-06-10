@@ -3,10 +3,7 @@
     <Card class="p-0 mt-0"
       @mouseover="isHovered = true"
       @mouseout="isHovered = false"
-      :pt="{
-        header: { class: 'rounded border surface-border overflow-hidden' },
-        root: { class: 'shadow-none bg-transparent flex flex-col gap-6' }
-      }">
+      :pt="getPTOptions()">
       <template #header v-if="imgSrc" >
         <picture>
           <img height="209" width="372" loading="lazy" :alt="`${imgAlt}`" :src="`${imgSrc}?ims=372x209`"
@@ -14,7 +11,10 @@
         </picture>
       </template>
       <template #content>
-        <div class="flex flex-col justify-between gap-4">
+        <div class="flex flex-col gap-4" :class="{
+         'justify-center h-full' : direction == 'row',
+         'justify-between' : direction == 'column'
+        }">
           <h2 class="text-xl font-bold text-color">{{ title }}</h2>
           <p class="text-sm text-color-secondary">{{ description }}</p>
           <template v-if="date || estimateReadTime">
@@ -42,7 +42,7 @@ import Card from 'primevue/card';
 import Avatar from 'primevue/avatar'
 import AvatarGroup from 'primevue/avatargroup'
 
-defineProps({
+const props = defineProps({
   imgSrc: {
     type: String,
     required: false,
@@ -74,6 +74,24 @@ defineProps({
   link: {
     type: String,
     required: true
-  }
+  },
+  direction: {
+    type: String,
+    required: false,
+    default: "column",
+    options: ["column", "row"]
+  },
 });
+
+const getPTOptions = () => {
+  const response = {
+      root: 'shadow-none bg-transparent gap-6',
+      header: 'rounded border surface-border overflow-hidden',
+      content: 'h-full'
+    }
+
+  response.root = props.direction == 'row' ? `${response.root} grid grid-cols-[repeat(2,_minmax(320px,_1fr))]` : `${response.root} flex flex-col`
+
+  return response
+}
 </script>
