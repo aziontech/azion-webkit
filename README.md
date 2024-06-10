@@ -6,6 +6,8 @@
   <img src="./doc/images/cover.png" alt="Cover @aziontech/webkit repository"/>
 </p>
 
+> Package azion-web-kit deprecated
+
 <p align="center">
   The @aziontech/webkit project is the better way to develop/create/update an app, page, landing to the company front-end necessities.
 </p>
