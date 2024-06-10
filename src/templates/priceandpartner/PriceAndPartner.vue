@@ -10,7 +10,9 @@
           </div>
           <div class="flex flex-col gap-4">
             <div v-for="({ icon, title, severity }, index) in list" :key="index" class="flex flex-row gap-2">
-              <Tile :severity> <i :class="icon" /> </Tile>
+              <div class="min-w-6">
+                <Tile :severity> <i :class="icon" /> </Tile>
+              </div>
               <p class="font-medium" :class="{ 'text-orange-500': severity === 'primary' }"> {{ title }}</p>
             </div>
           </div>

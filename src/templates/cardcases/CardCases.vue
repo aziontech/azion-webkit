@@ -1,5 +1,5 @@
 <template>
-  <a :href="link" :title="description" class="rounded-md focus:outline-[rgba(243,100,43,.624)] no-underline flex group w-full md:max-w-sm">
+  <a :href="link" :title="description" class="rounded-md focus:outline-[rgba(243,100,43,.624)] no-underline flex group w-full" :class="{'md:max-w-sm' : size == 'default'}">
     <Card
       :pt="{
         root: { class: 'w-full p-6 shadow-none bg-transparent flex flex-col gap-9 rounded-md border surface-border overflow-hidden group-hover:border-current' }
@@ -44,5 +44,11 @@ defineProps({
     type: String,
     required: true
   },
+  size: {
+    type: String,
+    required: false,
+    default: "default",
+    options: ['large', 'default']
+  }
 });
 </script>
