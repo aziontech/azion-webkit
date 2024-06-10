@@ -1,17 +1,13 @@
 <template>
-  <header class="py-3 bg-header text-white h-[56px] w-full sticky top-0 z-50  border-b surface-border">
-    <div class="flex justify-between items-center px-shell">
+  <header class="w-full h-[56px] border-b surface-border bg-header text-white py-3 sticky top-0 z-50">
+    <div class="px-shell h-8 flex justify-between items-center">
       <div class="flex gap-6 items-center">
         <slot name="visualid" />
         <slot name="navigation" />
       </div>
+
       <div class="flex gap-2">
-        <a
-          v-for="(menu, index) in menuSecondary"
-          :key="index"
-          target="_blank"
-          :href="menu.link"
-          :title="menu.title"
+        <a v-for="(menu, index) in menuSecondary" :key="index" target="_blank" :href="menu.link" :title="menu.title"
           :class="[menu.destak ?
             'p-button  whitespace-nowrap p-button-sm hidden lg:flex' :
             'p-button p-button-primary whitespace-nowrap p-button-text hover:bg-header-button-hover p-button-sm hidden lg:flex', { 'p-button-info' : menu.severity === 'info'}]">
@@ -32,9 +28,6 @@
 </template>
 
 <script setup>
-const props = defineProps({
-  menuSecondary: Object
-});
-
-const { menuSecondary } = props;
+  const props = defineProps({ menuSecondary: Object });
+  const { menuSecondary } = props;
 </script>
