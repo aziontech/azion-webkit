@@ -10,7 +10,7 @@
         <a v-for="(menu, index) in menuSecondary" :key="index" target="_blank" :href="menu.link" :title="menu.title"
           :class="[menu.destak ?
             'p-button  whitespace-nowrap p-button-sm hidden lg:flex' :
-            'p-button p-button-primary whitespace-nowrap p-button-text hover:bg-header-button-hover p-button-sm hidden lg:flex', { 'p-button-info' : menu.severity === 'info'}]">
+            'p-button p-button-primary whitespace-nowrap p-button-text hover:surface-hover p-button-sm hidden lg:flex', { 'p-button-info' : menu.severity === 'info'}]">
 
           <span class="text-white">
             {{ menu.text }}

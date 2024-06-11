@@ -28,7 +28,7 @@
             <Overline class="px-4" :label="title" />
             <ul class="list-none p-0 m-0 mt-4 gap-3">
               <li v-for="({ link, title }, i) in list" :key="i">
-                <LinkButton :link="`${link}`" class="p-button-text px-4 whitespace-nowrap" :label="title" />
+                <LinkButton :link="`${link}`" text class="px-4 whitespace-nowrap" :label="title" />
               </li>
             </ul>
           </div>

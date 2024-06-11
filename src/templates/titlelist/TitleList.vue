@@ -10,7 +10,7 @@
       </li>
     </ul>
     <div>
-      <LinkButton v-if="link" class="p-button p-button-outlined sm:w-full lg:w-fit justify-center" severity="primary" :label="buttonText" outlined :link="link" />
+      <LinkButton v-if="link" outlined class="sm:w-full lg:w-fit justify-center" severity="primary" :label="buttonText" :link="link" />
     </div>
   </section>
 </template>

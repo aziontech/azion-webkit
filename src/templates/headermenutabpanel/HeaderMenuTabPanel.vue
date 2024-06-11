@@ -6,7 +6,7 @@
           v-if="!menuitem.items || !menuitem.items.length"
           :href="menuitem.href || ''"
           :title="menuitem.label || ''"
-          class="p-button p-button-text p-button-primary p-button-sm whitespace-nowrap text-white active:bg-header-button-hover hover:bg-header-button-hover"
+          class="p-button p-button-text p-button-primary p-button-sm whitespace-nowrap text-white active:bg-header-button-hover hover:surface-hover"
         >
           <span class="text-white">
             {{ menuitem.label }}
@@ -16,7 +16,7 @@
         <div v-if="menuitem.items && menuitem.items.length">
           <a
             tabindex="0"
-            class="p-button p-button-text p-button-primary p-button-sm whitespace-nowrap active:bg-header-button-hover hover:bg-header-button-hover"
+            class="p-button p-button-text p-button-primary p-button-sm whitespace-nowrap active:bg-header-button-hover hover:surface-hover"
             @click="(event) => { toggle(event, menuitem.ref); active = 0; }"
           >
             <div class="flex flex-row gap-2 text-white items-center">
@@ -53,7 +53,7 @@
                   </Button>
                 </template>
                 <template v-else>
-                  <a class="p-button p-component p-button-text p-button-sm flex gap-2 hover:surface-hover justify-between w-full items-centerm min-w-52"
+                  <a class="p-button p-component p-button-text hover:surface-hover p-button-sm flex gap-2 hover:surface-hover justify-between w-full items-centerm min-w-52"
                      :href="subitem.href" :target="subitem.external ? '_blank' : '_self'"
                   >
                     <span class="w-full flex gap-2 items-center justify-between">
@@ -98,7 +98,7 @@
                           </template>
                           <ul>
                             <li v-for="(sublink, subIndex) in link.items" :key="subIndex" class="flex- flex-col gap-2">
-                              <a :href="sublink.href" :title="sublink.label" class="w-full p-button p-button-text p-button-sm text-xs hover:surface-hover">
+                              <a :href="sublink.href" :title="sublink.label" class="w-full p-button p-button-text hover:surface-hover p-button-sm text-xs hover:surface-hover">
                                 <div class="flex gap-3">
                                   <div v-if="sublink.icon">
                                     <span class="py-1 px-1.5 flex rounded-md surface-200">

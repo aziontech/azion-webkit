@@ -67,7 +67,7 @@
           :title="button.urlTitle"
           :class="[button.destak ?
             'flex gap-2 justify-between p-button p-button-primary p-button-sm whitespace-nowrap' :
-            'flex gap-2 p-button p-button-primary p-button-outlined p-button-sm  text-white hover:bg-header-button-hover whitespace-nowrap',
+            'flex gap-2 p-button p-button-primary p-button-outlined p-button-sm  text-white hover:surface-hover whitespace-nowrap',
             { 'p-button-info' : button.severity === 'info'}]">
           {{ button.label }}
           <i v-if="button.icon" :class="button.icon"></i>
@@ -91,7 +91,7 @@
     bottomButtons: Array
   });
 
-  const { menuData, menuSecondary, bottomButtons } = props;
+  const { menuSecondary, bottomButtons } = props;
   const visibleRight = ref(false);
 
   function getHTMLElement() {
