@@ -10,74 +10,90 @@
       <CardBase
         :pt="{ prime: { body: 'h-full', content: 'h-full' }, content: 'h-full' }"
         :class="[
-          `transition-all duration-300 ease-out overflow-hidden xl:min-w-44`,
+          `transition ease-in-out delay-150 overflow-hidden xl:min-w-44 cursor-pointer`,
           { 'w-movable': activeIndex !== index }
         ]"
-        @click="activeIndex = index"
+        @mouseover="activeIndex = index" @click="activeIndex = index"
         :style="dynamicWidth"
         :backgroundColor="activeIndex === index ? 'outlined' : 'default'"
-        hover="outlined"
       >
-        <template #content>
-          <Tile> {{ index + 1 }} </Tile>
-          <CardTitle> {{ card.title }} </CardTitle>
-          <div
-            class="h-full flex flex-col justify-between"
-            :class="activeIndex === index ? 'visible' : 'hidden truncate'"
-          >
-            <div class="flex flex-col gap-2">
-              <CardDescription class="overflow-hidden">
-                {{ card.description }}
-              </CardDescription>
-              <div v-if="activeIndex === index && $slots.content">
-                <slot
-                  name="content"
-                  :data="card"
-                />
-
-                <slot
-                  name="actions"
-                  :data="card"
-                />
+        <template #content-raw>
+          <div class="flex flex-col h-full">
+            <div class="flex flex-col gap-8">
+              <div
+                class="flex flex-col gap-8 justify-between p-5 md:p-8"
+                :class="activeIndex === index && 'grow'"
+              >
+                <div class="flex flex-col gap-8">
+                  <div class="flex flex-col gap-4">
+                    <Tile> {{ index + 1 }} </Tile>
+                    <CardTitle> {{ card.title }} </CardTitle>
+                    <CardDescription
+                      :class="activeIndex === index ? 'visible' : 'hidden truncate'"
+                      class="overflow-hidden"
+                    >
+                      {{ card.description }}
+                    </CardDescription>
+                  </div>
+                  <template v-if="activeIndex === index && $slots.content">
+                    <slot
+                      name="content"
+                      :data="card"
+                    />
+                  </template>
+                </div>
+                <div class="flex justify-between w-full">
+                  <div
+                    class="min-w-fit"
+                    v-if="activeIndex === index"
+                  >
+                    <slot
+                      name="actions"
+                      :data="card"
+                    />
+                  </div>
+                  <div class="flex justify-end w-full">
+                    <Tile :severity="activeIndex === index ? 'primary' : 'default'">
+                      <div class="hidden xl:block">
+                        <i
+                          class="pi self-end text-sm pi-arrow-right"
+                          :class="activeIndex == index ? 'hidden' : 'block'"
+                        />
+                        <i
+                          class="pi self-end text-sm pi-arrow-left"
+                          :class="activeIndex == index ? 'block' : 'hidden'"
+                        />
+                      </div>
+                      <div class="xl:hidden block">
+                        <i
+                          class="pi self-end text-sm pi-arrow-down"
+                          :class="activeIndex == index ? 'hidden' : 'block'"
+                        />
+                        <i
+                          class="pi self-end text-sm pi-arrow-up"
+                          :class="activeIndex == index ? 'block' : 'hidden'"
+                        />
+                      </div>
+                    </Tile>
+                  </div>
+                </div>
               </div>
+              <template v-if="activeIndex === index">
+                <slot
+                  name="content-raw"
+                  :data="card"
+                />
+              </template>
             </div>
-          </div>
-        </template>
-        <template #actions>
-          <div class="flex justify-between w-full">
-            <div>
-              <div v-if="activeIndex === index"></div>
+            <div
+              class="h-1/2 xl:h-full"
+              v-if="activeIndex != index"
+            >
+              <slot
+                name="disabledContent"
+                :data="card"
+              />
             </div>
-            <Tile>
-              <i
-                class="pi self-end text-sm pi-arrow-right hidden xl:block"
-                :class="activeIndex === index && 'text-orange-500'"
-              />
-              <i
-                class="pi self-end text-sm xl:hidden"
-                :class="activeIndex === index ? 'text-orange-500 pi-arrow-up' : 'pi-arrow-down'"
-              />
-            </Tile>
-          </div>
-        </template>
-        <template
-          #content-raw
-          v-if="$slots['content-raw'] || $slots['disabledContent']"
-        >
-          duasihdusahduia
-          <div v-if="activeIndex != index">
-            daisdhauidhiashdiuas
-            <slot
-              name="disabledContent"
-              :data="card"
-            />
-          </div>
-          <div v-if="activeIndex === index">
-            disahdisauhdusahduihas
-            <slot
-              name="content-raw"
-              :data="card"
-            />
           </div>
         </template>
       </CardBase>
@@ -87,10 +103,10 @@
 
 <script setup>
   import { ref, computed, onMounted } from 'vue'
-  import CardBase from '../cardbase/CardBase.vue'
-  import Tile from '../tile/Tile.vue'
-  import CardTitle from '../cardtitle/CardTitle.vue'
-  import CardDescription from '../carddescription/CardDescription.vue'
+  import CardBase from '../cardbase'
+  import Tile from '../tile'
+  import CardTitle from '../cardtitle'
+  import CardDescription from '../carddescription'
 
   const props = defineProps({
     activeIndex: {
