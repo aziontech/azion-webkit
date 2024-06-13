@@ -8,11 +8,7 @@
       { 'bg-[var(--surface-50)] border-transparent focus:outline-[rgba(243,100,43,.624)]' : backgroundColor == 'shape'},
       { 'bg-transparent surface-border focus:outline-[rgba(243,100,43,.624)]' : backgroundColor == 'default'}
     ]"
-    :pt="{
-      root: { class: [[{ 'flex flex-col h-full' : grid}]] },
-      body: { class: [{ 'flex flex-col grow' : grid}] },
-      content: { class: [{ 'flex flex-col grow' : grid}] }
-    }"
+    :pt="definePTPrime()"
   >
     <template v-if="$slots.header" #header>
       <div class="flex flex-col gap-8" :class="[
@@ -29,6 +25,7 @@
           {'p-4 md:p-6' : spacing === 'compact'},
           {'p-5 md:p-8' : spacing === 'base'},
           {'p-6 md:p-10' : spacing === 'relaxed'},
+          defineComponentPT()
         ]">
           <div class="flex flex-col gap-3 grow">
             <slot name="content"/>
@@ -50,7 +47,7 @@
 <script setup>
 import Card from "primevue/card"
 
-defineProps({
+const props = defineProps({
   spacing: {
     type: String,
     required: false,
@@ -71,6 +68,38 @@ defineProps({
     type: String,
     required: false,
     options: ['default', 'outlined', 'slide-up']
+  },
+  pt: {
+    type: Object,
+    required: false,
   }
 })
+
+function definePTPrime() {
+  if (props.grid) {
+    return {
+      root: { class: [[{ 'flex flex-col h-full' : props.grid}]] },
+      body: { class: [{ 'flex flex-col grow' : props.grid}] },
+      content: { class: [{ 'flex flex-col grow' : props.grid}] }
+    }
+  }
+
+  if (!props.pt) return
+
+  if (props.pt.prime) {
+    return {...props.pt.prime}
+  }
+
+  return {}
+}
+
+function defineComponentPT() {
+  if (!props.pt) return
+
+  if (props.pt.content) {
+    return props.pt.content
+  }
+
+  return ''
+}
 </script>

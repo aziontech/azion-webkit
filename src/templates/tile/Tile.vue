@@ -1,7 +1,7 @@
 <template>
   <div class="rounded h-6 w-6 flex justify-center items-center" :class="[
     { 'bg-[--surface-400] text-color-secondary': severity == 'default' },
-    { 'p-tag' : !severity == 'primary' },
+    { 'p-tag' : severity == 'primary' },
     { 'p-tag p-tag-warning' : severity == 'warning' },
     { 'p-tag p-tag-success' : severity == 'success' },
     { 'p-tag p-tag-info' : severity == 'info' },
