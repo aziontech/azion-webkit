@@ -12,8 +12,8 @@
            { 'items-center': isContentCentralized },
            { 'md:top-20 md:sticky': isSticky}
         ]">
-          <div class="flex flex-col gap-5 max-w-2xl" :class="[
-            { 'items-center text-center max-w-2xl': isContentCentralized },
+          <div class="flex flex-col gap-5 max-w-3xl" :class="[
+            { 'items-center text-center': isContentCentralized },
             { 'justify-center h-full': textCenter }
           ]">
             <template v-if="overline && overline.length">

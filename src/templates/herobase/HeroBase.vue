@@ -1,12 +1,12 @@
 <template>
-  <section class="lg:pt-16 pt-4 flex">
+  <section class="flex">
     <div class="px-container flex flex-col w-full gap-10 mt-0 lg:mt-10 xl:mt-16 2xl:my-24" :class="[
       { 'lg:flex-row': !isCentralized },
       { 'items-center justify-center': isCentralized },
       { 'flex-col-reverse': isReverse }
     ]">
       <div class="w-full flex flex-col gap-10" :class="[
-        { 'lg:max-w-xl': !isCentralized },
+        { 'lg:max-w-3xl': !isCentralized },
         { 'items-center': isCentralized },
         { 'items-center text-center lg:text-left': align === 'center' },
         { 'justify-center' : justify === 'center'}
@@ -23,7 +23,7 @@
         </template>
         <div class="flex flex-col gap-5" :class="[
           { 'max-w-3xl text-center': isCentralized },
-          { 'max-w-2xl': !isCentralized},
+          { 'max-w-3xl': !isCentralized},
         ]">
           <Overline v-if="overline && overline.length" :label="overline" />
           <h1 v-if="titleTag === 'h1'" class="font-medium text-4xl text-pretty" :class="[

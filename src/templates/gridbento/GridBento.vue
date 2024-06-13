@@ -1,7 +1,7 @@
 <template>
   <section>
     <div
-      class="grid gap-8 grid-cols-1"
+      class="grid m-0 gap-8 grid-cols-1"
       :class="grids[gridType].columns">
 
       <div
