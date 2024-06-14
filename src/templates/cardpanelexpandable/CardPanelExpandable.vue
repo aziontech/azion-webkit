@@ -1,7 +1,8 @@
 <template>
   <div
     class="flex flex-col xl:flex-row justify-center gap-6 xl:gap-3 w-full max-w-3xl xl:max-w-full"
-    :class="maxHeight" id="cardExpandable"
+    :class="maxHeight"
+    id="cardExpandable"
   >
     <template
       v-for="(card, index) in cards"
@@ -10,37 +11,48 @@
       <CardBase
         :pt="{ prime: { body: 'h-full', content: 'h-full' }, content: 'h-full' }"
         :class="[
-          `transition ease-in-out duration-150 overflow-hidden xl:min-w-44 cursor-pointer`,
+          `transition-all ease-in-out overflow-hidden xl:min-w-44 cursor-pointer`,
           { 'w-movable': activeIndex !== index }
         ]"
-        @mouseover="activeIndex = index" @click="activeIndex = index"
+        @mouseover="activeIndex = index"
+        @click="activeIndex = index"
         :style="dynamicWidth"
         :backgroundColor="activeIndex === index ? 'outlined' : 'default'"
       >
         <template #content-raw>
           <div class="flex flex-col h-full">
-            <div class="flex flex-col gap-8">
+            <div class="flex flex-col gap-8 grow">
               <div
                 class="flex flex-col gap-4 md:gap-8 justify-between p-4 md:p-8"
                 :class="activeIndex === index && 'grow'"
               >
                 <div class="flex flex-col gap-8">
-                  <div class="flex flex-col gap-4">
-                    <Tile> {{ index + 1 }} </Tile>
-                    <CardTitle> {{ card.title }} </CardTitle>
-                    <CardDescription
-                      :class="activeIndex === index ? 'visible' : 'hidden truncate'"
-                      class="overflow-hidden"
+                  <div class="flex justify-between gap-4">
+                    <div class="flex flex-col gap-4">
+                      <Tile> {{ index + 1 }} </Tile>
+                      <CardTitle> {{ card.title }} </CardTitle>
+                      <CardDescription
+                        :class="activeIndex === index ? 'visible' : 'hidden truncate'"
+                        class="overflow-hidden"
+                      >
+                        {{ card.description }}
+                      </CardDescription>
+                    </div>
+                    <div
+                      class="flex items-end"
+                      :class="activeIndex != index ? 'block xl:hidden' : 'hidden'"
                     >
-                      {{ card.description }}
-                    </CardDescription>
+                      <Tile>
+                        <i class="pi self-end text-sm pi-arrow-down" />
+                      </Tile>
+                    </div>
                   </div>
-                  <template v-if="activeIndex === index && $slots.content">
+                  <div class="flex grow" v-if="activeIndex === index && $slots.content">
                     <slot
                       name="content"
                       :data="card"
                     />
-                  </template>
+                  </div>
                 </div>
                 <div class="flex justify-between w-full">
                   <div
@@ -52,28 +64,32 @@
                       :data="card"
                     />
                   </div>
-                  <div class="flex justify-end w-full">
-                    <Tile :severity="activeIndex === index ? 'primary' : 'default'">
-                      <div class="hidden xl:block">
+                  <div class="flex justify-end items-center w-full">
+                    <div class="hidden xl:block">
+                      <Tile
+                        :severity="activeIndex === index ? 'primary' : 'default'"
+                        :class="activeIndex == index ? 'hidden' : 'block'"
+                      >
                         <i
                           class="pi self-end text-sm pi-arrow-right"
                           :class="activeIndex == index ? 'hidden' : 'block'"
                         />
+                      </Tile>
+                      <Tile
+                        :severity="activeIndex === index ? 'primary' : 'default'"
+                        :class="activeIndex == index ? 'block' : 'hidden'"
+                      >
                         <i
                           class="pi self-end text-sm pi-arrow-left"
                           :class="activeIndex == index ? 'block' : 'hidden'"
                         />
-                      </div>
-                      <div class="xl:hidden block">
-                        <i
-                          class="pi self-end text-sm pi-arrow-down"
-                          :class="activeIndex == index ? 'hidden' : 'block'"
-                        />
-                        <i
-                          class="pi self-end text-sm pi-arrow-up"
-                          :class="activeIndex == index ? 'block' : 'hidden'"
-                        />
-                      </div>
+                      </Tile>
+                    </div>
+                    <Tile
+                      severity="primary"
+                      :class="activeIndex == index ? 'block xl:hidden' : 'hidden'"
+                    >
+                      <i class="pi self-end text-sm pi-arrow-up" />
                     </Tile>
                   </div>
                 </div>
