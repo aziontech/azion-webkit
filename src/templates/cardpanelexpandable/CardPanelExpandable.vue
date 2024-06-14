@@ -1,7 +1,7 @@
 <template>
   <div
     class="flex flex-col xl:flex-row justify-center gap-6 xl:gap-3 w-full max-w-3xl xl:max-w-full"
-    :class="maxHeight"
+    :class="maxHeight" id="cardExpandable"
   >
     <template
       v-for="(card, index) in cards"
@@ -10,7 +10,7 @@
       <CardBase
         :pt="{ prime: { body: 'h-full', content: 'h-full' }, content: 'h-full' }"
         :class="[
-          `transition ease-in-out delay-150 overflow-hidden xl:min-w-44 cursor-pointer`,
+          `transition ease-in-out duration-150 overflow-hidden xl:min-w-44 cursor-pointer`,
           { 'w-movable': activeIndex !== index }
         ]"
         @mouseover="activeIndex = index" @click="activeIndex = index"
@@ -21,7 +21,7 @@
           <div class="flex flex-col h-full">
             <div class="flex flex-col gap-8">
               <div
-                class="flex flex-col gap-8 justify-between p-5 md:p-8"
+                class="flex flex-col gap-4 md:gap-8 justify-between p-4 md:p-8"
                 :class="activeIndex === index && 'grow'"
               >
                 <div class="flex flex-col gap-8">
@@ -129,21 +129,11 @@
   const dynamicWidth = computed(() => ({
     '--dynamic-width': widthValue.value
   }))
-
-  const isGrid = ref(false)
-  const checkWindowWidth = () => {
-    isGrid.value = window.innerWidth > 1280
-  }
-
-  onMounted(() => {
-    checkWindowWidth()
-    window.addEventListener('resize', checkWindowWidth)
-  })
 </script>
 
 <style>
   @media (min-width: 1280px) {
-    .w-movable {
+    #cardExpandable .w-movable {
       width: var(--dynamic-width, 80px) !important;
     }
   }
