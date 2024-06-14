@@ -1,5 +1,34 @@
 const listData = [
   {
+    title: "Company",
+    list: [
+      {
+        title: "About us",
+        link: "/en/about-us/"
+      },
+      {
+        title: "Our Network",
+        link: "/en/products/edge-network/"
+      },
+      {
+        title: "Roadmap",
+        link: "/en/roadmap/"
+      },
+      {
+        title: "Careers",
+        link: "/en/careers/",
+      },
+      {
+        title: "Compliance",
+        link: "/en/compliance/"
+      },
+      {
+        title: "Privacy Policy",
+        link: "/en/documentation/agreements/privacy-policy/"
+      },
+    ]
+  },
+  {
     title: "Resources",
     list: [
       {
@@ -11,110 +40,44 @@ const listData = [
         link: "/en/documentation/"
       },
       {
+        title: "Resource Hub",
+        link: "/en/resource-hub/"
+      },
+      {
+        title: "Learning",
+        link: "/en/learning/"
+      },
+      {
         title: "Marketplace",
         link: "/en/marketplace/"
       },
-      {
-        title: "Compliance",
-        link: "/en/compliance/"
-      },
-      {
-        title: "Success Cases",
-        link: "/en/success-case/"
-      }
     ]
   },
   {
-    title: "Company",
+    title: "Getting Started",
     list: [
       {
-        title: "About us",
-        link: "/en/about-us/"
+        title: "Start for free",
+        link: "https://console.azion.com/signup"
       },
       {
-        title: "Azion Edge Network",
-        link: "/en/products/edge-network/"
+        title: "How to start",
+        link: "/en/documentation/products/get-started/"
       },
       {
-        title: "Careers",
-        link: "/en/careers",
-      },
-      {
-        title: "Privacy Policy",
-        link: "/en/documentation/agreements/privacy-policy/"
-      },
-      {
-        title: "Roadmap",
-        link: "/en/roadmap/"
-      }
-    ]
-  },
-  {
-    title: "Pricing",
-    list: [
-      {
-        title: "Products",
+        title: "Pricing",
         link: "/en/pricing/"
       },
       {
-        title: "Support",
-        link: "/en/support/"
-      }
+        title: "Contact Sales",
+        link: "/en/contact-sales/"
+      },
+      {
+        title: "Professional Services",
+        link: "/en/professional-services/"
+      },
     ]
   },
-  {
-    title: "Contact Us",
-    list: [
-      {
-        title: "Sales",
-        link: "/en/pricing/"
-      },
-      {
-        title: "Support",
-        link: "/en/support/"
-      },
-      {
-        title: "Facebook",
-        link: "https://www.facebook.com/aziontech",
-        target: "_blank"
-      },
-      {
-        title: "Twitter",
-        link: "https://twitter.com/aziontech",
-        target: "_blank"
-      },
-      {
-        title: "Linkedin",
-        link: "https://www.linkedin.com/company/aziontech",
-        target: "_blank"
-      },
-      {
-        title: "Instagram",
-        link: "https://www.instagram.com/aziontech",
-        target: "_blank"
-      },
-      {
-        title: "YouTube",
-        link: "https://www.youtube.com/aziontech",
-        target: "_blank"
-      },
-      {
-        title: "GitHub",
-        target: "_blank",
-        link: "https://github.com/aziontech"
-      },
-      {
-        title: "Discord",
-        target: "_blank",
-        link: "https://discord.gg/Yp9N7RMVZy"
-      },
-      {
-        title: "Medium",
-        link: "https://medium.com/aziontech",
-        target: "_blank"
-      }
-    ]
-  }
 ]
 
 const cta =
@@ -124,22 +87,10 @@ const cta =
 
 const socialButtons = [
   {
-    title: "Discord",
+    title: "GitHub",
     target: "_blank",
-    link: "https://discord.gg/Yp9N7RMVZy",
-    icon: "pi pi-discord"
-  },
-  {
-    title: "Facebook",
-    link: "https://www.facebook.com/aziontech",
-    target: "_blank",
-    icon: "pi pi-facebook"
-  },
-  {
-    title: "Twitter",
-    link: "https://twitter.com/aziontech",
-    target: "_blank",
-    icon: "ai ai-twitter"
+    link: "https://github.com/aziontech",
+    icon: "pi pi-github"
   },
   {
     title: "Linkedin",
@@ -147,10 +98,39 @@ const socialButtons = [
     target: "_blank",
     icon: "pi pi-linkedin"
   },
+  {
+    title: "YouTube",
+    link: "https://www.youtube.com/aziontech",
+    target: "_blank",
+    icon: "pi pi-youtube"
+  },
+  {
+    title: "X",
+    link: "https://x.com/aziontech",
+    target: "_blank",
+    icon: "ai ai-twitter"
+  },
+  {
+    title: "Instagram",
+    link: "https://www.instagram.com/aziontech",
+    target: "_blank",
+    icon: "pi pi-instagram"
+  },
+  {
+    title: "Discord",
+    target: "_blank",
+    link: "https://discord.gg/Yp9N7RMVZy",
+    icon: "pi pi-discord"
+  },
+  {
+    title: "Medium",
+    target: "_blank",
+    link: "https://medium.com/aziontech",
+    icon: "ai ai-medium"
+  }
 ]
 
-
-const copyright = "Copyright © 2023, Azion Technologies, Inc. or its affiliates. All rights reserved."
+const copyright = '© Azion Technologies, Inc or its affiliates. All rights reserved.';
 
 export default {
   listData,
