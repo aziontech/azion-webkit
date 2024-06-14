@@ -38,14 +38,12 @@
                         {{ card.description }}
                       </CardDescription>
                     </div>
-                    <div
-                      class="flex items-end xl:hidden"
-                    >
-                    <div v-show="activeIndex != index">
-                      <Tile>
-                        <i class="pi self-end text-sm pi-arrow-down" />
-                      </Tile>
-                    </div>
+                    <div class="flex items-end xl:hidden">
+                      <div v-show="activeIndex != index">
+                        <Tile>
+                          <i class="pi self-end text-sm pi-arrow-down" />
+                        </Tile>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -83,10 +81,11 @@
                         </Tile>
                       </div>
                     </div>
-                    <div class="xl:hidden" v-show="activeIndex == index">
-                      <Tile
-                        severity="primary"
-                      >
+                    <div
+                      class="xl:hidden"
+                      v-show="activeIndex == index"
+                    >
+                      <Tile severity="primary">
                         <i class="pi self-end text-sm pi-arrow-up" />
                       </Tile>
                     </div>
