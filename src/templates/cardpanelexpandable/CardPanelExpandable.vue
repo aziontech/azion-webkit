@@ -11,7 +11,7 @@
       <CardBase
         :pt="{ prime: { body: 'h-full', content: 'h-full' }, content: 'h-full' }"
         :class="[
-          `transition-all duration-[400ms] ease-in-out overflow-hidden xl:min-w-44 cursor-pointer`,
+          `transition-[width] duration-700 overflow-hidden xl:min-w-44`,
           { 'w-movable': activeIndex !== index }
         ]"
         @mouseover="activeIndex = index"
@@ -23,7 +23,7 @@
           <div class="flex flex-col h-full">
             <div class="flex flex-col gap-8 grow">
               <div
-                class="flex flex-col gap-4 md:gap-8 justify-between p-4 md:p-8"
+                class="flex flex-col gap-4 md:gap-6 justify-between p-4 md:p-8"
                 :class="activeIndex === index && 'grow'"
               >
                 <div class="flex flex-col gap-8">
