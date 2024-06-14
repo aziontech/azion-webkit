@@ -39,25 +39,31 @@
                       </CardDescription>
                     </div>
                     <div
-                      class="flex items-end"
-                      :class="activeIndex != index ? 'block xl:hidden' : 'hidden'"
+                      class="flex items-end xl:hidden"
                     >
+                    <div v-show="activeIndex != index">
                       <Tile>
                         <i class="pi self-end text-sm pi-arrow-down" />
                       </Tile>
                     </div>
+                    </div>
                   </div>
-                  <div class="flex grow" v-if="activeIndex === index && $slots.content">
-                    <slot
-                      name="content"
-                      :data="card"
-                    />
+                  <div
+                    v-if="$slots.content"
+                    v-show="activeIndex === index"
+                  >
+                    <div class="flex grow justify-center">
+                      <slot
+                        name="content"
+                        :data="card"
+                      />
+                    </div>
                   </div>
                 </div>
                 <div class="flex justify-between w-full">
                   <div
                     class="min-w-fit"
-                    v-if="activeIndex === index"
+                    v-show="activeIndex === index"
                   >
                     <slot
                       name="actions"
@@ -66,50 +72,47 @@
                   </div>
                   <div class="flex justify-end items-center w-full">
                     <div class="hidden xl:block">
+                      <div v-show="activeIndex != index">
+                        <Tile severity="default">
+                          <i class="pi self-end text-sm pi-arrow-right" />
+                        </Tile>
+                      </div>
+                      <div v-show="activeIndex == index">
+                        <Tile severity="primary">
+                          <i class="pi self-end text-sm pi-arrow-left" />
+                        </Tile>
+                      </div>
+                    </div>
+                    <div class="xl:hidden" v-show="activeIndex == index">
                       <Tile
-                        :severity="activeIndex === index ? 'primary' : 'default'"
-                        :class="activeIndex == index ? 'hidden' : 'block'"
+                        severity="primary"
                       >
-                        <i
-                          class="pi self-end text-sm pi-arrow-right"
-                          :class="activeIndex == index ? 'hidden' : 'block'"
-                        />
-                      </Tile>
-                      <Tile
-                        :severity="activeIndex === index ? 'primary' : 'default'"
-                        :class="activeIndex == index ? 'block' : 'hidden'"
-                      >
-                        <i
-                          class="pi self-end text-sm pi-arrow-left"
-                          :class="activeIndex == index ? 'block' : 'hidden'"
-                        />
+                        <i class="pi self-end text-sm pi-arrow-up" />
                       </Tile>
                     </div>
-                    <Tile
-                      severity="primary"
-                      :class="activeIndex == index ? 'block xl:hidden' : 'hidden'"
-                    >
-                      <i class="pi self-end text-sm pi-arrow-up" />
-                    </Tile>
                   </div>
                 </div>
               </div>
-              <template v-if="activeIndex === index">
-                <slot
-                  name="content-raw"
-                  :data="card"
-                />
+              <template v-if="$slots['content-raw']">
+                <div v-show="activeIndex === index">
+                  <slot
+                    name="content-raw"
+                    :data="card"
+                  />
+                </div>
               </template>
             </div>
-            <div
-              class="h-1/2 xl:h-full"
-              v-if="activeIndex != index"
-            >
-              <slot
-                name="disabledContent"
-                :data="card"
-              />
-            </div>
+            <template v-if="$slots['disabledContent']">
+              <div
+                class="h-full"
+                v-show="activeIndex != index"
+              >
+                <slot
+                  name="disabledContent"
+                  :data="card"
+                />
+              </div>
+            </template>
           </div>
         </template>
       </CardBase>
