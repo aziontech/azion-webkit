@@ -11,7 +11,7 @@
       <CardBase
         :pt="{ prime: { body: 'h-full', content: 'h-full' }, content: 'h-full' }"
         :class="[
-          `transition-all ease-in-out overflow-hidden xl:min-w-44 cursor-pointer`,
+          `transition-all duration-400 ease-in-out overflow-hidden xl:min-w-44 cursor-pointer`,
           { 'w-movable': activeIndex !== index }
         ]"
         @mouseover="activeIndex = index"
