@@ -4,11 +4,11 @@
       { 'lg:flex-row': position !== 'center' },
       { 'lg:flex-row-reverse': position == 'right' }
     ]">
-      <div class="w-full flex flex-col gap-8" :class="[
+      <div v-if="overline || title || description" class="w-full flex flex-col gap-8" :class="[
         { 'items-center': isContentCentralized },
         { 'flex-col-reverse	': reverse, 'flex-col': !reverse },
       ]">
-        <div class=" w-full flex flex-col gap-8" :class="[
+        <div class="w-full flex flex-col gap-8" :class="[
            { 'items-center': isContentCentralized },
            { 'md:top-20 md:sticky': isSticky}
         ]">
@@ -35,8 +35,8 @@
           </div>
           <template v-if="$slots.actions">
             <div class="flex flex-col sm:flex-row gap-3 w-full" :class="[
-                { 'justify-center items-center text-center': isContentCentralized }
-              ]">
+              { 'justify-center items-center text-center': isContentCentralized }
+            ]">
               <slot name="actions" />
             </div>
           </template>
