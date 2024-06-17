@@ -6,7 +6,7 @@
       :numVisible="numVisible"
       :circular="true"
       :showNavigators="isLargeScreen"
-      :autoplayInterval="5000"
+      :autoplayInterval="autoplayInterval"
       :numScroll="numScroll"
       :pt="{ itemsContent: { class: 'py-6'} }"
     >
@@ -28,7 +28,7 @@
 <script setup>
 import { ref, onBeforeMount } from 'vue';
 import Quote from '../quote';
-;import Carousel from 'primevue/carousel';
+import Carousel from 'primevue/carousel';
 
 defineProps({
   data: {
@@ -44,7 +44,12 @@ defineProps({
     type: Number,
     required: false,
     default: 1
-  }
+  },
+  autoplayInterval: {
+    type: Number,
+    required: false,
+    default: 3500
+  },
 });
 
 const responsiveOptions = ref([
