@@ -124,7 +124,7 @@ const onSubmit = async () => {
         {
           objectTypeId: '0-1',
           name: 'segmento_de_neg_cio',
-          value: segment.value
+          value: segment.value.value
         },
       ],
       context: {
