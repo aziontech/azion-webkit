@@ -18,7 +18,7 @@ export interface HeroBaseProps {
    * @defaultValue: false
    */
   isReverse?: boolean;
-  title: string;
+  title: false;
   /**
    * @defaultValue: h1
    */

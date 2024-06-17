@@ -1,13 +1,13 @@
 <template>
   <section class="flex">
-    <div class="px-container flex flex-col w-full gap-10 mt-0 lg:mt-10 xl:mt-16 2xl:my-24" :class="[
-      { 'lg:flex-row': !isCentralized },
-      { 'items-center justify-center': isCentralized },
+    <div class="px-container flex flex-col w-full" :class="[
+      { 'lg:flex-row gap-10': !isCentralized },
+      { 'items-center justify-center gap-12 md:gap-24': isCentralized },
       { 'flex-col-reverse': isReverse }
     ]">
-      <div class="w-full flex flex-col gap-10" :class="[
-        { 'lg:max-w-3xl': !isCentralized },
-        { 'items-center': isCentralized },
+      <div class="w-full flex flex-col" :class="[
+        { 'lg:max-w-3xl gap-10': !isCentralized },
+        { 'items-center gap-12 md:gap-24': isCentralized },
         { 'items-center text-center lg:text-left': align === 'center' },
         { 'justify-center' : justify === 'center'}
       ]">
@@ -21,19 +21,25 @@
             :link="bannerNews.cta.link"
           />
         </template>
-        <div class="flex flex-col gap-5" :class="[
+        <div class="flex flex-col gap-5 md:gap-8" :class="[
           { 'max-w-3xl text-center': isCentralized },
           { 'max-w-3xl': !isCentralized},
         ]">
           <Overline v-if="overline && overline.length" :label="overline" />
-          <h1 v-if="titleTag === 'h1'" class="font-medium text-4xl text-pretty" :class="[
-            { 'md:text-5xl' : isDisplay }
-          ]">{{ title }}</h1>
-          <h2 v-if="titleTag === 'h2'" class="text-4xl font-medium text-pretty">{{ title }}</h2>
-          <h3 v-if="titleTag === 'h3'" class="text-4xl font-medium text-pretty">{{ title }}</h3>
-          <h4 v-if="titleTag === 'h4'" class="text-4xl font-medium text-pretty">{{ title }}</h4>
-          <h5 v-if="titleTag === 'h5'" class="text-4xl font-medium text-pretty">{{ title }}</h5>
-          <h6 v-if="titleTag === 'h6'" class="text-4xl font-medium text-pretty">{{ title }}</h6>
+
+          <template v-if="title">
+            <h1 v-if="titleTag === 'h1'" class="font-medium text-4xl text-pretty" :class="[
+              { 'md:text-5xl' : isDisplay }
+            ]">{{ title }}</h1>
+            <h2 v-if="titleTag === 'h2'" class="text-4xl font-medium text-pretty">{{ title }}</h2>
+            <h3 v-if="titleTag === 'h3'" class="text-4xl font-medium text-pretty">{{ title }}</h3>
+            <h4 v-if="titleTag === 'h4'" class="text-4xl font-medium text-pretty">{{ title }}</h4>
+            <h5 v-if="titleTag === 'h5'" class="text-4xl font-medium text-pretty">{{ title }}</h5>
+            <h6 v-if="titleTag === 'h6'" class="text-4xl font-medium text-pretty">{{ title }}</h6>
+          </template>
+          <template v-else>
+            <slot name="title" />
+          </template>
 
           <p
             v-if="description"
@@ -41,12 +47,12 @@
 
             {{ description }}
           </p>
-        </div>
-        <div
-          v-if="$slots.actions"
-          class="flex flex-col sm:flex-row gap-3 w-full"
-          :class="{ 'justify-center': isCentralized }">
-          <slot name="actions" />
+          <div
+            v-if="$slots.actions"
+            class="flex flex-col sm:flex-row gap-3 w-full"
+            :class="{ 'justify-center': isCentralized }">
+            <slot name="actions" />
+          </div>
         </div>
         <template v-if="$slots.content">
           <slot name="content" />
@@ -82,7 +88,7 @@
     },
     title: {
       type: String,
-      required: true
+      required: false
     },
     titleTag: {
       type: String,
