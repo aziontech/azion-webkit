@@ -6,6 +6,7 @@
       :numVisible="numVisible"
       :circular="true"
       :showNavigators="isLargeScreen"
+      :showIndicators="!isLargeScreen"
       :autoplayInterval="autoplayInterval"
       :numScroll="numScroll"
       :pt="{ itemsContent: { class: 'py-6'} }"
