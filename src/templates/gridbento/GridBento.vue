@@ -28,6 +28,7 @@ defineProps({
       '2-columns-4-items',
       '2-columns-5-items',
       '2-columns-6-items',
+      '3-columns-4-items',
       '3-columns-7-items',
       '4-columns-5-items'
     ]
@@ -54,6 +55,11 @@ const grids = {
     array: Array(6),
     columns: "md:grid-cols-5",
     rows: (i) => i === 0 || i === 3 || i === 4 ? 'md:col-span-3' : 'md:col-span-2'
+  },
+  "3-columns-4-items": {
+    array: Array(4),
+    columns: "md:grid-cols-3",
+    rows: (i) => i === 0 ? 'md:col-span-3' : 'cols-span-1'
   },
   "3-columns-7-items": {
     array: Array(7),
