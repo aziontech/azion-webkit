@@ -24,7 +24,7 @@
           <ul class="flex flex-col gap-3">
             <template v-for="({ label, icon }, index) in description" :key="index">
               <li class="flex flex-row gap-2">
-                <Tile v-bind="{ severity }" v-if="icon">
+                <Tile class="min-w-6" v-bind="{ severity }" v-if="icon">
                   <i class="text-xs" :class="icon"/>
                 </Tile>
                 <p class="text-color-secondary text-sm"> {{ label }} </p>
