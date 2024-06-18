@@ -57,19 +57,19 @@ const TRANSLATIONS = {
         { icon: "pi pi-dollar", title: "Earn credit to start with the platform", severity: "primary" }
       ],
       pricing: {
-        value: 'US$ 300',
-        description: 'Free to test your applications'
+        value: '$300',
+        description: 'Free credits to test your applications'
       },
       action: {
-        label: "try it free",
+        label: "create a free account",
         link: "https://console.azion.com/signup/",
       }
     },
     {
       overline: "become a partner",
-      title: "Bring your solutions to the Azion Marketplace and promote them to the entire community",
+      title: "Bring your solutions to the Azion Marketplace and promote them to the edge community:",
       list: [
-        { icon: "pi pi-globe", title: "Present your solutions to the edge community: ISVs, software developers, and Open Source communities." },
+        { icon: "pi pi-globe", title: "Present your solutions to the edge community: ISVs, software developers and open source communities." },
         { icon: "pi pi-shopping-cart", title: "Quickly distribute your edge-enabled software" },
         { icon: "pi pi-users", title: "Gain access to thousands of active buyers" }
       ],
@@ -82,28 +82,28 @@ const TRANSLATIONS = {
   ],
   "es": [
     {
-      overline: "Mejora tu experiencia",
-      title: "Mejora la experiencia de construir tus aplicaciones",
+      overline: "MEJORA TU EXPERIENCIA",
+      title: "Mejora la experiencia de construcción de tus aplicaciones",
       list: [
         { icon: "pi pi-credit-card", title: "No necesita tarjeta de crédito" },
         { icon: "pi pi-tags", title: "Acceso a todos los productos" },
-        { icon: "pi pi-dollar", title: "Gana crédito para comenzar con la plataforma", severity: "primary" }
+        { icon: "pi pi-dollar", title: "Recibe créditos de servicio para comenzar a usar la plataforma", severity: "primary" }
       ],
       pricing: {
-        value: 'US$ 300',
+        value: '300 USD',
         description: 'Gratis para probar tus aplicaciones'
       },
       action: {
-        label: "pruébalo gratis",
+        label: "crear cuenta gratis",
         link: "https://console.azion.com/signup/",
       }
     },
     {
       overline: "CONVIÉRTETE EN SOCIO",
-      title: "Lleva tus soluciones al Azion Marketplace y promuévelas a toda la comunidad",
+      title: "Trae tus soluciones al Azion Marketplace y promociónalas en la comunidad edge",
       list: [
-        { icon: "pi pi-globe", title: "Presenta tus soluciones a la comunidad edge: ISVs, desarrolladores de software y comunidades de código abierto." },
-        { icon: "pi pi-shopping-cart", title: "Distribuye rápidamente tu software habilitado para el edge" },
+        { icon: "pi pi-globe", title: "Presenta tus soluciones a la comunidad edge: ISVs, desarrolladores de software y comunidades open source" },
+        { icon: "pi pi-shopping-cart", title: "Distribuye de forma ágil tus softwares habilitados para el edge" },
         { icon: "pi pi-users", title: "Accede a miles de compradores activos" }
       ],
       action: {
