@@ -13,7 +13,7 @@
               @submit.prevent="onSubmit"
               id="newslleterWide"
               name="newsletterWide"
-              class="flex gap-4"
+              class="flex flex-col sm:flex-row gap-4"
             >
               <InputGroup>
                 <InputGroupAddon>

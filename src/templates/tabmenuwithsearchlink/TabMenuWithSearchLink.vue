@@ -1,6 +1,6 @@
 <template>
-  <div class="flex md:justify-between gap-3">
-    <div class="flex w-full items-center">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-2 gap-5 lg:gap-10">
+    <div class="flex justify-center gap-5 md:gap-10 w-full sm:col-span-2 2xl:col-span-3">
       <TabMenu class="hidden md:block w-full"
         :pt="{ label: 'whitespace-nowrap', menu: { class: 'flex-wrap'}}"
         :model="tabList" :url="tabList.url" :label="tabList.label" :activeIndex="activeIndex"
@@ -18,11 +18,11 @@
         </template>
       </Dropdown>
     </div>
-    <div class="min-w-fit flex item-center md:items-start">
-      <Button class="h-8" size="small" @click="activeDialog" outlined>
-        <span class="p-button-icon md:mr-2 pi pi-search" />
-        <span class="md:block hidden"> {{ inputPlaceholder }} </span>
-      </Button>
+    <div class="w-full flex items-start sm:col-span-2 lg:col-span-1">
+      <button @click="activeDialog" class="p-inputtext flex items-center gap-2 w-full text-color-secondary text-sm">
+          <i class="p-button-icon pi pi-search" />
+          <span>{{ inputPlaceholder }}</span>
+        </button>
       <AlgoliaDialog
         :isDialogActive="isDialogActive" @close="closeDialog" :inputPlaceholder="inputPlaceholder"
         :algoliaAppId="algoliaAppId" :algoliaApiKey="algoliaApiKey" :algoliaIndex="algoliaIndex" :algoliaModel="algoliaModel"

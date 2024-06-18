@@ -2,8 +2,7 @@
   <a
     :href="link"
     :title="title"
-    class="no-underline flex group border-radius focus:outline-[rgba(243,100,43,.624)]"
-    :class="{ 'md:max-w-sm': direction === 'column' }"
+    class="w-full no-underline flex group border-radius focus:outline-[rgba(243,100,43,.624)]"
   >
     <Card
       class="p-0 mt-0"
@@ -32,7 +31,7 @@
             'justify-between': direction == 'column'
           }"
         >
-          <h2 class="text-xl font-bold text-color">{{ title }}</h2>
+          <h2 class="text-xl font-medium text-color">{{ title }}</h2>
           <p class="text-sm text-color-secondary">{{ description }}</p>
           <div
             class="flex"
@@ -114,13 +113,13 @@
 
   const getPTOptions = () => {
     const response = {
-      root: 'shadow-none bg-transparent gap-6 flex flex-col',
+      root: 'w-full shadow-none bg-transparent gap-6 flex flex-col',
       header: 'rounded border surface-border overflow-hidden',
       content: 'h-full'
     }
 
     if (props.direction === 'row') {
-      response.root = `${response.root} w-full md:flex-row gap-6`
+      response.root = `${response.root} md:flex-row gap-6`
       response.header = `${response.header} md:max-w-72 w-full`
       response.body = 'w-full'
     }

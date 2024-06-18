@@ -1,7 +1,7 @@
 <template>
   <CardGridList :data="cardDataList" :pt="pt.content" :cardType="cardType" :cardDirection="cardDirection"/>
   <div class="flex justify-center">
-    <Button :label="buttonText" outlined @click="addCards(LOADMORE_MAGIC_NUMBER)" :disabled="disableButton"/>
+    <Button size="small" :label="buttonText" outlined @click="addCards(LOADMORE_MAGIC_NUMBER)" :disabled="disableButton"/>
   </div>
 </template>
 

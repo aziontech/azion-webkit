@@ -1,5 +1,5 @@
 <template>
-  <div class="transition-all surface-ground grid m-0 p-0 justify-between gap-6 lg:gap-16"  :class="pt.class">
+  <div class="transition-all surface-ground grid m-0 p-0 justify-between gap-5 lg:gap-10"  :class="pt.class">
     <template v-if="cardType === 'blog'">
       <CardBlog v-for="({ image, link, title, description, authors, estimateReadTime, date }, index) in data" :link="link" :key="index" :imgSrc="image" :imgAlt="title" :title="title" :description="description" :authors="authors" :estimateReadTime="estimateReadTime" :date="date" :direction="cardDirection" />
     </template>
@@ -28,7 +28,7 @@ defineProps({
   pt: {
     type: Object,
     required: false,
-    default: () => { return { class: "md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4" }}
+    default: () => { return { class: "sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4" }}
   },
   cardType: {
     type: String,

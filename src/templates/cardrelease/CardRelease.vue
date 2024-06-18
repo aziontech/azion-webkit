@@ -8,7 +8,7 @@
             <Button outlined size="small" :icon="card.icon == 'external' ? 'pi pi-external-link' : 'pi pi-arrow-up-right'" :aria-label="card.ariaLabel" />
           </div>
           <div class="flex flex-col gap-3">
-            <CardTitle> {{ title }} </CardTitle>
+            <p class="text-xl max-w-lg leading-normal"> {{ title }} </p>
           </div>
         </div>
         <div class="flex flex-col gap-2">

@@ -1,22 +1,6 @@
 <template>
-  <div class="flex gap-2">
-    <div class="flex flex-col items-center gap-5 md:gap-10 w-full">
-      <div class="w-full flex justify-center">
-        <button @click="activeDialog" class="p-inputtext flex items-center gap-2 max-w-3xl w-full text-color-secondary text-sm">
-          <i class="p-button-icon pi pi-search" />
-          <span>{{ inputPlaceholder }}</span>
-        </button>
-
-        <AlgoliaDialog
-          :isDialogActive="isDialogActive"
-          @close="closeDialog"
-          :inputPlaceholder="inputPlaceholder"
-          :algoliaAppId="algoliaAppId"
-          :algoliaApiKey="algoliaApiKey"
-          :algoliaIndex="algoliaIndex"
-          :algoliaModel="algoliaModel"
-        />
-      </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-2 gap-5 lg:gap-10">
+    <div class="flex justify-center gap-5 md:gap-10 w-full sm:col-span-2 2xl:col-span-3">
       <TabMenu
         class="hidden md:block"
         :pt="{
@@ -30,7 +14,7 @@
         @keyup.space="eventHandler(activeIndex)"
       />
       <Dropdown
-        class="md:hidden w-full md:w-fit min-w-56"
+        class="md:hidden w-full"
         @change="eventHandler"
         v-model="activeOption"
         :options="mappedData"
@@ -48,6 +32,22 @@
         </template>
       </Dropdown>
     </div>
+    <div class="w-full flex items-start sm:col-span-2 lg:col-span-1">
+        <button @click="activeDialog" class="p-inputtext flex items-center gap-2 w-full text-color-secondary text-sm">
+          <i class="p-button-icon pi pi-search" />
+          <span>{{ inputPlaceholder }}</span>
+        </button>
+
+        <AlgoliaDialog
+          :isDialogActive="isDialogActive"
+          @close="closeDialog"
+          :inputPlaceholder="inputPlaceholder"
+          :algoliaAppId="algoliaAppId"
+          :algoliaApiKey="algoliaApiKey"
+          :algoliaIndex="algoliaIndex"
+          :algoliaModel="algoliaModel"
+        />
+      </div>
   </div>
 </template>
 
