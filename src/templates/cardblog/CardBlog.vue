@@ -120,7 +120,7 @@
     }
 
     if (props.direction === 'row') {
-      response.root = `${response.root} md:flex-row gap-6`
+      response.root = `${response.root} w-full md:flex-row gap-6`
       response.header = `${response.header} md:max-w-72 w-full`
       response.body = 'w-full'
     }
