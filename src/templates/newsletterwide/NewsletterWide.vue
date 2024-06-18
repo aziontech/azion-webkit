@@ -65,7 +65,7 @@
   import InputGroupAddon from 'primevue/inputgroupaddon'
   import Button from 'primevue/button'
   import InlineMessage from 'primevue/inlinemessage'
-  import CardBase from '../carbase'
+  import CardBase from '../cardbase'
   import Overline from '../overline'
   import CardTitle from '../cardtitle'
   import CardDescription from '../carddescription'
