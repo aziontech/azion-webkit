@@ -49,7 +49,7 @@
             class="p-2 flex gap-2">
 
               <span v-if="item.icon" :class="item.icon"></span>
-              <span class="ml-2 font-medium">
+              <span class="ml-2 font-medium text-sm">
                 {{ item.label }}
               </span>
               <Tag v-for="tag in item.tags" :key='tag' :value="tag" severity="info"/>
@@ -67,7 +67,7 @@
           :title="button.urlTitle"
           :class="[button.destak ?
             'flex gap-2 justify-between p-button p-button-primary p-button-sm whitespace-nowrap' :
-            'flex gap-2 p-button p-button-primary p-button-outlined p-button-sm  text-white hover:surface-hover whitespace-nowrap',
+            'flex gap-2 p-button p-button-primary p-button-outlined p-button-sm text-white hover:surface-hover whitespace-nowrap',
             { 'p-button-info' : button.severity === 'info'}]">
           {{ button.label }}
           <i v-if="button.icon" :class="button.icon"></i>
