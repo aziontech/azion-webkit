@@ -32,7 +32,7 @@
           }"
         >
           <h2 class="text-xl font-medium text-color">{{ title }}</h2>
-          <p class="text-sm text-color-secondary">{{ description }}</p>
+          <p class="text-sm text-color-secondary max-w-3xl">{{ description }}</p>
           <div
             class="flex"
             :class="{
