@@ -1,5 +1,5 @@
 <template>
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-2 gap-5 lg:gap-10">
+  <div class="grid m-0 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-2 gap-5 lg:gap-10">
     <div class="flex justify-center gap-5 md:gap-10 w-full sm:col-span-2 2xl:col-span-3">
       <TabMenu
         class="hidden md:block"
@@ -55,7 +55,6 @@
   import TabMenu from 'primevue/tabmenu'
   import Dropdown from 'primevue/dropdown'
   import AlgoliaDialog from '../aisdialog/AlgoliaDialog.vue'
-  import InputText from 'primevue/inputtext';
   import { ref, onMounted } from 'vue'
 
   const props = defineProps({
