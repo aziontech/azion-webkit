@@ -1,0 +1,7 @@
+{
+  "main": "./community.js",
+  "types": "./Community.d.ts",
+  "browser": {
+    "./sfc": "./Community.vue"
+  }
+}
