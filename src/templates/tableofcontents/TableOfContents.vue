@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-5">
+  <div class="flex flex-col gap-2">
     <p class="font-medium"> {{ title }} </p>
     <TableOfContentsItem :data="toc" />
   </div>

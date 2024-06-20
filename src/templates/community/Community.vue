@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-col gap-2">
     <p class="font-medium"> {{ setTranslations.title }} </p>
-    <ul>
+    <ul class="flex flex-col gap-2">
       <li v-for="({label, icon, href }, index) in setTranslations.communities" :key="index">
         <a :href="href" class="text-color-secondary text-sm">
-          <i :class="icon" />
+          <i :class="icon" class="mr-1" />
           {{ label }}
         </a>
       </li>
