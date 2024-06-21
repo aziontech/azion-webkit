@@ -1,5 +1,5 @@
 <template>
-  <span class="text-xs text-color-secondary font-mono uppercase leading-none tracking-widest">
+  <span class="text-xs text-color-secondary font-mono uppercase leading-relaxed md:leading-none tracking-widest">
     {{ label }}
   </span>
 </template>
