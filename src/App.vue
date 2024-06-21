@@ -1,15 +1,35 @@
 <template>
-  <div class="surface-section py-20 px-container">
-    <BigNumbers :items="items" :border="false" :centralized="false" />
-  </div>
+  <BigNumbers :items="items" />
 </template>
 
 <script setup>
-import BigNumbers from '@aziontech/webkit/bignumbers.vue';
+import BigNumbers from './templates/bignumbers/BigNumbers.vue';
 
 const items = [
-  { titleup:'Até', title: '1,6x', description: 'mais rápido que o Macbook Air (M1)' },
-  { titleup:'Até', title: '13x', description: 'mais rápido que o melhor Macbook Air com Intel' },
-  { titleup:'Até', title: '18h', description: 'de bateria' }
+{
+        "icon": "pi pi-verified",
+        "title": "80%",
+        "description": "Melhor TCO"
+      },
+      {
+        "icon": "pi pi-upload",
+        "title": "20%",
+        "description": "Implantações mais rápidas"
+      },
+      {
+        "icon": "pi pi-shield",
+        "title": "100%",
+        "description": "De disponibilidade, garantida por SLA"
+      },
+      {
+        "icon": "pi pi-code",
+        "title": "10x",
+        "description": "Aplicações mais rápidas"
+      },
+      {
+        "icon": "pi pi-stopwatch",
+        "title": "15ms",
+        "description": "Tempo de resposta"
+      }
 ];
 </script>
