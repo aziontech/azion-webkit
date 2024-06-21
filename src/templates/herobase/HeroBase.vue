@@ -43,7 +43,7 @@
 
           <p
             v-if="description"
-            class="text-color-secondary text-base leading-relaxed text-balance">
+            class="text-color-secondary text-sm md:text-base leading-relaxed text-balance">
 
             {{ description }}
           </p>

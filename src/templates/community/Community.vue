@@ -31,7 +31,7 @@
         href: "https://discord.com/invite/Yp9N7RMVZy"
       },
       {
-        label: "Read your blog posts",
+        label: "Read our blog posts",
         icon: "pi pi-comment",
         href: "https://www.azion.com/en/blog/"
       },

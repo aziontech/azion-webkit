@@ -28,7 +28,7 @@
               <h6 v-if="titleTag === 'h6'" class="text-3xl font-medium text-pretty">{{ title }}</h6>
             </template>
             <template v-if="description">
-              <p class="text-color-secondary text-base leading-relaxed text-balance">
+              <p class="text-color-secondary text-sm md:text-base leading-relaxed text-balance">
                 {{ description }}
               </p>
             </template>
