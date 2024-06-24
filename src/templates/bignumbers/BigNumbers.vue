@@ -6,7 +6,7 @@
         <p v-if="item.titleup" class="text-xs md:text-sm text-color-secondary">
           {{ item.titleup }}
         </p>
-        <strong class="md:text-7xl text-5xl font-semibold leading-tight">
+        <strong class="md:text-7xl text-6xl font-semibold leading-tight">
           {{ item.title }}
         </strong>
         <p v-if="item.description" class="text-xs md:text-sm text-color-secondary md:min-h-10">
