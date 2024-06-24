@@ -17,6 +17,11 @@
       type: String,
       required: false,
       default: 'Jump to Section'
+    },
+    initialHeadingTitle: {
+      type: String,
+      required: false,
+      default: 'Overview'
     }
   })
 
@@ -55,7 +60,7 @@
     return toc
   }
 
-  const toc = generateToc(props.headings)
+  const toc = generateToc(props.headings, props.initialHeadingTitle)
   const currentHeading = ref(toc[0].slug)
 
   const observerOptions = { rootMargin: '-40px 0% -80%', threshold: 1 }
