@@ -1,7 +1,7 @@
 <template>
   <header class="w-full h-[56px] border-b surface-border bg-header text-white py-3 sticky top-0 z-50">
     <div class="px-shell h-8 flex justify-between items-center">
-      <div class="flex gap-6 items-center">
+      <div class="flex gap-4 items-center">
         <slot name="visualid" />
         <slot name="navigation" />
       </div>

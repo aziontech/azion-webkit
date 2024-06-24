@@ -1,6 +1,6 @@
 <template>
   <nav class="hidden lg:flex">
-    <ul class="flex gap-4">
+    <ul class="flex gap-2">
       <li v-for="(menuitem, index) in menuData.items" :key="index">
         <a
           v-if="!menuitem.items || !menuitem.items.length"
