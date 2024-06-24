@@ -32,6 +32,7 @@
                       <Tile> {{ index + 1 }} </Tile>
                       <CardTitle> {{ card.title }} </CardTitle>
                       <CardDescription
+                        size="large"
                         :class="activeIndex === index ? 'visible' : 'hidden truncate'"
                         class="overflow-hidden"
                       >
