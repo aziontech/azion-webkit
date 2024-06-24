@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap gap-8 sm:gap-10 md:gap-16 justify-center px-0 sm:px-4 md:px-8 py-10">
+  <div class="flex flex-wrap gap-8 sm:gap-10 md:gap-16 justify-center px-0 sm:px-4 md:px-8 py-6 md:py-10">
     <div class="flex flex-col gap-3 md:gap-5 w-fit" v-for="item in items" :key="item.title">
       <Tile v-if="item.icon" severity="primary"> <i :class="item.icon" class="text-sm md:text-md" /> </Tile>
       <div class="flex flex-col gap-2 justify-evenly w-fit">
