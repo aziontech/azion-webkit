@@ -122,16 +122,20 @@
                         <Overline :label="menuitem.rightBlock.label" class="mb-6 flex"/>
                         <div class="flex flex-col gap-4 m-0 w-full">
                           <article v-for="(block, idx) in menuitem.rightBlock.items" :key="idx" class="flex gap-4 w-full">
-                            <figure class="mb-4 overflow-hidden rounded border surface-border h-fit w-[280px]">
-                              <img :src="`${block.img.src}`" :alt="block.img.alt" class="w-full" lazy />
-                            </figure>
-                            <div class="w-full flex flex-col">
-                              <p class="text-xs leading-relaxed text-color-secondary">
-                                {{ block.description }}
-                              </p>
-                              <a :href="block.link.href" target="_blank" :title="block.link.label" class="p-button p-button-link p-button-sm p-0 mt-2">
-                                {{ block.link.label }}
-                                <i class="pi pi-angle-right"></i>
+                            <div class="w-full">
+                              <a :href="block.link.href" target="_blank" :title="block.link.label" class="flex gap-4 group">
+                                <figure class="mb-4 overflow-hidden rounded border surface-border h-fit w-[280px] grayscale group-hover:grayscale-0">
+                                  <img :src="`${block.img.src}`" :alt="block.img.alt" class="w-full" lazy />
+                                </figure>
+                                <div class="w-full flex flex-col">
+                                  <p class="text-xs leading-relaxed text-color-secondary">
+                                    {{ block.description }}
+                                  </p>
+                                  <p class="p-button p-button-link p-button-sm px-0">
+                                    {{ block.link.label }}
+                                    <i class="pi pi-angle-right"></i>
+                                  </p>
+                                </div>
                               </a>
                             </div>
                           </article>
@@ -141,7 +145,7 @@
                       <div v-if="menuitem.rightBlock.type === 'featured'">
                         <Overline :label="menuitem.rightBlock.label" class="mb-6 flex" />
                         <div class="grid gap-4 m-0 w-full">
-                          <article v-for="(block, idx) in menuitem.rightBlock.items" :key="idx" class="w-full">
+                          <a :href="block.link.href" :title="block.link.label" v-for="(block, idx) in menuitem.rightBlock.items" :key="idx" class="w-full">
                             <figure class="w-[160px] h-[90px] mb-4 overflow-hidden rounded border surface-border">
                               <img :src="`${block.img.src}`" :alt="block.img.alt" class="w-full" width="160" height="90" lazy />
                             </figure>
@@ -152,12 +156,12 @@
                               <p class="text-xs text-color-secondary leading-relaxed">
                                 {{ block.description }}
                               </p>
-                              <a :href="block.link.href" :title="block.link.label" class="p-button p-button-link p-button-sm p-0 mt-2">
+                              <p class="p-button p-button-link p-button-sm px-0">
                                 {{ block.link.label }}
                                 <i class="pi pi-angle-right"></i>
-                              </a>
+                              </p>
                             </div>
-                          </article>
+                          </a>
                         </div>
                       </div>
                     </div>
