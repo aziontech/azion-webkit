@@ -43,7 +43,7 @@
                     text
                     size="small"
                     :class="{ 'surface-hover': active === index }"
-                    class="flex gap-2 justify-between w-full text-left min-w-52"
+                    class="flex gap-2 justify-between min-w-fit w-full text-nowrap text-left min-w-52"
                     @click="active = index">
                     <span class="flex gap-2 items-center">
                       {{ subitem.label }}
