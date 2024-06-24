@@ -5,7 +5,7 @@
         {{ text }}
       </a>
       <template v-if="children.length > 0">
-        <TableOfContentsItem class="ml-4" :data="children" />
+        <TableOfContentsItem class="ml-4" :data="children" :currentHeading="currentHeading" />
       </template>
     </li>
   </ul>
