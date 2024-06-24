@@ -92,12 +92,12 @@
                             </div>
                           </div>
                         </a>
-                        <div class="pl-9 flex flex-col gap-2" v-if="link.items">
+                        <div class="pl-9 flex flex-col gap-2" v-if="link.subitems">
                           <template v-if="link.overline">
                             <Overline :label="link.overline" class="px-[10.5px]" />
                           </template>
                           <ul>
-                            <li v-for="(sublink, subIndex) in link.items" :key="subIndex" class="flex- flex-col gap-2">
+                            <li v-for="(sublink, subIndex) in link.subitems" :key="subIndex" class="flex- flex-col gap-2">
                               <a :href="sublink.href" :title="sublink.label" class="w-full p-button p-button-text hover:surface-hover p-button-sm text-xs hover:surface-hover">
                                 <div class="flex gap-3">
                                   <div v-if="sublink.icon">
