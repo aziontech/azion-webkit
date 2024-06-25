@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col md:flex-row gap-5 md:gap-10 items-stretch">
+  <div class="flex flex-col lg:flex-row gap-5 md:gap-10 items-stretch">
     <div
-      class="basis-1/2"
+      :class="Object.keys(cards).length > 1 && 'basis-1/2'"
       v-for="item in Object.keys(cards)"
       :key="item"
     >

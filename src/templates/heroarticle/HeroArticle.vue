@@ -5,6 +5,9 @@
     class="flex gap-6 lg:gap-8 flex-col w-full"
   >
     <div class="flex flex-col gap-5 lg:gap-6">
+      <template v-if="$slots.breadcrumbs">
+        <slot name="breadcrumbs" />
+      </template>
       <meta
         itemprop="name"
         :content="title"
