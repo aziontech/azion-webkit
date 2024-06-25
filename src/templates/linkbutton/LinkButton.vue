@@ -14,7 +14,7 @@
       {'flex flex-row-reverse' : iconPos === 'left'},
     ]">
 
-    {{ label }}
+    {{ capitalizeLetter(label.trim()) }}
 
     <span
       v-if="iconPos" :style="customIconStyle"
@@ -74,4 +74,8 @@
       options: ['small']
     }
   });
+
+  function capitalizeLetter(word) {
+    return word.replace(word[0], word.charAt(0).toUpperCase());
+  }
 </script>
