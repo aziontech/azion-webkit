@@ -61,7 +61,7 @@ const TRANSLATIONS = {
         description: 'Free credits to test your applications'
       },
       action: {
-        label: "create a free account",
+        label: "Create a free account",
         link: "https://console.azion.com/signup/",
       }
     },
@@ -74,7 +74,7 @@ const TRANSLATIONS = {
         { icon: "pi pi-users", title: "Gain access to thousands of active buyers" }
       ],
       action: {
-        label: "become a partner",
+        label: "Become a partner",
         link: "/en/marketplace/become-a-partner/",
         severity: "secondary"
       }
@@ -94,7 +94,7 @@ const TRANSLATIONS = {
         description: 'Gratis para probar tus aplicaciones'
       },
       action: {
-        label: "crear cuenta gratis",
+        label: "Crear cuenta gratis",
         link: "https://console.azion.com/signup/",
       }
     },
@@ -107,7 +107,7 @@ const TRANSLATIONS = {
         { icon: "pi pi-users", title: "Accede a miles de compradores activos" }
       ],
       action: {
-        label: "conviértete en socio",
+        label: "Conviértete en socio",
         link: "/es/marketplace/ser-socio/",
         severity: "secondary"
       }
@@ -127,7 +127,7 @@ const TRANSLATIONS = {
         description: 'Grátis para testar suas aplicações'
       },
       action: {
-        label: "experimente grátis",
+        label: "Experimente grátis",
         link: "https://console.azion.com/signup/",
       }
     },
@@ -140,7 +140,7 @@ const TRANSLATIONS = {
         { icon: "pi pi-users", title: "Tenha acesso a milhares de compradores ativos" }
       ],
       action: {
-        label: "seja um parceiro",
+        label: "Seja um parceiro",
         link: "/pt-br/marketplace/seja-um-parceiro/",
         severity: "secondary"
       }
