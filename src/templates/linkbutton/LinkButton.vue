@@ -14,7 +14,7 @@
       {'flex flex-row-reverse' : iconPos === 'left'},
     ]">
 
-    {{ capitalizeLetter(label.trim()) }}
+    {{ String(label).trim() }}
 
     <span
       v-if="iconPos" :style="customIconStyle"
