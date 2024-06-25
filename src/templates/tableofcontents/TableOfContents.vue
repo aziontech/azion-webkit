@@ -74,7 +74,6 @@
               break
             }
             currentHeading.value = entry.target.id
-            console.log(currentHeading.value)
             break
           }
         }

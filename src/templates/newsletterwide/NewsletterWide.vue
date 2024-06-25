@@ -2,13 +2,13 @@
   <section class="px-container w-full">
     <CardBase>
       <template #content-raw>
-        <div class="flex flex-col lg:flex-row gap-4 md:gap-8 p-6 md:p-10">
-          <div class="flex flex-col gap-3 max-w-lg w-full">
+        <div class="flex flex-col justify-between lg:flex-row gap-4 md:gap-8 p-6 md:p-10">
+          <div class="flex flex-col gap-3 max-w-3xl w-full">
             <Overline :label="overline" />
             <CardTitle> {{ title }}</CardTitle>
-            <CardDescription> {{ description }}</CardDescription>
+            <CardDescription class="sm:max-w-none"> {{ description }}</CardDescription>
           </div>
-          <div class="w-full flex flex-col justify-center gap-4">
+          <div class="w-full flex flex-col justify-center gap-4 sm:max-w-md">
             <form
               @submit.prevent="onSubmit"
               id="newslleterWide"
