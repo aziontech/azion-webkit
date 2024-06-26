@@ -6,6 +6,7 @@
       :key="item"
     >
       <CardBaseClickable
+        v-if="cards[item]"
         grid
         spacing="compact"
         hover="outlined"
