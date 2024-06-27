@@ -8,6 +8,7 @@
       <CardBaseClickable
         v-if="cards[item]"
         grid
+        :rel="item"
         spacing="compact"
         hover="outlined"
         v-bind="cards[item]"
