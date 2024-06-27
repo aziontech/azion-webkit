@@ -72,9 +72,9 @@ const OPERATIONAL_STATUS = {
   description: 'All Systems Operational'
 };
 
-const status = ref('');
-const label = ref('');
-const color = ref();
+const status = ref(OPERATIONAL_STATUS.indicator);
+const label = ref(STATUS_PAGE_COLORS['none']);
+const color = ref(OPERATIONAL_STATUS.description);
 
 onBeforeMount(() => {
   checkComponentStatus()
