@@ -1,4 +1,4 @@
-import LinkButton from '../../templates/button/link.vue';
+import LinkButton from '../../templates/linkbutton';
 
 export default {
   title: 'Components/Link Button',
