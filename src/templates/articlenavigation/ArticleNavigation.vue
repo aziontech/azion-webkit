@@ -63,10 +63,10 @@
     overline: {
       type: Object,
       required: false,
-      default: {
+      default: () => ({
         prev: 'Previous article',
         nextPrevArticle: 'Next article'
-      }
+      })
     }
   })
 </script>
