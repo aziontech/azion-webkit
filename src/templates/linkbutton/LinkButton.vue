@@ -32,7 +32,6 @@
     customIconStyle: {
       type: String,
       required: false,
-      options: ['left', 'right']
     },
     iconPos: {
       type: String,
@@ -71,7 +70,8 @@
     size: {
       type: String,
       required: false,
-      options: ['small']
+      default: "medium",
+      options: ['small', 'medium']
     }
   });
 
