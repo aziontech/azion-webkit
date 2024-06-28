@@ -10,12 +10,13 @@ const config = {
         '@storybook/addon-interactions',
         '@storybook/addon-mdx-gfm',
     ],
+    core: {
+      builder: '@storybook/builder-vite',
+    },
     framework: {
         name: '@storybook/vue3-vite',
         options: {}
     },
-    docs: {
-        autodocs: 'tag'
-    }
+    docs: {}
 }
 export default config

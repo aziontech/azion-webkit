@@ -6,7 +6,6 @@ import 'primeicons/primeicons.css';
 import "../src/assets/icons/azionicons.scss";
 
 import '../src/assets/main.css';
-// import "primevue/resources/themes/lara-light-blue/theme.css";
 
 import '../node_modules/@aziontech/azion-theme/src/azion-light/theme.scss';
 import '../node_modules/@aziontech/azion-theme/src/azion-dark/theme.scss';
