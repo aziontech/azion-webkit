@@ -72,9 +72,11 @@ const OPERATIONAL_STATUS = {
   description: 'All Systems Operational'
 };
 
+const LABEL_INITIAL_VALUE = lang !== 'en' ? TRANSLATIONS[OPERATIONAL_STATUS.description][lang] : OPERATIONAL_STATUS.description
+
 const status = ref(OPERATIONAL_STATUS.indicator);
-const label = ref(STATUS_PAGE_COLORS['none']);
-const color = ref(OPERATIONAL_STATUS.description);
+const label = ref(LABEL_INITIAL_VALUE);
+const color = ref(STATUS_PAGE_COLORS['none']);
 
 onBeforeMount(() => {
   checkComponentStatus()
