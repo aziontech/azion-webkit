@@ -1,4 +1,4 @@
-import ArticleNavigation from '../../templates/articlenavigation'
+import ArticleNavigation from '../../templates/articlenavigation/ArticleNavigation.vue'
 
 export default {
   title: 'Building Blocks/Article Navigation',
@@ -11,20 +11,24 @@ export default {
   }
 }
 
-// More on writing stories with args: https://storybook.js.org/docs/vue/writing-stories/args
-export const Default = {
-  args: {
-    cards: {
-      next: {
-        text: 'Lorem Ipsum'
-      },
-      prev: {
-        text: 'Lorem Ipsum'
-      }
+const Template = (args) => ({
+  components: { ArticleNavigation },
+  setup() {
+    return { args }
+  },
+  template: '<ArticleNavigation v-bind="args" />'
+})
+
+export const Default = Template.bind({})
+Default.args = {
+  cards: {
+    next: {
+      text: 'Lorem Ipsum',
+      link: ''
     },
-    overline: {
-      next: 'Next',
-      prev: 'Prev'
+    prev: {
+      text: 'Lorem Ipsum',
+      link: ''
     }
   }
 }

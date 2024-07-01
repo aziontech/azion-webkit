@@ -1,5 +1,4 @@
 /** @type { import('@storybook/vue3').Preview } */
-
 // required //
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
@@ -10,7 +9,6 @@ import '../src/assets/main.css';
 import '../node_modules/@aziontech/azion-theme/src/azion-light/theme.scss';
 import '../node_modules/@aziontech/azion-theme/src/azion-dark/theme.scss';
 //end required //
-
 setTimeout(function() {
     let sbdocs = document.querySelectorAll('.docs-story');
     if(sbdocs.length) {
@@ -52,6 +50,7 @@ const parameters = {
         },
     },
 };
+
 
 export const decorators = [
   (Story, context) => {

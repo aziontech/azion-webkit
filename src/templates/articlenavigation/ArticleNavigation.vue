@@ -65,7 +65,7 @@
       required: false,
       default: () => ({
         prev: 'Previous article',
-        nextPrevArticle: 'Next article'
+        next: 'Next article'
       })
     }
   })
