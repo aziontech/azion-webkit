@@ -6,7 +6,7 @@
       { 'flex-col-reverse': isReverse }
     ]">
       <div class="w-full flex flex-col" :class="[
-        { 'lg:max-w-3xl gap-10': !isCentralized },
+        { 'lg:max-w-3xl 2xl:max-w-4xl gap-10': !isCentralized },
         { 'items-center gap-12 md:gap-24': isCentralized },
         { 'items-center text-center lg:text-left': align === 'center' },
         { 'justify-center' : justify === 'center'}
@@ -22,20 +22,20 @@
           />
         </template>
         <div class="flex flex-col gap-5 md:gap-8" :class="[
-          { 'max-w-3xl text-center': isCentralized },
-          { 'max-w-3xl': !isCentralized},
+          { 'max-w-3xl 2xl:max-w-4xl text-center': isCentralized },
+          { 'max-w-3xl 2xl:max-w-4xl': !isCentralized},
         ]">
           <Overline v-if="overline && overline.length" :label="overline" />
 
           <template v-if="title">
-            <h1 v-if="titleTag === 'h1'" class="font-medium text-4xl text-pretty" :class="[
+            <h1 v-if="titleTag === 'h1'" class="font-medium text-4xl 2xl:text-5xl text-pretty" :class="[
               { 'md:text-5xl' : isDisplay }
             ]">{{ title }}</h1>
-            <h2 v-if="titleTag === 'h2'" class="text-4xl font-medium text-pretty">{{ title }}</h2>
-            <h3 v-if="titleTag === 'h3'" class="text-4xl font-medium text-pretty">{{ title }}</h3>
-            <h4 v-if="titleTag === 'h4'" class="text-4xl font-medium text-pretty">{{ title }}</h4>
-            <h5 v-if="titleTag === 'h5'" class="text-4xl font-medium text-pretty">{{ title }}</h5>
-            <h6 v-if="titleTag === 'h6'" class="text-4xl font-medium text-pretty">{{ title }}</h6>
+            <h2 v-if="titleTag === 'h2'" class="text-4xl 2xl:text-5xl font-medium text-pretty">{{ title }}</h2>
+            <h3 v-if="titleTag === 'h3'" class="text-4xl 2xl:text-5xl font-medium text-pretty">{{ title }}</h3>
+            <h4 v-if="titleTag === 'h4'" class="text-4xl 2xl:text-5xl font-medium text-pretty">{{ title }}</h4>
+            <h5 v-if="titleTag === 'h5'" class="text-4xl 2xl:text-5xl font-medium text-pretty">{{ title }}</h5>
+            <h6 v-if="titleTag === 'h6'" class="text-4xl 2xl:text-5xl font-medium text-pretty">{{ title }}</h6>
           </template>
           <template v-else>
             <slot name="title" />
@@ -43,7 +43,7 @@
 
           <p
             v-if="description"
-            class="text-color-secondary text-sm md:text-base leading-relaxed text-balance">
+            class="text-color-secondary text-sm md:text-base 2xl:text-lg leading-relaxed text-balance">
 
             {{ description }}
           </p>
