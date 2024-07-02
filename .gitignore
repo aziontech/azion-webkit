@@ -31,3 +31,5 @@ storybook-static
 yarn.lock
 pnpm-lock.yaml
 package-lock.json
+
+*storybook.log

@@ -1,3 +1,12 @@
+/*
+
+  To local developing,
+  you should use the repositorie azion-web-kit and run:
+
+  cd ./azion-web-kit/ ; npm i; npm link
+  cd ../site; npm i; npm link @aziontech/azion-web-kit
+
+*/
 @layer tailwind-base, primevue;
 
 @layer tailwind-base {
@@ -6,6 +15,11 @@
 
 @tailwind components;
 @tailwind utilities;
+
+body, html {
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
 
 * {
   font-family: var(--font-family);
@@ -18,11 +32,31 @@
 html, body {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
-  overflow-x: clip;
 }
 
 /* MANUAL STYLE */
 .p-card-header img {
   max-width: 100%;
+}
+
+.azion-dark .hide-on-dark {
+  display: none;
+}
+.azion-light .hide-on-dark {
+  display: block;
+}
+
+.azion-dark .hide-on-light {
+  display: block;
+}
+.azion-light .hide-on-light {
+  display: none;
+}
+
+.cms-embed * {
+  max-width: 100%;
+}
+
+.cms-embed iframe {
+  width: 100%;
 }
