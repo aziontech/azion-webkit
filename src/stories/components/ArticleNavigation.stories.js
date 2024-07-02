@@ -1,7 +1,7 @@
 import ArticleNavigation from '../../templates/articlenavigation/ArticleNavigation.vue'
 
 export default {
-  title: 'Building Blocks/Article Navigation',
+  title: 'Azion Web Kit/components/Article Navigation',
   component: ArticleNavigation,
   tags: ['autodocs'],
   argTypes: {
@@ -16,39 +16,24 @@ const Template = (args) => ({
   setup() {
     return { args }
   },
-  template: '<ArticleNavigation v-bind="args" />'
+  template: '<ArticleNavigation v-bind="args" />',
 })
 
 export const Default = Template.bind({})
 Default.args = {
   cards: {
-    next: {
-      text: 'Lorem Ipsum',
-      link: ''
-    },
     prev: {
       text: 'Lorem Ipsum',
       link: ''
+    },
+    next: {
+      text: 'Lorem Ipsum',
+      link: ''
     }
+  },
+  overline: {
+    next: "Next",
+    prev: "Previous"
   }
 }
 
-export const onlyNext = {
-  args: {
-    cards: {
-      next: {
-        text: 'Lorem Ipsum'
-      }
-    }
-  }
-}
-
-export const onlyPrev = {
-  args: {
-    cards: {
-      prev: {
-        text: 'Lorem Ipsum'
-      }
-    }
-  }
-}

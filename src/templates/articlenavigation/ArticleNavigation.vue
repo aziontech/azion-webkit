@@ -11,7 +11,7 @@
         :rel="item"
         spacing="compact"
         hover="outlined"
-        v-bind="cards[item]"
+        :link="cards[item].link"
         class="w-full"
         :class="item === 'next' ? 'text-right items-end' : 'text-left'"
       >
