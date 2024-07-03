@@ -4,6 +4,41 @@
   </article>
 </template>
 
+<script setup>
+  import { onMounted } from 'vue'
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(window.location.href)
+  }
+
+  const controlScroll = (e) => {
+    const getOffsetTop = e.target.offsetTop - 96
+
+    window.scrollTo({
+      top: getOffsetTop,
+      behavior: 'smooth'
+    })
+  }
+
+  const onClickEvent = (e, parentElement) => {
+    e.preventDefault()
+    window.history.pushState({}, '', parentElement.href);
+
+    copyToClipboard()
+    controlScroll(e)
+  }
+
+  onMounted(() => {
+    const iconElements = document.querySelectorAll('i[data-icon]')
+    iconElements.forEach((iconElement) => {
+      const parentElement = iconElement.parentElement
+      if (parentElement.tagName.toLowerCase() === 'a') {
+        parentElement.addEventListener('click', (e) => onClickEvent(e, parentElement))
+      }
+    })
+  })
+</script>
+
 <style lang="scss">
   .heading-wrapper {
     display: flex;
@@ -11,7 +46,7 @@
     gap: 1rem;
 
     .anchor-link {
-      top: .75rem;
+      top: 0.75rem;
       position: relative;
     }
   }
