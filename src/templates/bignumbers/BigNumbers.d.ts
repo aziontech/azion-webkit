@@ -8,11 +8,16 @@
 import { VNode } from 'vue';
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
 
+
+type BigNumbersItems = {
+  icon: string, title: string, titleup: string, description: string
+}
+
 /**
  * Defines valid properties in AisIndexHit component.
  */
 export interface BigNumbersProps {
-  items: [];
+  items: BigNumbersItems[];
   /**
    * Defines the text to display is centralized.
    * @defaultValue true

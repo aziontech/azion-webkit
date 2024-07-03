@@ -26,11 +26,6 @@ defineProps({
   items: {
     type: Array,
     required: true
-  },
-  centralized: {
-    type: Boolean,
-    required: false,
-    default: true
   }
 });
 </script>
