@@ -1,7 +1,0 @@
-{
-  "main": "./breadcrumb.js",
-  "types": "./Breadcrumb.d.ts",
-  "browser": {
-    "./sfc": "./Breadcrumb.vue"
-  }
-}
