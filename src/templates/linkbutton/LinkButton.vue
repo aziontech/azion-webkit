@@ -4,7 +4,7 @@
     :title="label"
     :target="target"
     rel="noopener noreferrer"
-    class="p-button p-component p-button-sm w-fit no-underline justify-center md:justify-start gap-2 px-4"
+    class="p-button p-component p-button-sm w-fit no-underline justify-center gap-2 px-4"
     :class="[
       {'p-button-outlined hover:surface-hover' : outlined },
       {'p-button-text hover:surface-hover': text },
@@ -12,9 +12,13 @@
       {'p-button-info' : severity === 'info'},
       {'p-button-sm' : size === 'small' },
       {'flex flex-row-reverse' : iconPos === 'left'},
+      {'p-button-icon-only' : iconPos === 'center'},
+      {'md:justify-start' : iconPos !== 'center'}
     ]">
 
-    {{ String(label).trim() }}
+    <template v-if="label">
+      {{ String(label).trim() }}
+    </template>
 
     <span
       v-if="iconPos" :style="customIconStyle"
@@ -36,11 +40,11 @@
     iconPos: {
       type: String,
       required: false,
-      options: ['left', 'right']
+      options: ['left', 'right', 'center']
     },
     label: {
       type: String,
-      required: true
+      required: false
     },
     link: {
       type: String,

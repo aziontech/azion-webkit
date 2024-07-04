@@ -4,14 +4,13 @@
       <Button severity="primary" id="clipboardButton" icon="pi pi-link" @click="copyToClipboard" outlined
         v-tooltip.top="{ value: 'Clipboard', showDelay: 200 }" aria-label="clipboard"  />
     </div>
-    <LinkIconButton v-for="({ link, icon, title }, index) in data" :aria-label="title" :link="link" :icon="icon" :key="index"
-      :tooltipText="title" />
+    <LinkButton v-for="({ link, icon, title }, index) in data" :aria-label="title" :link="link" :icon="icon" :key="index" iconPos="center" />
   </div>
 </template>
 
 <script setup>
 import Button from 'primevue/button';
-import LinkIconButton from '../linkiconbutton/LinkIconButton.vue';
+import LinkButton from '../linkbutton' ;
 
 /** interface Data {
  link: string,
