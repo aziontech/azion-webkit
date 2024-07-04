@@ -29,7 +29,7 @@
 
           <template v-if="title">
             <h1 v-if="titleTag === 'h1'" class="font-medium text-4xl 2xl:text-5xl text-pretty" :class="[
-              { 'md:text-5xl' : isDisplay }
+              { 'md:text-5xl 2xl:text-6xl' : isDisplay }
             ]">{{ title }}</h1>
             <h2 v-if="titleTag === 'h2'" class="text-4xl 2xl:text-5xl font-medium text-pretty">{{ title }}</h2>
             <h3 v-if="titleTag === 'h3'" class="text-4xl 2xl:text-5xl font-medium text-pretty">{{ title }}</h3>
