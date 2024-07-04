@@ -6,10 +6,6 @@ export default {
   title: 'Azion Web Kit/Blocks/Error State',
   component: ErrorStateBlock,
   tags: ['autodocs'],
-  argsType: {
-    overline: String,
-    description: String,
-  }
 }
 
 const Template = (args) => ({

@@ -6,10 +6,6 @@ export default {
   title: 'Azion Web Kit/Blocks/Base Empty State',
   component: EmptyStateBlock,
   tags: ['autodocs'],
-  argsType: {
-    overline: String,
-    description: String,
-  }
 }
 
 const Template = (args) => ({
