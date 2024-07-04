@@ -1,4 +1,4 @@
-import CardCases from '../../templates/cardcases'
+import CardCases from '../../../templates/cardcases'
 
 export default {
   title: 'Azion Web Kit/Blocks/Cards/Cases',

@@ -1,4 +1,4 @@
-import CardBlog from '../../templates/cardblog'
+import CardBlog from '../../../templates/cardblog'
 
 export default {
   title: 'Azion Web Kit/Blocks/Cards/Blog',

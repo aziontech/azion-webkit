@@ -1,4 +1,4 @@
-import CardPanelExpandable from "../../templates/cardpanelexpandable"
+import CardPanelExpandable from "../../../templates/cardpanelexpandable"
 
 export default {
   title: 'Azion Web Kit/Blocks/Card Panel Expandable',

@@ -1,4 +1,4 @@
-import CardGridblock from '../../templates/cardgridblock'
+import CardGridblock from '../../../templates/cardgridblock'
 
 export default {
   title: 'Azion Web Kit/Blocks/Card Grid Block',

@@ -1,4 +1,4 @@
-import CardRelease from "../../templates/cardrelease"
+import CardRelease from "../../../templates/cardrelease"
 
 export default {
   title: 'Azion Web Kit/Blocks/Cards/Release',
