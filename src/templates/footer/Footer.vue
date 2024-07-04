@@ -60,27 +60,6 @@ import Overline from '../overline/Overline.vue';
 import LinkIconButton from '../linkiconbutton/LinkIconButton.vue';
 import LinkButton from '../linkbutton/LinkButton.vue';
 
-// interface List {
-//   link: string,
-//   title: string,
-//   target: "_blank" | null
-// }
-
-// interface ListData {
-//   title: string,
-//   list: Array<List>
-// }
-
-// interface props {
-//   copyright: string
-//   lang: string,
-//   listData: Array<ListData>
-// }
-
-// interface cta {
-//   text: String,
-//   phone: String
-// }
 defineProps({
   lang: {
     type: String,
