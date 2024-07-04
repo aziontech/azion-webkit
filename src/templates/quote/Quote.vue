@@ -53,7 +53,8 @@ defineProps({
   direction: {
     type: String,
     required: false,
-    default: 'row'
+    default: 'row',
+    options: ["row", 'column']
   },
   alt: {
     type: String,
