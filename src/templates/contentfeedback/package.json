@@ -1,7 +1,0 @@
-{
-  "main": "./contentfeedback.js",
-  "types": "./ContentFeedback.d.ts",
-  "browser": {
-    "./sfc": "./ContentFeedback.vue"
-  }
-}
