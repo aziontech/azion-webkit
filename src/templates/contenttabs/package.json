@@ -1,7 +1,0 @@
-{
-  "main": "./contenttabs.js",
-  "types": "./ContentTabs.d.ts",
-  "browser": {
-    "./sfc": "./ContentTabs.vue"
-  }
-}
