@@ -1,7 +1,7 @@
 <template>
   <div class="transition-all surface-ground grid m-0 p-0 justify-between gap-5 lg:gap-10"  :class="pt.class">
     <template v-if="cardType === 'blog'">
-      <CardBlog v-for="({ image, link, title, description, authors, estimateReadTime, date }, index) in data" :link="link" :key="index" :imgSrc="image" :imgAlt="title" :title="title" :description="description" :authors="authors" :estimateReadTime="estimateReadTime" :date="date" :direction="cardDirection" />
+      <CardBlog v-for="(card, index) in data" v-bind="card" />
     </template>
     <template v-if="cardType === 'cases'">
       <CardCases v-for="({image, link, description, alt, tagList}, index) in data" :key="index"

@@ -29,7 +29,6 @@
 
 <script setup>
 import CardBaseClickable from "../cardbaseclickable"
-import CardTitle from "../cardtitle";
 import ImageSwitcher from "../themeawareimageswitcher";
 import Tag from "primevue/tag"
 import Button from "primevue/button"
