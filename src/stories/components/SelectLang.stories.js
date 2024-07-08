@@ -8,4 +8,15 @@ export default {
   }
 }
 
-export const Default = {}
+export const Default = {
+  args: {
+    i18nPages: [
+      {
+        langPrefix: "en",
+        slug: "/", // link
+        lang: "English"
+      }
+    ],
+    lang: "en"
+  }
+}

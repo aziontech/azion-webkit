@@ -32,10 +32,6 @@ const props = defineProps({
   },
 });
 
-// interface Tablist {
-//   type: Array<String>
-// }
-
 const emit = defineEmits(['indexChanged']);
 
 
