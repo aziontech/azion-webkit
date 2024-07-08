@@ -3,7 +3,7 @@
  * ImageSwitcher represents people using links in the page with css buttons look.
  *
  *
- * @module `themeswitcherawareimage`
+ * @module `themeawareimageswitcher`
  */
 import { VNode } from 'vue';
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
