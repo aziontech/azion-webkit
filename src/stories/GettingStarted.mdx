@@ -1,0 +1,63 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="Getting Started" />
+
+# Getting Started
+
+    Esta documentação lhe auxiliará com o projeto Azion Webkit. Isso inclui criar um personal token no GitHub, configurar o seu package manager e conectar packages privados com nosso repositório Azion. A nível de exemplo de utilização, utilizaremos o projeto Azion Site.
+
+    O Webkit utiliza o PrimeVue V3 como biblioteca de componentes básica. [Acesse a documentação do PrimeVue](https://v3.primevue.org/)
+
+    Acessos necessários:
+
+    - [Site](https://github.com/aziontech/site) (nível de exemplo de utilização, pode ser o seu projeto)
+    - [Azion WebKit](https://github.com/aziontech/azion-web-kit)
+    - [Azion Theme](https://github.com/aziontech/azion-theme)
+
+    _Em caso de falta de permissão, solicitar acesso ao time de UX Engineering_
+
+    Para começar, faça o download dos repositórios necessários:
+
+    ```
+      git clone https://github.com/aziontech/site.git
+    ```
+
+    ```
+      git clone https://github.com/aziontech/azion-web-kit.git
+    ```
+
+    O projeto possuí algumas dependências privadas, por conta disso é necessário a criação de um [GitHub Personal Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) para que as dependências sejam instaladas. É válido mencionar que a única permissão necessária para instalação é a `read:packages`.
+
+    ## Configurando o seu token de acesso:
+
+    O package manager padrão do site é o `npm`, por conta disto vamos utiliza-lo neste documento.
+
+    Vá até o seu arquivo `~/.npmrc` e adicione a seguinte configuração:
+
+    ```//registry=https://npm.pkg.github/aziontech
+    //npm.pkg.github.com/:_authToken=TOKEN
+    @aziontech:registry=https://npm.pkg.github.com/
+    registry=https://registry.npmjs.org/
+    ```
+
+    No lugar de [TOKEN] adicione o token que foi gerado pelo GitHub Personal Token. Para acessar o arquivo `npmrc`, abra o terminal e digite o comando de edição de arquivo de sua preferencia, exemplo:
+    VSCode
+    ` code ~/.npmrc`
+    Vim
+    ` vi ~/.npmrc`
+
+    Ao salvar esta configuração, voce deve estar apto a instalar as dependências do Azion Site e Webkit.
+
+    ## Instalando dependencias e criando um link entre Site (ou seu projeto) e Azion WebKit.
+
+    Instale as dependencias dos projetos Azion Web Kit e Site com `npm install`, e dentro de Site crie um link para o Azion Web Kit com a instrução `npm link @aziontech/webkit`.
+
+    Pronto! Voce está apto para utilizar o `npm run dev` ou `npm run preview` para subir o seu ambiente de desenvolvimento local.
+
+    ## Realizando modificações no Webkit
+
+    Ao realizar modificações no projeto Webkit essas não vão ser refletidas automaticamente no projeto, a cada modificação é necessário utilizar a instrução `npm run build:package`.
+
+    ## Dúvidas?
+
+    Em caso de dúvidas, entre em contanto com Robson Júnior ou Luis Igreja do time de UX Engineering
