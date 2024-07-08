@@ -31,7 +31,7 @@
 </template>
 
 <script setup>
-import ImageSwitcher from "../themeswitcherawareimage/ImageSwitcher.vue";
+import ImageSwitcher from "../themeawareimageswitcher/ImageSwitcher.vue";
 
 defineProps({
   text: {
@@ -53,7 +53,8 @@ defineProps({
   direction: {
     type: String,
     required: false,
-    default: 'row'
+    default: 'row',
+    options: ["row", 'column']
   },
   alt: {
     type: String,

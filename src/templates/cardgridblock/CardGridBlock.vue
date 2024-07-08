@@ -96,7 +96,9 @@
     },
     cardType: {
       type: String,
-      required: true
+      required: false,
+      default: 'blog',
+      options: ['blog', 'cases']
     }
   })
 

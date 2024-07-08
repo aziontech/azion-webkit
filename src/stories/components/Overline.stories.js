@@ -1,16 +1,13 @@
-import Overline from '../../templates/overline/index.vue';
+import Overline from "../../templates/Overline"
 
 export default {
-  title: 'Components/Overline',
+  title: 'Azion Web Kit/Components/Overline',
   component: Overline,
   tags: ['autodocs'],
-  argTypes: {}
-};
-
-// More on writing stories with args: https://storybook.js.org/docs/vue/writing-stories/args
-export const Default = {
-  args: {
-    label: "Azion Overline"
-  }
 }
 
+export const Default =  {
+  args: {
+    label: 'Sign up'
+  }
+}

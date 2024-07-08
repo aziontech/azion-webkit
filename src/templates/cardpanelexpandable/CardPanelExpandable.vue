@@ -121,7 +121,7 @@
 </template>
 
 <script setup>
-  import { ref, computed, onMounted } from 'vue'
+  import { ref, computed } from 'vue'
   import CardBase from '../cardbase'
   import Tile from '../tile'
   import CardTitle from '../cardtitle'

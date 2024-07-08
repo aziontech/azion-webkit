@@ -29,12 +29,6 @@
 </template>
 
 <script setup>
-
-// interface logo {
-//   imageSrc: string;
-//   alt: string;
-// }
-
 defineProps({
   isCentralized: {
     type: Boolean,

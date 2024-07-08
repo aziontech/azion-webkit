@@ -52,7 +52,8 @@ defineProps({
   direction: {
     type: String,
     required: false,
-    default: 'vertical'
+    default: 'vertical',
+    options: ['vertical', 'horizontal']
   },
   severity: {
     type: String,

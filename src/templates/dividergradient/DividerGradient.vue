@@ -2,10 +2,6 @@
   <div class="azion-divider gradient"></div>
 </template>
 
-<script setup>
-  const props = defineProps({});
-</script>
-
 <style lang="scss">
   .azion-divider {
     width: 100%;

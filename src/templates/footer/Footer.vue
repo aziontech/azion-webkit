@@ -14,13 +14,15 @@
             </p>
           </div>
           <div class="flex gap-3" v-if="socialButtons">
-            <LinkIconButton
+            <LinkButton
               v-for="({ icon, link, title }, index) in socialButtons"
+              outlined
               :aria-label="title"
               :key="index"
               :icon="icon"
+              iconPos="center"
               :link="link"
-              :tooltipText="title" />
+            />
           </div>
         </div>
         <div class="w-full flex flex-wrap md:flex-nowrap gap-4 lg:gap-8 lg:justify-end -ml-[16px] lg:ml-0">
@@ -57,30 +59,8 @@
 import Divider from 'primevue/divider';
 import AzionIconLogo from '../src/assets/icons/azion-icon-logo.vue';
 import Overline from '../overline/Overline.vue';
-import LinkIconButton from '../linkiconbutton/LinkIconButton.vue';
 import LinkButton from '../linkbutton/LinkButton.vue';
 
-// interface List {
-//   link: string,
-//   title: string,
-//   target: "_blank" | null
-// }
-
-// interface ListData {
-//   title: string,
-//   list: Array<List>
-// }
-
-// interface props {
-//   copyright: string
-//   lang: string,
-//   listData: Array<ListData>
-// }
-
-// interface cta {
-//   text: String,
-//   phone: String
-// }
 defineProps({
   lang: {
     type: String,
