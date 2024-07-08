@@ -29,10 +29,5 @@ const props = defineProps({
   },
 })
 
-// interface i18nPages {
-//   lang: String,
-//   slug: String
-// }
-
 const activeLang = props.i18nPages ? props.i18nPages.find(p => p.langPrefix === props.lang.toLowerCase()) : null
 </script>
