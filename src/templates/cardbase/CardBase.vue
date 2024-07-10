@@ -63,7 +63,7 @@ const props = defineProps({
     type: String,
     required: false,
     default: 'default',
-    options: ['outlined', 'shape', 'default']
+    options: ['outlined', 'highlighted', 'shape', 'default']
   },
   hover: {
     type: String,

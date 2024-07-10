@@ -15,7 +15,7 @@ export default {
     },
     backgroundColor: {
       description: 'Defina o estilo de background do card',
-      options: ['outlined', 'shape', 'default'],
+      options: ['outlined', 'highlighted', 'shape', 'default'],
       control: { type: 'radio' }
     },
     hover: {
