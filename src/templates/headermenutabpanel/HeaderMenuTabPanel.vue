@@ -15,9 +15,10 @@
 
         <div v-if="menuitem.items && menuitem.items.length">
           <a
+            @click="(event) => { toggle(event, menuitem.ref) }"
             tabindex="0"
             class="p-button p-button-text p-button-primary p-button-sm whitespace-nowrap active:bg-header-button-hover hover:surface-hover"
-            @click="(event) => { toggle(event, menuitem.ref); active = 0; }"
+            :class="activeMenu == menuitem.ref && 'surface-hover'"
           >
             <div class="flex flex-row gap-2 text-white items-center">
               <span>
@@ -29,10 +30,11 @@
           <OverlayPanel
             unstyled
             :id="menuitem.ref"
+            @hide="hideOverlayPanel(menuitem.ref)"
             ref="itemRefs"
             :pt="{
               content: { class: 'fixed p-0 hidden lg:flex flex-row border surface-border rounded-md surface-0 w-full max-w-[calc(100%-4rem)] lg:max-w-[calc(100%-11rem)] xl:w-[calc(90%-11rem)] xl:max-w-[1052]' },
-              root: { class: 'left-8 lg:left-36 top-12 z-50'}
+              root: { class: 'left-8 lg:left-[8.5rem] top-12 z-50'}
             }"
             :breakpoints="{'960px': '75vw', '640px': '100vw'}"
           >
@@ -195,13 +197,21 @@
   const activeMenu = ref(null)
   let itemRefs = ref([])
 
+  const hideOverlayPanel = (refAttr) => {
+    if (refAttr === activeMenu.value) setMenuState(refAttr)
+  }
+
+  const setMenuState = (refAttr) => {
+    activeMenu.value = activeMenu.value == refAttr ? null : refAttr
+  }
+
   const toggle = (event, refAttr) => {
     try {
       if (refAttr)  {
         const activeTab  = itemRefs.value.find(i => i.$params.attrs.id === refAttr)
         activeTab.toggle(event)
 
-        activeMenu.value = activeMenu.value == refAttr ? null : refAttr
+        setMenuState(refAttr)
       }
     } catch (error) {
       console.error('Error in toggle method:', error);
