@@ -1,7 +1,7 @@
 <template>
   <ul :class="[
     {'flex flex-col gap-6' : direction === 'vertical'},
-    {'grid grid-cols-3 gap-20' : direction === 'horizontal'}
+    {'grid m-0 grid-cols-3 gap-20' : direction === 'horizontal'}
   ]">
     <template v-for="({ icon, title, description }, index) in data" v-bind:key="index">
       <li class="flex flex-col gap-4 justify-center">
@@ -32,7 +32,7 @@
             </template>
           </ul>
         </template>
-        <template v-else>
+        <template v-else-if="description">
           <p class="text-color-secondary text-sm"> {{ description }} </p>
         </template>
       </li>
