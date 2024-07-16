@@ -7,19 +7,20 @@
         { 'lg:flex-row-reverse': position == 'right' }
       ]"
     >
+    <div class="w-full"
+        v-if="overline || title || description || $slots.content">
       <div
-        v-if="overline || title || description"
         class="w-full flex flex-col gap-8"
         :class="[
           { 'items-center': isContentCentralized },
           { 'flex-col-reverse	': reverse, 'flex-col': !reverse },
+          { 'md:top-20 md:sticky': isSticky}
         ]"
       >
         <div
           class="w-full flex flex-col gap-8"
           :class="[
            { 'items-center': isContentCentralized },
-           { 'md:top-20 md:sticky': isSticky}
           ]"
         >
           <div
@@ -63,6 +64,7 @@
           <slot name="content" />
         </template>
       </div>
+    </div>
 
       <template v-if="$slots.main">
         <slot name="main" />
