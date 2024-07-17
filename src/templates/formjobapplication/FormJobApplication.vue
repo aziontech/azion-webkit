@@ -102,12 +102,12 @@ const props = defineProps({
     required: true
   },
   jobId: {
-    formId: String,
-    companyId: String,
+    type: String,
+    required: true
   }
 })
 
-const { t, jobId } = props
+const { t } = props
 const { fields, feedbackMessages } = t
 
 const schema = toTypedSchema(
@@ -115,15 +115,17 @@ const schema = toTypedSchema(
     first_name: yup.string().required('firstNameRequiredError'),
     last_name:  yup.string().required('lastNameRequiredError'),
     email: yup.string().required('emailRequiredError').email('emailRequiredError'),
-    jobId: yup.string(),
     phone:  yup.string().required('phoneRequiredError'),
-    "base64-resume": yup.string().required('resumeRequiredError'),
-    linkedin:  yup.string().required('linkedinRequiredError'),
-    salary:  yup.string().required('salaryRequiredError'),
     address: yup.string().default(''),
     state: yup.string(),
     city: yup.string(),
-    zip: yup.string()
+    postal: yup.string(),
+
+    job: yup.string(),
+    salary:  yup.string().required('salaryRequiredError'),
+    linkedin:  yup.string().required('linkedinRequiredError'),
+    "base64-resume": yup.string().required('resumeRequiredError')
+
   })
 );
 
@@ -140,8 +142,8 @@ const [salary, salaryAttrs] = defineField('salary');
 const [address, addressAttrs] = defineField('address');
 const [state, stateAttrs] = defineField('state');
 const [city, cityAttrs] = defineField('city');
-const [zip, zipAttrs] = defineField('zip');
-setFieldValue("jobId", jobId)
+const [zip, zipAttrs] = defineField('postal');
+setFieldValue("job", props.jobId)
 
 const responseStatus = ref('default');
 const fileName = ref(false);
@@ -186,7 +188,6 @@ const handlePOST = async (values) => {
       return data;
     });
   }).catch(function (error) {
-    console.error(error);
     responseStatus.value = "error"
     throw new Error(error);
   });

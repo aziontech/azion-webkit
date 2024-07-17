@@ -13,7 +13,7 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
  */
 export interface FormJobApplicationProps {
   t: object;
-  jobid: object;
+  jobId: string;
 }
 
 /**
