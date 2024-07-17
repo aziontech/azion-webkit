@@ -1,5 +1,5 @@
 <template>
-  <p class="max-w-lg" :class="[
+  <p class="max-w-lg text-pretty" :class="[
     { 'text-color-secondary' : color == 'secondary'},
     { 'text-xs' : size == 'small'},
     { 'text-sm' : size == 'medium'},
