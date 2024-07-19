@@ -1,5 +1,14 @@
 <template>
-  <div>
+  <template v-if="data.length == 1">
+    <Quote
+      direction="column"
+      :text="data[0].text"
+      :imageLight="data[0].imageLight"
+      :imageDark="data[0].imageDark"
+      :alt="data[0].alt"
+    />
+  </template>
+  <div v-else>
     <Carousel
       :value="data"
       :responsiveOptions="responsiveOptions"
