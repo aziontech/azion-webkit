@@ -1,7 +1,7 @@
 <template>
   <ul :class="[
     {'flex flex-col gap-6' : direction === 'vertical'},
-    {'grid m-0  md:grid-cols-3 gap-10 md:gap-20' : direction === 'horizontal'}
+    {'grid m-0 md:grid-cols-4 gap-10 md:gap-20' : direction === 'horizontal'}
   ]">
     <template v-for="({ icon, title, description }, index) in data" v-bind:key="index">
       <li class="flex flex-col gap-4 justify-center">
