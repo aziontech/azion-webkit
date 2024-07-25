@@ -17,7 +17,7 @@
     ]">
 
     <template v-if="label">
-      {{ String(label).trim() }}
+      {{ capitalizeLetter(String(label).trim()) }}
     </template>
 
     <span
