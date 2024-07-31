@@ -3,8 +3,8 @@ import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 import "../src/assets/icons/azionicons.scss";
 import '../src/assets/main.css';
-import '../node_modules/@aziontech/azion-theme/src/azion-light/theme.scss';
-import '../node_modules/@aziontech/azion-theme/src/azion-dark/theme.scss';
+import 'azion-theme/dark';
+import 'azion-theme/light';
 
 import { withThemeByClassName } from '@storybook/addon-themes';
 
