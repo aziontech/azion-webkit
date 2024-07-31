@@ -31,7 +31,7 @@ jobs:
       - name: Node.js Setup
         uses: actions/setup-node@v3
         with:
-          node-version: '20.8.1'
+          node-version: 'lts/*'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@aziontech'
           always-auth: true
@@ -40,7 +40,7 @@ jobs:
 
       - name: Node.js Installing release dependencies
         shell: bash
-        run: npm install -g semantic-release @semantic-release/git @semantic-release/npm @semantic-release/changelog conventional-changelog-conventionalcommits@7.0.2 -D
+        run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog conventional-changelog-conventionalcommits@8.0.0 -D
 
       - name: Release
         shell: bash
