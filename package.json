@@ -1,5 +1,5 @@
 {
-  "name": "@aziontech/webkit",
+  "name": "azion-webkit",
   "author": "aziontech",
   "version": "1.35.4",
   "contributors": [
@@ -16,10 +16,6 @@
       "url": "https://www.professorduda.com/"
     }
   ],
-  "private": false,
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "keywords": [
     "primevue",
     "vue",
@@ -29,7 +25,7 @@
     "component library",
     "tailwind"
   ],
-  "repository": "https://github.com/aziontech/webkit.git",
+  "repository": "https://github.com/aziontech/azion-webkit.git",
   "scripts": {
     "clean-cache": "npm cache clean --force",
     "clean": "rm -rf node_modules package-lock.json",

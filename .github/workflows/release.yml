@@ -1,6 +1,5 @@
 
-name: Publish Package to npm.pkg.github
-
+name: Publish Package
 on:
   repository_dispatch:
     types: [semantic-release] # curl -v -H "Accept: application/vnd.github.everest-preview+json" -H "Authorization: token ${GITHUB_TOKEN}" https://api.github.com/repos/[org-name-or-username]/[repository]/dispatches -d '{ "event_type": "semantic-release" }'
@@ -32,11 +31,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@aziontech'
-          always-auth: true
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }}
 
       - name: Node.js Installing release dependencies
         shell: bash
@@ -46,9 +40,8 @@ jobs:
         shell: bash
         run: |
           rm -rf ./*
-          npm install fs-extra && git clone --branch main https://github.com/aziontech/webkit.git && cd ./webkit && npm run build:package && cd dist && npx semantic-release
+          npm install fs-extra && git clone --branch main https://github.com/aziontech/azion-webkit.git && cd ./azion-webkit && npm run build:package && cd dist && npx semantic-release
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
           GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
-          NPM_TOKEN: ${{ secrets.GIT_PKG }}
-          NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
+          NPM_TOKEN: ${{ secrets.PKG_NPM_TOKEN }}
