@@ -1,5 +1,5 @@
 <h1 align="center">
-  Webkit
+  azion-webkit
 </h1>
 
 <p align="center">
@@ -7,41 +7,29 @@
 </p>
 
 > Package azion-web-kit deprecated
+> Package @aziontech/webkit deprecated
 
 <p align="center">
-  The @aziontech/webkit project is the better way to develop/create/update an app, page, landing to the company front-end necessities.
+  The azion-webkit project is the better way to develop/create/update an app, page, landing Front-End necessities.
 </p>
 
 ## HOW TO INSTALL
 
-### Credentials
-If you are Azion internal contributor and the project It isn't not opened,
-you need to configure the `.npmrc` file with the your `Personal Access Token`.
-
-**E.G:**
-On your file `~/.npmrc` you need the below configuration:
-
-``` bash
-//registry=https://npm.pkg.github/aziontech=true
-//npm.pkg.github.com/:_authToken=ghp_SprUskNOYknOQWEDJ02qFX1gB5zeaEd3GTIrs
-@aziontech:registry=https://npm.pkg.github.com/
-```
-
-> Don't forget to replace the `_classic access token` value param. The currently value is an E.G;
+[To Do]
 
 ### HOW TO USE
 
 ``` bash
-npm install @aziontech/azion-web-kit
+npm install azion-webkit
 ```
 or add in the package.json file inside your project in the dependencies key.
 
 ``` json
 {
   "dependencies": {
-    "@aziontech/webkit": "2.0.0",
+    "azion-webkit": "ˆ1.35.4",
     ....
-  }
+  }33
 }
 ```
 
@@ -65,8 +53,6 @@ or add in the package.json file inside your project in the dependencies key.
 
 ## Storybook
 We are using Storybook to organize our template blocks components.
-
-Live URL: https://z4azz7gp65.map.azionedge.net/storybook-static/
 
 ``` javascript
 npm run storybook
