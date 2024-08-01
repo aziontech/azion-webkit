@@ -23,7 +23,12 @@
     "vue3",
     "ui library",
     "component library",
-    "tailwind"
+    "material",
+    "bootstrap",
+    "fluent",
+    "tailwind",
+    "unstyled",
+    "passthrough"
   ],
   "repository": {
     "type": "git",

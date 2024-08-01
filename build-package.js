@@ -54,32 +54,28 @@ function addPackageJson() {
     "name": "${pkg.name}",
     "version": "${pkg.version}",
     "private": false,
-    "description": "@aziontech/webkit is an open source UI library for Vue featuring a rich set of 80+ components, a theme designer, various theme alternatives such as Material, Bootstrap, Tailwind, premium templates and professional support. In addition, use UI blocks to build spectacular applications in no time.",
+    "description": "azion-webkit is an open source UI library for Vue featuring a rich set of 80+ components, a theme designer, various theme alternatives such as Material, Bootstrap, Tailwind, premium templates and professional support. In addition, use UI blocks to build spectacular applications in no time.",
     "repository": {
-        "type": "git",
-        "url": "https://github.com/aziontech/webkit.git"
+      "type": "git",
+      "url": "git+https://github.com/aziontech/azion-webkit.git"
     },
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/aziontech/webkit/issues"
-    },
-    "publishConfig": {
-      "registry": "https://npm.pkg.github.com/"
+      "url": "https://github.com/aziontech/azion-webkit/issues"
     },
     "keywords": [
-        "primevue",
-        "vue",
-        "vue.js",
-        "vue2",
-        "vue3",
-        "ui library",
-        "component library",
-        "material",
-        "bootstrap",
-        "fluent",
-        "tailwind",
-        "unstyled",
-        "passthrough"
+      "primevue",
+      "vue",
+      "vue.js",
+      "vue3",
+      "ui library",
+      "component library",
+      "material",
+      "bootstrap",
+      "fluent",
+      "tailwind",
+      "unstyled",
+      "passthrough"
     ],
     "peerDependencies": {
       "vue": "^3.0.0"
