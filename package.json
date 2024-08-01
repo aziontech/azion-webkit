@@ -25,7 +25,10 @@
     "component library",
     "tailwind"
   ],
-  "repository": "https://github.com/aziontech/azion-webkit.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aziontech/azion-webkit.git"
+  },
   "scripts": {
     "clean-cache": "npm cache clean --force",
     "clean": "rm -rf node_modules package-lock.json",
