@@ -10,7 +10,7 @@
 > Package @aziontech/webkit deprecated
 
 <p align="center">
-  The azion-webkit project is the better way to develop/create/update an app, page, landing Front-End necessities.
+  The azion-webkit project is the best way to develop, create and update an app, page, and other Front-End necessities.
 </p>
 
 ## HOW TO INSTALL
