@@ -29,7 +29,7 @@ or add in the package.json file inside your project in the dependencies key.
   "dependencies": {
     "azion-webkit": "ˆ1.35.4",
     ....
-  }33
+  }
 }
 ```
 
