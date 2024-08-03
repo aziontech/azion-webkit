@@ -1,5 +1,5 @@
 <template>
-  <Dropdown :options="themes" :modelValue="selectedTheme" :autoOptionFocus="false" @update:modelValue="onClick"
+  <Dropdown :options="themes" :modelValue="selectedTheme" :autoOptionFocus="false" @update:modelValue="handleThemeChange"
     optionLabel="label">
     <template #value="slotProps">
       <div v-if="slotProps.value" class="flex gap-2 align-items-center">
@@ -19,11 +19,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import Dropdown from 'primevue/dropdown';
-
-const theme = {
-  light: 'azion-light',
-  dark: 'azion-dark'
-};
 
 const selectedTheme = ref({
     label: 'System',
@@ -45,39 +40,59 @@ const themes = [
   },
 ]
 
-let systemColorScheme; /** onMounted variables, needed for Astro to use browser api */
-let colorScheme;
+let systemColorScheme = ref();
+let isWatchingSystemScheme = ref(false)
 
 onMounted(() => {
-  systemColorScheme = window.matchMedia('(prefers-color-scheme: dark)');
-  colorScheme = localStorage.getItem("prefers-color-scheme");
+  systemColorScheme.value = window.matchMedia('(prefers-color-scheme: dark)'); // Get system prefered color scheme
+  const colorScheme = localStorage.getItem("prefers-color-scheme"); // Check if there is pre-defined site prefered color scheme
 
-  if (colorScheme && colorScheme !== 'System') {
-    selectedTheme.value = themes.find(theme => theme.label === colorScheme);
-  }
+  if (colorScheme && colorScheme !== 'System') selectedTheme.value = themes.find(theme => theme.label === colorScheme); // update dropdown placeholder value
+  else watchSystemColorSchemePreferences()
 })
 
-function resetTheme() {
-  const currentTheme = document.documentElement.getAttribute('Light');
-  if (currentTheme) document.documentElement.removeAttribute('light')
+// Watch for changes on system color scheme changes
+function watchSystemColorSchemePreferences() {
+  isWatchingSystemScheme.value = true
+  systemColorScheme.value.addEventListener('change', handlePreferColorSchemeChange);
+}
 
-};
+
+function removeWatchSystemColorSchemePreferences() {
+  isWatchingSystemScheme.value = false
+  systemColorScheme.value.removeEventListener('change', handlePreferColorSchemeChange);
+}
 
 function getStystemDefaultTheme() {
-  return systemColorScheme.matches ? 'Dark' : 'Light';
+  return systemColorScheme.value.matches ? 'Dark' : 'Light';
 }
 
 function changeTheme(theme) {
   selectedTheme.value = theme
   const themeLabel = theme.label === 'System' ? getStystemDefaultTheme() : theme.label
+  const documentAttribute = document.documentElement.getAttribute('Light')
 
-  resetTheme();
-  if (themeLabel === 'Light') document.documentElement.setAttribute('light', 'true')
+  if (themeLabel === 'Light' && !documentAttribute) {
+    document.documentElement.setAttribute('light', 'true')
+    return
+  }
+
+  if (themeLabel === 'Dark' && documentAttribute) {
+    document.documentElement.removeAttribute('light', 'true')
+    return
+  }
 }
 
-function onClick(theme) {
+function handlePreferColorSchemeChange() {
+  const colorScheme = localStorage.getItem("prefers-color-scheme");
+  if (colorScheme == 'System' || !colorScheme) changeTheme(themes[0]) // Select the 'System' in the themes array
+}
+
+function handleThemeChange(theme) {
   changeTheme(theme)
+
+  if (!isWatchingSystemScheme.value && theme.label === 'System') watchSystemColorSchemePreferences()
+  if (isWatchingSystemScheme.value && theme.label !== 'System') removeWatchSystemColorSchemePreferences()
   localStorage.setItem('prefers-color-scheme', theme.label)
 };
-
 </script>
