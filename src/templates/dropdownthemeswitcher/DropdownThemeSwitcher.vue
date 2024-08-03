@@ -57,19 +57,10 @@ onMounted(() => {
   }
 })
 
-function getHTML() {
-  return document.querySelector('html');
-};
-
-function getTheme(selectedTheme) {
-  return selectedTheme === "Dark" ? theme.dark : theme.light;
-};
-
 function resetTheme() {
-  const html = getHTML();
+  const currentTheme = document.documentElement.getAttribute('Light');
+  if (currentTheme) document.documentElement.removeAttribute('light')
 
-  html.classList.remove('azion-light');
-  html.classList.remove('azion-dark');
 };
 
 function getStystemDefaultTheme() {
@@ -81,7 +72,7 @@ function changeTheme(theme) {
   const themeLabel = theme.label === 'System' ? getStystemDefaultTheme() : theme.label
 
   resetTheme();
-  getHTML().classList.add(getTheme(themeLabel));
+  if (themeLabel === 'Light') document.documentElement.setAttribute('light', 'true')
 }
 
 function onClick(theme) {
