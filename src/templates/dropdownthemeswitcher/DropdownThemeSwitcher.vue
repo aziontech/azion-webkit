@@ -67,20 +67,19 @@ function getStystemDefaultTheme() {
   return systemColorScheme.value.matches ? 'Dark' : 'Light';
 }
 
+function toggleTheme(add, remove) {
+  document.documentElement.classList.add(add)
+  document.documentElement.classList.remove(remove)
+}
+
 function changeTheme(theme) {
+  if (selectedTheme.value.label === theme.label && theme.label !== 'System') return
+
   selectedTheme.value = theme
   const themeLabel = theme.label === 'System' ? getStystemDefaultTheme() : theme.label
-  const documentAttribute = document.documentElement.getAttribute('Light')
 
-  if (themeLabel === 'Light' && !documentAttribute) {
-    document.documentElement.setAttribute('light', 'true')
-    return
-  }
-
-  if (themeLabel === 'Dark' && documentAttribute) {
-    document.documentElement.removeAttribute('light', 'true')
-    return
-  }
+  if (themeLabel === 'Light') toggleTheme('azion-light', 'azion-dark')
+  if (themeLabel === 'Dark') toggleTheme('azion-dark', 'azion-light')
 }
 
 function handlePreferColorSchemeChange() {
