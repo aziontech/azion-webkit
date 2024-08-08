@@ -1,4 +1,4 @@
-import Overline from "../../templates/Overline"
+import Overline from "../../templates/overline"
 
 export default {
   title: 'Azion Web Kit/Components/Overline',
