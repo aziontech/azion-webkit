@@ -30,6 +30,8 @@ jobs:
           node-version: 'lts/*'
       - name: Installing dependencies
         run: npm install
+      - name: Building Package
+        run: npm run build:package
       - name: Building Storybook
         run: npm run build-storybook
       - name: PREPARING TO DEPLOY
