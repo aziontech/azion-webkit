@@ -15,8 +15,17 @@ jobs:
       pull-requests: write
       id-token: write
     steps:
+      - name: CHECKOUT project
+        uses: actions/checkout@v4
+        with:
+          repository: aziontech/azion-webkit
+          ref: main
+          path: '.'
+          clean: true
+          fetch-depth: '0'
+          lfs: 'false'
       - name: Node.js Setup
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 'lts/*'
       - name: Installing dependencies
