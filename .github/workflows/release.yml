@@ -1,41 +1,33 @@
 
 name: Publish Package
+permissions: write-all
 on:
   repository_dispatch:
     types: [semantic-release] # curl -v -H "Accept: application/vnd.github.everest-preview+json" -H "Authorization: token ${GITHUB_TOKEN}" https://api.github.com/repos/[org-name-or-username]/[repository]/dispatches -d '{ "event_type": "semantic-release" }'
   push:
     branches:
       - main
-
-permissions: write-all
-
 jobs:
   deploy:
     name: Release
-
     permissions:
       contents: write
       issues: write
       pull-requests: write
       id-token: write
-
     runs-on: ubuntu-latest
     container:
       image: node:20-alpine3.18
-
     steps:
       - name: OS - Installing dep
         run: apk add curl git bash jq
-
       - name: Node.js Setup
         uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
-
       - name: Node.js Installing release dependencies
         shell: bash
         run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog conventional-changelog-conventionalcommits@8.0.0 -D
-
       - name: Release
         shell: bash
         run: |
