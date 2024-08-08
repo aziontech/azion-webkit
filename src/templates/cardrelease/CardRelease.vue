@@ -14,10 +14,10 @@
         <div class="flex flex-col gap-2">
           <ImageSwitcher>
             <template #darkImage>
-              <img loading="lazy" width="auto" height="40" :alt="image.alt" :src="`${image.dark}?ims=x40`">
+              <img class="max-h-10" loading="lazy" width="auto" height="40" :alt="image.alt" :src="`${image.dark}?ims=x40`">
             </template>
             <template #lightImage>
-              <img loading="lazy" width="auto" height="40" :alt="image.alt" :src="`${image.light}?ims=x40`">
+              <img class="max-h-10" loading="lazy" width="auto" height="40" :alt="image.alt" :src="`${image.light}?ims=x40`">
             </template>
           </ImageSwitcher>
           <p class="text-xs text-color-secondary min-h-8"> {{ image.description }} </p>
