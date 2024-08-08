@@ -35,20 +35,17 @@
     "url": "git+https://github.com/aziontech/azion-webkit.git"
   },
   "scripts": {
-    "clean-cache": "npm cache clean --force",
     "clean": "rm -rf node_modules package-lock.json",
+    "clean-cache": "npm cache clean --force",
     "reinstall": "npm run clean; npm install",
-    "dev": "vite",
-    "build:package": "NODE_ENV=production node build-package",
-    "build:lib": "npm run build:package",
-    "preview": "vite preview",
-    "test:unit": "vitest",
-    "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
-    "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build:storybook": "storybook build",
+    "build:package": "NODE_ENV=production node build-package",
+    "build": "npm run build:package",
+    "dev": "vite",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
   },
   "dependencies": {
     "azion-theme": "^1.4.0",
@@ -79,12 +76,10 @@
     "@storybook/addon-links": "^8.1.11",
     "@storybook/addon-themes": "^8.1.11",
     "@storybook/blocks": "^8.1.11",
-    "@storybook/test": "^8.1.11",
     "@storybook/vue3": "^8.1.11",
     "@storybook/vue3-vite": "^8.1.11",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/eslint-config-prettier": "^7.1.0",
-    "@vue/test-utils": "^2.3.0",
     "conventional-changelog-conventionalcommits": "^8.0.0",
     "cypress": "^13.4.0",
     "eslint": "^8.34.0",
@@ -104,7 +99,6 @@
     "start-server-and-test": "^2.0.0",
     "storybook": "^8.1.11",
     "tailwindcss": "^3.4.1",
-    "vite": "^4.4.9",
-    "vitest": "^0.29.1"
+    "vite": "^4.4.9"
   }
 }

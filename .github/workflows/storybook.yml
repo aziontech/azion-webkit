@@ -33,7 +33,7 @@ jobs:
       - name: Building Package
         run: npm run build:package
       - name: Building Storybook
-        run: npm run build-storybook
+        run: ls -la; npm run build:storybook
       - name: PREPARING TO DEPLOY
         run: rm -rf .github .storybook dist doc node_modules src .editorconfig .eslintrc.cjs .gitignore .prettierrc.json .releaserc build-package.js CHANGELOG.md CLA.md CODE_OF_CONDUCT.md CODEOWNERS CONTRIBUTING.md index.html LICENSE package-lock.json package.json postcss.config.js README.md tailwind.config.cjs tsconfig.json vite.config.js vitest.config.js; mv storybook-static/* .; rm -rf storybook-static;
       - name: Deployng Storybook
