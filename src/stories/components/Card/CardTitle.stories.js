@@ -1,4 +1,4 @@
-import CardTitle from "../../../templates/cardtitle/CardTitle"
+import CardTitle from "../../../templates/cardtitle"
 
 export default {
   title: 'Components/Card/CardTitle',

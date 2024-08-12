@@ -1,4 +1,4 @@
-import TabMenuSearchLink from "../../templates/tabmenuwithsearchlink/TabMenuWithSearchLink"
+import TabMenuSearchLink from "../../templates/tabmenuwithsearchlink"
 
 export default {
   title: 'Components/TabMenuSearchLink',

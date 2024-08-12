@@ -1,4 +1,4 @@
-import ArticleNavigation from '../../templates/articlenavigation/ArticleNavigation.vue'
+import ArticleNavigation from '../../templates/articlenavigation'
 
 export default {
   title: 'Components/ArticleNavigation',

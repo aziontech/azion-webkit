@@ -1,5 +1,5 @@
-import CardBgImage from '../../../templates/cardbgimage/CardBgImage'
-import CardBase from '../../../templates/cardbase/CardBase'
+import CardBgImage from '../../../templates/cardbgimage'
+import CardBase from '../../../templates/cardbase'
 
 export default {
   title: 'Components/Card/CardBgImage',
