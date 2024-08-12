@@ -1,5 +1,5 @@
 import LinkButton from '../../templates/linkbutton'
-import EmptyStateBlock from '../../templates/emptystateblock/EmptyStateBlock';
+import EmptyStateBlock from '../../templates/emptystateblock';
 import Error404Illustration from '../../assets/svg/error-404.vue'
 
 export default {
