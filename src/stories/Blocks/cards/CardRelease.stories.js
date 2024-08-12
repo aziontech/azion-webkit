@@ -1,7 +1,7 @@
 import CardRelease from "../../../templates/cardrelease"
 
 export default {
-  title: 'Blocks/Cards/Release',
+  title: '1. Blocks/Cards/Release',
   component: CardRelease,
   tags: ['autodocs'],
   argTypes: {

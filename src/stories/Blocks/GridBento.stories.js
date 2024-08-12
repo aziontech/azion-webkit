@@ -2,7 +2,7 @@ import CardGridBento from '../../templates/gridbento'
 import Card from 'primevue/card'
 
 export default {
-  title: 'Blocks/BentoGrid',
+  title: '1. Blocks/BentoGrid',
   component: CardGridBento,
   tags: ['autodocs'],
   argTypes: {

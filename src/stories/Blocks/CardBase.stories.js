@@ -1,7 +1,7 @@
 import CardBase from "../../templates/cardbase"
 
 export default {
-  title: 'Blocks/CardBase',
+  title: '1. Blocks/CardBase',
   component: CardBase,
   tags: ['autodocs'],
   argTypes: {

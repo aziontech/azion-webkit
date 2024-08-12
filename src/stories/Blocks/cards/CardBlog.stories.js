@@ -1,7 +1,7 @@
 import CardBlog from '../../../templates/cardblog'
 
 export default {
-  title: 'Blocks/Cards/Blog',
+  title: '1. Blocks/Cards/Blog',
   component: CardBlog,
   tags: ['autodocs'],
   argTypes: {

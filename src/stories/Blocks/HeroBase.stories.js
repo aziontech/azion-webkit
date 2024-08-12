@@ -2,12 +2,12 @@ import HeroBlockBase from '../../templates/herobase';
 import LinkButton from '../../templates/linkbutton';
 
 export default {
-  title: 'Blocks/HeroBase',
+  title: '1. Blocks/HeroBase',
   component: HeroBlockBase,
   tags: ['autodocs'],
   argTypes: {
     bannerNews: {
-      description: "Banner News props - check it out Blocks/Banner. Se verdadeiro exibe o news banner"
+      description: "Banner News props - check it out 1. Blocks/Banner. Se verdadeiro exibe o news banner"
     },
     isReverse: {
       description: "Muda a orientação dos blocos do hero. Só funciona em caso de isCentralized = true"

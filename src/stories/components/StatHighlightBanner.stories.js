@@ -1,7 +1,7 @@
 import StatHighlightBanner from '../../templates/stathighlightbanner'
 
 export default {
-  title: 'Components/StatHighlightBanner',
+  title: '2. Components/StatHighlightBanner',
   component: StatHighlightBanner,
   tags: ['autodocs'],
   argTypes: {

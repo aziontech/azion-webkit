@@ -1,7 +1,7 @@
 import PriceAndPartner from "../../../templates/priceandpartner"
 
 export default {
-  title: 'Blocks/Cards/Price And Partner',
+  title: '1. Blocks/Cards/Price And Partner',
   component: PriceAndPartner,
   tags: ['autodocs'],
   argTypes: {

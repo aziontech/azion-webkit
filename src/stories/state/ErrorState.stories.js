@@ -3,7 +3,7 @@ import ErrorStateBlock from '../../templates/errorstateblock';
 import Error404Illustration from '../../assets/svg/error-404.vue'
 
 export default {
-  title: 'Blocks/ErrorState',
+  title: '1. Blocks/ErrorState',
   component: ErrorStateBlock,
   tags: ['autodocs'],
 }

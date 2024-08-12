@@ -1,7 +1,7 @@
 import TabMenu from "../../templates/tabmenu"
 
 export default {
-  title: 'Components/TabMenu',
+  title: '2. Components/TabMenu',
   component: TabMenu,
   tags: ['autodocs'],
   argTypes: {

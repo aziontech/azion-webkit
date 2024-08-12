@@ -2,7 +2,7 @@ import NewsletterSingleline from '../../../../dist/newslettersingleline';
 import data from '../../../mock/newsletterSingleLine';
 
 export default {
-  title: 'Blocks/Newsletter/Singleline',
+  title: '1. Blocks/Newsletter/Singleline',
   component: NewsletterSingleline,
   tags: ['autodocs'],
   argTypes: {}

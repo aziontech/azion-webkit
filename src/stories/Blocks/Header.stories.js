@@ -6,7 +6,7 @@ import MockHeader from '../../mock/header.js'
 
 
 export default {
-  title: 'Blocks/Header',
+  title: '1. Blocks/Header',
   component: Header,
   tags: ['autodocs'],
   argTypes: {}

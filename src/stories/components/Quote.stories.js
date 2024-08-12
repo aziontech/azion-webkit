@@ -1,7 +1,7 @@
 import Quote from "../../templates/quote"
 
 export default {
-  title: 'Components/Quote',
+  title: '2. Components/Quote',
   component: Quote,
   tags: ['autodocs'],
   argTypes: {

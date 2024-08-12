@@ -1,7 +1,7 @@
 import CardCases from '../../../templates/cardcases'
 
 export default {
-  title: 'Blocks/Cards/Cases',
+  title: '1. Blocks/Cards/Cases',
   component: CardCases,
   tags: ['autodocs'],
   argTypes: {

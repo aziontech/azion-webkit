@@ -1,7 +1,7 @@
 import CardDescription from "../../../templates/carddescription"
 
 export default {
-  title: 'Components/Card/CardDescription',
+  title: '2. Components/Card/CardDescription',
   component: CardDescription,
   tags: ['autodocs'],
   argTypes: {

@@ -1,7 +1,7 @@
 import CardTitle from "../../../templates/cardtitle"
 
 export default {
-  title: 'Components/Card/CardTitle',
+  title: '2. Components/Card/CardTitle',
   component: CardTitle,
   tags: ['autodocs'],
   argTypes: {

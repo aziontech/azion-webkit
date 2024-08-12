@@ -1,7 +1,7 @@
 import ThemeSwitcher from '../../templates/themeswitcher'
 
 export default {
-  title: 'Components/ThemeSwitcher',
+  title: '2. Components/ThemeSwitcher',
   component: ThemeSwitcher,
   tags: ['autodocs'],
 }

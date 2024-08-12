@@ -1,7 +1,7 @@
 import FormBase from '../../templates/formblock'
 
 export default {
-  title: 'Blocks/FormBase',
+  title: '1. Blocks/FormBase',
   component: FormBase,
   tags: ['autodocs'],
 };

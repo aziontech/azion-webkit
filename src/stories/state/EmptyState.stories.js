@@ -3,7 +3,7 @@ import EmptyStateBlock from '../../templates/emptystateblock';
 import Error404Illustration from '../../assets/svg/error-404.vue'
 
 export default {
-  title: 'Blocks/BaseEmptyState',
+  title: '1. Blocks/BaseEmptyState',
   component: EmptyStateBlock,
   tags: ['autodocs'],
 }

@@ -1,7 +1,7 @@
 import BePartner from '../../../../dist/formjobapplication'
 
 export default {
-  title: 'Blocks/Forms/Job Application',
+  title: '1. Blocks/Forms/Job Application',
   component: BePartner,
   tags: ['autodocs'],
   argTypes: {

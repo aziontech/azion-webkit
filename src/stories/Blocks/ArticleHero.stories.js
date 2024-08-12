@@ -2,7 +2,7 @@ import HeroArticle from '../../templates/heroarticle';
 import data from '../../mock/articleHero'
 
 export default {
-  title: 'Blocks/ArticleHero',
+  title: '1. Blocks/ArticleHero',
   component: HeroArticle,
   tags: ['autodocs'],
   argTypes: {}

@@ -1,7 +1,7 @@
 import TitleList from '../../templates/titlelist'
 
 export default {
-  title: 'Components/TitleList',
+  title: '2. Components/TitleList',
   component: TitleList,
   tags: ['autodocs'],
   argTypes: {

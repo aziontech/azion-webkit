@@ -1,7 +1,7 @@
 import CardGridblock from '../../../templates/cardgridblock'
 
 export default {
-  title: 'Blocks/Card Grid Block',
+  title: '1. Blocks/Card Grid Block',
   component: CardGridblock,
   tags: ['autodocs'],
   argTypes: {

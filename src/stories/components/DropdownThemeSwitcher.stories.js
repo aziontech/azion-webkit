@@ -1,7 +1,7 @@
 import DropdownThemeSwitcher from "../../templates/dropdownthemeswitcher"
 
 export default {
-  title: 'Components/DropdownThemeSwitcher',
+  title: '2. Components/DropdownThemeSwitcher',
   component: DropdownThemeSwitcher,
   tags: ['autodocs'],
   argTypes: {

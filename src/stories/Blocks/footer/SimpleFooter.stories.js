@@ -1,7 +1,7 @@
 import SimpleFooter from '../../../templates/footersimple'
 
 export default {
-  title: 'Blocks/Footer/SimpleFooter',
+  title: '1. Blocks/Footer/SimpleFooter',
   component: SimpleFooter,
   tags: ['autodocs'],
   argTypes: {}

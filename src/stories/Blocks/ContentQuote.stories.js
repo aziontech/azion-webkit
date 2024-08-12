@@ -1,7 +1,7 @@
 import ContentQuote from "../../templates/contentquote"
 
 export default {
-  title: 'Blocks/Content Quote',
+  title: '1. Blocks/Content Quote',
   component: ContentQuote,
   tags: ['autodocs'],
 }

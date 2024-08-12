@@ -1,7 +1,7 @@
 import LinkButton from '../../templates/linkbutton'
 
 export default {
-  title: 'Components/LinkButton',
+  title: '2. Components/LinkButton',
   component: LinkButton,
   tags: ['autodocs'],
   argTypes: {

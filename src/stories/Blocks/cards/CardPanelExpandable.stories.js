@@ -1,7 +1,7 @@
 import CardPanelExpandable from "../../../templates/cardpanelexpandable"
 
 export default {
-  title: 'Blocks/Card Panel Expandable',
+  title: '1. Blocks/Card Panel Expandable',
   component: CardPanelExpandable,
   tags: ['autodocs'],
   argTypes: {

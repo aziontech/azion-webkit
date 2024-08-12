@@ -1,7 +1,7 @@
 import SystemStatus from "../../templates/systemstatus"
 
 export default {
-  title: 'Components/SystemStatus',
+  title: '2. Components/SystemStatus',
   component: SystemStatus,
   tags: ['autodocs'],
 }

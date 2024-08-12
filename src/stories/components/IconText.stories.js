@@ -1,7 +1,7 @@
 import IconText from "../../templates/icontext"
 
 export default {
-  title: 'Components/IconText',
+  title: '2. Components/IconText',
   component: IconText,
   tags: ['autodocs'],
   argTypes: {
