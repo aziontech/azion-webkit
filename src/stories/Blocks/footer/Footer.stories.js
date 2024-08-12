@@ -1,4 +1,4 @@
-import Footer from '../../../../dist/footer/Footer.js';
+import Footer from '../../../../dist/footer';
 import footerData from '../../../mock/footer.js';
 
 export default {
