@@ -1,7 +1,7 @@
 import ImageSwitcher from '../../templates/themeawareimageswitcher'
 
 export default {
-  title: 'Azion Web Kit/Components/Theme Aware Image Switcher',
+  title: 'Components/ThemeAwareImageSwitcher',
   component: ImageSwitcher,
   tags: ['autodocs'],
 }

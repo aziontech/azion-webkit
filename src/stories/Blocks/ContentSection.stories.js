@@ -1,8 +1,8 @@
-import ContentSection from "../../templates/contentsection"
-import LinkButton from '../../templates/linkbutton';
+import ContentSection from "../../templates/contentsection/ContentSection"
+import LinkButton from '../../templates/linkbutton/LinkButton';
 
 export default {
-  title: 'Azion Web Kit/Shell/Content Section Block',
+  title: 'Blocks/Content Section Block',
   component: ContentSection,
   tags: ['autodocs'],
   argTypes: {

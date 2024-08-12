@@ -1,8 +1,8 @@
-import CardBgImage from '../../templates/cardbgimage'
-import CardBase from '../../templates/cardbase'
+import CardBgImage from '../../../templates/cardbgimage/CardBgImage'
+import CardBase from '../../../templates/cardbase/CardBase'
 
 export default {
-  title: 'Azion Web Kit/Components/Card Background Image',
+  title: 'Components/Card/CardBgImage',
   component: CardBgImage,
   tags: ['autodocs'],
   argTypes: {

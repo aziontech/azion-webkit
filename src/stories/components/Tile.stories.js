@@ -1,7 +1,7 @@
 import Tile from '../../templates/tile'
 
 export default {
-  title: 'Azion Web Kit/Components/Tile',
+  title: 'Components/Tile',
   component: Tile,
   tags: ['autodocs'],
   argTypes: {

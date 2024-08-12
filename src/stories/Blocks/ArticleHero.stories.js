@@ -2,7 +2,7 @@ import HeroArticle from '../../templates/heroarticle';
 import data from '../../mock/articleHero'
 
 export default {
-  title: 'Azion Web Kit/Blocks/Article Hero',
+  title: 'Blocks/ArticleHero',
   component: HeroArticle,
   tags: ['autodocs'],
   argTypes: {}

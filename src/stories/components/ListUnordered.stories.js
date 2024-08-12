@@ -1,7 +1,7 @@
 import ListUnordered from "../../templates/listunordered"
 
 export default {
-  title: 'Azion Web Kit/Components/List Unordered',
+  title: 'Components/ListUnordered',
   component: ListUnordered,
   tags: ['autodocs'],
   argTypes: {

@@ -2,7 +2,7 @@ import NewsletterWide from '../../../../dist/newsletterwide';
 import data from '../../../mock/newsletterSingleLine';
 
 export default {
-  title: 'Azion Web Kit/Blocks/Newsletter/Wide',
+  title: 'Blocks/Newsletter/Wide',
   component: NewsletterWide,
   tags: ['autodocs'],
   argTypes: {}

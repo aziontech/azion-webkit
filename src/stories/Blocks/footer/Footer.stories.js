@@ -1,8 +1,8 @@
-import Footer from '../../../dist/footer';
-import footerData from '../../mock/footer.js';
+import Footer from '../../../../dist/footer/Footer.js';
+import footerData from '../../../mock/footer.js';
 
 export default {
-  title: 'Azion Web Kit/Shell/Footer',
+  title: 'Blocks/Footer',
   component: Footer,
   tags: ['autodocs'],
   argTypes: {}

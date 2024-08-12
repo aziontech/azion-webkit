@@ -1,7 +1,7 @@
 import BigNumbers from '../../templates/bignumbers'
 
 export default {
-  title: 'Azion Web Kit/Blocks/Big Numbers',
+  title: 'Blocks/Big Numbers',
   component: BigNumbers,
   tags: ['autodocs'],
   argTypes: {

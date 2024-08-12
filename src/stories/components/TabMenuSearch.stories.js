@@ -1,7 +1,7 @@
 import TabMenuSearch from "../../templates/tabmenuwithsearch"
 
 export default {
-  title: 'Azion Web Kit/Components/Tab Menu Search',
+  title: 'Components/TabMenuSearch',
   component: TabMenuSearch,
   tags: ['autodocs'],
   argTypes: {

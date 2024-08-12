@@ -1,7 +1,7 @@
 import TitleList from '../../templates/titlelist'
 
 export default {
-  title: 'Azion Web Kit/Components/Title List',
+  title: 'Components/TitleList',
   component: TitleList,
   tags: ['autodocs'],
   argTypes: {

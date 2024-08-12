@@ -2,7 +2,7 @@ import NewsletterSingleline from '../../../../dist/newslettersingleline';
 import data from '../../../mock/newsletterSingleLine';
 
 export default {
-  title: 'Azion Web Kit/Blocks/Newsletter/Singleline',
+  title: 'Blocks/Newsletter/Singleline',
   component: NewsletterSingleline,
   tags: ['autodocs'],
   argTypes: {}

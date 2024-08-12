@@ -1,8 +1,8 @@
-import HeroBlockBase from '../../templates/herobase';
-import LinkButton from '../../templates/linkbutton';
+import HeroBlockBase from '../../templates/herobase/HeroBase';
+import LinkButton from '../../templates/linkbutton/LinkButton';
 
 export default {
-  title: 'Azion Web Kit/Shell/Hero Base',
+  title: 'Blocks/HeroBase',
   component: HeroBlockBase,
   tags: ['autodocs'],
   argTypes: {

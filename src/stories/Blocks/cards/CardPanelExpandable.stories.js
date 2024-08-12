@@ -1,7 +1,7 @@
 import CardPanelExpandable from "../../../templates/cardpanelexpandable"
 
 export default {
-  title: 'Azion Web Kit/Blocks/Card Panel Expandable',
+  title: 'Blocks/Card Panel Expandable',
   component: CardPanelExpandable,
   tags: ['autodocs'],
   argTypes: {

@@ -1,7 +1,7 @@
 import TableOfContents from "../../templates/tableofcontents"
 
 export default {
-  title: 'Azion Web Kit/Components/Table of Contents',
+  title: 'Components/TableOfContents',
   component: TableOfContents,
   tags: ['autodocs'],
   argTypes: {

@@ -1,7 +1,7 @@
-import BaseModal from "../../templates/basemodal"
+import BaseModal from "../../templates/basemodal/Modal"
 
 export default {
-  title: 'Azion Web Kit/Shell/Base Modal',
+  title: 'Blocks/Base Modal',
   component: BaseModal,
   tags: ['autodocs'],
   argTypes: {

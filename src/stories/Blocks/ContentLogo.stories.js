@@ -1,7 +1,7 @@
 import ContentLogo from "../../templates/contentlogo"
 
 export default {
-  title: 'Azion Web Kit/Blocks/Content Logo',
+  title: 'Blocks/Content Logo',
   component: ContentLogo,
   tags: ['autodocs'],
   argTypes: {

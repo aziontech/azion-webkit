@@ -1,7 +1,7 @@
 import StatHighlightBanner from '../../templates/stathighlightbanner'
 
 export default {
-  title: 'Azion Web Kit/Components/Stat Highlight Banner',
+  title: 'Components/StatHighlightBanner',
   component: StatHighlightBanner,
   tags: ['autodocs'],
   argTypes: {

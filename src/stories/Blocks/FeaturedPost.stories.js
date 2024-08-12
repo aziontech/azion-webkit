@@ -2,7 +2,7 @@ import FeaturedPost from '../../templates/featuredpost';
 import data from '../../mock/featuredPost.js'
 
 export default {
-  title: 'Azion Web Kit/Blocks/Featured Post',
+  title: 'Blocks/Featured Post',
   component: FeaturedPost,
   tags: ['autodocs'],
   argTypes: {

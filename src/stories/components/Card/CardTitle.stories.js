@@ -1,7 +1,7 @@
-import CardTitle from "../../templates/cardtitle"
+import CardTitle from "../../../templates/cardtitle/CardTitle"
 
 export default {
-  title: 'Azion Web Kit/Components/Card Title',
+  title: 'Components/Card/CardTitle',
   component: CardTitle,
   tags: ['autodocs'],
   argTypes: {

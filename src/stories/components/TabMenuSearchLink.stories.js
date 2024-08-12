@@ -1,7 +1,7 @@
-import TabMenuSearchLink from "../../templates/tabmenuwithsearchlink"
+import TabMenuSearchLink from "../../templates/tabmenuwithsearchlink/TabMenuWithSearchLink"
 
 export default {
-  title: 'Azion Web Kit/Components/Tab Menu Search Link',
+  title: 'Components/TabMenuSearchLink',
   component: TabMenuSearchLink,
   tags: ['autodocs'],
   argTypes: {

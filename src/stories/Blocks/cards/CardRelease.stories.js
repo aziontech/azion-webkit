@@ -1,7 +1,7 @@
 import CardRelease from "../../../templates/cardrelease"
 
 export default {
-  title: 'Azion Web Kit/Blocks/Cards/Release',
+  title: 'Blocks/Cards/Release',
   component: CardRelease,
   tags: ['autodocs'],
   argTypes: {

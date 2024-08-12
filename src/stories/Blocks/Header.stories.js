@@ -1,12 +1,12 @@
-import Header from "../../templates/header"
-import AzionLogo from '../../templates/azionlogo'
-import HeaderNavigation from '../../templates/headermenutabpanel'
+import Header from "../../templates/header/Header.js"
+import AzionLogo from '../../templates/azionlogo/AzionLogo.js'
+import HeaderNavigation from '../../templates/headermenutabpanel/HeaderMenuTabPanel.js'
 import Button from 'primevue/button';
 import MockHeader from '../../mock/header.js'
 
 
 export default {
-  title: 'Azion Web Kit/Shell/Header',
+  title: 'Blocks/Header',
   component: Header,
   tags: ['autodocs'],
   argTypes: {}

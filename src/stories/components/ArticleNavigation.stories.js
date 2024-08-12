@@ -1,7 +1,7 @@
 import ArticleNavigation from '../../templates/articlenavigation/ArticleNavigation.vue'
 
 export default {
-  title: 'Azion Web Kit/Blocks/Article Navigation',
+  title: 'Components/ArticleNavigation',
   component: ArticleNavigation,
   tags: ['autodocs'],
   argTypes: {

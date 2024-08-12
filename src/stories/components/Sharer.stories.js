@@ -1,7 +1,7 @@
 import Sharer from '../../templates/sharerblock'
 
 export default {
-  title: 'Azion Web Kit/Components/Sharer',
+  title: 'Components/Sharer',
   component: Sharer,
   tags: ['autodocs'],
   argTypes: {

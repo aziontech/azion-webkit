@@ -1,7 +1,7 @@
-import CardBaseClickable from "../../templates/cardbaseclickable"
+import CardBaseClickable from "../../templates/cardbaseclickable/CardBaseClickable"
 
 export default {
-  title: 'Azion Web Kit/Shell/Card Base Cliclable',
+  title: 'Blocks/CardBaseClickable',
   component: CardBaseClickable,
   tags: ['autodocs'],
   argTypes: {

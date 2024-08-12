@@ -1,7 +1,7 @@
 import SelectLang from "../../templates/selectlang"
 
 export default {
-  title: 'Azion Web Kit/Components/Select Lang',
+  title: 'Components/SelectLang',
   component: SelectLang,
   tags: ['autodocs'],
   argTypes: {

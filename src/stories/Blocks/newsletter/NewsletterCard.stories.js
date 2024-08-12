@@ -2,7 +2,7 @@ import NewsletterCard from '../../../../dist/newslettercard';
 import data from '../../../mock/newsletterSingleLine';
 
 export default {
-  title: 'Azion Web Kit/Blocks/Newsletter/Card',
+  title: 'Blocks/Newsletter/Card',
   component: NewsletterCard,
   tags: ['autodocs'],
   argTypes: {}

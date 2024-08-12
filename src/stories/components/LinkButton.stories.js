@@ -1,7 +1,7 @@
 import LinkButton from '../../templates/linkbutton'
 
 export default {
-  title: 'Azion Web Kit/Components/Link Button',
+  title: 'Components/LinkButton',
   component: LinkButton,
   tags: ['autodocs'],
   argTypes: {

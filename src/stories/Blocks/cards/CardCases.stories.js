@@ -1,7 +1,7 @@
 import CardCases from '../../../templates/cardcases'
 
 export default {
-  title: 'Azion Web Kit/Blocks/Cards/Cases',
+  title: 'Blocks/Cards/Cases',
   component: CardCases,
   tags: ['autodocs'],
   argTypes: {

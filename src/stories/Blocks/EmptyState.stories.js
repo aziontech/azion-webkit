@@ -3,7 +3,7 @@ import Error404Illustration from '../../assets/svg/error-404.vue'
 import LinkButton from '../../templates/linkbutton'
 
 export default {
-  title: 'Azion Web Kit/Blocks/Base Empty State',
+  title: 'Blocks/Base Empty State',
   component: EmptyStateBlock,
   tags: ['autodocs'],
 }

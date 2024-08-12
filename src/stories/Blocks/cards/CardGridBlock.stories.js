@@ -1,7 +1,7 @@
 import CardGridblock from '../../../templates/cardgridblock'
 
 export default {
-  title: 'Azion Web Kit/Blocks/Card Grid Block',
+  title: 'Blocks/Card Grid Block',
   component: CardGridblock,
   tags: ['autodocs'],
   argTypes: {

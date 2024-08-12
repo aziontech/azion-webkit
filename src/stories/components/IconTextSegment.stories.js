@@ -1,7 +1,7 @@
 import IconTextSegment from "../../templates/icontextsegment"
 
 export default {
-  title: 'Azion Web Kit/Components/Icon Text Segment',
+  title: 'Components/IconTextSegment',
   component: IconTextSegment,
   tags: ['autodocs'],
   argTypes: {

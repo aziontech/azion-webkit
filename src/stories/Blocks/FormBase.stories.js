@@ -1,7 +1,7 @@
-import FormBase from "../../templates/formblock"
+import FormBase from '../../templates/formblock/FormBlock'
 
 export default {
-  title: 'Azion Web Kit/Shell/Form Base',
+  title: 'Blocks/FormBase',
   component: FormBase,
   tags: ['autodocs'],
 };

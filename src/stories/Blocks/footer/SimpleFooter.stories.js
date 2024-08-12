@@ -1,7 +1,7 @@
-import SimpleFooter from '../../templates/footersimple'
+import SimpleFooter from '../../../templates/footersimple/FooterSimple'
 
 export default {
-  title: 'Azion Web Kit/Shell/Simple Footer',
+  title: 'Blocks/SimpleFooter',
   component: SimpleFooter,
   tags: ['autodocs'],
   argTypes: {}

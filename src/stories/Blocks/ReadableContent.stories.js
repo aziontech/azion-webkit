@@ -1,7 +1,7 @@
-import ReadableContent from "../../templates/readablecontent"
+import ReadableContent from "../../templates/readablecontent/ReadableContent"
 
 export default {
-  title: 'Azion Web Kit/Shell/Readable Content',
+  title: 'Blocks/ReadableContent',
   component: ReadableContent,
   tags: ['autodocs'],
 };

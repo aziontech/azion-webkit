@@ -1,7 +1,7 @@
 import Quote from "../../templates/quote"
 
 export default {
-  title: 'Azion Web Kit/Components/Quote',
+  title: 'Components/Quote',
   component: Quote,
   tags: ['autodocs'],
   argTypes: {

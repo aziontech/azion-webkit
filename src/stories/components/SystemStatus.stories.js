@@ -1,7 +1,7 @@
 import SystemStatus from "../../templates/systemstatus"
 
 export default {
-  title: 'Azion Web Kit/Components/System Status',
+  title: 'Components/SystemStatus',
   component: SystemStatus,
   tags: ['autodocs'],
 }

@@ -1,7 +1,7 @@
 import TabMenu from "../../templates/tabmenu"
 
 export default {
-  title: 'Azion Web Kit/Components/Tab Menu',
+  title: 'Components/TabMenu',
   component: TabMenu,
   tags: ['autodocs'],
   argTypes: {

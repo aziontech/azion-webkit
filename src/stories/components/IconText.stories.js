@@ -1,7 +1,7 @@
 import IconText from "../../templates/icontext"
 
 export default {
-  title: 'Azion Web Kit/Components/Icon Text',
+  title: 'Components/IconText',
   component: IconText,
   tags: ['autodocs'],
   argTypes: {

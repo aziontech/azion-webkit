@@ -1,7 +1,7 @@
 import ThemeSwitcher from '../../templates/themeswitcher'
 
 export default {
-  title: 'Azion Web Kit/Components/Theme Switcher',
+  title: 'Components/ThemeSwitcher',
   component: ThemeSwitcher,
   tags: ['autodocs'],
 }

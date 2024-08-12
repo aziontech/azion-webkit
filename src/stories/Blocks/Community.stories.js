@@ -1,7 +1,7 @@
 import Community from '../../templates/community'
 
 export default {
-  title: 'Azion Web Kit/Blocks/Community',
+  title: 'Blocks/Community',
   component: Community,
   tags: ['autodocs'],
   argTypes: {

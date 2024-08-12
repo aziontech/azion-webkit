@@ -1,7 +1,7 @@
 import BePartner from '../../../../dist/formbepartner'
 
 export default {
-  title: 'Azion Web Kit/Blocks/Forms/Be Partner',
+  title: 'Blocks/Forms/Be Partner',
   component: BePartner,
   tags: ['autodocs'],
   argTypes: {

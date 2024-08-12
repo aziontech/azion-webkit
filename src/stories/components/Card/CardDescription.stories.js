@@ -1,7 +1,7 @@
-import CardDescription from "../../templates/carddescription"
+import CardDescription from "../../../templates/carddescription/CardDescription"
 
 export default {
-  title: 'Azion Web Kit/Components/Card Description',
+  title: 'Components/Card/CardDescription',
   component: CardDescription,
   tags: ['autodocs'],
   argTypes: {

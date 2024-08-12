@@ -1,7 +1,7 @@
 import PriceAndPartner from "../../../templates/priceandpartner"
 
 export default {
-  title: 'Azion Web Kit/Blocks/Cards/Price And Partner',
+  title: 'Blocks/Cards/Price And Partner',
   component: PriceAndPartner,
   tags: ['autodocs'],
   argTypes: {

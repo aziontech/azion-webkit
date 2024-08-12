@@ -1,7 +1,7 @@
-import CardBase from "../../templates/cardbase"
+import CardBase from "../../templates/cardbase/CardBase"
 
 export default {
-  title: 'Azion Web Kit/Shell/Card Base',
+  title: 'Blocks/CardBase',
   component: CardBase,
   tags: ['autodocs'],
   argTypes: {

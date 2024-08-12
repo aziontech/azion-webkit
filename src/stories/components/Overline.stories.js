@@ -1,7 +1,7 @@
 import Overline from "../../templates/overline"
 
 export default {
-  title: 'Azion Web Kit/Components/Overline',
+  title: 'Components/Overline',
   component: Overline,
   tags: ['autodocs'],
 }

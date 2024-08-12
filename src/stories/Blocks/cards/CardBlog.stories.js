@@ -1,7 +1,7 @@
 import CardBlog from '../../../templates/cardblog'
 
 export default {
-  title: 'Azion Web Kit/Blocks/Cards/Blog',
+  title: 'Blocks/Cards/Blog',
   component: CardBlog,
   tags: ['autodocs'],
   argTypes: {

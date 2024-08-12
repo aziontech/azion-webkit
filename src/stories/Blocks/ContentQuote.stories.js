@@ -1,7 +1,7 @@
 import ContentQuote from "../../templates/contentquote"
 
 export default {
-  title: 'Azion Web Kit/Blocks/Content Quote',
+  title: 'Blocks/Content Quote',
   component: ContentQuote,
   tags: ['autodocs'],
 }

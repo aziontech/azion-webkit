@@ -1,7 +1,7 @@
 import BePartner from '../../../../dist/formcontactus'
 
 export default {
-  title: 'Azion Web Kit/Blocks/Forms/Contact Us',
+  title: 'Blocks/Forms/Contact Us',
   component: BePartner,
   tags: ['autodocs'],
   argTypes: {

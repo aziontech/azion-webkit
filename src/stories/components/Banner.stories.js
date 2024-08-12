@@ -1,7 +1,7 @@
 import Banner from '../../templates/banner'
 
 export default {
-  title: 'Azion Web Kit/Blocks/Banner',
+  title: 'Components/Banner',
   component: Banner,
   tags: ['autodocs'],
   argTypes: {

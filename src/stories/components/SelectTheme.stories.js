@@ -1,7 +1,7 @@
 import SelectTheme from "../../templates/selecttheme"
 
 export default {
-  title: 'Azion Web Kit/Components/Select Theme',
+  title: 'Components/SelectTheme',
   component: SelectTheme,
   tags: ['autodocs'],
   argTypes: {

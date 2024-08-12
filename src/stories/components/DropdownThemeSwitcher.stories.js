@@ -1,7 +1,7 @@
 import DropdownThemeSwitcher from "../../templates/dropdownthemeswitcher"
 
 export default {
-  title: 'Azion Web Kit/Components/Dropdown Theme Switcher',
+  title: 'Components/DropdownThemeSwitcher',
   component: DropdownThemeSwitcher,
   tags: ['autodocs'],
   argTypes: {
