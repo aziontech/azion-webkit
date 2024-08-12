@@ -1,4 +1,4 @@
-import ContentSection from "../../templates/contentsection/ContentSection"
+import ContentSection from "../../templates/contentsection"
 import LinkButton from '../../templates/linkbutton/LinkButton';
 
 export default {

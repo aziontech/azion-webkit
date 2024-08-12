@@ -1,5 +1,5 @@
-import HeroBlockBase from '../../templates/herobase/HeroBase';
-import LinkButton from '../../templates/linkbutton/LinkButton';
+import HeroBlockBase from '../../templates/herobase';
+import LinkButton from '../../templates/linkbutton';
 
 export default {
   title: 'Blocks/HeroBase',

@@ -1,4 +1,4 @@
-import ReadableContent from "../../templates/readablecontent/ReadableContent"
+import ReadableContent from "../../templates/readablecontent"
 
 export default {
   title: 'Blocks/ReadableContent',

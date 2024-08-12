@@ -2,7 +2,7 @@ import Footer from '../../../../dist/footer/Footer.js';
 import footerData from '../../../mock/footer.js';
 
 export default {
-  title: 'Blocks/Footer',
+  title: 'Blocks/Footer/Footer',
   component: Footer,
   tags: ['autodocs'],
   argTypes: {}

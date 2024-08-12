@@ -1,4 +1,4 @@
-import CardBase from "../../templates/cardbase/CardBase"
+import CardBase from "../../templates/cardbase"
 
 export default {
   title: 'Blocks/CardBase',

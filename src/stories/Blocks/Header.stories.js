@@ -1,4 +1,4 @@
-import Header from "../../templates/header/Header.js"
+import Header from "../../templates/header"
 import AzionLogo from '../../templates/azionlogo/AzionLogo.js'
 import HeaderNavigation from '../../templates/headermenutabpanel/HeaderMenuTabPanel.js'
 import Button from 'primevue/button';

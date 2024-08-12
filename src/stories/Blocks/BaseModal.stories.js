@@ -1,7 +1,7 @@
-import BaseModal from "../../templates/basemodal/Modal"
+import BaseModal from "../../templates/basemodal"
 
 export default {
-  title: 'Blocks/Base Modal',
+  title: 'Blocks/BaseModal',
   component: BaseModal,
   tags: ['autodocs'],
   argTypes: {

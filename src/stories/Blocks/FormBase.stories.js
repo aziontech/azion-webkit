@@ -1,4 +1,4 @@
-import FormBase from '../../templates/formblock/FormBlock'
+import FormBase from '../../templates/formblock'
 
 export default {
   title: 'Blocks/FormBase',

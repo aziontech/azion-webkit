@@ -1,4 +1,4 @@
-import CardBaseClickable from "../../templates/cardbaseclickable/CardBaseClickable"
+import CardBaseClickable from "../../templates/cardbaseclickable"
 
 export default {
   title: 'Blocks/CardBaseClickable',
