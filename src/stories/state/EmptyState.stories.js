@@ -1,9 +1,9 @@
-import EmptyStateBlock from '../../templates/emptystateblock';
-import Error404Illustration from '../../assets/svg/error-404.vue'
 import LinkButton from '../../templates/linkbutton'
+import EmptyStateBlock from '../../templates/emptystateblock/EmptyStateBlock';
+import Error404Illustration from '../../assets/svg/error-404.vue'
 
 export default {
-  title: 'Blocks/Base Empty State',
+  title: 'Blocks/BaseEmptyState',
   component: EmptyStateBlock,
   tags: ['autodocs'],
 }

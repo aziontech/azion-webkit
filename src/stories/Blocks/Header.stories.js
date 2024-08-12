@@ -1,6 +1,6 @@
 import Header from "../../templates/header"
-import AzionLogo from '../../templates/azionlogo/AzionLogo.js'
-import HeaderNavigation from '../../templates/headermenutabpanel/HeaderMenuTabPanel.js'
+import AzionLogo from '../../templates/azionlogo'
+import HeaderNavigation from '../../templates/headermenutabpanel'
 import Button from 'primevue/button';
 import MockHeader from '../../mock/header.js'
 

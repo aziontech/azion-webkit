@@ -1,6 +1,6 @@
-import ErrorStateBlock from '../../templates/errorstateblock';
-import Error404Illustration from '../../assets/svg/error-404.vue'
 import LinkButton from '../../templates/linkbutton'
+import ErrorStateBlock from '../../templates/errorstateblock/ErrorStateBlock';
+import Error404Illustration from '../../assets/svg/error-404.vue'
 
 export default {
   title: 'Blocks/Error State',
