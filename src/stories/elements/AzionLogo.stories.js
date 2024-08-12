@@ -1,4 +1,4 @@
-import AzionLogo from '../../templates/azionlogo/AzionLogo'
+import AzionLogo from '../../templates/azionlogo'
 
 export default {
   title: '3. Elements/svgs/AzionLogo',
