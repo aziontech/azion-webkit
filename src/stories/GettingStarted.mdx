@@ -2,35 +2,79 @@ import { Meta } from '@storybook/blocks'
 
 <Meta title="Getting Started" />
 
-
 # Easy to use
 
-Esta documentação lhe auxiliará com o projeto [azion-webkit](https://github.com/aziontech/azion-webkit).
-O projeto azion-webkit por baixo dos panos utiliza o PrimeVue V3 como biblioteca de componentes básica.
+This documentation will help with the [azion-webkit](https://github.com/aziontech/azion-webkit) project,
+using [PrimeVue V3](https://v3.primevue.org/) as the basic component library and [Tailwind](https://tailwindcss.com/) for CSS styling.
 
-> [Acesse a documentação do PrimeVue](https://v3.primevue.org/).
-
-
-**projects:**
+**Projects:**
 
 - [azion-webkit](https://github.com/aziontech/azion-webkit)
 - [azion-theme](https://github.com/aziontech/azion-theme)
 
+## Stack
 
-## Local Development
+- Node.js v20.x.x
+- Vue;
+  - PrimeVue;
+- Tailwind;
+  - Prime Vue Sass Theme Base;
+  - Primeflex;
 
-Instale as dependencias dos projetos Azion Web Kit e Site com `npm install`,
-e dentro de Site crie um link para o Azion Web Kit com a instrução `npm link azion-webkit`.
+## Development
 
-Pronto! Voce está apto para utilizar o `npm run dev` ou `npm run preview` para subir o seu ambiente de desenvolvimento local.
+In the project where components/blocks/templates are used, their dependencies must be included;
 
+```json
+// Your project's package.json
+...
 
-### Realizando modificações no Webkit
+"dependencies": {
+    "vue": "^3.3.11",
+    "azion-webkit": "^1.49.4",
+    "azion-theme": "^1.4.0",
+    "@tailwindcss/typography": "^0.5.10",
+    "@vee-validate/yup": "^4.12.6",
+    "tailwind": "^4.0.0",
+    "yup": "^1.3.2",
+    "vee-validate": "^4.11.8",
+  },
 
-Ao realizar modificações no projeto Webkit essas não vão ser refletidas automaticamente no projeto,
-a cada modificação é necessário utilizar a instrução `npm run build`.
+...
+```
 
+Now, installing the dependencies:
 
-## Dúvidas?
+```bash
+npm install
+```
 
-Em caso de dúvidas, entre em contanto com Robson Júnior ou Luis Igreja do time de UX Engineering
+This will pull the dependencies from [npm](https://www.npmjs.com/).
+
+> [Azion Docs](https://github.com/aziontech/docs/) uses Azion's Front-End packages and can be used as an example.
+
+### Making Modifications Locally
+
+For local development before publishing to npm, we use [npm link](https://docs.npmjs.com/cli/v9/commands/npm-link).
+You will need to have a folder structure similar to:
+
+```
+| - azion-webkit
+| ---- npm install && npm link;
+| - docs
+| ---- npm install && npm link azion-webkit;
+```
+
+With these steps, you can make modifications and test locally before submitting the package to npm.
+
+## Team
+
+The Azion team responsible for the project is UX Engineering,
+with the main maintainers:
+
+- [Robson Júnior](https://www.robsonjunior.dev/)
+  - [GitHub](https://github.com/robsongajunior/)
+  - [LinkedIn](https://github.com/robsongajunior/)
+- [Luis Igreja](https://github.com/lfsigreja/);
+  and
+
