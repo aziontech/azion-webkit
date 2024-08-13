@@ -1,7 +1,7 @@
 import Sharer from '../../templates/sharerblock'
 
 export default {
-  title: '2. Components/Sharer',
+  title: '2.1 Components/Sharer',
   component: Sharer,
   tags: ['autodocs'],
   argTypes: {

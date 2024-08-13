@@ -2,7 +2,7 @@ import CardBgImage from '../../../templates/cardbgimage'
 import CardBase from '../../../templates/cardbase'
 
 export default {
-  title: '2. Components/Card/CardBgImage',
+  title: '2.1 Components/Card/CardBgImage',
   component: CardBgImage,
   tags: ['autodocs'],
   argTypes: {

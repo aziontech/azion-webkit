@@ -1,7 +1,7 @@
 import IconTextSegment from "../../templates/icontextsegment"
 
 export default {
-  title: '2. Components/IconTextSegment',
+  title: '2.1 Components/IconTextSegment',
   component: IconTextSegment,
   tags: ['autodocs'],
   argTypes: {

@@ -1,9 +1,16 @@
 <template>
-  <div @click="visible = true" class="cursor-pointer">
-    <slot name="action"/>
+  <div @click="setVisibility(true)" class="cursor-pointer">
+    <slot name="action" />
   </div>
+
   <div class="px-container">
-    <Dialog v-model:visible="visible" modal dismissableMask closeOnEscape :showHeader="showHeader" :pt="getPTOptions()">
+    <Dialog
+      v-model:visible="visible"
+      dismissableMask
+      closeOnEscape
+      modal
+      :showHeader="showHeader"
+    >
       <template #header v-if="$slots.header">
         <slot name="header" />
       </template>
@@ -19,14 +26,17 @@
 
 <script setup>
 import Dialog from 'primevue/dialog';
-import { ref } from "vue";
+import { ref } from 'vue';
 
 const props = defineProps({
   backgroundColor: {
     type: String,
     required: false,
     default: 'default',
-    options: ['outlined', 'default']
+    options: [
+      'outlined',
+      'default'
+    ]
   },
   showHeader: {
     type: Boolean,
@@ -38,7 +48,13 @@ const props = defineProps({
 
 const visible = ref(false);
 
+const setVisibility = function(visibility=true) {
+  visible.value = visibility;
+};
+
 const getPTOptions = () => {
+  console.log('[props.backgroundColor]:', props.backgroundColor);
+
   if (props.backgroundColor == 'outlined') {
     return {
       content: 'bg-transparent p-0',
@@ -47,5 +63,5 @@ const getPTOptions = () => {
       closeButton: 'border-none hover:bg-[--surface-400] hover:text-color-secondary text-color',
     }
   }
-}
+};
 </script>

@@ -1,7 +1,7 @@
 import Banner from '../../templates/banner'
 
 export default {
-  title: '2. Components/Banner',
+  title: '2.1 Components/Banner',
   component: Banner,
   tags: ['autodocs'],
   argTypes: {

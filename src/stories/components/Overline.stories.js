@@ -1,7 +1,7 @@
 import Overline from "../../templates/overline"
 
 export default {
-  title: '2. Components/Overline',
+  title: '2.1 Components/Overline',
   component: Overline,
   tags: ['autodocs'],
 }

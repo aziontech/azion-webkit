@@ -1,7 +1,7 @@
 import TabMenuSearchLink from "../../templates/tabmenuwithsearchlink"
 
 export default {
-  title: '2. Components/TabMenuSearchLink',
+  title: '2.1 Components/TabMenuSearchLink',
   component: TabMenuSearchLink,
   tags: ['autodocs'],
   argTypes: {

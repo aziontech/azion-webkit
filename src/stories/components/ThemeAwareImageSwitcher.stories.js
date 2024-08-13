@@ -1,7 +1,7 @@
 import ImageSwitcher from '../../templates/themeawareimageswitcher'
 
 export default {
-  title: '2. Components/ThemeAwareImageSwitcher',
+  title: '2.1 Components/ThemeAwareImageSwitcher',
   component: ImageSwitcher,
   tags: ['autodocs'],
 }

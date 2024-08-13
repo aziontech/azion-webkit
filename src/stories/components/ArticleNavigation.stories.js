@@ -1,7 +1,7 @@
 import ArticleNavigation from '../../templates/articlenavigation'
 
 export default {
-  title: '2. Components/ArticleNavigation',
+  title: '2.1 Components/ArticleNavigation',
   component: ArticleNavigation,
   tags: ['autodocs'],
   argTypes: {

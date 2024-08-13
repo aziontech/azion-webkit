@@ -16,6 +16,7 @@
       "incremental": true
   },
   "paths": {
+    "@assets/*": ["src/assets/*"],
     "@templates/*": ["src/templates/*"],
   },
   "include": ["**/*.ts"],
