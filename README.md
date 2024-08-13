@@ -1,6 +1,4 @@
-<h1 align="center">
-  azion-webkit
-</h1>
+<h1 align="center">azion-webkit</h1>
 
 <p align="center">
   <img src="./doc/images/cover.png" alt="Cover @aziontech/webkit repository"/>
@@ -36,6 +34,8 @@ or add in the package.json file inside your project in the dependencies key.
 
 ## Folder Structure
 
+To Do
+
 **./src/**
 - **index.js:**
   -  where all templates blocks or components are exported;
@@ -56,7 +56,7 @@ We are using Storybook to organize our template blocks components.
 
 ``` javascript
 npm run storybook
-npm run build-storybook
+npm run build:storybook
 ```
 
 Probabily will enable a url: `http://localhost:6006` or `6007` if before not available;
