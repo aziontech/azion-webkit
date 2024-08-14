@@ -34,6 +34,7 @@
 
 <script setup>
 import Quote from '../quote/Quote.vue';
+import Carousel from 'primevue/carousel'
 
 defineProps({
   isCarousel: {
