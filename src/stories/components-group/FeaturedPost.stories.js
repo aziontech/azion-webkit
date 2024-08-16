@@ -2,7 +2,7 @@ import FeaturedPost from '../../templates/featuredpost';
 import data from '../../mock/featuredPost.js'
 
 export default {
-  title: '2. Components Group/Featured Post',
+  title: 'Components Group/Featured Post',
   component: FeaturedPost,
   tags: ['autodocs'],
   argTypes: {

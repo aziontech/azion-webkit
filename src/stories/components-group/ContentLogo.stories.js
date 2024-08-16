@@ -1,7 +1,7 @@
 import ContentLogo from "../../templates/contentlogo"
 
 export default {
-  title: '2. Components Group/Content Logo',
+  title: 'Components Group/Content Logo',
   component: ContentLogo,
   tags: ['autodocs'],
   argTypes: {

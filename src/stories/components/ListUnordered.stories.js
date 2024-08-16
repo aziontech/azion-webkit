@@ -1,7 +1,7 @@
 import ListUnordered from "../../templates/listunordered"
 
 export default {
-  title: '2.1 Components/ListUnordered',
+  title: 'Components/ListUnordered',
   component: ListUnordered,
   tags: ['autodocs'],
   argTypes: {

@@ -1,7 +1,7 @@
 import Tile from '../../templates/tile'
 
 export default {
-  title: '2.1 Components/Tile',
+  title: 'Components/Tile',
   component: Tile,
   tags: ['autodocs'],
   argTypes: {

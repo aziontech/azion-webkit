@@ -2,7 +2,7 @@ import ContentSection from "../../templates/contentsection"
 import LinkButton from '../../templates/linkbutton';
 
 export default {
-  title: '2. Components Group/ContentSectionBlock',
+  title: 'Components Group/ContentSectionBlock',
   component: ContentSection,
   tags: ['autodocs'],
   argTypes: {

@@ -1,7 +1,7 @@
 import Community from '../../templates/community'
 
 export default {
-  title: '2. Components Group/Community',
+  title: 'Components Group/Community',
   component: Community,
   tags: ['autodocs'],
   argTypes: {

@@ -2,7 +2,7 @@ import NewsletterWide from '../../../../dist/newsletterwide';
 import data from '../../../mock/newsletterSingleLine';
 
 export default {
-  title: '2. Components Group/Newsletter/Wide',
+  title: 'Components Group/Newsletter/Wide',
   component: NewsletterWide,
   tags: ['autodocs'],
   argTypes: {}

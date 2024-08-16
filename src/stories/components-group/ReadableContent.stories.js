@@ -1,7 +1,7 @@
 import ReadableContent from "../../templates/readablecontent"
 
 export default {
-  title: '2. Components Group/ReadableContent',
+  title: 'Components Group/ReadableContent',
   component: ReadableContent,
   tags: ['autodocs'],
 };

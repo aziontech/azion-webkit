@@ -1,7 +1,7 @@
 import SelectLang from "../../templates/selectlang"
 
 export default {
-  title: '2.1 Components/SelectLang',
+  title: 'Components/SelectLang',
   component: SelectLang,
   tags: ['autodocs'],
   argTypes: {

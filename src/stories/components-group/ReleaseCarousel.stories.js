@@ -1,7 +1,7 @@
 import CardReleaseCarousel from "../../templates/releasecarousel"
 
 export default {
-  title: '2. Components Group/Release Carousel',
+  title: 'Components Group/Release Carousel',
   component: CardReleaseCarousel,
   tags: ['autodocs'],
   argTypes: {

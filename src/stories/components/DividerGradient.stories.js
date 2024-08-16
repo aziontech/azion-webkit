@@ -1,7 +1,7 @@
 import DividerGradient from "../../templates/dividergradient"
 
 export default {
-  title: '2.1 Components/DividerGradient',
+  title: 'Components/DividerGradient',
   component: DividerGradient,
   tags: ['autodocs'],
 }

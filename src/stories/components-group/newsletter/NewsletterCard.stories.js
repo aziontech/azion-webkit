@@ -2,7 +2,7 @@ import NewsletterCard from '../../../../dist/newslettercard';
 import data from '../../../mock/newsletterSingleLine';
 
 export default {
-  title: '2. Components Group/Newsletter/Card',
+  title: 'Components Group/Newsletter/Card',
   component: NewsletterCard,
   tags: ['autodocs'],
   argTypes: {}

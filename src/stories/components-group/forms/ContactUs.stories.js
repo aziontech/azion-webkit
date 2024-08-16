@@ -1,7 +1,7 @@
 import BePartner from '../../../../dist/formcontactus'
 
 export default {
-  title: '2. Components Group/Forms/Contact Us',
+  title: 'Components Group/Forms/Contact Us',
   component: BePartner,
   tags: ['autodocs'],
   argTypes: {

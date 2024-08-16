@@ -1,7 +1,7 @@
 import SelectTheme from "../../templates/selecttheme"
 
 export default {
-  title: '2.1 Components/SelectTheme',
+  title: 'Components/SelectTheme',
   component: SelectTheme,
   tags: ['autodocs'],
   argTypes: {

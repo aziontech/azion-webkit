@@ -1,7 +1,7 @@
 import CardBlog from '../../../templates/cardblog'
 
 export default {
-  title: '2. Components Group/Cards/Blog',
+  title: 'Components Group/Cards/Blog',
   component: CardBlog,
   tags: ['autodocs'],
   argTypes: {

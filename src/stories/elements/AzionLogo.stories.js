@@ -1,7 +1,7 @@
 import AzionLogo from '../../templates/azionlogo'
 
 export default {
-  title: '3. Elements/svgs/AzionLogo',
+  title: 'Elements/svgs/AzionLogo',
   component: AzionLogo,
   tags: ['autodocs'],
   argTypes: {

@@ -1,7 +1,7 @@
 import AzionSquareGradient from '../../templates/azionsquaregradient'
 
 export default {
-  title: '3. Elements/css/AzionSquareGradient',
+  title: 'Elements/css/AzionSquareGradient',
   component: AzionSquareGradient,
   tags: ['autodocs'],
   argTypes: {

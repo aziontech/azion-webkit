@@ -1,7 +1,7 @@
 import BigNumbers from '../../templates/bignumbers'
 
 export default {
-  title: '2. Components Group/Big Numbers',
+  title: 'Components Group/Big Numbers',
   component: BigNumbers,
   tags: ['autodocs'],
   argTypes: {

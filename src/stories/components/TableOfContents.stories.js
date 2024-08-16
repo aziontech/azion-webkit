@@ -1,7 +1,7 @@
 import TableOfContents from "../../templates/tableofcontents"
 
 export default {
-  title: '2.1 Components/TableOfContents',
+  title: 'Components/TableOfContents',
   component: TableOfContents,
   tags: ['autodocs'],
   argTypes: {

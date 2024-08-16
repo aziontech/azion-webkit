@@ -19,7 +19,7 @@ setup((app) => {
 export const parameters = {
   options: {
     storySort: {
-      order: ['Blocks', '2. Components Group', '2.1 Components', '3. Elements'],
+      order: ['Blocks', 'Components Group', 'Components', 'Elements'],
     },
   },
   backgrounds: {

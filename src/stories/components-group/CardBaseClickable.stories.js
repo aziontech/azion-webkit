@@ -1,7 +1,7 @@
 import CardBaseClickable from "../../templates/cardbaseclickable"
 
 export default {
-  title: '2. Components Group/CardBaseClickable',
+  title: 'Components Group/CardBaseClickable',
   component: CardBaseClickable,
   tags: ['autodocs'],
   argTypes: {
