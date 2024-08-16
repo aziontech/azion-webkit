@@ -17,6 +17,11 @@ setup((app) => {
 });
 
 export const parameters = {
+  options: {
+    storySort: {
+      order: ['Blocks', '2. Components Group', '2.1 Components', '3. Elements'],
+    },
+  },
   backgrounds: {
     options: {
       'azion-dark': {
@@ -34,7 +39,14 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/i
     }
-  }
+  },
+  html: {
+    prettier: {
+      tabWidth: 4,
+      useTabs: false,
+      htmlWhitespaceSensitivity: "strict",
+    },
+  },
 }
 
 export const decorators = [
