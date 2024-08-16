@@ -63,10 +63,10 @@ const HeroDisplay = `
       <div class="flex justify-center">
         <ImageSwitcher>
           <template #darkImage>
-            <img src="src/stories/assets/dark/illustration-demo.svg" />
+            <img src="public/assets/dark/illustration-demo.svg" />
           </template>
           <template #lightImage>
-            <img src="src/stories/assets/light/illustration-demo.svg" />
+            <img src="public/assets/light/illustration-demo.svg" />
           </template>
         </ImageSwitcher>
       </div>
