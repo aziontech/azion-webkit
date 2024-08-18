@@ -1,4 +1,6 @@
 <h1 align="center">azion-webkit</h1>
+![production](https://github.com/aziontech/azion-webkit/actions/workflows/release.yml/badge.svg)
+![storybook production](https://github.com/aziontech/azion-webkit/actions/workflows/storybook.yml/badge.svg)
 
 <p align="center">
   <img src="./doc/images/cover.png" alt="Cover @aziontech/webkit repository"/>
