@@ -1,5 +1,5 @@
 
-name: Publish Package
+name: Production azion-webkit
 permissions: write-all
 on:
   repository_dispatch:
