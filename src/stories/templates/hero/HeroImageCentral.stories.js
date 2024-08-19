@@ -3,7 +3,7 @@ import LinkButton from '../../../templates/linkbutton'
 import ImageSwitcher from '../../../templates/themeawareimageswitcher'
 
 export default {
-  title: 'Blocks/Hero Image Central',
+  title: 'Blocks/Hero/ Image Central',
   tags: ['autodocs'],
 }
 
