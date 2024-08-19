@@ -20,7 +20,7 @@
     background: radial-gradient(600px at 20px 464px, rgba(111, 111, 111, 0.14), transparent 60%);
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(243,101,43, .2);
+    box-shadow: 0 0 2px rgba(243,101,43, .4), 0 0 14px rgba(243,101,43, .2);
   }
 
   /* Inner Globe */
