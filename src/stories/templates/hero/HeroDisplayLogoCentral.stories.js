@@ -3,7 +3,7 @@ import LinkButton from '../../../templates/linkbutton'
 import ContentLogoBlock from '../../../templates/contentlogo'
 
 export default {
-  title: 'Blocks/Hero Display Logo Central',
+  title: 'Blocks/Hero/ Display Logo Central',
   tags: ['autodocs'],
 }
 

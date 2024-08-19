@@ -4,7 +4,7 @@ import ContentLogoBlock from '../../../templates/contentlogo'
 import ImageSwitcher from '../../../templates/themeawareimageswitcher'
 
 export default {
-  title: 'Blocks/Hero Right Image with Logo',
+  title: 'Blocks/Hero/ Right Image with Logo',
   tags: ['autodocs'],
 }
 
@@ -48,7 +48,7 @@ const HeroDisplay = `
   >
     <template #actions>
       <div class="flex flex-col md:flex-row lg:justify-start justify-center gap-2 w-full">
-        <LinkButton v-for="button in args.CTA" v-bind="button" />
+        <LinkButton v-for="button in args.CTA" v-bind="button" class="w-full md:w-fit" />
       </div>
     </template>
     <template #content>
@@ -63,10 +63,10 @@ const HeroDisplay = `
       <div class="flex justify-center">
         <ImageSwitcher>
           <template #darkImage>
-            <img src="public/assets/dark/illustration-demo.svg" />
+            <img src="/assets/dark/illustration-demo.svg" />
           </template>
           <template #lightImage>
-            <img src="public/assets/light/illustration-demo.svg" />
+            <img src="/assets/light/illustration-demo.svg" />
           </template>
         </ImageSwitcher>
       </div>
