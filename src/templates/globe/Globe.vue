@@ -6,43 +6,76 @@
   </div>
 </template>
 
-<style>
+<style scss>
   .globe-container {
-    perspective: 1000px;
+    perspective: 300px;
   }
 
   .globe {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background: radial-gradient(600px at 20px 464px, rgba(111, 111, 111, 0.14), transparent 60%);
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 2px rgba(243,101,43, .4), 0 0 14px rgba(243,101,43, .2);
+    transform: rotate(17.5deg);
+    transform-style: preserve-3d;
   }
 
   .globe-inner {
     width: 100%;
     height: 100%;
-    background: url('../../assets/images/globe/map-dark@2x.png');
     background-size: 600px;
+    background-repeat: repeat-x;
     border-radius: 50%;
-    transform-style: preserve-3d;
     animation: rotate 36.5s infinite linear;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5) inset;
+  }
+
+  .azion-dark {
+    .globe {
+      background: radial-gradient(600px at 20px 464px, rgba(1, 1, 1, .4), transparent 60%);
+      box-shadow: 0 0 2px rgba(243,101,43, .35), 0 0 40px rgba(243,101,43, .2);
+    }
+
+    .globe-inner {
+      background-image: v-bind(darkImg);
+      box-shadow: 0 0 60px rgba(0, 0, 0, 1) inset;
+    }
+  }
+
+  .azion-light {
+    .globe {
+      box-shadow: 0 0 2px rgba(243,101,43, .5), 0 0 40px rgba(243,101,43, .3);
+      background: radial-gradient(600px at 20px 464px, rgba(1, 1, 1, .4), transparent 60%);
+    }
+
+    .globe-inner {
+      background-image: v-bind(lightImg);
+      box-shadow: 0 0 60px rgba(0, 0, 0, .2) inset;
+    }
   }
 
   @keyframes rotate {
     0% {
-      background-position: 0 -52px;
+      background-position: 0 -42px;
     } 100% {
-      background-position: -600px -52px;
+      background-position: -600px -42px;
     }
   }
 </style>
 
 <script setup>
-  // import { ref } from 'vue';
-
-  // const props = defineProps({});
+  const props = defineProps({
+    lightImage: {
+      type: String,
+      required: false,
+      default: 'https://www.azion.com/assets/images/components/globe/map-light@2x.png'
+    },
+    darkImage: {
+      type: String,
+      required: false,
+      default: 'https://www.azion.com/assets/images/components/globe/map-dark@2x.png'
+    }
+  });
+  const lightImg = `url(${props.lightImage})`;
+  const darkImg = `url(${props.darkImage})`;
 </script>
