@@ -30,9 +30,26 @@ const template = `
   </div>
 </div>`
 
+const globeTemplate = `<Globe />`
+
 const Template = () => ({
   components: { Globe, Arrow },
   template: template
 })
 
+const Template2 = () => ({
+  components: { Globe },
+  template: globeTemplate
+})
+
 export const Default = Template.bind({})
+Default.parameters = {
+  docs: {
+    source: { code: template } },
+};
+
+export const OnlyGlobe = Template2.bind({})
+OnlyGlobe.parameters = {
+  docs: {
+    source: { code: globeTemplate } },
+};
