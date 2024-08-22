@@ -9,6 +9,7 @@
   .arrow-content {
     display: block;
     min-width: 50px;
+    width: v-bind(width);
     height: 2px;
     border: v-bind(borderStyle);
     position: relative;
@@ -115,10 +116,10 @@
     width: {
       type: String,
       required: false,
-      default: '100%'
+      default: 'auto'
     }
   });
 
-
   const borderStyle = `${props.borderStyle} 1px #F3652B`;
+  const width = props.width;
 </script>

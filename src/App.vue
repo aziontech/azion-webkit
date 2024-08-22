@@ -5,7 +5,7 @@
         <span class="flex justify-center items-center inline-block border surface-border rounded w-14 h-14">
           <i class="pi pi-cloud text-color-secondary"></i>
         </span>
-        <Arrow direction="left" borderStyle="dotted" />
+        <Arrow direction="left" borderStyle="dotted" width="200px"/>
       </li>
 
       <li class="flex">
