@@ -92,7 +92,14 @@
     .arrow-content {
       .shadow {
         background: rgb(255,255,255);
-        background: linear-gradient(266deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+
+        &.right {
+          background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        }
+
+        &.left {
+          background: linear-gradient(266deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        }
       }
     }
   }
