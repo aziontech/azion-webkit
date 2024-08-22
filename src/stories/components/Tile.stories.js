@@ -17,7 +17,7 @@ const Template = (args) => ({
   setup() {
     return { args }
   },
-  template: `<Tile v-bing="args"> 1 </Tile>`
+  template: `<Tile v-bind="args"> 1 </Tile>`
 })
 
 const TemplateIcon = (args) => ({
@@ -25,7 +25,7 @@ const TemplateIcon = (args) => ({
   setup() {
     return { args }
   },
-  template: `<Tile v-bing="args"> <i class="text-xs pi pi-check" /> </Tile>`
+  template: `<Tile v-bind="args"> <i class="text-xs pi pi-check" /> </Tile>`
 })
 
 export const Default = Template.bind({})
