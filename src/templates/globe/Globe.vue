@@ -8,12 +8,12 @@
 
 <style scss>
   .globe-container {
-    perspective: 300px;
+    perspective: 400px;
   }
 
   .globe {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     position: relative;
     overflow: hidden;
@@ -24,7 +24,7 @@
   .globe-inner {
     width: 100%;
     height: 100%;
-    background-size: 600px;
+    background-size: 800px;
     background-repeat: repeat-x;
     border-radius: 50%;
     animation: rotate 36.5s infinite linear;
@@ -32,7 +32,7 @@
 
   .azion-dark {
     .globe {
-      background: radial-gradient(600px at 20px 464px, rgba(1, 1, 1, .4), transparent 60%);
+      background: radial-gradient(800px at 20px 464px, rgba(1, 1, 1, .4), transparent 60%);
       box-shadow: 0 0 2px rgba(243,101,43, .35), 0 0 40px rgba(243,101,43, .2);
     }
 
@@ -45,7 +45,7 @@
   .azion-light {
     .globe {
       box-shadow: 0 0 2px rgba(243,101,43, .5), 0 0 40px rgba(243,101,43, .3);
-      background: radial-gradient(600px at 20px 464px, rgba(1, 1, 1, .4), transparent 60%);
+      background: radial-gradient(800px at 20px 464px, rgba(1, 1, 1, .4), transparent 60%);
     }
 
     .globe-inner {
@@ -58,7 +58,7 @@
     0% {
       background-position: 0 -42px;
     } 100% {
-      background-position: -600px -42px;
+      background-position: -800px -42px;
     }
   }
 </style>

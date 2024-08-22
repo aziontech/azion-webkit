@@ -74,15 +74,21 @@
   .azion-dark {
     .arrow-content {
       .shadow {
-        background: rgb(17,17,17);
+        background: rgb(23, 23, 23);
 
 
         &.right {
-          background: linear-gradient(90deg, rgba(17,17,17,1) 0%, rgba(17,17,17,0.013064600840336116) 100%);
+          background:linear-gradient(
+            90deg, rgba(23, 23, 23, 1) 0%,
+            rgba(23, 23, 23, 0.013064600840336116) 100%
+          );
         }
 
         &.left {
-          background: linear-gradient(266deg, rgba(17,17,17,1) 0%, rgba(17,17,17,0.013064600840336116) 100%);
+          background: linear-gradient(
+            266deg, rgba(23, 23, 23, 1) 0%,
+            rgba(23, 23, 23, 0.013064600840336116) 100%
+          );
         }
       }
     }
@@ -91,14 +97,20 @@
   .azion-light {
     .arrow-content {
       .shadow {
-        background: rgb(255,255,255);
+        background: rgb(255, 255, 255);
 
         &.right {
-          background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+          background: linear-gradient(
+            90deg, rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0) 100%
+          );
         }
 
         &.left {
-          background: linear-gradient(266deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+          background: linear-gradient(
+            266deg, rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0) 100%
+          );
         }
       }
     }
