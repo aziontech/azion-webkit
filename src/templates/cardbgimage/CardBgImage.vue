@@ -32,7 +32,7 @@ defineProps({
 
 <style scoped>
 .gradient {
-    background: linear-gradient(to bottom, var(--surface-100) 0%, transparent 80%),
-                linear-gradient(to top, var(--surface-100) 30%, transparent 100%);
+    background: linear-gradient(to bottom, var(--surface-200) 0%, transparent 80%),
+                linear-gradient(to top, var(--surface-200) 30%, transparent 100%);
 }
 </style>
