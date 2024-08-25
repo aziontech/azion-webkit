@@ -37,7 +37,8 @@
             >
               <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px] surface-ground">
                 <i class="w-[40px] h-[40px]">
-                  <IconAstro />
+                  <IconAstroDark class="hide-on-light" />
+                  <IconAstroLight class="hide-on-dark" />
                 </i>
               </span>
             </a>
@@ -168,7 +169,8 @@
 
 <script setup>
   import Card from 'primevue/card';
-  import IconAstro from '../../assets/icons/frameworks/Astro.vue';
+  import IconAstroDark from '../../assets/icons/frameworks/AstroDark.vue';
+  import IconAstroLight from '../../assets/icons/frameworks/AstroLight.vue';
   import IconAngular from '../../assets/icons/frameworks/Angular.vue';
   import IconOpenIa from '../../assets/icons/frameworks/OpenIa.vue';
   import IconVue from '../../assets/icons/frameworks/Vue.vue';
