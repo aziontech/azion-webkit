@@ -47,7 +47,7 @@
       top: -4.5px;
 
       &.right {
-        right: -2px;
+        right: 0px;
         transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
       }
