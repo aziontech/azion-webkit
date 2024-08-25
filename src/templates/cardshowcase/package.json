@@ -1,0 +1,7 @@
+{
+  "main": "./cardshowcase.js",
+  "types": "./CardShowCase.d.ts",
+  "browser": {
+    "./sfc": "./CardShowCase.vue"
+  }
+}
