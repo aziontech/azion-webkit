@@ -2,6 +2,7 @@
  *
  * cardshowcase
  *
+ * - [Live Demo](https://primevue.org/avatar)
  *
  * @module cardshowcase
  */
@@ -12,6 +13,7 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
  * Defines valid properties in cardshowcase component.
  */
 export interface CardShowCaseProps {
+  title: string;
 }
 
 /**

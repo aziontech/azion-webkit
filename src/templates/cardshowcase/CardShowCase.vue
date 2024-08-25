@@ -6,81 +6,81 @@
     }"
   >
     <template #content>
-        <div class="flex flex-col gap-5">
-          <div>
-            <p class="font-medium">
-              <small>
-                Browse Integrations
-              </small>
-            </p>
+      <div class="flex flex-col gap-5">
+        <div>
+          <p class="font-medium">
+            <small>
+              {{ props.title }}
+            </small>
+          </p>
+        </div>
+
+        <ul class="border-icons flex flex-row gap-3">
+          <li>
+            <a
+              class="block relative rounded w-14 h-14"
+              href="https://openai.com/"
+              target="_blank"
+            >
+              <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px] surface-ground">
+                <i class="w-[40px] h-[40px]">
+                  <IconOpenIa />
+                </i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="block relative rounded w-14 h-14"
+              href="https://www.astro.build"
+              target="_blank"
+            >
+              <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px] surface-ground">
+                <i class="w-[40px] h-[40px]">
+                  <IconAstro />
+                </i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="block relative rounded w-14 h-14"
+              href="https://angular.dev/"
+              target="_blank"
+            >
+              <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px] surface-ground">
+                <i class="w-[40px] h-[40px]">
+                  <IconAngular />
+                </i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="block relative rounded w-14 h-14"
+              href="https://vuejs.org/"
+              target="_blank"
+            >
+              <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px] surface-ground">
+                <i class="w-[40px] h-[40px]">
+                  <IconVue />
+                </i>
+              </span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="content-skeleton flex flex-col gap-3">
+          <div class="flex justify-between">
+            <div class="item-skeleton w-[120px] h-[16px]"></div>
+            <div class="item-skeleton w-[80px] h-[16px]"></div>
           </div>
-
-          <ul class="border-icons flex flex-row gap-3">
-            <li>
-              <a
-                class="block relative rounded w-14 h-14"
-                href="https://openai.com/"
-                target="_blank"
-              >
-                <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px] surface-ground">
-                  <i class="w-[40px] h-[40px]">
-                    <IconOpenIa />
-                  </i>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                class="block relative rounded w-14 h-14"
-                href="https://www.astro.build"
-                target="_blank"
-              >
-                <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px] surface-ground">
-                  <i class="w-[40px] h-[40px]">
-                    <IconAstro />
-                  </i>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                class="block relative rounded w-14 h-14"
-                href="https://angular.dev/"
-                target="_blank"
-              >
-                <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px] surface-ground">
-                  <i class="w-[40px] h-[40px]">
-                    <IconAngular />
-                  </i>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                class="block relative rounded w-14 h-14"
-                href="https://vuejs.org/"
-                target="_blank"
-              >
-                <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px] surface-ground">
-                  <i class="w-[40px] h-[40px]">
-                    <IconVue />
-                  </i>
-                </span>
-              </a>
-            </li>
-          </ul>
-
-          <div class="content-skeleton flex flex-col gap-3">
-            <div class="flex justify-between">
-              <div class="item-skeleton w-[120px] h-[16px]"></div>
-              <div class="item-skeleton w-[80px] h-[16px]"></div>
-            </div>
-            <div class="flex justify-between">
-              <div class="item-skeleton w-[228px] h-[16px]"></div>
-              <div class="item-skeleton w-[80px] h-[16px]"></div>
-            </div>
+          <div class="flex justify-between">
+            <div class="item-skeleton w-[228px] h-[16px]"></div>
+            <div class="item-skeleton w-[80px] h-[16px]"></div>
           </div>
         </div>
+      </div>
     </template>
   </Card>
 </template>
@@ -105,6 +105,7 @@
       .border-icons {
         gap: 0px !important;
 
+        li:nth-child(1) { left: 0rem; }
         li:nth-child(2) { left: -1rem; }
         li:nth-child(3) { left: -2rem; }
         li:nth-child(4) { left: -3rem; }
@@ -171,5 +172,12 @@
   import IconAngular from '../../assets/icons/frameworks/Angular.vue';
   import IconOpenIa from '../../assets/icons/frameworks/OpenIa.vue';
   import IconVue from '../../assets/icons/frameworks/Vue.vue';
+
+  const props = defineProps({
+    title: {
+      type: String,
+      default: 'Browse Integrations'
+    }
+  })
 </script>
 
