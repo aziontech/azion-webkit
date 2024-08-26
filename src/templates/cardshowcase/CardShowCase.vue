@@ -20,6 +20,8 @@
             <a
               class="block relative rounded w-14 h-14"
               href="https://openai.com/"
+              title="Open IA"
+              aria-label="Open IA Website"
               target="_blank"
             >
               <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px]">
@@ -33,6 +35,8 @@
             <a
               class="block relative rounded w-14 h-14"
               href="https://www.astro.build"
+              title="Astro Build"
+              aria-label="Astro Build Website"
               target="_blank"
             >
               <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px]">
@@ -47,6 +51,8 @@
             <a
               class="block relative rounded w-14 h-14"
               href="https://angular.dev/"
+              title="AngularJS"
+              aria-label="AngularJS Website"
               target="_blank"
             >
               <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px]">
@@ -60,7 +66,9 @@
             <a
               class="block relative rounded w-14 h-14"
               href="https://vuejs.org/"
+              title="VueJS"
               target="_blank"
+              aria-label="VueJS Website"
             >
               <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px]">
                 <i class="w-[40px] h-[40px]">
