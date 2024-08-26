@@ -3,7 +3,7 @@
     :pt="{
       root: { class: ['card-bg-gradient rounded relative w-full h-[218px] shadow-none'] },
       body: { class: ['rounded surface-ground absolute h-[216px] left-[1px] top-[1px] p-3 md:p-6'] }
-    }"1
+    }"
   >
     <template #content>
       <div class="flex flex-col gap-4">
@@ -22,7 +22,7 @@
               href="https://openai.com/"
               target="_blank"
             >
-              <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px] surface-ground">
+              <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px]">
                 <i class="w-[40px] h-[40px]">
                   <IconOpenIa />
                 </i>
@@ -35,7 +35,7 @@
               href="https://www.astro.build"
               target="_blank"
             >
-              <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px] surface-ground">
+              <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px]">
                 <i class="w-[40px] h-[40px]">
                   <IconAstroDark class="hide-on-light" />
                   <IconAstroLight class="hide-on-dark" />
@@ -49,7 +49,7 @@
               href="https://angular.dev/"
               target="_blank"
             >
-              <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px] surface-ground">
+              <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px]">
                 <i class="w-[40px] h-[40px]">
                   <IconAngular />
                 </i>
@@ -62,7 +62,7 @@
               href="https://vuejs.org/"
               target="_blank"
             >
-              <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px] surface-ground">
+              <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px]">
                 <i class="w-[40px] h-[40px]">
                   <IconVue />
                 </i>
@@ -90,6 +90,32 @@
 <style scss>
   .p-card-body {
     @apply w-[calc(100%-2px)];
+  }
+
+  /* used to tailwind group hover */
+  .group {
+    &:hover {
+      .card-bg-gradient {
+        box-shadow: 1px 1px 0px var(--surface-border) !important;
+
+        .border-icons {
+          @media screen and (min-width: 1280px){
+            gap: 0px !important;
+
+            li:nth-child(1) { left: 0rem; }
+            li:nth-child(2) { left: -1rem; }
+            li:nth-child(3) { left: -2rem; }
+            li:nth-child(4) { left: -3rem; }
+            li:nth-child(5) { left: -4rem; }
+          }
+
+          a {
+            background-color: #F3652B;
+            background: linear-gradient(90deg, #F3652B 0%, var(--surface-ground) 100%);
+          }
+        }
+      }
+    }
   }
 
   .card-bg-gradient {
@@ -121,6 +147,30 @@
         a {
           background-color: #F3652B;
           background: linear-gradient(90deg, #F3652B 0%, var(--surface-ground) 100%);
+        }
+      }
+    }
+  }
+
+  .azion.azion-light {
+    .border-icons {
+      li {
+        a {
+          span {
+            background-color: var(--surface-50);
+          }
+        }
+      }
+    }
+  }
+
+  .azion.azion-dark {
+    .border-icons {
+      li {
+        a {
+          span {
+            background-color: var(--surface-ground);
+          }
         }
       }
     }
