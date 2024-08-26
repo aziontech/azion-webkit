@@ -1,21 +1,21 @@
 <template>
   <Card
     :pt="{
-      root: { class: ['card-bg-gradient rounded relative w-[378px] h-[218px] shadow-none'] },
-      body: { class: ['rounded surface-ground absolute w-[376px] h-[216px] left-[1px] top-[1px] p-6'] }
-    }"
+      root: { class: ['card-bg-gradient rounded relative w-full h-[218px] shadow-none'] },
+      body: { class: ['rounded surface-ground absolute h-[216px] left-[1px] top-[1px] p-3 md:p-6'] }
+    }"1
   >
     <template #content>
-      <div class="flex flex-col gap-5">
+      <div class="flex flex-col gap-4">
         <div>
-          <p class="font-medium">
+          <p class="font-medium" style="line-height: 100%;">
             <small>
               {{ props.title }}
             </small>
           </p>
         </div>
 
-        <ul class="border-icons flex flex-row gap-3">
+        <ul class="border-icons flex flex-row gap-1 md:gap-2 lg:gap-3 overflow-x-auto py-2">
           <li>
             <a
               class="block relative rounded w-14 h-14"
@@ -72,12 +72,12 @@
         </ul>
 
         <div class="content-skeleton flex flex-col gap-3">
-          <div class="flex justify-between">
+          <div class="flex justify-between gap-3 lg:gap-8">
             <div class="item-skeleton w-[120px] h-[16px]"></div>
             <div class="item-skeleton w-[80px] h-[16px]"></div>
           </div>
-          <div class="flex justify-between">
-            <div class="item-skeleton w-[228px] h-[16px]"></div>
+          <div class="flex justify-between gap-3 lg:gap-8">
+            <div class="item-skeleton w-full h-[16px]"></div>
             <div class="item-skeleton w-[80px] h-[16px]"></div>
           </div>
         </div>
@@ -88,6 +88,10 @@
 
 <!-- Card Gradient BG/BORDER -->
 <style scss>
+  .p-card-body {
+    @apply w-[calc(100%-2px)];
+  }
+
   .card-bg-gradient {
     transition: all 1s ease-in-out !important;
     background-color: var(--surface-border);
@@ -104,13 +108,15 @@
   .card-bg-gradient {
     &:hover {
       .border-icons {
-        gap: 0px !important;
+        @media screen and (min-width: 1280px){
+          gap: 0px !important;
 
-        li:nth-child(1) { left: 0rem; }
-        li:nth-child(2) { left: -1rem; }
-        li:nth-child(3) { left: -2rem; }
-        li:nth-child(4) { left: -3rem; }
-        li:nth-child(5) { left: -4rem; }
+          li:nth-child(1) { left: 0rem; }
+          li:nth-child(2) { left: -1rem; }
+          li:nth-child(3) { left: -2rem; }
+          li:nth-child(4) { left: -3rem; }
+          li:nth-child(5) { left: -4rem; }
+        }
 
         a {
           background-color: #F3652B;
@@ -169,11 +175,11 @@
 
 <script setup>
   import Card from 'primevue/card';
-  import IconAstroDark from '../../assets/icons/frameworks/AstroDark.vue';
-  import IconAstroLight from '../../assets/icons/frameworks/AstroLight.vue';
-  import IconAngular from '../../assets/icons/frameworks/Angular.vue';
-  import IconOpenIa from '../../assets/icons/frameworks/OpenIa.vue';
-  import IconVue from '../../assets/icons/frameworks/Vue.vue';
+  import IconAstroDark from '../src/assets/icons/frameworks/AstroDark.vue';
+  import IconAstroLight from '../src/assets/icons/frameworks/AstroLight.vue';
+  import IconAngular from '../src/assets/icons/frameworks/Angular.vue';
+  import IconOpenIa from '../src/assets/icons/frameworks/OpenIa.vue';
+  import IconVue from '../src/assets/icons/frameworks/Vue.vue';
 
   const props = defineProps({
     title: {
