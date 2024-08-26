@@ -3,7 +3,7 @@
     :class="[
       { 'hover:border-[var(--primary-color)]' : hover == 'default' },
       { 'hover:bg-[var(--surface-0)] hover:border-[var(--primary-color)]' : hover == 'outlined' },
-      { 'hover:transform hover:-translate-y-6  transition-transform duration-300' : hover == 'slide-up'},
+      { 'hover:transform hover:-translate-y-6 transition-transform duration-300' : hover == 'slide-up'},
       { 'bg-[var(--surface-0)] surface-border focus:outline-[rgba(243,100,43,.624)]' : backgroundColor == 'outlined'},
       { 'bg-[var(--surface-50)] border-transparent focus:outline-[rgba(243,100,43,.624)]' : backgroundColor == 'shape'},
       { 'bg-[var(--surface-50)] border-[#F3652B] focus:outline-[rgba(243,100,43,.624)]' : backgroundColor == 'highlighted'},
