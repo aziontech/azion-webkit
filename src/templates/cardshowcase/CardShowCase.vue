@@ -21,6 +21,7 @@
               class="block relative rounded w-14 h-14"
               href="https://openai.com/"
               target="_blank"
+              aria-hidden="true"
             >
               <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px] surface-ground">
                 <i class="w-[40px] h-[40px]">
@@ -34,6 +35,7 @@
               class="block relative rounded w-14 h-14"
               href="https://www.astro.build"
               target="_blank"
+              aria-hidden="true"
             >
               <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px] surface-ground">
                 <i class="w-[40px] h-[40px]">
@@ -48,6 +50,7 @@
               class="block relative rounded w-14 h-14"
               href="https://angular.dev/"
               target="_blank"
+              aria-hidden="true"
             >
               <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px] surface-ground">
                 <i class="w-[40px] h-[40px]">
@@ -61,6 +64,7 @@
               class="block relative rounded w-14 h-14"
               href="https://vuejs.org/"
               target="_blank"
+              aria-hidden="true"
             >
               <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px] surface-ground">
                 <i class="w-[40px] h-[40px]">
