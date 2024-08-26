@@ -11,7 +11,7 @@
     min-width: 50px;
     width: v-bind(width);
     height: 2px;
-    border: v-bind(borderStyle);
+    border-top: v-bind(borderStyle);
     position: relative;
 
     /*
@@ -24,17 +24,9 @@
     .shadow {
       position: absolute;
       width: 100%;
-      height: 2.2px;
+      height: 1px;
       top: -1px;
       z-index: 2;
-
-      &.right {
-        left: -2px;
-      }
-
-      &.left {
-        right: -2px;
-      }
     }
 
     .arrow {
@@ -44,16 +36,16 @@
       padding: 4px;
       position: absolute;
       z-index: 1;
-      top: -4.5px;
+      top: -5px;
 
       &.right {
-        right: 0px;
+        right: -2px;
         transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
       }
 
       &.left {
-        left: 0;
+        left: -2px;
         transform: rotate(135deg);
         -webkit-transform: rotate(135deg);
       }
