@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<style scss>
+<style lang="scss">
   .globe-container {
     perspective: 400px;
   }

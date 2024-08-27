@@ -31,10 +31,15 @@
   <div class="px-container py-8">
     <!-- <CardShowCase /> -->
   </div>
+
+  <div class="px-container py-8">
+    <ConsoleIntegration />
+  </div>
 </template>
 
 <script setup>
   import Globe from './templates/globe/Globe.vue';
   import Arrow from './templates/arrow/Arrow.vue';
   // import CardShowCase from './templates/cardshowcase/CardShowCase.vue';
+  import ConsoleIntegration from './templates/consoleintegration/ConsoleIntegration.vue';
 </script>

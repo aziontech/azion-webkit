@@ -95,7 +95,7 @@
 </template>
 
 <!-- Card Gradient BG/BORDER -->
-<style scss>
+<style lang="scss">
   .p-card-body {
     @apply w-[calc(100%-2px)];
   }
@@ -138,7 +138,7 @@
 </style>
 
 <!-- Framework Icons -->
-<style scss>
+<style lang="scss">
   .card-bg-gradient {
     &:hover {
       .border-icons {
@@ -207,7 +207,7 @@
 </style>
 
 <!-- SKELLETON COMP -->
-<style scss>
+<style lang="scss">
   .item-skeleton {
     background-color: var(--surface-border);
   }
