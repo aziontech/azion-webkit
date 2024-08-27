@@ -75,6 +75,8 @@
             </p>
           </div>
         </div>
+
+        <div class="shadow-bottom"></div>
       </div>
     </template>
   </Card>
@@ -128,6 +130,10 @@
           left: -20px;
           top: 10px;
         }
+
+        .shadow-bottom {
+          height: 220px;
+        }
       }
     }
   }
@@ -166,6 +172,20 @@
         left: -20px;
         top: 10px;
       }
+
+      .shadow-bottom {
+        height: 220px;
+      }
+    }
+
+    .shadow-bottom {
+      transition: all .8s ease-in-out !important;
+      position: absolute;
+      bottom: 76px;
+      left: 0;
+      width: 100%;
+      height: 110px;
+      background: linear-gradient(180deg, transparent 0%, var(--surface-ground) 100%);
     }
   }
 </style>
