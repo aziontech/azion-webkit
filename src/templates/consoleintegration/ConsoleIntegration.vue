@@ -9,12 +9,10 @@
       <div class="relative">
         <ul class="relative z-0">
           <li class="p-1 surface-border border-b">
-            <div class="border rounded surface-border w-28">
-              <p class="p-1 px-2 flex gap-2 items-center" style="font-size: .55rem">
+            <p class="p-1 flex gap-1 items-center" style="font-size: .55rem">
                 <i class="pi pi-search" style="font-size: .45rem"></i>
                 Search your apps
               </p>
-            </div>
           </li>
           <li class="p-1 surface-border border-b">
             <div class="content-skeleton flex flex-col gap-3">
@@ -25,7 +23,8 @@
               </div>
             </div>
           </li>
-          <li class="p-1 surface-border border-b" v-for="index in 10">
+
+          <li class="p-1 surface-border border-b" v-for="index in 12">
             <div class="content-skeleton flex flex-col gap-3">
               <div class="flex justify-between gap-3">
                 <div class="item-skeleton w-[40%] h-[12px]"></div>
@@ -39,41 +38,44 @@
                     height="12px"
                   />
                 </figure>
-                <div class="item-skeleton w-[35%] h-[12px]"></div>
+                <div class="item-skeleton w-[33%] h-[12px]"></div>
+                <div class="w-[14px] h-[14px] flex items-center relative -top-[4px] right-[4px]">...</div>
               </div>
             </div>
           </li>
         </ul>
 
-        <div class="absolute z-10 right-6 -top-[.725rem] w-full h-full flex flex-col justify-center items-end">
-          <p class="command flex justify-between leading-[34px] w-[180px] surface-ground border surface-border rounded py-2 px-4 font-mono text-xs relative z-30">
-            azion init
-            <Button icon="pi pi-copy" outlined @click="copy('azion init')"/>
-          </p>
-          <p class="command flex justify-between leading-[34px] w-[220px] surface-ground border surface-border rounded py-2 px-4 font-mono text-xs relative -top-[.4rem] z-20">
-            azion build
-            <Button icon="pi pi-copy" outlined @click="copy('azion build')"/>
-          </p>
-          <p class="command flex justify-between leading-[34px] w-[260px] surface-ground border surface-border rounded py-2 px-4 font-mono text-xs relative -top-[.8rem] z-10">
-            azion deploy
-            <Button icon="pi pi-copy" outlined @click="copy('azion deploy')"/>
-          </p>
+        <div class="min-w-[288px] absolute z-10 top-0 w-full h-full flex flex-row justify-end">
+          <div class="w-[104px] relative -right-[60px]">
+            <span class="icon icon-vscode relative z-20 flex justify-center items-center inline-block border surface-border rounded w-14 h-14 surface-ground">
+              <i class="w-[40px] h-[40px]">
+                <IconVSCode />
+              </i>
+            </span>
+            <span class="icon icon-terminal relative z-10 flex justify-center items-center inline-block border surface-border rounded w-14 h-14 surface-ground">
+              <i class="w-[33px] h-[33px]">
+                <IconTerminalLight class="hide-on-dark" />
+                <IconTerminalDark class="hide-on-light" />
+              </i>
+            </span>
+          </div>
+
+          <div class="flex flex-col justify-center items-end relative right-8">
+            <p class="command flex justify-between leading-[34px] w-[180px] surface-ground border surface-border rounded py-2 px-4 font-mono text-xs relative z-30">
+              azion init
+              <Button outlined icon="pi pi-copy" @click="copy('azion init')" />
+            </p>
+            <p class="command flex justify-between leading-[34px] w-[220px] surface-ground border surface-border rounded py-2 px-4 font-mono text-xs relative -top-[.4rem] z-20">
+              azion build
+              <Button outlined icon="pi pi-copy" @click="copy('azion build')" />
+            </p>
+            <p class="command flex justify-between leading-[34px] w-[260px] surface-ground border surface-border rounded py-2 px-4 font-mono text-xs relative -top-[.8rem] z-10">
+              azion deploy
+              <Button outlined icon="pi pi-copy" @click="copy('azion deploy')" />
+            </p>
+          </div>
         </div>
       </div>
-
-
-      <!--
-        <div class="content-skeleton flex flex-col gap-3">
-          <div class="flex justify-between gap-3 lg:gap-8">
-            <div class="item-skeleton w-[120px] h-[16px]"></div>
-            <div class="item-skeleton w-[80px] h-[16px]"></div>
-          </div>
-          <div class="flex justify-between gap-3 lg:gap-8">
-            <div class="item-skeleton w-full h-[16px]"></div>
-            <div class="item-skeleton w-[80px] h-[16px]"></div>
-          </div>
-        </div>
-      -->
     </template>
   </Card>
 </template>
@@ -84,38 +86,117 @@
     @apply w-[calc(100%-2px)];
   }
 
+  .azion.azion-light .group:hover {
+    .card-bg-gradient {
+      .command {
+        text-shadow: 0 0 8px var(--green-500);
+      }
+    }
+  }
+
+  .azion.azion-dark .group:hover {
+    .card-bg-gradient {
+      .command {
+        text-shadow: 0 0 8px var(--green-300);
+      }
+    }
+  }
+
   /* used to tailwind group hover */
   .group {
     &:hover {
       .card-bg-gradient {
-        box-shadow: 1px 1px 0px var(--surface-border) !important;
+        box-shadow: .0275rem -1px 0px var(--surface-border) !important;
+        left: -1rem;
+        background: linear-gradient(100deg, var(--surface-border) 0%, var(--surface-ground) 100%);
+
+        .icon {
+          transition: all 600ms ease-in-out !important;
+        }
+
+        .icon-vscode {
+          left: 38px;
+          top: 8px;
+        }
+
+        .icon-terminal {
+          left: -20px;
+          top: 10px;
+        }
       }
     }
   }
 
   .card-bg-gradient {
-    transition: all 1s ease-in-out !important;
+    left: 0;
+    transition: all 600ms ease-in-out !important;
     background-color: var(--surface-border);
-    background: linear-gradient(140deg, var(--surface-border) 30%, var(--surface-ground) 100%);
+    background: linear-gradient(100deg, var(--surface-border) 0%, var(--surface-ground) 100%);
+
+    .icon {
+      transition: all 600ms ease-in-out !important;
+    }
+
+    .icon-vscode {
+      left: 48px;
+      top: 18px;
+    }
+
+    .icon-terminal {
+      left: 0;
+      top: 0;
+    }
 
     &:hover {
-      box-shadow: 1px 1px 0px var(--surface-border) !important;
+      box-shadow: .0275rem -1px 0px var(--surface-border) !important;
+      left: -1rem;
+      // background: linear-gradient(180deg, var(--surface-border) 0%, var(--surface-ground) 100%);
+
+      .icon-vscode {
+        left: 38px;
+        top: 8px;
+      }
+
+      .icon-terminal {
+        left: -20px;
+        top: 10px;
+      }
     }
   }
 </style>
 
 <!-- CLI Commands -->
 <style lang="scss" scoped>
+  .command {
+    transition: all 400ms ease-in-out !important;
+  }
+
   .azion {
     &.azion-dark {
       .command {
         color: var(--green-300);
+      }
+
+      .card-bg-gradient {
+        &:hover {
+          .command {
+            text-shadow: 0 0 8px var(--green-300);
+          }
+        }
       }
     }
 
     &.azion-light {
       .command {
         color: var(--green-500);
+      }
+
+      .card-bg-gradient {
+        &:hover {
+          .command {
+            text-shadow: 0 0 8px var(--green-500);
+          }
+        }
       }
     }
   }
@@ -149,6 +230,14 @@
 <script setup>
   import Card from 'primevue/card';
   import Button from 'primevue/button';
+
+  // import IconVSCode from '../../assets/icons/tools/VSCode.vue';
+  // import IconTerminalLight from '../../assets/icons/tools/TerminalLight.vue';
+  // import IconTerminalDark from '../../assets/icons/tools/TerminalDark.vue';
+
+  import IconVSCode from '../src/assets/icons/tools/VSCode.vue';
+  import IconTerminalLight from '../src/assets/icons/tools/TerminalLight.vue';
+  import IconTerminalDark from '../src/assets/icons/tools/TerminalDark.vue';
 
   const props = defineProps({
     title: {

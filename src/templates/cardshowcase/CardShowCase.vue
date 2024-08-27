@@ -95,7 +95,7 @@
 </template>
 
 <!-- Card Gradient BG/BORDER -->
-<style lang="scss">
+<style lang="scss" scoped>
   .p-card-body {
     @apply w-[calc(100%-2px)];
   }
