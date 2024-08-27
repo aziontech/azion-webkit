@@ -1,8 +1,8 @@
 <template>
   <Card
     :pt="{
-      root: { class: ['card-bg-gradient rounded relative w-full h-[252px] shadow-none overflow-hidden'] },
-      body: { class: ['rounded surface-ground absolute h-[250px] left-[1px] top-[1px]'] }
+      root: { class: ['card-bg-gradient rounded relative w-full h-[250px] shadow-none overflow-hidden'] },
+      body: { class: ['rounded surface-ground absolute h-[248px] left-[1px] top-[1px]'] }
     }"
   >
     <template #content>
