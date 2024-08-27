@@ -81,11 +81,16 @@
 </template>
 
 <!-- Card Gradient BG/BORDER -->
-<style lang="scss">
-  .p-card-body {
-    @apply w-[calc(100%-2px)];
-  }
 
+<style lang="scss">
+  .card-bg-gradient {
+    .p-card-body {
+      @apply w-[calc(100%-2px)];
+    }
+  }
+</style>
+
+<style lang="scss" scoped>
   .azion.azion-light .group:hover {
     .card-bg-gradient {
       .command {

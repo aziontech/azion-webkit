@@ -94,12 +94,16 @@
   </Card>
 </template>
 
+<style lang="scss">
+  .card-bg-gradient {
+    .p-card-body {
+      @apply w-[calc(100%-2px)];
+    }
+  }
+</style>
+
 <!-- Card Gradient BG/BORDER -->
 <style lang="scss" scoped>
-  .p-card-body {
-    @apply w-[calc(100%-2px)];
-  }
-
   /* used to tailwind group hover */
   .group {
     &:hover {
@@ -127,7 +131,7 @@
   }
 
   .card-bg-gradient {
-    transition: all 1s ease-in-out !important;
+    transition: all 600ms ease-in-out !important;
     background-color: var(--surface-border);
     background: linear-gradient(140deg, var(--surface-border) 30%, var(--surface-ground) 100%);
 
