@@ -1,16 +1,31 @@
 <template>
-  <CardBaseClickable backgroundColor="shape" :grid="grid" :hover="hover" :link="card.link" :aria-label="card.ariaLabel">
+  <CardBaseClickable
+    backgroundColor="shape"
+    :grid="grid"
+    :hover="hover"
+    :link="card.link"
+    :aria-label="card.ariaLabel"
+  >
     <template #content>
       <div class="flex flex-col justify-between gap-8 grow">
         <div class="flex flex-col gap-8">
           <div class="flex flex-row justify-between">
             <Tag :icon="tag.icon" :value="tag.label" />
-            <Button outlined size="small" :icon="card.icon == 'external' ? 'pi pi-external-link' : 'pi pi-arrow-up-right'" :aria-label="card.ariaLabel" />
+            <Button
+              outlined
+              size="small"
+              :icon="card.icon == 'external' ? 'pi pi-external-link' : 'pi pi-arrow-up-right'"
+              :aria-label="card.ariaLabel"
+            />
           </div>
+
           <div class="flex flex-col gap-3">
-            <p class="text-xl max-w-lg leading-normal"> {{ title }} </p>
+            <p class="text-xl max-w-lg leading-normal">
+              {{ title }}
+            </p>
           </div>
         </div>
+
         <div class="flex flex-col gap-2">
           <ImageSwitcher>
             <template #darkImage>
@@ -34,7 +49,10 @@
               />
             </template>
           </ImageSwitcher>
-          <p class="text-xs text-color-secondary min-h-8"> {{ image.description }} </p>
+
+          <p class="text-xs text-color-secondary min-h-8">
+            {{ image.description }}
+          </p>
         </div>
       </div>
     </template>
@@ -42,10 +60,11 @@
 </template>
 
 <script setup>
-import CardBaseClickable from "../cardbaseclickable"
+import Tag from "primevue/tag";
+import Button from "primevue/button";
+import CardBaseClickable from "../cardbaseclickable";
 import ImageSwitcher from "../themeawareimageswitcher";
-import Tag from "primevue/tag"
-import Button from "primevue/button"
+
 
 defineProps({
   title: {
