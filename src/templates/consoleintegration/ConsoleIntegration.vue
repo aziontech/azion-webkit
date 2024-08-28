@@ -63,15 +63,30 @@
           <div class="flex flex-col justify-center items-end relative right-8">
             <p class="command flex justify-between leading-[34px] w-[180px] surface-ground border surface-border rounded py-2 px-4 font-mono text-xs relative z-30">
               azion init
-              <Button outlined icon="pi pi-copy" @click="copy('azion init')" />
+              <Button
+                outlined
+                aria-label="Copy Button - azion init"
+                icon="pi pi-copy"
+                @click="copy('azion init')"
+              />
             </p>
             <p class="command flex justify-between leading-[34px] w-[220px] surface-ground border surface-border rounded py-2 px-4 font-mono text-xs relative -top-[.4rem] z-20">
               azion build
-              <Button outlined icon="pi pi-copy" @click="copy('azion build')" />
+              <Button
+                outlined
+                aria-label="Copy Button - azion build"
+                icon="pi pi-copy"
+                @click="copy('azion build')"
+              />
             </p>
             <p class="command flex justify-between leading-[34px] w-[260px] surface-ground border surface-border rounded py-2 px-4 font-mono text-xs relative -top-[.8rem] z-10">
               azion deploy
-              <Button outlined icon="pi pi-copy" @click="copy('azion deploy')" />
+              <Button
+                outlined
+                aria-label="Copy Button - azion deploy"
+                icon="pi pi-copy"
+                @click="copy('azion deploy')"
+              />
             </p>
           </div>
         </div>
