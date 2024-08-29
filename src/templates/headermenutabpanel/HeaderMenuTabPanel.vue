@@ -14,7 +14,7 @@
         </a>
 
         <div v-if="menuitem.items && menuitem.items.length">
-          <a
+          <button
             @click="(event) => { toggle(event, menuitem.ref) }"
             tabindex="0"
             class="p-button p-button-text p-button-primary p-button-sm whitespace-nowrap active:bg-header-button-hover hover:surface-hover"
@@ -26,7 +26,7 @@
               </span>
               <i class="pi pi-angle-down text-sm" :class="activeMenu == menuitem.ref && 'rotate-180'"/>
             </div>
-          </a>
+          </button>
           <OverlayPanel
             unstyled
             :id="menuitem.ref"
