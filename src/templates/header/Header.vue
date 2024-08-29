@@ -12,7 +12,7 @@
             'header-button-destak p-button p-button-secondary !text-[#000000] !bg-[#ffffff] whitespace-nowrap p-button-sm hidden lg:flex' :
             'p-button p-button-primary whitespace-nowrap p-button-text hover:surface-hover p-button-sm hidden lg:flex', { 'p-button-info' : menu.severity === 'info'}]">
 
-          <span>
+          <span :class="[menu.destak ? 'text-black' : 'text-white']">
             {{ menu.text }}
           </span>
         </a>
