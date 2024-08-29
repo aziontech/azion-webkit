@@ -33,7 +33,11 @@
   </div>
 
   <div class="px-container py-8">
-    <ConsoleIntegration />
+    <!-- <ConsoleIntegration /> -->
+  </div>
+
+  <div class="px-container py-8">
+    <ShieldIllustration />
   </div>
 </template>
 
@@ -41,5 +45,6 @@
   import Globe from './templates/globe/Globe.vue';
   import Arrow from './templates/arrow/Arrow.vue';
   // import CardShowCase from './templates/cardshowcase/CardShowCase.vue';
-  import ConsoleIntegration from './templates/consoleintegration/ConsoleIntegration.vue';
+  // import ConsoleIntegration from './templates/consoleintegration/ConsoleIntegration.vue';
+  import ShieldIllustration from './templates/shieldillustration/ShieldIllustration.vue';
 </script>

@@ -1,0 +1,7 @@
+{
+  "main": "./shieldillustration.js",
+  "types": "./ShieldIllustration.d.ts",
+  "browser": {
+    "./sfc": "./ShieldIllustration.vue"
+  }
+}
