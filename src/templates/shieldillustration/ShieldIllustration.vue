@@ -12,8 +12,8 @@
       <path class="ring ring-1" d="M223.206 434.339L223.225 434.347L223.246 434.355C225.413 435.125 227.693 435.533 229.993 435.562L230.007 435.562C232.307 435.533 234.587 435.125 236.754 434.355L236.775 434.347L236.794 434.339C300.592 405.987 353.963 358.397 389.462 298.207C424.96 238.02 440.817 168.236 434.822 98.5895C434.609 94.5431 433.034 90.688 430.354 87.6519C427.673 84.6134 424.042 82.5743 420.055 81.8672L420.041 81.8651C356.688 72.2592 295.151 53.1111 237.516 25.0703L237.509 25.0671L237.502 25.0641C235.146 23.9927 232.588 23.4384 230 23.4384C227.412 23.4384 224.854 23.9927 222.498 25.0641L222.491 25.0671L222.484 25.0703C164.849 53.1111 103.312 72.2592 39.9592 81.8651L39.9592 81.8649L39.9454 81.8673C35.958 82.5743 32.3274 84.6134 29.6456 87.6519C26.9659 90.688 25.3913 94.543 25.1777 98.5893C19.1827 168.236 35.0399 238.02 70.5377 298.207C106.037 358.397 159.408 405.987 223.206 434.339Z" stroke="#F97316" stroke-width="1.12317"/>
       <defs>
         <linearGradient id="paint0_linear_8967_100357" x1="147.146" y1="156.595" x2="298.838" y2="297.806" gradientUnits="userSpaceOnUse">
-          <stop class="stop-color-1" stop-color="#454545"/>
-          <stop class="stop-color-2" offset="1" stop-color="#060606"/>
+          <stop class="stop-color-1" />
+          <stop class="stop-color-2" offset="1" />
         </linearGradient>
       </defs>
     </svg>
@@ -21,47 +21,53 @@
 </template>
 
 <style lang="scss">
-    .shield-illustration-content {
-      // max-width: 600px;
+  .shield-illustration-content {
+    // max-width: 600px;
 
-      .shield {
-        .ring {
-          transition: opacity 1s ease-in-out;
-        }
-      }
-
-      .ring-8 {opacity: 0.7}
-      .ring-7 {opacity: 0.6}
-      .ring-6 {opacity: 0.5}
-      .ring-5 {opacity: 0.4}
-      .ring-4 {opacity: 0.3}
-
-      .ring-1,
-      .ring-2,
-      .ring-3 {
-        opacity: 0
+    .shield {
+      .ring {
+        transition: opacity 1s ease-in-out;
       }
     }
 
-    .group:hover,
-    .shield-illustration-content:hover {
-      .ring-8 {opacity: 1}
-      .ring-7 {opacity: .9}
-      .ring-6 {opacity: .8}
-      .ring-5 {opacity: .7}
-      .ring-4 {opacity: .4}
-      .ring-3 {opacity: .3}
-      .ring-2 {opacity: .2}
-      .ring-1 {opacity: .1}
+    .ring-8 {opacity: 0.7}
+    .ring-7 {opacity: 0.6}
+    .ring-6 {opacity: 0.5}
+    .ring-5 {opacity: 0.4}
+    .ring-4 {opacity: 0.3}
+
+    .ring-1,
+    .ring-2,
+    .ring-3 {
+      opacity: 0
+    }
+  }
+
+  .group:hover,
+  .shield-illustration-content:hover {
+    .ring-8 {opacity: 1}
+    .ring-7 {opacity: .9}
+    .ring-6 {opacity: .8}
+    .ring-5 {opacity: .7}
+    .ring-4 {opacity: .4}
+    .ring-3 {opacity: .3}
+    .ring-2 {opacity: .2}
+    .ring-1 {opacity: .1}
+  }
+
+  .azion {
+    &.azion-dark {
+      .shield-illustration-content {
+        .stop-color-1 {stop-color: var(--surface-700) !important;}
+        .stop-color-2 {stop-color: var(--surface-0) !important;}
+      }
     }
 
-    .azion {
-      &.azion-dark {
-
-      }
-
-      &.azion-light {
-
+    &.azion-light {
+      .shield-illustration-content {
+        .stop-color-1 {stop-color: var(--surface-50) !important;}
+        .stop-color-2 {stop-color: var(--surface-0) !important;}
       }
     }
+  }
 </style>
