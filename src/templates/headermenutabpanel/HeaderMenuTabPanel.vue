@@ -208,6 +208,7 @@
   const toggle = (event, refAttr) => {
     try {
       if (refAttr)  {
+        active.value = 0
         const activeTab  = itemRefs.value.find(i => i.$params.attrs.id === refAttr)
         activeTab.toggle(event)
 
