@@ -1,20 +1,22 @@
 <template>
   <section>
     <div
-      class="px-container flex flex-col w-full gap-10 md:gap-20"
+      class="px-container flex-col flex w-full gap-10 md:gap-20"
       :class="[
-        { 'lg:flex-row': position !== 'center' },
+        { 'lg:flex-row': position === 'left' },
         { 'lg:flex-row-reverse': position == 'right' }
       ]"
     >
     <div class="w-full"
         v-if="overline || title || description || $slots.content">
       <div
-        class="w-full flex flex-col gap-8"
+        class="w-full flex gap-8"
         :class="[
+          { 'flex-col': !reverse },
+          { 'md:flex-row': position == 'full'},
           { 'items-center': isContentCentralized },
-          { 'flex-col-reverse	': reverse, 'flex-col': !reverse },
-          { 'md:top-20 md:sticky': isSticky}
+          { 'flex-col-reverse	': reverse},
+          { 'md:top-20 md:sticky': isSticky }
         ]"
       >
         <div
@@ -40,6 +42,11 @@
               <h4 v-if="titleTag === 'h4'" class="text-3xl font-medium text-balance">{{ title }}</h4>
               <h5 v-if="titleTag === 'h5'" class="text-3xl font-medium text-balance">{{ title }}</h5>
               <h6 v-if="titleTag === 'h6'" class="text-3xl font-medium text-balance">{{ title }}</h6>
+            </template>
+            <template v-else-if="$slots.title">
+              <div class="text-3xl lg:text-4xl font-medium text-balance">
+                <slot name="title" />
+              </div>
             </template>
             <template v-if="description">
               <p class="text-color-secondary text-sm md:text-base leading-relaxed text-balance">
@@ -96,7 +103,7 @@ defineProps({
   },
   position: {
     type: String,
-    options: ['left', 'right', 'center'],
+    options: ['left', 'right', 'center', 'full'],
     required: false,
     default: 'left'
   },
