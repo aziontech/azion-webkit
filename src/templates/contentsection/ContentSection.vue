@@ -84,7 +84,7 @@
 <script setup>
 import Overline from "../overline/Overline.vue";
 
-const props = defineProps({
+defineProps({
   overline: {
     type: String,
     required: false
@@ -133,6 +133,4 @@ const props = defineProps({
     required: false,
   }
 });
-
-console.log(props.pt)
 </script>
