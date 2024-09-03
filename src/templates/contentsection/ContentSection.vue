@@ -1,10 +1,11 @@
 <template>
-  <section>
+  <section class="px-container w-full">
     <div
-      class="px-container flex-col flex w-full gap-10 md:gap-20"
+      class="flex-col flex w-full gap-10 md:gap-20"
       :class="[
         { 'lg:flex-row': position === 'left' },
-        { 'lg:flex-row-reverse': position == 'right' }
+        { 'lg:flex-row-reverse': position == 'right' },
+        pt?.content || ''
       ]"
     >
     <div class="w-full"
@@ -83,7 +84,7 @@
 <script setup>
 import Overline from "../overline/Overline.vue";
 
-defineProps({
+const props = defineProps({
   overline: {
     type: String,
     required: false
@@ -126,6 +127,12 @@ defineProps({
     type: Boolean,
     required: false,
     default: false
+  },
+  pt: {
+    type: Object,
+    required: false,
   }
 });
+
+console.log(props.pt)
 </script>

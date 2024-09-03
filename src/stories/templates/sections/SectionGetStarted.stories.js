@@ -40,7 +40,7 @@ const MOCK = {
 
 const template = `
 <div class="surface-ground py-10">
-  <ContentSection class="surface-50 py-16 rounded" :overline="args.overline" titleTag="h2" position="full">
+  <ContentSection :pt="{content: 'surface-50 py-8 lg:py-16 px-5 lg:px-10 rounded'}" :overline="args.overline" titleTag="h2" position="full">
     <template #title>
       <h2 v-html="args.title" />
     </template>
