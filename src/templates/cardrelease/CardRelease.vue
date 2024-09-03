@@ -11,12 +11,6 @@
         <div class="flex flex-col gap-8">
           <div class="flex flex-row justify-between">
             <Tag :icon="tag.icon" :value="tag.label" />
-            <Button
-              outlined
-              size="small"
-              :icon="card.icon == 'external' ? 'pi pi-external-link' : 'pi pi-arrow-up-right'"
-              :aria-label="card.ariaLabel"
-            />
           </div>
 
           <div class="flex flex-col gap-3">
@@ -94,5 +88,4 @@ defineProps({
     options: ['slide-up', 'outlined']
   }
 })
-
 </script>

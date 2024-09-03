@@ -6,6 +6,7 @@
       :key="item"
     >
       <CardBaseClickable
+        disableAction
         v-if="cards[item]"
         grid
         :rel="item"

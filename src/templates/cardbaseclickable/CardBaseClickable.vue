@@ -7,8 +7,12 @@
       <template  v-if="$slots.content" #content>
         <slot name="content" />
       </template>
-      <template  v-if="$slots.actions" #actions>
-        <slot name="actions" />
+      <template v-if="!disableAction" #actions>
+        <div class=" font-medium flex gap-2 items-center">
+          <p v-if="action?.label"> {{ action.label }}  </p>
+          <i v-if="action?.isExternal" class="pi pi-arrow-up-right text-sm" />
+          <i v-else class="pi pi-arrow-right text-sm" />
+        </div>
       </template>
       <template  v-if="$slots['content-raw']" #content-raw>
         <slot name="content-raw" />
@@ -60,6 +64,15 @@ const props = defineProps({
     required: false,
     default: '_self',
     options: ['_blank', '_self']
+  },
+  disableAction: {
+    required: false,
+    default: false,
+    type: Boolean
+  },
+  action: {
+    type: Object,
+    required: false
   }
 })
 </script>
