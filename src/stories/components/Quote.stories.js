@@ -5,11 +5,6 @@ export default {
   component: Quote,
   tags: ['autodocs'],
   argTypes: {
-    direction: {
-      description: "Component orientation",
-      options: ['row', 'column'],
-      control: { type: 'select'}
-    },
     alt: {
       description: "Image alt text"
     }
@@ -17,28 +12,18 @@ export default {
 }
 
 const data = {
-  text: `”A Azion acelera a entrega de conteúdo para a maior empresa de entretenimento do Brasil.”` ,
-  imageLight: "https://www.azion.com/assets/pages/products/images/light/edge-application/omelete-co-logo-black.png",
-  imageDark: "https://www.azion.com/assets/pages/products/images/dark/edge-application/omelete-co-logo-white.png",
-}
+    text: `A Azion protege o Agibank, banco omnichannel brasileiro com 1M+ de clientes, de ataques que ameaçam suas aplicações.` ,
+    imageLight: "https://www.azion.com/assets/pages/products/images/light/edge-application/omelete-co-logo-black.png",
+    imageDark: "https://www.azion.com/assets/pages/products/images/dark/edge-application/omelete-co-logo-white.png",
+    author: "Luis Igreja",
+    button: {
+      link: "/en/",
+      label: "See success case"
+    }
+  }
 
 export const Default = {
   args: {
     ...data
-  }
-}
-
-export const withLabel = {
-  args: {
-    ...data,
-    label: "Lorem Ipsum"
-  }
-}
-
-export const column = {
-  args: {
-    ...data,
-    label: "Lorem Ipsum",
-    direction: "column"
   }
 }

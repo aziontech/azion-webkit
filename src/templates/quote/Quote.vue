@@ -1,12 +1,18 @@
 
 <template>
-  <div class="flex flex-col text-center lg:text-start lg:gap-x-16 gap-y-6 items-center justify-center"
-      :class="[{'lg:flex-row' : direction === 'row'}, {'lg:flex-col' : direction === 'column'}]"
-  >
-    <p class="max-w-md text-xl font-medium leading-normal" :class="[{'text-center': direction === 'column' }]">
-      {{ text }}
-    </p>
-    <div class="flex flex-col gap-3 lg:items-start min-w-[180px] mt-4 lg:mt-0" :class="[{'lg:items-center' : direction === 'column'}]">
+  <div class="surface-50 rounded px-10 md:px-20 pt-2 md:pt-10 pb-5 flex flex-col md:flex-row w-full items-center" :class="[{ 'border surface-border' : border }]">
+    <div class="max-w-md w-full flex flex-col gap-4 py-8">
+      <p class="text-xl leading-normal">
+        {{ text }}
+      </p>
+      <p class="text-sm text-color-secondary text-medium">
+        {{ author }}
+      </p>
+      <div class="mt-3">
+        <LinkButton v-bind="button" outlined />
+      </div>
+    </div>
+    <div class="flex items-center justify-center w-full">
       <ImageSwitcher>
         <template #lightImage>
           <img
@@ -21,20 +27,25 @@
             width="160" height="40" :alt="alt" />
         </template>
       </ImageSwitcher>
-      <template v-if="label">
-        <p class="text-xs text-color-secondary leading-normal" :class="[{'text-center' : direction === 'column'}]">
-          {{ label }}
-        </p>
-      </template>
     </div>
   </div>
 </template>
 
 <script setup>
 import ImageSwitcher from "../themeawareimageswitcher/ImageSwitcher.vue";
+import LinkButton from "../linkbutton"
 
 defineProps({
   text: {
+    type: String,
+    required: true,
+  },
+  border: {
+    type: Boolean,
+    default: true,
+    required: false,
+  },
+  author: {
     type: String,
     required: true,
   },
@@ -46,15 +57,9 @@ defineProps({
     type: String,
     required: true,
   },
-  label: {
-    type: String,
+  button: {
+    type: Object,
     required: false,
-  },
-  direction: {
-    type: String,
-    required: false,
-    default: 'row',
-    options: ["row", 'column']
   },
   alt: {
     type: String,

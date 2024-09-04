@@ -1,50 +1,56 @@
 <template>
-  <div v-if="isCarousel">
+  <div class="flex flex-col gap-10">
     <Carousel
-      :value="data"
+      :value="carouselData"
+      :showNavigators="false"
       :numVisible="1"
-      :numScroll="1"
-      :circular="true"
-      :autoplayInterval="3000"
+      :page="pageProp"
       :pt="{
-        item: { class: 'flex justify-center '}
+        item: { class: 'flex justify-center '},
+        root: { class: 'border surface-border rounded surface-50'}
       }">
 
       <template #item="slotProps">
-        <Quote
-          :text="slotProps.data.text"
-          :imageLight="slotProps.data.imageLight"
-          :imageDark="slotProps.data.imageDark"
-          :label="slotProps.data.label" />
+        <Quote v-bind="slotProps.data.quote" :border="false" />
       </template>
     </Carousel>
-  </div>
-  <div v-else>
-    <div class="px-container flex flex-col gap-12 items-center">
-      <template v-for="({text, imageLight, imageDark, label}, i) in data" :key="i">
-        <Quote
-          :text="text"
-          :imageLight="imageLight"
-          :imageDark="imageDark"
-          :label="label" />
-      </template>
+    <div class="hidden md:flex items-center justify-center gap-x-32">
+      <div :key="index" v-for="(item, index) in carouselData" class="flex justify-center max-h-10">
+        <button @click="handleCarouselEvent(index)">
+          <img class="max-h-10 invert-btn" :class="{'opacity-25': pageProp !== index}" width="auto" height="40" :src="item.button.image" />
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import Quote from '../quote/Quote.vue';
 import Carousel from 'primevue/carousel'
 
-defineProps({
-  isCarousel: {
-    type: Boolean,
-    required: false,
-    default: false,
-  },
+const props = defineProps({
   data: {
     type: Array,
     required: true
   }
 })
+
+const carouselData = props.data.slice(0, 3)
+const pageProp = ref(0)
+const handleCarouselEvent = (value) => pageProp.value = value
+
+setInterval(() => {
+  const newIndex = pageProp.value > 1 ? 0 : pageProp.value + 1
+
+  handleCarouselEvent(newIndex)
+}, 5000);
 </script>
+
+<style>
+.azion-light .invert-btn {
+  filter: invert(100%);
+}
+
+
+</style>

@@ -6,22 +6,56 @@ export default {
   tags: ['autodocs'],
 }
 
-const data = Array(4).fill({
-  text: `”A Azion acelera a entrega de conteúdo para a maior empresa de entretenimento do Brasil.”` ,
-  imageLight: "https://www.azion.com/assets/pages/products/images/light/edge-application/omelete-co-logo-black.png",
-  imageDark: "https://www.azion.com/assets/pages/products/images/dark/edge-application/omelete-co-logo-white.png",
-  label: "",
-})
+const data = [
+  {
+    quote: {
+      text: `A Azion protege o Agibank, banco omnichannel brasileiro com 1M+ de clientes, de ataques que ameaçam suas aplicações.` ,
+      imageLight: "https://www.azion.com/assets/pages/products/images/light/edge-application/omelete-co-logo-black.png",
+      imageDark: "https://www.azion.com/assets/pages/products/images/dark/edge-application/omelete-co-logo-white.png",
+      author: "Luis Igreja",
+      button: {
+        link: "/en/",
+        label: "See success case"
+      }
+    },
+  button: {
+    image: "https://www.azion.com/assets/pages/products/images/dark/edge-application/omelete-co-logo-white.png"
+  }
+},
+{
+  quote: {
+    text: `A Azion protege o Agibank, banco omnichannel brasileiro com 1M+ de clientes, de ataques que ameaçam suas aplicações.` ,
+    imageLight: "https://www.azion.com/assets/pages/products/images/dark/edge-functions/renner-logo.svg?ims=x40",
+    imageDark: "https://www.azion.com/assets/pages/products/images/dark/edge-functions/renner-logo.svg?ims=x40",
+      author: "Luis Igreja",
+    button: {
+      link: "/en/",
+      label: "See success case"
+    }
+  },
+  button: {
+    image: "https://www.azion.com/assets/pages/products/images/dark/edge-functions/renner-logo.svg?ims=x40"
+  }
+},
+{
+  quote: {
+    text: `A Azion protege o Agibank, banco omnichannel brasileiro com 1M+ de clientes, de ataques que ameaçam suas aplicações.` ,
+    imageLight: "https://www.azion.com/assets/pages/products/images/light/edge-application/omelete-co-logo-black.png",
+    imageDark: "https://www.azion.com/assets/pages/products/images/dark/edge-application/omelete-co-logo-white.png",
+    author: "Luis Igreja",
+    button: {
+      link: "/en/",
+      label: "See success case"
+    }
+  },
+  button: {
+    image: "https://www.azion.com/assets/pages/products/images/dark/edge-application/omelete-co-logo-white.png"
+  }
+},
+]
 
 export const Default = {
   args: {
-    data
-  }
-}
-
-export const isCarousel = {
-  args: {
-    isCarousel: true,
     data
   }
 }
