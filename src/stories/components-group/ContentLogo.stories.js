@@ -4,12 +4,6 @@ export default {
   title: 'Components Group/Content Logo',
   component: ContentLogo,
   tags: ['autodocs'],
-  argTypes: {
-    size: {
-      options: ["small", "default", "large"],
-      control: { type: 'radio' },
-    }
-  },
 }
 
 const logos = Array(4).fill({
