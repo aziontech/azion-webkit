@@ -5,10 +5,10 @@
       <p class="text-xl leading-normal">
         {{ text }}
       </p>
-      <p class="text-sm text-color-secondary text-medium">
+      <p v-if="author" class="text-sm text-color-secondary text-medium">
         {{ author }}
       </p>
-      <div class="mt-3">
+      <div class="mt-3" v-if="button">
         <LinkButton v-bind="button" outlined />
       </div>
     </div>
@@ -47,7 +47,7 @@ defineProps({
   },
   author: {
     type: String,
-    required: true,
+    required: false,
   },
   imageLight: {
     type: String,
