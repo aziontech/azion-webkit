@@ -44,7 +44,7 @@
 
   .azion-light {
     .globe {
-      box-shadow: 0 0 2px rgba(243,101,43, .5), 0 0 40px rgba(243,101,43, .3);
+      box-shadow: 0px 4px 80px 0px rgba(211, 211, 211, 1);
       background: radial-gradient(800px at 20px 464px, rgba(1, 1, 1, .4), transparent 60%);
     }
 
@@ -68,7 +68,7 @@
     lightImage: {
       type: String,
       required: false,
-      default: 'https://www.azion.com/assets/images/components/globe/map-light@2x.png'
+      default: 'https://www.azion.com/assets/images/components/globe/map-light@3x.png'
     },
     darkImage: {
       type: String,
