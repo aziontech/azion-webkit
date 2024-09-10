@@ -38,7 +38,14 @@ const MOCK = {
       link: '/en/contact-sales/',
       outlined: true
     }
-  ]
+  ],
+  bannerNews: {
+    description: "Azion Console for Developerss!",
+    cta: {
+      label: "Access now.",
+      link: "https://console.azion.com/login"
+    }
+  }
 }
 
 const HeroDisplay = `
@@ -47,6 +54,7 @@ const HeroDisplay = `
     isDisplay
     :isCentralized="true"
     :description="args.hero.description"
+    :bannerNews="args.bannerNews"
   >
     <template #title>
       <h1

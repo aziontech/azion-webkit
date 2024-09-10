@@ -1,5 +1,5 @@
 <template>
-  <section class="flex">
+  <section class="flex flex-col gap-10 md:gap-20 2xl:gap-40">
     <div
       class="px-container flex flex-col w-full"
       :class="[
@@ -17,16 +17,6 @@
           { 'justify-center' : justify === 'center'}
         ]"
       >
-        <template v-if="bannerNews">
-          <Banner
-            :class="[
-              { 'justify-center': isCentralized },
-            ]"
-            :description="bannerNews.description"
-            :cta="bannerNews.cta.label"
-            :link="bannerNews.cta.link"
-          />
-        </template>
         <div
           class="flex flex-col gap-5 md:gap-8"
           :class="[
@@ -34,6 +24,17 @@
             { 'max-w-3xl 2xl:max-w-4xl': !isCentralized}
           ]"
         >
+          <template v-if="bannerNews">
+            <div class="flex" :class="[
+                  { 'justify-center': isCentralized },
+                ]">
+              <Banner
+                :description="bannerNews.description"
+                :cta="bannerNews.cta.label"
+                :link="bannerNews.cta.link"
+              />
+            </div>
+          </template>
           <Overline v-if="overline && overline.length" :label="overline" />
           <template v-if="title">
             <h1
@@ -77,6 +78,9 @@
         </div>
       </template>
     </div>
+    <template v-if="$slots.principal">
+      <slot name="principal" />
+    </template>
   </section>
 </template>
 
