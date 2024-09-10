@@ -4,7 +4,10 @@
       <img :alt="alt" :src="image" class="w-full h-full object-cover" />
     </div>
     <div class="absolute w-full h-full top-0 left-0 overflow-hidden rounded" :class="[
-      { 'gradient' : !customGradient },
+      { 'gradient-to-bottom opacity-70' : !customGradient },
+    ]" />
+    <div class="absolute w-full h-full top-0 left-0 overflow-hidden rounded" :class="[
+      { 'gradient-to-top' : !customGradient },
       { customGradient : customGradient }
     ]" />
     <slot name="content" />
@@ -31,8 +34,10 @@ defineProps({
 </script>
 
 <style scoped>
-.gradient {
-    background: linear-gradient(to bottom, var(--surface-200) 0%, transparent 80%),
-                linear-gradient(to top, var(--surface-200) 30%, transparent 100%);
+.gradient-to-bottom {
+    background: linear-gradient(to bottom, var(--surface-200) 0%, transparent 80%);
+}
+.gradient-to-top {
+  background: linear-gradient(to top, var(--surface-200) 40%, transparent 100%);
 }
 </style>
