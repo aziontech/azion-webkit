@@ -22,13 +22,13 @@ export default {
   }
 };
 
-const data = new Array(4).fill({
+const data = new Array(3).fill({
   title: "Lorem ipsun magna",
   description: "lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor et aliquet",
   icon: "pi pi-check",
 })
 
-const data2 = new Array(4).fill({
+const data2 = new Array(3).fill({
   title: "Lorem ipsun magna",
   description: new Array(3).fill({
     label: "lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor et aliquet",
@@ -36,7 +36,7 @@ const data2 = new Array(4).fill({
   }),
 })
 
-const data3 = new Array(4).fill({
+const data3 = new Array(3).fill({
   title: "Lorem ipsun magna",
   description: new Array(3).fill({
     label: "lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor et aliquet",

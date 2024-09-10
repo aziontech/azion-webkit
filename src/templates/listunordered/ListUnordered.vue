@@ -2,7 +2,7 @@
   <ul
     :class="[
       { 'flex flex-col gap-6': direction === 'vertical' },
-      { 'grid m-0 md:grid-cols-4 gap-10 md:gap-20': direction === 'horizontal' }
+      { 'grid m-0 md:grid-cols-3 gap-10 md:gap-20': direction === 'horizontal' }
     ]"
   >
     <template
@@ -43,7 +43,7 @@
                 v-for="({ label }, index) in description"
                 :key="index"
               >
-                <li class="flex flex-row gap-2">
+                <li v-key="index" class="flex flex-row gap-2">
                   <p class="text-color-secondary text-sm">{{ label }}</p>
                 </li>
               </template>
