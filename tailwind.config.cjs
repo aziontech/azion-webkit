@@ -10,16 +10,16 @@ module.exports = {
       const newUtilities = {};
 
       newUtilities[".px-shell"] = {
-        paddingLeft: "clamp(1rem, 0.605rem + 1.974vi, 2.5rem)",
-        paddingRight: "clamp(1rem, 0.605rem + 1.974vi, 2.5rem)",
+        paddingLeft: "1rem",
+        paddingRight: "1rem",
       };
 
       newUtilities[".px-container"] = {
-        maxWidth: "1536px",
+        maxWidth: "1280px",
         margin: "0 auto",
-        paddingLeft: "clamp(1rem, 0.605rem + 1.974vi, 2.5rem)",
-        paddingRight: "clamp(1rem, 0.605rem + 1.974vi, 2.5rem)",
-      };
+        paddingLeft: "1rem",
+        paddingRight: "1rem",
+    };
 
       newUtilities["@media (min-width: 768px)"] = {
         ".px-shell": {
