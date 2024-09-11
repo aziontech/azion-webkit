@@ -1,7 +1,7 @@
 <template>
   <div class="relative p-6 lg:p-10 h-[440px] flex flex-col justify-end rounded">
     <div class="absolute w-full h-full top-0 left-0 overflow-hidden rounded">
-      <img :alt="alt" :src="image" class="w-full h-full object-cover" />
+      <img :alt="alt" :src="image" class="w-full h-full object-cover object-top" />
     </div>
     <div class="absolute w-full h-full top-0 left-0 overflow-hidden rounded" :class="[
       { 'gradient-to-bottom opacity-70' : !customGradient },
