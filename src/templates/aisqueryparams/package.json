@@ -1,0 +1,7 @@
+{
+  "main": "./aisqueryparams.js",
+  "types": "./AisQueryParams.d.ts",
+  "browser": {
+    "./sfc": "./AisQueryParams.vue"
+  }
+}
