@@ -45,12 +45,11 @@
   .azion-light {
     .globe {
       box-shadow: 0px 4px 80px 0px rgba(211, 211, 211, 1);
-      background: radial-gradient(800px at 20px 464px, rgba(1, 1, 1, .4), transparent 60%);
+      background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, rgba(169, 169, 169, 0.16) 100%);
     }
 
     .globe-inner {
       background-image: v-bind(lightImg);
-      box-shadow: 0 0 60px rgba(0, 0, 0, .2) inset;
     }
   }
 
