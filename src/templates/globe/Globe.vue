@@ -68,7 +68,7 @@
     lightImage: {
       type: String,
       required: false,
-      default: 'https://www.azion.com/assets/images/components/globe/map-light@3x.png'
+      default: 'https://www.azion.com/assets/images/components/globe/map-light@3.png'
     },
     darkImage: {
       type: String,
