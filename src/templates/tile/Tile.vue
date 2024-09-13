@@ -5,6 +5,7 @@
     { 'p-tag p-tag-warning' : severity == 'warning' },
     { 'p-tag p-tag-success' : severity == 'success' },
     { 'p-tag p-tag-info' : severity == 'info' },
+    { 'bg-[#508bc229] text-blue-500' : severity == 'secondary' }
   ]">
     <p class="text-sm flex justify-center items-center">
       <slot />
@@ -18,7 +19,7 @@ defineProps({
     type: String,
     required: false,
     default: 'default',
-    options: ['default', 'primary', 'warning', 'success', 'info' ]
+    options: ['default', 'primary', 'secondary', 'warning', 'success', 'info' ]
   }
 })
 </script>
