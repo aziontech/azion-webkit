@@ -35,9 +35,9 @@ defineProps({
 
 <style scoped>
 .gradient-to-bottom {
-    background: linear-gradient(to bottom, var(--surface-200) 0%, transparent 80%);
+    background: linear-gradient(to bottom, var(--surface-card) 0%, transparent 80%);
 }
 .gradient-to-top {
-  background: linear-gradient(to top, var(--surface-200) 40%, transparent 100%);
+  background: linear-gradient(to top, var(--surface-card) 30%, transparent 100%);
 }
 </style>
