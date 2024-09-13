@@ -79,7 +79,9 @@
       </template>
     </div>
     <template v-if="$slots.principal">
-      <slot name="principal" />
+      <div class="px-container">
+        <slot name="principal" />
+      </div>
     </template>
   </section>
 </template>
