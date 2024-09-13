@@ -11,9 +11,9 @@
     >
       <li class="flex gap-4 lg:gap-8">
         <div v-if="!icon" class="flex relative">
-          <div class="h-full bg-[--surface-300] w-1 rounded" />
-          <div class="h-4 mt-2 bg-[--text-color] w-1 blur-sm	left-0 absolute" />
-          <div class="h-4 mt-2 bg-[--text-color] w-2 -left-0.5 absolute" />
+          <div class="h-full bg-[--surface-300] w-[2px] rounded" />
+          <div class="h-4 mt-2 bg-[--text-color] w-[2px] blur-sm	left-0 absolute" />
+          <div class="h-4 mt-2 bg-[--text-color] w-[3px] -left-[0.5px] absolute" />
         </div>
         <div class="flex flex-col gap-4 justify-center mt-0.5">
           <template v-if="title || icon">
@@ -77,7 +77,7 @@
       type: String,
       required: false,
       default: 'default',
-      options: ['default', 'primary']
+      options: ['default', 'primary', 'secondary', 'warning', 'success', 'info' ]
     }
   })
 </script>
