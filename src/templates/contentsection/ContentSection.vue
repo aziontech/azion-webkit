@@ -1,10 +1,11 @@
 <template>
-  <section class="px-container w-full">
+  <section class="px-container w-full flex flex-col gap-10 md:gap-20">
     <div
       class="flex-col flex w-full gap-10 md:gap-20"
       :class="[
         { 'lg:flex-row': position === 'left' },
         { 'lg:flex-row-reverse': position == 'right' },
+        { 'flex-col-reverse	': reverse},
         pt?.content || ''
       ]"
     >
@@ -78,6 +79,11 @@
         <slot name="main" />
       </template>
     </div>
+    <template v-if="$slots.principal">
+      <div>
+        <slot name="principal" />
+      </div>
+    </template>
   </section>
 </template>
 
