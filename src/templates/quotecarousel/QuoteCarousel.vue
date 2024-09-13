@@ -2,10 +2,7 @@
   <template v-if="data.length == 1">
     <Quote
       direction="column"
-      :text="data[0].text"
-      :imageLight="data[0].imageLight"
-      :imageDark="data[0].imageDark"
-      :alt="data[0].alt"
+      v-bind="data[0]"
     />
   </template>
   <div v-else>
@@ -23,11 +20,8 @@
       <template #item="slotProps">
         <div class="md:mx-4 h-full mb-10">
           <Quote
+            v-bind="slotProps.data"
             direction="column"
-            :text="slotProps.data.text"
-            :imageLight="slotProps.data.imageLight"
-            :imageDark="slotProps.data.imageDark"
-            :alt="slotProps.data.alt"
           />
         </div>
       </template>
