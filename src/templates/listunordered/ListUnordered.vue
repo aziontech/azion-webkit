@@ -9,8 +9,16 @@
       v-for="({ icon, title, description }, index) in data"
       :key="index"
     >
-      <li class="flex gap-4 lg:gap-8">
-        <div v-if="!icon" class="flex relative">
+      <li class="flex" :class="[icon ? 'gap-3' : 'gap-4 lg:gap-8', { 'flex-col' : direction == 'horizontal' }]">
+        <template v-if="icon">
+          <Tile class="mt-0.5" v-bind="{ severity }">
+            <i
+              class="text-xs"
+              :class="icon"
+            />
+          </Tile>
+        </template>
+        <div v-if="!icon && direction !== 'horizontal'" class="flex relative">
           <div class="h-full bg-[--surface-300] w-[2px]" />
           <div class="h-4 mt-2 bg-[--text-color] w-[2px] blur-sm	left-0 absolute" />
           <div class="h-4 mt-2 bg-[--text-color] w-[3px] -left-[0.5px] absolute" />
@@ -24,14 +32,6 @@
                 { 'flex-row gap-2': direction === 'vertical' }
               ]"
             >
-              <template v-if="icon">
-                <Tile v-bind="{ severity }">
-                  <i
-                    class="text-xs"
-                    :class="icon"
-                  />
-                </Tile>
-              </template>
               <template v-if="title">
                 <p class="font-medium text-lg leading-7">{{ title }}</p>
               </template>
