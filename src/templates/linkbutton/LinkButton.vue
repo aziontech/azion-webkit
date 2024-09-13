@@ -13,7 +13,8 @@
       {'p-button-sm' : size === 'small' },
       {'flex flex-row-reverse' : iconPos === 'left'},
       {'p-button-icon-only' : iconPos === 'center'},
-      {'md:justify-start' : iconPos !== 'center'}
+      {'md:justify-start' : iconPos !== 'center'},
+      {'p-button-link' : textLink }
     ]">
 
     <template v-if="label">
@@ -76,6 +77,10 @@
       required: false,
       default: "medium",
       options: ['small', 'medium']
+    },
+    textLink: {
+      type: Boolean,
+      required: false,
     }
   });
 
