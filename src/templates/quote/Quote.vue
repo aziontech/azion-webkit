@@ -1,7 +1,7 @@
 
 <template>
-  <div class="surface-50 rounded px-10 md:px-20 pt-2 md:pt-10 pb-5 flex flex-col md:flex-row w-full items-center" :class="[{ 'border surface-border' : border }]">
-    <div class="max-w-md w-full flex flex-col gap-4 py-8 min-h-60 justify-center">
+  <div class="surface-50 rounded px-10 md:px-20 md:gap-10 md:pt-10 pb-10 flex flex-col md:flex-row w-full items-center" :class="[{ 'border surface-border' : border }]">
+    <div class="max-w-md w-full flex flex-col gap-4 py-10 min-h-60 justify-center">
       <p class="text-xl leading-normal">
         {{ text }}
       </p>
