@@ -2,6 +2,7 @@ import HeroBlockBase from '../../../templates/herobase'
 import LinkButton from '../../../templates/linkbutton'
 import ContentLogoBlock from '../../../templates/contentlogo'
 import ImageSwitcher from '../../../templates/themeawareimageswitcher'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Hero/ Right Image with Logo',
@@ -41,7 +42,7 @@ const MOCK = {
 }
 
 const HeroDisplay = `
-<div class="surface-ground">
+<Container class="surface-ground">
   <HeroBlockBase
     align="center"
     :title="args.hero.title"
@@ -72,10 +73,10 @@ const HeroDisplay = `
       </div>
     </template>
   </HeroBlockBase>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { HeroBlockBase, LinkButton, ContentLogoBlock, ImageSwitcher },
+  components: { HeroBlockBase, LinkButton, ContentLogoBlock, ImageSwitcher, Container },
   setup() {
     return { args }
   },

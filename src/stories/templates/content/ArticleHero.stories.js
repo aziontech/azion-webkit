@@ -1,8 +1,9 @@
 import HeroArticle from '../../../templates/heroarticle';
 import Breadcrumb from "primevue/breadcrumb";
+import Container from "../../../templates/container"
 
 export default {
-  title: 'Blocks/Hero/Article',
+  title: 'Blocks/Content/Article Hero',
   component: HeroArticle,
   tags: ['autodocs'],
   argTypes: {}
@@ -35,17 +36,17 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground p-10">
+<Container class="surface-ground px-container">
   <HeroArticle v-bind="args">
     <template #breadcrumbs>
       <Breadcrumb :model="args.breadcrumbItems" class="-ml-1 lg:col-start-2" />
     </template>
   </HeroArticle>
-</div>
+</Container>
 `
 
 const Template = (args) => ({
-  components: { HeroArticle, Breadcrumb },
+  components: { HeroArticle, Breadcrumb, Container },
   setup() {
     return { args }
   },

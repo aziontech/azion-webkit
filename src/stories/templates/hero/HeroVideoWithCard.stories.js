@@ -1,9 +1,13 @@
 import HeroBlockBase from '../../../templates/herobase'
 import BaseModal from "../../../templates/basemodal"
+import CardBaseClickable from "../../../templates/cardbaseclickable"
+import CardTitle from "../../../templates/cardtitle"
+import CardDescription from "../../../templates/carddescription"
+import Tile from "../../../templates/tile"
 import Container from '../../../templates/container'
 
 export default {
-  title: 'Blocks/Hero/ Video Right',
+  title: 'Blocks/Hero/Video Rigth with Cards',
   tags: ['autodocs'],
 }
 
@@ -50,6 +54,23 @@ const HeroDisplay = `
           </div>
         </template>
       </BaseModal>
+    </template>
+    <template #principal>
+      <div class="grid m-0 md:grid-cols-4 gap-4">
+        <template v-for="item in args.cards">
+          <CardBaseClickable v-bind="item.cta">
+            <template #content>
+              <div class="flex flex-col gap-8">
+                <Tile>  <i class="text-xs pi pi-check" /> </Tile>
+                <div class="flex flex-col gap-3">
+                  <CardTitle> {{ item.title }} </CardTitle>
+                  <CardDescription> {{ item.description }} </CardDescription>
+                </div>
+              </div>
+            </template>
+          </CardBaseClickable>
+        </template>
+      </div>
     </template>
   </HeroBlockBase>
 </Container>`
@@ -109,7 +130,7 @@ const MOCK = {
 }
 
 const Template = (args) => ({
-  components: { HeroBlockBase, BaseModal, Container},
+  components: { HeroBlockBase, BaseModal, CardBaseClickable, CardDescription, CardTitle, Tile, Container},
   setup() {
     return { args }
   },

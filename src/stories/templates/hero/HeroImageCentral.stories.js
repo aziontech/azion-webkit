@@ -1,6 +1,7 @@
 import HeroBlockBase from '../../../templates/herobase'
 import LinkButton from '../../../templates/linkbutton'
 import ImageSwitcher from '../../../templates/themeawareimageswitcher'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Hero/ Image Central',
@@ -32,7 +33,7 @@ const MOCK = {
 }
 
 const HeroDisplay = `
-<div class="surface-ground">
+<Container class="surface-ground">
   <HeroBlockBase
     isCentralized
     :overline="args.hero.overline"
@@ -65,10 +66,10 @@ const HeroDisplay = `
       </ImageSwitcher>
     </template>
   </HeroBlockBase>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { HeroBlockBase, LinkButton, ImageSwitcher },
+  components: { HeroBlockBase, LinkButton, ImageSwitcher, Container },
   setup() {
     return { args }
   },

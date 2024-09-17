@@ -4,6 +4,7 @@ import CardBase from '../../../templates/cardbase'
 import Overline from '../../../templates/overline'
 import CardTitle from '../../../templates/cardtitle'
 import CardBgImage from '../../../templates/cardbgimage'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Sections/Cards Background Image',
@@ -50,7 +51,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground py-10">
+<Container class="surface-ground">
   <ContentSection titleTag="h2" position="center" isContentCentralized textCenter :title="args.title">
     <template #actions>
       <LinkButton v-for="({ link, label, outlined }) in args.buttons" :link="link" :label="label" :outlined="outlined" />
@@ -72,10 +73,10 @@ const template = `
       </div>
     </template>
   </ContentSection>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { ContentSection, CardBase, Overline, CardTitle, CardBgImage },
+  components: { ContentSection, CardBase, Overline, CardTitle, CardBgImage, Container },
   setup() {
     return { args }
   },

@@ -1,5 +1,6 @@
 import FeaturedPost from '../../../templates/featuredpost'
 import CardGridBlock from '../../../templates/cardgridblock'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/List/Featured Hero',
@@ -329,7 +330,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="flex flex-col gap-10 md:gap-20 px-container w-full surface-ground">
+<Container class="px-container surface-ground">
   <FeaturedPost v-bind="args.featuredPost" />
   <CardGridBlock
     :isSearchEnabled="args.isSearchEnabled"
@@ -337,10 +338,10 @@ const template = `
     cardType="blog"
     v-bind="args.cards"
   />
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { FeaturedPost, CardGridBlock },
+  components: { FeaturedPost, CardGridBlock, Container },
   setup() {
     return { args }
   },

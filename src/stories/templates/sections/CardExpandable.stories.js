@@ -3,6 +3,7 @@ import ContentSection from '../../../templates/contentsection'
 import CardPanelExpandable from '../../../templates/cardpanelexpandable'
 import ImageSwitcher from "../../../templates/themeawareimageswitcher";
 import LinkButton from "../../../templates/linkbutton";
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Sections/Card Expandable',
@@ -110,7 +111,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground">
+<Container class="surface-ground">
   <ContentSection titleTag="h2" position="center" isContentCentralized textCenter :title="args.title" :overline="args.overline" :description="args.description">
     <template #main>
       <CardPanelExpandable :cards="args.cards" maxHeight="xl:h-[484px]">
@@ -156,10 +157,10 @@ const template = `
       </CardPanelExpandable>
     </template>
   </ContentSection>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { ContentSection, CardPanelExpandable, ImageSwitcher, LinkButton },
+  components: { ContentSection, CardPanelExpandable, ImageSwitcher, LinkButton, Container },
   setup() {
     return { args }
   },

@@ -1,6 +1,7 @@
 
 import Overline from '../../../templates/overline'
 import EmptyState from '../../../templates/emptystateblock'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Extras/404',
@@ -54,33 +55,35 @@ const MOCK = {
 
 
 const template = `
-<div class="px-container w-full flex flex-col items-center gap-10 md:gap-20 justify-center surface-ground">
-  <EmptyState
-    :title="args.title"
-    :description="args.description"
-  >
-    <template #illustration>
-      <img src="https://www.azion.com/assets/pages/404/404.svg" />
-    </template>
-  </EmptyState>
-  <div class="w-full sm:w-fit">
-    <div class="m-0 flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-4 gap-x-16 gap-y-8 md:gap-x-16 w-full">
-      <div v-for="({ label, items}, index) in args.table" :class="[ index === 1 && 'col-span-2 order-last md:order-none', 'flex flex-col gap-6']">
-        <Overline :label="label" />
-        <ul :class="[index === 1 ? 'm-0 grid grid-cols-1 sm:grid-cols-2 gap-x-16 md:gap-x-16 gap-y-4 w-full' : 'flex flex-col gap-4 w-full']">
-          <li v-for="({ label, link }) in items">
-            <a :href="link" target="_self" class="rounded hover:underline text-base truncate max-w-full" >
-              {{ label }}
-            </a>
-          </li>
-        </ul>
+<Container class="px-container surface-ground">
+  <div class="flex flex-col gap-5 md:gap-10 items-center">
+    <EmptyState
+      :title="args.title"
+      :description="args.description"
+    >
+      <template #illustration>
+        <img src="https://www.azion.com/assets/pages/404/404.svg" />
+      </template>
+    </EmptyState>
+    <div class="w-full sm:w-fit">
+      <div class="m-0 flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-4 gap-x-16 gap-y-8 md:gap-x-16 w-full">
+        <div v-for="({ label, items}, index) in args.table" :class="[ index === 1 && 'col-span-2 order-last md:order-none', 'flex flex-col gap-6']">
+          <Overline :label="label" />
+          <ul :class="[index === 1 ? 'm-0 grid grid-cols-1 sm:grid-cols-2 gap-x-16 md:gap-x-16 gap-y-4 w-full' : 'flex flex-col gap-4 w-full']">
+            <li v-for="({ label, link }) in items">
+              <a :href="link" target="_self" class="rounded hover:underline text-base truncate max-w-full" >
+                {{ label }}
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { EmptyState, Overline },
+  components: { EmptyState, Overline, Container },
   setup() {
     return { args }
   },

@@ -1,5 +1,6 @@
 
 import ContentSection from '../../../templates/contentsection'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Sections/Logos',
@@ -12,7 +13,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground py-10">
+<Container class="surface-ground">
   <ContentSection titleTag="h2" position="center" isContentCentralized textCenter :title="args.title"
     :overline="args.overline">
     <template #content>
@@ -24,10 +25,10 @@ const template = `
       </div>
     </template>
   </ContentSection>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { ContentSection },
+  components: { ContentSection, Container },
   setup() {
     return { args }
   },

@@ -1,5 +1,6 @@
 import Divider from 'primevue/divider'
 import CardGridListWithLoadMore from '../../../templates/cardgridlistwithloadmore'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/List/Related Content',
@@ -274,25 +275,27 @@ const MOCK = {
 }
 
 const template = `
-  <div class="px-container w-full flex items-center flex-col gap-4 md:gap-10 surface-ground">
-    <Divider align="center" type="dotted">
-      {{ title }}
-    </Divider>
+  <Container class="px-container surface-ground">
+    <div class="flex items-center flex-col gap-4 md:gap-10">
+      <Divider align="center" type="dotted">
+        {{ title }}
+      </Divider>
 
-    <div class="max-w-7xl flex flex-col gap-4 md:gap-10">
-      <CardGridListWithLoadMore
-        cardType="blog"
-        cardDirection="row"
-        :pt="{ content: { class: 'grid-cols-1' } }"
-        :data="args.cards.data"
-        :buttonText="args.buttonText"
-        :loadMoreNumber="args.cardsAdded"
-      />
+      <div class="max-w-7xl flex flex-col gap-4 md:gap-10">
+        <CardGridListWithLoadMore
+          cardType="blog"
+          cardDirection="row"
+          :pt="{ content: { class: 'grid-cols-1' } }"
+          :data="args.cards.data"
+          :buttonText="args.buttonText"
+          :loadMoreNumber="args.cardsAdded"
+        />
+      </div>
     </div>
-  </div>`
+  </Container>`
 
 const Template = (args) => ({
-  components: { CardGridListWithLoadMore, Divider },
+  components: { CardGridListWithLoadMore, Divider, Container },
   setup() {
     return { args }
   },

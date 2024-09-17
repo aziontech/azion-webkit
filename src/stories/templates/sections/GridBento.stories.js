@@ -6,7 +6,7 @@ import Overline from '../../../templates/overline'
 import LinkButton from '../../../templates/linkbutton'
 import GridBentoBlock from '../../../templates/gridbento'
 import ImageSwitcher from '../../../templates/themeawareimageswitcher'
-
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Sections/Grid Bento',
@@ -111,7 +111,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground">
+<Container class="surface-ground">
   <ContentSection :title="args.title" :overline="args.overline" :description="args.description" position="center"
     titleTag="h1" isContentCentralized textCenter>
     <template #main>
@@ -147,10 +147,10 @@ const template = `
       </GridBentoBlock>
     </template>
   </ContentSection>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { ContentSection, GridBentoBlock, CardBase, Overline, CardTitle, LinkButton, ImageSwitcher },
+  components: { ContentSection, GridBentoBlock, CardBase, Overline, CardTitle, LinkButton, ImageSwitcher, Container },
   setup() {
     return { args }
   },

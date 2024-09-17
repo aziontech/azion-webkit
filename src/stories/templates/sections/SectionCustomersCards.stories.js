@@ -1,6 +1,7 @@
 
 import ContentSection from '../../../templates/contentsection'
 import CardCases from '../../../templates/cardcases'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Sections/Customer Cards',
@@ -34,7 +35,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground">
+<Container class="surface-ground">
   <ContentSection titleTag="h2" position="center" isContentCentralized textCenter :title="args.title">
     <template #main>
       <div class="gap-6 grid place-content-center m-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(2,_33%)]" >
@@ -42,10 +43,10 @@ const template = `
       </div>
     </template>
   </ContentSection>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { ContentSection, CardCases },
+  components: { ContentSection, CardCases, Container },
   setup() {
     return { args }
   },

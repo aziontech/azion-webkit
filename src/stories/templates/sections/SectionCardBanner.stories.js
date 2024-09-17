@@ -4,6 +4,7 @@ import LinkButton from '../../../templates/linkbutton'
 import CardBase from '../../../templates/cardbase'
 import CardDescription from '../../../templates/carddescription'
 import CardTitle from '../../../templates/cardtitle'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Sections/Card Banner',
@@ -23,7 +24,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground py-10">
+<Container class="surface-ground">
   <div class="px-container w-full">
     <CardBase grid class="w-full">
       <template #content-raw>
@@ -51,10 +52,10 @@ const template = `
       </template>
     </CardBase>
   </div>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { CardBase, Overline, CardTitle, CardDescription, LinkButton },
+  components: { CardBase, Overline, CardTitle, CardDescription, LinkButton, Container },
   setup() {
     return { args }
   },

@@ -4,6 +4,7 @@ import CardBase from '../../../templates/cardbase'
 import FormContactUs from '../../../../dist/formcontactus'
 import Overline from '../../../templates/overline'
 import LinkButton from '../../../templates/linkbutton'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Sections/Form',
@@ -137,7 +138,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground py-10">
+<Container class="surface-ground">
   <div class="px-container flex flex-col gap-10 lg:gap-16">
     <h1 class="text-3xl font-medium"> {{ args.title }}</h1>
     <div class="grid gap-y-10 lg:gap-x-20 grid-cols-1 lg:grid-cols-[minmax(0,_768px)_320px]">
@@ -170,10 +171,10 @@ const template = `
       </div>
     </div>
   </div>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { FormContactUs, CardBase, Overline, CardTitle, LinkButton },
+  components: { FormContactUs, CardBase, Overline, CardTitle, LinkButton, Container },
   setup() {
     return { args }
   },

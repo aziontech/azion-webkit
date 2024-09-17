@@ -8,6 +8,7 @@ import CardBlog from "../../../templates/cardblog"
 import CardBaseClickable from "../../../templates/cardbaseclickable"
 import CardTitle from "../../../templates/cardtitle"
 import CardDescription from "../../../templates/carddescription"
+import Container from "../../../templates/container"
 
 export default {
   title: 'Blocks/Sections/Tab Menu Carousel',
@@ -106,7 +107,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground py-10">
+<Container class="surface-ground">
   <ContentSection titleTag="h2" position="center" isContentCentralized textCenter :overline="args.overline"
     :title="args.title" :description="args.description">
     <template #main>
@@ -148,10 +149,10 @@ const template = `
       </TabView>
     </template>
   </ContentSection>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { ContentSection, TabView, TabPanel, Carousel, Tag, CardBlog, CardTitle, CardDescription, CardBaseClickable },
+  components: { ContentSection, TabView, TabPanel, Carousel, Tag, CardBlog, CardTitle, CardDescription, CardBaseClickable, Container },
   setup() {
     return { args }
   },

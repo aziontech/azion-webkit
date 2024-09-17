@@ -5,6 +5,7 @@ import Carousel from 'primevue/carousel';
 import CardBase from '../../../templates/cardbase'
 import CardTitle from '../../../templates/cardtitle'
 import CardDescription from '../../../templates/carddescription'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Sections/Card Carousel',
@@ -101,7 +102,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground">
+<Container class="surface-ground">
   <ContentSection :title="args.title" :overline="args.overline" position="center" titleTag="h2" isContentCentralized>
     <template #main>
       <Carousel :value="args.cards" :numVisible="4" :numScroll="1" :circular="true" :autoplayInterval="5000"
@@ -126,10 +127,10 @@ const template = `
       </Carousel>
     </template>
   </ContentSection>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { ContentSection, Carousel, CardBase, CardTitle, CardDescription, LinkButton },
+  components: { ContentSection, Carousel, CardBase, CardTitle, CardDescription, LinkButton, Container },
   setup() {
     return { args }
   },

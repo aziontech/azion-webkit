@@ -4,6 +4,7 @@ import LinkButton from '../../../templates/linkbutton'
 import CardBase from '../../../templates/cardbase'
 import IconTextSegment from '../../../templates/icontextsegment'
 import Overline from '../../../templates/overline'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Sections/List Products',
@@ -44,7 +45,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground py-10">
+<Container class="surface-ground">
   <ContentSection titleTag="h2" position="center" isContentCentralized textCenter :overline="args.overline"
     :title="args.title">
     <template #main>
@@ -65,10 +66,10 @@ const template = `
       </div>
     </template>
   </ContentSection>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { ContentSection, CardBase, IconTextSegment, Overline, LinkButton },
+  components: { ContentSection, CardBase, IconTextSegment, Overline, LinkButton, Container },
   setup() {
     return { args }
   },

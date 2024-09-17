@@ -2,6 +2,7 @@ import CardBase from '../../../templates/cardbase'
 import CardTitle from '../../../templates/cardtitle'
 import CardDescription from '../../../templates/carddescription'
 import LinkButton from '../../../templates/linkbutton'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/List/Title and Cards',
@@ -605,7 +606,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="p-10 surface-ground flex flex-col gap-14">
+<Container class="px-container surface-ground">
   <div class="flex flex-col gap-14 px-container w-full">
     <hgroup>
       <h1 class="text-4xl font-medium pb-5">
@@ -626,10 +627,10 @@ const template = `
       </CardBase>
     </div>
   </div>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { CardBase, CardTitle, CardDescription, LinkButton},
+  components: { CardBase, CardTitle, CardDescription, LinkButton, Container },
   setup() {
     return { args }
   },

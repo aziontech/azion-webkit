@@ -1,7 +1,7 @@
 
 import ContentSection from '../../../templates/contentsection'
 import ImageSwitcher from '../../../templates/themeawareimageswitcher'
-
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Sections/Z Text Image',
@@ -39,7 +39,7 @@ const MOCK = {
 
 
 const template = `
-  <div class="flex flex-col gap-20 lg:gap-40 surface-ground py-10">
+  <Container class="surface-ground">
     <ContentSection :overline="args.overline" :title="args.title" position="center" titleTag="h2" isContentCentralized />
     <ContentSection v-for="({ title, description, imageDark, imageLight, position, alt }) in args.cards" :title="title"
       :description="description" titleTag="h3" textCenter :position="position">
@@ -56,10 +56,10 @@ const template = `
         </div>
       </template>
     </ContentSection>
-  </div>`
+  </Container>`
 
 const Template = (args) => ({
-  components: { ContentSection, ImageSwitcher},
+  components: { ContentSection, ImageSwitcher, Container},
   setup() {
     return { args }
   },

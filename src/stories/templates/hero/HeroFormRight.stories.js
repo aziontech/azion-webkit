@@ -2,6 +2,7 @@ import HeroBlockBase from '../../../templates/herobase'
 import LinkButton from '../../../templates/linkbutton'
 import ContentLogoBlock from '../../../templates/contentlogo'
 import FormBePartner from '../../../../dist/formbepartner'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Hero/Hero Form Right',
@@ -238,7 +239,7 @@ const MOCK = {
 }
 
 const HeroDisplay = `
-<div class="surface-ground">
+<Container class="surface-ground">
   <HeroBlockBase align="center" :title="args.hero.title">
     <template #actions>
       <div class="flex lg:justify-start justify-center gap-2 w-full">
@@ -258,11 +259,11 @@ const HeroDisplay = `
         :t="args.form" :responseMessages="args.form.responseMessages" />
     </template>
   </HeroBlockBase>
-</div>
+</Container>
 `
 
 const Template = (args) => ({
-  components: { HeroBlockBase, LinkButton, ContentLogoBlock, FormBePartner },
+  components: { HeroBlockBase, LinkButton, ContentLogoBlock, FormBePartner, Container },
   setup() {
     return { args }
   },

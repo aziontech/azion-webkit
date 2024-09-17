@@ -2,7 +2,7 @@
 import ContentSection from '../../../templates/contentsection'
 import LinkButton from '../../../templates/linkbutton'
 import UnorderedList from '../../../templates/listunordered'
-
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Sections/Bullets Right',
@@ -41,7 +41,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground py-10">
+<Container class="surface-ground">
   <ContentSection :title="args.title" :overline="args.overline" :description="args.description" titleTag="h2">
     <template #actions>
       <LinkButton v-for="({ link, label, outlined }) in args.buttons" :link="link" :label="label" :outlined="outlined" />
@@ -50,10 +50,10 @@ const template = `
       <UnorderedList :data="args.contentListBlock" />
     </template>
   </ContentSection>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { ContentSection, UnorderedList, LinkButton },
+  components: { ContentSection, UnorderedList, LinkButton, Container },
   setup() {
     return { args }
   },

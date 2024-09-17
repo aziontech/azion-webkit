@@ -1,6 +1,7 @@
 
 import ContentSection from '../../../templates/contentsection'
 import ReleaseCarousel from '../../../templates/releasecarousel'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Sections/Release Carousel',
@@ -91,7 +92,7 @@ const MOCK =   {
 }
 
 const template = `
-<div class="surface-ground">
+<Container class="surface-ground">
   <ContentSection :overline="args.overline" :title="args.title"
     isContentCentralized position="center">
     <template #main>
@@ -99,10 +100,10 @@ const template = `
         <ReleaseCarousel class="relative" :data="args.items" />
     </template>
   </ContentSection>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { ContentSection, ReleaseCarousel },
+  components: { ContentSection, ReleaseCarousel, Container },
   setup() {
     return { args }
   },

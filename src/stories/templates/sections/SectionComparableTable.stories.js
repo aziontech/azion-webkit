@@ -8,7 +8,7 @@ import CardDescription from "../../../templates/carddescription";
 import LinkButton from "../../../templates/linkbutton";
 import Overline from "../../../templates/overline";
 import ContentSection from '../../../templates/contentsection'
-
+import Container from "../../../templates/container"
 
 export default {
   title: 'Blocks/Sections/Comparable Table',
@@ -287,7 +287,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground py-10">
+<Container class="surface-ground">
   <ContentSection id="plans" :overline="args.overline" :title="args.title" :description="args.description"
     isContentCentralized>
     <template #content>
@@ -387,10 +387,10 @@ const template = `
       </div>
     </template>
   </ContentSection>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { CardBase, Overline, CardTitle, CardDescription, LinkButton, ContentSection, Tag, Column, DataTable },
+  components: { CardBase, Overline, CardTitle, CardDescription, LinkButton, ContentSection, Tag, Column, DataTable, Container },
   setup() {
     return { args }
   },

@@ -1,7 +1,7 @@
 
 import ContentSection from '../../../templates/contentsection'
 import BigNumbers from '../../../templates/bignumbers'
-
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Sections/Big Numbers',
@@ -36,16 +36,16 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground py-10">
+<Container class="surface-ground">
   <ContentSection position="center" isContentCentralized :overline="args.overline" :title="args.title">
     <template #content>
       <BigNumbers :items="args.items" />
     </template>
   </ContentSection>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { ContentSection, BigNumbers },
+  components: { ContentSection, BigNumbers, Container },
   setup() {
     return { args }
   },

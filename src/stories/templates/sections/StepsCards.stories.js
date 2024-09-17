@@ -5,7 +5,7 @@ import Tile from '../../../templates/tile'
 import CardTitle from '../../../templates/cardtitle'
 import CardDescription from '../../../templates/carddescription'
 import LinkButton from '../../../templates/linkbutton'
-
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Sections/Steps Cards',
@@ -56,7 +56,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground">
+<Container class="surface-ground">
   <ContentSection :title="args.title" :overline="args.overline" :description="args.description"
     position="center" titleTag="h1" isContentCentralized textCenter>
     <template #main>
@@ -76,10 +76,10 @@ const template = `
       </div>
     </template>
   </ContentSection>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { ContentSection, CardBase, CardDescription, CardTitle, LinkButton, Tile },
+  components: { ContentSection, CardBase, CardDescription, CardTitle, LinkButton, Tile, Container },
   setup() {
     return { args }
   },

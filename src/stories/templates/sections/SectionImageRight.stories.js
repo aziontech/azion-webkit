@@ -2,7 +2,7 @@
 import ContentSection from '../../../templates/contentsection'
 import LinkButton from '../../../templates/linkbutton'
 import ImageSwitcher from '../../../templates/themeawareimageswitcher'
-
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Sections/Image Right',
@@ -20,7 +20,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground py-10">
+<Container class="surface-ground">
   <ContentSection :title="args.title" :overline="args.overline" :description="args.description" titleTag="h2">
     <template #actions>
       <LinkButton v-for="({ link, label }) in args.buttons" :link="link" :label="label" outlined />
@@ -36,10 +36,10 @@ const template = `
       </ImageSwitcher>
     </template>
   </ContentSection>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { ContentSection, ImageSwitcher, LinkButton },
+  components: { ContentSection, ImageSwitcher, LinkButton, Container },
   setup() {
     return { args }
   },

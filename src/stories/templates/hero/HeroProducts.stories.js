@@ -4,6 +4,7 @@ import ContentLogoBlock from '../../../templates/contentlogo'
 import ImageSwitcher from '../../../templates/themeawareimageswitcher'
 import ListUnordered from "../../../templates/listunordered"
 import Titlegroup from '../../../templates/titlegroup'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Hero/Products',
@@ -12,13 +13,13 @@ export default {
 
 const MOCK = {
   hero: {
-    overline: "Segurança",
+    overline: "SECURE",
     description:
-      'Minimize fraud, enhance uptime, and boost visibility into applications and APIs'
+      'Protect your web application from OWASP Top 10 threats to sophisticated zero-day attacks.'
   },
   "hgroup": {
-    "subtitle": "Bot Management",
-    "title": "Lorem ipsums dolor sit amet consectetur emit"
+    "subtitle": "Web Application Firewall",
+    "title": "Azion WAF: the advanced protection security specialists trust"
   },
   CTA: [
     {
@@ -55,7 +56,7 @@ const MOCK = {
 }
 
 const HeroDisplay = `
-<div class="surface-ground flex flex-col lg:gap-10 gap-5">
+<Container class="surface-ground">
   <HeroBlockBase
     v-bind="args.hero"
   >
@@ -76,13 +77,13 @@ const HeroDisplay = `
       </ImageSwitcher>
     </template>
     <template #principal>
-        <ListUnordered class="w-full" v-bind="args.list"/>
+        <ListUnordered severity="secondary" class="w-full" v-bind="args.list"/>
     </template>
   </HeroBlockBase>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { HeroBlockBase, LinkButton, ContentLogoBlock, ImageSwitcher, ListUnordered, Titlegroup },
+  components: { HeroBlockBase, LinkButton, ContentLogoBlock, ImageSwitcher, ListUnordered, Titlegroup, Container },
   setup() {
     return { args }
   },

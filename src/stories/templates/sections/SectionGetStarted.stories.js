@@ -2,6 +2,7 @@
 import ContentSection from '../../../templates/contentsection'
 import LinkButton from '../../../templates/linkbutton'
 import Tile from '../../../templates/tile'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Sections/Get Started',
@@ -39,7 +40,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground py-10">
+<Container class="surface-ground">
   <ContentSection :pt="{content: 'surface-50 py-8 lg:py-16 px-5 lg:px-10 rounded'}" :overline="args.overline" titleTag="h2" position="full">
     <template #title>
       <h2 v-html="args.title" />
@@ -64,10 +65,10 @@ const template = `
       </div>
     </template>
   </ContentSection>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { ContentSection, LinkButton, Tile },
+  components: { ContentSection, LinkButton, Tile, Container },
   setup() {
     return { args }
   },

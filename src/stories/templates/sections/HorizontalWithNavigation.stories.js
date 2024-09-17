@@ -5,6 +5,7 @@ import CardDescription from '../../../templates/carddescription'
 import Overline from '../../../templates/overline'
 import LinkButton from '../../../templates/linkbutton'
 import Menu from 'primevue/menu'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Sections/Horizontal With Navigation',
@@ -62,7 +63,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="surface-ground">
+<Container class="surface-ground">
   <ContentSection position="right" :overline="args.overline" :title="args.title" :description="args.description">
     <template #actions>
       <LinkButton v-for="({ link, label }) in args.buttons" severity="secondary" :link="link" :label="label" />
@@ -107,10 +108,10 @@ const template = `
       </div>
     </template>
   </ContentSection>
-</div>`
+</Container>`
 
 const Template = (args) => ({
-  components: { ContentSection, Menu, CardBase, CardTitle, CardDescription, Overline, LinkButton },
+  components: { ContentSection, Menu, CardBase, CardTitle, CardDescription, Overline,  Container, LinkButton },
   setup() {
     return { args }
   },
