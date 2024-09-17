@@ -36,10 +36,10 @@ const Template = (args) => ({
   },
   template: `<HeroBlockBase v-bind="args">
                 <template #main>
-                  <img src="src/assets/images/mocks/_slot.png" class="w-full h-full" />
+                  <img src="/assets/mocks/_slot.png" class="w-full h-full" />
                 </template>
                 <template #content>
-                  <img src="src/assets/images/mocks/_slot.png" />
+                  <img src="/assets/mocks/_slot.png" />
                 </template>
                 <template #actions>
                   <LinkButton label="label" link="" />

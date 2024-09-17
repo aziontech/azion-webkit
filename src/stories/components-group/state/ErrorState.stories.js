@@ -18,7 +18,7 @@ const Template = (args) => ({
                   <Error404Illustration />
                 </template>
                 <template #main>
-                  <img src="src/assets/images/mocks/_slot.png" />
+                  <img src="/assets/mocks/_slot.png" />
                 </template>
                 <template #actions>
                   <LinkButton label="Button" link="./" />

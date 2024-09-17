@@ -69,10 +69,10 @@ const HeroDisplay = `
     <template #main>
       <ImageSwitcher>
         <template #lightImage>
-          <img src="src/assets/images/mocks/_asset-product.png" />
+          <img src="/assets/mocks/_asset-product.png" />
         </template>
         <template #darkImage>
-          <img src="src/assets/images/mocks/_asset-product.png" />
+          <img src="/assets/mocks/_asset-product.png" />
         </template>
       </ImageSwitcher>
     </template>
