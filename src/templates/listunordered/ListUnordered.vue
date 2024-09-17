@@ -11,7 +11,7 @@
     >
       <li class="flex" :class="[icon ? 'gap-3' : 'gap-4 lg:gap-8', { 'flex-col' : direction == 'horizontal' }]">
         <template v-if="icon">
-          <Tile class="mt-0.5" v-bind="{ severity }">
+          <Tile class="mt-0.5 min-w-6" v-bind="{ severity }">
             <i
               class="text-xs"
               :class="icon"
