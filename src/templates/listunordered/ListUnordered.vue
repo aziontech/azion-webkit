@@ -20,7 +20,7 @@
         </template>
         <div v-if="!icon && direction !== 'horizontal'" class="flex relative">
           <div class="h-full bg-[--surface-300] w-[2px]" />
-          <div class="h-4 mt-2 bg-[--text-color] w-[2px] blur-sm	left-0 absolute" />
+          <div class="h-4 mt-2 bg-white	w-[2px] blur-sm	left-0 absolute" />
           <div class="h-4 mt-2 bg-[--text-color] w-[3px] -left-[0.5px] absolute" />
         </div>
         <div class="flex flex-col gap-4 justify-center mt-0.5">
