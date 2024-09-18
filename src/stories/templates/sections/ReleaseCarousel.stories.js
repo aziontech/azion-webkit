@@ -93,11 +93,11 @@ const MOCK =   {
 
 const template = `
 <Container class="surface-ground">
-  <ContentSection :overline="args.overline" :title="args.title"
-    isContentCentralized position="center">
-    <template #main>
+  <ContentSection :overline="args.overline" :title="args.title">
+    <template #principal>
       <div class="relative">
         <ReleaseCarousel :data="args.items" />
+      </div>
     </template>
   </ContentSection>
 </Container>`
