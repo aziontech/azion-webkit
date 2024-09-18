@@ -1,6 +1,6 @@
 
 <template>
-  <div class="surface-50 rounded px-10 md:px-20 md:gap-10 md:pt-10 pb-10 flex flex-col md:flex-row w-full items-center" :class="[{ 'border surface-border' : border }]">
+  <div class="degrade rounded px-10 md:px-20 md:gap-10 md:pt-10 pb-10 flex flex-col md:flex-row w-full items-center" :class="[{ 'border surface-border' : border }]">
     <div class="max-w-md w-full flex flex-col gap-4 py-10 min-h-60 justify-center">
       <p class="text-xl leading-normal">
         {{ text }}
@@ -12,7 +12,7 @@
         <LinkButton v-bind="button" outlined />
       </div>
     </div>
-    <div class="flex items-center justify-center w-full">
+    <div class="h-full flex items-center justify-center w-full">
       <ImageSwitcher>
         <template #lightImage>
           <img
@@ -67,3 +67,9 @@ defineProps({
   }
 })
 </script>
+
+<style>
+.degrade {
+  background: linear-gradient(255.8deg, rgba(var(--degrade-primary), 0.1) 10.09%, rgba(var(--degrade-primary),  0) 55.72%);
+}
+</style>
