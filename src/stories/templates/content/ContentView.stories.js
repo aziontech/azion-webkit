@@ -5,7 +5,7 @@ import TableOfContents from "../../../templates/tableofcontents";
 import Sharer from "../../../templates/sharerblock";
 
 export default {
-  title: 'Blocks/Content/Content View',
+  title: 'Layout/Content',
   component: HeroArticle,
   tags: ['autodocs'],
   argTypes: {}
@@ -459,6 +459,8 @@ const template = `
                 <p>O Azion Edge SQL está disponível em <strong>Preview</strong>. Conheça mais sobre como começar a usá-lo
                   na <a href="https://www.azion.com/pt-br/documentacao/produtos/store/edge-sql/">documentação</a>.</p>
               </blockquote>
+            </figure>
+          </div>
         </ReadableContent>
       </section>
     </div>
@@ -468,7 +470,6 @@ const template = `
       </div>
     </aside>
   </div>
-
 </div>
 `
 

@@ -4,7 +4,7 @@ import ImageSwitcher from '../../../templates/themeawareimageswitcher'
 import Container from '../../../templates/container'
 
 export default {
-  title: 'Blocks/Hero/ Image Central',
+  title: 'Blocks/Hero/hero-product-vertical',
   tags: ['autodocs'],
 }
 

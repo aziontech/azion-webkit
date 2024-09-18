@@ -9,7 +9,7 @@ import ImageSwitcher from '../../../templates/themeawareimageswitcher'
 import Container from '../../../templates/container'
 
 export default {
-  title: 'Blocks/Sections/Grid Bento',
+  title: 'Blocks/Sections/section-grid-bento',
   tags: ['autodocs'],
   argTypes: {
     gridType: {

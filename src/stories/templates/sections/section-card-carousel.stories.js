@@ -8,7 +8,7 @@ import CardDescription from '../../../templates/carddescription'
 import Container from '../../../templates/container'
 
 export default {
-  title: 'Blocks/Sections/Card Carousel',
+  title: 'Blocks/Sections/section-card-carousel',
   tags: ['autodocs'],
 }
 

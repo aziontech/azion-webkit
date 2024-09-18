@@ -4,7 +4,7 @@ import ContentLogoBlock from '../../../templates/contentlogo'
 import Container from '../../../templates/container'
 
 export default {
-  title: 'Blocks/Hero/ Display Logo Central',
+  title: 'Blocks/Hero/hero-home-vertical',
   tags: ['autodocs'],
 }
 

@@ -2,7 +2,6 @@ import BigNumbers from '../../templates/bignumbers'
 
 export default {
   title: 'Components Group/Big Numbers',
-  component: BigNumbers,
   tags: ['autodocs'],
   argTypes: {
     items: {
@@ -12,8 +11,7 @@ export default {
   }
 }
 
-export const Default = {
-  args: {
+const MOCK = {
     items: [
       {
         "icon": "pi pi-verified",
@@ -36,5 +34,25 @@ export const Default = {
         "description": "Response Time"
       }
     ],
-  }
 }
+
+const template = `
+  <div class="py-10 px-container surface-ground">
+    <BigNumbers v-bind="args" />
+  </div>
+`
+
+const Template = (args) => ({
+  components: { BigNumbers },
+  setup() {
+    return { args }
+  },
+  template: template
+})
+
+export const Default = Template.bind({})
+Default.args = MOCK
+
+Default.parameters = {
+  docs: { source: { code: template } },
+};

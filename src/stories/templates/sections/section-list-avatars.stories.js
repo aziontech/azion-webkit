@@ -3,7 +3,7 @@ import ContentSection from '../../../templates/contentsection'
 import Container from '../../../templates/container'
 
 export default {
-  title: 'Blocks/Sections/Avatars',
+  title: 'Blocks/Sections/section-list-avatars',
   tags: ['autodocs'],
 }
 

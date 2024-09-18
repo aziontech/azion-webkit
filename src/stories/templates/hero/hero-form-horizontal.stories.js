@@ -5,7 +5,7 @@ import FormBePartner from '../../../../dist/formbepartner'
 import Container from '../../../templates/container'
 
 export default {
-  title: 'Blocks/Hero/Hero Form Right',
+  title: 'Blocks/Hero/hero-form-horizontal',
   tags: ['autodocs'],
 }
 

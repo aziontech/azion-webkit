@@ -6,7 +6,7 @@ import LinkButton from "../../../templates/linkbutton";
 import Container from '../../../templates/container'
 
 export default {
-  title: 'Blocks/Sections/Card Expandable',
+  title: 'Blocks/Sections/section-card-expandable',
   tags: ['autodocs'],
 }
 

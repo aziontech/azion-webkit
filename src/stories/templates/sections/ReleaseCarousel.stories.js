@@ -97,7 +97,7 @@ const template = `
     isContentCentralized position="center">
     <template #main>
       <div class="relative">
-        <ReleaseCarousel class="relative" :data="args.items" />
+        <ReleaseCarousel :data="args.items" />
     </template>
   </ContentSection>
 </Container>`

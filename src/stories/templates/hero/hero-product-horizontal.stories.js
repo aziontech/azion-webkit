@@ -7,7 +7,7 @@ import Titlegroup from '../../../templates/titlegroup'
 import Container from '../../../templates/container'
 
 export default {
-  title: 'Blocks/Hero/Products',
+  title: 'Blocks/Hero/hero-products-horizontal',
   tags: ['autodocs'],
 }
 

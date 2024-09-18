@@ -5,7 +5,7 @@ import ImageSwitcher from '../../../templates/themeawareimageswitcher'
 import Container from '../../../templates/container'
 
 export default {
-  title: 'Blocks/Hero/ Right Image with Logo',
+  title: 'Blocks/Hero/hero-marketplace-horizontal',
   tags: ['autodocs'],
 }
 

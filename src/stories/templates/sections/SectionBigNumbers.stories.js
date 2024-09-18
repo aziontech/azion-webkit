@@ -37,8 +37,8 @@ const MOCK = {
 
 const template = `
 <Container class="surface-ground">
-  <ContentSection position="center" isContentCentralized :overline="args.overline" :title="args.title">
-    <template #content>
+  <ContentSection :overline="args.overline" :title="args.title">
+    <template #principal>
       <BigNumbers :items="args.items" />
     </template>
   </ContentSection>
