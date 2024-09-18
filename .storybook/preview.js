@@ -7,8 +7,7 @@ import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 import "../src/assets/icons/azionicons.scss";
 import '../src/assets/main.css';
-import 'azion-theme/dark';
-import 'azion-theme/light';
+import 'azion-theme'
 
 import { withThemeByClassName } from '@storybook/addon-themes';
 
@@ -52,8 +51,8 @@ export const parameters = {
 export const decorators = [
   withThemeByClassName({
     themes: {
-      light: 'azion-light',
-      dark: 'azion-dark',
+      light: 'azion azion-light',
+      dark: 'azion azion-dark',
     },
     defaultTheme: 'light',
   })

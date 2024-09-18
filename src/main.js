@@ -8,10 +8,7 @@ import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 import './assets/icons/azionicons.scss'
 import './assets/main.css';
-import 'azion-theme/dark';
-import 'azion-theme/light';
-
-
+import 'azion-theme'
 
 const app = createApp(App);
 
