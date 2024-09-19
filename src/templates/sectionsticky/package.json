@@ -1,0 +1,7 @@
+{
+  "main": "./sectionsticky.js",
+  "types": "./SectionSticky.d.ts",
+  "browser": {
+    "./sfc": "./SectionSticky.vue"
+  }
+}
