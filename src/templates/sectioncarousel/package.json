@@ -1,0 +1,7 @@
+{
+  "main": "./sectioncarousel.js",
+  "types": "./SectionCarousel.d.ts",
+  "browser": {
+    "./sfc": "./SectionCarousel.vue"
+  }
+}
