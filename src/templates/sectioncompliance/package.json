@@ -1,0 +1,7 @@
+{
+  "main": "./sectioncompliance.js",
+  "types": "./SectionCompliance.d.ts",
+  "browser": {
+    "./sfc": "./SectionCompliance.vue"
+  }
+}
