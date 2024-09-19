@@ -6,8 +6,8 @@
       </div>
     </template>
     <template #principal>
-      <Carousel :value="cards" :numVisible="3" :numScroll="1" :circular="true" :autoplayInterval="5000"
-        :responsiveOptions="responsiveOptions" :showIndicators="false">
+      <Carousel :value="cards" :numVisible="3" :numScroll="3" :circular="true" :autoplayInterval="5000"
+        :responsiveOptions="responsiveOptions" :showNavigators="false">
         <template #item="slotProps">
           <div class="px-3 h-full">
             <CardBaseClickable backgroundColor="outlined" :link="slotProps.data.link" grid disableAction>
@@ -64,17 +64,17 @@ const responsiveOptions = [
   {
     breakpoint: '1400px',
     numVisible: 2,
-    numScroll: 1
+    numScroll: 2
   },
   {
     breakpoint: '1199px',
     numVisible: 3,
-    numScroll: 1
+    numScroll: 3
   },
   {
     breakpoint: '767px',
     numVisible: 2,
-    numScroll: 1
+    numScroll: 2
   },
   {
     breakpoint: '575px',

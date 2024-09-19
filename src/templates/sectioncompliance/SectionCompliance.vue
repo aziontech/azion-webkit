@@ -6,7 +6,7 @@
     titleTag="h2"
   >
     <template #main>
-      <div class="w-full flex justify-end items-end">
+      <div class="w-full flex lg:justify-end lg:items-end">
         <LinkButton
           class="min-w-fit"
           v-bind="button"

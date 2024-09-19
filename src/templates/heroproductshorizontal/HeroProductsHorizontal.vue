@@ -1,5 +1,5 @@
 <template>
-<HeroBlockBase :overline="overline" :description="description">
+  <HeroBlockBase :overline="overline" :description="description">
     <template #title>
       <Titlegroup v-bind="hgroup" />
     </template>

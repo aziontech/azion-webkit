@@ -7,11 +7,11 @@
       :page="pageProp"
       :pt="{
         item: { class: 'flex justify-center '},
-        root: { class: 'border surface-border rounded surface-50'}
+        root: { class: 'border surface-border rounded degrade'}
       }">
 
       <template #item="slotProps">
-        <Quote v-bind="slotProps.data.quote" :border="false" />
+        <Quote v-bind="slotProps.data.quote" :border="false" disableDegrade />
       </template>
     </Carousel>
     <div class="hidden md:flex items-center justify-center gap-x-32">
@@ -52,5 +52,7 @@ setInterval(() => {
   filter: invert(100%);
 }
 
-
+.degrade {
+  background: linear-gradient(255.8deg, rgba(var(--degrade-primary), 0.05) 10.09%, rgba(var(--degrade-primary),  0) 55.72%);
+}
 </style>

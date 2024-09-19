@@ -25,8 +25,8 @@ const data = [
 {
   quote: {
     text: `A Azion protege o Agibank, banco omnichannel brasileiro com 1M+ de clientes, de ataques que ameaçam suas aplicações.` ,
-    imageLight: "https://www.azion.com/assets/pages/products/images/dark/edge-functions/renner-logo.svg?ims=x40",
-    imageDark: "https://www.azion.com/assets/pages/products/images/dark/edge-functions/renner-logo.svg?ims=x40",
+    imageLight: "https://www.azion.com/assets/pages/products/images/dark/edge-functions/renner-logo.svg",
+    imageDark: "https://www.azion.com/assets/pages/products/images/dark/edge-functions/renner-logo.svg",
       author: "Luis Igreja",
     button: {
       link: "/en/",
@@ -34,7 +34,7 @@ const data = [
     }
   },
   button: {
-    image: "https://www.azion.com/assets/pages/products/images/dark/edge-functions/renner-logo.svg?ims=x40"
+    image: "https://www.azion.com/assets/pages/products/images/dark/edge-functions/renner-logo.svg"
   }
 },
 {

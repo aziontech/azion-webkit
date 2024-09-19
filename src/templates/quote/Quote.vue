@@ -1,6 +1,8 @@
 
 <template>
-  <div class="degrade rounded px-10 md:px-20 md:gap-10 md:pt-10 pb-10 flex flex-col md:flex-row w-full items-center" :class="[{ 'border surface-border' : border }]">
+  <div class="rounded px-10 md:px-20 md:gap-10 md:pt-10 pb-10 flex flex-col md:flex-row w-full items-center"
+      :class="[{ 'border surface-border' : border }, { 'degrade': !disableDegrade }]"
+  >
     <div class="max-w-md w-full flex flex-col gap-4 py-10 min-h-60 justify-center">
       <p class="text-xl leading-normal">
         {{ text }}
@@ -16,15 +18,15 @@
       <ImageSwitcher>
         <template #lightImage>
           <img
-            :src="`${imageLight}?ims=x40`"
-            loading="lazy"
-            width="160" height="40" :alt="alt" />
+            :src="`${imageLight}?ims=x60`"
+            loading="lazy"  class="max-h-[60px]"
+            width="auto" height="60" :alt="alt" />
         </template>
         <template #darkImage>
           <img
-            :src="`${imageDark}?ims=x40`"
-            loading="lazy"
-            width="160" height="40" :alt="alt" />
+            :src="`${imageDark}?ims=x60`"
+            loading="lazy" class="max-h-[60px]"
+            width="auto" height="60" :alt="alt" />
         </template>
       </ImageSwitcher>
     </div>
@@ -64,12 +66,17 @@ defineProps({
   alt: {
     type: String,
     required: false,
+  },
+  disableDegrade: {
+    required: false,
+    default: false,
+    type: Boolean,
   }
 })
 </script>
 
 <style>
 .degrade {
-  background: linear-gradient(255.8deg, rgba(var(--degrade-primary), 0.1) 10.09%, rgba(var(--degrade-primary),  0) 55.72%);
+  background: linear-gradient(255.8deg, rgba(var(--degrade-primary), 0.05) 10.09%, rgba(var(--degrade-primary),  0) 55.72%);
 }
 </style>
