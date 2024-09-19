@@ -3,10 +3,24 @@ import LinkButton from '../../../templates/linkbutton'
 import ContentLogoBlock from '../../../templates/contentlogo'
 import ImageSwitcher from '../../../templates/themeawareimageswitcher'
 import Container from '../../../templates/container'
+import Rules from '../../rules'
 
 export default {
   title: 'Blocks/Hero/hero-marketplace-horizontal',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content Rules:
+${Rules.hero.overline}
+${Rules.hero.title}
+${Rules.hero.cta}
+${Rules.hero.image}
+        `,
+      },
+    },
+  },
 }
 
 const logos = Array(3).fill({
@@ -90,11 +104,6 @@ Default.parameters = {
   docs: {
     description: {
       story: `
-
-      * exemplo de description *
-
-      Definições:
-      - Utilizar apenas 3 logos
       `
     },
     source: { code: HeroDisplay } },

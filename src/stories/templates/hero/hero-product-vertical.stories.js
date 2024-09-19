@@ -2,10 +2,24 @@ import HeroBlockBase from '../../../templates/herobase'
 import LinkButton from '../../../templates/linkbutton'
 import ImageSwitcher from '../../../templates/themeawareimageswitcher'
 import Container from '../../../templates/container'
+import Rules from '../../rules'
 
 export default {
   title: 'Blocks/Hero/hero-product-vertical',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content Rules:
+${Rules.heroProduct.overline}
+${Rules.heroProduct.title}
+${Rules.heroProduct.cta}
+${Rules.heroProduct.image}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK = {

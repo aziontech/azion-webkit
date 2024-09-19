@@ -1,10 +1,24 @@
 import HeroProductHorizontal from "../../../templates/heroproductshorizontal"
 import Container from "../../../templates/container"
-
+import Rules from '../../rules'
 
 export default {
   title: 'Blocks/Hero/hero-products-horizontal',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content Rules:
+${Rules.heroProduct.overline}
+${Rules.heroProduct.title}
+${Rules.heroProduct.cta}
+${Rules.heroProduct.image}
+${Rules.heroProduct.list}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK = {

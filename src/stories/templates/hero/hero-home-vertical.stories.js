@@ -2,10 +2,25 @@ import HeroBlockBase from '../../../templates/herobase'
 import LinkButton from '../../../templates/linkbutton'
 import ContentLogoBlock from '../../../templates/contentlogo'
 import Container from '../../../templates/container'
+import Rules from '../../rules'
 
 export default {
   title: 'Blocks/Hero/hero-home-vertical',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content Rules:
+${Rules.hero.banner}
+${Rules.hero.title}
+${Rules.hero.description}
+${Rules.hero.cta}
+${Rules.hero.logos}
+        `,
+      },
+    },
+  },
 }
 
 const logos = Array(4).fill({
@@ -41,7 +56,7 @@ const MOCK = {
     }
   ],
   bannerNews: {
-    description: "Azion Console for Developerss!",
+    description: "Azion Console for Developers!",
     cta: {
       label: "Access now.",
       link: "https://console.azion.com/login"

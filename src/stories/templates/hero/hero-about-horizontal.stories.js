@@ -5,12 +5,26 @@ import CardTitle from "../../../templates/cardtitle"
 import CardDescription from "../../../templates/carddescription"
 import Tile from "../../../templates/tile"
 import Container from '../../../templates/container'
+import Rules from '../../rules'
 
 export default {
   title: 'Blocks/Hero/hero-about-horizontal',
   tags: ['autodocs'],
-}
-
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content Rules:
+${Rules.hero.overline}
+${Rules.hero.title}
+${Rules.hero.description}
+${Rules.hero.image}
+${Rules.hero.cards}
+        `,
+      },
+    },
+  },
+};
 
 const HeroDisplay = `
 <Container class="surface-section">
