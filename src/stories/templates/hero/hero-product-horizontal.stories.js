@@ -1,10 +1,6 @@
-import HeroBlockBase from '../../../templates/herobase'
-import LinkButton from '../../../templates/linkbutton'
-import ContentLogoBlock from '../../../templates/contentlogo'
-import ImageSwitcher from '../../../templates/themeawareimageswitcher'
-import ListUnordered from "../../../templates/listunordered"
-import Titlegroup from '../../../templates/titlegroup'
-import Container from '../../../templates/container'
+import HeroProductHorizontal from "../../../templates/heroproductshorizontal"
+import Container from "../../../templates/container"
+
 
 export default {
   title: 'Blocks/Hero/hero-products-horizontal',
@@ -12,44 +8,44 @@ export default {
 }
 
 const MOCK = {
-  hero: {
-    overline: "SECURE",
-    description:
-      'Protect your web application from OWASP Top 10 threats to sophisticated zero-day attacks.'
-  },
+  "overline": "Solutions",
   "hgroup": {
-    "subtitle": "Web Application Firewall",
-    "title": "Azion WAF: the advanced protection security specialists trust"
+    "subtitle": "Jamstack Websites",
+    "title": "Enhance the performance, security, and scalability of your websites and web applications"
   },
-  CTA: [
+  "buttons": [
     {
-      label: 'Start Now',
-      link: 'https://console.azion.com/signup/',
-      outlined: false
+      "label": "Start Now",
+      "link": "https://console.azion.com/signup/"
     },
     {
-      label: 'Get a Demo',
-      link: '/en/contact-sales/',
-      outlined: true
+      "label": "Get a Demo",
+      "link": "/en/contact-sales/",
+      "outlined": true
     }
   ],
-  list: {
-    direction: 'horizontal',
-    data: [
+  "images": {
+    "dark": "/assets/mocks/_asset-product.png",
+    "light": "/assets/mocks/_asset-product.png",
+    "alt": ""
+  },
+  "list": {
+    "severity": "secondary",
+    "data": [
       {
-        title: "Proteção",
-        description: "Proteja suas aplicações e APIs contra SQL Injection, XSS, RFI e outras ameaças.",
-        icon: "pi pi-lock",
+        "title": "Lightning-fast load times",
+        "description": "Developed with Vue/Vite, PrimeVue, and Tailwind, Azion Console Kit is a front-end development kit used for crafting a customized Azion Console interface. Seamless scalability for optimal performance during traffic spikes. Minimize latency by pushing computing closer to users.",
+        "icon": "pi pi-check"
       },
       {
-        title: "Diverse use case",
-        description: "Bloqueie ameaças no edge, antes de chegarem a sua aplicação ou infraestrutura. ",
-        icon: "pi pi-shield",
+        "title": "Optimized costs and efficiency",
+        "description": "Save time and resources with a simplified development process. Align costs with usage through a consumption-based pricing model. Minimize infrastructure expenses with global content delivery networks.",
+        "icon": "pi pi-check"
       },
       {
-        title: "Cost-effective",
-        description: "Economize tempo com regras gerenciadas e passe mais tempo criando aplicações.",
-        icon: "pi pi-clock",
+        "title": "Enhanced security against threats",
+        "description": "Reduced attack surface with abstracted microservice APIs. Serverless architecture eliminates server management and patching. Limited breach impact through decoupled front-end and back-end.",
+        "icon": "pi pi-check"
       }
     ]
   }
@@ -57,33 +53,11 @@ const MOCK = {
 
 const HeroDisplay = `
 <Container class="surface-ground">
-  <HeroBlockBase
-    v-bind="args.hero"
-  >
-    <template #title>
-      <Titlegroup v-bind="args.hgroup" />
-    </template>
-    <template #actions>
-      <LinkButton v-for="button in args.CTA" v-bind="button" />
-    </template>
-    <template #main>
-      <ImageSwitcher>
-        <template #lightImage>
-          <img src="/assets/mocks/_asset-product.png" />
-        </template>
-        <template #darkImage>
-          <img src="/assets/mocks/_asset-product.png" />
-        </template>
-      </ImageSwitcher>
-    </template>
-    <template #principal>
-        <ListUnordered severity="secondary" class="w-full" v-bind="args.list"/>
-    </template>
-  </HeroBlockBase>
+  <HeroProductHorizontal v-bind="args" />
 </Container>`
 
 const Template = (args) => ({
-  components: { HeroBlockBase, LinkButton, ContentLogoBlock, ImageSwitcher, ListUnordered, Titlegroup, Container },
+  components: { HeroProductHorizontal, Container },
   setup() {
     return { args }
   },
