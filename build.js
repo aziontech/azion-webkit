@@ -89,6 +89,7 @@ function addPackageJson() {
 
 addPackageJson();
 copyDependencies('./src/templates/', `${outDir}/`);
+fs.copySync(path.resolve(__dirname, './tailwind.config.js'), `${outDir}/tailwind.config.js`);
 fs.copySync(path.resolve(__dirname, './src/assets'), `${outDir}/src/assets`);
 fs.copySync(path.resolve(__dirname, './src/services'), `${outDir}/src/services`);
 fs.copySync(path.resolve(__dirname, './README.md'), `${outDir}/README.md`);
