@@ -11,11 +11,12 @@ export default {
     docs: {
       description: {
         component: `
-### Content Rules:
+### Content rules
 ${Rules.heroProduct.overline}
 ${Rules.heroProduct.title}
 ${Rules.heroProduct.cta}
 ${Rules.heroProduct.image}
+
         `,
       },
     },

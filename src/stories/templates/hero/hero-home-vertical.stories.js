@@ -11,7 +11,7 @@ export default {
     docs: {
       description: {
         component: `
-### Content Rules:
+### Content rules
 ${Rules.hero.banner}
 ${Rules.hero.title}
 ${Rules.hero.description}
