@@ -2,49 +2,43 @@
 module.exports = {
   content: [
     'src/**/*.{astro,html,md,mdx,js,vue}',
-    'node_modules/**/*.{html,vue}' // required for astro project
+    'node_modules/**/*.{html,vue}'
   ],
   plugins: [
     require('@tailwindcss/typography'),
-    function ({ addUtilities/*, variants*/ }) {
+    function ({ addUtilities }) {
       const newUtilities = {};
 
       newUtilities[".px-shell"] = {
         paddingLeft: "1rem",
         paddingRight: "1rem",
       };
-
       newUtilities[".px-container"] = {
         maxWidth: "1360px",
         margin: "0 auto",
         paddingLeft: "1rem",
         paddingRight: "1rem",
-    };
-
+      };
       newUtilities["@media (min-width: 768px)"] = {
         ".px-shell": {
-          paddingLeft: "2.5rem",
-          paddingRight: "2.5rem",
+          paddingLeft: "2rem",
+          paddingRight: "2rem",
         },
         ".px-container": {
-          paddingLeft: "2.5rem",
-          paddingRight: "2.5rem",
+          paddingLeft: "2rem",
+          paddingRight: "2rem",
         },
       };
-
       addUtilities(newUtilities, ["responsive", "hover"]);
     },
   ],
-  // sync with azion-platform-kit
   important: true,
   darkMode: 'class',
   theme: {
     extend: {
-      // TYPOGRAPH
       fontFamily: {
-        'mono': '"Roboto Mono"',
+        'mono': 'Roboto Mono',
       },
-      // COLORS
       borderColor: {
         header: '#3e3e3e',
         'header-hover': '#F3652B'
@@ -61,7 +55,6 @@ module.exports = {
         header: '#b5b5b5',
         footer: '#CCCCCC'
       },
-      // CONTAINERS / PADDING / MARGIN / SIZE
       container: {
         padding: {
           DEFAULT: '.75rem',
@@ -80,7 +73,6 @@ module.exports = {
       width: {
         slide: '300px'
       },
-      // ANIMATIONS
       animation: {
         fadeIn: 'fadeIn 220ms ease-in-out',
         fadeOut: 'fadeOut 220ms ease-in-out',
@@ -110,8 +102,8 @@ module.exports = {
           '100%': {
             'background-size': '200% 200%',
             'background-position': 'left'
-           },
-        },
+           }
+        }
       }
     }
   }

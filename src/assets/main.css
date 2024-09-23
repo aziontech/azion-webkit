@@ -1,12 +1,3 @@
-/*
-
-  To local developing,
-  you should use the repositorie azion-web-kit and run:
-
-  cd ./azion-web-kit/ ; npm i; npm link
-  cd ../site; npm i; npm link @aziontech/azion-web-kit
-
-*/
 @layer tailwind-base, primevue;
 
 @layer tailwind-base {
@@ -34,7 +25,6 @@ html, body {
   padding: 0;
 }
 
-/* MANUAL STYLE */
 .p-card-header img {
   max-width: 100%;
 }
