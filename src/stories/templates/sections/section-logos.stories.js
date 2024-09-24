@@ -1,10 +1,23 @@
 
-import ContentSection from '../../../templates/contentsection'
-import Container from '../../../templates/container'
+import ContentSection from '../../../templates/contentsection/ContentSection'
+import Container from '../../../templates/container/Container'
+import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/Logos',
+  title: 'Blocks/Sections/section-logos',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.logos}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK = {

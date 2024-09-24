@@ -6,7 +6,7 @@ import Container from '../../../templates/container'
 import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Hero/hero-form-horizontal',
+  title: 'Blocks/Hero/hero-form-right',
   tags: ['autodocs'],
   parameters: {
     docs: {
@@ -18,7 +18,7 @@ ${Rules.hero.title}
 ${Rules.hero.description}
 ${Rules.hero.cta}
 ${Rules.hero.logos}
-${Rules.hero.forms}
+${Rules.hero.form}
         `,
       },
     },

@@ -1,11 +1,26 @@
 
-import ContentSection from '../../../templates/contentsection'
-import ImageSwitcher from '../../../templates/themeawareimageswitcher'
-import Container from '../../../templates/container'
+import ContentSection from '../../../templates/contentsection/ContentSection'
+import ImageSwitcher from '../../../templates/themeawareimageswitcher/ImageSwitcher'
+import Container from '../../../templates/container/Container'
+import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/Z Text Image',
+  title: 'Blocks/Sections/section-z',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.image}
+${Rules.section.title}
+${Rules.section.description}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK = {

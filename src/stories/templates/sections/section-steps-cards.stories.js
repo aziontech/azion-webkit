@@ -1,15 +1,28 @@
 
-import ContentSection from '../../../templates/contentsection'
-import CardBase from '../../../templates/cardbase'
-import Tile from '../../../templates/tile'
-import CardTitle from '../../../templates/cardtitle'
-import CardDescription from '../../../templates/carddescription'
-import LinkButton from '../../../templates/linkbutton'
-import Container from '../../../templates/container'
+import ContentSection from '../../../templates/contentsection/ContentSection'
+import CardBase from '../../../templates/cardbase/CardBase'
+import Tile from '../../../templates/tile/Tile'
+import CardTitle from '../../../templates/cardtitle/CardTitle'
+import CardDescription from '../../../templates/carddescription/CardDescription'
+import LinkButton from '../../../templates/linkbutton/LinkButton'
+import Container from '../../../templates/container/Container'
+import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/Steps Cards',
+  title: 'Blocks/Sections/section-steps-cards',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.cards}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK = {

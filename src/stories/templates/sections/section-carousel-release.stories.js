@@ -1,11 +1,24 @@
 
-import ContentSection from '../../../templates/contentsection'
-import ReleaseCarousel from '../../../templates/releasecarousel'
-import Container from '../../../templates/container'
+import ContentSection from '../../../templates/contentsection/ContentSection'
+import ReleaseCarousel from '../../../templates/releasecarousel/ReleaseCarousel'
+import Container from '../../../templates/container/Container'
+import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/Release Carousel',
+  title: 'Blocks/Sections/section-carousel-release',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.cardsRelease}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK =   {

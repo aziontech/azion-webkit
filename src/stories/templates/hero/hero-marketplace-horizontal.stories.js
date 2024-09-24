@@ -16,7 +16,7 @@ export default {
 ${Rules.hero.overline}
 ${Rules.hero.title}
 ${Rules.hero.cta}
-${Rules.hero.image}
+${Rules.hero.imageVideo}
         `,
       },
     },

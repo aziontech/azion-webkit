@@ -1,10 +1,23 @@
 
 import Container from '../../../templates/container'
 import SectionHighlight from '../../../templates/sectionhighlight'
+import Rules from '../../rules'
 
 export default {
   title: 'Blocks/Sections/section-highlight',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.image}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK = {

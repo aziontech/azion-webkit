@@ -1,15 +1,31 @@
-import ContentSection from '../../../templates/contentsection'
-import CardBase from '../../../templates/cardbase'
-import CardTitle from '../../../templates/cardtitle'
-import CardDescription from '../../../templates/carddescription'
-import Overline from '../../../templates/overline'
-import LinkButton from '../../../templates/linkbutton'
+import ContentSection from '../../../templates/contentsection/ContentSection'
+import CardBase from '../../../templates/cardbase/CardBase'
+import CardTitle from '../../../templates/cardtitle/CardTitle'
+import CardDescription from '../../../templates/carddescription/CardDescription'
+import Overline from '../../../templates/overline/Overline'
+import LinkButton from '../../../templates/linkbutton/LinkButton'
 import Menu from 'primevue/menu'
-import Container from '../../../templates/container'
+import Container from '../../../templates/container/Container'
+import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/Horizontal With Navigation',
+  title: 'Blocks/Sections/section-horizontal-navigation',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.description}
+${Rules.section.cta}
+${Rules.section.navigation}
+${Rules.section.cards}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK = {

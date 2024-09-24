@@ -1,10 +1,10 @@
 
-import Overline from '../../../templates/overline'
-import EmptyState from '../../../templates/emptystateblock'
-import Container from '../../../templates/container'
+import Overline from '../../../templates/overline/Overline'
+import EmptyState from '../../../templates/emptystateblock/EmptyStateBlock'
+import Container from '../../../templates/container/Container'
 
 export default {
-  title: 'Blocks/Extras/404',
+  title: 'Blocks/Pages/page-404',
   tags: ['autodocs'],
 }
 

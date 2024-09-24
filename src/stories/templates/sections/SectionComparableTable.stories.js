@@ -9,6 +9,7 @@ import LinkButton from "../../../templates/linkbutton";
 import Overline from "../../../templates/overline";
 import ContentSection from '../../../templates/contentsection'
 import Container from "../../../templates/container"
+import Rules from '../../rules'
 
 export default {
   title: 'Blocks/Sections/Comparable Table',

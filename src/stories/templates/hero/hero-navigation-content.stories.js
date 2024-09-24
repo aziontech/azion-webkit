@@ -1,10 +1,10 @@
-import HeroArticle from '../../../templates/heroarticle';
+import HeroArticle from '../../../templates/heroarticle/HeroArticle';
 import Breadcrumb from "primevue/breadcrumb";
-import MenuNavigation from '../../../templates/menunavigationblock'
+import MenuNavigation from '../../../templates/menunavigationblock/MenuNavigationBlock'
 import Divider from 'primevue/divider'
 
 export default {
-  title: 'Blocks/Content/Content Navigation',
+  title: 'Blocks/Hero/hero-navigation-content',
   component: HeroArticle,
   tags: ['autodocs'],
   argTypes: {}

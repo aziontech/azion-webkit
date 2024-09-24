@@ -3,6 +3,7 @@ import ContentSection from '../../../templates/contentsection'
 import LinkButton from '../../../templates/linkbutton'
 import Tile from '../../../templates/tile'
 import Container from '../../../templates/container'
+import Rules from '../../rules'
 
 export default {
   title: 'Blocks/Sections/Get Started',

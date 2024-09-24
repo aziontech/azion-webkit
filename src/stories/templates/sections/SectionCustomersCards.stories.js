@@ -2,6 +2,7 @@
 import ContentSection from '../../../templates/contentsection'
 import CardCases from '../../../templates/cardcases'
 import Container from '../../../templates/container'
+import Rules from '../../rules'
 
 export default {
   title: 'Blocks/Sections/Customer Cards',

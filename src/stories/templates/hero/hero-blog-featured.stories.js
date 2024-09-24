@@ -1,16 +1,41 @@
-import Divider from 'primevue/divider'
-import CardGridListWithLoadMore from '../../../templates/cardgridlistwithloadmore'
-import Container from '../../../templates/container'
+import FeaturedPost from '../../../templates/featuredpost/FeaturedPost'
+import CardGridBlock from '../../../templates/cardgridblock/CardGridBlock'
+import Container from '../../../templates/container/Container'
+import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/List/Related Content',
+  title: 'Blocks/Hero/hero-blog-featured',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.hero.image}
+${Rules.hero.title}
+${Rules.hero.description}
+${Rules.hero.avatar}
+        `,
+      },
+    },
+  },
   argTypes: {
-
+    isSearchEnabled: {
+      options: [true,  false],
+      control: { type: 'radio' },
+      description: 'Enable/Disable Search'
+    },
+    isLoadMoreEnabled: {
+      options: [true,  false],
+      control: { type: 'radio' },
+      description: 'Enable/Disable Load More button'
+    },
   }
 }
 
 const MOCK = {
+  isSearchEnabled: true,
+  isLoadMoreEnabled: false,
   cards: {
     "data": [
       {
@@ -268,34 +293,69 @@ const MOCK = {
         "estimateReadTime": "5 min read"
       },
     ],
+    "categories": [
+      "All Articles",
+      "Market Trends",
+      "Company News",
+      "Developers",
+      "Security",
+      "Observability",
+      "Serverless",
+      "Orchestration",
+      "Caching",
+      "Routing & Networking",
+      "Routing"
+    ],
+    "buttonText": "Show more",
+    "algoliaAppId": "PYJUZH6VNQ",
+    "algoliaApiKey": "7c1795c333053265edd2aeb199745797",
+    "algoliaIndex": [
+      {
+        "name": "azion-blog-en",
+        "label": "blog",
+        "activeIndex": 1
+      }
+    ],
+    "algoliaModel": [
+      {
+        "label": "Blog"
+      }
+    ]
+
   },
-  title: "Related Content",
-  "buttonText": "Show more",
-    cardsAdded: 3
+  featuredPost: {
+    "title": "Azion Edge SQL: enabling access and analysis of structured data at the edge",
+    "description": "Explore how Azion Edge SQL enhances database operations with edge computing for high scalability, low latency, and cost-effectiveness.",
+    "link": "/en/blog/azion-edge-sql/",
+    "image": "https://www.azion.com/assets/blog/images/uploads/thumbblog-openstandards-mobile.png",
+    "authors": [
+      {
+        "avatar": "https://www.azion.com/assets/blog/images/uploads/img-prof.png",
+        "title": "Mariana Bellorín Aguilera",
+        "role": "Technical Writer"
+      }
+    ],
+    "date": "JUN 27, 2024",
+    "estimateReadTime": "15 min read",
+    "linkTarget": "_self"
+  }
+
+
 }
 
 const template = `
-  <Container class="px-container surface-ground">
-    <div class="flex items-center flex-col gap-4 md:gap-10">
-      <Divider align="center" type="dotted">
-        {{ title }}
-      </Divider>
-
-      <div class="max-w-7xl flex flex-col gap-4 md:gap-10">
-        <CardGridListWithLoadMore
-          cardType="blog"
-          cardDirection="row"
-          :pt="{ content: { class: 'grid-cols-1' } }"
-          :data="args.cards.data"
-          :buttonText="args.buttonText"
-          :loadMoreNumber="args.cardsAdded"
-        />
-      </div>
-    </div>
-  </Container>`
+<Container class="px-container surface-ground">
+  <FeaturedPost v-bind="args.featuredPost" />
+  <CardGridBlock
+    :isSearchEnabled="args.isSearchEnabled"
+    :isLoadMoreEnabled="args.isLoadMoreEnabled"
+    cardType="blog"
+    v-bind="args.cards"
+  />
+</Container>`
 
 const Template = (args) => ({
-  components: { CardGridListWithLoadMore, Divider, Container },
+  components: { FeaturedPost, CardGridBlock, Container },
   setup() {
     return { args }
   },

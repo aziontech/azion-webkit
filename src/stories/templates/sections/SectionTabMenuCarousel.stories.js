@@ -9,10 +9,24 @@ import CardBaseClickable from "../../../templates/cardbaseclickable"
 import CardTitle from "../../../templates/cardtitle"
 import CardDescription from "../../../templates/carddescription"
 import Container from "../../../templates/container"
+import Rules from '../../rules'
 
 export default {
   title: 'Blocks/Sections/Tab Menu Carousel',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.description}
+${Rules.section.cards}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK = {

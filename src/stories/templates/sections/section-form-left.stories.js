@@ -1,14 +1,27 @@
 
-import CardTitle from '../../../templates/cardtitle'
-import CardBase from '../../../templates/cardbase'
-import FormContactUs from '../../../../dist/formcontactus'
-import Overline from '../../../templates/overline'
-import LinkButton from '../../../templates/linkbutton'
-import Container from '../../../templates/container'
+import CardTitle from '../../../templates/cardtitle/CardTitle'
+import CardBase from '../../../templates/cardbase/CardBase'
+import FormContactUs from '../../../../dist/formcontactus/FormContactUs'
+import Overline from '../../../templates/overline/Overline'
+import LinkButton from '../../../templates/linkbutton/LinkButton'
+import Container from '../../../templates/container/Container'
+import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/Form',
+  title: 'Blocks/Sections/section-form-left',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.title}
+${Rules.section.form}
+${Rules.section.cards}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK = {

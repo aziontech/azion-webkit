@@ -1,10 +1,11 @@
 
-import Container from '../../../templates/container'
-import ContentSection from '../../../templates/contentsection'
-import LinkButton from '../../../templates/linkbutton'
+import Container from '../../../templates/container/Container'
+import ContentSection from '../../../templates/contentsection/ContentSection'
+import LinkButton from '../../../templates/linkbutton/LinkButton'
+import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/Simple CTA',
+  title: 'Blocks/Sections/section-end-cta',
   tags: ['autodocs'],
 }
 

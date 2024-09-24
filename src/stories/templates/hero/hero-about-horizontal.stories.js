@@ -18,7 +18,7 @@ export default {
 ${Rules.hero.overline}
 ${Rules.hero.title}
 ${Rules.hero.description}
-${Rules.hero.image}
+${Rules.hero.imageVideo}
 ${Rules.hero.cards}
         `,
       },

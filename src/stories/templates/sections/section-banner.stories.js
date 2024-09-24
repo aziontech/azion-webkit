@@ -1,14 +1,28 @@
 
-import Overline from '../../../templates/overline'
-import LinkButton from '../../../templates/linkbutton'
-import CardBase from '../../../templates/cardbase'
-import CardDescription from '../../../templates/carddescription'
-import CardTitle from '../../../templates/cardtitle'
-import Container from '../../../templates/container'
+import Overline from '../../../templates/overline/Overline'
+import LinkButton from '../../../templates/linkbutton/LinkButton'
+import CardBase from '../../../templates/cardbase/CardBase'
+import CardDescription from '../../../templates/carddescription/CardDescription'
+import CardTitle from '../../../templates/cardtitle/CardTitle'
+import Container from '../../../templates/container/Container'
+import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/Card Banner',
+  title: 'Blocks/Sections/section-banner',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.cta}
+${Rules.section.image}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK = {

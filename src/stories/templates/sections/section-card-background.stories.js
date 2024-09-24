@@ -1,14 +1,28 @@
 
-import ContentSection from '../../../templates/contentsection'
-import CardBase from '../../../templates/cardbase'
-import Overline from '../../../templates/overline'
-import CardTitle from '../../../templates/cardtitle'
-import CardBgImage from '../../../templates/cardbgimage'
-import Container from '../../../templates/container'
+import ContentSection from '../../../templates/contentsection/ContentSection'
+import CardBase from '../../../templates/cardbase/CardBase'
+import Overline from '../../../templates/overline/Overline'
+import CardTitle from '../../../templates/cardtitle/CardTitle'
+import CardBgImage from '../../../templates/cardbgimage/CardBgImage'
+import Container from '../../../templates/container/Container'
+import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/Cards Background Image',
+  title: 'Blocks/Sections/section-card-background',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.description}
+${Rules.section.cards}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK = {

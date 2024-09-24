@@ -1,10 +1,23 @@
 
 import ContentSection from '../../../templates/contentsection'
 import Container from '../../../templates/container'
+import Rules from '../../rules'
 
 export default {
   title: 'Blocks/Sections/section-list-avatars',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.avatars}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK = {

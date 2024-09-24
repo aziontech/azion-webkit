@@ -1,10 +1,23 @@
 
 import Container from '../../../templates/container'
 import SectionCarousel from '../../../templates/sectioncarousel'
+import Rules from '../../rules'
 
 export default {
   title: 'Blocks/Sections/section-carousel',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.cards}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK =  {

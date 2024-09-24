@@ -1,13 +1,27 @@
-import ContentSection from '../../../templates/contentsection'
-import CardBase from '../../../templates/cardbase'
-import CardTitle from '../../../templates/cardtitle'
-import Container from '../../../templates/container'
-import CardBgImage from '../../../templates/cardbgimage'
-import Overline from '../../../templates/overline'
+import ContentSection from '../../../templates/contentsection/ContentSection'
+import CardBase from '../../../templates/cardbase/CardBase'
+import CardTitle from '../../../templates/cardtitle/CardTitle'
+import Container from '../../../templates/container/Container'
+import CardBgImage from '../../../templates/cardbgimage/CardBgImage'
+import Overline from '../../../templates/overline/Overline'
+import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/Card Intercalated',
+  title: 'Blocks/Sections/section-card-intercalated',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.description}
+${Rules.section.cards}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK = {

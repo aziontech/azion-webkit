@@ -1,9 +1,22 @@
-import SectionBigNumbers from '../../../templates/sectionbignumbers'
-import Container from '../../../templates/container'
+import SectionBigNumbers from '../../../templates/sectionbignumbers/SectionBigNumbers'
+import Container from '../../../templates/container/Container'
+import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/section-big-numbers',
+  title: 'Blocks/Sections/section-bignumbers',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.bigNumbers}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK = {

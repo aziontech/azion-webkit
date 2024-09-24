@@ -1,9 +1,22 @@
-import HeroArticle from '../../../templates/heroarticle';
+import HeroArticle from '../../../templates/heroarticle/HeroArticle';
 import Breadcrumb from "primevue/breadcrumb";
-import Container from "../../../templates/container"
+import Container from "../../../templates/container/Container"
+import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Content/Article Hero',
+  title: 'Blocks/Hero/hero-content',
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.hero.title}
+${Rules.hero.description}
+${Rules.hero.avatar}
+        `,
+      },
+    },
+  },
   component: HeroArticle,
   tags: ['autodocs'],
   argTypes: {}
