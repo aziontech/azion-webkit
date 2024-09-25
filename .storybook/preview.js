@@ -19,7 +19,20 @@ export const parameters = {
   options: {
     storySort: {
       method: 'alphabetical',
-      order: ['Blocks', 'Components Group', 'Components', 'Layout', 'Elements'],
+      order: [
+        'Blocks', 
+        [
+          'Hero', 
+          'Sections',
+          'Banner',
+          'Pages',
+          'List'
+        ],
+        'Components Group', 
+        'Components', 
+        'Layout', 
+        'Elements'
+      ],    
     },
   },
   backgrounds: {
