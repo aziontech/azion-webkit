@@ -4,7 +4,7 @@ import MenuNavigation from '../../../templates/menunavigationblock/MenuNavigatio
 import Divider from 'primevue/divider'
 
 export default {
-  title: 'Blocks/Hero/hero-navigation-content',
+  title: 'Blocks/Hero/hero-content-navigation',
   component: HeroArticle,
   tags: ['autodocs'],
   argTypes: {}

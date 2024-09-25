@@ -1,9 +1,9 @@
-import HeroProductHorizontal from "../../../templates/heroproductshorizontal"
-import Container from "../../../templates/container"
+import HeroProductHorizontal from "../../../templates/heroproductshorizontal/HeroProductsHorizontal"
+import Container from "../../../templates/container/Container"
 import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Hero/hero-products-horizontal',
+  title: 'Blocks/Hero/hero-products-right',
   tags: ['autodocs'],
   parameters: {
     docs: {

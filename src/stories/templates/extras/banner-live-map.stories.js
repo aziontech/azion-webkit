@@ -8,17 +8,17 @@ import Container from '../../../templates/container/Container'
 import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/section-banner',
+  title: 'Blocks/Extras/banner-live-map',
   tags: ['autodocs'],
   parameters: {
     docs: {
       description: {
         component: `
 ### Content rules
-${Rules.section.overline}
-${Rules.section.title}
-${Rules.section.cta}
-${Rules.section.image}
+${Rules.banner.overline}
+${Rules.banner.title}
+${Rules.banner.cta}
+${Rules.banner.image}
         `,
       },
     },

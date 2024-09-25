@@ -5,8 +5,21 @@ import LinkButton from '../../../templates/linkbutton/LinkButton'
 import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/section-end-cta',
+  title: 'Blocks/Extras/banner-end-cta',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.banner.overline}
+${Rules.banner.title}
+${Rules.banner.cta}
+${Rules.banner.list}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK = {

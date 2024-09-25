@@ -1,12 +1,12 @@
-import HeroBlockBase from '../../../templates/herobase'
-import LinkButton from '../../../templates/linkbutton'
-import ContentLogoBlock from '../../../templates/contentlogo'
-import ImageSwitcher from '../../../templates/themeawareimageswitcher'
-import Container from '../../../templates/container'
+import HeroBlockBase from '../../../templates/herobase/HeroBase'
+import LinkButton from '../../../templates/linkbutton/LinkButton'
+import ContentLogoBlock from '../../../templates/contentlogo/ContentLogo'
+import ImageSwitcher from '../../../templates/themeawareimageswitcher/ImageSwitcher'
+import Container from '../../../templates/container/Container'
 import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Hero/hero-marketplace-horizontal',
+  title: 'Blocks/Hero/hero-image-right-logos',
   tags: ['autodocs'],
   parameters: {
     docs: {

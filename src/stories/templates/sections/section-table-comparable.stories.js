@@ -2,17 +2,17 @@
 import DataTable from "primevue/datatable";
 import Column from "primevue/column";
 import Tag from "primevue/tag";
-import CardBase from "../../../templates/cardbase";
-import CardTitle from "../../../templates/cardtitle";
-import CardDescription from "../../../templates/carddescription";
-import LinkButton from "../../../templates/linkbutton";
-import Overline from "../../../templates/overline";
-import ContentSection from '../../../templates/contentsection'
-import Container from "../../../templates/container"
+import CardBase from "../../../templates/cardbase/CardBase";
+import CardTitle from "../../../templates/cardtitle/CardTitle";
+import CardDescription from "../../../templates/carddescription/CardDescription";
+import LinkButton from "../../../templates/linkbutton/LinkButton";
+import Overline from "../../../templates/overline/Overline";
+import ContentSection from '../../../templates/contentsection/ContentSection'
+import Container from "../../../templates/container/Container"
 import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/Comparable Table',
+  title: 'Blocks/Sections/section-table-comparable',
   tags: ['autodocs'],
 }
 

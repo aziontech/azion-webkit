@@ -1,14 +1,14 @@
-import HeroBlockBase from '../../../templates/herobase'
-import BaseModal from "../../../templates/basemodal"
+import HeroBlockBase from '../../../templates/herobase/HeroBase'
+import BaseModal from "../../../templates/basemodal/Modal"
 import CardBaseClickable from "../../../templates/cardbaseclickable"
-import CardTitle from "../../../templates/cardtitle"
+import CardTitle from "../../../templates/cardtitle/CardTitle"
 import CardDescription from "../../../templates/carddescription"
-import Tile from "../../../templates/tile"
-import Container from '../../../templates/container'
+import Tile from "../../../templates/tile/Tile"
+import Container from '../../../templates/container/Container'
 import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Hero/hero-about-horizontal',
+  title: 'Blocks/Hero/hero-video-right',
   tags: ['autodocs'],
   parameters: {
     docs: {

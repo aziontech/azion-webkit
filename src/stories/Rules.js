@@ -35,10 +35,18 @@ const Rules = {
     bigNumbers: "- **Big Numbers:** Each number should include a concise title and a brief description (maximum 60 characters) explaining its significance. The title should highlight key achievements or statistics. Ensure that all icons are clear, visually support the metric, and maintain consistency with the overall visual style.",
     cardsCases: "- **Cases Cards:** Each card should include a recognizable logo, a concise description (up to 240 characters) highlighting the key benefits and outcomes, and a valid link to the full success story. Ensure that the description clearly conveys the value of the solution in a brief and engaging manner. The tag should reflect the type of success, and the logo should be visually consistent across dark and light modes. The CTA link should direct users to detailed case study pages.",
     image: "- **Image:** A image is required. Ensure that the option enhances the message.",
-    list: "- **List:** A clear and concise title (up to 50 characters), and a brief description (up to 160 characters) that summarizes the key point. Ensure that the icon used is relevant to the content. Descriptions should be informative and should not exceed 240 characters. Avoid of more of 6 itens.",
+    list: "- **List:** A clear and concise title (up to 50 characters), and a brief description (up to 240 characters) that summarizes the key point. Ensure that the icon used is relevant to the content. Avoid of more of 6 itens.",
     avatars: "- **Avatars:** Each avatar should include a clear image (minimum size of 160x160px). Ensure that the name and role of the person are displayed below the avatar. All avatars should link to the individual's LinkedIn profile, and the link should open in a new tab.",
     link: "- **Link:** Links buttons can be used to gave more details for the section content that already existis in another. Try to be clear and dont use more than 6 words to compose the label.",
     form: '- **Forms:** Use clear and descriptive placeholders for fields, and avoid including too many fields. Keep the form as practical as possible to increase the likelihood of user submission.',
+  },
+  banner: {
+    overline: "- **Overline:** Overlines should not exceed 32 characters to maintain their auxiliary purpose.",
+    title: "- **Title:** Titles should be between 40 and 60 characters, or a maximum of 3 lines in 1440px (width) for better readability.",
+    description: "- **Description:** Descriptions should be between 80 and 160 characters, ensuring they are concise and informative, without overwhelming the user.",
+    cta: '- **Actions (CTA):** Limit the number of CTA buttons to a maximum of 2. Ensure button labels are concise, with a maximum of 20 characters, and all links should be valid.',
+    image: "- **Image:** A image is required. Ensure that the option enhances the message.",
+    list: "- **List:** A clear and concise title (up to 50 characters) that summarizes the key point. Ensure that the icon used is relevant to the content.",
   }
 };
 
