@@ -1,11 +1,11 @@
-import HeroBlockBase from '../../../templates/herobase'
-import LinkButton from '../../../templates/linkbutton'
-import ContentLogoBlock from '../../../templates/contentlogo'
-import Container from '../../../templates/container'
+import HeroBlockBase from '../../../templates/herobase/HeroBase'
+import LinkButton from '../../../templates/linkbutton/LinkButton'
+import ContentLogoBlock from '../../../templates/contentlogo/ContentLogo'
+import Container from '../../../templates/container/Container'
 import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Hero/hero-home-vertical',
+  title: 'Blocks/Hero/hero-home',
   tags: ['autodocs'],
   parameters: {
     docs: {

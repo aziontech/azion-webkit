@@ -5,7 +5,7 @@ import LinkButton from '../../../templates/linkbutton/LinkButton'
 import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Extras/banner-end-cta',
+  title: 'Blocks/Banner/banner-get-started',
   tags: ['autodocs'],
   parameters: {
     docs: {

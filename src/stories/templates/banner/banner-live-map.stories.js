@@ -8,7 +8,7 @@ import Container from '../../../templates/container/Container'
 import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Extras/banner-live-map',
+  title: 'Blocks/Banner/banner-live-map',
   tags: ['autodocs'],
   parameters: {
     docs: {

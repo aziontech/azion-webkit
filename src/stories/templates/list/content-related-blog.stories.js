@@ -3,7 +3,7 @@ import CardGridListWithLoadMore from '../../../templates/cardgridlistwithloadmor
 import Container from '../../../templates/container/Container'
 
 export default {
-  title: 'Blocks/Extras/content-related-blog',
+  title: 'Blocks/List/content-related-blog',
   tags: ['autodocs'],
   argTypes: {
 

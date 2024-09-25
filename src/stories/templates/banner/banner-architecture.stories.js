@@ -1,10 +1,10 @@
 
-import Container from '../../../templates/container'
-import SectionHighlight from '../../../templates/sectionhighlight'
+import Container from '../../../templates/container/Container'
+import SectionHighlight from '../../../templates/sectionhighlight/SectionHighlight'
 import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/section-highlight',
+  title: 'Blocks/Banner/banner-architecture',
   tags: ['autodocs'],
   parameters: {
     docs: {
