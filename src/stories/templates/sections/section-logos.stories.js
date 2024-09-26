@@ -1,6 +1,6 @@
 
-import ContentSection from '../../../templates/contentsection/ContentSection'
-import Container from '../../../templates/container/Container'
+import ContentSection from '../../../templates/contentsection'
+import Container from '../../../templates/container'
 import Rules from '../../rules'
 
 export default {

@@ -1,8 +1,8 @@
-import CardBase from '../../../templates/cardbase/CardBase'
-import CardTitle from '../../../templates/cardtitle/CardTitle'
-import CardDescription from '../../../templates/carddescription/CardDescription'
-import LinkButton from '../../../templates/linkbutton/LinkButton'
-import Container from '../../../templates/container/Container'
+import CardBase from '../../../templates/cardbase'
+import CardTitle from '../../../templates/cardtitle'
+import CardDescription from '../../../templates/carddescription'
+import LinkButton from '../../../templates/linkbutton'
+import Container from '../../../templates/container'
 import Rules from '../../rules'
 
 export default {

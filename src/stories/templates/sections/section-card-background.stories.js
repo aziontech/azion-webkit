@@ -1,10 +1,10 @@
 
-import ContentSection from '../../../templates/contentsection/ContentSection'
-import CardBase from '../../../templates/cardbase/CardBase'
-import Overline from '../../../templates/overline/Overline'
-import CardTitle from '../../../templates/cardtitle/CardTitle'
-import CardBgImage from '../../../templates/cardbgimage/CardBgImage'
-import Container from '../../../templates/container/Container'
+import ContentSection from '../../../templates/contentsection'
+import CardBase from '../../../templates/cardbase'
+import Overline from '../../../templates/overline'
+import CardTitle from '../../../templates/cardtitle'
+import CardBgImage from '../../../templates/cardbgimage'
+import Container from '../../../templates/container'
 import Rules from '../../rules'
 
 export default {

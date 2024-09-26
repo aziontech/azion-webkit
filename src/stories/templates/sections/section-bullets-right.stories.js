@@ -1,8 +1,8 @@
 
-import ContentSection from '../../../templates/contentsection/ContentSection'
-import LinkButton from '../../../templates/linkbutton/LinkButton'
-import UnorderedList from '../../../templates/listunordered/ListUnordered'
-import Container from '../../../templates/container/Container'
+import ContentSection from '../../../templates/contentsection'
+import LinkButton from '../../../templates/linkbutton'
+import UnorderedList from '../../../templates/listunordered'
+import Container from '../../../templates/container'
 import Rules from '../../rules'
 
 export default {

@@ -1,7 +1,7 @@
 
-import ContentSection from '../../../templates/contentsection/ContentSection'
-import ReleaseCarousel from '../../../templates/releasecarousel/ReleaseCarousel'
-import Container from '../../../templates/container/Container'
+import ContentSection from '../../../templates/contentsection'
+import ReleaseCarousel from '../../../templates/releasecarousel'
+import Container from '../../../templates/container'
 import Rules from '../../rules'
 
 export default {

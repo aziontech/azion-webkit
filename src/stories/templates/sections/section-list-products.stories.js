@@ -1,10 +1,10 @@
 
-import ContentSection from '../../../templates/contentsection/ContentSection'
-import LinkButton from '../../../templates/linkbutton/LinkButton'
-import CardBase from '../../../templates/cardbase/CardBase'
-import IconTextSegment from '../../../templates/icontextsegment/IconTextSegment'
-import Overline from '../../../templates/overline/Overline'
-import Container from '../../../templates/container/Container'
+import ContentSection from '../../../templates/contentsection'
+import LinkButton from '../../../templates/linkbutton'
+import CardBase from '../../../templates/cardbase'
+import IconTextSegment from '../../../templates/icontextsegment'
+import Overline from '../../../templates/overline'
+import Container from '../../../templates/container'
 import Rules from '../../rules'
 
 export default {

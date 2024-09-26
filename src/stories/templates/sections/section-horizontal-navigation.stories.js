@@ -1,11 +1,11 @@
-import ContentSection from '../../../templates/contentsection/ContentSection'
-import CardBase from '../../../templates/cardbase/CardBase'
-import CardTitle from '../../../templates/cardtitle/CardTitle'
-import CardDescription from '../../../templates/carddescription/CardDescription'
-import Overline from '../../../templates/overline/Overline'
-import LinkButton from '../../../templates/linkbutton/LinkButton'
+import ContentSection from '../../../templates/contentsection'
+import CardBase from '../../../templates/cardbase'
+import CardTitle from '../../../templates/cardtitle'
+import CardDescription from '../../../templates/carddescription'
+import Overline from '../../../templates/overline'
+import LinkButton from '../../../templates/linkbutton'
 import Menu from 'primevue/menu'
-import Container from '../../../templates/container/Container'
+import Container from '../../../templates/container'
 import Rules from '../../rules'
 
 export default {

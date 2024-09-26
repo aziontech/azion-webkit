@@ -1,5 +1,5 @@
-import SectionBigNumbers from '../../../templates/sectionbignumbers/SectionBigNumbers'
-import Container from '../../../templates/container/Container'
+import SectionBigNumbers from '../../../templates/sectionbignumbers'
+import Container from '../../../templates/container'
 import Rules from '../../rules'
 
 export default {
