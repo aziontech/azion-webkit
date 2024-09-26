@@ -1,5 +1,5 @@
 
-import Container from '../../../templates/container/Container'
+import Container from '../../../templates/container'
 import SectionHighlight from '../../../templates/sectionhighlight/SectionHighlight'
 import Rules from '../../rules'
 

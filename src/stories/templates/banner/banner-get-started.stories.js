@@ -1,5 +1,5 @@
 
-import Container from '../../../templates/container/Container'
+import Container from '../../../templates/container'
 import ContentSection from '../../../templates/contentsection/ContentSection'
 import LinkButton from '../../../templates/linkbutton/LinkButton'
 import Rules from '../../rules'

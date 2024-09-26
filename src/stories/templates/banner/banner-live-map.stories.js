@@ -1,5 +1,5 @@
 
-import Container from '../../../templates/container/Container'
+import Container from '../../../templates/container'
 import Overline from '../../../templates/overline/Overline'
 import LinkButton from '../../../templates/linkbutton/LinkButton'
 import CardBase from '../../../templates/cardbase/CardBase'
