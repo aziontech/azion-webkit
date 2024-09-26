@@ -1,13 +1,28 @@
 
 import ContentSection from '../../../templates/contentsection'
 import CardPanelExpandable from '../../../templates/cardpanelexpandable'
-import ImageSwitcher from "../../../templates/themeawareimageswitcher";
-import LinkButton from "../../../templates/linkbutton";
+import ImageSwitcher from "../../../templates/themeawareimageswitcher"
+import LinkButton from "../../../templates/linkbutton"
 import Container from '../../../templates/container'
+import Rules from '../../rules'
+
 
 export default {
   title: 'Blocks/Sections/section-card-expandable',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.description}
+${Rules.section.cards}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK = {

@@ -7,10 +7,23 @@ import LinkButton from '../../../templates/linkbutton'
 import GridBentoBlock from '../../../templates/gridbento'
 import ImageSwitcher from '../../../templates/themeawareimageswitcher'
 import Container from '../../../templates/container'
+import Rules from '../../rules'
 
 export default {
   title: 'Blocks/Sections/section-grid-bento',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.cards}
+        `,
+      },
+    },
+  },
   argTypes: {
     gridType: {
       options: ['2-columns-3-items', '2-columns-4-items', '2-columns-5-items', '2-columns-6-items', '3-columns-4-items', '3-columns-7-items', '4-columns-5-items'],

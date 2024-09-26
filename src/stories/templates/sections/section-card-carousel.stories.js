@@ -1,15 +1,29 @@
 
 import ContentSection from '../../../templates/contentsection'
-import LinkButton from "../../../templates/linkbutton";
-import Carousel from 'primevue/carousel';
+import LinkButton from "../../../templates/linkbutton"
+import Carousel from 'primevue/carousel'
 import CardBase from '../../../templates/cardbase'
 import CardTitle from '../../../templates/cardtitle'
 import CardDescription from '../../../templates/carddescription'
 import Container from '../../../templates/container'
+import Rules from '../../rules'
+
 
 export default {
   title: 'Blocks/Sections/section-card-carousel',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.cards}
+        `,
+      },
+    },
+  },
 }
 
 const MOCK = {

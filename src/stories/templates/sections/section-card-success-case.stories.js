@@ -1,10 +1,23 @@
 
 import Container from '../../../templates/container'
 import SectionSuccessCase from '../../../templates/sectionsuccesscases'
+import Rules from '../../rules'
 
 export default {
   title: 'Blocks/Sections/section-card-success-case',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.cardsCases}
+        `,
+      },
+    },
+  },
 }
 
 
