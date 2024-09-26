@@ -1,6 +1,6 @@
-import FeaturedPost from '../../../templates/featuredpost/FeaturedPost'
-import CardGridBlock from '../../../templates/cardgridblock/CardGridBlock'
-import Container from '../../../templates/container/Container'
+import FeaturedPost from '../../../templates/featuredpost'
+import CardGridBlock from '../../../templates/cardgridblock'
+import Container from '../../../templates/container'
 import Rules from '../../rules'
 
 export default {

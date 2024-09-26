@@ -1,5 +1,5 @@
-import HeroProductHorizontal from "../../../templates/heroproductshorizontal/HeroProductsHorizontal"
-import Container from "../../../templates/container/Container"
+import HeroProductHorizontal from "../../../templates/heroproductshorizontal"
+import Container from "../../../templates/container"
 import Rules from '../../rules'
 
 export default {

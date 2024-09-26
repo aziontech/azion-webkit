@@ -1,6 +1,6 @@
 import Divider from 'primevue/divider'
-import CardGridListWithLoadMore from '../../../templates/cardgridlistwithloadmore/CardGridListWithLoadMore'
-import Container from '../../../templates/container/Container'
+import Container from '../../../templates/container'
+import CardGridListWithLoadMore from '../../../templates/cardgridlistwithloadmore'
 
 export default {
   title: 'Blocks/List/content-related-blog',

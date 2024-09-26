@@ -1,8 +1,8 @@
-import HeroArticle from '../../../templates/heroarticle/HeroArticle';
 import Breadcrumb from "primevue/breadcrumb";
-import ReadableContent from "../../../templates/readablecontent/ReadableContent";
-import TableOfContents from "../../../templates/tableofcontents/TableOfContents";
-import Sharer from "../../../templates/sharerblock/SharerBlock";
+import HeroArticle from '../../../templates/heroarticle';
+import ReadableContent from "../../../templates/readablecontent";
+import TableOfContents from "../../../templates/tableofcontents";
+import Sharer from "../../../templates/sharerblock";
 
 export default {
   title: 'Layout/Content',

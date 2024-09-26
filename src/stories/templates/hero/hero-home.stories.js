@@ -1,7 +1,7 @@
-import HeroBlockBase from '../../../templates/herobase/HeroBase'
-import LinkButton from '../../../templates/linkbutton/LinkButton'
-import ContentLogoBlock from '../../../templates/contentlogo/ContentLogo'
-import Container from '../../../templates/container/Container'
+import HeroBlockBase from '../../../templates/herobase'
+import LinkButton from '../../../templates/linkbutton'
+import ContentLogoBlock from '../../../templates/contentlogo'
+import Container from '../../../templates/container'
 import Rules from '../../rules'
 
 export default {

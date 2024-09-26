@@ -1,7 +1,7 @@
-import HeroArticle from '../../../templates/heroarticle/HeroArticle';
-import Breadcrumb from "primevue/breadcrumb";
-import MenuNavigation from '../../../templates/menunavigationblock/MenuNavigationBlock'
+import Breadcrumb from "primevue/breadcrumb"
 import Divider from 'primevue/divider'
+import HeroArticle from '../../../templates/heroarticle'
+import MenuNavigation from '../../../templates/menunavigationblock'
 
 export default {
   title: 'Blocks/Hero/hero-content-navigation',

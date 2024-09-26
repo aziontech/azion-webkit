@@ -1,6 +1,6 @@
-import HeroArticle from '../../../templates/heroarticle/HeroArticle';
-import Breadcrumb from "primevue/breadcrumb";
-import Container from "../../../templates/container/Container"
+import Breadcrumb from "primevue/breadcrumb"
+import HeroArticle from '../../../templates/heroarticle'
+import Container from "../../../templates/container"
 import Rules from '../../rules'
 
 export default {

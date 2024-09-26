@@ -1,7 +1,7 @@
-import HeroBlockBase from '../../../templates/herobase/HeroBase'
-import LinkButton from '../../../templates/linkbutton/LinkButton'
-import ImageSwitcher from '../../../templates/themeawareimageswitcher/ImageSwitcher'
-import Container from '../../../templates/container/Container'
+import HeroBlockBase from '../../../templates/herobase'
+import LinkButton from '../../../templates/linkbutton'
+import ImageSwitcher from '../../../templates/themeawareimageswitcher'
+import Container from '../../../templates/container'
 import Rules from '../../rules'
 
 export default {

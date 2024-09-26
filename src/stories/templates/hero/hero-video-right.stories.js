@@ -1,10 +1,10 @@
-import HeroBlockBase from '../../../templates/herobase/HeroBase'
-import BaseModal from "../../../templates/basemodal/Modal"
+import HeroBlockBase from '../../../templates/herobase'
+import BaseModal from "../../../templates/basemodal"
 import CardBaseClickable from "../../../templates/cardbaseclickable"
-import CardTitle from "../../../templates/cardtitle/CardTitle"
+import CardTitle from "../../../templates/cardtitle"
 import CardDescription from "../../../templates/carddescription"
-import Tile from "../../../templates/tile/Tile"
-import Container from '../../../templates/container/Container'
+import Tile from "../../../templates/tile"
+import Container from '../../../templates/container'
 import Rules from '../../rules'
 
 export default {

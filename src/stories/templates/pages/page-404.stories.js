@@ -1,7 +1,7 @@
 
-import Overline from '../../../templates/overline/Overline'
-import EmptyState from '../../../templates/emptystateblock/EmptyStateBlock'
-import Container from '../../../templates/container/Container'
+import Overline from '../../../templates/overline'
+import EmptyState from '../../../templates/emptystateblock'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Pages/page-404',
