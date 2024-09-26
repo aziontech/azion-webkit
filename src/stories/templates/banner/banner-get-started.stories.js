@@ -1,7 +1,7 @@
 
 import Container from '../../../templates/container'
-import ContentSection from '../../../templates/contentsection/ContentSection'
-import LinkButton from '../../../templates/linkbutton/LinkButton'
+import ContentSection from '../../../templates/contentsection'
+import LinkButton from '../../../templates/linkbutton'
 import Rules from '../../rules'
 
 export default {

@@ -1,6 +1,6 @@
 
 import Container from '../../../templates/container'
-import SectionHighlight from '../../../templates/sectionhighlight/SectionHighlight'
+import SectionHighlight from '../../../templates/sectionhighlight'
 import Rules from '../../rules'
 
 export default {
