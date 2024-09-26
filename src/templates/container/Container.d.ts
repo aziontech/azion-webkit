@@ -2,8 +2,6 @@
  *
  * container
  *
- * - [Live Demo](https://primevue.org/avatar)
- *
  * @module container
  */
 import { VNode } from 'vue';
