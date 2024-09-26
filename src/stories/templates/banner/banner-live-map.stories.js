@@ -1,10 +1,10 @@
 
+import Container from '../../../templates/container/Container'
 import Overline from '../../../templates/overline/Overline'
 import LinkButton from '../../../templates/linkbutton/LinkButton'
 import CardBase from '../../../templates/cardbase/CardBase'
 import CardDescription from '../../../templates/carddescription/CardDescription'
 import CardTitle from '../../../templates/cardtitle/CardTitle'
-import Container from '../../../templates/container/Container'
 import Rules from '../../rules'
 
 export default {
