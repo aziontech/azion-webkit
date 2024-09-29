@@ -5,7 +5,7 @@ import Container from '../../../templates/container'
 import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Hero/hero-product-bottom',
+  title: 'Blocks/Hero/hero-thumb-bottom',
   tags: ['autodocs'],
   parameters: {
     docs: {
