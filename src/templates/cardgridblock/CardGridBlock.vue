@@ -47,12 +47,16 @@
     data: {
       type: Array,
       required: true,
-      deafault: []
+      default: () => {
+        return []
+      }
     },
     categories: {
       type: Array,
       required: true,
-      deafault: []
+      default: () => {
+        return []
+      }
     },
     defaultTab: {
       type: String,

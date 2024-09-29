@@ -34,13 +34,13 @@ defineProps({
     type: String,
     required: false,
     default: 'blog',
-    options: ['blog', 'cases']
+    // options: ['blog', 'cases']
   },
   cardDirection: {
     type: String,
     required: false,
     default: "column",
-    options: ["column", "row"]
+    // options: ["column", "row"]
   },
 });
 
