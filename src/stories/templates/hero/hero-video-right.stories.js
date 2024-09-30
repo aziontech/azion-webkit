@@ -14,12 +14,12 @@ export default {
     docs: {
       description: {
         component: `
-### Content rules
-${Rules.hero.overline}
-${Rules.hero.title}
-${Rules.hero.description}
-${Rules.hero.imageVideo}
-${Rules.hero.cards}
+          ### Content rules
+          ${Rules.hero.overline}
+          ${Rules.hero.title}
+          ${Rules.hero.description}
+          ${Rules.hero.imageVideo}
+          ${Rules.hero.cards}
         `,
       },
     },
