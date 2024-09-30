@@ -39,16 +39,16 @@
           <template v-if="title">
             <h1
               v-if="titleTag === 'h1'"
-              class="font-medium text-4xl 2xl:text-5xl text-balance"
-              :class="[{ 'md:text-5xl' : isDisplay }]"
+              class="font-medium text-3xl md:text-4xl 2xl:text-5xl text-balance"
+              :class="[{ 'text-4xl md:text-5xl' : isDisplay }]"
             >
               {{ title }}
             </h1>
-            <h2 v-if="titleTag === 'h2'" class="text-4xl 2xl:text-5xl font-medium text-balance">{{ title }}</h2>
-            <h3 v-if="titleTag === 'h3'" class="text-4xl 2xl:text-5xl font-medium text-balance">{{ title }}</h3>
-            <h4 v-if="titleTag === 'h4'" class="text-4xl 2xl:text-5xl font-medium text-balance">{{ title }}</h4>
-            <h5 v-if="titleTag === 'h5'" class="text-4xl 2xl:text-5xl font-medium text-balance">{{ title }}</h5>
-            <h6 v-if="titleTag === 'h6'" class="text-4xl 2xl:text-5xl font-medium text-balance">{{ title }}</h6>
+            <h2 v-if="titleTag === 'h2'" class="text-3xl md:text-4xl 2xl:text-5xl font-medium text-balance">{{ title }}</h2>
+            <h3 v-if="titleTag === 'h3'" class="text-3xl md:text-4xl 2xl:text-5xl font-medium text-balance">{{ title }}</h3>
+            <h4 v-if="titleTag === 'h4'" class="text-3xl md:text-4xl 2xl:text-5xl font-medium text-balance">{{ title }}</h4>
+            <h5 v-if="titleTag === 'h5'" class="text-3xl md:text-4xl 2xl:text-5xl font-medium text-balance">{{ title }}</h5>
+            <h6 v-if="titleTag === 'h6'" class="text-3xl md:text-4xl 2xl:text-5xl font-medium text-balance">{{ title }}</h6>
           </template>
           <template v-else>
             <slot name="title" />

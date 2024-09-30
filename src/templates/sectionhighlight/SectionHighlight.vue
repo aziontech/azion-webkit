@@ -8,7 +8,7 @@
               v-if="overline"
               :label="overline"
             />
-            <h2 class="text-3xl font-medium text-balance">{{ title }}</h2>
+            <h2 class="text-2xl md:text-3xl font-medium text-balance">{{ title }}</h2>
           </div>
           <LinkButton
             v-if="button"
