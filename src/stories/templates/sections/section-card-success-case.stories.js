@@ -10,10 +10,10 @@ export default {
     docs: {
       description: {
         component: `
-          ### Content rules
-          ${Rules.section.overline}
-          ${Rules.section.title}
-          ${Rules.section.cardsCases}
+  ### Content rules
+  ${Rules.section.overline}
+  ${Rules.section.title}
+  ${Rules.section.cardsCases}
         `,
       },
     },
