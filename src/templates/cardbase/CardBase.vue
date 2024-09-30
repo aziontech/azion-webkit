@@ -1,5 +1,6 @@
 <template>
-  <Card class="w-full shadow-none flex flex-col rounded-md border group"
+  <Card
+    class="w-full shadow-none flex flex-col rounded-md border group"
     :class="[
       { 'hover:border-[var(--primary-color)]' : hover == 'default' },
       { 'hover:bg-[var(--surface-0)] hover:border-[var(--primary-color)]' : hover == 'outlined' },
@@ -12,22 +13,29 @@
     :pt="definePTPrime()"
   >
     <template v-if="$slots.header" #header>
-      <div class="flex flex-col gap-8" :class="[
+      <div
+        class="flex flex-col gap-8"
+        :class="[
           {'p-4 md:p-6' : spacing === 'compact'},
           {'p-5 md:p-8' : spacing === 'base'},
           {'p-6 md:p-10' : spacing === 'relaxed'},
-        ]">
+        ]"
+      >
         <slot name="header" />
       </div>
     </template>
+
     <template #content>
       <template v-if="$slots.content || $slots.actions">
-        <div class="flex flex-col gap-8 justify-between grow" :class="[
-          {'p-4 md:p-6' : spacing === 'compact'},
-          {'p-5 md:p-8' : spacing === 'base'},
-          {'p-6 md:p-10' : spacing === 'relaxed'},
-          defineComponentPT()
-        ]">
+        <div
+          class="flex flex-col gap-8 justify-between grow h-ful"
+          :class="[
+            {'p-4 md:p-6' : spacing === 'compact'},
+            {'p-5 md:p-8' : spacing === 'base'},
+            {'p-6 md:p-10' : spacing === 'relaxed'},
+            defineComponentPT()
+          ]"
+        >
           <div class="flex flex-col gap-3 grow">
             <slot name="content"/>
           </div>
@@ -38,6 +46,7 @@
           </template>
         </div>
       </template>
+
       <template v-if="$slots['content-raw']">
         <slot name="content-raw" />
       </template>
