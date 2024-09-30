@@ -8,7 +8,7 @@
     <template #main>
       <div class="w-full flex lg:justify-end lg:items-end">
         <LinkButton
-          class="min-w-fit"
+          class="min-w-fit !px-0"
           v-bind="button"
           textLink
           icon="pi pi-arrow-right"
