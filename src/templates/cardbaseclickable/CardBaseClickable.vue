@@ -1,20 +1,31 @@
 <template>
-  <a :href="link" :title="title" class="no-underline flex border-radius cursor-pointer h-full" :target="target" :aria-label="ariaLabel">
+  <a
+    :href="link"
+    :title="title"
+    :target="target"
+    :aria-label="ariaLabel"
+    class="no-underline flex border-radius cursor-pointer h-full"
+  >
     <CardBase v-bind="props">
       <template  v-if="$slots.header" #header>
         <slot name="header" />
       </template>
+
       <template  v-if="$slots.content" #content>
         <slot name="content" />
       </template>
+
       <template v-if="!disableAction" #actions>
         <div class=" font-medium flex gap-2 items-center">
-          <p v-if="action?.label"> {{ action.label }}  </p>
-          <i v-if="action?.isExternal" class="pi pi-arrow-up-right text-sm" />
-          <i v-else class="pi pi-arrow-right text-sm" />
+          <p v-if="action?.label">
+            {{ action.label }}
+          </p>
+          <i v-if="action?.isExternal" class="pi pi-arrow-up-right text-sm"></i>
+          <i v-else class="pi pi-arrow-right text-sm"></i>
         </div>
       </template>
-      <template  v-if="$slots['content-raw']" #content-raw>
+
+      <template v-if="$slots['content-raw']" #content-raw>
         <slot name="content-raw" />
       </template>
     </CardBase>
@@ -73,6 +84,10 @@ const props = defineProps({
   action: {
     type: Object,
     required: false
+  },
+  pt: {
+    type: Object,
+    required: false,
   }
 })
 </script>

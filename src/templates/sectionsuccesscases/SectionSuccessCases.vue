@@ -1,21 +1,43 @@
 <template>
-  <ContentSection :overline="overline" :title="title" titleTag="h2">
-    <template v-if="button" #main>
+  <ContentSection
+    :overline="overline"
+    :title="title"
+    titleTag="h2"
+  >
+    <template #main v-if="button">
       <div class="w-full flex lg:justify-end lg:items-end">
-        <LinkButton class="min-w-fit" v-bind="button" textLink icon="pi pi-arrow-right" iconPos="right" />
+        <LinkButton
+          class="min-w-fit"
+          v-bind="button"
+          textLink
+          icon="pi pi-arrow-right"
+          iconPos="right"
+        />
       </div>
     </template>
     <template #principal>
       <div class="grid-cols-1 md:grid-cols-3 gap-6 grid place-content-center m-0">
-        <CardBaseClickable v-for="({ logo, tag, description, link }) in cards" backgroundColor="outlined" :link="link"
-          disableAction>
+        <CardBaseClickable
+          v-for="({ logo, tag, description, link }) in cards"
+          backgroundColor="outlined"
+          :link="link"
+          :pt="{
+            prime: {
+              body: 'h-full',
+              content: 'h-full'
+            },
+            content: 'h-full'
+          }"
+        >
           <template #content>
             <div class="flex flex-col gap-6">
               <div class="flex justify-between items-center">
-                <div v-html="logo" />
+                <div v-html="logo"></div>
                 <Tag :value="tag" severity="info" />
               </div>
-              <CardDescription>{{ description }}</CardDescription>
+              <CardDescription>
+                {{ description }}
+              </CardDescription>
             </div>
           </template>
         </CardBaseClickable>
