@@ -15,11 +15,13 @@
         />
       </div>
     </template>
+
     <template #principal>
       <div class="grid-cols-1 md:grid-cols-3 gap-6 grid place-content-center m-0">
         <CardBaseClickable
-          v-for="({ logo, tag, description, link }) in cards"
+          v-for="({ logo, tag, description, link, action }) in cards"
           backgroundColor="outlined"
+          :action="action"
           :link="link"
           :pt="{
             prime: {

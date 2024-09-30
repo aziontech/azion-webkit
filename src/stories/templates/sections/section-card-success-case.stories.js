@@ -10,10 +10,10 @@ export default {
     docs: {
       description: {
         component: `
-### Content rules
-${Rules.section.overline}
-${Rules.section.title}
-${Rules.section.cardsCases}
+          ### Content rules
+          ${Rules.section.overline}
+          ${Rules.section.title}
+          ${Rules.section.cardsCases}
         `,
       },
     },
@@ -41,19 +41,28 @@ const MOCK = {
       "logo": logo,
       "tag": "Tech",
       "description": "GetNinjas improves data analysis with Azion Data Streaming and obtains incredible performance, security, and availability in its applications.",
-      "link": "https://www.azion.com/en/success-case/getninjas/"
+      "link": "https://www.azion.com/en/success-case/getninjas/",
+      "action": {
+        "label": "See Success Story"
+      }
     },
     {
       "logo": logo,
       "tag": "Tech",
       "description": "VTEX builds ultra-low latency serverless applications with Azion and allows thousands of customers to accelerate their sales on the web.",
-      "link": "https://www.azion.com/en/success-case/vtex/"
+      "link": "https://www.azion.com/en/success-case/vtex/",
+      "action": {
+        "label": "See Success Story"
+      }
     },
     {
       "logo": logo,
       "tag": "Tech",
       "description": "VTEX builds ultra-low latency serverless applications with Azion and allows thousands of customers to accelerate their sales on the web.",
-      "link": "https://www.azion.com/en/success-case/vtex/"
+      "link": "https://www.azion.com/en/success-case/vtex/",
+      "action": {
+        "label": "See Success Story"
+      }
     }
   ]
 }
