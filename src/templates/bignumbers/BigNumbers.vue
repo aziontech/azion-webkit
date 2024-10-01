@@ -34,10 +34,9 @@
           </strong>
           <p
             v-if="item.description"
+            v-html="item.description"
             class="text-xs md:text-sm text-color-secondary md:min-h-10 text-wrap w-full max-w-36 md:max-w-52"
-          >
-            {{ item.description }}
-          </p>
+          />
         </div>
       </div>
     </div>
