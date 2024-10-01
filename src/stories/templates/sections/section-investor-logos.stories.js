@@ -1,6 +1,5 @@
 import ContentSection from '../../../templates/contentsection'
 import Container from '../../../templates/container'
-import ContentLogoBlock from '../../../templates/contentlogo'
 import Rules from '../../rules'
 
 export default {
@@ -51,7 +50,7 @@ const template = `
 </Container>`
 
 const Template = (args) => ({
-  components: { ContentSection, Container, ContentLogoBlock },
+  components: { ContentSection, Container },
   setup() {
     return { args, logos }
   },
