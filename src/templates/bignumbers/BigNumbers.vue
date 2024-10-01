@@ -11,11 +11,11 @@
         'justify-center' : justify == 'center',
         'justify-start' : justify == 'start'
       }"
-      class="flex-grow-0 gap-4 flex py-6 flex-shrink-0 basis-1/2 lg:basis-1/4"
+      class="flex-grow-0 flex py-4 md:py-0 flex- shrink-0 basis-1/2 lg:basis-1/4"
       v-for="item in items"
       :key="item.title"
     >
-      <div class="flex flex-col gap-3 md:gap-5 w-fit min-w-36 sm:min-w-none">
+      <div class="flex flex-col gap-3 md:gap-5 w-fit min-w-32 md:min-w-36 sm:min-w-none">
         <Tile
           v-if="item.icon"
           severity="primary"
