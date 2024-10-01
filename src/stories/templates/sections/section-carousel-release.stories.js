@@ -37,7 +37,10 @@ const MOCK =   {
         "ariaLabel": "Go to original article",
         "link": "https://www.azion.com/en/blog/azion-recognized-strong-performer-forrester-wave-2023/",
         "target": "_self",
-        "icon": "internal"
+        "icon": "internal",
+        "action": {
+          "label": "Read Article"
+        }
       },
       "tag": {
         "icon": "pi pi-star-fill",
@@ -56,7 +59,10 @@ const MOCK =   {
         "ariaLabel": "Go to original article",
         "link": "https://www.azion.com/en/blog/azion-named-leader-fast-mover-gigaom-report/",
         "target": "_self",
-        "icon": "internal"
+        "icon": "internal",
+        "action": {
+          "label": "Read Article"
+        }
       },
       "tag": {
         "icon": "pi pi-star-fill",
@@ -75,7 +81,10 @@ const MOCK =   {
         "ariaLabel": "Go to original article",
         "link": "https://www.azion.com/en/blog/azion-celebrates-achievements-2023/",
         "target": "_self",
-        "icon": "internal"
+        "icon": "internal",
+        "action": {
+          "label": "Read Article"
+        }
       },
       "tag": {
         "icon": "pi pi-star-fill",
@@ -94,7 +103,10 @@ const MOCK =   {
         "ariaLabel": "Go to original article",
         "link": "https://www.azion.com/en/blog/azion-frost-sullivan-award/",
         "target": "_self",
-        "icon": "internal"
+        "icon": "internal",
+        "action": {
+          "label": "Read Article"
+        }
       },
       "tag": {
         "icon": "pi pi-star-fill",

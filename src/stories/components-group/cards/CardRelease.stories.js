@@ -28,7 +28,10 @@ export const Default = {
     card: {
       icon: "pi pi-external",
       link: "",
-      ariaLabel: ""
+      ariaLabel: "",
+      action: {
+        label: "Read Article"
+      }
     },
     image: {
       light: "https://www.azion.com/assets/images/logos/light/gigaom-logo-default.svg?ims=x40",

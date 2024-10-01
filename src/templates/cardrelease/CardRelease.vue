@@ -5,6 +5,7 @@
     :hover="hover"
     :link="card.link"
     :aria-label="card.ariaLabel"
+    :action="card.action"
   >
     <template #content>
       <div class="flex flex-col justify-between gap-8 grow">
@@ -55,7 +56,6 @@
 
 <script setup>
 import Tag from "primevue/tag";
-import Button from "primevue/button";
 import CardBaseClickable from "../cardbaseclickable";
 import ImageSwitcher from "../themeawareimageswitcher";
 
