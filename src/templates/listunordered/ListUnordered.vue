@@ -1,7 +1,7 @@
 <template>
   <ul
     :class="[
-      { 'flex flex-col gap-6': direction === 'vertical' },
+      { 'flex flex-col gap-8': direction === 'vertical' },
       { 'grid m-0 md:grid-cols-3 gap-10 md:gap-20': direction === 'horizontal' }
     ]"
   >
@@ -23,7 +23,7 @@
           <div class="h-4 mt-2 bg-white	w-[2px] blur-sm	left-0 absolute" />
           <div class="h-4 mt-2 bg-[--text-color] w-[3px] -left-[0.5px] absolute" />
         </div>
-        <div class="flex flex-col gap-4 justify-center mt-0.5">
+        <div class="flex flex-col gap-3 justify-center mt-0.5">
           <template v-if="title || icon">
             <div
               class="flex"
