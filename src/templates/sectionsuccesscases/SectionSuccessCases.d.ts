@@ -1,35 +1,39 @@
 /**
  *
- * SectionBigNumbers
+ * SectionSuccessCases
  *
  *
- * @module `sectionbignumbers`
+ * @module `sectionsuccesscases`
  */
 import { VNode } from 'vue';
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
 
-type BigNumbers = {
-  justify: "center" | "start"
-  items: Array<{
-    icon: string,
-    title: string,
-    description: string
-   }>
+type CardsType = {
+  logo: string,
+  tag: string,
+  description: string,
+  link: string,
+  action: {
+    label: string
+  }
 }
 
+type ButtonType = {}
+
 /**
- * Defines valid properties in SectionBigNumbers component.
+ * Defines valid properties in SectionSuccessCases component.
  */
-export interface SectionBigNumbersProps {
-  data: BigNumbers;
+export interface SectionSuccessCasesProps {
+  button: ButtonType
   title: string;
   overline: string;
+  cards: Array<CardsType>
 }
 
 /**
- * Defines valid slots in SectionBigNumbers component.
+ * Defines valid slots in SectionSuccessCases component.
  */
-export interface SectionBigNumbersSlots {
+export interface SectionSuccessCasesSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
@@ -37,9 +41,9 @@ export interface SectionBigNumbersSlots {
 }
 
 /**
- * Defines valid emits in SectionBigNumbers component.
+ * Defines valid emits in SectionSuccessCases component.
  */
-export interface SectionBigNumbersEmits {
+export interface SectionSuccessCasesEmits {
   /**
    * Triggered when an error occurs
    */
@@ -49,12 +53,12 @@ export interface SectionBigNumbersEmits {
 /**
  * @group Component
  */
-declare class SectionBigNumbers extends ClassComponent<SectionBigNumbersProps, SectionBigNumbersSlots, SectionBigNumbersEmits> { }
+declare class SectionSuccessCases extends ClassComponent<SectionSuccessCasesProps, SectionSuccessCasesSlots, SectionSuccessCasesEmits> { }
 
 declare module 'vue' {
   export interface GlobalComponents {
-    SectionBigNumbers: GlobalComponentConstructor<SectionBigNumbers>;
+    SectionSuccessCases: GlobalComponentConstructor<SectionSuccessCases>;
   }
 }
 
-export default SectionBigNumbers;
+export default SectionSuccessCases;
