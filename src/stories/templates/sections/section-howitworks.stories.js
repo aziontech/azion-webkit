@@ -1,9 +1,9 @@
 
-import Container from '../../../templates/container'
-import SectionSticky from '../../../templates/sectionsticky'
+import Container from '../../../templates/container/Container'
+import SectionSticky from '../../../templates/sectionsticky/SectionSticky'
 
 export default {
-  title: 'Blocks/Sections/section-sticky',
+  title: 'Blocks/Sections/section-howitworks',
   tags: ['autodocs'],
 }
 
