@@ -4,7 +4,7 @@ import ContentLogoBlock from '../../../templates/contentlogo'
 import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/section-logos',
+  title: 'Blocks/Sections/section-investor-logos',
   tags: ['autodocs'],
   parameters: {
     docs: {
@@ -43,7 +43,7 @@ const template = `
 <Container class="surface-ground">
   <ContentSection titleTag="h2" position="center" isContentCentralized textCenter :title="args.title" :overline="args.overline">
     <template #content>
-      <ContentLogoBlock :isCentralized="true" :logos="logos" size="default" />
+      <ContentLogoBlock :isCentralized="true" :logos="logos" />
     </template>
   </ContentSection>
 </Container>`

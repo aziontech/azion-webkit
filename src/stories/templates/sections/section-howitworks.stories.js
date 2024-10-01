@@ -1,6 +1,6 @@
 
-import Container from '../../../templates/container/Container'
-import SectionSticky from '../../../templates/sectionsticky/SectionSticky'
+import Container from '../../../templates/container'
+import SectionSticky from '../../../templates/sectionsticky'
 
 export default {
   title: 'Blocks/Sections/section-howitworks',
