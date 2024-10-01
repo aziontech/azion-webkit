@@ -7,7 +7,7 @@ import Overline from '../../../templates/overline'
 import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/section-card-intercalated',
+  title: 'Blocks/Sections/section-card-background-intercalated',
   tags: ['autodocs'],
   parameters: {
     docs: {

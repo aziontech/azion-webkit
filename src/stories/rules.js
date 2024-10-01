@@ -23,8 +23,8 @@ const Rules = {
   },
   section: {
     overline: "- **Overline:** Overlines should not exceed 32 characters to maintain their auxiliary purpose.",
-    title: "- **Title:** Titles should be between 40 and 60 characters, or a maximum of 3 lines in 1440px (width) for better readability.",
-    description: "- **Description:** Descriptions should be between 80 and 160 characters, ensuring they are concise and informative, without overwhelming the user.",
+    title: "- **Title:** Titles should be between 40 and 120 characters, or a maximum of 3 lines in 1440px (width) for better readability.",
+    description: "- **Description:** Descriptions should be between 80 and 280 characters, ensuring they are concise and informative, without overwhelming the user.",
     cta: '- **Actions (CTA):** Limit the number of CTA buttons to a maximum of 2. Ensure button labels are concise, with a maximum of 20 characters, and all links should be valid.',
     navigation: "- **Navigation:** Navigations is like a buttons, ensure the labels are concise, with a maximum of 20 characters, and all links should be valid. ",
     logos: '- **Logos:** Try to put multiples of 2 logos in logo-content-block. Ensure the svg logos are balanced and with the currentColor property in fill.',
