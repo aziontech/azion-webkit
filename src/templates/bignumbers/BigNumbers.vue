@@ -11,7 +11,7 @@
         'justify-center' : justify == 'center',
         'justify-start' : justify == 'start'
       }"
-      class="flex-grow-0 flex py-4 md:py-0 flex- shrink-0 basis-1/2 lg:basis-1/4"
+      class="flex-grow-0 flex py-4 lg:py-0 flex- shrink-0 basis-1/2 lg:basis-1/4"
       v-for="item in items"
       :key="item.title"
     >
