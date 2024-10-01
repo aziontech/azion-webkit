@@ -1,39 +1,62 @@
 <template>
-  <div class="flex flex-wrap gap-8 sm:gap-10 lg:gap-16 xl:gap-32 2xl:gap-40 px-0 py-6 md:py-10"
-       :class="{'justify-center' : justify == 'center', 'justify-start' : justify == 'start' }"
+  <div
+    class="max-w-5xl flex flex-wrap px-0 md:py-10"
+    :class="{
+      'm-auto' : justify == 'center',
+      'justify-start' : justify == 'start'
+    }"
   >
-    <div class="flex basis-5/12 sm:basis-0 justify-center" v-for="item in items" :key="item.title">
-      <div class="flex flex-col gap-3 md:gap-5 w-fit min-w-32 sm:min-w-none">
-      <Tile v-if="item.icon" severity="primary"> <i :class="item.icon" class="text-sm md:text-md" /> </Tile>
-      <div class="flex flex-col gap-2 justify-evenly w-fit">
-        <p v-if="item.titleup" class="text-xs md:text-sm text-color-secondary">
-          {{ item.titleup }}
-        </p>
-        <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight text-nowrap">
-          {{ item.title }}
-        </strong>
-        <p v-if="item.description" class="text-xs md:text-sm text-color-secondary md:min-h-10 text-wrap w-full max-w-36 md:max-w-52">
-          {{ item.description }}
-        </p>
-      </div>
+    <div
+      :class="{
+        'justify-center' : justify == 'center',
+        'justify-start' : justify == 'start'
+      }"
+      class="flex-grow-0 gap-4 flex py-6 flex-shrink-0 basis-1/2 lg:basis-1/4"
+      v-for="item in items"
+      :key="item.title"
+    >
+      <div class="flex flex-col gap-3 md:gap-5 w-fit min-w-36 sm:min-w-none">
+        <Tile
+          v-if="item.icon"
+          severity="primary"
+        >
+          <i :class="item.icon" class="text-sm md:text-md"></i>
+        </Tile>
+        <div class="flex flex-col gap-2 justify-evenly w-fit">
+          <p
+            v-if="item.titleup"
+            class="text-xs md:text-sm text-color-secondary"
+          >
+            {{ item.titleup }}
+          </p>
+          <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight text-nowrap">
+            {{ item.title }}
+          </strong>
+          <p
+            v-if="item.description"
+            class="text-xs md:text-sm text-color-secondary md:min-h-10 text-wrap w-full max-w-36 md:max-w-52"
+          >
+            {{ item.description }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import Tile from "../tile"
+  import Tile from "../tile"
 
-defineProps({
-  items: {
-    type: Array,
-    required: true
-  },
-  justify: {
-    type: String,
-    required: false,
-    default: "center",
-    options: ['center', 'start']
-  }
-});
+  defineProps({
+    items: {
+      type: Array,
+      required: true
+    },
+    justify: {
+      type: String,
+      required: false,
+      default: "center",
+      options: ['center', 'start']
+    }
+  });
 </script>

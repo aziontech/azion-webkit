@@ -1,10 +1,15 @@
 <template>
-  <ContentSection titleTag="h2" :overline="overline" :title="title">
+  <ContentSection
+    titleTag="h2"
+    :overline="overline"
+    :title="title"
+  >
     <template v-if="button" #main>
       <div class="flex justify-end lg:items-end">
         <LinkButton v-bind="button" textLink />
       </div>
     </template>
+
     <template #principal>
       <BigNumbers v-bind="data" />
     </template>
