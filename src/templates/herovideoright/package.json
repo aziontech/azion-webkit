@@ -1,0 +1,7 @@
+{
+  "main": "./herovideoright.js",
+  "types": "./HeroVideoRight.d.ts",
+  "browser": {
+    "./sfc": "./HeroVideoRight.vue"
+  }
+}
