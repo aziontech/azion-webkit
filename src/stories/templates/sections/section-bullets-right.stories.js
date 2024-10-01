@@ -38,17 +38,17 @@ const MOCK = {
   }],
   "contentListBlock": [
     {
-      "icon": "pi pi-check",
+      "icon": "pi pi-bolt",
       "title": "Agile",
       "description": "Run code and deploy in minutes. From prototype to enterprise scale with NoOps, just code."
     },
     {
-      "icon": "pi pi-check",
+      "icon": "pi pi-arrow-right-arrow-left",
       "title": "Diverse use cases",
       "description": "Fraud detection, authentication and authorization, bot mitigation, and facial recognition, using technologies such as visual computing and artificial intelligence executed at the edge."
     },
     {
-      "icon": "pi pi-check",
+      "icon": "pi pi-dollar",
       "title": "Cost-effective",
       "description": "Pricing is based on the edge resources and/or private edge locations in use."
     }
