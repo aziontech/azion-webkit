@@ -17,6 +17,15 @@ ${Rules.section.bigNumbers}
       },
     },
   },
+  // argTypes: {
+  //   'justify': {
+  //     control: {
+  //       type: 'select',
+  //     },
+  //     options: ['center', 'start'],
+  //     description: 'Justify content alignment',
+  //   },
+  // }
 }
 
 const MOCK = {
@@ -50,12 +59,16 @@ const MOCK = {
 }
 
 const template = `
-<Container class="surface-ground">
-  <SectionBigNumbers v-bind="args" />
-</Container>`
+  <Container class="surface-ground">
+    <SectionBigNumbers v-bind="args" />
+  </Container>
+`
 
 const Template = (args) => ({
-  components: { SectionBigNumbers, Container },
+  components: {
+    SectionBigNumbers,
+    Container
+  },
   setup() {
     return { args }
   },
@@ -70,5 +83,8 @@ Default.parameters = {
     description: {
       story: ''
     },
-    source: { code: template } },
+    source: {
+      code: template
+    }
+  }
 };

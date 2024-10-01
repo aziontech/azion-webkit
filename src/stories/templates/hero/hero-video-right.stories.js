@@ -14,12 +14,12 @@ export default {
     docs: {
       description: {
         component: `
-          ### Content rules
-          ${Rules.hero.overline}
-          ${Rules.hero.title}
-          ${Rules.hero.description}
-          ${Rules.hero.imageVideo}
-          ${Rules.hero.cards}
+### Content rules
+${Rules.hero.overline}
+${Rules.hero.title}
+${Rules.hero.description}
+${Rules.hero.imageVideo}
+${Rules.hero.cards}
         `,
       },
     },
@@ -145,6 +145,16 @@ const MOCK = {
   "video": {
     "src": "https://www.youtube.com/embed/rk4apN50IpU?si=sjBGRDja95BUqoNx",
     "title": "Move to the Edge with Azion",
+    "image": {
+      "dark": {
+        "alt": "",
+        "src": "",
+      },
+      "light": {
+        "alt": "",
+        "src": "",
+      }
+    }
   },
   "cards": [
     {
