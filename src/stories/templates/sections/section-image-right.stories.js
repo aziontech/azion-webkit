@@ -16,7 +16,6 @@ export default {
 ${Rules.section.overline}
 ${Rules.section.title}
 ${Rules.section.description}
-${Rules.section.cta}
 ${Rules.section.image}
         `,
       },
@@ -25,13 +24,9 @@ ${Rules.section.image}
 }
 
 const MOCK = {
-  overline: 'SAVE MORE BY RESERVING',
-  title: 'Get lower rates with Savings Plans',
-  description: "With Savings Plans, you qualify for even greater discounts by committing to a consistent amount of usage for a period of 1, 2, or 3 years. This model provides the flexibility to use Azion's products that best fit your needs while reducing your costs by up to 78%.",
-  "buttons": [{
-    "label": "Create a free account",
-    "link": "https://console.azion.com/signup"
-  }]
+  overline: 'Edge Connectivity',
+  title: 'Azion’s robust connectivity strategy helps us deliver the best performance, availability, and resiliency to our customers',
+  description: "Our highly distributed architecture includes edge nodes strategically located inside ISPs' (Internet Service Providers) last-mile networks and connectivity to multiple IXPs (Internet Exchange Points), private and public peerings, and Tier 1 transit providers around the world.",
 }
 
 const template = `
@@ -41,14 +36,16 @@ const template = `
       <LinkButton v-for="({ link, label }) in args.buttons" :link="link" :label="label" outlined />
     </template>
     <template #main>
+    <div class="w-full">
       <ImageSwitcher>
         <template #darkImage>
-          <img src="/assets/dark/illustration-demo.svg" />
+          <img width="540" height="auto" src="https://www.azion.com/assets/pages/products/images/dark/edge-network/network-ilustrationEN.png" />
         </template>
         <template #lightImage>
-          <img src="/assets/light/illustration-demo.svg" />
+          <img width="540" height="auto" src="https://www.azion.com/assets/pages/products/images/light/edge-network/network-ilustrationEN.png" />
         </template>
       </ImageSwitcher>
+      </div>
     </template>
   </ContentSection>
 </Container>`
