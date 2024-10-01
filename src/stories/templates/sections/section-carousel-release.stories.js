@@ -38,6 +38,7 @@ const MOCK =   {
         "link": "https://www.azion.com/en/blog/azion-recognized-strong-performer-forrester-wave-2023/",
         "target": "_self",
         "icon": "internal",
+        "hover": "outlined",
         "action": {
           "label": "Read Article"
         }

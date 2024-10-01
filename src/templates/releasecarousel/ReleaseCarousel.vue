@@ -16,7 +16,7 @@
       <template #item="slotProps">
         <div class="md:mx-4 h-full">
           <CardRelease
-            hover="slide-up"
+            hover="outlined"
             :grid="true"
             :tag="slotProps.data.tag"
             :title="slotProps.data.title"

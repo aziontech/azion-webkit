@@ -18,7 +18,7 @@ export default {
 
 export const Default = {
   args: {
-    hover: "slide-up",
+    hover: "outlined",
     grid: true,
     tag: {
       icon: "pi pi-star",
