@@ -23,7 +23,7 @@ const MOCK = {
   "title": "Achieve Unmatched Protection with Azion's Bot Management",
   "overline": "Powerful Metrics Showcasing",
   "data": {
-    "justify": "center",
+    "justify": "start",
     "items": [
       {
         "icon": "pi pi-verified",
