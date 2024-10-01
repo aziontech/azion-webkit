@@ -3,6 +3,7 @@
     titleTag="h2"
     :overline="overline"
     :title="title"
+    :isContentCentralized="data.justify === 'center' ? true : false"
   >
     <template v-if="button" #main>
       <div class="flex justify-end lg:items-end">
