@@ -1,2 +1,2 @@
-import HeroVideoRight from './HeroVideoRight.vue';
-export default HeroVideoRight;
+import HeroVideoRight from './HeroVideoRight.vue'
+export default HeroVideoRight
