@@ -56,7 +56,9 @@ const MOCK = {
 }
 
 const HeroDisplay = `
+
 <Container class="surface-ground">
+  <div class="min-h-[calc(100vh-56px)] flex justify-center items-center relative py-10 md:py-0">
   <HeroBlockBase
     align="center"
     :title="args.hero.title"
@@ -87,7 +89,9 @@ const HeroDisplay = `
       </div>
     </template>
   </HeroBlockBase>
-</Container>`
+  </div>
+</Container>
+`
 
 const Template = (args) => ({
   components: { HeroBlockBase, LinkButton, ContentLogoBlock, ImageSwitcher, Container },
