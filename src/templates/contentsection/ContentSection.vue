@@ -3,8 +3,8 @@
     <div
       class="flex-col flex w-full gap-10 md:gap-20"
       :class="[
-        { 'lg:flex-row': position === 'left' },
-        { 'lg:flex-row-reverse': position == 'right' },
+        { 'md:flex-row': position === 'left' },
+        { 'md:flex-row-reverse': position == 'right' },
         { 'flex-col-reverse	': reverse},
         pt?.content || ''
       ]"
