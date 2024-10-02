@@ -12,17 +12,12 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
  * Defines valid properties in AisIndexHit component.
  */
 export interface ContentLogoProps {
-  /**
-   * @defaultValue false
-   */
   isCentralized?: boolean | false;
   title?: string | undefined;
-  logos: [/* {imageSrc, alt}, ... */];
-  /**
-   * options: ["small", "default", "large"],
-   * @defaultValue false
-   */
-  size: string | 'default';
+  logos: Array<[{
+    imageSrc: string,
+    alt: string
+  }]>;
 }
 
 /**
