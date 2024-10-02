@@ -1,0 +1,2 @@
+import SectionCardBackgroundIntercalated from './SectionCardBackgroundIntercalated.vue'
+export default SectionCardBackgroundIntercalated

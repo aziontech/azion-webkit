@@ -1,9 +1,5 @@
-import ContentSection from '../../../templates/contentsection'
-import CardBase from '../../../templates/cardbase'
-import CardTitle from '../../../templates/cardtitle'
 import Container from '../../../templates/container'
-import CardBgImage from '../../../templates/cardbgimage'
-import Overline from '../../../templates/overline'
+import SectionCardBackgroundIntercalated from '../../../templates/sectioncardbackgroundintercalated'
 import Rules from '../../rules'
 
 export default {
@@ -24,7 +20,26 @@ ${Rules.section.cards}
   },
 }
 
-const MOCK = {
+const config = (args) => {
+  return {
+    components: {
+      Container,
+      SectionCardBackgroundIntercalated
+    },
+    setup() {
+      return { args }
+    },
+    template: `
+      <Container class="surface-ground">
+        <SectionCardBackgroundIntercalated v-bind="args" />
+      </Container>
+    `
+  }
+}
+
+const Template = (args) => (config(args))
+export const Default = Template.bind({})
+Default.args = {
   "hero": {
     "title": "Let's build together",
     "description": "Azion has always focused on the core values of innovation, reliability, and the ability to make transparent, forward-looking decisions, and execute them with precision and agility. We believe that our success depends on the success of our customers.",
@@ -48,72 +63,27 @@ const MOCK = {
       {
         "label": "Quality",
         "title": "Meeting high expectations is the norm. Exceeding them is what sets us apart and drives our success.",
-        "image": "https://52082s.ha.azioncdn.net/assets/pages/careers/quality.png",
+        "image": "https://www.azion.com/assets/pages/careers/quality.png",
         "alt": "A group of Azion employees collaborating in a bright and spacious office environment, with modern decor and vibrant energy."
       },
       {
         "label": "Agility",
         "title": "We move quickly in response to a challenge or opportunity.",
-        "image": "https://52082s.ha.azioncdn.net/assets/pages/careers/agility.png",
+        "image": "https://www.azion.com/assets/pages/careers/agility.png",
         "alt": "Employees in an office working on their computers, appearing happy and engaged."
       },
       {
         "label": "Ownership",
         "title": "We are empowered to act and accountable for our actions.",
-        "image": "https://52082s.ha.azioncdn.net/assets/pages/careers/ownership.png",
+        "image": "https://www.azion.com/assets/pages/careers/ownership.png",
         "alt": "An image illustrating a sense of ownership and responsibility in the workplace at Azion."
       },
       {
         "label": "Innovation",
         "title": "We create solutions that unlock new possibilities.",
-        "image": "https://52082s.ha.azioncdn.net/assets/pages/careers/innovation.png",
+        "image": "https://www.azion.com/assets/pages/careers/innovation.png",
         "alt": "An image representing innovation and creativity in the workplace at Azion."
       }
     ]
-  },
+  }
 }
-
-const template = `
-<Container class="surface-ground">
-  <ContentSection v-bind="args.hero">
-    <template #content>
-      <div class="m-0 grid grid-cols-1 md:grid-cols-2 gap-10 mx-auto md:pt-32">
-        <div v-for="({ label, title, image, alt }, index) in args.cards.cards" :class="[index % 2 !== 0 && 'md:-mt-32']">
-          <CardBase>
-            <template #content-raw>
-              <CardBgImage :alt="alt" :image="image">
-                <template #content>
-                  <div class="flex flex-col gap-5 z-20">
-                    <Overline :label="label" />
-                    <CardTitle>{{ title }}</CardTitle>
-                  </div>
-                </template>
-              </CardBgImage>
-            </template>
-          </CardBase>
-        </div>
-      </div>
-    </template>
-  </ContentSection>
-</Container>
-`
-
-const Template = (args) => ({
-  components: { ContentSection, CardBase, CardTitle, Container, CardBgImage, Overline },
-  setup() {
-    return { args }
-  },
-  template: template
-})
-
-export const Default = Template.bind({})
-Default.args = MOCK
-
-Default.parameters = {
-  docs: {
-    description: {
-      story: ''
-    },
-    source: { code: template }
-  },
-};
