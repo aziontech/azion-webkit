@@ -1,7 +1,7 @@
 <template>
   <ContentSection v-bind="hero">
     <template #content>
-      <div class="m-0 grid grid-cols-1 md:grid-cols-2 gap-10 mx-auto md:pt-32">
+      <div class="m-0 grid grid-cols-1 md:grid-cols-2 gap-10 md:pt-32">
         <div
           v-for="({ label, title, image, alt }, index) in cards.cards"
           :class="[index % 2 !== 0 && 'md:-mt-32']"
