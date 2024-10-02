@@ -8,28 +8,37 @@
 import { VNode } from 'vue';
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
 
-// type BigNumbers = {
-//   justify: "center" | "start"
-//   items: Array<{
-//     icon: string,
-//     title: string,
-//     description: string
-//    }>
-// }
+
+type CardsType = Array<{
+  "title": string,
+  "description": string,
+  "link": string,
+  "action": {
+    "label": string
+  }
+}>
+
+type ResponsiveOptionsType = Array<{
+  breakpoint: string,
+  numVisible: number,
+  numScroll: number
+}>
+
 
 /**
  * Defines valid properties in SectionCardCarousel component.
  */
-export interface SSectionCardCarouselProps {
-  // data: BigNumbers;
-  // title: string;
-  // overline: string;
+export interface SectionCardCarouselProps {
+  responsiveOptions: ResponsiveOptionsType;
+  title: string;
+  overline: string;
+  cards: CardsType;
 }
 
 /**
- * Defines valid slots in SSectionCardCarousel component.
+ * Defines valid slots in SectionCardCarousel component.
  */
-export interface SSectionCardCarouselSlots {
+export interface SectionCardCarouselSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
@@ -37,9 +46,9 @@ export interface SSectionCardCarouselSlots {
 }
 
 /**
- * Defines valid emits in SSectionCardCarousel component.
+ * Defines valid emits in SectionCardCarousel component.
  */
-export interface SSectionCardCarouselEmits {
+export interface SectionCardCarouselEmits {
   /**
    * Triggered when an error occurs
    */
@@ -49,12 +58,12 @@ export interface SSectionCardCarouselEmits {
 /**
  * @group Component
  */
-declare class SSectionCardCarousel extends ClassComponent<SSectionCardCarouselProps, SSectionCardCarouselSlots, SSectionCardCarouselEmits> { }
+declare class SectionCardCarousel extends ClassComponent<SectionCardCarouselProps, SectionCardCarouselSlots, SectionCardCarouselEmits> { }
 
 declare module 'vue' {
   export interface GlobalComponents {
-    SSectionCardCarousel: GlobalComponentConstructor<SSectionCardCarousel>;
+    SectionCardCarousel: GlobalComponentConstructor<SectionCardCarousel>;
   }
 }
 
-export default SSectionCardCarousel;
+export default SectionCardCarousel;
