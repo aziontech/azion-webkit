@@ -100,15 +100,6 @@ const Template = (args) => (config(args))
 export const Default = Template.bind({})
 Default.args = MOCK
 
-// Default.parameters = {
-//   docs: {
-//     description: {
-//       story: ''
-//     },
-//     source: { code: template }
-//   },
-// };
-
 export default {
   title: 'Blocks/Sections/section-card-carousel',
   component: SectionCardCarousel,
