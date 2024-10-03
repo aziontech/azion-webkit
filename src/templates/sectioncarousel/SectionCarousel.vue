@@ -18,13 +18,14 @@
     </template>
     <template #principal>
       <Carousel
-        :value="cards"
+      :value="cards"
         :numVisible="3"
-        :numScroll="3"
+        :numScroll="1"
         :circular="true"
         :autoplayInterval="5000"
         :responsiveOptions="responsiveOptions"
-        :showNavigators="false"
+        :showNavigators="isLargeScreen"
+        :showIndicators="!isLargeScreen"
       >
         <template #item="slotProps">
           <div class="px-3 h-full">
@@ -60,57 +61,70 @@
 </template>
 
 <script setup>
-import ContentSection from '../contentsection'
-import LinkButton from '../linkbutton'
-import CardBaseClickable from '../cardbaseclickable'
-import CardTitle from '../cardtitle'
-import CardDescription from '../carddescription'
-import Carousel from 'primevue/carousel'
-import Tag from 'primevue/tag'
+  import { onBeforeMount, ref } from 'vue'
 
-defineProps({
-  overline: {
-    type: String,
-    required: false
-  },
-  title: {
-    type: String,
-    required: true
-  },
-  description: {
-    type: String,
-    required: false
-  },
-  button: {
-    type: Object,
-    required: false
-  },
-  cards: {
-    type: Array,
-    required: true
-  }
-})
+  import ContentSection from '../contentsection'
+  import LinkButton from '../linkbutton'
+  import CardBaseClickable from '../cardbaseclickable'
+  import CardTitle from '../cardtitle'
+  import CardDescription from '../carddescription'
+  import Carousel from 'primevue/carousel'
+  import Tag from 'primevue/tag'
 
-const responsiveOptions = [
-  {
-    breakpoint: '1400px',
-    numVisible: 3,
-    numScroll: 3
-  },
-  {
-    breakpoint: '1199px',
-    numVisible: 3,
-    numScroll: 3
-  },
-  {
-    breakpoint: '767px',
-    numVisible: 2,
-    numScroll: 2
-  },
-  {
-    breakpoint: '575px',
-    numVisible: 1,
-    numScroll: 1
+  defineProps({
+    overline: {
+      type: String,
+      required: false
+    },
+    title: {
+      type: String,
+      required: true
+    },
+    description: {
+      type: String,
+      required: false
+    },
+    button: {
+      type: Object,
+      required: false
+    },
+    cards: {
+      type: Array,
+      required: true
+    }
+  })
+
+  const responsiveOptions = [
+    {
+      breakpoint: '1400px',
+      numVisible: 3,
+      numScroll: 1
+    },
+    {
+      breakpoint: '1199px',
+      numVisible: 3,
+      numScroll: 1
+    },
+    {
+      breakpoint: '767px',
+      numVisible: 2,
+      numScroll: 1
+    },
+    {
+      breakpoint: '575px',
+      numVisible: 1,
+      numScroll: 1
+    }
+  ]
+
+  const isLargeScreen = ref(true)
+
+  const checkScreenSize = () => {
+    isLargeScreen.value = window.innerWidth >= 767;
   }
-]
+
+  onBeforeMount(() => {
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+  })
 </script>
