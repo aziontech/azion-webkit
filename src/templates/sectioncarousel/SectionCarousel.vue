@@ -18,7 +18,7 @@
     </template>
     <template #principal>
       <Carousel
-      :value="cards"
+        :value="cards"
         :numVisible="3"
         :numScroll="1"
         :circular="true"
