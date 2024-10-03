@@ -35,7 +35,67 @@ ${Rules.section.cards}
   }
 }
 
-const MOCK = {
+
+const config = (args) => {
+  return {
+    components: {
+      ContentSection,
+      GridBentoBlock,
+      CardBase,
+      Overline,
+      CardTitle,
+      LinkButton,
+      ImageSwitcher,
+      Container
+    },
+    setup() {
+      return { args }
+    },
+    template: `
+      <Container class="surface-ground">
+        <ContentSection :title="args.title" :overline="args.overline" :description="args.description" position="center"
+          titleTag="h1" isContentCentralized textCenter>
+          <template #main>
+            <GridBentoBlock :gridType="args.gridType">
+              <template v-for="({ title, img, overline, actions }, index) in args.cards" v-slot:[\`item-\${++index}\`]>
+                <CardBase grid spacing="relaxed">
+                  <template #content>
+                    <Overline :label="overline" />
+                    <CardTitle> {{ title }} </CardTitle>
+                  </template>
+                  <template v-if="actions" #actions>
+                    <div>
+                      <LinkButton v-for="button in actions" :outlined="button.outlined" :label="button.label"
+                        :link="button.href" />
+                    </div>
+                  </template>
+                  <template #content-raw>
+                    <div class="h-full flex items-end">
+                      <div v-if="img">
+                        <ImageSwitcher>
+                          <template #lightImage>
+                            <img :src="img.src" loading="lazy" height="40" />
+                          </template>
+                          <template #darkImage>
+                            <img :src="img.src" loading="lazy" height="40"/>
+                          </template>
+                        </ImageSwitcher>
+                      </div>
+                    </div>
+                  </template>
+                </CardBase>
+              </template>
+            </GridBentoBlock>
+          </template>
+        </ContentSection>
+      </Container>
+    `
+  }
+}
+
+const Template = (args) => (config(args))
+export const Default = Template.bind({})
+Default.args = {
   overline: 'To the edge',
   title: 'All products and features, no upfront commitment required—cancel anytime.',
   gridType: '2-columns-4-items',
@@ -122,61 +182,3 @@ const MOCK = {
     }
   ],
 }
-
-const template = `
-<Container class="surface-ground">
-  <ContentSection :title="args.title" :overline="args.overline" :description="args.description" position="center"
-    titleTag="h1" isContentCentralized textCenter>
-    <template #main>
-      <GridBentoBlock :gridType="args.gridType">
-        <template v-for="({ title, img, overline, actions }, index) in args.cards" v-slot:[\`item-\${++index}\`]>
-          <CardBase grid spacing="relaxed">
-            <template #content>
-              <Overline :label="overline" />
-              <CardTitle> {{ title }} </CardTitle>
-            </template>
-            <template v-if="actions" #actions>
-              <div>
-                <LinkButton v-for="button in actions" :outlined="button.outlined" :label="button.label"
-                  :link="button.href" />
-              </div>
-            </template>
-            <template #content-raw>
-              <div class="h-full flex items-end">
-                <div v-if="img">
-                  <ImageSwitcher>
-                    <template #lightImage>
-                      <img :src="img.src" loading="lazy" height="40" />
-                    </template>
-                    <template #darkImage>
-                      <img :src="img.src" loading="lazy" height="40"/>
-                    </template>
-                  </ImageSwitcher>
-                </div>
-              </div>
-            </template>
-          </CardBase>
-        </template>
-      </GridBentoBlock>
-    </template>
-  </ContentSection>
-</Container>`
-
-const Template = (args) => ({
-  components: { ContentSection, GridBentoBlock, CardBase, Overline, CardTitle, LinkButton, ImageSwitcher, Container },
-  setup() {
-    return { args }
-  },
-  template: template
-})
-
-export const Default = Template.bind({})
-Default.args = MOCK
-
-Default.parameters = {
-  docs: {
-    description: {
-      story: ''
-    },
-    source: { code: template } },
-};

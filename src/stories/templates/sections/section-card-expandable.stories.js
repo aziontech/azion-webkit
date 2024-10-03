@@ -25,7 +25,67 @@ ${Rules.section.cards}
   },
 }
 
-const MOCK = {
+const config = (args) => {
+  return {
+    components: { ContentSection, CardPanelExpandable, ImageSwitcher, LinkButton, Container },
+    setup() {
+      return { args }
+    },
+    template: `
+      <Container class="surface-ground">
+        <ContentSection titleTag="h2" position="center" isContentCentralized textCenter :title="args.title" :overline="args.overline" :description="args.description">
+          <template #main>
+            <CardPanelExpandable :cards="args.cards" maxHeight="xl:h-[484px]">
+              <template #content="slotProps">
+                <div class="relative flex flex-col justify-end rounded w-full">
+                  <div class="flex justify-center w-full h-full top-0 left-0 overflow-hidden rounded">
+                    <ImageSwitcher>
+                      <template #darkImage>
+                        <img v-bind="{
+                          ...slotProps.data.img,
+                          src: slotProps.data.img.src,
+                        }" class="object-cover object-top w-full xl:max-h-44" loading="lazy" height="140" width="auto" />
+                      </template>
+                      <template #lightImage>
+                        <img v-bind="{
+                          ...slotProps.data.imgLight,
+                          src: slotProps.data.imgLight.src,
+                        }" class="object-cover object-top w-full xl:max-h-44" loading="lazy" height="140" width="auto" />
+                      </template>
+                    </ImageSwitcher>
+                  </div>
+                  <div class="hide-on-light absolute w-full h-full top-0 left-0 overflow-hidden rounded gradient-to-top" />
+                </div>
+              </template>
+              <template #actions="slotProps">
+                <LinkButton v-if="slotProps.data.button" v-bind="slotProps.data.button" />
+              </template>
+              <template #disabledContent="slotProps">
+                <div class="relative min-h-40 h-full flex flex-col justify-end rounded">
+                  <div class="absolute w-full h-full top-0 left-0 overflow-hidden rounded">
+                    <img v-bind="{
+                      ...slotProps.data.img,
+                      src: slotProps.data.img.src,
+                    }" class="hide-on-light w-full h-full object-cover grayscale" loading="lazy" height="288" width="auto" />
+                    <img v-bind="{
+                      ...slotProps.data.imgLight,
+                      src: slotProps.data.imgLight.src,
+                    }" class="hide-on-dark w-full h-full object-cover grayscale" loading="lazy" height="288" width="auto" />
+                  </div>
+                  <div class="absolute w-full h-full top-0 left-0 overflow-hidden rounded gradient-to-bottom" />
+                </div>
+              </template>
+            </CardPanelExpandable>
+          </template>
+        </ContentSection>
+      </Container>
+    `
+  }
+}
+
+const Template = (args) => (config(args))
+export const Default = Template.bind({})
+Default.args = {
   "overline": "Professional Services",
   "title": "Helping you achieve your business goals with Azion.",
   "description": "Azion Professional Services offerings utilize a unique methodology rooted in Azion's internal best practices to help you complete projects faster and more reliably. We take into account the constantly evolving expectations and dynamic team structures encountered along the way.",
@@ -124,71 +184,3 @@ const MOCK = {
     }
   ]
 }
-
-const template = `
-<Container class="surface-ground">
-  <ContentSection titleTag="h2" position="center" isContentCentralized textCenter :title="args.title" :overline="args.overline" :description="args.description">
-    <template #main>
-      <CardPanelExpandable :cards="args.cards" maxHeight="xl:h-[484px]">
-        <template #content="slotProps">
-          <div class="relative flex flex-col justify-end rounded w-full">
-            <div class="flex justify-center w-full h-full top-0 left-0 overflow-hidden rounded">
-              <ImageSwitcher>
-                <template #darkImage>
-                  <img v-bind="{
-                    ...slotProps.data.img,
-                    src: slotProps.data.img.src,
-                  }" class="object-cover object-top w-full xl:max-h-44" loading="lazy" height="140" width="auto" />
-                </template>
-                <template #lightImage>
-                  <img v-bind="{
-                    ...slotProps.data.imgLight,
-                    src: slotProps.data.imgLight.src,
-                  }" class="object-cover object-top w-full xl:max-h-44" loading="lazy" height="140" width="auto" />
-                </template>
-              </ImageSwitcher>
-            </div>
-            <div class="hide-on-light absolute w-full h-full top-0 left-0 overflow-hidden rounded gradient-to-top" />
-          </div>
-        </template>
-        <template #actions="slotProps">
-          <LinkButton v-if="slotProps.data.button" v-bind="slotProps.data.button" />
-        </template>
-        <template #disabledContent="slotProps">
-          <div class="relative min-h-40 h-full flex flex-col justify-end rounded">
-            <div class="absolute w-full h-full top-0 left-0 overflow-hidden rounded">
-              <img v-bind="{
-                ...slotProps.data.img,
-                src: slotProps.data.img.src,
-              }" class="hide-on-light w-full h-full object-cover grayscale" loading="lazy" height="288" width="auto" />
-              <img v-bind="{
-                ...slotProps.data.imgLight,
-                src: slotProps.data.imgLight.src,
-              }" class="hide-on-dark w-full h-full object-cover grayscale" loading="lazy" height="288" width="auto" />
-            </div>
-            <div class="absolute w-full h-full top-0 left-0 overflow-hidden rounded gradient-to-bottom" />
-          </div>
-        </template>
-      </CardPanelExpandable>
-    </template>
-  </ContentSection>
-</Container>`
-
-const Template = (args) => ({
-  components: { ContentSection, CardPanelExpandable, ImageSwitcher, LinkButton, Container },
-  setup() {
-    return { args }
-  },
-  template: template
-})
-
-export const Default = Template.bind({})
-Default.args = MOCK
-
-Default.parameters = {
-  docs: {
-    description: {
-      story: ''
-    },
-    source: { code: template } },
-};

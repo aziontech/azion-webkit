@@ -20,7 +20,23 @@ ${Rules.section.cards}
   },
 }
 
-const MOCK =  {
+const config = (args) => {
+  return {
+    components: { SectionCarousel, Container },
+  setup() {
+    return { args }
+  },
+  template: `
+    <Container class="surface-ground">
+      <SectionCarousel v-bind="args" />
+    </Container>
+  `
+  }
+}
+
+const Template = (args) => (config(args))
+export const Default = Template.bind({})
+Default.args = {
   "overline": "Guides and resources",
   "title": "Learn more about bot management through examples of architectures, guides and templates",
   "cards": [
@@ -110,27 +126,3 @@ const MOCK =  {
     }
   ]
 }
-
-const template = `
-<Container class="surface-ground">
-  <SectionCarousel v-bind="args" />
-</Container>`
-
-const Template = (args) => ({
-  components: { SectionCarousel, Container },
-  setup() {
-    return { args }
-  },
-  template: template
-})
-
-export const Default = Template.bind({})
-Default.args = MOCK
-
-Default.parameters = {
-  docs: {
-    description: {
-      story: ''
-    },
-    source: { code: template } },
-};

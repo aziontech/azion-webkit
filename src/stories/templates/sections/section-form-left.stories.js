@@ -24,7 +24,61 @@ ${Rules.section.cards}
   },
 }
 
-const MOCK = {
+const config = (args) => {
+  return {
+    components: {
+      FormContactUs,
+      CardBase,
+      Overline,
+      CardTitle,
+      LinkButton,
+      Container
+    },
+    setup() {
+      return { args }
+    },
+    template: `
+      <Container class="surface-ground">
+        <div class="px-container flex flex-col gap-10 lg:gap-16">
+          <h1 class="text-3xl font-medium"> {{ args.title }}</h1>
+          <div class="grid gap-y-10 lg:gap-x-20 grid-cols-1 lg:grid-cols-[minmax(0,_768px)_320px]">
+            <FormContactUs class="w-full" requester="https://www.azion.com" requesterName="Azion" :hubspot="args.hubspot"
+              :t="args.form" :responseMessages="args.form.responseMessages" />
+            <div class="row-span-2">
+              <div class="lg:top-20 lg:sticky">
+                <div class="flex flex-col p-1 gap-10">
+                  <div class="flex flex-col gap-10">
+                    <Overline :label="args.locations.overline" />
+                    <div v-for="({ city, address, button }) in args.locations.offices" class="flex flex-col gap-3">
+                      <p class="font-medium text-lg">{{ city }}</p>
+                      <p class="text-sm text-color-secondary"> {{ address }} </p>
+                      <div>
+                        <LinkButton v-bind="button" outlined iconPos="left" icon="pi-map-marker" />
+                      </div>
+                    </div>
+                  </div>
+                  <CardBase>
+                    <template #content>
+                      <Overline :label="args.card.overline" />
+                      <CardTitle> {{ args.card.title }} </CardTitle>
+                    </template>
+                    <template #actions>
+                      <LinkButton :link="args.card.button.link" :severity="args.card.button.severity" :label="args.card.button.label" size="small" />
+                    </template>
+                  </CardBase>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
+    `
+  }
+}
+
+const Template = (args) => (config(args))
+export const Default = Template.bind({})
+Default.args = {
   "title": "Contact sales",
   "hubspot": {
     "formId": "a3b0bf4c-c170-4988-a21a-f109055c4b70",
@@ -149,58 +203,3 @@ const MOCK = {
     }
   }
 }
-
-const template = `
-<Container class="surface-ground">
-  <div class="px-container flex flex-col gap-10 lg:gap-16">
-    <h1 class="text-3xl font-medium"> {{ args.title }}</h1>
-    <div class="grid gap-y-10 lg:gap-x-20 grid-cols-1 lg:grid-cols-[minmax(0,_768px)_320px]">
-      <FormContactUs class="w-full" requester="https://www.azion.com" requesterName="Azion" :hubspot="args.hubspot"
-        :t="args.form" :responseMessages="args.form.responseMessages" />
-      <div class="row-span-2">
-        <div class="lg:top-20 lg:sticky">
-          <div class="flex flex-col p-1 gap-10">
-            <div class="flex flex-col gap-10">
-              <Overline :label="args.locations.overline" />
-              <div v-for="({ city, address, button }) in args.locations.offices" class="flex flex-col gap-3">
-                <p class="font-medium text-lg">{{ city }}</p>
-                <p class="text-sm text-color-secondary"> {{ address }} </p>
-                <div>
-                  <LinkButton v-bind="button" outlined iconPos="left" icon="pi-map-marker" />
-                </div>
-              </div>
-            </div>
-            <CardBase>
-              <template #content>
-                <Overline :label="args.card.overline" />
-                <CardTitle> {{ args.card.title }} </CardTitle>
-              </template>
-              <template #actions>
-                <LinkButton :link="args.card.button.link" :severity="args.card.button.severity" :label="args.card.button.label" size="small" />
-              </template>
-            </CardBase>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</Container>`
-
-const Template = (args) => ({
-  components: { FormContactUs, CardBase, Overline, CardTitle, LinkButton, Container },
-  setup() {
-    return { args }
-  },
-  template: template
-})
-
-export const Default = Template.bind({})
-Default.args = MOCK
-
-Default.parameters = {
-  docs: {
-    description: {
-      story: ''
-    },
-    source: { code: template } },
-};

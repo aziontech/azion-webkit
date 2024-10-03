@@ -21,7 +21,29 @@ ${Rules.section.cardsRelease}
   },
 }
 
-const MOCK =   {
+const config = (args) => {
+  return {
+    components: { ContentSection, ReleaseCarousel, Container },
+    setup() {
+      return { args }
+    },
+    template: `
+      <Container class="surface-ground">
+        <ContentSection :overline="args.overline" :title="args.title">
+          <template #principal>
+            <div class="relative">
+              <ReleaseCarousel :data="args.items" />
+            </div>
+          </template>
+        </ContentSection>
+      </Container>
+    `
+  }
+}
+
+const Template = (args) => (config(args))
+export const Default = Template.bind({})
+Default.args = {
   "overline": "MARKET RECOGNITION",
   "title": "What analysts say about Azion",
   "items": [
@@ -116,33 +138,3 @@ const MOCK =   {
     }
   ]
 }
-
-const template = `
-<Container class="surface-ground">
-  <ContentSection :overline="args.overline" :title="args.title">
-    <template #principal>
-      <div class="relative">
-        <ReleaseCarousel :data="args.items" />
-      </div>
-    </template>
-  </ContentSection>
-</Container>`
-
-const Template = (args) => ({
-  components: { ContentSection, ReleaseCarousel, Container },
-  setup() {
-    return { args }
-  },
-  template: template
-})
-
-export const Default = Template.bind({})
-Default.args = MOCK
-
-Default.parameters = {
-  docs: {
-    description: {
-      story: ''
-    },
-    source: { code: template } },
-};

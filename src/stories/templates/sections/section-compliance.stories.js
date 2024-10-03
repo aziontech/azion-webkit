@@ -22,7 +22,26 @@ ${Rules.section.cards}
   },
 }
 
-const MOCK = {
+const config = (args) => {
+  return {
+    components: {
+      SectionCompliance,
+      Container
+    },
+    setup() {
+      return { args }
+    },
+    template: `
+      <Container class="surface-ground">
+        <SectionCompliance v-bind="args" />
+      </Container>
+    `
+  }
+}
+
+const Template = (args) => (config(args))
+export const Default = Template.bind({})
+Default.args = {
   "overline": "SECURE BY DESIGN",
   "title": "Confianza construida con las certificaciones más exigentes del mercado",
   "description": "Azion cumple estrictas normas de seguridad, disponibilidad y privacidad para que los clientes puedan adoptar nuestros servicios con confianza.",
@@ -49,27 +68,3 @@ const MOCK = {
     }
   ]
 }
-
-const template = `
-<Container class="surface-ground">
-  <SectionCompliance v-bind="args" />
-</Container>`
-
-const Template = (args) => ({
-  components: { SectionCompliance, Container },
-  setup() {
-    return { args }
-  },
-  template: template
-})
-
-export const Default = Template.bind({})
-Default.args = MOCK
-
-Default.parameters = {
-  docs: {
-    description: {
-      story: ''
-    },
-    source: { code: template } },
-};

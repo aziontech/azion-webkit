@@ -2,7 +2,44 @@ import Container from '../../../templates/container'
 import SectionCardCarousel from '../../../templates/sectioncardcarousel'
 import Rules from '../../rules'
 
-const MOCK = {
+export default {
+  title: 'Blocks/Sections/section-card-carousel',
+  component: SectionCardCarousel,
+  tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.cards}
+        `
+      }
+    }
+  }
+}
+
+const config= (args) => {
+  return {
+    components: {
+      Container,
+      SectionCardCarousel
+    },
+    setup() {
+      return { args }
+    },
+    template: `
+      <Container class="surface-ground">
+        <SectionCardCarousel v-bind="args" />
+      </Container>
+    `
+  }
+}
+
+const Template = (args) => (config(args))
+export const Default = Template.bind({})
+Default.args = {
   "responsiveOptions": [
     {
       breakpoint: '1400px',
@@ -79,41 +116,4 @@ const MOCK = {
   ]
 }
 
-const config= (args) => {
-  return {
-    components: {
-      Container,
-      SectionCardCarousel
-    },
-    setup() {
-      return { args }
-    },
-    template: `
-      <Container class="surface-ground">
-        <SectionCardCarousel v-bind="args" />
-      </Container>
-    `
-  }
-}
 
-const Template = (args) => (config(args))
-export const Default = Template.bind({})
-Default.args = MOCK
-
-export default {
-  title: 'Blocks/Sections/section-card-carousel',
-  component: SectionCardCarousel,
-  tags: ['autodocs'],
-  parameters: {
-    docs: {
-      description: {
-        component: `
-### Content rules
-${Rules.section.overline}
-${Rules.section.title}
-${Rules.section.cards}
-        `
-      }
-    }
-  }
-}

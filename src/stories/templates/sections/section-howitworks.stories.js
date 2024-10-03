@@ -93,11 +93,3 @@ const Template = (args) => ({
 
 export const Default = Template.bind({})
 Default.args = MOCK
-
-Default.parameters = {
-  docs: {
-    description: {
-      story: ''
-    },
-    source: { code: template } },
-};

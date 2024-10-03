@@ -24,10 +24,33 @@ ${Rules.section.list}
   },
 }
 
-const MOCK = {
-  overline: 'Marketplace',
-  title: 'What is the Azion Marketplace?',
-  description: "The Azion Marketplace is a digital catalog that makes it easy to find, test, and deploy edge-enabled software that runs anywhere. The Marketplace brings together a wide range of solutions that you can use to enhance, compose, or customize your applications.",
+const config = (args) => {
+  return {
+    components: { ContentSection, UnorderedList, LinkButton, Container },
+    setup() {
+      return { args }
+    },
+    template: `
+      <Container class="surface-ground">
+        <ContentSection :title="args.title" :overline="args.overline" :description="args.description" titleTag="h2">
+          <template #actions>
+            <LinkButton v-for="({ link, label, outlined }) in args.buttons" :link="link" :label="label" :outlined="outlined" />
+          </template>
+          <template #main>
+            <UnorderedList :data="args.contentListBlock" />
+          </template>
+        </ContentSection>
+      </Container>
+    `
+  }
+}
+
+const Template = (args) => (config(args))
+export const Default = Template.bind({})
+Default.args = {
+  "overline": 'Marketplace',
+  "title": 'What is the Azion Marketplace?',
+  "description": "The Azion Marketplace is a digital catalog that makes it easy to find, test, and deploy edge-enabled software that runs anywhere. The Marketplace brings together a wide range of solutions that you can use to enhance, compose, or customize your applications.",
   "buttons": [{
     "label": "Try it for freet",
     "link": "https://console.azion.com/signup"
@@ -54,34 +77,3 @@ const MOCK = {
     }
   ]
 }
-
-const template = `
-<Container class="surface-ground">
-  <ContentSection :title="args.title" :overline="args.overline" :description="args.description" titleTag="h2">
-    <template #actions>
-      <LinkButton v-for="({ link, label, outlined }) in args.buttons" :link="link" :label="label" :outlined="outlined" />
-    </template>
-    <template #main>
-      <UnorderedList :data="args.contentListBlock" />
-    </template>
-  </ContentSection>
-</Container>`
-
-const Template = (args) => ({
-  components: { ContentSection, UnorderedList, LinkButton, Container },
-  setup() {
-    return { args }
-  },
-  template: template
-})
-
-export const Default = Template.bind({})
-Default.args = MOCK
-
-Default.parameters = {
-  docs: {
-    description: {
-      story: ''
-    },
-    source: { code: template } },
-};
