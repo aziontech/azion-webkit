@@ -56,7 +56,7 @@
     }
   });
 
-  const responsiveOptions = ref([
+  const responsiveOptions = [
     {
       breakpoint: '1400px',
       numVisible: 3,
@@ -72,7 +72,7 @@
       numVisible: 1,
       numScroll: 1
     }
-  ]);
+  ];
 
   const isLargeScreen = ref(true)
 
