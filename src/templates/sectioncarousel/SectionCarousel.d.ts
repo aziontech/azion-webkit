@@ -8,22 +8,28 @@
 import { VNode } from 'vue';
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
 
-type BigNumbers = {
-  justify: "center" | "start"
-  items: Array<{
+type CardsType = {
+  tag: {
     icon: string,
-    title: string,
-    description: string
-   }>
+    label: string
+  },
+  title: string,
+  description: string,
+  link: string,
+  action: {
+    label: string,
+  }
 }
 
 /**
  * Defines valid properties in SectionCarousels component.
  */
 export interface SectionCarouselsProps {
-  data: BigNumbers;
   title: string;
   overline: string;
+  description: string;
+  button: {};
+  cards: Array<CardsType>;
 }
 
 /**

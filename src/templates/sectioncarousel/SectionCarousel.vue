@@ -1,23 +1,54 @@
 <template>
-  <ContentSection :overline="overline" :title="title" :description="description" titleTag="h2">
+  <ContentSection
+    titleTag="h2"
+    :overline="overline"
+    :title="title"
+    :description="description"
+  >
     <template v-if="button" #main>
       <div class="w-full flex justify-end items-end">
-        <LinkButton class="min-w-fit" v-bind="button" textLink icon="pi pi-arrow-right" iconPos="right" />
+        <LinkButton
+          class="min-w-fit"
+          v-bind="button"
+          textLink
+          icon="pi pi-arrow-right"
+          iconPos="right"
+        />
       </div>
     </template>
     <template #principal>
-      <Carousel :value="cards" :numVisible="3" :numScroll="3" :circular="true" :autoplayInterval="5000"
-        :responsiveOptions="responsiveOptions" :showNavigators="false">
+      <Carousel
+        :value="cards"
+        :numVisible="3"
+        :numScroll="3"
+        :circular="true"
+        :autoplayInterval="5000"
+        :responsiveOptions="responsiveOptions"
+        :showNavigators="false"
+      >
         <template #item="slotProps">
           <div class="px-3 h-full">
-            <CardBaseClickable backgroundColor="outlined" :link="slotProps.data.link" grid disableAction>
+            <CardBaseClickable
+              grid
+              backgroundColor="outlined"
+              :link="slotProps.data.link"
+              :action="slotProps.data.action"
+            >
               <template #content>
                 <div class="pb-5">
-                  <Tag :value="slotProps.data.tag.label" :icon="slotProps.data.tag.icon" severity="info" />
+                  <Tag
+                    :value="slotProps.data.tag.label"
+                    :icon="slotProps.data.tag.icon"
+                    severity="info"
+                  />
                 </div>
                 <div class="flex flex-col gap-3">
-                  <CardTitle> {{ slotProps.data.title }} </CardTitle>
-                  <CardDescription> {{ slotProps.data.description }} </CardDescription>
+                  <CardTitle>
+                    {{ slotProps.data.title }}
+                  </CardTitle>
+                  <CardDescription>
+                    {{ slotProps.data.description }}
+                  </CardDescription>
                 </div>
               </template>
             </CardBaseClickable>
@@ -63,8 +94,8 @@ defineProps({
 const responsiveOptions = [
   {
     breakpoint: '1400px',
-    numVisible: 2,
-    numScroll: 2
+    numVisible: 3,
+    numScroll: 3
   },
   {
     breakpoint: '1199px',
