@@ -1,14 +1,16 @@
 <template>
   <section class="px-container w-full">
     <div class="border surface-border surface-50 w-full">
-      <div class="lg:py-16 lg:px-12 px-6 py-8 flex flex-col lg:flex-row gap-10">
-        <div class="flex flex-col gap-8 lg:max-w-xs justify-center">
+      <div class="flex flex-col lg:flex-row gap-10">
+        <div class="lg:py-16 lg:px-12 px-6 py-8 flex flex-col gap-8 lg:max-w-xs justify-center min-w-80 max-w-80">
           <div class="flex flex-col gap-4">
             <Overline
               v-if="overline"
               :label="overline"
             />
-            <h2 class="text-2xl md:text-3xl font-medium text-balance">{{ title }}</h2>
+            <h2 class="text-2xl md:text-3xl font-medium text-balance">
+              {{ title }}
+            </h2>
           </div>
           <LinkButton
             v-if="button"
@@ -16,7 +18,7 @@
             class="w-full md:w-fit"
           />
         </div>
-        <div class="flex justify-center w-full lg:p-8 p-4">
+        <div class="flex justify-center w-full  max-width-[872px] ">
           <ImageSwitcher>
             <template #darkImage>
               <img

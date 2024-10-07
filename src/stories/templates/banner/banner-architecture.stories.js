@@ -25,12 +25,12 @@ const MOCK = {
   "title": "Protect Your Edge Applications with a Bot Management Solution",
   "button": {
     "link": "https://www.azion.com/en/resource-hub/",
-    "label": "Read the customer success story",
+    "label": "Read documentation",
     "outlined": true
   },
   "images": {
-    "dark": "/assets/mocks/architeture-new.png",
-    "light": "/assets/mocks/architeture-new.png",
+    "dark": "https://www.azion.com/assets/docs/images/uploads/application-and-network-security/dark_BotManagement.png",
+    "light": "https://www.azion.com/assets/docs/images/uploads/application-and-network-security/light_BotManagement.png",
     "alt": ""
   }
 }
