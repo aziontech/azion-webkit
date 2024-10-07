@@ -2,7 +2,7 @@
   <section class="px-container w-full">
     <div class="border surface-border surface-50 w-full">
       <div class="flex flex-col lg:flex-row gap-10">
-        <div class="lg:py-16 lg:px-12 px-6 py-8 flex flex-col gap-8 lg:max-w-xs justify-center md:min-w-[420px] md:max-w-[420px]">
+        <div class="lg:py-16 lg:px-12 px-6 py-8 flex flex-col gap-8 justify-center md:min-w-[420px] max-w-[420px]">
           <div class="flex flex-col gap-4">
             <Overline
               v-if="overline"
@@ -15,14 +15,14 @@
           <LinkButton
             v-if="button"
             v-bind="button"
-            class="w-full md:w-fit"
+            class="w-fit"
           />
         </div>
         <div class="flex justify-center w-full  max-width-[872px] ">
           <ImageSwitcher>
             <template #darkImage>
               <img
-                class="object-cover w-full min-h-[334px]"
+                class="object-cover w-full md:min-h-[334px]"
                 loading="lazy"
                 width="auto"
                 height="auto"
@@ -32,7 +32,7 @@
             </template>
             <template #lightImage>
               <img
-                class="object-cover w-full min-h-[334px]"
+                class="object-cover w-full md:min-h-[334px]"
                 loading="lazy"
                 width="auto"
                 height="auto"
