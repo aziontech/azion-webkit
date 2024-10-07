@@ -2,7 +2,7 @@
   <section class="px-container w-full">
     <div class="border surface-border surface-50 w-full">
       <div class="flex flex-col lg:flex-row gap-10">
-        <div class="lg:py-16 lg:px-12 px-6 py-8 flex flex-col gap-8 lg:max-w-xs justify-center min-w-80 max-w-80">
+        <div class="lg:py-16 lg:px-12 px-6 py-8 flex flex-col gap-8 lg:max-w-xs justify-center md:min-w-[420px] md:max-w-[420px]">
           <div class="flex flex-col gap-4">
             <Overline
               v-if="overline"
@@ -22,7 +22,7 @@
           <ImageSwitcher>
             <template #darkImage>
               <img
-                class="object-cover w-full"
+                class="object-cover w-full min-h-[334px]"
                 loading="lazy"
                 width="auto"
                 height="auto"
@@ -32,7 +32,7 @@
             </template>
             <template #lightImage>
               <img
-                class="object-cover w-full"
+                class="object-cover w-full min-h-[334px]"
                 loading="lazy"
                 width="auto"
                 height="auto"
