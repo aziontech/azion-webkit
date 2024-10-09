@@ -81,7 +81,7 @@ const config = (args) => {
                           </CardBase>
                         </template>
                         <div v-if="key === 'product'"
-                          class="hidden xl:flex surface-ground flex-col min-w-56 max-w-60 h-full gap-3 p-5 md:p-8 border surface-border rounded">
+                          class="hidden xl:flex surface-ground flex-col min-w-56 h-full gap-3 p-5 md:p-8 border surface-border rounded">
                           <p class="text-2xl"> {{ args.tableHead.title }} </p>
                           <CardDescription class="text-wrap font-normal"> {{ args.tableHead.description }} </CardDescription>
                         </div>
@@ -174,7 +174,7 @@ Default.args = {
     "enterprise": {
       "title": "Enterprise",
       "overline": "Start at",
-      "tag": "Most Popular",
+      "tag": "Popular",
       "cost": "$3.500/mo",
       "description": "For customers with critical operations and systems, we recommend the Enterprise Plan.",
       "button": {
