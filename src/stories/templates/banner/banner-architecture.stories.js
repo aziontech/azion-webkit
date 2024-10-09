@@ -29,8 +29,8 @@ const MOCK = {
     "outlined": true
   },
   "images": {
-    "dark": "https://www.azion.com/assets/docs/images/uploads/application-and-network-security/dark_BotManagement.png",
-    "light": "https://www.azion.com/assets/docs/images/uploads/application-and-network-security/light_BotManagement.png",
+    "dark": "https://www.azion.com/assets/docs/images/uploads/application-and-network-security/dark-bot-management.png",
+    "light": "https://www.azion.com/assets/docs/images/uploads/application-and-network-security/light-bot-management.png",
     "alt": ""
   }
 }
