@@ -45,14 +45,14 @@ const config = (args) => {
                 <template v-for="key in args.tablesId" v-key="key">
                   <Column :field="key" :frozen="key === 'product'" :pt="{
                     headerContent: { class: 'h-full' },
-                    headercell: { class: 'h-80 bg-transparent px-2.5 max-w-56' },
+                    headercell: { class: 'h-80 bg-transparent px-2.5 max-w-60' },
                     bodycell: { class: [key === 'product' && 'max-w-0 lg:max-w-full bg-transparent align-top xl:bg-inherit xl:align-center', 'p-4'] }
                   }">
                     <template #header>
                       <div class="h-full">
                         <template v-if="args.cards[key]">
                           <CardBase grid spacing="compact" :backgroundColor="key === 'enterprise' ? 'highlighted' : 'shape'"
-                            class="min-w-60 max-w-60">
+                            class="min-w-56 max-w-60">
                             <template #content>
                               <div class="flex flex-col gap-3 grow">
                                 <div class="flex gap-3">
@@ -81,7 +81,7 @@ const config = (args) => {
                           </CardBase>
                         </template>
                         <div v-if="key === 'product'"
-                          class="hidden xl:flex surface-ground flex-col min-w-56 h-full gap-3 p-5 md:p-8 border surface-border rounded">
+                          class="hidden xl:flex surface-ground flex-col min-w-56 max-w-60 h-full gap-3 p-5 md:p-8 border surface-border rounded">
                           <p class="text-2xl"> {{ args.tableHead.title }} </p>
                           <CardDescription class="text-wrap font-normal"> {{ args.tableHead.description }} </CardDescription>
                         </div>
