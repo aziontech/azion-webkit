@@ -1,6 +1,4 @@
-import HeroBlockBase from '../../../templates/herobase'
-import LinkButton from '../../../templates/linkbutton'
-import ImageSwitcher from '../../../templates/themeawareimageswitcher'
+import HeroThumbBottom from '../../../templates/herothumbbottom'
 import Container from '../../../templates/container'
 import Rules from '../../rules'
 
@@ -24,16 +22,16 @@ ${Rules.heroProduct.image}
 }
 
 const MOCK = {
-  hero: {
-    overline: "Build",
-    "title": "Edge Application",
-    description:
-      'Edge Application allows you to build your web applications to run on Azion Edge Platform.',
+  overline: "Build",
+  "title": "Edge Application",
+  description:
+    'Edge Application allows you to build your web applications to run on Azion Edge Platform.',
+  images: {
     alt: "Insert ALt here",
-    imageDark: "https://www.azion.com/assets/pages/products/images/dark/edge-application/_thumb_edge_app.png",
-    imageLight: "https://52082s.ha.azioncdn.net/assets/pages/products/images/light/edge-application/_thumb_edge_app-light.png"
+    dark: "https://www.azion.com/assets/pages/products/images/dark/edge-application/_thumb_edge_app.png",
+    light: "https://52082s.ha.azioncdn.net/assets/pages/products/images/light/edge-application/_thumb_edge_app-light.png"
   },
-  CTA: [
+  buttons: [
     {
       label: 'Start Now',
       link: 'https://console.azion.com/signup/',
@@ -49,42 +47,11 @@ const MOCK = {
 
 const HeroDisplay = `
 <Container class="surface-ground">
-  <HeroBlockBase
-    isCentralized
-    :overline="args.hero.overline"
-    :title="args.hero.title"
-    :description="args.hero.description"
-  >
-    <template #actions>
-      <LinkButton v-for="button in args.CTA" v-bind="button" />
-    </template>
-    <template #main>
-      <ImageSwitcher>
-        <template #darkImage>
-          <img
-            fetchPriority="high"
-            width="auto"
-            height="655"
-            :alt="args.hero.alt"
-            :src="args.hero.imageDark"
-          />
-        </template>
-        <template #lightImage>
-          <img
-            fetchPriority="high"
-            width="auto"
-            height="655"
-            :alt="args.hero.alt"
-            :src="args.hero.imageLight"
-          />
-        </template>
-      </ImageSwitcher>
-    </template>
-  </HeroBlockBase>
+  <HeroThumbBottom v-bind="args" />
 </Container>`
 
 const Template = (args) => ({
-  components: { HeroBlockBase, LinkButton, ImageSwitcher, Container },
+  components: { HeroThumbBottom, Container },
   setup() {
     return { args }
   },

@@ -1,6 +1,4 @@
-import HeroBlockBase from '../../../templates/herobase'
-import LinkButton from '../../../templates/linkbutton'
-import ContentLogoBlock from '../../../templates/contentlogo'
+import HeroHome from '../../../templates/herohome'
 import Container from '../../../templates/container'
 import Rules from '../../rules'
 
@@ -17,10 +15,10 @@ ${Rules.hero.title}
 ${Rules.hero.description}
 ${Rules.hero.cta}
 ${Rules.hero.logos}
-        `,
-      },
-    },
-  },
+        `
+      }
+    }
+  }
 }
 
 const logos = Array(4).fill({
@@ -34,16 +32,15 @@ const logos = Array(4).fill({
 })
 
 const MOCK = {
-  hero: {
-    "title": "Simplify how you <span class='animate-pretty bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-500'>Build</span> and <span class='animate-pretty bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-300'>Secure</span> applications",
-    description:
-      'Experience a fully integrated edge computing platform, powered by the planet’s most reliable network.'
+  title:
+    "Simplify how you <span class='animate-pretty bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-500'>Build</span> and <span class='animate-pretty bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-300'>Secure</span> applications",
+  description:
+    'Experience a fully integrated edge computing platform, powered by the planet’s most reliable network.',
+  logos: {
+    title: 'Trusted by Developers and Leading Companies',
+    images: logos
   },
-  contentLogo: {
-    title: 'Trusted by Developers and Leading Companies'
-  },
-  logos,
-  CTA: [
+  buttons: [
     {
       label: 'Start Now',
       link: 'https://console.azion.com/signup/',
@@ -56,41 +53,21 @@ const MOCK = {
     }
   ],
   bannerNews: {
-    description: "Azion Console for Developers!",
+    description: 'Azion Console for Developers!',
     cta: {
-      label: "Access now.",
-      link: "https://console.azion.com/login"
+      label: 'Access now.',
+      link: 'https://console.azion.com/login'
     }
   }
 }
 
 const HeroDisplay = `
 <Container class="surface-ground">
-  <HeroBlockBase
-    isDisplay
-    :isCentralized="true"
-    :description="args.hero.description"
-    :bannerNews="args.bannerNews"
-  >
-    <template #title>
-      <h1
-        class="font-medium 2xl:text-7xl/[4.875rem] sm:text-6xl/[4.125rem] text-4xl text-balance"
-        v-html="args.hero.title"
-      />
-    </template>
-    <template #actions>
-      <LinkButton v-for="button in args.CTA" v-bind="button" />
-    </template>
-    <template #content>
-      <div class="flex flex-col gap-4 md:gap-8 items-center text-center">
-        <ContentLogoBlock size="small" :isCentralized="true" :title="args.contentLogo.title" :logos="args.logos" />
-      </div>
-    </template>
-  </HeroBlockBase>
+  <HeroHome v-bind="args" />
 </Container>`
 
 const Template = (args) => ({
-  components: { HeroBlockBase, LinkButton, ContentLogoBlock, Container },
+  components: { HeroHome, Container },
   setup() {
     return { args }
   },
@@ -101,5 +78,5 @@ export const Default = Template.bind({})
 Default.args = MOCK
 
 Default.parameters = {
-  docs: { source: { code: HeroDisplay } },
-};
+  docs: { source: { code: HeroDisplay } }
+}

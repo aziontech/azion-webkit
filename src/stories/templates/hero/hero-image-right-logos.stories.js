@@ -1,7 +1,4 @@
-import HeroBlockBase from '../../../templates/herobase'
-import LinkButton from '../../../templates/linkbutton'
-import ContentLogoBlock from '../../../templates/contentlogo'
-import ImageSwitcher from '../../../templates/themeawareimageswitcher'
+import HeroImageRightLogo from '../../../templates/heroimagerightlogos'
 import Container from '../../../templates/container'
 import Rules from '../../rules'
 
@@ -34,14 +31,17 @@ const logos = Array(3).fill({
 })
 
 const MOCK = {
-  hero: {
-    "title": "Find, test, and deploy edge-enabled software that runs anywhere.",
+  "title": "Find, test, and deploy edge-enabled software that runs anywhere.",
+  images: {
+    alt: "Insert ALt here",
+    dark: "/assets/dark/illustration-demo.svg",
+    light: "/assets/light/illustration-demo.svg"
   },
-  contentLogo: {
-    title: '100+ partner companies'
+  logos: {
+    title: '100+ partner companies',
+    images: logos
   },
-  logos,
-  CTA: [
+  buttons: [
     {
       label: 'Start Now',
       link: 'https://console.azion.com/signup/',
@@ -58,43 +58,12 @@ const MOCK = {
 const HeroDisplay = `
 
 <Container class="surface-ground">
-  <div class="min-h-[calc(100vh-56px)] flex justify-center items-center relative py-10 md:py-0">
-  <HeroBlockBase
-    align="center"
-    :title="args.hero.title"
-  >
-    <template #actions>
-      <div class="flex flex-col md:flex-row lg:justify-start justify-center gap-2 w-full">
-        <LinkButton v-for="button in args.CTA" v-bind="button" class="w-full md:w-fit" />
-      </div>
-    </template>
-    <template #content>
-      <div class="w-full flex items-center justify-center lg:items-start lg:justify-start">
-        <ContentLogoBlock
-          :title="args.contentLogo.title"
-          :logos="args.logos"
-        />
-      </div>
-    </template>
-    <template #main>
-      <div class="flex justify-center">
-        <ImageSwitcher>
-          <template #darkImage>
-            <img src="/assets/dark/illustration-demo.svg" />
-          </template>
-          <template #lightImage>
-            <img src="/assets/light/illustration-demo.svg" />
-          </template>
-        </ImageSwitcher>
-      </div>
-    </template>
-  </HeroBlockBase>
-  </div>
+  <HeroImageRightLogo v-bind="args" />
 </Container>
 `
 
 const Template = (args) => ({
-  components: { HeroBlockBase, LinkButton, ContentLogoBlock, ImageSwitcher, Container },
+  components: { HeroImageRightLogo, Container },
   setup() {
     return { args }
   },

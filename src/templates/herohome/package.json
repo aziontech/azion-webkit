@@ -1,0 +1,7 @@
+{
+  "main": "./herohome.js",
+  "types": "./HeroHome.d.ts",
+  "browser": {
+    "./sfc": "./HeroHome.vue"
+  }
+}
