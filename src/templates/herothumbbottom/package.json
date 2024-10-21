@@ -1,0 +1,7 @@
+{
+  "main": "./herothumbbottom.js",
+  "types": "./HeroThumbBottom.d.ts",
+  "browser": {
+    "./sfc": "./HeroThumbBottom.vue"
+  }
+}
