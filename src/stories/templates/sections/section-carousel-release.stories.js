@@ -1,6 +1,4 @@
-
-import ContentSection from '../../../templates/contentsection'
-import ReleaseCarousel from '../../../templates/releasecarousel'
+import SectionCarouselRelease from '../../../templates/sectioncarouselrelease'
 import Container from '../../../templates/container'
 import Rules from '../../rules'
 
@@ -23,18 +21,13 @@ ${Rules.section.cardsRelease}
 
 const config = (args) => {
   return {
-    components: { ContentSection, ReleaseCarousel, Container },
+    components: { SectionCarouselRelease, Container },
     setup() {
       return { args }
     },
     template: `
       <Container class="surface-ground">
-        <ContentSection :overline="args.overline" :title="args.title">
-          <template #principal>
-            <div class="relative">
-              <ReleaseCarousel :data="args.items" />
-            </div>
-          </template>
+        <SectionCarouselRelease v-bind="args" />
         </ContentSection>
       </Container>
     `
