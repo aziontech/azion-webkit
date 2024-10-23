@@ -8,22 +8,25 @@
 import { VNode } from 'vue';
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
 
-type BigNumbers = {
-  justify: "center" | "start"
-  items: Array<{
-    icon: string,
-    title: string,
-    description: string
-   }>
+interface Item {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+// Type for the data block
+interface DataBlock {
+  justify: "center" | "start";
+  items: Item[];
 }
 
 /**
  * Defines valid properties in SectionBigNumbers component.
  */
 export interface SectionBigNumbersProps {
-  data: BigNumbers;
   title: string;
   overline: string;
+  data: DataBlock;
 }
 
 /**
