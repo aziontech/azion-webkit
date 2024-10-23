@@ -1,0 +1,7 @@
+{
+  "main": "./sectionbulletsright.js",
+  "types": "./SectionBulletsRight.d.ts",
+  "browser": {
+    "./sfc": "./SectionBulletsRight.vue"
+  }
+}

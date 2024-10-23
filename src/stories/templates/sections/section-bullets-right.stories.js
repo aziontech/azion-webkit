@@ -1,7 +1,4 @@
-
-import ContentSection from '../../../templates/contentsection'
-import LinkButton from '../../../templates/linkbutton'
-import UnorderedList from '../../../templates/listunordered'
+import SectionBulletsRight from '../../../templates/sectionbulletsright'
 import Container from '../../../templates/container'
 import Rules from '../../rules'
 
@@ -26,20 +23,13 @@ ${Rules.section.list}
 
 const config = (args) => {
   return {
-    components: { ContentSection, UnorderedList, LinkButton, Container },
+    components: { SectionBulletsRight, Container },
     setup() {
       return { args }
     },
     template: `
       <Container class="surface-ground">
-        <ContentSection :title="args.title" :overline="args.overline" :description="args.description" titleTag="h2">
-          <template #actions>
-            <LinkButton v-for="({ link, label, outlined }) in args.buttons" :link="link" :label="label" :outlined="outlined" />
-          </template>
-          <template #main>
-            <UnorderedList :data="args.contentListBlock" />
-          </template>
-        </ContentSection>
+        <SectionBulletsRight v-bind="args" />
       </Container>
     `
   }
@@ -59,7 +49,7 @@ Default.args = {
     "link": "https://console.azion.com/signup",
     "outlined": "true"
   }],
-  "contentListBlock": [
+  "data": [
     {
       "icon": "pi pi-bolt",
       "title": "Agile",
