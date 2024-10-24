@@ -1,0 +1,7 @@
+{
+  "main": "./sectioninvestorslogos.js",
+  "types": "./SectionInvestorsLogos.d.ts",
+  "browser": {
+    "./sfc": "./SectionInvestorsLogos.vue"
+  }
+}
