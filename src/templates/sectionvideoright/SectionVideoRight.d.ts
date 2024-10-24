@@ -30,7 +30,7 @@ export interface SectionVideoRightProps {
         alt: string
       }
     },
-    cards: Array<{
+    cards?: Array<{
       title: string,
       description: string,
       cta: {

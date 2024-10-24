@@ -59,7 +59,7 @@
       </BaseModal>
     </template>
 
-    <template #principal>
+    <template #principal v-if="cards">
       <div class="grid m-0 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 w-full">
         <CardBaseClickable
           v-for="item in cards"
@@ -114,7 +114,7 @@
     },
     cards: {
       type: Array,
-      required: true,
+      required: false,
       validator: (value) => {
         return value.every(item =>
           ['title', 'description', 'cta'].every(key => key in item) &&
