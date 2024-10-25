@@ -1,0 +1,7 @@
+{
+  "main": "./azionlogoboxanimated.js",
+  "types": "./AzionLogoBoxAnimated.d.ts",
+  "browser": {
+    "./sfc": "./AzionLogoBoxAnimated.vue"
+  }
+}
