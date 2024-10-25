@@ -16,7 +16,7 @@
     </div>
     <div class="h-full flex items-center justify-center w-full">
       <ImageSwitcher>
-        <template #lightImage>
+        <template #lightImage v-if="imageLight">
           <img
             :src="`${imageLight}?ims=x60`"
             loading="lazy"  class="max-h-[60px]"
@@ -53,7 +53,7 @@ defineProps({
   },
   imageLight: {
     type: String,
-    required: true,
+    required: false,
   },
   imageDark: {
     type: String,
