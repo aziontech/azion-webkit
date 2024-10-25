@@ -8,22 +8,29 @@
 import { VNode } from 'vue';
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
 
-type BigNumbers = {
-  justify: "center" | "start"
-  items: Array<{
-    icon: string,
-    title: string,
-    description: string
-   }>
+interface Card {
+  overline?: string;
+  title: string;
+  description?: string;
+}
+
+// Type for the button object
+interface ButtonProps {
+  text?: string;
+  href?: string;
+  target?: string;
+  [key: string]: any; // To allow any additional properties
 }
 
 /**
  * Defines valid properties in SectionCompliances component.
  */
 export interface SectionCompliancesProps {
-  data: BigNumbers;
+  overline?: string;
   title: string;
-  overline: string;
+  description?: string;
+  button?: ButtonProps;
+  cards: Card[];
 }
 
 /**
