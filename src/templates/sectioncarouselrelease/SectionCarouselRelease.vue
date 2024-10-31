@@ -9,8 +9,6 @@
 </template>
 
 <script setup>
-  import { onBeforeMount, ref } from 'vue'
-
   import ContentSection from '../contentsection'
   import ReleaseCarousel from '../releasecarousel'
 

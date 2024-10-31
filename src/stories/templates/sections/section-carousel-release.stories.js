@@ -28,7 +28,6 @@ const config = (args) => {
     template: `
       <Container class="surface-ground">
         <SectionCarouselRelease v-bind="args" />
-        </ContentSection>
       </Container>
     `
   }
