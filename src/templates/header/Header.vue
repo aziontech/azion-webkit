@@ -7,7 +7,7 @@
       </div>
 
       <div class="flex gap-2">
-        <a v-for="(menu, index) in menuSecondary" :key="index" target="_blank" :href="menu.link" :title="menu.title"
+        <a v-for="(menu, index) in menuSecondary" :key="index" :target="menu.target" :href="menu.link" :title="menu.title"
           :class="[menu.destak ?
             'header-button-destak p-button p-button-secondary !text-[#000000] !bg-[#ffffff] whitespace-nowrap p-button-sm hidden lg:flex' :
             'p-button p-button-primary whitespace-nowrap p-button-text hover:surface-hover p-button-sm hidden lg:flex', { 'p-button-info' : menu.severity === 'info'}]">
