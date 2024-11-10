@@ -5,47 +5,37 @@ const outDir = './dist';
 
 
 function fileEndsValidator(f) {
-  return f === 'package.json' || f.endsWith('d.ts') || f.endsWith('vue') || f.endsWith('js')
+  return f === 'package.json' || f.endsWith('d.ts') || f.endsWith('vue') || f.endsWith('js') || f.endsWith('json')
 };
 
-function copyDependencies(inFolder, outFolder, subFolder) {
-  const folder = path.resolve(__dirname, inFolder);
+function copyDependencies(inFolder, outFolder) {
+  const srcFolder = path.resolve(__dirname, inFolder);
+  const destFolder = path.resolve(__dirname, outFolder);
 
-  fs.readdirSync(folder, { withFileTypes: true })
-    .filter((dir) => dir.isDirectory())
-    .forEach(({ name: folderName }) => {
-      const dirname = path.resolve(__dirname, inFolder + folderName);
-      console.log(`\nReading dir: ${dirname}`);
+  copyDependenciesRecursive(srcFolder, destFolder);
+}
 
-      fs.readdirSync(dirname).forEach((file) => {
-        if (fileEndsValidator(file)) {
-          const inputFilePath = path.resolve(__dirname, inFolder + folderName) + '/' + file;
-          const outputFilePath = outFolder + folderName + '/' + file;
+function copyDependenciesRecursive(srcDir, destDir) {
+  // Ensure the destination directory exists
+  if (!fs.existsSync(destDir)) {
+    fs.mkdirSync(destDir, { recursive: true });
+  }
 
-          fs.copySync(inputFilePath, outputFilePath);
-          console.log(`${inputFilePath} ⮕ ${outputFilePath}`);
-        }
-      });
+  fs.readdirSync(srcDir, { withFileTypes: true }).forEach((dirent) => {
+    const srcPath = path.join(srcDir, dirent.name);
+    const destPath = path.join(destDir, dirent.name);
 
-      if (subFolder) {
-        try {
-          let subfolder = path.resolve(__dirname, inFolder + folderName + subFolder);
-          console.log(`\nReading dir: ${subfolder}`);
-
-          fs.readdirSync(subfolder).forEach((subFile) => {
-            if (fileEndsValidator(subFile)) {
-              const inputFile = path.resolve(__dirname, inFolder + folderName + subFolder) + '/' + subFile;
-              const outputFile = outFolder + folderName + subFolder + '/' + subFile;
-
-              fs.copySync(inputFile, outputFile);
-              console.log(`${inputFile} ⮕ ${outputFile}`);
-            }
-          });
-        } catch(error) {
-          console.log(error);
-        }
+    if (dirent.isDirectory()) {
+      // Recursively copy contents of the directory
+      copyDependenciesRecursive(srcPath, destPath);
+    } else {
+      // Check if the file meets the criteria
+      if (fileEndsValidator(dirent.name)) {
+        fs.copySync(srcPath, destPath);
+        console.log(`${srcPath} ⮕ ${destPath}`);
       }
-    });
+    }
+  });
 }
 
 function addPackageJson() {
