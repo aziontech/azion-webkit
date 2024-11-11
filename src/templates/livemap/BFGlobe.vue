@@ -10,12 +10,12 @@ const globeDiv = ref(null);
 const defaultCamera = {
   lat: -20.71,
   lng: -60.603,
-  altitude: window.innerWidth < 600 ? 2.4 : 1.8
+  altitude: window.innerWidth < 600 ? 3 : 2.5
 };
 const transitionCamera = {
   lat: -20.71,
   lng: -60.603,
-  altitude: window.innerWidth < 600 ? 2.4 : 1.8
+  altitude: window.innerWidth < 600 ? 3 : 2.5
 };
 
 ///////////////////
