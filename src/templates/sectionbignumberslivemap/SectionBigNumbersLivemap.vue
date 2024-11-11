@@ -1,0 +1,58 @@
+<template>
+  <ContentSection
+    titleTag="h2"
+    :overline="overline"
+    :title="title"
+    position="left"
+    :isContentCentralized="data.justify === 'center' ? true : false"
+  >
+    <template v-if="button" #main>
+      <div class="w-full flex lg:justify-end lg:items-end">
+        <LinkButton
+          class="min-w-fit !px-0 !pl-0 !pr-0"
+          v-bind="button"
+          textLink
+          icon="pi pi-arrow-right"
+          iconPos="right"
+        />
+      </div>
+    </template>
+
+    <template #principal>
+      <BigNumbers v-bind="data" />
+
+      <div class="relative h-screen">
+        <Livemap :lang="lang" />
+      </div>
+    </template>
+
+  </ContentSection>
+</template>
+
+<script setup>
+  import ContentSection from '../contentsection'
+  import BigNumbers from '../bignumbers'
+  import Livemap from '../livemap'
+  import LinkButton from '../linkbutton'
+
+  defineProps({
+    data: {
+      type: Object,
+      required: true
+    },
+    title: {
+      type: String,
+      required: true
+    },
+    overline: {
+      type: String
+    },
+    lang: {
+      type: String,
+      default: 'pt-br'
+    },
+    button: {
+      type: Object
+    }
+  });
+</script>
