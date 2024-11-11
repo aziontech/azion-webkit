@@ -290,6 +290,13 @@ const toggleControl = () => {
   toggleControlBox.value = !toggleControlBox.value
 }
 
+const uiControlRenderByViewSize = () => {
+  windowSize.value = window.innerWidth
+
+  if(!getToggleControlBox() && window.innerWidth > 768) toggleControl()
+  if(getToggleControlBox() && window.innerWidth < 768) toggleControl()
+}
+
 
 ////////////////////
 // INITIAL EVENTS //
@@ -297,18 +304,10 @@ const toggleControl = () => {
 
 
 onMounted(() => {
-  windowSize.value = window.innerWidth
+  uiControlRenderByViewSize()
 
   window.addEventListener("resize", function() {
-    windowSize.value = window.innerWidth
-
-    if(getToggleControlBox() === false && window.innerWidth > 768) {
-      toggleControl()
-    }
-
-    if(getToggleControlBox() === true && window.innerWidth < 768) {
-      toggleControl()
-    }
+    uiControlRenderByViewSize()
   });
 });
 
