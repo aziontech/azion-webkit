@@ -25,7 +25,19 @@
     lang: {
       type: String,
       default: 'pt-br'
-    }
+    },
+    enableZoom: {
+      type: Boolean,
+      default: false
+    },
+    autoRotate: {
+      type: Boolean,
+      default: true
+    },
+    autoRotateSpeed: {
+      type: Number,
+      default: 0.2
+    },
   })
 
   let epochtime = ref(0);

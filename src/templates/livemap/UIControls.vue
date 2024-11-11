@@ -302,7 +302,13 @@ onMounted(() => {
   window.addEventListener("resize", function() {
     windowSize.value = window.innerWidth
 
-    if(getToggleControlBox() === false && window.innerWidth > 768) toggleControl()
+    if(getToggleControlBox() === false && window.innerWidth > 768) {
+      toggleControl()
+    }
+
+    if(getToggleControlBox() === true && window.innerWidth < 768) {
+      toggleControl()
+    }
   });
 });
 

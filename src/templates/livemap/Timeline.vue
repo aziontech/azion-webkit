@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full bottom-[228px] flex justify-end mb-8">
+  <div class="relative w-full bottom-[288px] flex justify-end mb-8">
     <Button
       severity="secondary"
       class="text-xs w-fit focus:shadow-none btn-filter btn-filter-all"
@@ -10,7 +10,7 @@
 
   <div
     class="timeline-content"
-    :class="'absolute z-10 left-0 -bottom-10 w-full !h-[172px] overflow-x-scroll overflow-y-hidden'"
+    :class="'absolute z-10 left-0 !-bottom-[60px] w-full !h-[172px] overflow-x-scroll overflow-y-hidden'"
   >
     <div class="relative min-w-[1000px]" ref="divTimelineWrap">
       <div

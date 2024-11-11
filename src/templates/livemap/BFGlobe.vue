@@ -1,8 +1,31 @@
+<template>
+  <div id="globe" ref="globeDiv"></div>
+</template>
+
 <script setup>
 import Globe from "globe.gl";
 import { ref, onMounted, onUpdated } from "vue";
 import * as d3 from "d3";
 import rob_typeface from "./font/Roboto_Medium_Regular.json";
+
+const props = defineProps({
+  epoch: Number,
+  globeView: String,
+  platform: String,
+
+  enableZoom: {
+    type: Boolean,
+    default: false
+  },
+  autoRotate: {
+    type: Boolean,
+    default: true
+  },
+  autoRotateSpeed: {
+    type: Number,
+    default: 0.2
+  },
+});
 
 let myGlobe = Globe();
 let currentGlobe = "sales";
@@ -10,23 +33,13 @@ const globeDiv = ref(null);
 const defaultCamera = {
   lat: -20.71,
   lng: -60.603,
-  altitude: window.innerWidth < 600 ? 3 : 2.5
+  altitude: window.innerWidth < 600 ? 3 : 1.65
 };
 const transitionCamera = {
   lat: -20.71,
   lng: -60.603,
-  altitude: window.innerWidth < 600 ? 3 : 2.5
+  altitude: window.innerWidth < 600 ? 3 : 1.65
 };
-
-///////////////////
-// HANDLE PROPS //
-//////////////////
-
-const props = defineProps({
-  epoch: Number,
-  globeView: String,
-  platform: String
-});
 
 ////////////
 // EVENTS //
@@ -75,8 +88,9 @@ async function setupGlobe() {
     .enablePointerInteraction(false)
     .pointOfView(defaultCamera, 500);
 
-  myGlobe.controls().autoRotate = true;
-  myGlobe.controls().autoRotateSpeed = 0.02;
+  myGlobe.controls().enableZoom = props.enableZoom;
+  myGlobe.controls().autoRotate = props.autoRotate;
+  myGlobe.controls().autoRotateSpeed = props.autoRotateSpeed;
 
   redrawGlobe();
 
@@ -253,8 +267,3 @@ let loadGlobe = {
   }
 };
 </script>
-
-
-<template>
-  <div id="globe" ref="globeDiv"></div>
-</template>

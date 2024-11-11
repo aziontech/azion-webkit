@@ -13,6 +13,9 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
  */
 export interface LivemapProps {
   lang: string;
+  enableZoom: string;
+  autoRotate: boolean;
+  autoRotateSpeed: boolean;
 }
 
 /**

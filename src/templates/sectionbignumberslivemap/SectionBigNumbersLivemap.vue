@@ -19,10 +19,12 @@
     </template>
 
     <template #principal>
-      <BigNumbers v-bind="data" />
+      <div class="flex flex-col gap-10">
+        <BigNumbers v-bind="data" />
 
-      <div class="relative h-screen">
-        <Livemap :lang="lang" />
+        <div class="relative w-full !h-[calc(100vh-56px)]">
+          <Livemap :lang="lang" />
+        </div>
       </div>
     </template>
 
