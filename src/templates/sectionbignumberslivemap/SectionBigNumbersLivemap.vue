@@ -20,7 +20,7 @@
 
     <template #principal>
       <div class="flex flex-col gap-10">
-        <BigNumbers v-bind="data" />
+        <BigNumbers v-bind="data" class=" w-full" />
 
         <div class="relative w-full !h-[calc(100vh-56px)]">
           <Livemap :lang="lang" />
