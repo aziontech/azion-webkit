@@ -202,7 +202,7 @@
         <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight">
           <div class="flex flex-col items-end">
             <Tile severity="primary">
-              <i class="ai ai-secure-pilar text-xs"></i>
+              <i class="ai ai-secure-pillar text-xs"></i>
             </Tile>
           </div>
 
