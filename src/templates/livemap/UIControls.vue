@@ -163,7 +163,7 @@
             </Tile>
           </div>
 
-          {{ noLabelunitHelper(activeGlobe, status) }}
+          {{ noLabelunitHelper(activeGlobe, status).replace('lhões', '') }}
         </strong>
         <!-- <BigNumbers :items="[{title: }]" /> -->
         <p class="text-sm text-color-secondary mt-3">
@@ -206,7 +206,7 @@
             </Tile>
           </div>
 
-          {{ noLabelunitHelper(activeGlobe, status) }}
+          {{ noLabelunitHelper(activeGlobe, status).replace('lhões', '') }}
         </strong>
         <!-- <BigNumbers :items="[{title: noLabelunitHelper(activeGlobe, status)}]" /> -->
         <p class="text-sm text-color-secondary mt-3">
