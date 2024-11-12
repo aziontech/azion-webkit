@@ -157,6 +157,12 @@
         v-if="status"
       >
         <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight">
+          <div class="flex flex-col items-end">
+            <Tile severity="primary">
+              <i class="ai ai-marketplace text-xs"></i>
+            </Tile>
+          </div>
+
           {{ noLabelunitHelper(activeGlobe, status) }}
         </strong>
         <!-- <BigNumbers :items="[{title: }]" /> -->
@@ -171,6 +177,12 @@
         v-if="status"
       >
         <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight">
+          <div class="flex flex-col items-end">
+            <Tile severity="primary">
+              <i class="ai ai-network-lists text-xs"></i>
+            </Tile>
+          </div>
+
           {{ noLabelunitHelper(activeGlobe, status) }}
         </strong>
         <!-- <BigNumbers :items="[{title: noLabelunitHelper(activeGlobe, status)}]" /> -->
@@ -188,6 +200,12 @@
         v-if="status"
       >
         <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight">
+          <div class="flex flex-col items-end">
+            <Tile severity="primary">
+              <i class="ai ai-secure-pilar text-xs"></i>
+            </Tile>
+          </div>
+
           {{ noLabelunitHelper(activeGlobe, status) }}
         </strong>
         <!-- <BigNumbers :items="[{title: noLabelunitHelper(activeGlobe, status)}]" /> -->
@@ -198,6 +216,11 @@
 
       <div v-show="activeGlobe === 'edges'">
         <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight">
+          <div class="flex flex-col items-end">
+            <Tile severity="primary">
+              <i class="pi pi-map-marker text-xs"></i>
+            </Tile>
+          </div>
           +100
         </strong>
         <!-- <BigNumbers :items="[{title: '+100'}]" /> -->
@@ -229,6 +252,7 @@ import { dateHelper, noLabelunitHelper, unitHelper } from "./helper/formatter"
 
 import Button from "primevue/button"
 import Overline from "../overline"
+import Tile from "../tile"
 // import BigNumbers from "../bignumbers"
 
 
