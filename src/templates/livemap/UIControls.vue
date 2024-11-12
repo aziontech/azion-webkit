@@ -157,7 +157,7 @@
         v-if="status"
       >
         <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight">
-          <div class="flex flex-col items-end">
+          <div class="flex flex-col items-end gap-3 md:gap-5">
             <Tile severity="primary">
               <i class="ai ai-marketplace text-xs"></i>
             </Tile>
@@ -177,7 +177,7 @@
         v-if="status"
       >
         <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight">
-          <div class="flex flex-col items-end">
+          <div class="flex flex-col items-end gap-3 md:gap-5">
             <Tile severity="primary">
               <i class="ai ai-network-lists text-xs"></i>
             </Tile>
@@ -200,7 +200,7 @@
         v-if="status"
       >
         <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight">
-          <div class="flex flex-col items-end">
+          <div class="flex flex-col items-end gap-3 md:gap-5">
             <Tile severity="primary">
               <i class="ai ai-secure-pillar text-xs"></i>
             </Tile>
@@ -216,7 +216,7 @@
 
       <div v-show="activeGlobe === 'edges'">
         <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight">
-          <div class="flex flex-col items-end">
+          <div class="flex flex-col items-end gap-3 md:gap-5">
             <Tile severity="primary">
               <i class="pi pi-map-marker text-xs"></i>
             </Tile>
