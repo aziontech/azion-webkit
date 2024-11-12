@@ -33,12 +33,12 @@ const globeDiv = ref(null);
 const defaultCamera = {
   lat: -20.71,
   lng: -60.603,
-  altitude: window.innerWidth < 600 ? 3 : 1.65
+  altitude: window.innerWidth < 600 ? 3.4 : 1.65
 };
 const transitionCamera = {
   lat: -20.71,
   lng: -60.603,
-  altitude: window.innerWidth < 600 ? 3 : 1.65
+  altitude: window.innerWidth < 600 ? 3.4 : 1.65
 };
 
 ////////////
@@ -168,9 +168,11 @@ let loadGlobe = {
       if (!info) return;
       let data = [];
       let platform = props.platform;
+
       info[1].forEach((item) => {
         let blockNumber = (platform === 'desktop' || platform === 'mobile') ? (platform === 'mobile' ? item[6] : item[7]) : (item[6] + item[7]);
         let trafficNumber = (platform === 'desktop' || platform === 'mobile') ? (platform === 'mobile' ? item[4] : item[5]) : (item[4] + item[5]);
+
         if (!blockNumber && trafficNumber > 600) {
           data.push({
             lat: item[0],
@@ -180,6 +182,7 @@ let loadGlobe = {
           });
         }
       });
+
       myGlobe
         .arcsData(data)
         .arcStartLat((d) => +d.lat)
