@@ -156,14 +156,16 @@
         v-show="activeGlobe === 'sales'"
         v-if="status"
       >
-        <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight">
-          <div class="flex flex-col items-end gap-3 md:gap-5">
+        <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight flex flex-col gap-3 md:gap-5">
+          <div class="flex flex-col items-end">
             <Tile severity="primary">
               <i class="ai ai-marketplace text-xs"></i>
             </Tile>
           </div>
 
-          {{ noLabelunitHelper(activeGlobe, status).replace('lhões', '') }}
+          <span class="block">
+            {{ noLabelunitHelper(activeGlobe, status).replace('lhões', '') }}
+          </span>
         </strong>
         <!-- <BigNumbers :items="[{title: }]" /> -->
         <p class="text-sm text-color-secondary mt-3">
@@ -176,21 +178,25 @@
         v-show="activeGlobe === 'traffic'"
         v-if="status"
       >
-        <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight">
-          <div class="flex flex-col items-end gap-3 md:gap-5">
+        <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight flex flex-col gap-3 md:gap-5">
+          <div class="flex flex-col items-end">
             <Tile severity="primary">
               <i class="ai ai-network-lists text-xs"></i>
             </Tile>
           </div>
 
-          {{ noLabelunitHelper(activeGlobe, status) }}
+          <span class="block">
+            {{ noLabelunitHelper(activeGlobe, status) }}
+          </span>
         </strong>
         <!-- <BigNumbers :items="[{title: noLabelunitHelper(activeGlobe, status)}]" /> -->
         <p class="text-sm text-color-secondary mt-3">
           <span class="block">
             Dados trafegados
           </span>
-          {{ unitHelper('traffic-offload', offload) }}
+          <span class="block">
+            {{ unitHelper('traffic-offload', offload) }}
+          </span>
         </p>
       </div>
 
@@ -199,14 +205,16 @@
         v-show="activeGlobe === 'attacks'"
         v-if="status"
       >
-        <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight">
-          <div class="flex flex-col items-end gap-3 md:gap-5">
+        <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight flex flex-col gap-3 md:gap-5">
+          <div class="flex flex-col items-end">
             <Tile severity="primary">
               <i class="ai ai-secure-pillar text-xs"></i>
             </Tile>
           </div>
 
-          {{ noLabelunitHelper(activeGlobe, status).replace('lhões', '') }}
+          <span class="block">
+            {{ noLabelunitHelper(activeGlobe, status).replace('lhões', '') }}
+          </span>
         </strong>
         <!-- <BigNumbers :items="[{title: noLabelunitHelper(activeGlobe, status)}]" /> -->
         <p class="text-sm text-color-secondary mt-3">
@@ -215,13 +223,15 @@
       </div>
 
       <div v-show="activeGlobe === 'edges'">
-        <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight">
-          <div class="flex flex-col items-end gap-3 md:gap-5">
+        <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight flex flex-col gap-3 md:gap-5">
+          <div class="flex flex-col items-end">
             <Tile severity="primary">
               <i class="pi pi-map-marker text-xs"></i>
             </Tile>
           </div>
-          +100
+          <span class="block">
+            +100
+          </span>
         </strong>
         <!-- <BigNumbers :items="[{title: '+100'}]" /> -->
         <p class="text-sm text-color-secondary mt-3x">
