@@ -134,14 +134,13 @@ const handlePOST = async (values) => {
 
   delete transformedValues["file"];
 
+  formData.append('data', JSON.stringify(transformedValues))
+
   const url = `https://www.azion.com/api/careers/inhire/post?id=${props.jobId}`
 
   const request = {
     method: 'POST',
-    body: formData,
-    headers: {
-      "X-Extra-Data": JSON.stringify(transformedValues)
-    }
+    body: formData
   };
 
   return fetch(url, request).then(function (response) {
