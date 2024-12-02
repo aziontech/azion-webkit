@@ -134,7 +134,7 @@ const handlePOST = async (values) => {
 
   delete transformedValues["file"];
 
-  const url = `https://www.azion.com/api/careers/post/inhire?id=${props.jobId}`
+  const url = `https://www.azion.com/api/careers/inhire/post?id=${props.jobId}`
 
   const request = {
     method: 'POST',
