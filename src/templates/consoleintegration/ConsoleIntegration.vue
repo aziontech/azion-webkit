@@ -36,6 +36,7 @@
                     alt=""
                     width="12px"
                     height="12px"
+                    loading="lazy"
                   />
                 </figure>
                 <div class="item-skeleton w-[33%] h-[12px]"></div>
