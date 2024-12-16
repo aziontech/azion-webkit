@@ -138,7 +138,9 @@
               id="salary"
               class="w-full"
               v-bind="targetSalaryAttrs"
-              mode="currency" currency="BRL" locale="pt-BR"
+              mode="currency"
+              currency="BRL"
+              locale="pt-BR"
               :class="{ 'p-invalid': errors.targetSalary }"
             />
             <small
@@ -147,6 +149,74 @@
               v-if="errors.targetSalary && meta.touched"
             >
               {{ t.errors['targetSalaryRequiredError'] }}
+            </small>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex flex-column w-full gap-2 max-w-xl">
+              <label
+                class="text-sm"
+                for="city"
+                >{{ fields.city }}</label
+              >
+              <InputText
+                type="text"
+                v-model="city"
+                id="city"
+                class="w-full"
+                v-bind="cityAttrs"
+                :class="{ 'p-invalid': errors.city }"
+              />
+              <small
+                id="city-help"
+                class="p-error"
+                v-if="errors.city && meta.touched"
+              >
+                {{ t.errors['cityRequiredError'] }}
+              </small>
+            </div>
+            <div class="flex flex-column gap-2 w-full max-w-xl">
+              <label
+                class="text-sm"
+                for="state"
+                >{{ fields.state }}</label
+              >
+              <InputText
+                type="text"
+                v-model="state"
+                id="state"
+                class="w-full"
+                v-bind="stateAttrs"
+                :class="{ 'p-invalid': errors.state }"
+              />
+              <small
+                id="state-help"
+                class="p-error"
+                v-if="errors.state && meta.touched"
+              >
+                {{ t.errors['stateRequiredError'] }}
+              </small>
+            </div>
+          </div>
+          <div class="flex flex-column gap-2 max-w-xl">
+            <label
+              class="text-sm"
+              for="country"
+              >{{ fields.country }}</label
+            >
+            <InputText
+              type="text"
+              v-model="country"
+              id="country"
+              class="w-full"
+              v-bind="countryAttrs"
+              :class="{ 'p-invalid': errors.country }"
+            />
+            <small
+              id="coutry-help"
+              class="p-error"
+              v-if="errors.country && meta.touched"
+            >
+              {{ t.errors['countryRequiredError'] }}
             </small>
           </div>
         </div>
@@ -189,7 +259,7 @@
 
 <script setup>
   import InputText from 'primevue/inputtext'
-  import InputNumber from 'primevue/inputnumber';
+  import InputNumber from 'primevue/inputnumber'
   import Button from 'primevue/button'
   import InlineMessage from 'primevue/inlinemessage'
   import FileUpload from 'primevue/fileupload'
@@ -207,6 +277,16 @@
     jobId: {
       type: String,
       required: true
+    },
+    referrerId: {
+      type: String,
+      required: false,
+      default: null
+    },
+    isLinkedinRefferer: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   })
 
@@ -220,18 +300,23 @@
       phone: yup.string().required('phoneRequiredError'),
       targetSalary: yup.number().required('targetSalaryRequiredError'),
       linkedinUsername: yup.string().required('linkedinRequiredError'),
-      file: yup.boolean().required('resumeRequiredError')
+      file: yup.boolean().required('resumeRequiredError'),
+      state: yup.string().required('stateRequiredError'),
+      city: yup.string().required('cityRequiredError'),
+      country: yup.string().required('countryRequiredError')
     })
   )
 
-  const { defineField, handleSubmit, meta, errors, setFieldValue, resetForm } =
-    useForm({
-      validationSchema: schema
-    })
+  const { defineField, handleSubmit, meta, errors, setFieldValue, resetForm } = useForm({
+    validationSchema: schema
+  })
 
   const [name, nameAttrs] = defineField('name')
   const [email, emailAttrs] = defineField('email')
   const [phone, phoneAttrs] = defineField('phone')
+  const [city, cityAttrs] = defineField('city')
+  const [state, stateAttrs] = defineField('state')
+  const [country, countryAttrs] = defineField('country')
   const [linkedinUsername, linkedinUsernameAttrs] = defineField('linkedinUsername')
   const [targetSalary, targetSalaryAttrs] = defineField('targetSalary')
 
@@ -255,8 +340,11 @@
 
   const handlePOST = async (values) => {
     isLoading.value = true
+
+    const location = `${values.city}, ${values.state}, ${values.country}`
     const transformedValues = {
       ...values,
+      location,
       fileName: fileName.value,
       targetSalary: {
         currency: 'BRL',
@@ -266,6 +354,12 @@
     }
 
     delete transformedValues['file']
+    delete transformedValues['city']
+    delete transformedValues['state']
+    delete transformedValues['country']
+
+    if (props.referrerId) transformedValues['referralCode'] = props.referrerId
+    if (props.isLinkedinRefferer) transformedValues['source'] = 'linkedin'
 
     formData.append('data', JSON.stringify(transformedValues))
 
@@ -292,10 +386,9 @@
           return data
         })
       })
-      .catch(function (error) {
+      .catch(() => {
         isLoading.value = false
         responseStatus.value = 'error'
-        throw new Error(error)
       })
   }
 </script>
