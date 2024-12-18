@@ -1,0 +1,7 @@
+{
+  "main": "./netinfo.js",
+  "types": "./Netinfo.d.ts",
+  "browser": {
+    "./sfc": "./Netinfo.vue"
+  }
+}
