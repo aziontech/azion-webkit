@@ -1,2 +1,2 @@
-import Netinfo from './Netinfo';
+import Netinfo from './Netinfo.vue';
 export default Netinfo;
