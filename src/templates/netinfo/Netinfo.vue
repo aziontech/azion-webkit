@@ -42,27 +42,27 @@
       <ul v-else class="block rounded border surface-border">
         <li class="flex flex-row gap-2 border-b surface-border p-2">
           <p class="flex flex-row gap-2">
-            <Skeleton width="4rem" height="26px" />: <Skeleton width="16rem" height="26px" />
+            <Skeleton width="4rem" height="25px" />: <Skeleton width="16rem" height="25px" />
           </p>
         </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
           <p class="flex flex-row gap-2">
-            <Skeleton width="5rem" height="26px" />: <Skeleton width="12rem" height="26px" />
+            <Skeleton width="5rem" height="25px" />: <Skeleton width="12rem" height="25px" />
           </p>
         </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
           <p class="flex flex-row gap-2">
-            <Skeleton width="6rem" height="26px" />: <Skeleton width="12rem" height="26px" />
+            <Skeleton width="6rem" height="25px" />: <Skeleton width="12rem" height="25px" />
           </p>
         </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
           <p class="flex flex-row gap-2">
-            <Skeleton width="5rem" height="26px" />: <Skeleton width="12rem" height="26px" />
+            <Skeleton width="5rem" height="25px" />: <Skeleton width="12rem" height="25px" />
           </p>
         </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
           <p class="flex flex-row gap-2">
-            <Skeleton width="5rem" height="26px" />: <Skeleton width="20rem" height="26px" />
+            <Skeleton width="5rem" height="25px" />: <Skeleton width="20rem" height="25px" />
           </p>
         </li>
       </ul>
