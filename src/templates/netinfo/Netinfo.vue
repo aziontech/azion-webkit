@@ -2,17 +2,37 @@
   <div class="flex flex-col gap-3 w-full">
     <div class="flex justify-end">
       <Button
+        outlined
         label=""
         size="small"
-        :icon="icon"
         severity="secondary"
-        outlined
+        :disabled="!data"
+        :icon="icon"
         @click="copy"
       />
     </div>
 
     <div>
-      <ul v-if="data" v-show="data" class="block rounded border surface-border">
+      <Message
+        v-if="errormsg"
+        severity="error"
+      >
+        <div class="flex flex-row items-center">
+          <span>{{ errormsg }}</span>
+          <Button
+            link
+            @click="retryBuildPage"
+            class="text-sm"
+          >
+            Retry
+          </Button>
+        </div>
+      </Message>
+      <ul
+        v-else-if="data"
+        v-show="data"
+        class="block rounded border surface-border"
+      >
         <li class="flex flex-row gap-2 border-b surface-border p-2">
           <p>
             <strong class="text-nowrap">UUID:</strong> {{ data.uuid }}
@@ -74,25 +94,43 @@
   import { onMounted, ref } from 'vue'
   import Button from 'primevue/button'
   import Skeleton from 'primevue/skeleton'
+  import Message from 'primevue/message'
 
   const service = 'https://netinfo.azion.com/json'
   const data = ref(null)
-  const error = ref(null)
+  const errormsg = ref(null)
   const icon = ref('pi pi-copy')
 
   onMounted(() => {
+    buildpage()
+  })
+
+  const buildpage = () => {
     getData(service)
       .then(json => {
-        if(json.msg) {
-          error.value = json.msg
+        if(json.message) {
+          setMessageError(json.message === 'Failed to fetch' ? 'Network error.' : json)
           return
         }
 
-        console.log(json)
         data.value = parseData(json)
-        console.log(data.value)
+      }).catch(error => {
+        setMessageError(error.message === 'Failed to fetch' ? 'Network error.' : error)
       })
-  })
+  }
+
+  const retryBuildPage = () => {
+    removeMessageError()
+    buildpage()
+  }
+
+  const setMessageError = (msg) => {
+    errormsg.value = msg
+  }
+
+  const removeMessageError = () => {
+    errormsg.value = null
+  }
 
   const copy = () => {
     navigator.clipboard.writeText(JSON.stringify(data.value))
@@ -109,22 +147,24 @@
         if (!response.ok) {
           const errorData = {
             status: response.status,
-            msg: '[!] Fetch ERRROR to API communication'
+            message: '[!] Fetch ERRROR to API communication.'
           }
 
           console.error(errorData)
           throw new Error(errorData)
         }
 
+        return response
+      })
+      .then(response => {
         return response.json()
       })
       .then(json => {
         return json
       })
       .catch(error => {
-        const errorData = { msg: error.message || error }
-        console.error(errorData)
-        return { msg: errorData }
+        console.error(error)
+        return error
       })
   }
 
