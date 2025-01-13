@@ -17,41 +17,65 @@
 
         <ul class="border-icons flex flex-row gap-1 md:gap-2 lg:gap-3 overflow-x-auto py-2">
           <li>
-            <div class="a block relative rounded w-14 h-14">
+            <a
+              class="block relative rounded w-14 h-14"
+              href="https://www.azion.com/en/documentation/products/edge-application/edge-functions/runtime-api/ai-integration/"
+              title="Open AI"
+              aria-label="Open AI ChatGPT Integration"
+              target="_blank"
+            >
               <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px]">
                 <i class="w-[40px] h-[40px]">
                   <IconOpenIa />
                 </i>
               </span>
-            </div>
+            </a>
           </li>
           <li>
-            <div class="a block relative rounded w-14 h-14">
+             <a
+              class="block relative rounded w-14 h-14"
+              href="https://www.azion.com/en/documentation/products/guides/astro-boilerplate/"
+              title="Astro Build"
+              aria-label="Astro Build Integration"
+              target="_blank"
+            >
               <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px]">
                 <i class="w-[40px] h-[40px]">
                   <IconAstroDark class="hide-on-light" />
                   <IconAstroLight class="hide-on-dark" />
                 </i>
               </span>
-            </div>
+            </a>
           </li>
           <li>
-            <div class="a block relative rounded w-14 h-14">
+             <a
+              class="block relative rounded w-14 h-14"
+              href="https://www.azion.com/en/documentation/products/guides/angular-boilerplate/"
+              title="AngularJS"
+              aria-label="AngularJS Integration"
+              target="_blank"
+            >
               <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px]">
                 <i class="w-[40px] h-[40px]">
                   <IconAngular />
                 </i>
               </span>
-            </div>
+            </a>
           </li>
           <li>
-            <div class="a block relative rounded w-14 h-14">
+            <a
+              class="block relative rounded w-14 h-14"
+              href="https://www.azion.com/en/documentation/products/guides/vue-boilerplate/"
+              title="VueJS"
+              target="_blank"
+              aria-label="VueJS Integration"
+            >
               <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px]">
                 <i class="w-[40px] h-[40px]">
                   <IconVue />
                 </i>
               </span>
-            </div>
+            </a>
           </li>
         </ul>
 
@@ -97,7 +121,7 @@
             li:nth-child(5) { left: -4rem; }
           }
 
-          .a {
+          a {
             background-color: #F3652B;
             background: linear-gradient(90deg, #F3652B 0%, var(--surface-ground) 100%);
           }
@@ -132,7 +156,7 @@
           li:nth-child(5) { left: -4rem; }
         }
 
-        .a {
+        a {
           background-color: #F3652B;
           background: linear-gradient(90deg, #F3652B 0%, var(--surface-ground) 100%);
         }
@@ -143,7 +167,7 @@
   .azion.azion-light {
     .border-icons {
       li {
-        .a {
+        a {
           span {
             background-color: var(--surface-50);
           }
@@ -155,7 +179,7 @@
   .azion.azion-dark {
     .border-icons {
       li {
-        .a {
+        a {
           span {
             background-color: var(--surface-ground);
           }
@@ -172,7 +196,7 @@
       left: 0;
       transition: left 800ms ease-in-out !important;
 
-      .a {
+      a {
         background-color: var(--surface-border);
         position: relative;
         top: 0;
