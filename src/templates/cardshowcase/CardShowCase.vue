@@ -17,65 +17,41 @@
 
         <ul class="border-icons flex flex-row gap-1 md:gap-2 lg:gap-3 overflow-x-auto py-2">
           <li>
-            <a
-              class="block relative rounded w-14 h-14"
-              href="https://openai.com/"
-              title="Open IA"
-              aria-label="Open IA Website"
-              target="_blank"
-            >
+            <div class="a block relative rounded w-14 h-14">
               <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px]">
                 <i class="w-[40px] h-[40px]">
                   <IconOpenIa />
                 </i>
               </span>
-            </a>
+            </div>
           </li>
           <li>
-            <a
-              class="block relative rounded w-14 h-14"
-              href="https://www.astro.build"
-              title="Astro Build"
-              aria-label="Astro Build Website"
-              target="_blank"
-            >
+            <div class="a block relative rounded w-14 h-14">
               <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px]">
                 <i class="w-[40px] h-[40px]">
                   <IconAstroDark class="hide-on-light" />
                   <IconAstroLight class="hide-on-dark" />
                 </i>
               </span>
-            </a>
+            </div>
           </li>
           <li>
-            <a
-              class="block relative rounded w-14 h-14"
-              href="https://angular.dev/"
-              title="AngularJS"
-              aria-label="AngularJS Website"
-              target="_blank"
-            >
+            <div class="a block relative rounded w-14 h-14">
               <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px]">
                 <i class="w-[40px] h-[40px]">
                   <IconAngular />
                 </i>
               </span>
-            </a>
+            </div>
           </li>
           <li>
-            <a
-              class="block relative rounded w-14 h-14"
-              href="https://vuejs.org/"
-              title="VueJS"
-              target="_blank"
-              aria-label="VueJS Website"
-            >
+            <div class="a block relative rounded w-14 h-14">
               <span class="flex items-center justify-center absolute rounded w-[54px] h-[54px] left-[1px] top-[1px]">
                 <i class="w-[40px] h-[40px]">
                   <IconVue />
                 </i>
               </span>
-            </a>
+            </div>
           </li>
         </ul>
 
@@ -121,7 +97,7 @@
             li:nth-child(5) { left: -4rem; }
           }
 
-          a {
+          .a {
             background-color: #F3652B;
             background: linear-gradient(90deg, #F3652B 0%, var(--surface-ground) 100%);
           }
@@ -156,7 +132,7 @@
           li:nth-child(5) { left: -4rem; }
         }
 
-        a {
+        .a {
           background-color: #F3652B;
           background: linear-gradient(90deg, #F3652B 0%, var(--surface-ground) 100%);
         }
@@ -167,7 +143,7 @@
   .azion.azion-light {
     .border-icons {
       li {
-        a {
+        .a {
           span {
             background-color: var(--surface-50);
           }
@@ -179,7 +155,7 @@
   .azion.azion-dark {
     .border-icons {
       li {
-        a {
+        .a {
           span {
             background-color: var(--surface-ground);
           }
@@ -196,7 +172,7 @@
       left: 0;
       transition: left 800ms ease-in-out !important;
 
-      a {
+      .a {
         background-color: var(--surface-border);
         position: relative;
         top: 0;
