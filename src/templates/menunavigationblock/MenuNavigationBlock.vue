@@ -1,6 +1,6 @@
 <template>
   <!-- Desk -->
-  <div class="!min-h-[56px]" :class="[{'px-container' : isContainer }]">
+  <div class="!min-h-[56px] hidden lg:block" :class="[{'px-container' : isContainer }]">
     <Menubar
       class="w-full border-none hidden lg:flex gap-5"
       :model="mappedData"
@@ -44,42 +44,44 @@
   </div>
 
   <!-- Mobile -->
-  <PanelMenu
-    class="block lg:hidden"
-    :model="mobile"
-    :pt="{
-      root: {
-        class: 'w-full',
-      },
-      headerContent: {
-        class: 'w-full border-none py-1 flex items-center min-h-8 text-sm',
-      },
-      menuContent: {
-        class: 'border-none text-sm',
-      }
-    }"
-  >
-    <template #item="{ item }">
-      <template v-if="item.url">
-        <a
-          class="flex align-items-center cursor-pointer text-color px-3 py-2 w-full"
-          :href="item.url" target="_self"
-        >
-          <span class="ml-2">
-            {{ item.label }}
-          </span>
-        </a>
+  <div class="block lg:hidden !min-h-[44px]">
+    <PanelMenu
+      class="block lg:hidden"
+      :model="mobile"
+      :pt="{
+        root: {
+          class: 'w-full',
+        },
+        headerContent: {
+          class: 'w-full border-none py-1 flex items-center min-h-8 text-sm',
+        },
+        menuContent: {
+          class: 'border-none text-sm',
+        }
+      }"
+    >
+      <template #item="{ item }">
+        <template v-if="item.url">
+          <a
+            class="flex align-items-center cursor-pointer text-color px-3 py-2 w-full"
+            :href="item.url" target="_self"
+          >
+            <span class="ml-2">
+              {{ item.label }}
+            </span>
+          </a>
+        </template>
+        <template v-else>
+          <a class="flex align-items-center cursor-pointer text-color px-3 py-2 w-full" target="_self">
+            <span class="ml-2">
+              {{ item.label }}
+            </span>
+            <span v-if="item.items" class="pi pi-angle-down text-primary ml-auto"></span>
+          </a>
+        </template>
       </template>
-      <template v-else>
-        <a class="flex align-items-center cursor-pointer text-color px-3 py-2 w-full" target="_self">
-          <span class="ml-2">
-            {{ item.label }}
-          </span>
-          <span v-if="item.items" class="pi pi-angle-down text-primary ml-auto"></span>
-        </a>
-      </template>
-    </template>
-  </PanelMenu>
+    </PanelMenu>
+  </div>
 </template>
 
 <script setup>
