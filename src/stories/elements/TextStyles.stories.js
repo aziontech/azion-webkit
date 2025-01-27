@@ -6,7 +6,7 @@ export default {
   export const Default = {
     render: () => ({
         template: `
-            <div class="flex flex-col gap-12 max-w-lg">
+            <div class="flex flex-col gap-12 max-w-lg surface-ground p-8">
                 <div class="flex flex-col gap-1">
                     <div class="text-heading-1 text-color">Heading 1</div>
                     <div class="text-body-1 text-color-secondary">
