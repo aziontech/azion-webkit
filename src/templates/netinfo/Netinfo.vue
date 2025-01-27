@@ -114,8 +114,6 @@
         }
 
         data.value = parseData(json)
-
-        console.log('resolver',data.value.resolver)
       }).catch(error => {
         setMessageError(error.message === 'Failed to fetch' ? 'Network error.' : error)
       })
