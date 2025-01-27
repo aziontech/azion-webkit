@@ -53,7 +53,7 @@
           v-if="data.subnet.ip"
         >
           <p>
-            <strong class="text-nowrap">Subnet IP:</strong> {{ data.subnet.ip }}
+            <strong class="text-nowrap">EDNS Client Subnet:</strong> {{ data.subnet.ip }}
           </p>
         </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
