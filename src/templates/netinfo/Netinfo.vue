@@ -50,7 +50,7 @@
         </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
           <p>
-            <strong class="text-nowrap">Resolver IP:</strong> {{ data.azion.label }}
+            <strong class="text-nowrap">Resolver IP:</strong> {{ data.resolver.label }}
           </p>
         </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
@@ -114,6 +114,8 @@
         }
 
         data.value = parseData(json)
+
+        console.log('resolver',data.value.resolver)
       }).catch(error => {
         setMessageError(error.message === 'Failed to fetch' ? 'Network error.' : error)
       })
@@ -172,7 +174,7 @@
     return {
       uuid: data.uuid || '',
       userAgent: navigator.userAgent,
-      client: {
+      azion: {
         label: `${data.ipaddr} (${data.ipaddr_asn}, ${data.ipaddr_country})`,
         ip: data.ipaddr,
         asn: data.ipaddr_asn,
@@ -181,7 +183,7 @@
         city: data.ipaddr_city,
         country: data.ipaddr_country
       },
-      azion: {
+      client: {
         label: `${data.x_real_ip} (${data.x_real_ip_asn}, ${data.x_real_ip_country})`,
         ip: data.x_real_ip,
         asn: data.x_real_ip_asn,
