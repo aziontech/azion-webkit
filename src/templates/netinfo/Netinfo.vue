@@ -48,6 +48,14 @@
             <strong class="text-nowrap">Azion Edge IP:</strong> {{ data.azion.label }}
           </p>
         </li>
+        <li
+          class="flex flex-row gap-2 border-b surface-border p-2"
+          v-if="data.subnet.ip"
+        >
+          <p>
+            <strong class="text-nowrap">Subnet IP:</strong> {{ data.subnet.ip }}
+          </p>
+        </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
           <p>
             <strong class="text-nowrap">Resolver IP:</strong> {{ data.resolver.label }}
@@ -73,6 +81,11 @@
         <li class="flex flex-row gap-2 border-b surface-border p-2">
           <p class="flex flex-row gap-2">
             <Skeleton width="6rem" height="25px" />: <Skeleton width="12rem" height="25px" />
+          </p>
+        </li>
+        <li class="flex flex-row gap-2 border-b surface-border p-2">
+          <p class="flex flex-row gap-2">
+            <Skeleton width="5rem" height="25px" />: <Skeleton width="12rem" height="25px" />
           </p>
         </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
@@ -190,6 +203,9 @@
         city: data.x_real_ip_city,
         country: data.x_real_ip_country
       },
+      subnet: {
+        ip: data.client_subnet_ip
+      },
       resolver: {
         label: `${data.resolver_ip} (${data.resolver_ip_asn}, ${data.resolver_ip_country})`,
         ip: data.resolver_ip,
@@ -198,7 +214,7 @@
         region: data.resolver_ip_region,
         city: data.resolver_ip_city,
         country: data.resolver_ip_country
-      }
+      },
     }
   }
 </script>
