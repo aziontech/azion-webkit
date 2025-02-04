@@ -16,7 +16,12 @@
           :class="[
             menu.destak ? menuClasses.destak : menuClasses.default,
             { 'p-button-info' : menu.severity === 'info'},
-            { 'p-button-outlined border-header' : menu.outlined === true}
+            { 'p-button-outlined border-header' : menu.outlined === true},
+            menu.minBreakpoint && menu.minBreakpoint === 'sm' && 'block',
+            menu.minBreakpoint && menu.minBreakpoint === 'md' && 'hidden md:block',
+            menu.minBreakpoint && menu.minBreakpoint === 'lg' && 'hidden lg:block',
+            menu.minBreakpoint && menu.minBreakpoint === 'xl' && 'hidden xl:block',
+            menu.minBreakpoint && menu.minBreakpoint === '2xl' && 'hidden 2xl:block'
           ]">
 
           <span :class="[menu.destak ? 'text-black' : 'text-white']">
@@ -38,7 +43,7 @@
   const props = defineProps({ menuSecondary: Object });
   const { menuSecondary } = props;
   const menuClasses = {
-    destak: 'header-button-destak p-button p-button-secondary !text-[#000000] !bg-[#ffffff] whitespace-nowrap p-button-sm hidden lg:flex',
-    default: 'p-button p-button-primary whitespace-nowrap p-button-text hover:surface-hover p-button-sm hidden lg:flex'
+    destak: 'header-button-destak p-button p-button-secondary !text-[#000000] !bg-[#ffffff] whitespace-nowrap p-button-sm hidden',
+    default: 'p-button p-button-primary whitespace-nowrap p-button-text hover:surface-hover p-button-sm'
   }
 </script>
