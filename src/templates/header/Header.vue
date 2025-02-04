@@ -7,10 +7,17 @@
       </div>
 
       <div class="flex gap-2">
-        <a v-for="(menu, index) in menuSecondary" :key="index" :target="menu.target" :href="menu.link" :title="menu.title"
-          :class="[menu.destak ?
-            'header-button-destak p-button p-button-secondary !text-[#000000] !bg-[#ffffff] whitespace-nowrap p-button-sm hidden lg:flex' :
-            'p-button p-button-primary whitespace-nowrap p-button-text hover:surface-hover p-button-sm hidden lg:flex', { 'p-button-info' : menu.severity === 'info'}]">
+        <a
+          v-for="(menu, index) in menuSecondary"
+          :key="index"
+          :target="menu.target"
+          :href="menu.link"
+          :title="menu.title"
+          :class="[
+            menu.destak ? menuClasses.destak : menuClasses.default,
+            { 'p-button-info' : menu.severity === 'info'},
+            { 'p-button-outlined border-header' : menu.outlined === true}
+          ]">
 
           <span :class="[menu.destak ? 'text-black' : 'text-white']">
             {{ menu.text }}
@@ -30,4 +37,8 @@
 <script setup>
   const props = defineProps({ menuSecondary: Object });
   const { menuSecondary } = props;
+  const menuClasses = {
+    destak: 'header-button-destak p-button p-button-secondary !text-[#000000] !bg-[#ffffff] whitespace-nowrap p-button-sm hidden lg:flex',
+    default: 'p-button p-button-primary whitespace-nowrap p-button-text hover:surface-hover p-button-sm hidden lg:flex'
+  }
 </script>
