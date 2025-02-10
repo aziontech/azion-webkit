@@ -33,7 +33,7 @@
             @hide="hideOverlayPanel(menuitem.ref)"
             ref="itemRefs"
             :pt="{
-              content: { class: 'fixed p-0 hidden lg:flex flex-row border surface-border rounded-md surface-0 w-full max-w-[calc(100%-4rem)] lg:max-w-[calc(100%-11rem)] xl:w-[calc(90%-11rem)] xl:max-w-[1052]' },
+              content: { class: 'fixed p-0 hidden lg:flex flex-row border surface-border rounded-md surface-0 w-fit' },
               root: { class: 'left-8 lg:left-[8.5rem] top-12 z-50'}
             }"
             :breakpoints="{'960px': '75vw', '640px': '100vw'}"
@@ -69,7 +69,7 @@
 
               <TabView v-model:activeIndex="active" :pt="{ navContainer: { class: 'hidden' }, root: { class: 'w-full'} }">
                 <TabPanel v-for="(subitem, jIndex) in menuitem.items" :key="jIndex">
-                  <div class="flex flex-row justify-between ">
+                  <div class="flex flex-row justify-between max-w-4xl">
                     <ul class="grid grid-cols-1 xl:grid-cols-2 m-0 p-3 h-fit min-h-20 max-w-[627px] w-full">
                       <li v-for="(link, index) in subitem.items" :key="index" class="flex flex-col gap-2">
                         <a :href="link.href" :title="link.label" class="p-button p-button-text p-button-sm w-full hover:surface-hover p-3 flex flex-col justify-start items-start">
