@@ -75,13 +75,4 @@
   ];
 
   const isLargeScreen = ref(true)
-
-  const checkScreenSize = () => {
-    isLargeScreen.value = window.innerWidth >= 767;
-  };
-
-  onBeforeMount(() => {
-    checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
-  });
 </script>
