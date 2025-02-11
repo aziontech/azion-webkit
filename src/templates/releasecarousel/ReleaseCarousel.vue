@@ -5,12 +5,13 @@
       :responsiveOptions="responsiveOptions"
       :numVisible="numVisible"
       :circular="true"
-      :showNavigators="isLargeScreen"
-      :showIndicators="!isLargeScreen"
       :autoplayInterval="autoplayInterval"
       :numScroll="numScroll"
       :pt="{
-        itemsContent: { class: 'pt-6'}
+        itemsContent: { class: 'pt-6'},
+        previousButton: { class: 'hidden md:block'},
+        nextButton: { class: 'hidden md:block'},
+        indicators: { class: 'flex md:hidden'},
       }"
     >
       <template #item="slotProps">
@@ -30,7 +31,6 @@
 </template>
 
 <script setup>
-  import { ref, onBeforeMount } from "vue"
   import CardRelease from "../cardrelease"
   import Carousel from 'primevue/carousel';
 
@@ -73,6 +73,4 @@
       numScroll: 1
     }
   ];
-
-  const isLargeScreen = ref(true)
 </script>
