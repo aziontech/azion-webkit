@@ -5,7 +5,10 @@
         <div class="w-full flex flex-col justify-between gap-4">
           <div class="flex flex-col gap-4">
             <a :href="`/${lang}/`" title="Azion Technologies" class="mb-4 block" aria-label="Azion logo">
-              <AzionIconLogo class="h-[26px]" />
+              <span class="flex flex-row gap-2 items-end">
+                <AzionIconLogo class="h-[26px]" />
+                <i class="text-xs">Move to the Edge</i>
+              </span>
             </a>
             <slot name="system-status" />
             <p class="text-color-secondary text-sm">
@@ -56,10 +59,10 @@
 </template>
 
 <script setup>
-import Divider from 'primevue/divider';
-import AzionIconLogo from '../src/assets/icons/azion-icon-logo.vue';
-import Overline from '../overline/Overline.vue';
-import LinkButton from '../linkbutton/LinkButton.vue';
+import Divider from 'primevue/divider'
+import AzionIconLogo from '../src/assets/icons/azion-icon-logo.vue'
+import Overline from '../overline/Overline.vue'
+import LinkButton from '../linkbutton/LinkButton.vue'
 
 defineProps({
   lang: {
