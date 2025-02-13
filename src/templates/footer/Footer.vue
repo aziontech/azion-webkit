@@ -7,7 +7,9 @@
             <a :href="`/${lang}/`" title="Azion Technologies" class="mb-4 block" aria-label="Azion logo">
               <span class="flex flex-row gap-2 items-end">
                 <AzionIconLogo class="h-[26px]" />
-                <i class="text-xs">Move to the Edge</i>
+                <span class="leading-none">
+                  <i class="text-xs">Move to the Edge</i> &trade;
+                </span>
               </span>
             </a>
             <slot name="system-status" />
