@@ -29,18 +29,19 @@
         :class="[{ 'justify-center gap-y-8 md:gap-y-16 ': isCentralized }, { 'gap-5': !isCentralized }]"
       >
         <div
-          :class="[{ 'w-28 ': !isCentralized }, { 'w-36 lg:w-56': isCentralized }]"
+          :class="[{ 'w-28': !isCentralized }, { 'w-36 lg:w-56': isCentralized }]"
           :key="logo.imageSrc"
           v-for="logo in logos"
         >
-          <span
-            class="*:h-10 max-h-10 flex justify-center"
+          <a
+            :href="logo.href"
+            class="*:h-10 max-h-10 flex justify-center "
             :class="[
-              { '*:max-w-28 ': !isCentralized },
-              { '*:max-w-36 *:lg:max-w-56': isCentralized }
+              { '*:max-w-28': !isCentralized },
+              { '*:max-w-36 *:lg:max-w-56 logo-container': isCentralized }
             ]"
             v-html="logo.imageSrc"
-          ></span>
+          ></a>
         </div>
       </div>
     </div>
@@ -65,3 +66,8 @@
     }
   })
 </script>
+
+<style>
+.logo-container svg {
+  transform: scale(1.5);
+}</style>
