@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-w-5xl flex flex-wrap px-0 md:py-10"
+    class="max-w-5xl flex flex-wrap px-0"
     :class="{
       'm-auto' : justify == 'center',
       'justify-start' : justify == 'start'
