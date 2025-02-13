@@ -16,7 +16,8 @@ export interface ContentLogoProps {
   title?: string | undefined;
   logos: Array<[{
     imageSrc: string,
-    alt: string
+    alt: string,
+    href: string
   }]>;
 }
 

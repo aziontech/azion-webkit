@@ -14,10 +14,12 @@ const logos = Array(4).fill({
       <path d="M.325.17h74.29v17H.325z"></path>
   </defs>
 </svg>`,
+alt: "Logo Renner",
+href: "https://www.azion.com/pt-br/casos-de-sucesso/renner/"
 })
 
 const props = {
-  isCentralized: false,
+  isCentralized: true,
   title: "Content Logo Block",
   logos: logos,
   size: "default"
