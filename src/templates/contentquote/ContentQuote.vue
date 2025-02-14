@@ -1,5 +1,12 @@
 <template>
   <div class="flex flex-col gap-10">
+    <div class="hidden md:flex items-center justify-center gap-x-32">
+      <div :key="index" v-for="(item, index) in carouselData" class="flex justify-center max-h-10">
+        <button @click="handleCarouselEvent(index)">
+          <img class="max-h-10 invert-btn" :class="{'opacity-25': pageProp !== index}" width="auto" height="40" :src="item.button.image" />
+        </button>
+      </div>
+    </div>
     <Carousel
       :value="carouselData"
       :showNavigators="false"
@@ -9,18 +16,10 @@
         item: { class: 'flex justify-center '},
         root: { class: 'border surface-border rounded degrade'}
       }">
-
       <template #item="slotProps">
         <Quote v-bind="slotProps.data.quote" :border="false" disableDegrade />
       </template>
     </Carousel>
-    <div class="hidden md:flex items-center justify-center gap-x-32">
-      <div :key="index" v-for="(item, index) in carouselData" class="flex justify-center max-h-10">
-        <button @click="handleCarouselEvent(index)">
-          <img class="max-h-10 invert-btn" :class="{'opacity-25': pageProp !== index}" width="auto" height="40" :src="item.button.image" />
-        </button>
-      </div>
-    </div>
   </div>
 </template>
 
