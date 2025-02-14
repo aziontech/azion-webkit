@@ -45,10 +45,6 @@ defineProps({
     type: String,
     required: true,
   },
-  title: {
-    type: String,
-    required: true,
-  },
   images: {
     type: Object,
     required: true,
