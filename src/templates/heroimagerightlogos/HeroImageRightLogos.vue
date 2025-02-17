@@ -56,7 +56,7 @@ defineProps({
   buttons: {
     type: Array,
     required: false,
-  },
+  }
 })
 
 </script>
