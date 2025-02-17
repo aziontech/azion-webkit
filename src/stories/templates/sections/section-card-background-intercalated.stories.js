@@ -44,17 +44,17 @@ Default.args = {
     "title": "Let's build together",
     "description": "Azion has always focused on the core values of innovation, reliability, and the ability to make transparent, forward-looking decisions, and execute them with precision and agility. We believe that our success depends on the success of our customers.",
     "image": "/assets/pages/careers/_hero-illustration.png",
-    "buttons": [
-      {
-        "label": "See jobs",
-        "link": "/en/careers/jobs/"
-      },
-      {
-        "label": "About us",
-        "link": "/en/about-us/",
-        "outlined": true
-      }
-    ]
+    // "buttons": [
+    //   {
+    //     "label": "See jobs",
+    //     "link": "/en/careers/jobs/"
+    //   },
+    //   {
+    //     "label": "About us",
+    //     "link": "/en/about-us/",
+    //     "outlined": true
+    //   }
+    // ]
   },
   "cards": {
     "title": "Azion values",
