@@ -1,7 +1,0 @@
-{
-  "main": "./azionsquaregradient.js",
-  "types": "./AzionSquareGradient.d.ts",
-  "browser": {
-    "./sfc": "./AzionSquareGradient.vue"
-  }
-}
