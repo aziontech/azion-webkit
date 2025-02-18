@@ -26,7 +26,7 @@
     </template>
       <div
         class="flex items-center flex-wrap m-0 text-color-secondary"
-        :class="[{ 'justify-center gap-y-8 md:gap-y-16 ': isCentralized }, { 'gap-5': !isCentralized }]"
+        :class="[{ 'justify-center gap-8 lg:gap-0 gap-y-8 md:gap-y-16 ': isCentralized }, { 'gap-5': !isCentralized }]"
       >
         <div
           :class="[{ 'w-28': !isCentralized }, { 'w-36 lg:w-56': isCentralized }]"
@@ -69,5 +69,5 @@
 
 <style>
 .logo-container svg {
-  transform: scale(1.5);
+  transform: scale(1.4);
 }</style>
