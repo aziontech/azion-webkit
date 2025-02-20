@@ -1,0 +1,7 @@
+{
+  "main": "./herohsformright.js",
+  "types": "./HeroHsFormRight.d.ts",
+  "browser": {
+    "./sfc": "./HeroHsFormRight.vue"
+  }
+}
