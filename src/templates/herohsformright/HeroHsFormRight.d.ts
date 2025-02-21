@@ -1,15 +1,15 @@
 /**
  *
- * HeroFormRight
+ * HeroHsFormRight
  *
  *
- * @module `heroformright`
+ * @module `herohsformright`
  */
 import { VNode } from 'vue';
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
 
 /**
- * Defines valid properties in HeroFormRight component.
+ * Defines valid properties in HeroHsFormRight component.
  */
 
 interface List {
@@ -24,7 +24,7 @@ interface Form {
 }
 
 
-export interface HeroFormRightProps {
+export interface HeroHsFormRightProps {
   overline: string;
   title: string;
   description: string;
@@ -33,9 +33,9 @@ export interface HeroFormRightProps {
 }
 
 /**
- * Defines valid slots in HeroFormRight component.
+ * Defines valid slots in HeroHsFormRight component.
  */
-export interface HeroFormRightSlots {
+export interface HeroHsFormRightSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
@@ -43,9 +43,9 @@ export interface HeroFormRightSlots {
 }
 
 /**
- * Defines valid emits in HeroFormRight component.
+ * Defines valid emits in HeroHsFormRight component.
  */
-export interface HeroFormRightEmits {
+export interface HeroHsFormRightEmits {
   /**
    * Triggered when an error occurs
    */
@@ -55,12 +55,12 @@ export interface HeroFormRightEmits {
 /**
  * @group Component
  */
-declare class HeroFormRight extends ClassComponent<HeroFormRightProps, HeroFormRightSlots, HeroFormRightEmits> { }
+declare class HeroHsFormRight extends ClassComponent<HeroHsFormRightProps, HeroHsFormRightSlots, HeroHsFormRightEmits> { }
 
 declare module 'vue' {
   export interface GlobalComponents {
-    HeroFormRight: GlobalComponentConstructor<HeroFormRight>;
+    HeroHsFormRight: GlobalComponentConstructor<HeroHsFormRight>;
   }
 }
 
-export default HeroFormRight;
+export default HeroHsFormRight;
