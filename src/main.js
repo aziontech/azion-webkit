@@ -7,7 +7,9 @@ import App from './App.vue';
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 import './assets/icons/azionicons.scss'
-import './assets/main.css';
+import './assets/styles/main.css';
+import './assets/styles/text.css';
+import './assets/styles/hsform.css';
 import 'azion-theme'
 
 const app = createApp(App);

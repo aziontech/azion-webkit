@@ -36,5 +36,5 @@
 
 <script setup>
   import Container from './templates/container'
-  import HeroHsFormRight from './templates/heroshformright'
+  import HeroHsFormRight from './templates/herohsformright'
 </script>
