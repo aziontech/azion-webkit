@@ -16,13 +16,15 @@ export interface HeroHsFormRightProps {
   overline: string
   title: string
   description: string
-  list: Array<[
-    {
-      title: string
-      description: string
-      icon: string
-    }
-  ]>
+  list: Array<
+    [
+      {
+        title: string
+        description: string
+        icon: string
+      }
+    ]
+  >
   form: {
     id: string
     title: string

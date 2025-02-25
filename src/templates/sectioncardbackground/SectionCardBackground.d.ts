@@ -10,21 +10,25 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 export interface SectionCardBackgroundProps {
   title: string
   description: string
-  buttons: Array<[
-    {
-      label: string
-      link: string
-      outlined: boolean | undefined
-    }
-  ]>
-  cards: Array<[
-    {
-      label: string
-      title: string
-      image: string
-      alt: string
-    }
-  ]>
+  buttons: Array<
+    [
+      {
+        label: string
+        link: string
+        outlined: boolean | undefined
+      }
+    ]
+  >
+  cards: Array<
+    [
+      {
+        label: string
+        title: string
+        image: string
+        alt: string
+      }
+    ]
+  >
 }
 
 export interface SectionCardBackgroundSlots {
