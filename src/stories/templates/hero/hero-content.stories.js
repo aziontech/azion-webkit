@@ -1,23 +1,8 @@
-import Breadcrumb from 'primevue/breadcrumb'
-import HeroArticle from '../../../templates/heroarticle'
-import Container from '../../../templates/container'
-import Rules from '../../rules'
+import HeroContent from '../../../templates/herocontent'
 
 export default {
   title: 'Blocks/Hero/hero-content',
-  parameters: {
-    docs: {
-      description: {
-        component: `
-### Content rules
-${Rules.hero.title}
-${Rules.hero.description}
-${Rules.hero.avatar}
-        `
-      }
-    }
-  },
-  component: HeroArticle,
+  component: HeroContent,
   tags: ['autodocs'],
   argTypes: {}
 }
@@ -49,17 +34,13 @@ const MOCK = {
 }
 
 const template = `
-<Container class="surface-ground px-container">
-  <HeroArticle v-bind="args">
-    <template #breadcrumbs>
-      <Breadcrumb :model="args.breadcrumbItems" class="-ml-1 lg:col-start-2" />
-    </template>
-  </HeroArticle>
-</Container>
+<div class="surface-ground p-10 flex flex-col gap-10">
+  <HeroContent v-bind="args" />
+</div>
 `
 
 const Template = (args) => ({
-  components: { HeroArticle, Breadcrumb, Container },
+  components: { HeroContent },
   setup() {
     return { args }
   },

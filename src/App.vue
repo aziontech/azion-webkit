@@ -1,10 +1,12 @@
 <template>
-  <HeroContentNavigation v-bind="MOCK" />
+  <div class="px-container">
+    <HeroContent v-bind="MOCK" />
+  </div>
 </template>
 
 <script setup>
   // import Container from './templates/container'
-  import HeroContentNavigation from './templates/herocontentnavigation'
+  import HeroContent from './templates/herocontent'
 
   const MOCK = {
     breadcrumbItems: [
@@ -29,38 +31,6 @@
       }
     ],
     description:
-      'Explore how Azion Edge SQL enhances database operations with edge computing for high scalability, low latency, and cost-effectiveness.',
-    menuTitle: 'Learning Center',
-    menuItems: [
-      {
-        label: 'DDoS Attacks',
-        url: '/en/learning/ddos/what-is-ddos-attack/',
-        items: [
-          {
-            label: null,
-            url: null
-          }
-        ]
-      },
-      {
-        label: 'Glossary',
-        url: '',
-        items: [
-          {
-            label: 'What is a DDoS Attack?',
-            url: '/en/learning/ddos/what-is-ddos-attack/'
-          },
-          {
-            label: 'What is a Botnet?',
-            url: '/en/learning/ddos/what-is-a-ddos-botnet/'
-          },
-          {
-            label: 'What Are Application Layer Attacks?',
-            url: '/en/learning/ddos/application-layer-attack/'
-          }
-        ]
-      }
-    ],
-    mobileLabel: 'DDoS Attacks'
+      'Explore how Azion Edge SQL enhances database operations with edge computing for high scalability, low latency, and cost-effectiveness.'
   }
 </script>
