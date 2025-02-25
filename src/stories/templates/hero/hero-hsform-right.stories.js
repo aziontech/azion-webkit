@@ -29,7 +29,7 @@ const MOCK = {
   }
 }
 
-const HeroHsFormRight = `
+const HeroDisplay = `
 <Container class="surface-ground">
   <HeroHsFormRight v-bind="args" />
 </Container>
@@ -57,7 +57,7 @@ const Template = (args) => ({
   setup() {
     return { args }
   },
-  template: HeroHsFormRight
+  template: HeroDisplay
 })
 
 export const Default = Template.bind({})
