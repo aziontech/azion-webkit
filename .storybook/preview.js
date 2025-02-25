@@ -6,7 +6,8 @@ import PrimeVue from 'primevue/config';
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 import "../src/assets/icons/azionicons.scss";
-import '../src/assets/main.css';
+import '../src/assets/styles/hsform.css';
+import '../src/assets/styles/main.css';
 import 'azion-theme'
 
 import { withThemeByClassName } from '@storybook/addon-themes';
@@ -20,19 +21,19 @@ export const parameters = {
     storySort: {
       method: 'alphabetical',
       order: [
-        'Blocks', 
+        'Blocks',
         [
-          'Hero', 
+          'Hero',
           'Sections',
           'Banner',
           'Pages',
           'List'
         ],
-        'Components Group', 
-        'Components', 
-        'Layout', 
+        'Components Group',
+        'Components',
+        'Layout',
         'Elements'
-      ],    
+      ],
     },
   },
   backgrounds: {
