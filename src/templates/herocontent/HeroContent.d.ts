@@ -7,11 +7,13 @@
 import { VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
-interface breadcrumbItems {
-  label: string
-  target: '_self' | '_blank' | ''
-  url: string
-}
+type BreadcrumbType = Array<[
+  {
+    label: string
+    target: '_self' | '_blank' | ''
+    url: string
+  }
+]>
 interface authors {
   avatar: string
   title: string
@@ -19,7 +21,7 @@ interface authors {
 }
 
 export interface HeroContentProps {
-  breadcrumbItems: breadcrumbItems[]
+  breadcrumbItems: BreadcrumbType
   date: string
   title: string
   authors: authors[]
