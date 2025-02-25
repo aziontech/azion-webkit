@@ -1,2 +1,2 @@
-import TableOfContents from './TableOfContents.vue';
-export default TableOfContents;
+import TableOfContents from './TableOfContents.vue'
+export default TableOfContents

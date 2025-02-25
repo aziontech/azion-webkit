@@ -1,76 +1,79 @@
-
 import Container from '../../../templates/container'
 import SectionSticky from '../../../templates/sectionsticky'
 
 export default {
   title: 'Blocks/Sections/section-howitworks',
-  tags: ['autodocs'],
+  tags: ['autodocs']
 }
 
 const MOCK = {
-  "overline": "Como funciona",
-  "title": "Como você pode usar o Azion WAF nos diversos contextos",
-  "sections": [
+  overline: 'Como funciona',
+  title: 'Como você pode usar o Azion WAF nos diversos contextos',
+  sections: [
     {
-      "overline": "Proteção",
-      "description": "Ative proteções prontas para uso ou crie regras e limites personalizados por meio de uma interface intuitiva ou APIs.",
-      "title": "A versatilidade de configuração que você estava procurando",
-      "image": {
-        "light": "/assets/mocks/proteja-1.png",
-        "dark": "/assets/mocks/proteja-1.png",
-        "alt": "Azion Console | Web Application Firewall"
+      overline: 'Proteção',
+      description:
+        'Ative proteções prontas para uso ou crie regras e limites personalizados por meio de uma interface intuitiva ou APIs.',
+      title: 'A versatilidade de configuração que você estava procurando',
+      image: {
+        light: '/assets/mocks/proteja-1.png',
+        dark: '/assets/mocks/proteja-1.png',
+        alt: 'Azion Console | Web Application Firewall'
       },
-      "buttons": [
+      buttons: [
         {
-          "label": "Começar agora",
-          "link": "https://console.azion.com/signup/"
+          label: 'Começar agora',
+          link: 'https://console.azion.com/signup/'
         },
         {
-          "label": "Pedir demonstração",
-          "link": "/en/contact-sales/",
-          "severity": "secondary"
+          label: 'Pedir demonstração',
+          link: '/en/contact-sales/',
+          severity: 'secondary'
         }
       ]
     },
     {
-      "overline": "Teste",
-      "title": "Suas regras em seu pipeline de CI/CD",
-      "description": "Teste e implemente regras de firewall, aproveitando os pipelines CI/CD existentes.",
-      "image": {
-        "light": "/assets/mocks/proteja-1.png",
-        "dark": "/assets/mocks/proteja-1.png",
-        "alt": "Azion Console | Web Application Firewall"
+      overline: 'Teste',
+      title: 'Suas regras em seu pipeline de CI/CD',
+      description:
+        'Teste e implemente regras de firewall, aproveitando os pipelines CI/CD existentes.',
+      image: {
+        light: '/assets/mocks/proteja-1.png',
+        dark: '/assets/mocks/proteja-1.png',
+        alt: 'Azion Console | Web Application Firewall'
       },
-      "buttons": [
+      buttons: [
         {
-          "label": "Começar agora",
-          "link": "https://console.azion.com/signup/"
+          label: 'Começar agora',
+          link: 'https://console.azion.com/signup/'
         },
         {
-          "label": "Pedir demonstração",
-          "link": "/en/contact-sales/",
-          "severity": "secondary"
+          label: 'Pedir demonstração',
+          link: '/en/contact-sales/',
+          severity: 'secondary'
         }
       ]
     },
     {
-      "overline": "Observe",
-      "title": "Acompanhe dados em tempo real da Azion e de suas soluções de observabilidade favoritas",
-      "description": "Colete dados em tempo real e os transmita para suas plataformas de SIEM e analitica, para uma resposta automática a incidentes com os conectores do Data Stream da Azion.",
-      "image": {
-        "light": "/assets/mocks/proteja-1.png",
-        "dark": "/assets/mocks/proteja-1.png",
-        "alt": "Azion Console | Web Application Firewall"
+      overline: 'Observe',
+      title:
+        'Acompanhe dados em tempo real da Azion e de suas soluções de observabilidade favoritas',
+      description:
+        'Colete dados em tempo real e os transmita para suas plataformas de SIEM e analitica, para uma resposta automática a incidentes com os conectores do Data Stream da Azion.',
+      image: {
+        light: '/assets/mocks/proteja-1.png',
+        dark: '/assets/mocks/proteja-1.png',
+        alt: 'Azion Console | Web Application Firewall'
       },
-      "buttons": [
+      buttons: [
         {
-          "label": "Começar agora",
-          "link": "https://console.azion.com/signup/"
+          label: 'Começar agora',
+          link: 'https://console.azion.com/signup/'
         },
         {
-          "label": "Pedir demonstração",
-          "link": "/en/contact-sales/",
-          "severity": "secondary"
+          label: 'Pedir demonstração',
+          link: '/en/contact-sales/',
+          severity: 'secondary'
         }
       ]
     }

@@ -5,18 +5,20 @@
  *
  * @module `selectlang`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in SelectLang component.
  */
 export interface SelectLangProps {
-  i18nPages: [/* {lang: string, slug: string} */];
+  i18nPages: [
+    /* {lang: string, slug: string} */
+  ]
   /**
    * @defaultValue en
    */
-  lang: string;
+  lang: string
 }
 
 /**
@@ -26,7 +28,7 @@ export interface SelectLangSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -36,18 +38,22 @@ export interface SelectLangEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class SelectLang extends ClassComponent<SelectLangProps, SelectLangSlots, SelectLangEmits> { }
+declare class SelectLang extends ClassComponent<
+  SelectLangProps,
+  SelectLangSlots,
+  SelectLangEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    SelectLang: GlobalComponentConstructor<SelectLang>;
+    SelectLang: GlobalComponentConstructor<SelectLang>
   }
 }
 
-export default SelectLang;
+export default SelectLang

@@ -1,11 +1,10 @@
-import TabMenu from "../../templates/tabmenu"
+import TabMenu from '../../templates/tabmenu'
 
 export default {
   title: 'Components/TabMenu',
   component: TabMenu,
   tags: ['autodocs'],
-  argTypes: {
-  }
+  argTypes: {}
 }
 
 export const Default = {

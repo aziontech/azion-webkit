@@ -1,5 +1,5 @@
-import ContentSection from "../../templates/contentsection"
-import LinkButton from '../../templates/linkbutton';
+import ContentSection from '../../templates/contentsection'
+import LinkButton from '../../templates/linkbutton'
 
 export default {
   title: 'Components Group/ContentSectionBlock',
@@ -7,20 +7,20 @@ export default {
   tags: ['autodocs'],
   argTypes: {
     titleTag: {
-      description: "Selecione a heading tag"
+      description: 'Selecione a heading tag'
     },
     position: {
       control: { type: 'radio' },
       options: ['left', 'right', 'center']
     },
     isContentCentralized: {
-      description: "Centralize o conteúdo em coluna"
+      description: 'Centralize o conteúdo em coluna'
     },
     reverse: {
-      description: "Troque a ordem do conteúdo SE centralizado"
+      description: 'Troque a ordem do conteúdo SE centralizado'
     },
     isSticky: {
-      description: "Transforme o bloco de Titulo em sticky"
+      description: 'Transforme o bloco de Titulo em sticky'
     }
   }
 }
@@ -76,30 +76,30 @@ const Example = (args) => ({
 const props = {
   overline: 'Overline',
   title: 'Whats is Azion Marketplace?',
-  description: `Azion Marketplace is a digital catalog that makes it easy to find, test, and deploy edge-enabled software that runs anywhere. The Marketplace gathers together a wide range of solutions that you can use to easily enhance, compose, or customize your applications.`,
+  description: `Azion Marketplace is a digital catalog that makes it easy to find, test, and deploy edge-enabled software that runs anywhere. The Marketplace gathers together a wide range of solutions that you can use to easily enhance, compose, or customize your applications.`
 }
 
-export const Default = Example.bind({});
+export const Default = Example.bind({})
 Default.args = props
 
-export const Right = Template.bind({});
+export const Right = Template.bind({})
 Right.args = {
   ...props,
-  position: "right",
+  position: 'right'
 }
 
-export const Center = Template.bind({});
+export const Center = Template.bind({})
 Center.args = {
   ...props,
-  position: "center",
+  position: 'center',
   textCenter: true,
-  isContentCentralized: true,
+  isContentCentralized: true
 }
 
-export const isReverseCenter = Template.bind({});
+export const isReverseCenter = Template.bind({})
 isReverseCenter.args = {
   ...props,
-  position: "center",
+  position: 'center',
   textCenter: true,
   isContentCentralized: true,
   reverse: true

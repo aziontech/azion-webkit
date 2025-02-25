@@ -18,14 +18,17 @@
     </template>
     <template #principal>
       <div class="flex flex-col md:flex-row justify-between gap-8 md:gap-4">
-        <div class="flex flex-col gap-4" v-for="{ title, description, icon } in data">
-            <Tile severity="primary">
-              <i :class="icon" />
-            </Tile>
-            <div class="flex flex-col gap-2">
-              <p class="text-7xl font-semibold"> {{ title }} </p>
-              <CardDescription> {{ description }} </CardDescription>
-            </div>
+        <div
+          class="flex flex-col gap-4"
+          v-for="{ title, description, icon } in data"
+        >
+          <Tile severity="primary">
+            <i :class="icon" />
+          </Tile>
+          <div class="flex flex-col gap-2">
+            <p class="text-7xl font-semibold">{{ title }}</p>
+            <CardDescription> {{ description }} </CardDescription>
+          </div>
         </div>
       </div>
     </template>

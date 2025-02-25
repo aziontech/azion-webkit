@@ -6,7 +6,10 @@
     position="left"
     :isContentCentralized="data.justify === 'center' ? true : false"
   >
-    <template v-if="button" #main>
+    <template
+      v-if="button"
+      #main
+    >
       <div class="w-full flex lg:justify-end lg:items-end">
         <LinkButton
           class="min-w-fit !px-0 !pl-0 !pr-0"
@@ -20,14 +23,16 @@
 
     <template #principal>
       <div class="flex flex-col gap-10">
-        <BigNumbers v-bind="data" class=" w-full" />
+        <BigNumbers
+          v-bind="data"
+          class="w-full"
+        />
 
         <div class="relative w-full !h-[calc(100vh-56px)]">
           <Livemap :lang="lang" />
         </div>
       </div>
     </template>
-
   </ContentSection>
 </template>
 
@@ -56,5 +61,5 @@
     button: {
       type: Object
     }
-  });
+  })
 </script>

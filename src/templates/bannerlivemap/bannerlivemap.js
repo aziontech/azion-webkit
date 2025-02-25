@@ -1,2 +1,2 @@
-import BannerLiveMap from './BannerLiveMap.vue';
-export default BannerLiveMap;
+import BannerLiveMap from './BannerLiveMap.vue'
+export default BannerLiveMap

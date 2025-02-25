@@ -1,31 +1,33 @@
 <template>
-	<a
+  <a
     :href="link"
     :title="label"
     :target="target"
     rel="noopener noreferrer"
     class="p-button p-component p-button-sm w-fit no-underline justify-center gap-2 px-4"
     :class="[
-      {'p-button-outlined hover:surface-hover' : outlined },
-      {'p-button-text hover:surface-hover': text },
-      {'p-button-secondary' : severity === 'secondary'},
-      {'p-button-info' : severity === 'info'},
-      {'p-button-sm' : size === 'small' },
-      {'flex flex-row-reverse' : iconPos === 'left'},
-      {'p-button-icon-only' : iconPos === 'center'},
-      {'md:justify-start' : iconPos !== 'center'},
-      {'p-button-link' : textLink }
-    ]">
-
+      { 'p-button-outlined hover:surface-hover': outlined },
+      { 'p-button-text hover:surface-hover': text },
+      { 'p-button-secondary': severity === 'secondary' },
+      { 'p-button-info': severity === 'info' },
+      { 'p-button-sm': size === 'small' },
+      { 'flex flex-row-reverse': iconPos === 'left' },
+      { 'p-button-icon-only': iconPos === 'center' },
+      { 'md:justify-start': iconPos !== 'center' },
+      { 'p-button-link': textLink }
+    ]"
+  >
     <template v-if="label">
       {{ capitalizeLetter(String(label).trim()) }}
     </template>
 
     <span
-      v-if="iconPos" :style="customIconStyle"
+      v-if="iconPos"
+      :style="customIconStyle"
       :class="`pi p-button-icon ${icon}`"
-      data-pc-section="icon" />
-	</a>
+      data-pc-section="icon"
+    />
+  </a>
 </template>
 
 <script setup>
@@ -36,7 +38,7 @@
     },
     customIconStyle: {
       type: String,
-      required: false,
+      required: false
     },
     iconPos: {
       type: String,
@@ -68,23 +70,23 @@
     },
     target: {
       type: String,
-      options: ["_blank", "_self"],
-      default: "_self",
+      options: ['_blank', '_self'],
+      default: '_self',
       required: false
     },
     size: {
       type: String,
       required: false,
-      default: "medium",
+      default: 'medium',
       options: ['small', 'medium']
     },
     textLink: {
       type: Boolean,
-      required: false,
+      required: false
     }
-  });
+  })
 
   function capitalizeLetter(word) {
-    return word.replace(word[0], word.charAt(0).toUpperCase());
+    return word.replace(word[0], word.charAt(0).toUpperCase())
   }
 </script>

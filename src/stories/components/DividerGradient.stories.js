@@ -1,9 +1,9 @@
-import DividerGradient from "../../templates/dividergradient"
+import DividerGradient from '../../templates/dividergradient'
 
 export default {
   title: 'Components/DividerGradient',
   component: DividerGradient,
-  tags: ['autodocs'],
+  tags: ['autodocs']
 }
 
 export const Default = {}

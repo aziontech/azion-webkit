@@ -14,20 +14,21 @@
           { 'lg:max-w-3xl 2xl:max-w-4xl gap-10': !isCentralized },
           { 'items-center gap-12 md:gap-24': isCentralized },
           { 'items-center text-center lg:text-left': align === 'center' },
-          { 'justify-center' : justify === 'center'}
+          { 'justify-center': justify === 'center' }
         ]"
       >
         <div
           class="flex flex-col gap-5 md:gap-8"
           :class="[
             { 'max-w-3xl 2xl:max-w-4xl text-center': isCentralized },
-            { 'max-w-3xl 2xl:max-w-4xl': !isCentralized}
+            { 'max-w-3xl 2xl:max-w-4xl': !isCentralized }
           ]"
         >
           <template v-if="bannerNews">
-            <div class="flex" :class="[
-                  { 'justify-center': isCentralized },
-                ]">
+            <div
+              class="flex"
+              :class="[{ 'justify-center': isCentralized }]"
+            >
               <Banner
                 :description="bannerNews.description"
                 :cta="bannerNews.cta.label"
@@ -35,21 +36,49 @@
               />
             </div>
           </template>
-          <Overline v-if="overline && overline.length" :label="overline" />
+          <Overline
+            v-if="overline && overline.length"
+            :label="overline"
+          />
           <template v-if="title">
             <h1
               v-if="titleTag === 'h1'"
               class="leading-loose font-medium text-3xl md:text-4xl 2xl:text-5xl text-balance"
-              style="line-height: 125% !important;"
-              :class="[{ 'text-4xl md:text-5xl' : isDisplay }]"
+              style="line-height: 125% !important"
+              :class="[{ 'text-4xl md:text-5xl': isDisplay }]"
             >
               {{ title }}
             </h1>
-            <h2 v-if="titleTag === 'h2'" class="text-3xl md:text-4xl 2xl:text-5xl leading-relaxed font-medium text-balance">{{ title }}</h2>
-            <h3 v-if="titleTag === 'h3'" class="text-3xl md:text-4xl 2xl:text-5xl leading-relaxed font-medium text-balance">{{ title }}</h3>
-            <h4 v-if="titleTag === 'h4'" class="text-3xl md:text-4xl 2xl:text-5xl leading-relaxed font-medium text-balance">{{ title }}</h4>
-            <h5 v-if="titleTag === 'h5'" class="text-3xl md:text-4xl 2xl:text-5xl leading-relaxed font-medium text-balance">{{ title }}</h5>
-            <h6 v-if="titleTag === 'h6'" class="text-3xl md:text-4xl 2xl:text-5xl leading-relaxed font-medium text-balance">{{ title }}</h6>
+            <h2
+              v-if="titleTag === 'h2'"
+              class="text-3xl md:text-4xl 2xl:text-5xl leading-relaxed font-medium text-balance"
+            >
+              {{ title }}
+            </h2>
+            <h3
+              v-if="titleTag === 'h3'"
+              class="text-3xl md:text-4xl 2xl:text-5xl leading-relaxed font-medium text-balance"
+            >
+              {{ title }}
+            </h3>
+            <h4
+              v-if="titleTag === 'h4'"
+              class="text-3xl md:text-4xl 2xl:text-5xl leading-relaxed font-medium text-balance"
+            >
+              {{ title }}
+            </h4>
+            <h5
+              v-if="titleTag === 'h5'"
+              class="text-3xl md:text-4xl 2xl:text-5xl leading-relaxed font-medium text-balance"
+            >
+              {{ title }}
+            </h5>
+            <h6
+              v-if="titleTag === 'h6'"
+              class="text-3xl md:text-4xl 2xl:text-5xl leading-relaxed font-medium text-balance"
+            >
+              {{ title }}
+            </h6>
           </template>
           <template v-else>
             <slot name="title" />
@@ -88,13 +117,13 @@
 </template>
 
 <script setup>
-  import Overline from "../overline/Overline.vue"
-  import Banner from "../banner/Banner.vue"
+  import Overline from '../overline/Overline.vue'
+  import Banner from '../banner/Banner.vue'
 
   defineProps({
     bannerNews: {
       type: Object,
-      required: false,
+      required: false
     },
     overline: {
       type: String,
@@ -135,7 +164,7 @@
     },
     isDisplay: {
       type: Boolean,
-      required: false,
+      required: false
     }
-  });
+  })
 </script>

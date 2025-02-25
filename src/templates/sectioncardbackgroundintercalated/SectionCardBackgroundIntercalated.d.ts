@@ -5,33 +5,37 @@
  *
  * @module `sectioncardbackgroundintercalated`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 type HeroType = {
-  "title": string,
-  "description": string,
-  "image": string,
-  "buttons": Array<[
-    {
-      "label": string,
-      "link": string
-    }
-  ]>
+  title: string
+  description: string
+  image: string
+  buttons: Array<
+    [
+      {
+        label: string
+        link: string
+      }
+    ]
+  >
 }
 
 type CardsType = {
-  "cards": {
-    "title": string,
-    "description": string,
-    "cards": Array<[
-      {
-        "label": string,
-        "title": string,
-        "image": string,
-        "alt": string
-      }
-    ]>
+  cards: {
+    title: string
+    description: string
+    cards: Array<
+      [
+        {
+          label: string
+          title: string
+          image: string
+          alt: string
+        }
+      ]
+    >
   }
 }
 
@@ -39,8 +43,8 @@ type CardsType = {
  * Defines valid properties in SectionCardBackgroundIntercalated component.
  */
 export interface SectionCardBackgroundIntercalatedProps {
-  hero: HeroType;
-  cards: CardsType;
+  hero: HeroType
+  cards: CardsType
 }
 
 /**
@@ -50,7 +54,7 @@ export interface SectionCardBackgroundIntercalatedSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -60,18 +64,22 @@ export interface SectionCardBackgroundIntercalatedEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class SectionCardBackgroundIntercalated extends ClassComponent<SectionCardBackgroundIntercalatedProps, SectionCardBackgroundIntercalatedSlots, SectionCardBackgroundIntercalatedEmits> { }
+declare class SectionCardBackgroundIntercalated extends ClassComponent<
+  SectionCardBackgroundIntercalatedProps,
+  SectionCardBackgroundIntercalatedSlots,
+  SectionCardBackgroundIntercalatedEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    SectionCardBackgroundIntercalated: GlobalComponentConstructor<SectionCardBackgroundIntercalated>;
+    SectionCardBackgroundIntercalated: GlobalComponentConstructor<SectionCardBackgroundIntercalated>
   }
 }
 
-export default SectionCardBackgroundIntercalated;
+export default SectionCardBackgroundIntercalated

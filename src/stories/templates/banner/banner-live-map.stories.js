@@ -1,5 +1,3 @@
-
-
 import Container from '../../../templates/container'
 import BannerLiveMap from '../../../templates/bannerlivemap'
 import Rules from '../../rules'
@@ -16,21 +14,22 @@ ${Rules.banner.overline}
 ${Rules.banner.title}
 ${Rules.banner.cta}
 ${Rules.banner.image}
-        `,
-      },
-    },
-  },
+        `
+      }
+    }
+  }
 }
 
 const MOCK = {
-  "overline": "LIVE MAP",
-  "title": "Azion Live Map",
-  "description": "Discover e-commerce behavior in real time, the times with the most traffic or regions with the highest number of blocked attacks.",
-  "button": {
-    "label": "See Live Map",
-    "link": "https://www.azion.com/pt-br/live-map/",
-    "icon": "pi pi-arrow-up-right",
-    "outlined": true
+  overline: 'LIVE MAP',
+  title: 'Azion Live Map',
+  description:
+    'Discover e-commerce behavior in real time, the times with the most traffic or regions with the highest number of blocked attacks.',
+  button: {
+    label: 'See Live Map',
+    link: 'https://www.azion.com/pt-br/live-map/',
+    icon: 'pi pi-arrow-up-right',
+    outlined: true
   }
 }
 
@@ -55,5 +54,6 @@ Default.parameters = {
     description: {
       story: ''
     },
-    source: { code: template } },
-};
+    source: { code: template }
+  }
+}

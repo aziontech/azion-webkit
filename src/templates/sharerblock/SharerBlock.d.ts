@@ -5,17 +5,17 @@
  *
  * @module `sharerblock`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in SharerBlock component.
  */
 export interface SharerBlockProps {
-  data: [];
-  tooltipText: string;
-  title: string;
-  sharedURL: URL;
+  data: []
+  tooltipText: string
+  title: string
+  sharedURL: URL
 }
 
 /**
@@ -25,7 +25,7 @@ export interface SharerBlockSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -35,18 +35,22 @@ export interface SharerBlockEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class SharerBlock extends ClassComponent<SharerBlockProps, SharerBlockSlots, SharerBlockEmits> { }
+declare class SharerBlock extends ClassComponent<
+  SharerBlockProps,
+  SharerBlockSlots,
+  SharerBlockEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    SharerBlock: GlobalComponentConstructor<SharerBlock>;
+    SharerBlock: GlobalComponentConstructor<SharerBlock>
   }
 }
 
-export default SharerBlock;
+export default SharerBlock

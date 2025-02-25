@@ -1,2 +1,2 @@
-import HeroImageRightLogos from "./HeroImageRightLogos.vue";
-export default HeroImageRightLogos;
+import HeroImageRightLogos from './HeroImageRightLogos.vue'
+export default HeroImageRightLogos

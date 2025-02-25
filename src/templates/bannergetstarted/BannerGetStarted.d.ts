@@ -5,24 +5,24 @@
  *
  * @module `bannergetstarted`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 type Buttons = {
-  link: string,
-  label: string,
-  outlined: boolean,
+  link: string
+  label: string
+  outlined: boolean
 }
 
 type Items = {
-  icon: string,
-  text: string,
+  icon: string
+  text: string
 }
 
 type BannerGetStartedItems = {
-  overline: string,
-  title: string,
-  buttons: Buttons[],
+  overline: string
+  title: string
+  buttons: Buttons[]
   items: Items[]
 }
 
@@ -30,17 +30,17 @@ type BannerGetStartedItems = {
  * Defines valid properties in AisIndexHit component.
  */
 export interface BannerGetStartedProps {
-  items: BannerGetStartedItems[];
+  items: BannerGetStartedItems[]
   /**
    * Defines the text to display is centralized.
    * @defaultValue true
    */
-  centralized: boolean;
+  centralized: boolean
   /**
    * Defines the text to display with border.
    * @defaultValue true
    */
-  border: boolean;
+  border: boolean
 }
 
 /**
@@ -50,7 +50,7 @@ export interface BannerGetStartedSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -60,18 +60,22 @@ export interface BannerGetStartedEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class BannerGetStarted extends ClassComponent<BannerGetStartedProps, BannerGetStartedSlots, BannerGetStartedEmits> { }
+declare class BannerGetStarted extends ClassComponent<
+  BannerGetStartedProps,
+  BannerGetStartedSlots,
+  BannerGetStartedEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    BannerGetStarted: GlobalComponentConstructor<BannerGetStarted>;
+    BannerGetStarted: GlobalComponentConstructor<BannerGetStarted>
   }
 }
 
-export default BannerGetStarted;
+export default BannerGetStarted

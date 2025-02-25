@@ -5,31 +5,31 @@
  *
  * @module `sectionbulletsright`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 interface Button {
-  label: string;
-  link: string;
-  outlined?: boolean; // Optional, as not all buttons have this property
+  label: string
+  link: string
+  outlined?: boolean // Optional, as not all buttons have this property
 }
 
 // Type for individual content block objects
 interface ContentBlock {
-  icon: string;
-  title: string;
-  description: string;
+  icon: string
+  title: string
+  description: string
 }
 
 /**
  * Defines valid properties in SectionBulletsRight component.
  */
 export interface SectionBulletsRightProps {
-  overline: string;
-  title: string;
-  description: string;
-  buttons: Button[];
-  data: ContentBlock[];
+  overline: string
+  title: string
+  description: string
+  buttons: Button[]
+  data: ContentBlock[]
 }
 
 /**
@@ -39,7 +39,7 @@ export interface SectionBulletsRightSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -49,18 +49,22 @@ export interface SectionBulletsRightEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class SectionBulletsRight extends ClassComponent<SectionBulletsRightProps, SectionBulletsRightSlots, SectionBulletsRightEmits> { }
+declare class SectionBulletsRight extends ClassComponent<
+  SectionBulletsRightProps,
+  SectionBulletsRightSlots,
+  SectionBulletsRightEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    SectionBulletsRight: GlobalComponentConstructor<SectionBulletsRight>;
+    SectionBulletsRight: GlobalComponentConstructor<SectionBulletsRight>
   }
 }
 
-export default SectionBulletsRight;
+export default SectionBulletsRight

@@ -1,2 +1,2 @@
-import SectionCardCarousel from './SectionCardCarousel.vue';
-export default SectionCardCarousel;
+import SectionCardCarousel from './SectionCardCarousel.vue'
+export default SectionCardCarousel

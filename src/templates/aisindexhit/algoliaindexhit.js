@@ -1,2 +1,2 @@
-import AlgoliaIndexHit from "./AlgoliaIndexHit.vue";
-export default AlgoliaIndexHit;
+import AlgoliaIndexHit from './AlgoliaIndexHit.vue'
+export default AlgoliaIndexHit

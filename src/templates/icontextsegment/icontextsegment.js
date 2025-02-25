@@ -1,2 +1,2 @@
-import IconTextSegment from './IconTextSegment.vue';
-export default IconTextSegment;
+import IconTextSegment from './IconTextSegment.vue'
+export default IconTextSegment

@@ -1,2 +1,2 @@
-import CardBgImage from './CardBgImage.vue';
-export default CardBgImage;
+import CardBgImage from './CardBgImage.vue'
+export default CardBgImage

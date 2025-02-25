@@ -5,8 +5,8 @@
  *
  * @module tabmenu
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in tabmenu component.
@@ -22,7 +22,7 @@ export interface TabMenuSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -32,18 +32,18 @@ export interface TabMenuEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class TabMenu extends ClassComponent<TabMenuProps, TabMenuSlots, TabMenuEmits> { }
+declare class TabMenu extends ClassComponent<TabMenuProps, TabMenuSlots, TabMenuEmits> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    TabMenu: GlobalComponentConstructor<TabMenu>;
+    TabMenu: GlobalComponentConstructor<TabMenu>
   }
 }
 
-export default TabMenu;
+export default TabMenu

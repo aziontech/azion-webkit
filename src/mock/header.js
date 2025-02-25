@@ -15,9 +15,10 @@ const menuData = {
             {
               icon: 'ai ai-edge-application',
               label: 'Edge Application',
-              description: 'Construir aplicaciones web que se ejecutan en la Plataforma de Edge de Azion.',
+              description:
+                'Construir aplicaciones web que se ejecutan en la Plataforma de Edge de Azion.',
               href: '/es/productos/edge-application/',
-              overline: "Add-ons",
+              overline: 'Add-ons',
               items: [
                 {
                   icon: '',
@@ -48,7 +49,8 @@ const menuData = {
                   label: 'Image Processor',
                   description: '',
                   href: '/es/productos/image-processor/'
-                }, {
+                },
+                {
                   icon: '',
                   label: 'Load Balancer',
                   description: '',
@@ -66,19 +68,20 @@ const menuData = {
               icon: 'ai ai-edge-storage',
               label: 'Edge Storage',
               description: 'Almacena y recupera objetos desde cualquier lugar con baja latencia.',
-              href: '/es/productos/edge-storage/',
+              href: '/es/productos/edge-storage/'
             },
             {
               icon: 'ai ai-edge-sql',
               label: 'Edge SQL',
-              description: 'Base de datos SQL serverless que combina la agilidad de la tecnología serverless y el desempeño de edge.',
-              href: '/es/productos/edge-sql/',
+              description:
+                'Base de datos SQL serverless que combina la agilidad de la tecnología serverless y el desempeño de edge.',
+              href: '/es/productos/edge-sql/'
             },
             {
               icon: 'ai ai-edge-kv',
               label: 'Edge KV',
               description: 'Aprovecha tus datos con nuestra Key-Value Store serverless en el edge.',
-              href: '/es/productos/edge-kv/',
+              href: '/es/productos/edge-kv/'
             }
           ]
         },
@@ -91,7 +94,7 @@ const menuData = {
               label: 'Edge Firewall',
               description: 'Protege a tus usuarios, aplicaciones y redes con un enfoque moderno.',
               href: '/es/productos/edge-firewall/',
-              overline: "Add-ons",
+              overline: 'Add-ons',
               items: [
                 {
                   icon: '',
@@ -119,7 +122,6 @@ const menuData = {
               description: 'Mejora la disponibilidad y seguridad de tus aplicaciones.',
               href: '/es/productos/edge-dns/'
             }
-
           ]
         },
         {
@@ -129,7 +131,8 @@ const menuData = {
             {
               icon: 'ai ai-edge-orchestrator',
               label: 'Edge Orchestrator',
-              description: 'Implementa, controla, observa y automatiza cargas de trabajo de edge en cualquier lugar.',
+              description:
+                'Implementa, controla, observa y automatiza cargas de trabajo de edge en cualquier lugar.',
               href: '/es/productos/edge-orchestrator/'
             }
           ]
@@ -147,26 +150,29 @@ const menuData = {
             {
               icon: 'ai ai-edge-pulse',
               label: 'Edge Pulse',
-              description: 'Mejora la experiencia de tus aplicaciones al generar insights detallados sobre los usuarios.',
+              description:
+                'Mejora la experiencia de tus aplicaciones al generar insights detallados sobre los usuarios.',
               href: '/es/productos/edge-pulse/'
             },
             {
               icon: 'ai ai-real-time-metrics',
               label: 'Real-Time Metrics',
-              description: 'Excelentes insights con una potente visualización en tiempo real sobre tus aplicaciones.',
+              description:
+                'Excelentes insights con una potente visualización en tiempo real sobre tus aplicaciones.',
               href: '/es/productos/real-time-metrics/'
             },
             {
               icon: 'ai ai-real-time-events',
               label: 'Real-Time Events',
-              description: 'Explora en tiempo real los datos de tus aplicaciones con nuestro motor de búsquedas complejas.',
+              description:
+                'Explora en tiempo real los datos de tus aplicaciones con nuestro motor de búsquedas complejas.',
               href: '/es/productos/real-time-events/'
             }
           ]
         },
         {
-          label: "Servicios Profesionales",
-          href: "/es/servicios-profesionales/"
+          label: 'Servicios Profesionales',
+          href: '/es/servicios-profesionales/'
         }
       ],
       rightBlock: {
@@ -178,7 +184,8 @@ const menuData = {
               src: '/assets/blog/images/uploads/vtex.png?ims=160x90',
               alt: 'El logo de VTEX, que consiste en el nombre de la empresa en una fuente estilizada.'
             },
-            description: 'VTEX construye aplicaciones serverless de latencia ultrabaja con Azion y permite que miles...',
+            description:
+              'VTEX construye aplicaciones serverless de latencia ultrabaja con Azion y permite que miles...',
             link: {
               href: '/es/casos-de-exito/vtex/',
               label: 'Leer más'
@@ -189,14 +196,15 @@ const menuData = {
               src: '/assets/blog/images/uploads/magalu.png?ims=160x90',
               alt: 'El logo de Magalu, que consiste en el nombre de la empresa en una fuente estilizada.'
             },
-            description: 'Magalu garantiza una alta disponibilidad para cientos de aplicaciones de escala global...',
+            description:
+              'Magalu garantiza una alta disponibilidad para cientos de aplicaciones de escala global...',
             link: {
               href: '/es/casos-de-exito/magalu/',
               label: 'Leer más'
             }
           }
         ]
-      },
+      }
     },
     {
       label: 'Precios',
@@ -212,9 +220,10 @@ const menuData = {
           items: [
             {
               label: 'Sitios Jamstack',
-              description: 'Mejora el desempeño, seguridad y escalabilidad de tus sitios y aplicaciones web',
+              description:
+                'Mejora el desempeño, seguridad y escalabilidad de tus sitios y aplicaciones web',
               href: '/es/soluciones/sitios-jamstack/'
-            },
+            }
             // {
             //   label: 'Aplicaciones Serverless',
             //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
@@ -237,14 +246,16 @@ const menuData = {
             },
             {
               label: 'Modernización de Seguridad',
-              description: 'Simplifica tu estructura de seguridad y protege tu negocio con una plataforma de edge integral',
+              description:
+                'Simplifica tu estructura de seguridad y protege tu negocio con una plataforma de edge integral',
               href: '/es/soluciones/modernizacion-de-seguridad/'
             },
             {
               label: 'Gestión de bots',
-              description: 'Minimiza el fraude y tiempos de actividad con mejor observabilidad en aplicaciones web y API',
+              description:
+                'Minimiza el fraude y tiempos de actividad con mejor observabilidad en aplicaciones web y API',
               href: '/es/soluciones/gestion-de-bots/'
-            },
+            }
           ]
         },
         {
@@ -252,7 +263,8 @@ const menuData = {
           items: [
             {
               label: 'Entrega de contenido (CDN)',
-              description: 'Desde el edge, lleva tu experiencia de entrega más allá de las CDN tradicionales',
+              description:
+                'Desde el edge, lleva tu experiencia de entrega más allá de las CDN tradicionales',
               href: '/es/soluciones/entrega-de-contenido-cdn/'
             },
             {
@@ -269,9 +281,9 @@ const menuData = {
               label: 'Live Streaming',
               description: 'Máximo desempeño y seguridad para tu live streaming bajo demanda',
               href: '/es/soluciones/live-streaming/'
-            },
+            }
           ]
-        },
+        }
       ],
       rightBlock: {
         label: 'Casos de Éxito',
@@ -282,7 +294,8 @@ const menuData = {
               src: '/assets/blog/images/uploads/vtex.png?ims=160x90',
               alt: 'Logo de VTEX'
             },
-            description: 'VTEX construye aplicaciones serverless de ultra baja latencia con Azion y permite miles...',
+            description:
+              'VTEX construye aplicaciones serverless de ultra baja latencia con Azion y permite miles...',
             link: {
               href: '/es/casos-de-exito/vtex/',
               label: 'Leer más'
@@ -293,7 +306,8 @@ const menuData = {
               src: '/assets/blog/images/uploads/magalu.png?ims=160x90',
               alt: 'Logo de Magalu'
             },
-            description: 'Magalu garantiza alta disponibilidad para cientos de aplicaciones a escala global...',
+            description:
+              'Magalu garantiza alta disponibilidad para cientos de aplicaciones a escala global...',
             link: {
               href: '/es/casos-de-exito/magalu/',
               label: 'Leer más'
@@ -312,13 +326,15 @@ const menuData = {
             {
               icon: 'pi pi-play',
               label: 'Punto de Partida',
-              description: 'Esta página de documentación te ayudará a comenzar tu camino con Azion.',
+              description:
+                'Esta página de documentación te ayudará a comenzar tu camino con Azion.',
               href: '/en/documentation/products/getting-started/'
             },
             {
               icon: 'pi pi-map',
               label: 'Guías',
-              description: 'Descubre nuestras guías que te ayudarán en la plataforma de edge de Azion.',
+              description:
+                'Descubre nuestras guías que te ayudarán en la plataforma de edge de Azion.',
               href: '/en/documentation/products/guides/'
             },
             {
@@ -330,7 +346,8 @@ const menuData = {
             {
               icon: 'pi pi-code',
               label: 'API',
-              description: 'Documentación que te guiará en los primeros pasos para usar la API de Azion.',
+              description:
+                'Documentación que te guiará en los primeros pasos para usar la API de Azion.',
               href: 'https://api.azion.com/'
             },
             {
@@ -342,9 +359,10 @@ const menuData = {
             {
               icon: 'pi pi-briefcase',
               label: 'Acuerdos',
-              description: 'Nuestros términos de servicio, acuerdo con el cliente, política de privacidad y más.',
+              description:
+                'Nuestros términos de servicio, acuerdo con el cliente, política de privacidad y más.',
               href: '/en/documentation/agreements/'
-            },
+            }
           ]
         },
         {
@@ -357,7 +375,7 @@ const menuData = {
         },
         {
           label: 'Marketplace',
-          href: '/es/marketplace/',
+          href: '/es/marketplace/'
         },
         {
           label: 'Compliance',
@@ -371,8 +389,8 @@ const menuData = {
           label: 'Comunidad',
           href: 'https://discord.com/invite/Yp9N7RMVZy',
           external: true,
-          icon: "pi pi-external-link"
-        },
+          icon: 'pi pi-external-link'
+        }
       ],
       rightBlock: {
         label: 'Contenido destacado',
@@ -383,8 +401,10 @@ const menuData = {
               src: '/assets/blog/images/uploads/thumbnailblog-4templatesimproveexperience-440x343px-1.png',
               alt: 'Aprovecha el poder de edge computing con el nuevo conjunto de templates de Azion'
             },
-            title: 'Aprovecha el poder de edge computing con el nuevo conjunto de templates de Azion',
-            description: 'Explora las herramientas intuitivas para desarrolladores de Azion. Simplif...',
+            title:
+              'Aprovecha el poder de edge computing con el nuevo conjunto de templates de Azion',
+            description:
+              'Explora las herramientas intuitivas para desarrolladores de Azion. Simplif...',
             link: {
               href: '/es/blog/nuevo-conjunto-templates-azion-dev/',
               label: 'Leer más'
@@ -394,28 +414,28 @@ const menuData = {
       }
     }
   ]
-};
+}
 
 const menuSecondary = [
   {
-    text: "Contacto",
-    title: "Contactar Ventas",
-    link: "/es/contacto-ventas/",
-    destak: false,
+    text: 'Contacto',
+    title: 'Contactar Ventas',
+    link: '/es/contacto-ventas/',
+    destak: false
   },
   {
-    text: "Iniciar sesión",
-    title: "Azion Console Login",
-    link: "https://console.azion.com/login",
-    destak: false,
+    text: 'Iniciar sesión',
+    title: 'Azion Console Login',
+    link: 'https://console.azion.com/login',
+    destak: false
   },
   {
-    text: "Cuenta Gratis",
-    title: "Azion Cuenta Gratis",
-    link: "https://console.azion.com/signup/",
-    destak: true,
+    text: 'Cuenta Gratis',
+    title: 'Azion Cuenta Gratis',
+    link: 'https://console.azion.com/signup/',
+    destak: true
   }
-];
+]
 
 const menuSecondaryMobile = [
   {
@@ -444,7 +464,7 @@ const menuSecondaryMobile = [
       }
     ]
   }
-];
+]
 
 const bottomButtonsMobile = [
   {
@@ -464,7 +484,7 @@ const bottomButtonsMobile = [
     urlTitle: 'Contacto',
     icon: 'pi pi-chevron-right text-xs'
   }
-];
+]
 
 const algoliaIndex = [
   {
@@ -487,7 +507,7 @@ const algoliaIndex = [
     label: 'cases',
     activeIndex: 4
   }
-];
+]
 
 const algoliaModel = [
   { label: 'All' },
@@ -495,9 +515,9 @@ const algoliaModel = [
   { label: 'Docs' },
   { label: 'Blog' },
   { label: 'Cases' }
-];
+]
 
-const algoliaInputPlaceholder = "Escribe tu búsqueda"
+const algoliaInputPlaceholder = 'Escribe tu búsqueda'
 
 export default {
   menuData,

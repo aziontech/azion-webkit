@@ -1,4 +1,4 @@
-import CardTitle from "../../../templates/cardtitle"
+import CardTitle from '../../../templates/cardtitle'
 
 export default {
   title: 'Components/Card/CardTitle',
@@ -6,9 +6,9 @@ export default {
   tags: ['autodocs'],
   argTypes: {
     titleTag: {
-      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', ''],
+      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', '']
     }
-  },
+  }
 }
 
 const CardTitleTemplate = `<CardTitle v-bind="args">

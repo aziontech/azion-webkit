@@ -5,17 +5,17 @@
  *
  * @module `livemap`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in Livemap component.
  */
 export interface LivemapProps {
-  lang: string;
-  enableZoom: string;
-  autoRotate: boolean;
-  autoRotateSpeed: boolean;
+  lang: string
+  enableZoom: string
+  autoRotate: boolean
+  autoRotateSpeed: boolean
 }
 
 /**
@@ -25,7 +25,7 @@ export interface LivemapSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -35,18 +35,18 @@ export interface LivemapEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class Livemap extends ClassComponent<LivemapProps, LivemapSlots, LivemapEmits> { }
+declare class Livemap extends ClassComponent<LivemapProps, LivemapSlots, LivemapEmits> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Livemap: GlobalComponentConstructor<Livemap>;
+    Livemap: GlobalComponentConstructor<Livemap>
   }
 }
 
-export default Livemap;
+export default Livemap

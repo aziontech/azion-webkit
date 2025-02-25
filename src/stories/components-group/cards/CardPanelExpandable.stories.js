@@ -1,4 +1,4 @@
-import CardPanelExpandable from "../../../templates/cardpanelexpandable"
+import CardPanelExpandable from '../../../templates/cardpanelexpandable'
 
 export default {
   title: 'Components Group/Card Panel Expandable',
@@ -6,17 +6,19 @@ export default {
   tags: ['autodocs'],
   argTypes: {
     activeIndex: {
-      description: "Card que estará expandido após o render"
+      description: 'Card que estará expandido após o render'
     },
     maxHeight: {
-      description: "Para garantir que o grid não pule com a animação é necessário setar o height do componente"
+      description:
+        'Para garantir que o grid não pule com a animação é necessário setar o height do componente'
     }
-  },
+  }
 }
 
 const DefaultCard = new Array(3).fill({
-  "title": "New at Azion? Start your Azion journey seamlessly",
-  "description": "This documentation will assist you to Get started and walk your first steps on Azion.",
+  title: 'New at Azion? Start your Azion journey seamlessly',
+  description:
+    'This documentation will assist you to Get started and walk your first steps on Azion.'
 })
 
 const props = {
@@ -27,6 +29,6 @@ const props = {
 
 export const Default = {
   args: {
-     ...props
-    }
+    ...props
+  }
 }

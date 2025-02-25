@@ -1,4 +1,4 @@
-import CardReleaseCarousel from "../../templates/releasecarousel"
+import CardReleaseCarousel from '../../templates/releasecarousel'
 
 export default {
   title: 'Components Group/Release Carousel',
@@ -6,18 +6,18 @@ export default {
   tags: ['autodocs'],
   argTypes: {
     data: {
-      description: "Tag, title, card, image"
+      description: 'Tag, title, card, image'
     },
     numVisible: {
-      description: "Numero de cards visiveis"
+      description: 'Numero de cards visiveis'
     },
     numScroll: {
-      description: "Numero de cards que serão movimentados"
+      description: 'Numero de cards que serão movimentados'
     },
     autoplayInterval: {
-      description: "Tempo do scroll entre animações"
+      description: 'Tempo do scroll entre animações'
     }
-  },
+  }
 }
 
 export const Default = {
@@ -25,59 +25,61 @@ export const Default = {
     data: [
       {
         tag: {
-          icon: "pi pi-star",
-          label: "award"
+          icon: 'pi pi-star',
+          label: 'award'
         },
-        title: "Clientes da Gartner afirmam que a Azion se destaca por oferecer uma abordagem consultiva para orquestração e ambientes de aplicação de Edge Computing.",
+        title:
+          'Clientes da Gartner afirmam que a Azion se destaca por oferecer uma abordagem consultiva para orquestração e ambientes de aplicação de Edge Computing.',
         card: {
-          icon: "pi pi-external",
-          link: "",
-          ariaLabel: ""
+          icon: 'pi pi-external',
+          link: '',
+          ariaLabel: ''
         },
         image: {
-          light: "https://www.azion.com/assets/images/logos/light/gigaom-logo-default.svg?ims=x40",
-          dark: "https://www.azion.com/assets/images/logos/light/gigaom-logo-default.svg?ims=x40",
-          alt: "lorem",
-          description: "lorem ipsum"
+          light: 'https://www.azion.com/assets/images/logos/light/gigaom-logo-default.svg?ims=x40',
+          dark: 'https://www.azion.com/assets/images/logos/light/gigaom-logo-default.svg?ims=x40',
+          alt: 'lorem',
+          description: 'lorem ipsum'
         }
       },
       {
         tag: {
-          icon: "pi pi-star",
-          label: "award"
+          icon: 'pi pi-star',
+          label: 'award'
         },
-        title: "Clientes da Gartner afirmam que a Azion se destaca por oferecer uma abordagem consultiva para orquestração e ambientes de aplicação de Edge Computing.",
+        title:
+          'Clientes da Gartner afirmam que a Azion se destaca por oferecer uma abordagem consultiva para orquestração e ambientes de aplicação de Edge Computing.',
         card: {
-          icon: "pi pi-external",
-          link: "",
-          ariaLabel: ""
+          icon: 'pi pi-external',
+          link: '',
+          ariaLabel: ''
         },
         image: {
-          light: "https://www.azion.com/assets/images/logos/light/gigaom-logo-default.svg?ims=x40",
-          dark: "https://www.azion.com/assets/images/logos/light/gigaom-logo-default.svg?ims=x40",
-          alt: "lorem",
-          description: "lorem ipsum"
+          light: 'https://www.azion.com/assets/images/logos/light/gigaom-logo-default.svg?ims=x40',
+          dark: 'https://www.azion.com/assets/images/logos/light/gigaom-logo-default.svg?ims=x40',
+          alt: 'lorem',
+          description: 'lorem ipsum'
         }
       },
       {
         tag: {
-          icon: "pi pi-star",
-          label: "award"
+          icon: 'pi pi-star',
+          label: 'award'
         },
-        title: "Clientes da Gartner afirmam que a Azion se destaca por oferecer uma abordagem consultiva para orquestração e ambientes de aplicação de Edge Computing.",
+        title:
+          'Clientes da Gartner afirmam que a Azion se destaca por oferecer uma abordagem consultiva para orquestração e ambientes de aplicação de Edge Computing.',
         card: {
-          icon: "pi pi-external",
-          link: "",
-          ariaLabel: ""
+          icon: 'pi pi-external',
+          link: '',
+          ariaLabel: ''
         },
         image: {
-          light: "https://www.azion.com/assets/images/logos/light/gigaom-logo-default.svg?ims=x40",
-          dark: "https://www.azion.com/assets/images/logos/light/gigaom-logo-default.svg?ims=x40",
-          alt: "lorem",
-          description: "lorem ipsum"
+          light: 'https://www.azion.com/assets/images/logos/light/gigaom-logo-default.svg?ims=x40',
+          dark: 'https://www.azion.com/assets/images/logos/light/gigaom-logo-default.svg?ims=x40',
+          alt: 'lorem',
+          description: 'lorem ipsum'
         }
-      },
+      }
     ]
   }
 }
-

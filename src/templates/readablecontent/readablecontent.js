@@ -1,2 +1,2 @@
-import ReadableContent from './ReadableContent.vue';
-export default ReadableContent;
+import ReadableContent from './ReadableContent.vue'
+export default ReadableContent

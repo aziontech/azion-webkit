@@ -5,8 +5,8 @@
  *
  * @module `selecttheme`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in SelectTheme component.
@@ -20,7 +20,7 @@ export interface SelectThemeSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -30,18 +30,22 @@ export interface SelectThemeEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class SelectTheme extends ClassComponent<SelectThemeProps, SelectThemeSlots, SelectThemeEmits> { }
+declare class SelectTheme extends ClassComponent<
+  SelectThemeProps,
+  SelectThemeSlots,
+  SelectThemeEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    SelectTheme: GlobalComponentConstructor<SelectTheme>;
+    SelectTheme: GlobalComponentConstructor<SelectTheme>
   }
 }
 
-export default SelectTheme;
+export default SelectTheme

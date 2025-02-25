@@ -1,2 +1,2 @@
-import NewsletterCard from './NewsletterCard.vue';
-export default NewsletterCard;
+import NewsletterCard from './NewsletterCard.vue'
+export default NewsletterCard

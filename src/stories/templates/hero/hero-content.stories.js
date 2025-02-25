@@ -1,6 +1,6 @@
-import Breadcrumb from "primevue/breadcrumb"
+import Breadcrumb from 'primevue/breadcrumb'
 import HeroArticle from '../../../templates/heroarticle'
-import Container from "../../../templates/container"
+import Container from '../../../templates/container'
 import Rules from '../../rules'
 
 export default {
@@ -13,39 +13,39 @@ export default {
 ${Rules.hero.title}
 ${Rules.hero.description}
 ${Rules.hero.avatar}
-        `,
-      },
-    },
+        `
+      }
+    }
   },
   component: HeroArticle,
   tags: ['autodocs'],
   argTypes: {}
-};
-
+}
 
 const MOCK = {
   breadcrumbItems: [
     {
       url: `/en/blog/`,
-      target: "_self",
-      label: "Blog",
+      target: '_self',
+      label: 'Blog'
     },
     {
       url: 'www.azion.com',
-      target: "_self",
-      label: 'This Article',
-    },
+      target: '_self',
+      label: 'This Article'
+    }
   ],
-  "date": "JUN 27, 2024 • 15 min read",
-  "title": "Azion Edge SQL: enabling access and analysis of structured data at the edge",
-  "authors": [
-      {
-          "avatar": "https://www.azion.com/assets/blog/images/uploads/img-prof.png",
-          "title": "Mariana Bellorín Aguilera",
-          "role": "Technical Writer"
-      }
+  date: 'JUN 27, 2024 • 15 min read',
+  title: 'Azion Edge SQL: enabling access and analysis of structured data at the edge',
+  authors: [
+    {
+      avatar: 'https://www.azion.com/assets/blog/images/uploads/img-prof.png',
+      title: 'Mariana Bellorín Aguilera',
+      role: 'Technical Writer'
+    }
   ],
-  "description": "Explore how Azion Edge SQL enhances database operations with edge computing for high scalability, low latency, and cost-effectiveness."
+  description:
+    'Explore how Azion Edge SQL enhances database operations with edge computing for high scalability, low latency, and cost-effectiveness.'
 }
 
 const template = `
@@ -70,5 +70,5 @@ export const Default = Template.bind({})
 Default.args = MOCK
 
 Default.parameters = {
-  docs: { source: { code: template } },
-};
+  docs: { source: { code: template } }
+}

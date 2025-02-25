@@ -1,9 +1,9 @@
-import ContentLogo from "../../templates/contentlogo"
+import ContentLogo from '../../templates/contentlogo'
 
 export default {
   title: 'Components Group/Content Logo',
   component: ContentLogo,
-  tags: ['autodocs'],
+  tags: ['autodocs']
 }
 
 const logos = Array(4).fill({
@@ -14,18 +14,17 @@ const logos = Array(4).fill({
       <path d="M.325.17h74.29v17H.325z"></path>
   </defs>
 </svg>`,
-alt: "Logo Renner",
-href: "https://www.azion.com/pt-br/casos-de-sucesso/renner/"
+  alt: 'Logo Renner',
+  href: 'https://www.azion.com/pt-br/casos-de-sucesso/renner/'
 })
 
 const props = {
   isCentralized: true,
-  title: "Content Logo Block",
+  title: 'Content Logo Block',
   logos: logos,
-  size: "default"
+  size: 'default'
 }
 
 export const Default = {
   args: props
 }
-

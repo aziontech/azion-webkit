@@ -1,2 +1,2 @@
-import CardCases from './CardCases.vue';
-export default CardCases;
+import CardCases from './CardCases.vue'
+export default CardCases

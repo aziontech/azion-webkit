@@ -1,2 +1,2 @@
-import FooterSimple from './FooterSimple.vue';
-export default FooterSimple;
+import FooterSimple from './FooterSimple.vue'
+export default FooterSimple

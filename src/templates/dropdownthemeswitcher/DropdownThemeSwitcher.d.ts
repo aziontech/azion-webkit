@@ -5,8 +5,8 @@
  *
  * @module `themeswitcher`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in ThemeSwitcher component.
@@ -20,7 +20,7 @@ export interface ThemeSwitcherSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -30,18 +30,22 @@ export interface ThemeSwitcherEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class ThemeSwitcher extends ClassComponent<ThemeSwitcherProps, ThemeSwitcherSlots, ThemeSwitcherEmits> { }
+declare class ThemeSwitcher extends ClassComponent<
+  ThemeSwitcherProps,
+  ThemeSwitcherSlots,
+  ThemeSwitcherEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    ThemeSwitcher: GlobalComponentConstructor<ThemeSwitcher>;
+    ThemeSwitcher: GlobalComponentConstructor<ThemeSwitcher>
   }
 }
 
-export default ThemeSwitcher;
+export default ThemeSwitcher

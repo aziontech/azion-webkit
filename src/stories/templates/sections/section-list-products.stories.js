@@ -1,4 +1,3 @@
-
 import ContentSection from '../../../templates/contentsection'
 import LinkButton from '../../../templates/linkbutton'
 import CardBase from '../../../templates/cardbase'
@@ -18,10 +17,10 @@ export default {
 ${Rules.section.overline}
 ${Rules.section.title}
 ${Rules.section.cardsProducts}
-        `,
-      },
-    },
-  },
+        `
+      }
+    }
+  }
 }
 
 const config = (args) => {
@@ -64,37 +63,39 @@ const config = (args) => {
   }
 }
 
-const Template = (args) => (config(args))
+const Template = (args) => config(args)
 export const Default = Template.bind({})
 Default.args = {
-  "overline": "Products",
-  "title": "Products and Services Related to Jamstack Websites",
-  "list": [
+  overline: 'Products',
+  title: 'Products and Services Related to Jamstack Websites',
+  list: [
     {
-      "icon": "ai ai-edge-application",
-      "title": "Edge Application",
-      "description": "Enables the development of web applications to run on the Azion Edge Computing Platform.",
-      "link": "https://www.azion.com/en/products/edge-application/",
-      "addons": [
+      icon: 'ai ai-edge-application',
+      title: 'Edge Application',
+      description:
+        'Enables the development of web applications to run on the Azion Edge Computing Platform.',
+      link: 'https://www.azion.com/en/products/edge-application/',
+      addons: [
         {
-          "label": "Application Accelerator",
-          "link": "https://www.azion.com/en/products/application-accelerator/"
+          label: 'Application Accelerator',
+          link: 'https://www.azion.com/en/products/application-accelerator/'
         },
         {
-          "label": "Edge Functions",
-          "link": "https://www.azion.com/en/products/edge-functions/"
+          label: 'Edge Functions',
+          link: 'https://www.azion.com/en/products/edge-functions/'
         },
         {
-          "label": "Edge Cache",
-          "link": "https://www.azion.com/en/products/edge-cache/"
+          label: 'Edge Cache',
+          link: 'https://www.azion.com/en/products/edge-cache/'
         }
       ]
     },
     {
-      "icon": "ai ai-edge-storage",
-      "title": "Edge Storage",
-      "description": "Facilitates low-latency storage and retrieval of objects anywhere, with no vendor lock-in via an S3-compatible API.",
-      "link": "https://www.azion.com/en/products/edge-storage/"
+      icon: 'ai ai-edge-storage',
+      title: 'Edge Storage',
+      description:
+        'Facilitates low-latency storage and retrieval of objects anywhere, with no vendor lock-in via an S3-compatible API.',
+      link: 'https://www.azion.com/en/products/edge-storage/'
     }
   ]
 }

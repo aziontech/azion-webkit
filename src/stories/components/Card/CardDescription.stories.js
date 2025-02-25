@@ -1,11 +1,10 @@
-import CardDescription from "../../../templates/carddescription"
+import CardDescription from '../../../templates/carddescription'
 
 export default {
   title: 'Components/Card/CardDescription',
   component: CardDescription,
   tags: ['autodocs'],
-  argTypes: {
-  },
+  argTypes: {}
 }
 
 const CardDescriptionTemplate = `<CardDescription v-bind="args">
@@ -23,16 +22,15 @@ const Template = (args) => ({
 export const Default = Template.bind({})
 
 export const Primary = Template.bind({})
-Primary.args ={
-  color: "primary"
+Primary.args = {
+  color: 'primary'
 }
 export const Large = Template.bind({})
 Large.args = {
-  size: "large"
+  size: 'large'
 }
 
 export const Small = Template.bind({})
 Small.args = {
-  size: "small"
+  size: 'small'
 }
-

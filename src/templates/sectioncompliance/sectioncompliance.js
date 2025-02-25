@@ -1,2 +1,2 @@
-import SectionCompliance from './SectionCompliance.vue';
-export default SectionCompliance;
+import SectionCompliance from './SectionCompliance.vue'
+export default SectionCompliance

@@ -9,40 +9,40 @@ export default {
       control: { type: 'radio' },
       options: ['blog', 'cases']
     }
-  },
+  }
 }
 
 const DefaultCard = new Array(10).fill({
-  "title": "New at Azion? Start your Azion journey seamlessly",
-  "imgSrc": "https://www.azion.com/assets/blog/images/fallback-cards/card-empty-1.png",
-  "imgAlt": "Azion logo",
-  "description": "This documentation will assist you to Get started and walk your first steps on Azion.",
-  "link": "https://www.azion.com/en/documentation/products/get-started/",
-  tagList: ["Blog"]
+  title: 'New at Azion? Start your Azion journey seamlessly',
+  imgSrc: 'https://www.azion.com/assets/blog/images/fallback-cards/card-empty-1.png',
+  imgAlt: 'Azion logo',
+  description:
+    'This documentation will assist you to Get started and walk your first steps on Azion.',
+  link: 'https://www.azion.com/en/documentation/products/get-started/',
+  tagList: ['Blog']
 })
-
 
 const props = {
   categories: ['All posts', 'Blog', 'Cases'],
   defaultTab: 'All posts',
   inputPlaceholder: 'Search',
-  data: DefaultCard,
+  data: DefaultCard
 }
 
 export const Default = {
   args: {
-     ...props
-    }
+    ...props
+  }
 }
 
 export const isSearchEnabled = {
   args: {
     ...props,
     isSearchEnabled: true,
-    algoliaAppId: "",
-    algoliaApiKey: "",
+    algoliaAppId: '',
+    algoliaApiKey: '',
     algoliaIndex: [],
-    algoliaModel: [],
+    algoliaModel: []
   }
 }
 
@@ -51,6 +51,6 @@ export const isLoadMoreEnabled = {
     ...props,
     isLoadMoreEnabled: true,
     loadMoreNumber: 3,
-    buttonText: "Load more",
+    buttonText: 'Load more'
   }
 }

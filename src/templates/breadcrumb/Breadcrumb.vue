@@ -6,13 +6,16 @@
           v-if="item.url"
           :href="item.url"
           :target="item.target"
-          v-bind="props.action">
-
+          v-bind="props.action"
+        >
           <span class="text-color-secondary">
             {{ item.label }}
           </span>
         </a>
-        <p v-else class="p-menuitem-link">
+        <p
+          v-else
+          class="p-menuitem-link"
+        >
           <span class="text-color-secondary">
             {{ item.label }}
           </span>
@@ -23,8 +26,8 @@
 </template>
 
 <script setup>
-	import Breadcrumb from 'primevue/breadcrumb';
-	const props = defineProps({
-		data: { type: Array }
-	});
+  import Breadcrumb from 'primevue/breadcrumb'
+  const props = defineProps({
+    data: { type: Array }
+  })
 </script>

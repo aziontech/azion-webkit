@@ -1,4 +1,4 @@
-import CardBase from "../../templates/cardbase"
+import CardBase from '../../templates/cardbase'
 
 export default {
   title: 'Components Group/CardBase',
@@ -11,7 +11,8 @@ export default {
       control: { type: 'radio' }
     },
     grid: {
-      description: 'Se true e o card estiver em um layout de grid ou flexbox, ele se estenderá até preencher completamente o espaço disponível na div.',
+      description:
+        'Se true e o card estiver em um layout de grid ou flexbox, ele se estenderá até preencher completamente o espaço disponível na div.'
     },
     backgroundColor: {
       description: 'Defina o estilo de background do card',
@@ -24,10 +25,10 @@ export default {
       control: { type: 'radio' }
     },
     pt: {
-      description: 'Styles  Pass Through',
+      description: 'Styles  Pass Through'
     }
   }
-};
+}
 
 const cardTemplate = `<CardBase>
                         <template #header>

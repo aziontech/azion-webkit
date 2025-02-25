@@ -6,8 +6,8 @@
  *
  * @module breadcrumb
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in Breadcrumb component.
@@ -16,7 +16,7 @@ export interface BreadcrumbProps {
   /**
    * https://primevue.org/breadcrumb/
    */
-  data: [],
+  data: []
 }
 
 /**
@@ -26,7 +26,7 @@ export interface BreadcrumbSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -36,18 +36,22 @@ export interface BreadcrumbEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class Breadcrumb extends ClassComponent<BreadcrumbProps, BreadcrumbSlots, BreadcrumbEmits> { }
+declare class Breadcrumb extends ClassComponent<
+  BreadcrumbProps,
+  BreadcrumbSlots,
+  BreadcrumbEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Breadcrumb: GlobalComponentConstructor<Breadcrumb>;
+    Breadcrumb: GlobalComponentConstructor<Breadcrumb>
   }
 }
 
-export default Breadcrumb;
+export default Breadcrumb

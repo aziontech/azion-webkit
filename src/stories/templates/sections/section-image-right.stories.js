@@ -1,4 +1,3 @@
-
 import ContentSection from '../../../templates/contentsection'
 import LinkButton from '../../../templates/linkbutton'
 import ImageSwitcher from '../../../templates/themeawareimageswitcher'
@@ -17,10 +16,10 @@ ${Rules.section.overline}
 ${Rules.section.title}
 ${Rules.section.description}
 ${Rules.section.image}
-        `,
-      },
-    },
-  },
+        `
+      }
+    }
+  }
 }
 
 const config = (args) => {
@@ -53,10 +52,12 @@ const config = (args) => {
   }
 }
 
-const Template = (args) => (config(args))
+const Template = (args) => config(args)
 export const Default = Template.bind({})
 Default.args = {
   overline: 'Edge Connectivity',
-  title: 'Azion’s robust connectivity strategy helps us deliver the best performance, availability, and resiliency to our customers',
-  description: "Our highly distributed architecture includes edge nodes strategically located inside ISPs' (Internet Service Providers) last-mile networks and connectivity to multiple IXPs (Internet Exchange Points), private and public peerings, and Tier 1 transit providers around the world.",
+  title:
+    'Azion’s robust connectivity strategy helps us deliver the best performance, availability, and resiliency to our customers',
+  description:
+    "Our highly distributed architecture includes edge nodes strategically located inside ISPs' (Internet Service Providers) last-mile networks and connectivity to multiple IXPs (Internet Exchange Points), private and public peerings, and Tier 1 transit providers around the world."
 }

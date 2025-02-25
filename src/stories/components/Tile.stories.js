@@ -7,7 +7,7 @@ export default {
   argTypes: {
     severity: {
       control: { type: 'select' },
-      options: ['default', 'primary', 'warning', 'success', 'info' ]
+      options: ['default', 'primary', 'warning', 'success', 'info']
     }
   }
 }

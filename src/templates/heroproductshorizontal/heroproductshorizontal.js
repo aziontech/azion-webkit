@@ -1,2 +1,2 @@
-import HeroProductsHorizontal from './HeroProductsHorizontal.vue';
-export default HeroProductsHorizontal;
+import HeroProductsHorizontal from './HeroProductsHorizontal.vue'
+export default HeroProductsHorizontal

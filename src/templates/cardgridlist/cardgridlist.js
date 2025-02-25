@@ -1,2 +1,2 @@
-import CardGridList from './CardGridList.vue';
-export default CardGridList;
+import CardGridList from './CardGridList.vue'
+export default CardGridList

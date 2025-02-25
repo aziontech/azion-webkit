@@ -5,8 +5,8 @@
  *
  * @module `keyboardkey`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in KeyboardKey component.
@@ -15,7 +15,7 @@ export interface KeyboardKeyProps {
   /**
    * Defines key pressed
    */
-  keyname: string;
+  keyname: string
 }
 
 /**
@@ -25,7 +25,7 @@ export interface KeyboardKeySlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -35,18 +35,22 @@ export interface KeyboardKeyEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class KeyboardKey extends ClassComponent<KeyboardKeyProps, KeyboardKeySlots, KeyboardKeyEmits> { }
+declare class KeyboardKey extends ClassComponent<
+  KeyboardKeyProps,
+  KeyboardKeySlots,
+  KeyboardKeyEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    KeyboardKey: GlobalComponentConstructor<KeyboardKey>;
+    KeyboardKey: GlobalComponentConstructor<KeyboardKey>
   }
 }
 
-export default KeyboardKey;
+export default KeyboardKey

@@ -3,8 +3,8 @@ import FormBase from '../../templates/formblock'
 export default {
   title: 'Components Group/FormBase',
   component: FormBase,
-  tags: ['autodocs'],
-};
+  tags: ['autodocs']
+}
 
 const formTemplate = `
 <FormBase v-bind="args">
@@ -27,6 +27,7 @@ const Template = (args) => ({
 
 export const Default = Template.bind({})
 Default.args = {
-  title: "Form Base",
-  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit in diam nonumy euismod tempor incididunt ut labore et dolore magna aliqu compliance et"
+  title: 'Form Base',
+  description:
+    'lorem ipsum dolor sit amet, consectetur adipiscing elit in diam nonumy euismod tempor incididunt ut labore et dolore magna aliqu compliance et'
 }

@@ -1,4 +1,4 @@
-.hbspt-form form label:not(.hs-error-msg)>span,
+.hbspt-form form label:not(.hs-error-msg) > span,
 .hbspt-form form select,
 .hbspt-form form input,
 .hbspt-form form textarea {
@@ -23,9 +23,13 @@
   color: var(--text-color) !important;
   font-family: var(--font-family) !important;
   font-feature-settings: var(--font-feature-settings, normal) !important;
-  font-size: .875rem !important;
-  padding: .344rem .5rem !important;
-  transition: background-color .2s, color .2s, border-color .2s, box-shadow .2s !important;
+  font-size: 0.875rem !important;
+  padding: 0.344rem 0.5rem !important;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s !important;
 }
 
 .hbspt-form form select:focus,
@@ -64,8 +68,12 @@
   border-radius: 6px !important;
   color: var(--primary-text-color) !important;
   font-size: 1rem !important;
-  padding: .344rem .75rem !important;
-  transition: background-color .2s, color .2s, border-color .2s, box-shadow .2s !important;
+  padding: 0.344rem 0.75rem !important;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s !important;
 }
 
 /* Styling for form fieldsets */
@@ -76,11 +84,11 @@
 }
 
 /* Input and select styling */
-.hbspt-form form input[type="text"],
-.hbspt-form form input[type="email"],
-.hbspt-form form input[type="number"],
-.hbspt-form form input[type="tel"],
-.hbspt-form form input[type="password"],
+.hbspt-form form input[type='text'],
+.hbspt-form form input[type='email'],
+.hbspt-form form input[type='number'],
+.hbspt-form form input[type='tel'],
+.hbspt-form form input[type='password'],
 .hbspt-form form textarea,
 .hbspt-form form select {
   display: block;
@@ -95,21 +103,21 @@
 }
 
 /* Input and select styling */
-.hbspt-form form input[type="text"],
-.hbspt-form form input[type="email"],
-.hbspt-form form input[type="number"],
-.hbspt-form form input[type="tel"],
-.hbspt-form form input[type="password"],
+.hbspt-form form input[type='text'],
+.hbspt-form form input[type='email'],
+.hbspt-form form input[type='number'],
+.hbspt-form form input[type='tel'],
+.hbspt-form form input[type='password'],
 .hbspt-form form select {
   height: 2.5rem;
 }
 
-.hbspt-form form input[type=checkbox] {
+.hbspt-form form input[type='checkbox'] {
   width: 1rem !important;
   height: 1rem;
 }
 
-.hbspt-form form input[type=checkbox]:checked {
+.hbspt-form form input[type='checkbox']:checked {
   background-color: var(--p-tag-color) !important;
 }
 

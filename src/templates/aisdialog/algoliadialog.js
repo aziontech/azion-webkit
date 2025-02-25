@@ -1,2 +1,2 @@
-import AlgoliaDialog from './AlgoliaDialog.vue';
-export default AlgoliaDialog;
+import AlgoliaDialog from './AlgoliaDialog.vue'
+export default AlgoliaDialog

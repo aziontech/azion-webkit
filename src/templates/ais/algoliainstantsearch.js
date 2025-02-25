@@ -1,2 +1,2 @@
-import AlgoliaInstantSearch from './AlgoliaInstantSearch.vue';
-export default AlgoliaInstantSearch;
+import AlgoliaInstantSearch from './AlgoliaInstantSearch.vue'
+export default AlgoliaInstantSearch

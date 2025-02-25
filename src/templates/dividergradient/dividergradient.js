@@ -1,2 +1,2 @@
-import DividerGradient from './DividerGradient.vue';
-export default DividerGradient;
+import DividerGradient from './DividerGradient.vue'
+export default DividerGradient

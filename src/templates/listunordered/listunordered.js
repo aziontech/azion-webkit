@@ -1,2 +1,2 @@
-import ListUnordered from './ListUnordered.vue';
-export default ListUnordered;
+import ListUnordered from './ListUnordered.vue'
+export default ListUnordered

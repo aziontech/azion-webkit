@@ -1,2 +1,2 @@
-import MenuNavigationBlock from './MenuNavigationBlock.vue';
-export default MenuNavigationBlock;
+import MenuNavigationBlock from './MenuNavigationBlock.vue'
+export default MenuNavigationBlock

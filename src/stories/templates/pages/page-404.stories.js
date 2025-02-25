@@ -1,58 +1,56 @@
-
 import Overline from '../../../templates/overline'
 import EmptyState from '../../../templates/emptystateblock'
 import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Pages/page-404',
-  tags: ['autodocs'],
+  tags: ['autodocs']
 }
 
 const MOCK = {
-  "title": "Sorry, we couldn't find that page.",
-  "description": "Use the search bar or the navigation links below to browse the website.",
-  "table": [
+  title: "Sorry, we couldn't find that page.",
+  description: 'Use the search bar or the navigation links below to browse the website.',
+  table: [
     {
-      "label": "Company",
-      "items": [
-        { "label": "Home", "link": "/en/" },
-        { "label": "About Us", "link": "/en/about-us/" },
-        { "label": "Success Cases", "link": "/en/resource-hub/" },
-        { "label": "Blog", "link": "/en/blog/" }
+      label: 'Company',
+      items: [
+        { label: 'Home', link: '/en/' },
+        { label: 'About Us', link: '/en/about-us/' },
+        { label: 'Success Cases', link: '/en/resource-hub/' },
+        { label: 'Blog', link: '/en/blog/' }
       ]
     },
     {
-      "label": "Our Products",
-      "items": [
-        { "label": "Application Accelerator", "link": "/en/products/application-accelerator/" },
-        { "label": "DDoS Protection", "link": "/en/products/ddos-protection/" },
-        { "label": "Edge Cache", "link": "/en/products/edge-cache/" },
-        { "label": "Edge Functions", "link": "/en/products/edge-functions/" },
-        { "label": "Edge Pulse", "link": "/en/products/edge-pulse/" },
-        { "label": "Edge DNS", "link": "/en/products/edge-dns/" },
-        { "label": "Image Processor", "link": "/en/products/image-processor/" },
-        { "label": "Load Balancer", "link": "/en/products/load-balancer/" },
-        { "label": "Network Layer Protection", "link": "/en/products/network-layer-protection/" },
-        { "label": "Real-Time Events", "link": "/en/products/real-time-events/" },
-        { "label": "Real-Time Metrics", "link": "/en/products/real-time-metrics/" },
-        { "label": "Web Application Firewall", "link": "/en/products/web-application-firewall/" }
+      label: 'Our Products',
+      items: [
+        { label: 'Application Accelerator', link: '/en/products/application-accelerator/' },
+        { label: 'DDoS Protection', link: '/en/products/ddos-protection/' },
+        { label: 'Edge Cache', link: '/en/products/edge-cache/' },
+        { label: 'Edge Functions', link: '/en/products/edge-functions/' },
+        { label: 'Edge Pulse', link: '/en/products/edge-pulse/' },
+        { label: 'Edge DNS', link: '/en/products/edge-dns/' },
+        { label: 'Image Processor', link: '/en/products/image-processor/' },
+        { label: 'Load Balancer', link: '/en/products/load-balancer/' },
+        { label: 'Network Layer Protection', link: '/en/products/network-layer-protection/' },
+        { label: 'Real-Time Events', link: '/en/products/real-time-events/' },
+        { label: 'Real-Time Metrics', link: '/en/products/real-time-metrics/' },
+        { label: 'Web Application Firewall', link: '/en/products/web-application-firewall/' }
       ]
     },
     {
-      "label": "Getting Started",
-      "items": [
-        { "label": "Getting Started", "link": "/en/documentation/products/get-started/" },
-        { "label": "API", "link": "https://api.azion.com/" },
-        { "label": "Guides", "link": "/en/documentation/products/guides/" },
-        { "label": "Changelog", "link": "/en/documentation/products/changelog/" },
-        { "label": "Contact Sales", "link": "/en/contact-sales/" },
-        { "label": "System Status", "link": "https://status.azion.com/" },
-        { "label": "Free Account", "link": "https://console.azion.com/signup" }
+      label: 'Getting Started',
+      items: [
+        { label: 'Getting Started', link: '/en/documentation/products/get-started/' },
+        { label: 'API', link: 'https://api.azion.com/' },
+        { label: 'Guides', link: '/en/documentation/products/guides/' },
+        { label: 'Changelog', link: '/en/documentation/products/changelog/' },
+        { label: 'Contact Sales', link: '/en/contact-sales/' },
+        { label: 'System Status', link: 'https://status.azion.com/' },
+        { label: 'Free Account', link: 'https://console.azion.com/signup' }
       ]
     }
   ]
 }
-
 
 const template = `
 <Container class="px-container surface-ground">
@@ -98,5 +96,6 @@ Default.parameters = {
     description: {
       story: ''
     },
-    source: { code: template } },
-};
+    source: { code: template }
+  }
+}

@@ -1,5 +1,8 @@
 <template>
-  <ContentSection :overline="overline" :title="title">
+  <ContentSection
+    :overline="overline"
+    :title="title"
+  >
     <template #principal>
       <div class="relative">
         <ReleaseCarousel :data="items" />
@@ -26,5 +29,4 @@
       required: true
     }
   })
-
 </script>

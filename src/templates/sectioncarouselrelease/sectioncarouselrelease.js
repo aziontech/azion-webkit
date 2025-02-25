@@ -1,2 +1,2 @@
-import SectionCarouselRelease from './SectionCarouselRelease.vue';
-export default SectionCarouselRelease;
+import SectionCarouselRelease from './SectionCarouselRelease.vue'
+export default SectionCarouselRelease

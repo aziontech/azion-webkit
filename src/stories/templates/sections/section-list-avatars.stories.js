@@ -1,4 +1,3 @@
-
 import ContentSection from '../../../templates/contentsection'
 import Container from '../../../templates/container'
 import Rules from '../../rules'
@@ -14,10 +13,10 @@ export default {
 ${Rules.section.overline}
 ${Rules.section.title}
 ${Rules.section.avatars}
-        `,
-      },
-    },
-  },
+        `
+      }
+    }
+  }
 }
 
 const config = (args) => {
@@ -50,54 +49,53 @@ const config = (args) => {
   }
 }
 
-const Template = (args) => (config(args))
+const Template = (args) => config(args)
 export const Default = Template.bind({})
 Default.args = {
-  "overline": "Our Leadership",
-  "title": "Guided by exceptional minds",
-  "avatars": [
+  overline: 'Our Leadership',
+  title: 'Guided by exceptional minds',
+  avatars: [
     {
-      "image": "https://www.azion.com/assets/pages/about/perfil-6.png",
-      "name": "Rafael Umann",
-      "role": "Chief Executive Officer",
-      "linkedin": "https://www.linkedin.com/in/rafaelumann/"
+      image: 'https://www.azion.com/assets/pages/about/perfil-6.png',
+      name: 'Rafael Umann',
+      role: 'Chief Executive Officer',
+      linkedin: 'https://www.linkedin.com/in/rafaelumann/'
     },
     {
-      "image": "https://www.azion.com/assets/pages/about/perfil.png",
-      "name": "Alessandro Cauduro",
-      "role": "Chief Artificial Intelligence Officer",
-      "linkedin": "https://www.linkedin.com/in/alessandrocauduro/"
+      image: 'https://www.azion.com/assets/pages/about/perfil.png',
+      name: 'Alessandro Cauduro',
+      role: 'Chief Artificial Intelligence Officer',
+      linkedin: 'https://www.linkedin.com/in/alessandrocauduro/'
     },
     {
-      "image": "https://www.azion.com/assets/pages/about/perfil-1.png",
-      "name": "Andressa Giongo",
-      "role": "Chief People Officer",
-      "linkedin": "https://www.linkedin.com/in/andressa-giongo-90661311/"
+      image: 'https://www.azion.com/assets/pages/about/perfil-1.png',
+      name: 'Andressa Giongo',
+      role: 'Chief People Officer',
+      linkedin: 'https://www.linkedin.com/in/andressa-giongo-90661311/'
     },
     {
-      "image": "https://www.azion.com/assets/pages/about/perfil-2.png",
-      "name": "Fabiano Fraçao",
-      "role": "Chief Revenue Officer",
-      "linkedin": "https://www.linkedin.com/in/fabiano-fração-5b19632/"
+      image: 'https://www.azion.com/assets/pages/about/perfil-2.png',
+      name: 'Fabiano Fraçao',
+      role: 'Chief Revenue Officer',
+      linkedin: 'https://www.linkedin.com/in/fabiano-fração-5b19632/'
     },
     {
-      "image": "https://www.azion.com/assets/pages/about/perfil-3.png",
-      "name": "Júlio Silvello",
-      "role": "Chief Product Officer",
-      "linkedin": "https://www.linkedin.com/in/juliosilvello/"
+      image: 'https://www.azion.com/assets/pages/about/perfil-3.png',
+      name: 'Júlio Silvello',
+      role: 'Chief Product Officer',
+      linkedin: 'https://www.linkedin.com/in/juliosilvello/'
     },
     {
-      "image": "https://www.azion.com/assets/pages/about/perfil-4.png",
-      "name": "Marcus Grando",
-      "role": "Chief Technology Officer",
-      "linkedin": "https://www.linkedin.com/in/marcusgrando/"
+      image: 'https://www.azion.com/assets/pages/about/perfil-4.png',
+      name: 'Marcus Grando',
+      role: 'Chief Technology Officer',
+      linkedin: 'https://www.linkedin.com/in/marcusgrando/'
     },
     {
-      "image": "https://www.azion.com/assets/pages/about/perfil-5.png",
-      "name": "Mauricio Pegoraro",
-      "role": "Chief Information Security Officer",
-      "linkedin": "https://www.linkedin.com/in/mauriciowp/"
+      image: 'https://www.azion.com/assets/pages/about/perfil-5.png',
+      name: 'Mauricio Pegoraro',
+      role: 'Chief Information Security Officer',
+      linkedin: 'https://www.linkedin.com/in/mauriciowp/'
     }
-
   ]
 }

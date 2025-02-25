@@ -48,7 +48,7 @@ export default {
               label: 'Edge Firewall'
             },
             {
-              label: 'DDoS Protection',
+              label: 'DDoS Protection'
             },
             {
               label: 'Network Layer Protection'
@@ -62,7 +62,7 @@ export default {
             {
               label: 'Inteligent DNS'
             }
-          ],
+          ]
         },
         {
           label: 'Deploy',
@@ -83,7 +83,7 @@ export default {
             {
               label: 'Roadmap'
             }
-          ],
+          ]
         },
         {
           label: 'Observe',
@@ -101,15 +101,15 @@ export default {
             {
               label: 'Real-Time Events'
             }
-          ],
+          ]
         }
       ]
     },
     {
-      label: 'Pricing',
+      label: 'Pricing'
     },
     {
-      label: 'About us',
+      label: 'About us'
     },
     {
       label: 'Resources',
@@ -145,20 +145,20 @@ export default {
           separator: true
         },
         {
-          label: 'System Status',
+          label: 'System Status'
         },
         {
-          label: 'Resource Hub',
+          label: 'Resource Hub'
         },
         {
-          label: 'Blog',
+          label: 'Blog'
         },
         {
-          label: 'Complience',
+          label: 'Complience'
         },
         {
-          label: 'Success Stories',
-        },
+          label: 'Success Stories'
+        }
       ]
     },
     {

@@ -1,9 +1,9 @@
 export const hbspPostHandler = async (postURL, body) => {
   const response = await fetch(postURL, {
-    method: "POST",
+    method: 'POST',
     headers: {
-      Accept: "*/*",
-      "Content-Type": "application/json",
+      Accept: '*/*',
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify(body)
   })

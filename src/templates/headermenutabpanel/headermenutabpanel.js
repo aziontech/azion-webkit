@@ -1,2 +1,2 @@
-import HeaderMenuTabPanel from './HeaderMenuTabPanel.vue';
-export default HeaderMenuTabPanel;
+import HeaderMenuTabPanel from './HeaderMenuTabPanel.vue'
+export default HeaderMenuTabPanel

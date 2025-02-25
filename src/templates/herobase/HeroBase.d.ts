@@ -5,34 +5,34 @@
  *
  * @module `herobase`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in HeroBase component.
  */
 export interface HeroBaseProps {
-  bannerNews?: object;
-  overline?: string;
+  bannerNews?: object
+  overline?: string
   /**
    * @defaultValue: false
    */
-  isReverse?: boolean;
-  title: false;
+  isReverse?: boolean
+  title: false
   /**
    * @defaultValue: h1
    */
-  titleTag?: string;
-  description?: string;
-  justify?: string;
+  titleTag?: string
+  description?: string
+  justify?: string
   /**
    * @defaultValue: false
    */
-  isCentralized?: boolean;
+  isCentralized?: boolean
   /**
    * @defaultValue: false
    */
-  isDisplay?: boolean;
+  isDisplay?: boolean
 }
 
 /**
@@ -42,7 +42,7 @@ export interface HeroBaseSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -52,18 +52,18 @@ export interface HeroBaseEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class HeroBase extends ClassComponent<HeroBaseProps, HeroBaseSlots, HeroBaseEmits> { }
+declare class HeroBase extends ClassComponent<HeroBaseProps, HeroBaseSlots, HeroBaseEmits> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    HeroBase: GlobalComponentConstructor<HeroBase>;
+    HeroBase: GlobalComponentConstructor<HeroBase>
   }
 }
 
-export default HeroBase;
+export default HeroBase

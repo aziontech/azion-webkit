@@ -1,2 +1,2 @@
-import TitleList from './TitleList.vue';
-export default TitleList;
+import TitleList from './TitleList.vue'
+export default TitleList

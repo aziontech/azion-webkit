@@ -5,8 +5,8 @@
  *
  * @module `carddescription`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in CardDescription component.
@@ -16,7 +16,7 @@ export interface CardDescriptionProps {
    * options: ['primary', 'secondary'],
    * @defaultValue 'secondary'
    */
-  color?: string;
+  color?: string
 }
 
 /**
@@ -26,7 +26,7 @@ export interface CardDescriptionSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -36,18 +36,22 @@ export interface CardDescriptionEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class CardDescription extends ClassComponent<CardDescriptionProps, CardDescriptionSlots, CardDescriptionEmits> { }
+declare class CardDescription extends ClassComponent<
+  CardDescriptionProps,
+  CardDescriptionSlots,
+  CardDescriptionEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CardDescription: GlobalComponentConstructor<CardDescription>;
+    CardDescription: GlobalComponentConstructor<CardDescription>
   }
 }
 
-export default CardDescription;
+export default CardDescription

@@ -2,14 +2,14 @@
   <div
     class="max-w-5xl flex flex-wrap px-0"
     :class="{
-      'm-auto' : justify == 'center',
-      'justify-start' : justify == 'start'
+      'm-auto': justify == 'center',
+      'justify-start': justify == 'start'
     }"
   >
     <div
       :class="{
-        'justify-center' : justify == 'center',
-        'justify-start' : justify == 'start'
+        'justify-center': justify == 'center',
+        'justify-start': justify == 'start'
       }"
       class="flex-grow-0 flex py-4 lg:py-0 flex- shrink-0 basis-1/2 lg:basis-1/4"
       v-for="item in items"
@@ -20,7 +20,10 @@
           v-if="item.icon"
           severity="primary"
         >
-          <i :class="item.icon" class="text-base md:text-lg"></i>
+          <i
+            :class="item.icon"
+            class="text-base md:text-lg"
+          ></i>
         </Tile>
         <div class="flex flex-col gap-2 justify-evenly w-fit">
           <p
@@ -44,7 +47,7 @@
 </template>
 
 <script setup>
-  import Tile from "../tile"
+  import Tile from '../tile'
 
   defineProps({
     items: {
@@ -54,8 +57,8 @@
     justify: {
       type: String,
       required: false,
-      default: "center",
+      default: 'center',
       options: ['center', 'start']
     }
-  });
+  })
 </script>

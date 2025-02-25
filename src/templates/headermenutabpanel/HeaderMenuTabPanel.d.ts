@@ -5,14 +5,14 @@
  *
  * @module `headermenutabpanel`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in HeaderMenuTabPanel component.
  */
 export interface HeaderMenuTabPanelProps {
-  menuData: object;
+  menuData: object
 }
 
 /**
@@ -22,7 +22,7 @@ export interface HeaderMenuTabPanelSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -32,18 +32,22 @@ export interface HeaderMenuTabPanelEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class HeaderMenuTabPanel extends ClassComponent<HeaderMenuTabPanelProps, HeaderMenuTabPanelSlots, HeaderMenuTabPanelEmits> { }
+declare class HeaderMenuTabPanel extends ClassComponent<
+  HeaderMenuTabPanelProps,
+  HeaderMenuTabPanelSlots,
+  HeaderMenuTabPanelEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    HeaderMenuTabPanel: GlobalComponentConstructor<HeaderMenuTabPanel>;
+    HeaderMenuTabPanel: GlobalComponentConstructor<HeaderMenuTabPanel>
   }
 }
 
-export default HeaderMenuTabPanel;
+export default HeaderMenuTabPanel

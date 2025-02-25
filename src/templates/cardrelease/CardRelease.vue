@@ -11,7 +11,10 @@
       <div class="flex flex-col justify-between gap-8 grow">
         <div class="flex flex-col gap-8">
           <div class="flex flex-row justify-between">
-            <Tag :icon="tag.icon" :value="tag.label" />
+            <Tag
+              :icon="tag.icon"
+              :value="tag.label"
+            />
           </div>
 
           <div class="flex flex-col gap-3">
@@ -55,37 +58,36 @@
 </template>
 
 <script setup>
-import Tag from "primevue/tag";
-import CardBaseClickable from "../cardbaseclickable";
-import ImageSwitcher from "../themeawareimageswitcher";
+  import Tag from 'primevue/tag'
+  import CardBaseClickable from '../cardbaseclickable'
+  import ImageSwitcher from '../themeawareimageswitcher'
 
-
-defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-  image: {
-    type: Object,
-    required: true,
-  },
-  tag: {
-    type: Object,
-    required: true,
-  },
-  card: {
-    type: Object,
-    required: true,
-  },
-  grid: {
-    type: Boolean,
-    required: false,
-    default: false,
-  },
-  hover: {
-    type: String,
-    required: false,
-    options: ['slide-up', 'outlined']
-  }
-})
+  defineProps({
+    title: {
+      type: String,
+      required: true
+    },
+    image: {
+      type: Object,
+      required: true
+    },
+    tag: {
+      type: Object,
+      required: true
+    },
+    card: {
+      type: Object,
+      required: true
+    },
+    grid: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    hover: {
+      type: String,
+      required: false,
+      options: ['slide-up', 'outlined']
+    }
+  })
 </script>

@@ -5,15 +5,15 @@
  *
  * @module `emptystateblock`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in AisIndexHit component.
  */
 export interface EmptyStateBlockProps {
-  title: string;
-  description: string | undefined;
+  title: string
+  description: string | undefined
 }
 
 /**
@@ -23,7 +23,7 @@ export interface EmptyStateBlockSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -33,18 +33,22 @@ export interface EmptyStateBlockEmits {
   /**
    * Triggered when an empty occurs while loading an image file.
    */
-  empty(event: Event): void;
+  empty(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class EmptyStateBlock extends ClassComponent<EmptyStateBlockProps, EmptyStateBlockSlots, EmptyStateBlockEmits> { }
+declare class EmptyStateBlock extends ClassComponent<
+  EmptyStateBlockProps,
+  EmptyStateBlockSlots,
+  EmptyStateBlockEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    EmptyStateBlock: GlobalComponentConstructor<EmptyStateBlock>;
+    EmptyStateBlock: GlobalComponentConstructor<EmptyStateBlock>
   }
 }
 
-export default EmptyStateBlock;
+export default EmptyStateBlock

@@ -1,2 +1,2 @@
-import HeroHome from "./HeroHome.vue";
-export default HeroHome;
+import HeroHome from './HeroHome.vue'
+export default HeroHome

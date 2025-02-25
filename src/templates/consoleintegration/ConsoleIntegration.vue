@@ -1,7 +1,9 @@
 <template>
   <Card
     :pt="{
-      root: { class: ['card-bg-gradient rounded relative w-full h-[250px] shadow-none overflow-hidden'] },
+      root: {
+        class: ['card-bg-gradient rounded relative w-full h-[250px] shadow-none overflow-hidden']
+      },
       body: { class: ['rounded surface-ground absolute h-[248px] left-[1px] top-[1px]'] }
     }"
   >
@@ -9,10 +11,16 @@
       <div class="relative">
         <ul class="relative z-0">
           <li class="p-1 surface-border border-b">
-            <p class="p-1 flex gap-1 items-center" style="font-size: .55rem">
-                <i class="pi pi-search" style="font-size: .45rem"></i>
-                Search your apps
-              </p>
+            <p
+              class="p-1 flex gap-1 items-center"
+              style="font-size: 0.55rem"
+            >
+              <i
+                class="pi pi-search"
+                style="font-size: 0.45rem"
+              ></i>
+              Search your apps
+            </p>
           </li>
           <li class="p-1 surface-border border-b">
             <div class="content-skeleton flex flex-col gap-3">
@@ -24,7 +32,10 @@
             </div>
           </li>
 
-          <li class="p-1 surface-border border-b" v-for="index in 12">
+          <li
+            class="p-1 surface-border border-b"
+            v-for="index in 12"
+          >
             <div class="content-skeleton flex flex-col gap-3">
               <div class="flex justify-between gap-3">
                 <div class="item-skeleton w-[40%] h-[12px]"></div>
@@ -40,7 +51,9 @@
                   />
                 </figure>
                 <div class="item-skeleton w-[33%] h-[12px]"></div>
-                <div class="w-[14px] h-[14px] flex items-center relative -top-[4px] right-[4px]">...</div>
+                <div class="w-[14px] h-[14px] flex items-center relative -top-[4px] right-[4px]">
+                  ...
+                </div>
               </div>
             </div>
           </li>
@@ -48,12 +61,16 @@
 
         <div class="min-w-[288px] absolute z-10 top-0 w-full h-full flex flex-row justify-end">
           <div class="w-[104px] relative -right-[60px]">
-            <span class="icon icon-vscode relative z-20 flex justify-center items-center inline-block border surface-border rounded w-14 h-14 surface-ground">
+            <span
+              class="icon icon-vscode relative z-20 flex justify-center items-center inline-block border surface-border rounded w-14 h-14 surface-ground"
+            >
               <i class="w-[40px] h-[40px]">
                 <IconVSCode />
               </i>
             </span>
-            <span class="icon icon-terminal relative z-10 flex justify-center items-center inline-block border surface-border rounded w-14 h-14 surface-ground">
+            <span
+              class="icon icon-terminal relative z-10 flex justify-center items-center inline-block border surface-border rounded w-14 h-14 surface-ground"
+            >
               <i class="w-[33px] h-[33px]">
                 <IconTerminalLight class="hide-on-dark" />
                 <IconTerminalDark class="hide-on-light" />
@@ -62,7 +79,9 @@
           </div>
 
           <div class="flex flex-col justify-center items-end relative right-8">
-            <p class="command flex justify-between leading-[34px] w-[180px] surface-ground border surface-border rounded py-2 px-4 font-mono text-xs relative z-30">
+            <p
+              class="command flex justify-between leading-[34px] w-[180px] surface-ground border surface-border rounded py-2 px-4 font-mono text-xs relative z-30"
+            >
               azion init
               <Button
                 outlined
@@ -71,7 +90,9 @@
                 @click="copy('azion init')"
               />
             </p>
-            <p class="command flex justify-between leading-[34px] w-[220px] surface-ground border surface-border rounded py-2 px-4 font-mono text-xs relative -top-[.4rem] z-20">
+            <p
+              class="command flex justify-between leading-[34px] w-[220px] surface-ground border surface-border rounded py-2 px-4 font-mono text-xs relative -top-[.4rem] z-20"
+            >
               azion build
               <Button
                 outlined
@@ -80,7 +101,9 @@
                 @click="copy('azion build')"
               />
             </p>
-            <p class="command flex justify-between leading-[34px] w-[260px] surface-ground border surface-border rounded py-2 px-4 font-mono text-xs relative -top-[.8rem] z-10">
+            <p
+              class="command flex justify-between leading-[34px] w-[260px] surface-ground border surface-border rounded py-2 px-4 font-mono text-xs relative -top-[.8rem] z-10"
+            >
               azion deploy
               <Button
                 outlined
@@ -129,7 +152,7 @@
   .group {
     &:hover {
       .card-bg-gradient {
-        box-shadow: .0275rem -1px 0px var(--surface-border) !important;
+        box-shadow: 0.0275rem -1px 0px var(--surface-border) !important;
         left: -1rem;
         background: linear-gradient(100deg, var(--surface-border) 0%, var(--surface-ground) 100%);
 
@@ -175,7 +198,7 @@
     }
 
     &:hover {
-      box-shadow: .0275rem -1px 0px var(--surface-border) !important;
+      box-shadow: 0.0275rem -1px 0px var(--surface-border) !important;
       left: -1rem;
       // background: linear-gradient(180deg, var(--surface-border) 0%, var(--surface-ground) 100%);
 
@@ -195,7 +218,7 @@
     }
 
     .shadow-bottom {
-      transition: all .8s ease-in-out !important;
+      transition: all 0.8s ease-in-out !important;
       position: absolute;
       bottom: 76px;
       left: 0;
@@ -269,34 +292,36 @@
 </style>
 
 <script setup>
-  import Card from 'primevue/card';
-  import Button from 'primevue/button';
+  import Card from 'primevue/card'
+  import Button from 'primevue/button'
 
   // import IconVSCode from '../../assets/icons/tools/VSCode.vue';
   // import IconTerminalLight from '../../assets/icons/tools/TerminalLight.vue';
   // import IconTerminalDark from '../../assets/icons/tools/TerminalDark.vue';
 
-  import IconVSCode from '../src/assets/icons/tools/VSCode.vue';
-  import IconTerminalLight from '../src/assets/icons/tools/TerminalLight.vue';
-  import IconTerminalDark from '../src/assets/icons/tools/TerminalDark.vue';
+  import IconVSCode from '../src/assets/icons/tools/VSCode.vue'
+  import IconTerminalLight from '../src/assets/icons/tools/TerminalLight.vue'
+  import IconTerminalDark from '../src/assets/icons/tools/TerminalDark.vue'
 
   const props = defineProps({
     title: {
       type: String,
       default: 'Browse Integrations'
     }
-  });
+  })
 
   function copy(text) {
-    const type = "text/plain";
-    const blob = new Blob([text], { type });
-    const data = [new ClipboardItem({ [type]: blob })];
+    const type = 'text/plain'
+    const blob = new Blob([text], { type })
+    const data = [new ClipboardItem({ [type]: blob })]
 
-    navigator.clipboard.write(data).then(() => {
-      console.log(`Copied ${text}`);
-    }, (error) => {
-      console.error(error);
-    });
-  };
+    navigator.clipboard.write(data).then(
+      () => {
+        console.log(`Copied ${text}`)
+      },
+      (error) => {
+        console.error(error)
+      }
+    )
+  }
 </script>
-

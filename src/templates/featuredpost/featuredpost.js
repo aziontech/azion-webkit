@@ -1,2 +1,2 @@
-import FeaturedPost from './FeaturedPost.vue';
-export default FeaturedPost;
+import FeaturedPost from './FeaturedPost.vue'
+export default FeaturedPost

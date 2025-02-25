@@ -1,12 +1,12 @@
-import Overline from "../../templates/overline"
+import Overline from '../../templates/overline'
 
 export default {
   title: 'Components/Overline',
   component: Overline,
-  tags: ['autodocs'],
+  tags: ['autodocs']
 }
 
-export const Default =  {
+export const Default = {
   args: {
     label: 'Sign up'
   }

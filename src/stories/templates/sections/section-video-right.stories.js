@@ -1,11 +1,12 @@
-import SectionVideoRight from "../../../templates/sectionvideoright"
+import SectionVideoRight from '../../../templates/sectionvideoright'
 import Rules from '../../rules'
 
 const MOCK = {
   hero: {
-    "overline": "About us",
-    "title": "Our mission is to power the hyper-connected economy",
-    "description": "From the beginning, our goal has been to create technologies that unlock new possibilities."
+    overline: 'About us',
+    title: 'Our mission is to power the hyper-connected economy',
+    description:
+      'From the beginning, our goal has been to create technologies that unlock new possibilities.'
   },
   video: {
     title: 'Azion Overview',
@@ -26,49 +27,49 @@ const MOCK_WITH_CARDS = {
   ...MOCK,
   cards: [
     {
-      title: "Release",
-      description: "Release conidently and consistently.",
+      title: 'Release',
+      description: 'Release conidently and consistently.',
       cta: {
-        link: "",
+        link: '',
         action: {
-          label: "Learn more"
+          label: 'Learn more'
         }
       }
     },
     {
-      title: "Target",
-      description: "Deliver personalized experiences",
+      title: 'Target',
+      description: 'Deliver personalized experiences',
       cta: {
-        link: "",
+        link: '',
         action: {
-          label: "Learn more"
+          label: 'Learn more'
         }
       }
     },
     {
-      title: "Remediate",
-      description: "Find and fix issues faster.",
+      title: 'Remediate',
+      description: 'Find and fix issues faster.',
       cta: {
-        link: "",
+        link: '',
         action: {
-          label: "Learn more"
+          label: 'Learn more'
         }
       }
     },
     {
-      title: "Experiment",
-      description: "Continuously measure and optimize.",
+      title: 'Experiment',
+      description: 'Continuously measure and optimize.',
       cta: {
-        link: "",
+        link: '',
         action: {
-          label: "Learn more"
+          label: 'Learn more'
         }
       }
     }
   ]
 }
 
-const config= (args) => {
+const config = (args) => {
   return {
     components: { SectionVideoRight },
     setup() {
@@ -78,11 +79,11 @@ const config= (args) => {
   }
 }
 
-const Template = (args) => (config(args))
+const Template = (args) => config(args)
 export const Default = Template.bind({})
 Default.args = MOCK
 
-const TemplateWithCards = (args) => (config(args))
+const TemplateWithCards = (args) => config(args)
 export const DefaultWithCards = TemplateWithCards.bind({})
 DefaultWithCards.args = MOCK_WITH_CARDS
 
@@ -100,8 +101,8 @@ ${Rules.hero.title}
 ${Rules.hero.description}
 ${Rules.hero.imageVideo}
 ${Rules.hero.cards}
-        `,
-      },
-    },
-  },
-};
+        `
+      }
+    }
+  }
+}

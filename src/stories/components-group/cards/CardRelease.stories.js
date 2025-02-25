@@ -1,4 +1,4 @@
-import CardRelease from "../../../templates/cardrelease"
+import CardRelease from '../../../templates/cardrelease'
 
 export default {
   title: 'Components Group/Cards/Release',
@@ -6,39 +6,39 @@ export default {
   tags: ['autodocs'],
   argTypes: {
     card: {
-      description: "Icon, link e aria label"
+      description: 'Icon, link e aria label'
     },
     hover: {
       options: ['slide-up', 'outlined'],
       control: { type: 'radio' },
-      description: "Hover style"
-    }
-  },
-}
-
-export const Default = {
-  args: {
-    hover: "outlined",
-    grid: true,
-    tag: {
-      icon: "pi pi-star",
-      label: "award"
-    },
-    title: "Clientes da Gartner afirmam que a Azion se destaca por oferecer uma abordagem consultiva para orquestração e ambientes de aplicação de Edge Computing.",
-    card: {
-      icon: "pi pi-external",
-      link: "",
-      ariaLabel: "",
-      action: {
-        label: "Read Article"
-      }
-    },
-    image: {
-      light: "https://www.azion.com/assets/images/logos/light/gigaom-logo-default.svg?ims=x40",
-      dark: "https://www.azion.com/assets/images/logos/light/gigaom-logo-default.svg?ims=x40",
-      alt: "lorem",
-      description: "lorem ipsum"
+      description: 'Hover style'
     }
   }
 }
 
+export const Default = {
+  args: {
+    hover: 'outlined',
+    grid: true,
+    tag: {
+      icon: 'pi pi-star',
+      label: 'award'
+    },
+    title:
+      'Clientes da Gartner afirmam que a Azion se destaca por oferecer uma abordagem consultiva para orquestração e ambientes de aplicação de Edge Computing.',
+    card: {
+      icon: 'pi pi-external',
+      link: '',
+      ariaLabel: '',
+      action: {
+        label: 'Read Article'
+      }
+    },
+    image: {
+      light: 'https://www.azion.com/assets/images/logos/light/gigaom-logo-default.svg?ims=x40',
+      dark: 'https://www.azion.com/assets/images/logos/light/gigaom-logo-default.svg?ims=x40',
+      alt: 'lorem',
+      description: 'lorem ipsum'
+    }
+  }
+}

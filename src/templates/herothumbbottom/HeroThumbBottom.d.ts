@@ -5,8 +5,8 @@
  *
  * @module `herothumbbottom`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 interface Button {
   label: string
@@ -36,7 +36,7 @@ export interface HeroButtonBottomnSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -46,18 +46,22 @@ export interface HeroButtonBottomnEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class HeroButtonBottomn extends ClassComponent<HeroButtonBottomnProps, HeroButtonBottomnSlots, HeroButtonBottomnEmits> { }
+declare class HeroButtonBottomn extends ClassComponent<
+  HeroButtonBottomnProps,
+  HeroButtonBottomnSlots,
+  HeroButtonBottomnEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    HeroButtonBottomn: GlobalComponentConstructor<HeroButtonBottomn>;
+    HeroButtonBottomn: GlobalComponentConstructor<HeroButtonBottomn>
   }
 }
 
-export default HeroButtonBottomn;
+export default HeroButtonBottomn

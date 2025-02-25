@@ -14,7 +14,10 @@
       />
     </template>
     <template #main>
-      <UnorderedList :data="data" class="min-w-[40%]"/>
+      <UnorderedList
+        :data="data"
+        class="min-w-[40%]"
+      />
     </template>
   </ContentSection>
 </template>

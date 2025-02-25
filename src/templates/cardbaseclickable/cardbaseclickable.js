@@ -1,2 +1,2 @@
-import CardBaseClickable from './CardBaseClickable.vue';
-export default CardBaseClickable;
+import CardBaseClickable from './CardBaseClickable.vue'
+export default CardBaseClickable

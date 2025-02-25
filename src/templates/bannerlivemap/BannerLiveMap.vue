@@ -6,8 +6,8 @@
           <div class="flex flex-col gap-8">
             <div class="flex flex-col gap-5">
               <Overline :label="overline" />
-              <CardTitle titleTag="h3"> {{ title}} </CardTitle>
-              <CardDescription> {{ description}} </CardDescription>
+              <CardTitle titleTag="h3"> {{ title }} </CardTitle>
+              <CardDescription> {{ description }} </CardDescription>
             </div>
 
             <LinkButton

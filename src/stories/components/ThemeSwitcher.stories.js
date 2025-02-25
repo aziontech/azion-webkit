@@ -3,7 +3,7 @@ import ThemeSwitcher from '../../templates/themeswitcher'
 export default {
   title: 'Components/ThemeSwitcher',
   component: ThemeSwitcher,
-  tags: ['autodocs'],
+  tags: ['autodocs']
 }
 
 export const Default = {}

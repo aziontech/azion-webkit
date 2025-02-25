@@ -1,12 +1,12 @@
-import Footer from '../../../../dist/footer';
-import footerData from '../../../mock/footer.js';
+import Footer from '../../../../dist/footer'
+import footerData from '../../../mock/footer.js'
 
 export default {
   title: 'Components Group/Footer/Footer',
   component: Footer,
   tags: ['autodocs'],
   argTypes: {}
-};
+}
 
 // More on writing stories with args: https://storybook.js.org/docs/vue/writing-stories/args
 export const Default = {
@@ -18,4 +18,4 @@ export const Default = {
     i18nPages: [{ lang: 'EN', slug: '/' }],
     socialButtons: footerData.socialButtons
   }
-};
+}

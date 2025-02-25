@@ -1,2 +1,2 @@
-import SectionBigNumbersLivemap from './SectionBigNumbersLivemap.vue';
-export default SectionBigNumbersLivemap;
+import SectionBigNumbersLivemap from './SectionBigNumbersLivemap.vue'
+export default SectionBigNumbersLivemap

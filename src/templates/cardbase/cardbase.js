@@ -1,2 +1,2 @@
-import CardBase from './CardBase.vue';
-export default CardBase;
+import CardBase from './CardBase.vue'
+export default CardBase

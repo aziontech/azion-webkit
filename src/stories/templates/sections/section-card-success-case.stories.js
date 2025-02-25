@@ -1,4 +1,3 @@
-
 import Container from '../../../templates/container'
 import SectionSuccessCase from '../../../templates/sectionsuccesscases'
 import Rules from '../../rules'
@@ -14,12 +13,11 @@ export default {
   ${Rules.section.overline}
   ${Rules.section.title}
   ${Rules.section.cardsCases}
-        `,
-      },
-    },
-  },
+        `
+      }
+    }
+  }
 }
-
 
 const logo = `<svg xmlns="http://www.w3.org/2000/svg" width="75" height="18" fill="currentColor" viewBox="0 0 75 18">
 <path d="M46.532 3.726c.104-.011.207-.023.276-.023v9.715h-.643a8.328 8.328 0 0 0-.341-.388c-.082-.09-.178-.194-.301-.332l-6.149-6.566v7.33a1.5 1.5 0 0 1-.192-.021c-.153-.024-.344-.053-.496-.023-.069 0-.126.011-.184.022a.905.905 0 0 1-.183.023V3.748h.734l6.654 7.061V3.703c.068 0 .172.012.275.023.103.011.206.022.275.022.069 0 .172-.011.276-.022Zm-11.976.967h-1.973V7.93h1.698c.459 0 1.33-.045 1.79-.09 0 .045-.012.157-.023.27a4.116 4.116 0 0 0-.023.27c0 .067.011.146.023.225.01.078.022.157.022.224a33.12 33.12 0 0 0-2.11-.09h-1.377v3.778c.459 0 .654 0 .849-.005.195-.006.39-.017.849-.04.459 0 1.744-.09 2.202-.18 0 .097-.013.232-.025.357-.01.11-.02.21-.02.273 0 .068.011.158.023.248.01.09.022.18.022.247h-5.368v-9.67h5.23c0 .068-.01.169-.022.27a2.82 2.82 0 0 0-.023.27c0 .096.026.219.05.332.022.098.042.19.042.253 0 0-1.377-.18-1.836-.18ZM57.5 3.726c.103-.011.206-.023.275-.023v9.715h-.643c-.113-.14-.21-.244-.342-.388-.081-.09-.178-.194-.3-.332l-6.15-6.566v7.33c-.047 0-.114-.01-.192-.021-.153-.024-.345-.053-.496-.023-.07 0-.126.011-.184.022a.904.904 0 0 1-.183.023V3.748h.734l6.653 7.061V3.703a3 3 0 0 1 .276.023c.103.011.206.022.275.022.069 0 .172-.011.275-.022Zm6.056.967h-1.973V7.93h1.698c.459 0 1.33-.045 1.79-.09 0 .045-.012.157-.023.27a3.768 3.768 0 0 0-.023.27c0 .135 0 .314.046.45a33.124 33.124 0 0 0-2.111-.09h-1.377v3.777c.459 0 .654 0 .849-.005.195-.006.39-.017.849-.04.459 0 1.744-.09 2.203-.18 0 .097-.014.232-.026.357-.01.11-.02.21-.02.273 0 .068.011.158.023.248.011.09.023.18.023.247h-5.37v-9.67h5.232c0 .068-.012.169-.023.27a2.82 2.82 0 0 0-.023.27c0 .096.026.219.05.332.022.098.042.19.042.253 0 0-1.377-.18-1.836-.18Z"></path>
@@ -30,38 +28,41 @@ const logo = `<svg xmlns="http://www.w3.org/2000/svg" width="75" height="18" fil
 </svg>`
 
 const MOCK = {
-  "title": "Customers Are Achieving Great Results With Jamstack websites",
-  "overline": "Success Stories",
-  "button": {
-    "label": "Check all Sucess Stories",
-    "link": "https://www.azion.com/en/resource-hub/?content=success-stories"
+  title: 'Customers Are Achieving Great Results With Jamstack websites',
+  overline: 'Success Stories',
+  button: {
+    label: 'Check all Sucess Stories',
+    link: 'https://www.azion.com/en/resource-hub/?content=success-stories'
   },
-  "cards": [
+  cards: [
     {
-      "logo": logo,
-      "tag": "Tech",
-      "description": "GetNinjas improves data analysis with Azion Data Streaming and obtains incredible performance, security, and availability in its applications.",
-      "link": "https://www.azion.com/en/success-case/getninjas/",
-      "action": {
-        "label": "See Success Story"
+      logo: logo,
+      tag: 'Tech',
+      description:
+        'GetNinjas improves data analysis with Azion Data Streaming and obtains incredible performance, security, and availability in its applications.',
+      link: 'https://www.azion.com/en/success-case/getninjas/',
+      action: {
+        label: 'See Success Story'
       }
     },
     {
-      "logo": logo,
-      "tag": "Tech",
-      "description": "VTEX builds ultra-low latency serverless applications with Azion and allows thousands of customers to accelerate their sales on the web.",
-      "link": "https://www.azion.com/en/success-case/vtex/",
-      "action": {
-        "label": "See Success Story"
+      logo: logo,
+      tag: 'Tech',
+      description:
+        'VTEX builds ultra-low latency serverless applications with Azion and allows thousands of customers to accelerate their sales on the web.',
+      link: 'https://www.azion.com/en/success-case/vtex/',
+      action: {
+        label: 'See Success Story'
       }
     },
     {
-      "logo": logo,
-      "tag": "Tech",
-      "description": "VTEX builds ultra-low latency serverless applications with Azion and allows thousands of customers to accelerate their sales on the web.",
-      "link": "https://www.azion.com/en/success-case/vtex/",
-      "action": {
-        "label": "See Success Story"
+      logo: logo,
+      tag: 'Tech',
+      description:
+        'VTEX builds ultra-low latency serverless applications with Azion and allows thousands of customers to accelerate their sales on the web.',
+      link: 'https://www.azion.com/en/success-case/vtex/',
+      action: {
+        label: 'See Success Story'
       }
     }
   ]
@@ -88,5 +89,6 @@ Default.parameters = {
     description: {
       story: ''
     },
-    source: { code: template } },
-};
+    source: { code: template }
+  }
+}

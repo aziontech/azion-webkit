@@ -15,7 +15,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body, html {
+body,
+html {
   overflow-x: clip;
   scroll-behavior: smooth;
 }
@@ -28,7 +29,8 @@ body, html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }

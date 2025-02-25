@@ -4,21 +4,21 @@
  *
  * @module cardblog
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in cardbase component.
  */
 export interface CardBlogProps {
-  imgSrc?: string;
-  imgAlt?: string;
-  title: string;
-  description: string;
-  authors?: {};
-  date: {};
-  estimateReadTime?: string;
-  link: URL;
+  imgSrc?: string
+  imgAlt?: string
+  title: string
+  description: string
+  authors?: {}
+  date: {}
+  estimateReadTime?: string
+  link: URL
 }
 
 /**
@@ -28,7 +28,7 @@ export interface CardBlogSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -38,18 +38,18 @@ export interface CardBlogEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class CardBlog extends ClassComponent<CardBlogProps, CardBlogSlots, CardBlogEmits> { }
+declare class CardBlog extends ClassComponent<CardBlogProps, CardBlogSlots, CardBlogEmits> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CardBlog: GlobalComponentConstructor<CardBlog>;
+    CardBlog: GlobalComponentConstructor<CardBlog>
   }
 }
 
-export default CardBlog;
+export default CardBlog

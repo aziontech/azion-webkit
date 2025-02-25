@@ -5,8 +5,8 @@
  *
  * @module `aisdialog`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in AlgoliaDialog component.
@@ -16,27 +16,27 @@ export interface AlgoliaDialogProps {
    * Defines if dialog it is opened
    * @defaultValue false
    */
-  isDialogActive: boolean;
+  isDialogActive: boolean
   /**
    * Defines the Algolia AppID
    */
-  algoliaAppId: string | undefined;
+  algoliaAppId: string | undefined
   /**
    * Defines the Algolia ApiKey
    */
-  algoliaApiKey: string | undefined;
+  algoliaApiKey: string | undefined
   /**
    * Defines the list of Algolia Index to be hitted
    */
-  algoliaIndex: [];
+  algoliaIndex: []
   /**
    * Defines the list of Algolia Model to Index to be hitted
    */
-  algoliaModel: [];
+  algoliaModel: []
   /**
    * Defines the header Dialog title
    */
-  inputPlaceholder: string | undefined;
+  inputPlaceholder: string | undefined
 }
 
 /**
@@ -46,7 +46,7 @@ export interface AlgoliaDialogSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -56,18 +56,22 @@ export interface AlgoliaDialogEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class AlgoliaDialog extends ClassComponent<AlgoliaDialogProps, AlgoliaDialogSlots, AlgoliaDialogEmits> { }
+declare class AlgoliaDialog extends ClassComponent<
+  AlgoliaDialogProps,
+  AlgoliaDialogSlots,
+  AlgoliaDialogEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    AlgoliaDialog: GlobalComponentConstructor<AlgoliaDialog>;
+    AlgoliaDialog: GlobalComponentConstructor<AlgoliaDialog>
   }
 }
 
-export default AlgoliaDialog;
+export default AlgoliaDialog

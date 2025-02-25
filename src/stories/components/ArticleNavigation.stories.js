@@ -16,7 +16,7 @@ const Template = (args) => ({
   setup() {
     return { args }
   },
-  template: '<ArticleNavigation v-bind="args" />',
+  template: '<ArticleNavigation v-bind="args" />'
 })
 
 export const Docs = Template.bind({})
@@ -32,12 +32,12 @@ Docs.args = {
     }
   },
   overline: {
-    next: "Next Page",
-    prev: "Back"
+    next: 'Next Page',
+    prev: 'Back'
   }
 }
 
-export const Blog = Template.bind({});
+export const Blog = Template.bind({})
 Blog.args = {
   cards: {
     prev: {
@@ -50,8 +50,7 @@ Blog.args = {
     }
   },
   overline: {
-    next: "Next Article",
-    prev: "Previous Article"
+    next: 'Next Article',
+    prev: 'Previous Article'
   }
 }
-

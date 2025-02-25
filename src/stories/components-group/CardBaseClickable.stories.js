@@ -1,4 +1,4 @@
-import CardBaseClickable from "../../templates/cardbaseclickable"
+import CardBaseClickable from '../../templates/cardbaseclickable'
 
 export default {
   title: 'Components Group/CardBaseClickable',
@@ -16,7 +16,8 @@ export default {
       control: { type: 'radio' }
     },
     grid: {
-      description: 'Se true e o card estiver em um layout de grid ou flexbox, ele se estenderá até preencher completamente o espaço disponível na div.',
+      description:
+        'Se true e o card estiver em um layout de grid ou flexbox, ele se estenderá até preencher completamente o espaço disponível na div.'
     },
     backgroundColor: {
       description: 'Defina o estilo de background do card',
@@ -27,9 +28,9 @@ export default {
       description: 'Defina o estilo de hover do card',
       options: ['default', 'outlined', 'slide-up'],
       control: { type: 'radio' }
-    },
+    }
   }
-};
+}
 
 const cardTemplate = `<CardBaseClickable>
                         <template #header>

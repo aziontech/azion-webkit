@@ -1,7 +1,13 @@
 <template>
   <i class="arrow-content">
-    <span class="arrow" :class="props.direction"></span>
-    <span class="shadow" :class="props.direction"></span>
+    <span
+      class="arrow"
+      :class="props.direction"
+    ></span>
+    <span
+      class="shadow"
+      :class="props.direction"
+    ></span>
   </i>
 </template>
 
@@ -30,7 +36,7 @@
     }
 
     .arrow {
-      border: solid #F3652B;
+      border: solid #f3652b;
       border-width: 0 1px 1px 0;
       display: inline-block;
       padding: 4px;
@@ -60,7 +66,6 @@
         -webkit-transform: rotate(45deg);
       }
     }
-
   }
 
   .azion-dark {
@@ -68,17 +73,18 @@
       .shadow {
         background: rgb(23, 23, 23);
 
-
         &.right {
-          background:linear-gradient(
-            90deg, rgba(23, 23, 23, 1) 0%,
+          background: linear-gradient(
+            90deg,
+            rgba(23, 23, 23, 1) 0%,
             rgba(23, 23, 23, 0.013064600840336116) 100%
           );
         }
 
         &.left {
           background: linear-gradient(
-            266deg, rgba(23, 23, 23, 1) 0%,
+            266deg,
+            rgba(23, 23, 23, 1) 0%,
             rgba(23, 23, 23, 0.013064600840336116) 100%
           );
         }
@@ -93,14 +99,16 @@
 
         &.right {
           background: linear-gradient(
-            90deg, rgba(255, 255, 255, 1) 0%,
+            90deg,
+            rgba(255, 255, 255, 1) 0%,
             rgba(255, 255, 255, 0) 100%
           );
         }
 
         &.left {
           background: linear-gradient(
-            266deg, rgba(255, 255, 255, 1) 0%,
+            266deg,
+            rgba(255, 255, 255, 1) 0%,
             rgba(255, 255, 255, 0) 100%
           );
         }
@@ -129,8 +137,8 @@
       required: false,
       default: 'auto'
     }
-  });
+  })
 
-  const borderStyle = `${props.borderStyle} 1px #F3652B`;
-  const width = props.width;
+  const borderStyle = `${props.borderStyle} 1px #F3652B`
+  const width = props.width
 </script>

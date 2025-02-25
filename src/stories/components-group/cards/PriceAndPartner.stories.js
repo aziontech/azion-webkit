@@ -1,4 +1,4 @@
-import PriceAndPartner from "../../../templates/priceandpartner"
+import PriceAndPartner from '../../../templates/priceandpartner'
 
 export default {
   title: 'Components Group/Cards/Price And Partner',

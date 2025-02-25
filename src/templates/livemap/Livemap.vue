@@ -16,9 +16,9 @@
 </template>
 
 <script setup>
-  import { ref } from "vue";
-  import BFGlobe from "./BFGlobe.vue";
-  import UIControls from "./UIControls.vue";
+  import { ref } from 'vue'
+  import BFGlobe from './BFGlobe.vue'
+  import UIControls from './UIControls.vue'
 
   const props = defineProps({
     // (pt-br || en || es) are the default support languages by Azion
@@ -37,22 +37,22 @@
     autoRotateSpeed: {
       type: Number,
       default: 0.2
-    },
+    }
   })
 
-  let epochtime = ref(0);
-  let globeView = ref("sales");
-  let platform = ref("all");
+  let epochtime = ref(0)
+  let globeView = ref('sales')
+  let platform = ref('all')
 
   let handle = {
     globeView: (globeId) => {
-      globeView.value = globeId;
+      globeView.value = globeId
     },
     updateTimestamp: (epoch) => {
-      epochtime.value = epoch;
+      epochtime.value = epoch
     },
     platformFilter: (typeofPlatform) => {
-      platform.value = typeofPlatform;
+      platform.value = typeofPlatform
     }
-  };
+  }
 </script>

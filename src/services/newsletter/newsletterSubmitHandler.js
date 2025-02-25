@@ -2,10 +2,10 @@ export const newsletterSubrscribeHandler = async (formData, email) => {
   const { fetchLink, uri, pageName, acceptanceTermText } = formData
 
   const response = await fetch(fetchLink, {
-    method: "POST",
+    method: 'POST',
     headers: {
-      Accept: "*/*",
-      "Content-Type": "application/json",
+      Accept: '*/*',
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify({
       fields: [

@@ -6,83 +6,79 @@
     :algoliaModel="algoliaModel"
     :isDialogActive="isDialogActive"
     @close="closeDialog"
-    :inputPlaceholder="inputPlaceholder" />
+    :inputPlaceholder="inputPlaceholder"
+  />
 
-
-    <Button
-      size="small"
-      icon="pi pi-search"
-      aria-label="Search"
-      class="text-white flex-none border-header w-8 h-8 bg-header hover:bg-header-button-hover"
-      @click="activeDialog"
-      :pt="{
-        label: { class: 'tex`t-white hover:bg-header-button-hover' },
-        icon: { class: 'text-white' }
-      }" />
+  <Button
+    size="small"
+    icon="pi pi-search"
+    aria-label="Search"
+    class="text-white flex-none border-header w-8 h-8 bg-header hover:bg-header-button-hover"
+    @click="activeDialog"
+    :pt="{
+      label: { class: 'tex`t-white hover:bg-header-button-hover' },
+      icon: { class: 'text-white' }
+    }"
+  />
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import Button from 'primevue/button';
-import AlgoliaDialog from '../aisdialog/AlgoliaDialog.vue';
+  import { ref } from 'vue'
+  import Button from 'primevue/button'
+  import AlgoliaDialog from '../aisdialog/AlgoliaDialog.vue'
 
-const props = defineProps({
-  algoliaAppId: {
-    type: String
-  },
-  algoliaApiKey: {
-    type: String
-  },
-  algoliaIndex: {
-    type: Array
-  },
-  algoliaModel: {
-    type: Array
-  },
-  inputPlaceholder: {
-    type: String,
-    required: false,
-    default: "Search Azion"
+  const props = defineProps({
+    algoliaAppId: {
+      type: String
+    },
+    algoliaApiKey: {
+      type: String
+    },
+    algoliaIndex: {
+      type: Array
+    },
+    algoliaModel: {
+      type: Array
+    },
+    inputPlaceholder: {
+      type: String,
+      required: false,
+      default: 'Search Azion'
+    }
+  })
+
+  const { algoliaAppId, algoliaApiKey, algoliaIndex, algoliaModel } = props
+
+  let isDialogActive = ref(false)
+  const HTML = document.querySelectorAll('html')[0]
+
+  function setHtmlOverflow(overflow) {
+    HTML.style.overflow = overflow
   }
-})
 
-const {
-  algoliaAppId,
-  algoliaApiKey,
-  algoliaIndex,
-  algoliaModel
-} = props;
+  function focusSearchInput() {
+    setTimeout(function () {
+      document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0]?.focus()
+    }, 800)
+  }
 
-let isDialogActive = ref(false)
-const HTML = document.querySelectorAll('html')[0]
+  function activeDialog() {
+    isDialogActive.value = true
 
-function setHtmlOverflow(overflow) {
-  HTML.style.overflow = overflow
-}
+    focusSearchInput()
+    setHtmlOverflow('hidden')
+  }
 
-function focusSearchInput() {
-  setTimeout(function() {
-    document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0]?.focus()
-  }, 800)
-}
+  function closeDialog() {
+    isDialogActive.value = false
+    setHtmlOverflow('auto')
+  }
 
-function activeDialog() {
-  isDialogActive.value = true
+  /////////////////////////////////
+  // CAPTURE cmd + k or ctrl + k //
+  /////////////////////////////////
 
-  focusSearchInput();
-  setHtmlOverflow('hidden')
-}
-
-function closeDialog() {
-  isDialogActive.value = false
-  setHtmlOverflow('auto')
-}
-
-/////////////////////////////////
-// CAPTURE cmd + k or ctrl + k //
-/////////////////////////////////
-
-window.addEventListener('keydown', (event) => {
-  if ((event.metaKey || event.ctrlKey) && event.key === 'k') activeDialog()
-})
+  window.addEventListener('keydown', (event) => {
+    if ((event.metaKey || event.ctrlKey) && event.key === 'k') activeDialog()
+  })
 </script>

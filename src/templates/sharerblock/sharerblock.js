@@ -1,2 +1,2 @@
-import SharerBlock from './SharerBlock.vue';
-export default SharerBlock;
+import SharerBlock from './SharerBlock.vue'
+export default SharerBlock

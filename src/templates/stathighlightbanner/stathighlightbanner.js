@@ -1,2 +1,2 @@
-import StatHighlightBanner from './StatHighlightBanner.vue';
-export default StatHighlightBanner;
+import StatHighlightBanner from './StatHighlightBanner.vue'
+export default StatHighlightBanner

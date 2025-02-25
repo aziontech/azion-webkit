@@ -1,2 +1,2 @@
-import ContentSection from './ContentSection.vue';
-export default ContentSection;
+import ContentSection from './ContentSection.vue'
+export default ContentSection

@@ -6,7 +6,10 @@
     :description="description"
   >
     <template #actions>
-      <LinkButton v-for="button in buttons" v-bind="button" />
+      <LinkButton
+        v-for="button in buttons"
+        v-bind="button"
+      />
     </template>
     <template #main>
       <ImageSwitcher>
@@ -41,11 +44,11 @@
   defineProps({
     overline: {
       type: String,
-      required: false,
+      required: false
     },
     description: {
       type: String,
-      required: false,
+      required: false
     },
     buttons: {
       type: Array,
@@ -54,16 +57,16 @@
     images: {
       light: {
         type: String,
-        required: true,
+        required: true
       },
       dark: {
         type: String,
-        required: true,
+        required: true
       },
       alt: {
         type: String,
-        required: true,
+        required: true
       }
-    },
-  });
+    }
+  })
 </script>

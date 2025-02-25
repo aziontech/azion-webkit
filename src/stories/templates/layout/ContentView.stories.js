@@ -1,98 +1,98 @@
-import Breadcrumb from "primevue/breadcrumb";
-import HeroArticle from '../../../templates/heroarticle';
-import ReadableContent from "../../../templates/readablecontent";
-import TableOfContents from "../../../templates/tableofcontents";
-import Sharer from "../../../templates/sharerblock";
+import Breadcrumb from 'primevue/breadcrumb'
+import HeroArticle from '../../../templates/heroarticle'
+import ReadableContent from '../../../templates/readablecontent'
+import TableOfContents from '../../../templates/tableofcontents'
+import Sharer from '../../../templates/sharerblock'
 
 export default {
   title: 'Layout/Content',
   component: HeroArticle,
   tags: ['autodocs'],
   argTypes: {}
-};
-
+}
 
 const MOCK = {
   breadcrumbItems: [
     {
       url: `/en/blog/`,
-      target: "_self",
-      label: "Blog",
+      target: '_self',
+      label: 'Blog'
     },
     {
       url: 'www.azion.com',
-      target: "_self",
-      label: 'This Article',
-    },
+      target: '_self',
+      label: 'This Article'
+    }
   ],
-  "date": "JUN 27, 2024 • 15 min read",
-  "title": "Azion Edge SQL: enabling access and analysis of structured data at the edge",
-  "authors": [
-      {
-          "avatar": "https://www.azion.com/assets/blog/images/uploads/img-prof.png",
-          "title": "Mariana Bellorín Aguilera",
-          "role": "Technical Writer"
-      }
+  date: 'JUN 27, 2024 • 15 min read',
+  title: 'Azion Edge SQL: enabling access and analysis of structured data at the edge',
+  authors: [
+    {
+      avatar: 'https://www.azion.com/assets/blog/images/uploads/img-prof.png',
+      title: 'Mariana Bellorín Aguilera',
+      role: 'Technical Writer'
+    }
   ],
-  "description": "Explore how Azion Edge SQL enhances database operations with edge computing for high scalability, low latency, and cost-effectiveness.",
-  "headings": [
+  description:
+    'Explore how Azion Edge SQL enhances database operations with edge computing for high scalability, low latency, and cost-effectiveness.',
+  headings: [
     {
       depth: 2,
-      slug: "conceitos-basicos-do-azion-edge-sql",
-      text: "Conceitos básicos do Azion Edge SQL"
+      slug: 'conceitos-basicos-do-azion-edge-sql',
+      text: 'Conceitos básicos do Azion Edge SQL'
     },
     {
       depth: 3,
-      slug: "por-que-usar-edge-functions-para-o-edge-sql",
-      text: "Por que usar Edge Functions para o Edge SQL?"
+      slug: 'por-que-usar-edge-functions-para-o-edge-sql',
+      text: 'Por que usar Edge Functions para o Edge SQL?'
     },
     {
       depth: 3,
-      slug: "como-a-replicacao-global-acontece",
-      text: "Como a replicação global acontece?"
+      slug: 'como-a-replicacao-global-acontece',
+      text: 'Como a replicação global acontece?'
     },
     {
       depth: 3,
-      slug: "sobre-os-modelos-de-consistencia",
-      text: "Sobre os modelos de consistência"
+      slug: 'sobre-os-modelos-de-consistencia',
+      text: 'Sobre os modelos de consistência'
     },
     {
       depth: 4,
-      slug: "isolamento-de-snapshot-no-modo-wal",
-      text: "Isolamento de snapshot no modo WAL"
+      slug: 'isolamento-de-snapshot-no-modo-wal',
+      text: 'Isolamento de snapshot no modo WAL'
     },
     {
       depth: 4,
-      slug: "o-que-e-consistencia-global-eventual",
-      text: "O que é consistência global eventual?"
+      slug: 'o-que-e-consistencia-global-eventual',
+      text: 'O que é consistência global eventual?'
     },
     {
       depth: 4,
-      slug: "read-committed",
-      text: "Read Committed"
+      slug: 'read-committed',
+      text: 'Read Committed'
     },
     {
       depth: 3,
-      slug: "meus-dados-estao-seguros",
-      text: "Meus dados estão seguros?"
+      slug: 'meus-dados-estao-seguros',
+      text: 'Meus dados estão seguros?'
     },
     {
       depth: 2,
-      slug: "edge-sql-na-pratica",
-      text: "Edge SQL na prática"
+      slug: 'edge-sql-na-pratica',
+      text: 'Edge SQL na prática'
     }
   ],
   sharerButtons: [
     {
       link: `https://x.com/intent/tweet?url=`,
       icon: `ai ai-twitter`,
-      title: "Twitter",
+      title: 'Twitter'
     },
     {
       link: `https://www.facebook.com/sharer/sharer.php`,
       icon: `pi pi-facebook`,
-      title: "Facebook",
-    },
+      title: 'Facebook'
+    }
   ]
 }
 
@@ -485,5 +485,5 @@ export const Default = Template.bind({})
 Default.args = MOCK
 
 Default.parameters = {
-  docs: { source: { code: template } },
-};
+  docs: { source: { code: template } }
+}

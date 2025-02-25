@@ -1,2 +1,2 @@
-import ConsoleIntegration from "./ConsoleIntegration.vue";
-export default ConsoleIntegration;
+import ConsoleIntegration from './ConsoleIntegration.vue'
+export default ConsoleIntegration

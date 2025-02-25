@@ -4,18 +4,18 @@
  *
  * @module cardcases
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in cardbase component.
  */
 export interface CardCasesProps {
-  image?: string;
-  imgAlt?: string;
-  tagList: string;
-  description: string;
-  link: URL;
+  image?: string
+  imgAlt?: string
+  tagList: string
+  description: string
+  link: URL
 }
 
 /**
@@ -25,7 +25,7 @@ export interface CardCasesSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -35,18 +35,18 @@ export interface CardCasesEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class CardCases extends ClassComponent<CardCasesProps, CardCasesSlots, CardCasesEmits> { }
+declare class CardCases extends ClassComponent<CardCasesProps, CardCasesSlots, CardCasesEmits> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CardCases: GlobalComponentConstructor<CardCases>;
+    CardCases: GlobalComponentConstructor<CardCases>
   }
 }
 
-export default CardCases;
+export default CardCases

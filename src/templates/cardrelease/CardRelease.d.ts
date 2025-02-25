@@ -6,26 +6,26 @@
  *
  * @module cardrelease
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 type Tag = {
-  label: string;
-  icon: string;
+  label: string
+  icon: string
 }
 
 type Image = {
-  light: string;
-  dark: string;
-  alt: string;
-  description: string;
+  light: string
+  dark: string
+  alt: string
+  description: string
 }
 
 type Card = {
-  link: string;
-  target: string;
-  icon: "external" | "internal";
-  ariaLabel: string;
+  link: string
+  target: string
+  icon: 'external' | 'internal'
+  ariaLabel: string
 }
 
 /**
@@ -36,11 +36,11 @@ export interface CardReleaseProps {
    * options: ['compact', 'relaxed', 'base'],
    * @defaultValue 'base'
    */
-  image: Image;
-  title: string;
-  tag: Tag;
-  card: Card;
-  grid?: Boolean;
+  image: Image
+  title: string
+  tag: Tag
+  card: Card
+  grid?: Boolean
 }
 
 /**
@@ -50,7 +50,7 @@ export interface CardReleaseSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -60,18 +60,22 @@ export interface CardReleaseEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class CardRelease extends ClassComponent<CardReleaseProps, CardReleaseSlots, CardReleaseEmits> { }
+declare class CardRelease extends ClassComponent<
+  CardReleaseProps,
+  CardReleaseSlots,
+  CardReleaseEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CardRelease: GlobalComponentConstructor<CardRelease>;
+    CardRelease: GlobalComponentConstructor<CardRelease>
   }
 }
 
-export default CardRelease;
+export default CardRelease

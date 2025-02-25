@@ -15,21 +15,22 @@ ${Rules.heroProduct.title}
 ${Rules.heroProduct.cta}
 ${Rules.heroProduct.image}
 
-        `,
-      },
-    },
-  },
+        `
+      }
+    }
+  }
 }
 
 const MOCK = {
-  overline: "Build",
-  "title": "Edge Application",
+  overline: 'Build',
+  title: 'Edge Application',
   description:
     'Edge Application allows you to build your web applications to run on Azion Edge Platform.',
   images: {
-    alt: "Insert ALt here",
-    dark: "https://www.azion.com/assets/pages/products/images/dark/edge-application/_thumb_edge_app.png",
-    light: "https://52082s.ha.azioncdn.net/assets/pages/products/images/light/edge-application/_thumb_edge_app-light.png"
+    alt: 'Insert ALt here',
+    dark: 'https://www.azion.com/assets/pages/products/images/dark/edge-application/_thumb_edge_app.png',
+    light:
+      'https://52082s.ha.azioncdn.net/assets/pages/products/images/light/edge-application/_thumb_edge_app-light.png'
   },
   buttons: [
     {
@@ -62,5 +63,5 @@ export const Default = Template.bind({})
 Default.args = MOCK
 
 Default.parameters = {
-  docs: { source: { code: HeroDisplay } },
-};
+  docs: { source: { code: HeroDisplay } }
+}

@@ -1,2 +1,2 @@
-import SelectTheme from './SelectTheme.vue';
-export default SelectTheme;
+import SelectTheme from './SelectTheme.vue'
+export default SelectTheme

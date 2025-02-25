@@ -1,11 +1,11 @@
 import LinkButton from '../../../templates/linkbutton'
-import EmptyStateBlock from '../../../templates/emptystateblock';
+import EmptyStateBlock from '../../../templates/emptystateblock'
 import Error404Illustration from '../../../assets/svg/error-404.vue'
 
 export default {
   title: 'Components Group/BaseEmptyState',
   component: EmptyStateBlock,
-  tags: ['autodocs'],
+  tags: ['autodocs']
 }
 
 const Template = (args) => ({
@@ -26,11 +26,8 @@ const Template = (args) => ({
               </EmptyStateBlock>`
 })
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 Default.args = {
-    title: 'Empty state title',
-    description: 'Create your first objetct here.',
+  title: 'Empty state title',
+  description: 'Create your first objetct here.'
 }
-
-
-

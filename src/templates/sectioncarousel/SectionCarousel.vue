@@ -5,7 +5,10 @@
     :title="title"
     :description="description"
   >
-    <template v-if="button" #main>
+    <template
+      v-if="button"
+      #main
+    >
       <div class="w-full flex justify-end items-end">
         <LinkButton
           class="min-w-fit"
@@ -115,11 +118,11 @@
   const isLargeScreen = ref(true)
 
   const checkScreenSize = () => {
-    isLargeScreen.value = window.innerWidth >= 767;
+    isLargeScreen.value = window.innerWidth >= 767
   }
 
   onBeforeMount(() => {
-    checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
+    checkScreenSize()
+    window.addEventListener('resize', checkScreenSize)
   })
 </script>

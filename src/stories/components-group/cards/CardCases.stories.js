@@ -6,7 +6,8 @@ export default {
   tags: ['autodocs'],
   argTypes: {
     image: {
-      description: "Por conta do light/dark mode e visando mater a consistencia das imagens. RAW SVG Required. "
+      description:
+        'Por conta do light/dark mode e visando mater a consistencia das imagens. RAW SVG Required. '
     },
     size: {
       options: ['large', 'default'],
@@ -14,7 +15,6 @@ export default {
     }
   }
 }
-
 
 const cardTemplate = ` <CardCases v-bind="args" />`
 
@@ -36,18 +36,19 @@ const logoSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="75" height="18" 
 `
 
 const DefaultProps = {
-  "image": logoSvg,
-  "imgAlt": "Azion logo",
-  "description": "VTEX builds ultra-low latency serverless applications with Azion and allows thousands of customers to accelerate their sales on the web..",
-  "link": "https://www.azion.com/en/documentation/products/get-started/",
+  image: logoSvg,
+  imgAlt: 'Azion logo',
+  description:
+    'VTEX builds ultra-low latency serverless applications with Azion and allows thousands of customers to accelerate their sales on the web..',
+  link: 'https://www.azion.com/en/documentation/products/get-started/',
   tagList: 'Categorie'
 }
 
 export const Default = Template.bind({})
-  Default.args = DefaultProps
+Default.args = DefaultProps
 
 export const size = Template.bind({})
-  size.args = {
-    ...DefaultProps,
-    size: "large"
-  }
+size.args = {
+  ...DefaultProps,
+  size: 'large'
+}

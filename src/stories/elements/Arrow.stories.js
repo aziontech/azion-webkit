@@ -2,7 +2,7 @@ import Arrow from '../../templates/arrow'
 
 export default {
   title: 'Elements/css/Arrow',
-  tags: ['autodocs'],
+  tags: ['autodocs']
 }
 
 const template = `<Arrow />`
@@ -15,6 +15,6 @@ const Template = () => ({
 export const Default = Template.bind({})
 Default.parameters = {
   docs: {
-    source: { code: template } },
-};
-
+    source: { code: template }
+  }
+}

@@ -5,8 +5,8 @@
  *
  * @module `header`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in Header component.
@@ -22,7 +22,7 @@ export interface HeaderSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -32,18 +32,18 @@ export interface HeaderEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class Header extends ClassComponent<HeaderProps, HeaderSlots, HeaderEmits> { }
+declare class Header extends ClassComponent<HeaderProps, HeaderSlots, HeaderEmits> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Header: GlobalComponentConstructor<Header>;
+    Header: GlobalComponentConstructor<Header>
   }
 }
 
-export default Header;
+export default Header

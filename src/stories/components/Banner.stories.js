@@ -6,15 +6,16 @@ export default {
   tags: ['autodocs'],
   argTypes: {
     cta: {
-      description: "Call to Action - anchor text"
+      description: 'Call to Action - anchor text'
     }
   }
 }
 
 export const Default = {
   args: {
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis urna dui, elementum eget euismod ut, scelerisque id erat. Fusce iaculis velit consectetur",
-    cta: "congue dapibuse.",
-    link: ""
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis urna dui, elementum eget euismod ut, scelerisque id erat. Fusce iaculis velit consectetur',
+    cta: 'congue dapibuse.',
+    link: ''
   }
 }

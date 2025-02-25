@@ -14,10 +14,10 @@ ${Rules.hero.overline}
 ${Rules.hero.title}
 ${Rules.hero.cta}
 ${Rules.hero.imageVideo}
-        `,
-      },
-    },
-  },
+        `
+      }
+    }
+  }
 }
 
 const logos = Array(3).fill({
@@ -31,11 +31,11 @@ const logos = Array(3).fill({
 })
 
 const MOCK = {
-  "title": "Find, test, and deploy edge-enabled software that runs anywhere.",
+  title: 'Find, test, and deploy edge-enabled software that runs anywhere.',
   images: {
-    alt: "Insert ALt here",
-    dark: "/assets/dark/illustration-demo.svg",
-    light: "/assets/light/illustration-demo.svg"
+    alt: 'Insert ALt here',
+    dark: '/assets/dark/illustration-demo.svg',
+    light: '/assets/light/illustration-demo.svg'
   },
   logos: {
     title: '100+ partner companies',
@@ -79,5 +79,6 @@ Default.parameters = {
       story: `
       `
     },
-    source: { code: HeroDisplay } },
-};
+    source: { code: HeroDisplay }
+  }
+}

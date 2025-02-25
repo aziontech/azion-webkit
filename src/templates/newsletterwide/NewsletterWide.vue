@@ -29,12 +29,12 @@
               </InputGroup>
 
               <Button
-                  type="submit"
-                  :label="buttonText"
-                  size="small"
-                  class="min-w-fit"
-                  :disabled="errors.email || !email.value"
-                />
+                type="submit"
+                :label="buttonText"
+                size="small"
+                class="min-w-fit"
+                :disabled="errors.email || !email.value"
+              />
             </form>
             <div v-show="isSuccess || isError">
               <InlineMessage

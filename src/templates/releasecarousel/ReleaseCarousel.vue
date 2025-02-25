@@ -8,10 +8,10 @@
       :autoplayInterval="autoplayInterval"
       :numScroll="numScroll"
       :pt="{
-        itemsContent: { class: 'pt-6'},
-        previousButton: { class: 'hidden md:block'},
-        nextButton: { class: 'hidden md:block'},
-        indicators: { class: 'flex md:hidden'},
+        itemsContent: { class: 'pt-6' },
+        previousButton: { class: 'hidden md:block' },
+        nextButton: { class: 'hidden md:block' },
+        indicators: { class: 'flex md:hidden' }
       }"
     >
       <template #item="slotProps">
@@ -31,8 +31,8 @@
 </template>
 
 <script setup>
-  import CardRelease from "../cardrelease"
-  import Carousel from 'primevue/carousel';
+  import CardRelease from '../cardrelease'
+  import Carousel from 'primevue/carousel'
 
   defineProps({
     data: {
@@ -54,7 +54,7 @@
       required: false,
       default: 5000
     }
-  });
+  })
 
   const responsiveOptions = [
     {
@@ -72,5 +72,5 @@
       numVisible: 1,
       numScroll: 1
     }
-  ];
+  ]
 </script>

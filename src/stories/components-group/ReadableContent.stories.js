@@ -1,10 +1,10 @@
-import ReadableContent from "../../templates/readablecontent"
+import ReadableContent from '../../templates/readablecontent'
 
 export default {
   title: 'Components Group/ReadableContent',
   component: ReadableContent,
-  tags: ['autodocs'],
-};
+  tags: ['autodocs']
+}
 
 const ReadableContentTemplate = `
 <ReadableContent>

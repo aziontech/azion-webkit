@@ -1,2 +1,2 @@
-import FormJobApplication from './FormJobApplication.vue';
-export default FormJobApplication;
+import FormJobApplication from './FormJobApplication.vue'
+export default FormJobApplication

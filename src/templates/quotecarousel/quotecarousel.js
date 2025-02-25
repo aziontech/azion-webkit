@@ -1,2 +1,2 @@
-import QuoteCarousel from './QuoteCarousel.vue';
-export default QuoteCarousel;
+import QuoteCarousel from './QuoteCarousel.vue'
+export default QuoteCarousel

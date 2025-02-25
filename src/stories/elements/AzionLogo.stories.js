@@ -4,8 +4,7 @@ export default {
   title: 'Elements/svgs/AzionLogo',
   component: AzionLogo,
   tags: ['autodocs'],
-  argTypes: {
-  }
+  argTypes: {}
 }
 
 export const Default = {
