@@ -41,7 +41,7 @@
     "storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
     "build:package": "NODE_ENV=production node build",
-    "build": "npm run build:package",
+    "build": "npm run format && npm run build:package",
     "dev": "vite",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
