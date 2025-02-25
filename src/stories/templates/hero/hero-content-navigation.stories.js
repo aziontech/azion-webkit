@@ -1,11 +1,8 @@
-import Breadcrumb from 'primevue/breadcrumb'
-import Divider from 'primevue/divider'
-import HeroArticle from '../../../templates/heroarticle'
-import MenuNavigation from '../../../templates/menunavigationblock'
+import HeroContentNavigation from '../../../templates/herocontentnavigation'
 
 export default {
   title: 'Blocks/Hero/hero-content-navigation',
-  component: HeroArticle,
+  component: HeroContentNavigation,
   tags: ['autodocs'],
   argTypes: {}
 }
@@ -71,24 +68,12 @@ const MOCK = {
 
 const template = `
 <div class="surface-ground p-10 flex flex-col gap-10">
-  <HeroArticle v-bind="args">
-    <template #breadcrumbs>
-      <Breadcrumb :model="args.breadcrumbItems" class="-ml-1 lg:col-start-2" />
-    </template>
-  </HeroArticle>
-  <div class="w-full">
-    <MenuNavigation
-      :menuTitle="args.menuTitle"
-      :menuItems="args.menuItems"
-      :mobileLabel="args.mobileLabel"
-    />
-    <Divider client:load />
-  </div>
+  <HeroContentNavigation v-bind="args" />
 </div>
 `
 
 const Template = (args) => ({
-  components: { HeroArticle, Breadcrumb, Divider, MenuNavigation },
+  components: { HeroContentNavigation },
   setup() {
     return { args }
   },

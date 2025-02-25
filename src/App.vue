@@ -1,40 +1,66 @@
 <template>
-  <Container>
-    <HeroHsFormRight
-      overline="Overline"
-      title="meu titulo"
-      description="Com o WAF da Azion, você protege suas aplicações e APIs das ameaças OWASP Top 10 até os mais sofisticados ataques zero-day."
-      :form="{
-        id: '2cb5ef91-3c22-4d2d-b657-5bd102d2d737',
-        title: 'Transforme a segurança da Azion em seu diferencial competitivo'
-      }"
-      :list="[
-        {
-          title: 'list title',
-          description: 'list descrioption',
-          icon: 'pi pi-tag'
-        },
-        {
-          title: 'list title',
-          description: 'list descrioption',
-          icon: 'pi pi-tag'
-        },
-        {
-          title: 'list title',
-          description: 'list descrioption',
-          icon: 'pi pi-tag'
-        },
-        {
-          title: 'list title',
-          description: 'list descrioption',
-          icon: 'pi pi-tag'
-        }
-      ]"
-    />
-  </Container>
+  <HeroContentNavigation v-bind="MOCK" />
 </template>
 
 <script setup>
-  import Container from './templates/container'
-  import HeroHsFormRight from './templates/herohsformright'
+  // import Container from './templates/container'
+  import HeroContentNavigation from './templates/herocontentnavigation'
+
+  const MOCK = {
+    breadcrumbItems: [
+      {
+        url: `/en/blog/`,
+        target: '_self',
+        label: 'Blog'
+      },
+      {
+        url: 'www.azion.com',
+        target: '_self',
+        label: 'This Article'
+      }
+    ],
+    date: 'JUN 27, 2024 • 15 min read',
+    title: 'Azion Edge SQL: enabling access and analysis of structured data at the edge',
+    authors: [
+      {
+        avatar: 'https://www.azion.com/assets/blog/images/uploads/img-prof.png',
+        title: 'Mariana Bellorín Aguilera',
+        role: 'Technical Writer'
+      }
+    ],
+    description:
+      'Explore how Azion Edge SQL enhances database operations with edge computing for high scalability, low latency, and cost-effectiveness.',
+    menuTitle: 'Learning Center',
+    menuItems: [
+      {
+        label: 'DDoS Attacks',
+        url: '/en/learning/ddos/what-is-ddos-attack/',
+        items: [
+          {
+            label: null,
+            url: null
+          }
+        ]
+      },
+      {
+        label: 'Glossary',
+        url: '',
+        items: [
+          {
+            label: 'What is a DDoS Attack?',
+            url: '/en/learning/ddos/what-is-ddos-attack/'
+          },
+          {
+            label: 'What is a Botnet?',
+            url: '/en/learning/ddos/what-is-a-ddos-botnet/'
+          },
+          {
+            label: 'What Are Application Layer Attacks?',
+            url: '/en/learning/ddos/application-layer-attack/'
+          }
+        ]
+      }
+    ],
+    mobileLabel: 'DDoS Attacks'
+  }
 </script>
