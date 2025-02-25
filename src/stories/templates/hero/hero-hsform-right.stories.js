@@ -2,23 +2,6 @@ import Container from '../../../templates/container/Container'
 import HeroHsFormRight from '../../../templates/herohsformright/HeroHsFormRight'
 import Rules from '../../rules'
 
-export default {
-  title: 'Blocks/Hero/hero-hsform-right',
-  tags: ['autodocs'],
-  parameters: {
-    docs: {
-      description: {
-        component: `
-### Content rules
-${Rules.hero.overline}
-${Rules.hero.title}
-${Rules.hero.description}
-        `,
-      },
-    },
-  },
-}
-
 const MOCK = {
   "overline": "WEB APPLICATION FIREWALL (WAF)",
   "title": "Web Application Firewall: a proteção avançada que especialistas de segurança confiam",
@@ -46,23 +29,39 @@ const MOCK = {
   }
 }
 
-const HeroDisplay = `
+const HeroHsFormRight = `
 <Container class="surface-ground">
   <HeroHsFormRight v-bind="args" />
 </Container>
 `
+
+export default {
+  title: 'Blocks/Hero/hero-hsform-right',
+  tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.hero.overline}
+${Rules.hero.title}
+${Rules.hero.description}
+        `,
+      },
+    },
+  },
+}
 
 const Template = (args) => ({
   components: { Container, HeroHsFormRight },
   setup() {
     return { args }
   },
-  template: HeroDisplay
+  template: HeroHsFormRight
 })
 
 export const Default = Template.bind({})
 Default.args = MOCK
-
 Default.parameters = {
   docs: {
     description: {
