@@ -36,14 +36,13 @@
   },
   "scripts": {
     "clean": "rm -rf node_modules package-lock.json",
-    "clean-cache": "npm cache clean --force",
+    "clean:cache": "npm cache clean --force",
     "reinstall": "npm run clean; npm install",
     "storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
     "build:package": "NODE_ENV=production node build",
     "build": "npm run build:package",
     "dev": "vite",
-    "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
   },
