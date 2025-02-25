@@ -62,8 +62,7 @@ const MOCK = {
       ]
     }
   ],
-  mobileLabel: 'DDoS Attacks',
-  isContainer: false
+  mobileLabel: 'DDoS Attacks'
 }
 
 const template = `
