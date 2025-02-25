@@ -12,23 +12,21 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  * Defines valid properties in HeroHsFormRight component.
  */
 
-interface List {
-  title: string
-  description: string
-  icon: string
-}
-
-interface Form {
-  id: string
-  title: string
-}
-
 export interface HeroHsFormRightProps {
   overline: string
   title: string
   description: string
-  list: List[]
-  form: Form
+  list: Array<[
+    {
+      title: string
+      description: string
+      icon: string
+    }
+  ]>
+  form: {
+    id: string
+    title: string
+  }
 }
 
 /**
