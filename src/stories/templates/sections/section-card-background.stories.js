@@ -1,9 +1,5 @@
-import ContentSection from '../../../templates/contentsection'
-import CardBase from '../../../templates/cardbase'
-import Overline from '../../../templates/overline'
-import CardTitle from '../../../templates/cardtitle'
-import CardBgImage from '../../../templates/cardbgimage'
 import Container from '../../../templates/container'
+import SectionCardBackground from '../../../templates/sectioncardbackground'
 import Rules from '../../rules'
 
 export default {
@@ -27,51 +23,20 @@ ${Rules.section.cards}
 const config = (args) => {
   return {
     components: {
-      ContentSection,
-      CardBase,
-      Overline,
-      CardTitle,
-      CardBgImage,
-      Container
+      Container,
+      SectionCardBackground
     },
     setup() {
       return { args }
     },
     template: `
       <Container class="surface-ground">
-        <ContentSection
-          titleTag="h2"
-          position="center"
-          isContentCentralized
-          textCenter
+        <SectionCardBackground
           :title="args.title"
-        >
-          <template #actions>
-            <LinkButton
-              v-for="({ link, label, outlined }) in args.buttons"
-              :link="link"
-              :label="label"
-              :outlined="outlined"
-            />
-          </template>
-
-          <template #main>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <CardBase v-for="({ label, title, image, alt }) in args.cards">
-                <template #content-raw>
-                  <CardBgImage :alt="alt" :image="image">
-                    <template #content>
-                      <div class="flex flex-col gap-5 z-20">
-                        <Overline :label="label" />
-                        <CardTitle>{{ title }}</CardTitle>
-                      </div>
-                    </template>
-                  </CardBgImage>
-                </template>
-              </CardBase>
-            </div>
-          </template>
-        </ContentSection>
+          :description="args.description"
+          :buttons="args.buttons"
+          :cards="args.cards"
+        />
       </Container>
     `
   }
