@@ -8,8 +8,8 @@ import 'primeflex/primeflex.css'
 import 'primeicons/primeicons.css'
 import './assets/icons/azionicons.scss'
 import './assets/styles/main.css'
-import './assets/styles/avatar.css' // hack to load right
-import './assets/styles/hsform.css' // hubspot form
+import './assets/styles/avatar.css'
+import './assets/styles/hsform.css'
 import './assets/styles/text.css'
 import 'azion-theme'
 
