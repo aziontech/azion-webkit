@@ -7,11 +7,13 @@
     </template>
     <template #main>
       <div class="form border surface-border rounded-md p-4 md:p-8 flex flex-col gap-8">
-        <form data-form class="field-wrap hbspt-form">
+        <form data-form class="hbspt-form">
           <p class="mb-6">
             {{ props.form.title }}
           </p>
-          <div v-if="isLoading" class="loader-ring"></div>
+          <div class="field-wrap">
+            <div v-if="isLoading" class="loader-ring"></div>
+          </div>
         </form>
       </div>
     </template>
