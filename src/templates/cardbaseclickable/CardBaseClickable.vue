@@ -20,8 +20,8 @@
           <p v-if="action?.label">
             {{ action.label }}
           </p>
-          <i v-if="action?.isExternal" class="pi pi-arrow-up-right text-sm"></i>
-          <i v-else class="pi pi-arrow-right text-sm"></i>
+          <i v-if="action?.isExternal" class="pi pi-arrow-up-right text-body-2"></i>
+          <i v-else class="pi pi-arrow-right text-body-2"></i>
         </div>
       </template>
 

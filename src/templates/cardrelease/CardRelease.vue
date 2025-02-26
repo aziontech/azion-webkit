@@ -15,7 +15,7 @@
           </div>
 
           <div class="flex flex-col gap-3">
-            <p class="text-xl max-w-lg leading-normal">
+            <p class="text-body-5 max-w-lg leading-normal">
               {{ title }}
             </p>
           </div>
@@ -45,7 +45,7 @@
             </template>
           </ImageSwitcher>
 
-          <p class="text-xs text-color-secondary min-h-8">
+          <p class="text-body-1 text-color-secondary min-h-8">
             {{ image.description }}
           </p>
         </div>

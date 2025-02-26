@@ -13,7 +13,7 @@
         </div>
       </template>
       <template #content>
-        <p class="text-sm text-color-secondary">{{ description }}</p>
+        <p class="text-body-2 text-color-secondary">{{ description }}</p>
       </template>
     </Card>
   </a>

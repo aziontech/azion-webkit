@@ -17,7 +17,7 @@
             </div>
           </div>
           <div v-if="pricing" class="flex flex-col">
-            <p class="text-7xl font-semibold leading-tight"> {{ pricing.value }}</p>
+            <p class="text-heading-5 font-semibold leading-tight"> {{ pricing.value }}</p>
             <CardDescription> {{ pricing.description }}</CardDescription>
           </div>
         </div>
