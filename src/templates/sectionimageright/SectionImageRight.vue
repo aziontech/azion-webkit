@@ -68,12 +68,16 @@
     image: {
       type: String,
       required: true,
-      default: 'https://www.azion.com/assets/pages/products/images/light/edge-network/network-ilustrationEN.png'
+      default() {
+        return 'https://www.azion.com/assets/pages/products/images/light/edge-network/network-ilustrationEN.png'
+      }
     },
     imageDark: {
       type: String,
       required: true,
-      default: 'https://www.azion.com/assets/pages/products/images/dark/edge-network/network-ilustrationEN.png'
+      default() {
+        return 'https://www.azion.com/assets/pages/products/images/dark/edge-network/network-ilustrationEN.png'
+      }
     }
   })
 </script>

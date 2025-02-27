@@ -1,7 +1,5 @@
-import ContentSection from '../../../templates/contentsection'
-import LinkButton from '../../../templates/linkbutton'
-import ImageSwitcher from '../../../templates/themeawareimageswitcher'
 import Container from '../../../templates/container'
+import SectionImageRight from '../../../templates/sectionimageright'
 import Rules from '../../rules'
 
 export default {
@@ -24,29 +22,16 @@ ${Rules.section.image}
 
 const config = (args) => {
   return {
-    components: { ContentSection, ImageSwitcher, LinkButton, Container },
+    components: {
+      Container,
+      SectionImageRight
+    },
     setup() {
       return { args }
     },
     template: `
       <Container class="surface-ground">
-        <ContentSection :title="args.title" :overline="args.overline" :description="args.description" titleTag="h2">
-          <template #actions>
-            <LinkButton v-for="({ link, label }) in args.buttons" :link="link" :label="label" outlined />
-          </template>
-          <template #main>
-          <div class="w-full">
-            <ImageSwitcher>
-              <template #darkImage>
-                <img width="540" height="auto" src="https://www.azion.com/assets/pages/products/images/dark/edge-network/network-ilustrationEN.png" />
-              </template>
-              <template #lightImage>
-                <img width="540" height="auto" src="https://www.azion.com/assets/pages/products/images/light/edge-network/network-ilustrationEN.png" />
-              </template>
-            </ImageSwitcher>
-            </div>
-          </template>
-        </ContentSection>
+        <SectionImageRight v-bind="args" />
       </Container>
     `
   }
