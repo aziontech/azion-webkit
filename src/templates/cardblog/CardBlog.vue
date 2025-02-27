@@ -31,8 +31,8 @@
             'justify-between': direction == 'column'
           }"
         >
-          <h2 class="text-heading-2 font-medium text-color">{{ title }}</h2>
-          <p class="text-body-2 text-color-secondary max-w-3xl">{{ description }}</p>
+          <h2 class="text-heading-1 font-medium text-color">{{ title }}</h2>
+          <p class="text-body-1 text-color-secondary max-w-3xl">{{ description }}</p>
           <div
             class="flex"
             :class="{
