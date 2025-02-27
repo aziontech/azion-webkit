@@ -59,43 +59,43 @@ Default.args = {
       image: 'https://www.azion.com/assets/pages/about/perfil-6.png',
       name: 'Rafael Umann',
       role: 'Chief Executive Officer',
-      linkedin: 'https://www.linkedin.com/in/rafaelumann/'
+      url: 'https://www.url.com/in/rafaelumann/'
     },
     {
       image: 'https://www.azion.com/assets/pages/about/perfil.png',
       name: 'Alessandro Cauduro',
       role: 'Chief Artificial Intelligence Officer',
-      linkedin: 'https://www.linkedin.com/in/alessandrocauduro/'
-    },
-    {
-      image: 'https://www.azion.com/assets/pages/about/perfil-1.png',
-      name: 'Andressa Giongo',
-      role: 'Chief People Officer',
-      linkedin: 'https://www.linkedin.com/in/andressa-giongo-90661311/'
+      url: 'https://www.url.com/in/alessandrocauduro/'
     },
     {
       image: 'https://www.azion.com/assets/pages/about/perfil-2.png',
       name: 'Fabiano Fraçao',
       role: 'Chief Revenue Officer',
-      linkedin: 'https://www.linkedin.com/in/fabiano-fração-5b19632/'
+      url: 'https://www.url.com/in/fabiano-fração-5b19632/'
+    },
+    {
+      image: 'https://www.azion.com/assets/pages/about/perfil-gabriel-madureira.jpeg',
+      name: 'Gabriel Madureira',
+      role: 'Chief Marketing Officer',
+      url: 'https://www.url.com/in/gabrielmadureira/'
     },
     {
       image: 'https://www.azion.com/assets/pages/about/perfil-3.png',
       name: 'Júlio Silvello',
       role: 'Chief Product Officer',
-      linkedin: 'https://www.linkedin.com/in/juliosilvello/'
+      url: 'https://www.url.com/in/juliosilvello/'
     },
     {
       image: 'https://www.azion.com/assets/pages/about/perfil-4.png',
       name: 'Marcus Grando',
       role: 'Chief Technology Officer',
-      linkedin: 'https://www.linkedin.com/in/marcusgrando/'
+      url: 'https://www.url.com/in/marcusgrando/'
     },
     {
       image: 'https://www.azion.com/assets/pages/about/perfil-5.png',
       name: 'Mauricio Pegoraro',
       role: 'Chief Information Security Officer',
-      linkedin: 'https://www.linkedin.com/in/mauriciowp/'
+      url: 'https://www.url.com/in/mauriciowp/'
     }
   ]
 }

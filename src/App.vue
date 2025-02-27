@@ -1,36 +1,59 @@
 <template>
-  <div class="px-container">
-    <HeroContent v-bind="MOCK" />
-  </div>
+  <Container>
+    <SectionListAvatars v-bind="MOCK" />
+  </Container>
 </template>
 
 <script setup>
-  // import Container from './templates/container'
-  import HeroContent from './templates/herocontent'
+  import Container from './templates/container'
+  import SectionListAvatars from './templates/sectionlistavatars'
 
   const MOCK = {
-    breadcrumbItems: [
+    overline: 'Our Leadership',
+    title: 'Guided by exceptional minds',
+    avatars: [
       {
-        url: `/en/blog/`,
-        target: '_self',
-        label: 'Blog'
+        image: 'https://www.azion.com/assets/pages/about/perfil-6.png',
+        name: 'Rafael Umann',
+        role: 'Chief Executive Officer',
+        url: 'https://www.url.com/in/rafaelumann/'
       },
       {
-        url: 'www.azion.com',
-        target: '_self',
-        label: 'This Article'
-      }
-    ],
-    date: 'JUN 27, 2024 • 15 min read',
-    title: 'Azion Edge SQL: enabling access and analysis of structured data at the edge',
-    authors: [
+        image: 'https://www.azion.com/assets/pages/about/perfil.png',
+        name: 'Alessandro Cauduro',
+        role: 'Chief Artificial Intelligence Officer',
+        url: 'https://www.url.com/in/alessandrocauduro/'
+      },
       {
-        avatar: 'https://www.azion.com/assets/blog/images/uploads/img-prof.png',
-        title: 'Mariana Bellorín Aguilera',
-        role: 'Technical Writer'
+        image: 'https://www.azion.com/assets/pages/about/perfil-2.png',
+        name: 'Fabiano Fraçao',
+        role: 'Chief Revenue Officer',
+        url: 'https://www.url.com/in/fabiano-fração-5b19632/'
+      },
+      {
+        image: 'https://www.azion.com/assets/pages/about/perfil-gabriel-madureira.jpeg',
+        name: 'Gabriel Madureira',
+        role: 'Chief Marketing Officer',
+        url: 'https://www.url.com/in/gabrielmadureira/'
+      },
+      {
+        image: 'https://www.azion.com/assets/pages/about/perfil-3.png',
+        name: 'Júlio Silvello',
+        role: 'Chief Product Officer',
+        url: 'https://www.url.com/in/juliosilvello/'
+      },
+      {
+        image: 'https://www.azion.com/assets/pages/about/perfil-4.png',
+        name: 'Marcus Grando',
+        role: 'Chief Technology Officer',
+        url: 'https://www.url.com/in/marcusgrando/'
+      },
+      {
+        image: 'https://www.azion.com/assets/pages/about/perfil-5.png',
+        name: 'Mauricio Pegoraro',
+        role: 'Chief Information Security Officer',
+        url: 'https://www.url.com/in/mauriciowp/'
       }
-    ],
-    description:
-      'Explore how Azion Edge SQL enhances database operations with edge computing for high scalability, low latency, and cost-effectiveness.'
+    ]
   }
 </script>
