@@ -16,6 +16,7 @@ type Avatars = Array<{
 }>
 
 export interface SectionListAvatarsProps {
+  titleTag: string
   image: string
   title: string
   overline: string
