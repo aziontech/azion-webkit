@@ -63,7 +63,7 @@
       required: true
     },
     buttons: {
-      type: Array,
+      type: Array
     },
     image: {
       type: String,
