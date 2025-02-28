@@ -1,0 +1,7 @@
+{
+  "main": "./sectionlistproducts.js",
+  "types": "./SectionListProducts.d.ts",
+  "browser": {
+    "./sfc": "./SectionListProducts.vue"
+  }
+}
