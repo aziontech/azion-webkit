@@ -1,59 +1,63 @@
 <template>
   <Container>
-    <SectionListAvatars v-bind="MOCK" />
+    <SectionHorizontalNavigation run v-bind="MOCK" />
   </Container>
 </template>
 
 <script setup>
   import Container from './templates/container'
-  import SectionListAvatars from './templates/sectionlistavatars'
+  import SectionHorizontalNavigation from './templates/sectionhorizontalnavigation'
 
   const MOCK = {
-    overline: 'Our Leadership',
-    title: 'Guided by exceptional minds',
-    avatars: [
-      {
-        image: 'https://www.azion.com/assets/pages/about/perfil-6.png',
-        name: 'Rafael Umann',
-        role: 'Chief Executive Officer',
-        url: 'https://www.url.com/in/rafaelumann/'
-      },
-      {
-        image: 'https://www.azion.com/assets/pages/about/perfil.png',
-        name: 'Alessandro Cauduro',
-        role: 'Chief Artificial Intelligence Officer',
-        url: 'https://www.url.com/in/alessandrocauduro/'
-      },
-      {
-        image: 'https://www.azion.com/assets/pages/about/perfil-2.png',
-        name: 'Fabiano Fraçao',
-        role: 'Chief Revenue Officer',
-        url: 'https://www.url.com/in/fabiano-fração-5b19632/'
-      },
-      {
-        image: 'https://www.azion.com/assets/pages/about/perfil-gabriel-madureira.jpeg',
-        name: 'Gabriel Madureira',
-        role: 'Chief Marketing Officer',
-        url: 'https://www.url.com/in/gabrielmadureira/'
-      },
-      {
-        image: 'https://www.azion.com/assets/pages/about/perfil-3.png',
-        name: 'Júlio Silvello',
-        role: 'Chief Product Officer',
-        url: 'https://www.url.com/in/juliosilvello/'
-      },
-      {
-        image: 'https://www.azion.com/assets/pages/about/perfil-4.png',
-        name: 'Marcus Grando',
-        role: 'Chief Technology Officer',
-        url: 'https://www.url.com/in/marcusgrando/'
-      },
-      {
-        image: 'https://www.azion.com/assets/pages/about/perfil-5.png',
-        name: 'Mauricio Pegoraro',
-        role: 'Chief Information Security Officer',
-        url: 'https://www.url.com/in/mauriciowp/'
-      }
-    ]
-  }
+  overline: 'Compliance Expertise',
+  title:
+    'We are committed to ensuring that our global customers and partners can meet diverse compliance requirements.',
+  description:
+    'Security and Compliance are shared responsibilities between Azion and the customer. This shared model can help relieve the customer’s operational burden as Azion operates, manages and controls the components from the operating system and virtualization layer, including updates and security patches, down to the physical security of the facilities in which the service operates.',
+  buttons: [
+    {
+      link: 'https://www.azion.com/en/documentation/shared-responsibility/',
+      label: 'Visit Shared Responsibility Model'
+    }
+  ],
+  leftSidebar: [
+    {
+      link: '#commercial-certifications',
+      label: 'Global certifications'
+    }
+  ],
+  cardContent: [
+    {
+      overline: 'Global Certifications',
+      id: 'commercial-certifications',
+      cards: [
+        {
+          title: 'SOC 2 Type 2 / SOC 3',
+          text: 'Azion receives biannual SOC 2 Type 2 and SOC 3 reports, being evaluated on two different trust principles: Security and Availability. It demonstrates that the security controls are continuously audited audited over the course of the year. ',
+          image: 'https://www.azion.com/assets/pages/compliance/AICPA.png',
+          alt: 'AICPA Logo',
+          links: [
+            {
+              label: 'Read documentation',
+              link: 'https://www.azion.com/en/documentation/compliance/soc/ '
+            }
+          ]
+        },
+        {
+          title: 'PCI DSS',
+          text: "Azion annually renews its PCI DSS certification as a PCI DSS 4.0 Level 1 service provider, demonstrating the commitment to ensure that the transmission and processing of cardholder data are secure for both customers and those who interact with Azion's services.",
+          image: 'https://www.azion.com/assets/pages/compliance/compliance-pci.png',
+          alt: 'PCI DSS',
+          links: [
+            {
+              label: 'Read documentation',
+              link: 'https://www.azion.com/en/documentation/compliance/pci-dss-certification/ '
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
 </script>

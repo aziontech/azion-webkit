@@ -1,0 +1,7 @@
+{
+  "main": "./sectionhorizontalnavigation.js",
+  "types": "./SectionHorizontalNavigation.d.ts",
+  "browser": {
+    "./sfc": "./SectionHorizontalNavigation.vue"
+  }
+}

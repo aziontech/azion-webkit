@@ -1,11 +1,11 @@
 <template>
   <ContentSection
-  isContentCentralized
-  textCenter
-  position="center"
-  :overline="props.overline"
-  :title="props.title"
-  :titleTag="props.titleTag"
+    isContentCentralized
+    textCenter
+    position="center"
+    :overline="props.overline"
+    :title="props.title"
+    :titleTag="props.titleTag"
   >
     <template #main>
       <div
@@ -22,7 +22,8 @@
               <IconTextSegment
                 class="h-full"
                 :href="link"
-                :title="title"r
+                :title="title"
+                r
                 :description="description"
                 :icon="icon"
                 severity="primary"
@@ -78,6 +79,6 @@
     },
     list: {
       type: Array
-    },
+    }
   })
 </script>
