@@ -12,30 +12,22 @@ type HeroType = {
   title: string
   description: string
   image: string
-  buttons: Array<
-    [
-      {
-        label: string
-        link: string
-      }
-    ]
-  >
+  buttons: Array<{
+    label: string
+    link: string
+  }>
 }
 
 type CardsType = {
   cards: {
     title: string
     description: string
-    cards: Array<
-      [
-        {
-          label: string
-          title: string
-          image: string
-          alt: string
-        }
-      ]
-    >
+    cards: Array<{
+      label: string
+      title: string
+      image: string
+      alt: string
+    }>
   }
 }
 

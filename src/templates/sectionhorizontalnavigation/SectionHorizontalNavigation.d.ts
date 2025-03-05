@@ -15,48 +15,28 @@ export interface SectionHorizontalNavitaionProps {
   overline: string
   title: string
   description: string
-  buttons: Array<
-    [
-      {
+  buttons: Array<{
+    link: string
+    label: string
+  }>
+  leftSidebar: Array<{
+    link: string
+    label: string
+  }>
+  cardContent: Array<{
+    overline: string
+    id: string
+    cards: Array<{
+      title: string
+      text: string
+      image: string
+      alt: string
+      links: Array<{
         link: string
         label: string
-      }
-    ]
-  >
-  leftSidebar: Array<
-    [
-      {
-        link: string
-        label: string
-      }
-    ]
-  >
-  cardContent: Array<
-    [
-      {
-        overline: string
-        id: string
-        cards: Array<
-          [
-            {
-              title: string
-              text: string
-              image: string
-              alt: string
-              links: Array<
-                [
-                  {
-                    link: string
-                    label: string
-                  }
-                ]
-              >
-            }
-          ]
-        >
-      }
-    ]
-  >
+      }>
+    }>
+  }>
 }
 
 /**

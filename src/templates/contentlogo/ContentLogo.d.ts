@@ -14,15 +14,11 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 export interface ContentLogoProps {
   isCentralized?: boolean | false
   title?: string | undefined
-  logos: Array<
-    [
-      {
-        imageSrc: string
-        alt: string
-        href: string
-      }
-    ]
-  >
+  logos: Array<{
+    imageSrc: string
+    alt: string
+    href: string
+  }>
 }
 
 /**

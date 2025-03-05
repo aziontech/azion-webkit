@@ -7,15 +7,11 @@
 import { VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
-type BreadcrumbType = Array<
-  [
-    {
-      label: string
-      target: '_self' | '_blank' | ''
-      url: string
-    }
-  ]
->
+type BreadcrumbType = Array<{
+  label: string
+  target: '_self' | '_blank' | ''
+  url: string
+}>
 interface authors {
   avatar: string
   title: string
