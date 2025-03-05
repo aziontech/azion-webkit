@@ -1,10 +1,10 @@
 <template>
-  <div class="flex flex-col gap-12">
+  <div class="flex flex-col gap-16">
     <template
       v-for="({ title, items }, index) in props.data"
       :key="index"
     >
-      <div class="flex flex-col gap-6">
+      <div class="flex flex-col gap-8">
         <p class="font-medium text-base">{{ title }}</p>
         <UnorderedList
           :severity="severity"
