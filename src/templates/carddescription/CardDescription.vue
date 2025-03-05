@@ -1,9 +1,9 @@
 <template>
   <p class="max-w-lg text-pretty" :class="[
     { 'text-color-secondary' : color == 'secondary'},
-    { 'text-xs' : size == 'small'},
-    { 'text-sm' : size == 'medium'},
-    { 'text-base' : size == 'large'}
+    { 'text-body-1' : size == 'small'},
+    { 'text-body-2' : size == 'medium'},
+    { 'text-body-3' : size == 'large'}
   ]"> <slot /> </p>
 </template>
 

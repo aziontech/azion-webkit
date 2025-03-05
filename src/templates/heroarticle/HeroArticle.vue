@@ -35,7 +35,7 @@
     <template v-if="date">
       <p
         itemprop="datePublished"
-        class="font-normal text-xs text-color-secondary"
+        class="font-normal text-body-1 text-color-secondary"
       >
         {{ date }}
       </p>
@@ -56,10 +56,10 @@
               />
             </div>
             <div itemprop="author">
-              <p class="font-normal text-sm">
+              <p class="ftext-heading-0">
                 {{ title }}
               </p>
-              <p class="font-normal text-xs text-color-secondary">
+              <p class="text-body-1 text-color-secondary">
                 {{ role }}
               </p>
             </div>

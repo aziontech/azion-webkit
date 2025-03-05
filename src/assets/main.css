@@ -53,6 +53,10 @@ html, body {
 
 
 /* Headings */
+.text-heading-0 {
+  @apply text-xs sm:text-xs lg:text-sm font-medium;
+}
+
 .text-heading-1 {
   @apply text-base sm:text-lg lg:text-xl font-medium;
 }
@@ -74,8 +78,9 @@ html, body {
 }
 
 /* Body's */
+
 .text-body-1 {
-  @apply text-xs sm:text-xs leading-normal sm:leading-relaxed;
+  @apply text-[10px] sm:text-xs leading-normal sm:leading-relaxed;
 }
 
 .text-body-2 {
@@ -96,5 +101,5 @@ html, body {
 
 /* Others */
 .text-overline {
-  @apply text-[.625rem] sm:text-xs uppercase tracking-widest;
+  @apply text-[.625rem] sm:text-xs uppercase tracking-widest font-mono;
 }

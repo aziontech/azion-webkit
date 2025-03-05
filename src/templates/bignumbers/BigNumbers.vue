@@ -25,7 +25,7 @@
         <div class="flex flex-col gap-2 justify-evenly w-fit">
           <p
             v-if="item.titleup"
-            class="text-xs md:text-sm text-color-secondary"
+            class="text-body-3 text-color-secondary"
           >
             {{ item.titleup }}
           </p>
@@ -35,7 +35,7 @@
           <p
             v-if="item.description"
             v-html="item.description"
-            class="text-sm md:text-base text-color-secondary md:min-h-10 text-wrap w-full max-w-36 md:max-w-52"
+            class="text-body-3 text-color-secondary md:min-h-10 text-wrap w-full max-w-36 md:max-w-52"
           />
         </div>
       </div>

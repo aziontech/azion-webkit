@@ -8,7 +8,7 @@
               <span class="flex flex-row gap-2 items-end">
                 <AzionIconLogo class="h-[26px]" />
                 <span class="leading-none">
-                  <i class="text-xs">Move to the Edge</i> &trade;
+                  <i class="text-body-1 text-color-secondary">Move to the Edge</i> &trade;
                 </span>
               </span>
             </a>
@@ -52,7 +52,7 @@
         <div class="md:hidden">
           <Divider />
         </div>
-        <p class="text-xs">
+        <p class="text-body-1">
           {{ copyright }}
         </p>
       </div>
