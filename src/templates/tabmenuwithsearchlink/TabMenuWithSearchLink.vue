@@ -36,7 +36,7 @@
         @click="activeDialog"
         class="p-inputtext flex items-center gap-2 w-full text-color-secondary text-sm"
       >
-        <i class="p-button-icon pi pi-search" />
+        <i class="p-button-icon pi pi-search"></i>
         <span>{{ inputPlaceholder }}</span>
       </button>
       <AlgoliaDialog
