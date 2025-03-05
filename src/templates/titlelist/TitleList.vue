@@ -32,12 +32,6 @@
 <script setup>
   import LinkButton from '../linkbutton/LinkButton.vue'
 
-  // interface listItem {
-  //   title: string,
-  //   link: String,
-  //   linkTarget: _self, _blank
-  // }
-
   const props = defineProps({
     data: {
       type: Array,

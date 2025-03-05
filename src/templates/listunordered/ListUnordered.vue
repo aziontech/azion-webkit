@@ -83,14 +83,12 @@
     },
     direction: {
       type: String,
-      required: false,
-      default: 'vertical',
+      default: () => 'vertical',
       options: ['vertical', 'horizontal']
     },
     severity: {
       type: String,
-      required: false,
-      default: 'default',
+      default: () => 'default',
       options: ['default', 'primary', 'secondary', 'warning', 'success', 'info']
     }
   })
