@@ -122,49 +122,39 @@
 
   defineProps({
     bannerNews: {
-      type: Object,
-      required: false
+      type: Object
     },
     overline: {
-      type: String,
-      required: false
+      type: String
     },
     isReverse: {
       type: Boolean,
-      required: false,
       default: false
     },
     title: {
-      type: String,
-      required: false
+      type: String
     },
     titleTag: {
       type: String,
-      required: false,
       default: 'h1'
     },
     description: {
-      type: String,
-      required: false
+      type: String
     },
     justify: {
       type: String,
-      required: false,
       options: ['center']
     },
     align: {
       type: String,
-      required: false,
       options: ['center']
     },
     isCentralized: {
       type: Boolean,
-      required: false,
       default: false
     },
     isDisplay: {
-      type: Boolean,
-      required: false
+      type: Boolean
     }
   })
 </script>
