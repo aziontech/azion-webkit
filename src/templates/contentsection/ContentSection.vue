@@ -38,15 +38,15 @@
               <Overline :label="overline" />
             </template>
             <template v-if="title">
-              <h1 v-if="titleTag === 'h1'" class="text-2xl md:text-3xl font-medium text-balance" style="line-height: 125% !important;">{{ title }}</h1>
-              <h2 v-if="titleTag === 'h2'" class="text-2xl md:text-3xl font-medium text-balance" style="line-height: 125% !important;">{{ title }}</h2>
-              <h3 v-if="titleTag === 'h3'" class="text-2xl md:text-3xl font-medium text-balance" style="line-height: 125% !important;">{{ title }}</h3>
-              <h4 v-if="titleTag === 'h4'" class="text-2xl md:text-3xl font-medium text-balance" style="line-height: 125% !important;">{{ title }}</h4>
-              <h5 v-if="titleTag === 'h5'" class="text-2xl md:text-3xl font-medium text-balance" style="line-height: 125% !important;">{{ title }}</h5>
-              <h6 v-if="titleTag === 'h6'" class="text-2xl md:text-3xl font-medium text-balance" style="line-height: 125% !important;">{{ title }}</h6>
+              <h1 v-if="titleTag === 'h1'" class="text-heading-2 font-medium text-balance" style="line-height: 125% !important;">{{ title }}</h1>
+              <h2 v-if="titleTag === 'h2'" class="text-heading-2 md:text-3xl font-medium text-balance" style="line-height: 125% !important;">{{ title }}</h2>
+              <h3 v-if="titleTag === 'h3'" class="text-heading-2 font-medium text-balance" style="line-height: 125% !important;">{{ title }}</h3>
+              <h4 v-if="titleTag === 'h4'" class="text-heading-2 font-medium text-balance" style="line-height: 125% !important;">{{ title }}</h4>
+              <h5 v-if="titleTag === 'h5'" class="text-heading-2 font-medium text-balance" style="line-height: 125% !important;">{{ title }}</h5>
+              <h6 v-if="titleTag === 'h6'" class="text-heading-2 font-medium text-balance" style="line-height: 125% !important;">{{ title }}</h6>
             </template>
             <template v-else-if="$slots.title">
-              <div class="text-2xl md:text-3xl lg:text-4xl font-medium text-balance" style="line-height: 125% !important;">
+              <div class="text-heading-2 font-medium text-balance" style="line-height: 125% !important;">
                 <slot name="title" />
               </div>
             </template>

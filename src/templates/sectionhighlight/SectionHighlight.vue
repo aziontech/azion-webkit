@@ -8,7 +8,7 @@
               v-if="overline"
               :label="overline"
             />
-            <h2 class="text-2xl md:text-3xl font-medium text-balance">
+            <h2 class="text-heading-2 font-medium text-balance">
               {{ title }}
             </h2>
           </div>
