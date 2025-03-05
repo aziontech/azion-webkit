@@ -4,6 +4,7 @@
     :title="title"
     :overline="overline"
     :description="description"
+    :isSticky="isSticky"
   >
     <template #actions>
       <LinkButton
@@ -29,6 +30,12 @@
   import DescriptionUnorderedList from '../listdescriptionunordered'
 
   defineProps({
+    isSticky: {
+      type: Boolean,
+      default() {
+        return true
+      },
+    },
     overline: {
       type: String
     },
