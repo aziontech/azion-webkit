@@ -8,6 +8,7 @@
         <p class="font-medium text-base">{{ title }}</p>
         <UnorderedList
           :severity="severity"
+          :direction="direction"
           :data="items"
         />
       </div>
@@ -23,6 +24,11 @@
       type: Array,
       required: true,
       default: () => []
+    },
+    direction: {
+      type: String,
+      default: () => 'vertical',
+      options: ['vertical', 'horizontal']
     },
     severity: {
       type: String,
