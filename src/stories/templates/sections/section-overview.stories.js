@@ -17,6 +17,22 @@ ${Rules.section.buttons}
         `
       }
     }
+  },
+  argTypes: {
+    severity: {
+      options: [
+        'default',
+        'primary',
+        'secondary',
+        'warning',
+        'success',
+        'info'
+      ],
+      default: 'primary',
+      control: {
+        type: 'select'
+      }
+    }
   }
 }
 
@@ -55,6 +71,7 @@ Default.args = {
       outlined: 'true'
     }
   ],
+  severity: 'primary',
   data: [
     {
       title: 'Reduce financial risks',
