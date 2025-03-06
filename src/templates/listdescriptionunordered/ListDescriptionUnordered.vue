@@ -27,7 +27,14 @@
     severity: {
       type: String,
       default: () => 'default',
-      options: ['default', 'primary', 'secondary', 'warning', 'success', 'info']
+      options: [
+        'default',
+        'primary',
+        'secondary',
+        'warning',
+        'success',
+        'info'
+      ]
     }
   })
 </script>

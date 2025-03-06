@@ -14,12 +14,14 @@ ${Rules.section.overline}
 ${Rules.section.title}
 ${Rules.section.description}
 ${Rules.section.buttons}
-        `
+`
       }
     }
   },
   argTypes: {
     severity: {
+      description: 'Change icon color',
+      control: { type: 'select' },
       options: [
         'default',
         'primary',
@@ -28,10 +30,7 @@ ${Rules.section.buttons}
         'success',
         'info'
       ],
-      default: 'primary',
-      control: {
-        type: 'select'
-      }
+      default: 'primary'
     }
   }
 }
