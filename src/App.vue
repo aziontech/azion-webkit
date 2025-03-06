@@ -1,24 +1,54 @@
 <template>
   <Container>
-    <SectionImageRight v-bind="MOCK" />
+    <GridHighlight :cards="MOCK.items" />
   </Container>
 </template>
 
 <script setup>
   import Container from './templates/container'
-  import SectionImageRight from './templates/sectionimageright'
+  import GridHighlight from './templates/gridhighlight'
 
   const MOCK = {
-    overline: 'Compliance Expertise',
-    title:
-      'We are committed to ensuring that our global customers and partners can meet diverse compliance requirements.',
-    description:
-      'Security and Compliance are shared responsibilities between Azion and the customer. This shared model can help relieve the customer’s operational burden as Azion operates, manages and controls the components from the operating system and virtualization layer, including updates and security patches, down to the physical security of the facilities in which the service operates.',
-    buttons: [
+    items: [
       {
-        link: 'https://www.azion.com/en/documentation/shared-responsibility/',
-        label: 'Visit Shared Responsibility Model'
+        description: 'Item 1',
+        link: 'https://google.com',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png'
+      },
+      {
+        description: 'Item 2',
+        link: 'https://google.com',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png'
+      },
+      {
+        description: 'Item 3',
+        link: 'https://google.com',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png'
+      },
+      {
+        description: 'Item 4',
+        link: 'https://google.com',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png'
+      },
+      {
+        description: 'Item 5',
+        link: 'https://google.com',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png'
+      },
+      {
+        description: 'Item 6',
+        link: 'https://google.com',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png'
       }
     ]
   }
 </script>
+Sure! The translation of "feat: Substituir SectionImageRight por GridHighlight com mock de itens" into English is:
+
+"feat: Replace SectionImageRight with GridHighlight using mock items"
