@@ -1,4 +1,4 @@
-import IconText from "../../templates/icontext"
+import IconText from '../../templates/icontext'
 
 export default {
   title: 'Components/IconText',
@@ -8,20 +8,21 @@ export default {
     severity: {
       options: ['default', 'primary'],
       control: {
-        type: 'select',
+        type: 'select'
       },
-      description: "Chnage icon color"
+      description: 'Chnage icon color'
     },
     tagSeverity: {
-      description: "Check PrimeVue tags"
+      description: 'Check PrimeVue tags'
     }
   }
-};
+}
 
 const props = {
-  title: "Lorem ipsun magna",
-  description: "lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor et aliquet",
-  icon: "pi pi-check",
+  title: 'Lorem ipsun magna',
+  description:
+    'lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor et aliquet',
+  icon: 'pi pi-check'
 }
 
 export const Default = {
@@ -32,9 +33,9 @@ export const Default = {
 }
 
 export const WithTags = {
- args: {
-  tag: 'Azion',
-  tagSeverity: 'info',
-  ...props
- }
+  args: {
+    tag: 'Azion',
+    tagSeverity: 'info',
+    ...props
+  }
 }

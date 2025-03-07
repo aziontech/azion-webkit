@@ -5,8 +5,8 @@
  *
  * @module `gridbento`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in GridBento component.
@@ -24,7 +24,7 @@ export interface GridBentoProps {
    *   '4-columns-5-items'
    * ]
    */
-  gridType: string | undefined;
+  gridType: string | undefined
 }
 
 /**
@@ -34,7 +34,7 @@ export interface GridBentoSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -44,18 +44,18 @@ export interface GridBentoEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class GridBento extends ClassComponent<GridBentoProps, GridBentoSlots, GridBentoEmits> { }
+declare class GridBento extends ClassComponent<GridBentoProps, GridBentoSlots, GridBentoEmits> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    GridBento: GlobalComponentConstructor<GridBento>;
+    GridBento: GlobalComponentConstructor<GridBento>
   }
 }
 
-export default GridBento;
+export default GridBento

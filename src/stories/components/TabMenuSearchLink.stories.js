@@ -1,29 +1,28 @@
-import TabMenuSearchLink from "../../templates/tabmenuwithsearchlink"
+import TabMenuSearchLink from '../../templates/tabmenuwithsearchlink'
 
 export default {
   title: 'Components/TabMenuSearchLink',
   component: TabMenuSearchLink,
   tags: ['autodocs'],
-  argTypes: {
-  }
+  argTypes: {}
 }
 
 export const Default = {
   args: {
     tabList: [
       {
-        label: "Edge Node",
-        url: "/"
+        label: 'Edge Node',
+        url: '/'
       },
       {
-        label: "Edge SQL",
-        url: "/"
+        label: 'Edge SQL',
+        url: '/'
       },
       {
-        label: "Edge Functions",
-        url: "/"
-      },
+        label: 'Edge Functions',
+        url: '/'
+      }
     ],
-    inputPlaceholder: "Search..."
+    inputPlaceholder: 'Search...'
   }
 }

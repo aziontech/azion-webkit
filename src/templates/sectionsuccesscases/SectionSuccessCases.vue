@@ -4,7 +4,10 @@
     :title="title"
     titleTag="h2"
   >
-    <template #main v-if="button">
+    <template
+      #main
+      v-if="button"
+    >
       <div class="w-full flex lg:justify-end lg:items-end">
         <LinkButton
           class="min-w-fit !px-0 !pl-0 !pr-0"
@@ -19,7 +22,7 @@
     <template #principal>
       <div class="grid-cols-1 md:grid-cols-3 gap-6 grid place-content-center m-0">
         <CardBaseClickable
-          v-for="({ logo, tag, description, link, action }) in cards"
+          v-for="{ logo, tag, description, link, action } in cards"
           backgroundColor="outlined"
           :action="action"
           :link="link"
@@ -35,7 +38,10 @@
             <div class="flex flex-col gap-6">
               <div class="flex justify-between items-center">
                 <div v-html="logo"></div>
-                <Tag :value="tag" severity="info" />
+                <Tag
+                  :value="tag"
+                  severity="info"
+                />
               </div>
               <CardDescription>
                 {{ description }}
@@ -49,28 +55,28 @@
 </template>
 
 <script setup>
-import ContentSection from '../contentsection'
-import CardBaseClickable from '../cardbaseclickable'
-import CardDescription from '../carddescription'
-import LinkButton from '../linkbutton'
-import Tag from 'primevue/tag'
+  import ContentSection from '../contentsection'
+  import CardBaseClickable from '../cardbaseclickable'
+  import CardDescription from '../carddescription'
+  import LinkButton from '../linkbutton'
+  import Tag from 'primevue/tag'
 
-defineProps({
-  overline: {
-    type: String,
-    required: false
-  },
-  title: {
-    type: String,
-    required: true
-  },
-  button: {
-    type: Object,
-    required: false
-  },
-  cards: {
-    type: Array,
-    required: true
-  }
-})
+  defineProps({
+    overline: {
+      type: String,
+      required: false
+    },
+    title: {
+      type: String,
+      required: true
+    },
+    button: {
+      type: Object,
+      required: false
+    },
+    cards: {
+      type: Array,
+      required: true
+    }
+  })
 </script>

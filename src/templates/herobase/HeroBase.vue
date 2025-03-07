@@ -14,20 +14,21 @@
           { 'lg:max-w-3xl 2xl:max-w-4xl gap-10': !isCentralized },
           { 'items-center gap-12 md:gap-24': isCentralized },
           { 'items-center text-center lg:text-left': align === 'center' },
-          { 'justify-center' : justify === 'center'}
+          { 'justify-center': justify === 'center' }
         ]"
       >
         <div
           class="flex flex-col gap-5 md:gap-8"
           :class="[
             { 'max-w-3xl 2xl:max-w-4xl text-center': isCentralized },
-            { 'max-w-3xl 2xl:max-w-4xl': !isCentralized}
+            { 'max-w-3xl 2xl:max-w-4xl': !isCentralized }
           ]"
         >
           <template v-if="bannerNews">
-            <div class="flex" :class="[
-                  { 'justify-center': isCentralized },
-                ]">
+            <div
+              class="flex"
+              :class="[{ 'justify-center': isCentralized }]"
+            >
               <Banner
                 :description="bannerNews.description"
                 :cta="bannerNews.cta.label"
@@ -35,7 +36,10 @@
               />
             </div>
           </template>
-          <Overline v-if="overline && overline.length" :label="overline" />
+          <Overline
+            v-if="overline && overline.length"
+            :label="overline"
+          />
           <template v-if="title">
             <h1
               v-if="titleTag === 'h1'"
@@ -88,54 +92,44 @@
 </template>
 
 <script setup>
-  import Overline from "../overline/Overline.vue"
-  import Banner from "../banner/Banner.vue"
+  import Overline from '../overline/Overline.vue'
+  import Banner from '../banner/Banner.vue'
 
   defineProps({
     bannerNews: {
-      type: Object,
-      required: false,
+      type: Object
     },
     overline: {
-      type: String,
-      required: false
+      type: String
     },
     isReverse: {
       type: Boolean,
-      required: false,
       default: false
     },
     title: {
-      type: String,
-      required: false
+      type: String
     },
     titleTag: {
       type: String,
-      required: false,
       default: 'h1'
     },
     description: {
-      type: String,
-      required: false
+      type: String
     },
     justify: {
       type: String,
-      required: false,
       options: ['center']
     },
     align: {
       type: String,
-      required: false,
       options: ['center']
     },
     isCentralized: {
       type: Boolean,
-      required: false,
       default: false
     },
     isDisplay: {
-      type: Boolean,
-      required: false,
+      type: Boolean
     }
-  });
+  })
 </script>

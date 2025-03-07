@@ -1,2 +1,2 @@
-import CardGridListWithLoadMore from './CardGridListWithLoadMore.vue';
-export default CardGridListWithLoadMore;
+import CardGridListWithLoadMore from './CardGridListWithLoadMore.vue'
+export default CardGridListWithLoadMore

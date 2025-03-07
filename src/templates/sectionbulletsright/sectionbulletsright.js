@@ -1,2 +1,2 @@
-import SectionBulletsRight from './SectionBulletsRight.vue';
-export default SectionBulletsRight;
+import SectionBulletsRight from './SectionBulletsRight.vue'
+export default SectionBulletsRight

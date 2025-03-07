@@ -1,2 +1,2 @@
-import CardBlog from './CardBlog.vue';
-export default CardBlog;
+import CardBlog from './CardBlog.vue'
+export default CardBlog

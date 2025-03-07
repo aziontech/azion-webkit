@@ -1,2 +1,2 @@
-import SectionInvestorsLogos from './SectionInvestorsLogos.vue';
-export default SectionInvestorsLogos;
+import SectionInvestorsLogos from './SectionInvestorsLogos.vue'
+export default SectionInvestorsLogos

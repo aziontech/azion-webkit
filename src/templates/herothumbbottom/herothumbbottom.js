@@ -1,2 +1,2 @@
-import HeroThumbBottom from './HeroThumbBottom.vue';
-export default HeroThumbBottom;
+import HeroThumbBottom from './HeroThumbBottom.vue'
+export default HeroThumbBottom

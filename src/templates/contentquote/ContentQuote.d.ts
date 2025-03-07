@@ -5,8 +5,8 @@
  *
  * @module `contentquote`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in AisIndexHit component.
@@ -15,8 +15,8 @@ export interface ContentQuoteProps {
   /**
    * @defaultValue false
    */
-  isCarousel?: boolean | false;
-  data: [];
+  isCarousel?: boolean | false
+  data: []
 }
 
 /**
@@ -26,7 +26,7 @@ export interface ContentQuoteSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -36,18 +36,22 @@ export interface ContentQuoteEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class ContentQuote extends ClassComponent<ContentQuoteProps, ContentQuoteSlots, ContentQuoteEmits> { }
+declare class ContentQuote extends ClassComponent<
+  ContentQuoteProps,
+  ContentQuoteSlots,
+  ContentQuoteEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    ContentQuote: GlobalComponentConstructor<ContentQuote>;
+    ContentQuote: GlobalComponentConstructor<ContentQuote>
   }
 }
 
-export default ContentQuote;
+export default ContentQuote

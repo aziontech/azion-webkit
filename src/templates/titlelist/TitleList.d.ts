@@ -6,8 +6,8 @@
  *
  * @module titlelist
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in titlelist component.
@@ -16,16 +16,16 @@ export interface TitleListProps {
   /**
    * List of data list
    */
-  data: [];
+  data: []
   /**
    * Text of button to used to load more action
    * @defaultValue See all posts
    */
-  buttonText?: string | 'See all posts';
+  buttonText?: string | 'See all posts'
   /**
    * link to send to pages with all content
    */
-  link?: string | undefined;
+  link?: string | undefined
 }
 
 /**
@@ -35,7 +35,7 @@ export interface TitleListSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -45,18 +45,18 @@ export interface TitleListEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class TitleList extends ClassComponent<TitleListProps, TitleListSlots, TitleListEmits> { }
+declare class TitleList extends ClassComponent<TitleListProps, TitleListSlots, TitleListEmits> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    TitleList: GlobalComponentConstructor<TitleList>;
+    TitleList: GlobalComponentConstructor<TitleList>
   }
 }
 
-export default TitleList;
+export default TitleList

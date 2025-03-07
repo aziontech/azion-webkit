@@ -5,14 +5,14 @@
  *
  * @module `footersimple`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in AisIndexHit component.
  */
 export interface FooterSimpleProps {
-  text: string;
+  text: string
 }
 
 /**
@@ -22,7 +22,7 @@ export interface FooterSimpleSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -32,18 +32,22 @@ export interface FooterSimpleEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class FooterSimple extends ClassComponent<FooterSimpleProps, FooterSimpleSlots, FooterSimpleEmits> { }
+declare class FooterSimple extends ClassComponent<
+  FooterSimpleProps,
+  FooterSimpleSlots,
+  FooterSimpleEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    FooterSimple: GlobalComponentConstructor<FooterSimple>;
+    FooterSimple: GlobalComponentConstructor<FooterSimple>
   }
 }
 
-export default FooterSimple;
+export default FooterSimple

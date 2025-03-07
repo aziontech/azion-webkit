@@ -5,15 +5,15 @@
  *
  * @module formjobapplicationinhire
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in titlelist component.
  */
 export interface FormJobApplicationInHireProps {
-  t: object;
-  jobId: string;
+  t: object
+  jobId: string
 }
 
 /**
@@ -23,7 +23,7 @@ export interface FormJobApplicationInHireSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -33,18 +33,22 @@ export interface FormJobApplicationInHireEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class FormJobApplicationInHire extends ClassComponent<FormJobApplicationInHireProps, FormJobApplicationInHireSlots, FormJobApplicationInHireEmits> { }
+declare class FormJobApplicationInHire extends ClassComponent<
+  FormJobApplicationInHireProps,
+  FormJobApplicationInHireSlots,
+  FormJobApplicationInHireEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    FormJobApplicationInHire: GlobalComponentConstructor<FormJobApplicationInHire>;
+    FormJobApplicationInHire: GlobalComponentConstructor<FormJobApplicationInHire>
   }
 }
 
-export default FormJobApplicationInHire;
+export default FormJobApplicationInHire

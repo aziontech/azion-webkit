@@ -5,21 +5,21 @@
  *
  * @module `headersearchdialog`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in HeaderSearchDialog component.
  */
 export interface HeaderSearchDialogProps {
-  algoliaAppId: string;
-  algoliaApiKey: string;
-  algoliaIndex: [];
-  algoliaModel: [];
+  algoliaAppId: string
+  algoliaApiKey: string
+  algoliaIndex: []
+  algoliaModel: []
   /**
    * @defaultValue: "Search Azion"
-  */
-  inputPlaceholder?: string;
+   */
+  inputPlaceholder?: string
 }
 
 /**
@@ -29,7 +29,7 @@ export interface HeaderSearchDialogSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -39,18 +39,22 @@ export interface HeaderSearchDialogEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class HeaderSearchDialog extends ClassComponent<HeaderSearchDialogProps, HeaderSearchDialogSlots, HeaderSearchDialogEmits> { }
+declare class HeaderSearchDialog extends ClassComponent<
+  HeaderSearchDialogProps,
+  HeaderSearchDialogSlots,
+  HeaderSearchDialogEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    HeaderSearchDialog: GlobalComponentConstructor<HeaderSearchDialog>;
+    HeaderSearchDialog: GlobalComponentConstructor<HeaderSearchDialog>
   }
 }
 
-export default HeaderSearchDialog;
+export default HeaderSearchDialog

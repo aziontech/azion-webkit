@@ -5,16 +5,16 @@
  *
  * @module `sectioninvestorlogos`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in SectionInvestorLogos component.
  */
 export interface SectionInvestorLogosProps {
-  logos: string[];
-  title: string;
-  overline: string;
+  logos: string[]
+  title: string
+  overline: string
 }
 
 /**
@@ -24,7 +24,7 @@ export interface SectionInvestorLogosSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -34,18 +34,22 @@ export interface SectionInvestorLogosEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class SectionInvestorLogos extends ClassComponent<SectionInvestorLogosProps, SectionInvestorLogosSlots, SectionInvestorLogosEmits> { }
+declare class SectionInvestorLogos extends ClassComponent<
+  SectionInvestorLogosProps,
+  SectionInvestorLogosSlots,
+  SectionInvestorLogosEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    SectionInvestorLogos: GlobalComponentConstructor<SectionInvestorLogos>;
+    SectionInvestorLogos: GlobalComponentConstructor<SectionInvestorLogos>
   }
 }
 
-export default SectionInvestorLogos;
+export default SectionInvestorLogos

@@ -1,2 +1,2 @@
-import Globe from './Globe.vue';
-export default Globe;
+import Globe from './Globe.vue'
+export default Globe

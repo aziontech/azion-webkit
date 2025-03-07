@@ -5,8 +5,8 @@
  *
  * @module `dividergradient`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in AisIndexHit component.
@@ -20,7 +20,7 @@ export interface DividerGradientSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -30,18 +30,22 @@ export interface DividerGradientEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class DividerGradient extends ClassComponent<DividerGradientProps, DividerGradientSlots, DividerGradientEmits> { }
+declare class DividerGradient extends ClassComponent<
+  DividerGradientProps,
+  DividerGradientSlots,
+  DividerGradientEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    DividerGradient: GlobalComponentConstructor<DividerGradient>;
+    DividerGradient: GlobalComponentConstructor<DividerGradient>
   }
 }
 
-export default DividerGradient;
+export default DividerGradient

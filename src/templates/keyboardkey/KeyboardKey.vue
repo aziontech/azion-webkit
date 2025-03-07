@@ -1,6 +1,9 @@
 <template>
   <kbd>
-    <Button outlined @click="emitClicked">
+    <Button
+      outlined
+      @click="emitClicked"
+    >
       <small>
         {{ keyname }}
       </small>
@@ -9,16 +12,16 @@
 </template>
 
 <script setup>
-  import Button from 'primevue/button';
+  import Button from 'primevue/button'
 
   const props = defineProps({
     keyname: String
-  });
+  })
 
-  const emit = defineEmits(['clicked']);
-  const { keyname } = props;
+  const emit = defineEmits(['clicked'])
+  const { keyname } = props
 
   function emitClicked(event) {
-    emit('clicked', event);
+    emit('clicked', event)
   }
 </script>

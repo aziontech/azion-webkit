@@ -1,22 +1,21 @@
-import SelectLang from "../../templates/selectlang"
+import SelectLang from '../../templates/selectlang'
 
 export default {
   title: 'Components/SelectLang',
   component: SelectLang,
   tags: ['autodocs'],
-  argTypes: {
-  }
+  argTypes: {}
 }
 
 export const Default = {
   args: {
     i18nPages: [
       {
-        langPrefix: "en",
-        slug: "/", // link
-        lang: "English"
+        langPrefix: 'en',
+        slug: '/', // link
+        lang: 'English'
       }
     ],
-    lang: "en"
+    lang: 'en'
   }
 }

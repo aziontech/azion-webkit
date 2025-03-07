@@ -1,4 +1,4 @@
-import HeroArticle from '../../templates/heroarticle';
+import HeroArticle from '../../templates/heroarticle'
 import data from '../../mock/articleHero'
 
 export default {
@@ -6,7 +6,7 @@ export default {
   component: HeroArticle,
   tags: ['autodocs'],
   argTypes: {}
-};
+}
 
 const ArticleHeroTemplate = `
 <HeroArticle v-bind="args">

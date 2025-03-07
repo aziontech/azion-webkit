@@ -1,2 +1,2 @@
-import CardShowCase from './CardShowCase.vue';
-export default CardShowCase;
+import CardShowCase from './CardShowCase.vue'
+export default CardShowCase

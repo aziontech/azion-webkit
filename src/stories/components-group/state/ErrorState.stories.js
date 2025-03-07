@@ -1,11 +1,11 @@
 import LinkButton from '../../../templates/linkbutton'
-import ErrorStateBlock from '../../../templates/errorstateblock';
+import ErrorStateBlock from '../../../templates/errorstateblock'
 import Error404Illustration from '../../../assets/svg/error-404.vue'
 
 export default {
   title: 'Components Group/ErrorState',
   component: ErrorStateBlock,
-  tags: ['autodocs'],
+  tags: ['autodocs']
 }
 
 const Template = (args) => ({
@@ -27,8 +27,10 @@ const Template = (args) => ({
               </ErrorStateBlock>`
 })
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 Default.args = {
-    title: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariata',
-    description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con',
+  title:
+    'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariata',
+  description:
+    'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con'
 }

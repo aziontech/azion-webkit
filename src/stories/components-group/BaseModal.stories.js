@@ -1,4 +1,4 @@
-import BaseModal from "../../templates/basemodal"
+import BaseModal from '../../templates/basemodal'
 
 export default {
   title: 'Components Group/BaseModal',
@@ -14,7 +14,7 @@ export default {
       description: 'Mostrar/Esconder modal header'
     }
   }
-};
+}
 
 const modalTemplate = `<BaseModal>
                         <template #action>

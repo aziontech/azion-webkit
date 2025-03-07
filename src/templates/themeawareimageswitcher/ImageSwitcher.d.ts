@@ -5,8 +5,8 @@
  *
  * @module `themeawareimageswitcher`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in ImageSwitcher component.
@@ -20,7 +20,7 @@ export interface ImageSwitcherSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -30,18 +30,22 @@ export interface ImageSwitcherEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class ImageSwitcher extends ClassComponent<ImageSwitcherProps, ImageSwitcherSlots, ImageSwitcherEmits> { }
+declare class ImageSwitcher extends ClassComponent<
+  ImageSwitcherProps,
+  ImageSwitcherSlots,
+  ImageSwitcherEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    ImageSwitcher: GlobalComponentConstructor<ImageSwitcher>;
+    ImageSwitcher: GlobalComponentConstructor<ImageSwitcher>
   }
 }
 
-export default ImageSwitcher;
+export default ImageSwitcher

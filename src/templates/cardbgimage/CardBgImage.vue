@@ -1,43 +1,46 @@
 <template>
   <div class="relative p-6 lg:p-10 h-[440px] flex flex-col justify-end rounded">
     <div class="absolute w-full h-full top-0 left-0 overflow-hidden rounded">
-      <img :alt="alt" :src="image" class="w-full h-full object-cover object-top" />
+      <img
+        :alt="alt"
+        :src="image"
+        class="w-full h-full object-cover object-top"
+      />
     </div>
-    <div class="absolute w-full h-full top-0 left-0 overflow-hidden rounded" :class="[
-      { 'gradient-to-bottom opacity-70' : !customGradient },
-    ]" />
-    <div class="absolute w-full h-full top-0 left-0 overflow-hidden rounded" :class="[
-      { 'gradient-to-top' : !customGradient },
-      { customGradient : customGradient }
-    ]" />
+    <div
+      class="absolute w-full h-full top-0 left-0 overflow-hidden rounded"
+      :class="[{ 'gradient-to-bottom opacity-70': !customGradient }]"
+    />
+    <div
+      class="absolute w-full h-full top-0 left-0 overflow-hidden rounded"
+      :class="[{ 'gradient-to-top': !customGradient }, { customGradient: customGradient }]"
+    />
     <slot name="content" />
   </div>
 </template>
 
 <script setup>
-
-defineProps({
-  image: {
-    type: String,
-    required: true,
-  },
-  alt: {
-    type: String,
-    required: true,
-  },
-  customGradient: {
-    type: String,
-    required: false
-  }
-})
-
+  defineProps({
+    image: {
+      type: String,
+      required: true
+    },
+    alt: {
+      type: String,
+      required: true
+    },
+    customGradient: {
+      type: String,
+      required: false
+    }
+  })
 </script>
 
 <style scoped>
-.gradient-to-bottom {
+  .gradient-to-bottom {
     background: linear-gradient(to bottom, var(--surface-card) 0%, transparent 80%);
-}
-.gradient-to-top {
-  background: linear-gradient(to top, var(--surface-card) 30%, transparent 100%);
-}
+  }
+  .gradient-to-top {
+    background: linear-gradient(to top, var(--surface-card) 30%, transparent 100%);
+  }
 </style>

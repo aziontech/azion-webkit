@@ -1,2 +1,2 @@
-import FormJobApplicationInHire from './FormJobApplicationInHire.vue';
-export default FormJobApplicationInHire;
+import FormJobApplicationInHire from './FormJobApplicationInHire.vue'
+export default FormJobApplicationInHire

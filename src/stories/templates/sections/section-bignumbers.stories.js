@@ -20,60 +20,60 @@ ${Rules.section.bigNumbers}
 }
 
 const MOCK = {
-  "title": "Achieve Unmatched Protection with Azion's Bot Management",
-  "overline": "Powerful Metrics Showcasing",
-  "data": {
-    "justify": "start",
-    "items": [
+  title: "Achieve Unmatched Protection with Azion's Bot Management",
+  overline: 'Powerful Metrics Showcasing',
+  data: {
+    justify: 'start',
+    items: [
       {
-        "icon": "pi pi-verified",
-        "title": "4mi",
-        "description": "Number of DDoS threats blocked "
+        icon: 'pi pi-verified',
+        title: '4mi',
+        description: 'Number of DDoS threats blocked '
       },
       {
-        "icon": "pi pi-shield",
-        "title": "<5s",
-        "description": "Detected threat properties worldwide"
+        icon: 'pi pi-shield',
+        title: '<5s',
+        description: 'Detected threat properties worldwide'
       },
       {
-        "icon": "pi pi-code",
-        "title": "7",
-        "description": "Detected threat properties worldwide"
+        icon: 'pi pi-code',
+        title: '7',
+        description: 'Detected threat properties worldwide'
       },
       {
-        "icon": "pi pi-stopwatch",
-        "title": "80k+",
-        "description": "Detected threat properties worldwide"
+        icon: 'pi pi-stopwatch',
+        title: '80k+',
+        description: 'Detected threat properties worldwide'
       }
     ]
   }
 }
 
 const MOCK_CENTER = {
-  "title": "Achieve Unmatched Protection with Azion's Bot Management",
-  "overline": "Powerful Metrics Showcasing",
-  "data": {
-    "justify": "center",
-    "items": [
+  title: "Achieve Unmatched Protection with Azion's Bot Management",
+  overline: 'Powerful Metrics Showcasing',
+  data: {
+    justify: 'center',
+    items: [
       {
-        "icon": "pi pi-verified",
-        "title": "4mi",
-        "description": "Number of DDoS threats blocked "
+        icon: 'pi pi-verified',
+        title: '4mi',
+        description: 'Number of DDoS threats blocked '
       },
       {
-        "icon": "pi pi-shield",
-        "title": "<5s",
-        "description": "Detected threat properties worldwide"
+        icon: 'pi pi-shield',
+        title: '<5s',
+        description: 'Detected threat properties worldwide'
       },
       {
-        "icon": "pi pi-code",
-        "title": "7",
-        "description": "Detected threat properties worldwide"
+        icon: 'pi pi-code',
+        title: '7',
+        description: 'Detected threat properties worldwide'
       },
       {
-        "icon": "pi pi-stopwatch",
-        "title": "80k+",
-        "description": "Detected threat properties worldwide"
+        icon: 'pi pi-stopwatch',
+        title: '80k+',
+        description: 'Detected threat properties worldwide'
       }
     ]
   }
@@ -98,10 +98,10 @@ const config = (args) => {
   }
 }
 
-const Template = (args) => (config(args))
+const Template = (args) => config(args)
 export const Default = Template.bind({})
 Default.args = MOCK
 
-const Template2 = (args) => (config(args))
+const Template2 = (args) => config(args)
 export const Center = Template2.bind({})
 Center.args = MOCK_CENTER

@@ -15,7 +15,7 @@
       :showIndicators="!isLargeScreen"
       :autoplayInterval="autoplayInterval"
       :numScroll="numScroll"
-      :pt="{ itemsContent: { class: 'py-6'} }"
+      :pt="{ itemsContent: { class: 'py-6' } }"
     >
       <template #item="slotProps">
         <div class="md:mx-4 h-full mb-10">
@@ -30,55 +30,57 @@
 </template>
 
 <script setup>
-import { ref, onBeforeMount } from 'vue';
-import Quote from '../quote';
-import Carousel from 'primevue/carousel';
+  import { ref, onBeforeMount } from 'vue'
+  import Quote from '../quote'
+  import Carousel from 'primevue/carousel'
 
-defineProps({
-  data: {
-    type: Array,
-    required: true
-  },
-  numVisible: {
-    type: Number,
-    required: false,
-    default: 1
-  },
-  numScroll: {
-    type: Number,
-    required: false,
-    default: 1
-  },
-  autoplayInterval: {
-    type: Number,
-    required: false,
-    default: 3500
-  },
-});
+  defineProps({
+    data: {
+      type: Array,
+      required: true
+    },
+    numVisible: {
+      type: Number,
+      required: false,
+      default: 1
+    },
+    numScroll: {
+      type: Number,
+      required: false,
+      default: 1
+    },
+    autoplayInterval: {
+      type: Number,
+      required: false,
+      default: 3500
+    }
+  })
 
-const responsiveOptions = ref([
-  {
+  const responsiveOptions = ref([
+    {
       breakpoint: '1400px',
       numVisible: 1,
       numScroll: 1
-  },
-  {
+    },
+    {
       breakpoint: '1199px',
       numVisible: 1,
       numScroll: 1
-  },
-  {
+    },
+    {
       breakpoint: '767px',
       numVisible: 1,
       numScroll: 1
+    }
+  ])
+
+  const isLargeScreen = ref(true)
+  const checkScreenSize = () => {
+    isLargeScreen.value = window.innerWidth >= 767
   }
-]);
 
-const isLargeScreen = ref(true);
-const checkScreenSize = () => { isLargeScreen.value = window.innerWidth >= 767 };
-
-onBeforeMount(() => {
-  checkScreenSize();
-  window.addEventListener('resize', checkScreenSize);
-});
+  onBeforeMount(() => {
+    checkScreenSize()
+    window.addEventListener('resize', checkScreenSize)
+  })
 </script>

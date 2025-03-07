@@ -1,7 +1,10 @@
 <template>
   <div class="flex flex-col gap-2">
     <p class="font-medium text-base">{{ title }}</p>
-    <TableOfContentsItem :data="toc" :currentHeading="currentHeading" />
+    <TableOfContentsItem
+      :data="toc"
+      :currentHeading="currentHeading"
+    />
   </div>
 </template>
 

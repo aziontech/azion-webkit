@@ -1,2 +1,2 @@
-import ImageSwitcher from './ImageSwitcher.vue';
-export default ImageSwitcher;
+import ImageSwitcher from './ImageSwitcher.vue'
+export default ImageSwitcher

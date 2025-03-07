@@ -20,7 +20,7 @@ ${Rules.section.cards}
   }
 }
 
-const config= (args) => {
+const config = (args) => {
   return {
     components: {
       Container,
@@ -37,10 +37,10 @@ const config= (args) => {
   }
 }
 
-const Template = (args) => (config(args))
+const Template = (args) => config(args)
 export const Default = Template.bind({})
 Default.args = {
-  "responsiveOptions": [
+  responsiveOptions: [
     {
       breakpoint: '1400px',
       numVisible: 3,
@@ -62,58 +62,58 @@ Default.args = {
       numScroll: 1
     }
   ],
-  "overline": "Choose a challenge",
-  "title": "Open job roles",
-  "cards": [
+  overline: 'Choose a challenge',
+  title: 'Open job roles',
+  cards: [
     {
-      "title": "Engineering",
-      "description": "Improve your skills while building the future of computing and delivering mission-critical services to global customers.",
-      "link": "/en/careers/jobs/?area=Engineering",
-      "action": {
-        "label": "See jobs"
+      title: 'Engineering',
+      description:
+        'Improve your skills while building the future of computing and delivering mission-critical services to global customers.',
+      link: '/en/careers/jobs/?area=Engineering',
+      action: {
+        label: 'See jobs'
       }
     },
     {
-      "title": "Revenue",
-      "description": "Create amazing stories with global customers.",
-      "link": "/en/careers/jobs/?area=Revenue",
-      "action": {
-        "label": "See jobs"
+      title: 'Revenue',
+      description: 'Create amazing stories with global customers.',
+      link: '/en/careers/jobs/?area=Revenue',
+      action: {
+        label: 'See jobs'
       }
     },
     {
-      "title": "Products",
-      "description": "Build products to power the hyper-connected economy while improving methodologies and strategies.",
-      "link": "/en/careers/jobs/?area=Products",
-      "action": {
-        "label": "See jobs"
+      title: 'Products',
+      description:
+        'Build products to power the hyper-connected economy while improving methodologies and strategies.',
+      link: '/en/careers/jobs/?area=Products',
+      action: {
+        label: 'See jobs'
       }
     },
     {
-      "title": "Operations",
-      "description": "Drive our business initiatives to successful outcomes on a global scale.",
-      "link": "/en/careers/jobs/?area=Operations",
-      "action": {
-        "label": "See jobs"
+      title: 'Operations',
+      description: 'Drive our business initiatives to successful outcomes on a global scale.',
+      link: '/en/careers/jobs/?area=Operations',
+      action: {
+        label: 'See jobs'
       }
     },
     {
-      "title": "Security",
-      "description": "Help us secure our applications, infrastructure, networks, devices, and data.",
-      "link": "/en/careers/jobs/?area=Security",
-      "action": {
-        "label": "See jobs"
+      title: 'Security',
+      description: 'Help us secure our applications, infrastructure, networks, devices, and data.',
+      link: '/en/careers/jobs/?area=Security',
+      action: {
+        label: 'See jobs'
       }
     },
     {
-      "title": "DevEx",
-      "description": "Ensure a great developer experience with our products",
-      "link": "/en/careers/jobs/?area=Developer+Experience",
-      "action": {
-        "label": "See jobs"
+      title: 'DevEx',
+      description: 'Ensure a great developer experience with our products',
+      link: '/en/careers/jobs/?area=Developer+Experience',
+      action: {
+        label: 'See jobs'
       }
     }
   ]
 }
-
-

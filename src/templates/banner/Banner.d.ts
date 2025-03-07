@@ -5,16 +5,16 @@
  *
  * @module `banner`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in Banner component.
  */
 export interface BannerProps {
-  description: string;
-  cta: string;
-  link: string;
+  description: string
+  cta: string
+  link: string
 }
 
 /**
@@ -24,7 +24,7 @@ export interface BannerSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -34,18 +34,18 @@ export interface BannerEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class Banner extends ClassComponent<BannerProps, BannerSlots, BannerEmits> { }
+declare class Banner extends ClassComponent<BannerProps, BannerSlots, BannerEmits> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Banner: GlobalComponentConstructor<Banner>;
+    Banner: GlobalComponentConstructor<Banner>
   }
 }
 
-export default Banner;
+export default Banner

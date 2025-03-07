@@ -5,34 +5,34 @@
  *
  * @module `sectionvideoright`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in HeroVideoRight component.
  */
 export interface SectionVideoRightProps {
   hero: {
-    overline: string,
-    title: string,
+    overline: string
+    title: string
     description: string
-  },
+  }
   video: {
-    title: string,
-    src: string,
+    title: string
+    src: string
     image: {
       light: {
-        src: string,
-        alt: string
-      },
-      dark: {
-        src: string,
+        src: string
         alt: string
       }
-    },
+      dark: {
+        src: string
+        alt: string
+      }
+    }
     cards?: Array<{
-      title: string,
-      description: string,
+      title: string
+      description: string
       cta: {
         action: {
           label: string
@@ -49,7 +49,7 @@ export interface HeroVideoRightSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -59,18 +59,22 @@ export interface HeroVideoRightEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class HeroVideoRight extends ClassComponent<SectionVideoRightProps, HeroVideoRightSlots, HeroVideoRightEmits> { }
+declare class HeroVideoRight extends ClassComponent<
+  SectionVideoRightProps,
+  HeroVideoRightSlots,
+  HeroVideoRightEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    HeroVideoRight: GlobalComponentConstructor<HeroVideoRight>;
+    HeroVideoRight: GlobalComponentConstructor<HeroVideoRight>
   }
 }
 
-export default HeroVideoRight;
+export default HeroVideoRight

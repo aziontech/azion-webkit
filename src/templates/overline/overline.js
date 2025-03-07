@@ -1,2 +1,2 @@
-import Overline from './Overline.vue';
-export default Overline;
+import Overline from './Overline.vue'
+export default Overline

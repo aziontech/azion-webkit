@@ -1,2 +1,2 @@
-import CardGridBlock from './CardGridBlock.vue';
-export default CardGridBlock;
+import CardGridBlock from './CardGridBlock.vue'
+export default CardGridBlock

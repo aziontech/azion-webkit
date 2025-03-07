@@ -1,2 +1,2 @@
-import SectionSticky from './SectionSticky.vue';
-export default SectionSticky;
+import SectionSticky from './SectionSticky.vue'
+export default SectionSticky

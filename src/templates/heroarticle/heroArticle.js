@@ -1,2 +1,2 @@
-import HeroArticle from './HeroArticle.vue';
-export default HeroArticle;
+import HeroArticle from './HeroArticle.vue'
+export default HeroArticle

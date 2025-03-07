@@ -1,2 +1,2 @@
-import BigNumbers from './BigNumbers.vue';
-export default BigNumbers;
+import BigNumbers from './BigNumbers.vue'
+export default BigNumbers

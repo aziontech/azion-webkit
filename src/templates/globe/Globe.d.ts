@@ -5,8 +5,8 @@
  *
  * @module `globe`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in Globe component.
@@ -15,8 +15,8 @@ export interface GlobeProps {
   /**
    * Defines the countries theme image
    */
-  lightImage?: string;
-  darkImage?: string;
+  lightImage?: string
+  darkImage?: string
 }
 
 /**
@@ -26,7 +26,7 @@ export interface GlobeSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -36,18 +36,18 @@ export interface GlobeEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class Globe extends ClassComponent<GlobeProps, GlobeSlots, GlobeEmits> { }
+declare class Globe extends ClassComponent<GlobeProps, GlobeSlots, GlobeEmits> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Globe: GlobalComponentConstructor<Globe>;
+    Globe: GlobalComponentConstructor<Globe>
   }
 }
 
-export default Globe;
+export default Globe

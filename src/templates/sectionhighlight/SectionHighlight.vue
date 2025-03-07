@@ -2,7 +2,9 @@
   <section class="px-container w-full">
     <div class="border surface-border surface-50 w-full">
       <div class="flex flex-col lg:flex-row gap-10">
-        <div class="lg:py-16 lg:px-12 px-6 py-8 flex flex-col gap-8 justify-center md:min-w-[420px] max-w-[420px]">
+        <div
+          class="lg:py-16 lg:px-12 px-6 py-8 flex flex-col gap-8 justify-center md:min-w-[420px] max-w-[420px]"
+        >
           <div class="flex flex-col gap-4">
             <Overline
               v-if="overline"
@@ -18,7 +20,7 @@
             class="w-fit"
           />
         </div>
-        <div class="flex justify-center w-full  max-width-[872px] ">
+        <div class="flex justify-center w-full max-width-[872px]">
           <ImageSwitcher>
             <template #darkImage>
               <img

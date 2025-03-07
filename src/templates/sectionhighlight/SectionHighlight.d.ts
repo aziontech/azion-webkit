@@ -5,25 +5,25 @@
  *
  * @module `sectionhighlight`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 type BigNumbers = {
-  justify: "center" | "start"
+  justify: 'center' | 'start'
   items: Array<{
-    icon: string,
-    title: string,
+    icon: string
+    title: string
     description: string
-   }>
+  }>
 }
 
 /**
  * Defines valid properties in SectionHighlight component.
  */
 export interface SectionHighlightProps {
-  data: BigNumbers;
-  title: string;
-  overline: string;
+  data: BigNumbers
+  title: string
+  overline: string
 }
 
 /**
@@ -33,7 +33,7 @@ export interface SectionHighlightSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -43,18 +43,22 @@ export interface SectionHighlightEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class SectionHighlight extends ClassComponent<SectionHighlightProps, SectionHighlightSlots, SectionHighlightEmits> { }
+declare class SectionHighlight extends ClassComponent<
+  SectionHighlightProps,
+  SectionHighlightSlots,
+  SectionHighlightEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    SectionHighlight: GlobalComponentConstructor<SectionHighlight>;
+    SectionHighlight: GlobalComponentConstructor<SectionHighlight>
   }
 }
 
-export default SectionHighlight;
+export default SectionHighlight

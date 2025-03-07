@@ -5,26 +5,25 @@
  *
  * @module `sectioncardnavigation`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 type CardsType = Array<{
-  "title": string,
-  "description": string,
-  "links": {
-    "label": string,
-    "link": string
+  title: string
+  description: string
+  links: {
+    label: string
+    link: string
   }
 }>
-
 
 /**
  * Defines valid properties in SectionCardNavigation component.
  */
 export interface SectionCardNavigationProps {
-  title: string;
-  descriptionk: string;
-  cards: CardsType;
+  title: string
+  descriptionk: string
+  cards: CardsType
 }
 
 /**
@@ -34,7 +33,7 @@ export interface SectionCardNavigationSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -44,18 +43,22 @@ export interface SectionCardNavigationEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class SectionCardNavigation extends ClassComponent<SectionCardNavigationProps, SectionCardNavigationSlots, SectionCardNavigationEmits> { }
+declare class SectionCardNavigation extends ClassComponent<
+  SectionCardNavigationProps,
+  SectionCardNavigationSlots,
+  SectionCardNavigationEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    SectionCardNavigation: GlobalComponentConstructor<SectionCardNavigation>;
+    SectionCardNavigation: GlobalComponentConstructor<SectionCardNavigation>
   }
 }
 
-export default SectionCardNavigation;
+export default SectionCardNavigation

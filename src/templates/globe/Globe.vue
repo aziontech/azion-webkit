@@ -32,8 +32,10 @@
 
   .azion-dark {
     .globe {
-      background: radial-gradient(800px at 20px 464px, rgba(1, 1, 1, .4), transparent 60%);
-      box-shadow: 0 0 2px rgba(243,101,43, .35), 0 0 40px rgba(243,101,43, .2);
+      background: radial-gradient(800px at 20px 464px, rgba(1, 1, 1, 0.4), transparent 60%);
+      box-shadow:
+        0 0 2px rgba(243, 101, 43, 0.35),
+        0 0 40px rgba(243, 101, 43, 0.2);
     }
 
     .globe-inner {
@@ -45,7 +47,11 @@
   .azion-light {
     .globe {
       box-shadow: 0px 4px 80px 0px rgba(211, 211, 211, 1);
-      background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, rgba(169, 169, 169, 0.16) 100%);
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(169, 169, 169, 0.16) 100%
+      );
     }
 
     .globe-inner {
@@ -56,7 +62,8 @@
   @keyframes rotate {
     0% {
       background-position: 0 -42px;
-    } 100% {
+    }
+    100% {
       background-position: -800px -42px;
     }
   }
@@ -74,7 +81,7 @@
       required: false,
       default: 'https://www.azion.com/assets/images/components/globe/map-dark@2x.png'
     }
-  });
-  const lightImg = `url(${props.lightImage})`;
-  const darkImg = `url(${props.darkImage})`;
+  })
+  const lightImg = `url(${props.lightImage})`
+  const darkImg = `url(${props.darkImage})`
 </script>

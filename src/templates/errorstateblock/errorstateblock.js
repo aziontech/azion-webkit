@@ -1,2 +1,2 @@
-import ErrorStateBlock from './ErrorStateBlock.vue';
-export default ErrorStateBlock;
+import ErrorStateBlock from './ErrorStateBlock.vue'
+export default ErrorStateBlock

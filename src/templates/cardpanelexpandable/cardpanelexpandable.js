@@ -1,2 +1,2 @@
-import CardPanelExpandable from './CardPanelExpandable.vue';
-export default CardPanelExpandable;
+import CardPanelExpandable from './CardPanelExpandable.vue'
+export default CardPanelExpandable

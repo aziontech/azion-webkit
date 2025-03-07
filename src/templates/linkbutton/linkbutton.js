@@ -1,2 +1,2 @@
-import LinkButton from './LinkButton.vue';
-export default LinkButton;
+import LinkButton from './LinkButton.vue'
+export default LinkButton

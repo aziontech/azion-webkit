@@ -1,13 +1,13 @@
-import SystemStatus from "../../templates/systemstatus"
+import SystemStatus from '../../templates/systemstatus'
 
 export default {
   title: 'Components/SystemStatus',
   component: SystemStatus,
-  tags: ['autodocs'],
+  tags: ['autodocs']
 }
 
 export const Default = {
   args: {
-    lang: "en"
+    lang: 'en'
   }
 }

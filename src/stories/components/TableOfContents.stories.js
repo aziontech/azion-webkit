@@ -1,4 +1,4 @@
-import TableOfContents from "../../templates/tableofcontents"
+import TableOfContents from '../../templates/tableofcontents'
 
 export default {
   title: 'Components/TableOfContents',
@@ -6,7 +6,7 @@ export default {
   tags: ['autodocs'],
   argTypes: {
     headings: {
-      description: "MD/MDX Headings"
+      description: 'MD/MDX Headings'
     }
   }
 }
@@ -48,7 +48,7 @@ export const Default = {
         text: 'Choosing the Right Bot Management Solution'
       }
     ],
-    title:'Jump to Section',
+    title: 'Jump to Section',
     initialHeadingTitle: 'Overview'
   }
 }

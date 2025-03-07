@@ -1,2 +1,2 @@
-import ReleaseCarousel from './ReleaseCarousel.vue';
-export default ReleaseCarousel;
+import ReleaseCarousel from './ReleaseCarousel.vue'
+export default ReleaseCarousel

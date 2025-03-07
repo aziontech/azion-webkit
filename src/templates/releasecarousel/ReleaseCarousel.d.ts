@@ -5,17 +5,17 @@
  *
  * @module `releasecarousel`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 import { CardReleaseProps } from '../cardrelease/'
 
 /**
  * Defines valid properties in ReleaseCarousel component.
  */
 export interface ReleaseCarouselProps {
-  data: Array<CardReleaseProps>;
-  numVisible: Number;
-  numScroll: Number;
+  data: Array<CardReleaseProps>
+  numVisible: Number
+  numScroll: Number
 }
 
 /**
@@ -25,7 +25,7 @@ export interface ReleaseCarouselSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -35,18 +35,22 @@ export interface ReleaseCarouselEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class ReleaseCarousel extends ClassComponent<ReleaseCarouselProps, ReleaseCarouselSlots, ReleaseCarouselEmits> { }
+declare class ReleaseCarousel extends ClassComponent<
+  ReleaseCarouselProps,
+  ReleaseCarouselSlots,
+  ReleaseCarouselEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    ReleaseCarousel: GlobalComponentConstructor<ReleaseCarousel>;
+    ReleaseCarousel: GlobalComponentConstructor<ReleaseCarousel>
   }
 }
 
-export default ReleaseCarousel;
+export default ReleaseCarousel

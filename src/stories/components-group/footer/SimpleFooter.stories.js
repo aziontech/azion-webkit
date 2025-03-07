@@ -5,7 +5,7 @@ export default {
   component: SimpleFooter,
   tags: ['autodocs'],
   argTypes: {}
-};
+}
 
 export const Default = {
   args: {

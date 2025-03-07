@@ -1,2 +1,2 @@
-import PriceAndPartner from './PriceAndPartner.vue';
-export default PriceAndPartner;
+import PriceAndPartner from './PriceAndPartner.vue'
+export default PriceAndPartner

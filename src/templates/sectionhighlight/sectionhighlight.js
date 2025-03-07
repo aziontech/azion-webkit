@@ -1,2 +1,2 @@
-import SectionHighlight from './SectionHighlight.vue';
-export default SectionHighlight;
+import SectionHighlight from './SectionHighlight.vue'
+export default SectionHighlight

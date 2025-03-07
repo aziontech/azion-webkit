@@ -1,2 +1,2 @@
-import BannerGetStarted from './BannerGetStarted.vue';
-export default BannerGetStarted;
+import BannerGetStarted from './BannerGetStarted.vue'
+export default BannerGetStarted

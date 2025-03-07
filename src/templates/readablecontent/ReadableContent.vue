@@ -22,7 +22,7 @@
 
   const onClickEvent = (e, parentElement) => {
     e.preventDefault()
-    window.history.pushState({}, '', parentElement.href);
+    window.history.pushState({}, '', parentElement.href)
 
     copyToClipboard()
     controlScroll(e)

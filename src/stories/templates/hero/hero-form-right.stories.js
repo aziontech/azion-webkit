@@ -19,10 +19,10 @@ ${Rules.hero.description}
 ${Rules.hero.cta}
 ${Rules.hero.logos}
 ${Rules.hero.form}
-        `,
-      },
-    },
-  },
+        `
+      }
+    }
+  }
 }
 
 const logos = Array(3).fill({
@@ -37,7 +37,7 @@ const logos = Array(3).fill({
 
 const MOCK = {
   hero: {
-    "title": "Implemente software habilitado para o edge e execute-o em qualquer lugar.",
+    title: 'Implemente software habilitado para o edge e execute-o em qualquer lugar.'
   },
   logos,
   CTA: [
@@ -52,204 +52,206 @@ const MOCK = {
       outlined: true
     }
   ],
-  "hubspot": {
-    "formId": "910384c7-7b4a-4e2c-9524-792472625ded",
-    "companyId": "5759082"
+  hubspot: {
+    formId: '910384c7-7b4a-4e2c-9524-792472625ded',
+    companyId: '5759082'
   },
-  "form": {
-    "title": "Seja um parceiro",
-    "firstName": "Nome",
-    "firstNamePlaceholder": "Digite seu nome",
-    "lastName": "Sobrenome",
-    "lastNamePlaceholder": "Digite seu sobrenome",
-    "address": "Endereço",
-    "addressPlaceholder": "Digite seu endereço",
-    "email": "E-mail corporativo",
-    "emailPlaceholder": "Digite seu e-mail corporativo",
-    "role": "Cargo",
-    "rolePlaceholder": "Por favor, selecione um cargo",
-    "roleData": [
+  form: {
+    title: 'Seja um parceiro',
+    firstName: 'Nome',
+    firstNamePlaceholder: 'Digite seu nome',
+    lastName: 'Sobrenome',
+    lastNamePlaceholder: 'Digite seu sobrenome',
+    address: 'Endereço',
+    addressPlaceholder: 'Digite seu endereço',
+    email: 'E-mail corporativo',
+    emailPlaceholder: 'Digite seu e-mail corporativo',
+    role: 'Cargo',
+    rolePlaceholder: 'Por favor, selecione um cargo',
+    roleData: [
       {
-        "value": "",
-        "label": "Selecione"
+        value: '',
+        label: 'Selecione'
       },
       {
-        "value": "Administrador",
-        "label": "Administrador"
+        value: 'Administrador',
+        label: 'Administrador'
       },
       {
-        "value": "Consultor",
-        "label": "Consultor"
+        value: 'Consultor',
+        label: 'Consultor'
       },
       {
-        "value": "Desenvolvedor",
-        "label": "Desenvolvedor"
+        value: 'Desenvolvedor',
+        label: 'Desenvolvedor'
       },
       {
-        "value": "Diretor",
-        "label": "Diretor"
+        value: 'Diretor',
+        label: 'Diretor'
       },
       {
-        "value": "Engenheiro",
-        "label": "Engenheiro"
+        value: 'Engenheiro',
+        label: 'Engenheiro'
       },
       {
-        "value": "Especialista",
-        "label": "Especialista"
+        value: 'Especialista',
+        label: 'Especialista'
       },
       {
-        "value": "Gerente",
-        "label": "Gerente"
+        value: 'Gerente',
+        label: 'Gerente'
       },
       {
-        "value": "Proprietário",
-        "label": "Proprietário"
+        value: 'Proprietário',
+        label: 'Proprietário'
       },
       {
-        "value": "Sócio",
-        "label": "Sócio"
+        value: 'Sócio',
+        label: 'Sócio'
       },
       {
-        "value": "Presidente",
-        "label": "Presidente"
+        value: 'Presidente',
+        label: 'Presidente'
       },
       {
-        "value": "Secretário",
-        "label": "Secretário"
+        value: 'Secretário',
+        label: 'Secretário'
       },
       {
-        "value": "Supervisor",
-        "label": "Supervisor"
+        value: 'Supervisor',
+        label: 'Supervisor'
       },
       {
-        "value": "Vice-presidente",
-        "label": "Vice-presidente"
+        value: 'Vice-presidente',
+        label: 'Vice-presidente'
       }
     ],
-    "country": "País",
-    "countryPlaceholder": "Selecione um país",
-    "countryData": [
+    country: 'País',
+    countryPlaceholder: 'Selecione um país',
+    countryData: [
       {
-        "value": "",
-        "label": "Por favor, selecione"
+        value: '',
+        label: 'Por favor, selecione'
       },
       {
-        "value": "Angola",
-        "label": "Angola"
+        value: 'Angola',
+        label: 'Angola'
       },
       {
-        "value": "Argentina",
-        "label": "Argentina"
+        value: 'Argentina',
+        label: 'Argentina'
       },
       {
-        "value": "Austrália",
-        "label": "Austrália"
+        value: 'Austrália',
+        label: 'Austrália'
       },
       {
-        "value": "Bélgica",
-        "label": "Bélgica"
+        value: 'Bélgica',
+        label: 'Bélgica'
       },
       {
-        "value": "Bolívia",
-        "label": "Bolívia"
+        value: 'Bolívia',
+        label: 'Bolívia'
       },
       {
-        "value": "Botsuana",
-        "label": "Botsuana"
+        value: 'Botsuana',
+        label: 'Botsuana'
       },
       {
-        "value": "Brasil",
-        "label": "Brasil"
+        value: 'Brasil',
+        label: 'Brasil'
       },
       {
-        "value": "Brunei",
-        "label": "Brunei"
+        value: 'Brunei',
+        label: 'Brunei'
       },
       {
-        "value": "Canadá",
-        "label": "Canadá"
+        value: 'Canadá',
+        label: 'Canadá'
       },
       {
-        "value": "Ilhas Cayman",
-        "label": "Ilhas Cayman"
+        value: 'Ilhas Cayman',
+        label: 'Ilhas Cayman'
       },
       {
-        "value": "Chile",
-        "label": "Chile"
+        value: 'Chile',
+        label: 'Chile'
       },
       {
-        "value": "China",
-        "label": "China"
+        value: 'China',
+        label: 'China'
       },
       {
-        "value": "Colômbia",
-        "label": "Colômbia"
+        value: 'Colômbia',
+        label: 'Colômbia'
       },
       {
-        "value": "Costa Rica",
-        "label": "Costa Rica"
+        value: 'Costa Rica',
+        label: 'Costa Rica'
       },
       {
-        "value": "Cuba",
-        "label": "Cuba"
+        value: 'Cuba',
+        label: 'Cuba'
       },
       {
-        "value": "República Tcheca",
-        "label": "República Tcheca"
+        value: 'República Tcheca',
+        label: 'República Tcheca'
       },
       {
-        "value": "Dinamarca",
-        "label": "Dinamarca"
+        value: 'Dinamarca',
+        label: 'Dinamarca'
       },
       {
-        "value": "República Dominicana",
-        "label": "República Dominicana"
+        value: 'República Dominicana',
+        label: 'República Dominicana'
       },
       {
-        "value": "Equador",
-        "label": "Equador"
+        value: 'Equador',
+        label: 'Equador'
       },
       {
-        "value": "El Salvador",
-        "label": "El Salvador"
+        value: 'El Salvador',
+        label: 'El Salvador'
       },
       {
-        "value": "Estônia",
-        "label": "Estônia"
+        value: 'Estônia',
+        label: 'Estônia'
       },
       {
-        "value": "França",
-        "label": "França"
+        value: 'França',
+        label: 'França'
       },
       {
-        "value": "Alemanha",
-        "label": "Alemanha"
+        value: 'Alemanha',
+        label: 'Alemanha'
       },
       {
-        "value": "Guatemala",
-        "label": "Guatemala"
+        value: 'Guatemala',
+        label: 'Guatemala'
       },
       {
-        "value": "Haiti",
-        "label": "Haiti"
+        value: 'Haiti',
+        label: 'Haiti'
       },
       {
-        "value": "Honduras",
-        "label": "Honduras"
+        value: 'Honduras',
+        label: 'Honduras'
       }
     ],
-    "city": "Cidade",
-    "cityPlaceholder": "Digite sua cidade",
-    "terms": "Concordo em receber comunicações da Azion",
-    "buttonText": "Enviar mensagem",
-    "azionPrivacy": {
-      "description": "A Azion respeita sua privacidade e usa suas informações pessoais apenas para fornecer e comunicar sobre produtos e serviços. Você pode optar por não receber nossas comunicações a qualquer momento. Para saber mais, consulte nossa",
-      "link": "https://www.azion.com/pt-br/documentacao/contratos/politica-de-privacidade/",
-      "buttonText": "Politica de Privacidade"
+    city: 'Cidade',
+    cityPlaceholder: 'Digite sua cidade',
+    terms: 'Concordo em receber comunicações da Azion',
+    buttonText: 'Enviar mensagem',
+    azionPrivacy: {
+      description:
+        'A Azion respeita sua privacidade e usa suas informações pessoais apenas para fornecer e comunicar sobre produtos e serviços. Você pode optar por não receber nossas comunicações a qualquer momento. Para saber mais, consulte nossa',
+      link: 'https://www.azion.com/pt-br/documentacao/contratos/politica-de-privacidade/',
+      buttonText: 'Politica de Privacidade'
     },
-    "responseMessages": {
-      "success": "Obrigado pelo seu interesse na Azion. Nossa equipe de vendas entrará em contato em breve.",
-      "error": "Erro ao se inscrever na Azion, tente novamente mais tarde"
+    responseMessages: {
+      success:
+        'Obrigado pelo seu interesse na Azion. Nossa equipe de vendas entrará em contato em breve.',
+      error: 'Erro ao se inscrever na Azion, tente novamente mais tarde'
     }
   }
 }
@@ -294,5 +296,6 @@ Default.parameters = {
     description: {
       story: ''
     },
-    source: { code: HeroDisplay } },
-};
+    source: { code: HeroDisplay }
+  }
+}

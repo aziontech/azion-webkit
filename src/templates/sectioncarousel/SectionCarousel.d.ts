@@ -5,19 +5,19 @@
  *
  * @module `sectioncarousel`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 type CardsType = {
   tag: {
-    icon: string,
+    icon: string
     label: string
-  },
-  title: string,
-  description: string,
-  link: string,
+  }
+  title: string
+  description: string
+  link: string
   action: {
-    label: string,
+    label: string
   }
 }
 
@@ -25,11 +25,11 @@ type CardsType = {
  * Defines valid properties in SectionCarousels component.
  */
 export interface SectionCarouselsProps {
-  title: string;
-  overline: string;
-  description: string;
-  button: {};
-  cards: Array<CardsType>;
+  title: string
+  overline: string
+  description: string
+  button: {}
+  cards: Array<CardsType>
 }
 
 /**
@@ -39,7 +39,7 @@ export interface SectionCarouselsSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -49,18 +49,22 @@ export interface SectionCarouselsEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class SectionCarousels extends ClassComponent<SectionCarouselsProps, SectionCarouselsSlots, SectionCarouselsEmits> { }
+declare class SectionCarousels extends ClassComponent<
+  SectionCarouselsProps,
+  SectionCarouselsSlots,
+  SectionCarouselsEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    SectionCarousels: GlobalComponentConstructor<SectionCarousels>;
+    SectionCarousels: GlobalComponentConstructor<SectionCarousels>
   }
 }
 
-export default SectionCarousels;
+export default SectionCarousels

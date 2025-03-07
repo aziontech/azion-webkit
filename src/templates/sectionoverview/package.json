@@ -1,0 +1,7 @@
+{
+  "main": "./sectionoverview.js",
+  "types": "./SectionOverview.d.ts",
+  "browser": {
+    "./sfc": "./SectionOverview.vue"
+  }
+}

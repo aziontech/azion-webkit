@@ -1,0 +1,7 @@
+{
+  "main": "./sectionimageright.js",
+  "types": "./SectionImageRight.d.ts",
+  "browser": {
+    "./sfc": "./SectionImageRight.vue"
+  }
+}

@@ -18,11 +18,10 @@
 </template>
 
 <script setup>
-defineOptions({ name: 'empty-results-block' })
+  defineOptions({ name: 'empty-results-block' })
 
-defineProps({
-  title: { type: String, required: true },
-  description: { type: String, required: true },
-})
-
+  defineProps({
+    title: { type: String, required: true },
+    description: { type: String, required: true }
+  })
 </script>

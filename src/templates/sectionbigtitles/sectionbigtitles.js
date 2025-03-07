@@ -1,2 +1,2 @@
-import SectionBigTitles from './SectionBigTitles.vue';
-export default SectionBigTitles;
+import SectionBigTitles from './SectionBigTitles.vue'
+export default SectionBigTitles

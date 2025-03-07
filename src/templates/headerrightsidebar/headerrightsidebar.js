@@ -1,2 +1,2 @@
-import HeaderRightSidebar from './HeaderRightSidebar.vue';
-export default HeaderRightSidebar;
+import HeaderRightSidebar from './HeaderRightSidebar.vue'
+export default HeaderRightSidebar

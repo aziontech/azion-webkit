@@ -6,9 +6,9 @@ export default {
   component: CardGridBento,
   tags: ['autodocs'],
   argTypes: {
-    gridType: String,
+    gridType: String
   }
-};
+}
 
 const Template = (args) => ({
   components: { CardGridBento, Card },
@@ -150,37 +150,37 @@ const Template = (args) => ({
                   </CardGridBento>`
 })
 
-export const _2Columns3Itens = Template.bind({});
+export const _2Columns3Itens = Template.bind({})
 _2Columns3Itens.args = {
   gridType: '2-columns-3-items'
 }
 
-export const _2Columns4Itens = Template.bind({});
+export const _2Columns4Itens = Template.bind({})
 _2Columns4Itens.args = {
   gridType: '2-columns-4-items'
 }
 
-export const _2Columns5Itens = Template.bind({});
+export const _2Columns5Itens = Template.bind({})
 _2Columns5Itens.args = {
   gridType: '2-columns-5-items'
 }
 
-export const _2Columns6Itens = Template.bind({});
+export const _2Columns6Itens = Template.bind({})
 _2Columns6Itens.args = {
   gridType: '2-columns-6-items'
 }
 
-export const _3Columns4Itens = Template.bind({});
+export const _3Columns4Itens = Template.bind({})
 _3Columns4Itens.args = {
   gridType: '3-columns-4-items'
 }
 
-export const _3Columns7Itens = Template.bind({});
+export const _3Columns7Itens = Template.bind({})
 _3Columns7Itens.args = {
   gridType: '3-columns-7-items'
 }
 
-export const _4Columns5Itens = Template.bind({});
+export const _4Columns5Itens = Template.bind({})
 _4Columns5Itens.args = {
   gridType: '4-columns-5-items'
 }

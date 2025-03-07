@@ -5,20 +5,20 @@
  *
  * @module `menunavigationblock`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in MenuNavigationBlock component.
  */
 export interface MenuNavigationBlockProps {
-  menuTitle: string;
-  menuItems: [];
-  mobileLabel?: string;
+  menuTitle: string
+  menuItems: []
+  mobileLabel?: string
   /**
    * @defaultValue false
    */
-  isContainer?: boolean;
+  isContainer?: boolean
 }
 
 /**
@@ -28,7 +28,7 @@ export interface MenuNavigationBlockSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -38,18 +38,22 @@ export interface MenuNavigationBlockEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class MenuNavigationBlock extends ClassComponent<MenuNavigationBlockProps, MenuNavigationBlockSlots, MenuNavigationBlockEmits> { }
+declare class MenuNavigationBlock extends ClassComponent<
+  MenuNavigationBlockProps,
+  MenuNavigationBlockSlots,
+  MenuNavigationBlockEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    MenuNavigationBlock: GlobalComponentConstructor<MenuNavigationBlock>;
+    MenuNavigationBlock: GlobalComponentConstructor<MenuNavigationBlock>
   }
 }
 
-export default MenuNavigationBlock;
+export default MenuNavigationBlock

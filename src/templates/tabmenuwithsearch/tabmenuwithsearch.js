@@ -1,2 +1,2 @@
-import TabMenuWithSearch from "./TabMenuWithSearch.vue";
-export default TabMenuWithSearch;
+import TabMenuWithSearch from './TabMenuWithSearch.vue'
+export default TabMenuWithSearch

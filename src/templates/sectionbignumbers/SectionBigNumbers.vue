@@ -5,9 +5,15 @@
     :title="title"
     :isContentCentralized="data.justify === 'center' ? true : false"
   >
-    <template v-if="button" #main>
+    <template
+      v-if="button"
+      #main
+    >
       <div class="flex justify-end lg:items-end">
-        <LinkButton v-bind="button" textLink />
+        <LinkButton
+          v-bind="button"
+          textLink
+        />
       </div>
     </template>
 
@@ -29,15 +35,15 @@
     },
     title: {
       type: String,
-      required: true,
+      required: true
     },
     overline: {
       type: String,
-      required: false,
+      required: false
     },
     button: {
       type: Object,
-      required: false,
+      required: false
     }
-  });
+  })
 </script>

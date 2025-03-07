@@ -3,7 +3,7 @@ import Arrow from '../../templates/arrow'
 
 export default {
   title: 'Elements/css/Globe Animation',
-  tags: ['autodocs'],
+  tags: ['autodocs']
 }
 
 const template = `
@@ -45,11 +45,13 @@ const Template2 = () => ({
 export const Default = Template.bind({})
 Default.parameters = {
   docs: {
-    source: { code: template } },
-};
+    source: { code: template }
+  }
+}
 
 export const OnlyGlobe = Template2.bind({})
 OnlyGlobe.parameters = {
   docs: {
-    source: { code: globeTemplate } },
-};
+    source: { code: globeTemplate }
+  }
+}

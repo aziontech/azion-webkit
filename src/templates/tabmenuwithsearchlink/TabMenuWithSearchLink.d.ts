@@ -5,23 +5,23 @@
  *
  * @module tabmenuwithsearchlink
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in tabmenuwithsearchlink component.
  */
 export interface TabMenuWithSearchLinkProps {
-  tabList: [];
+  tabList: []
   /**
    * @defaultValue "Search articles..."
    */
-  inputPlaceholder?: string;
-  activeIndex?: number;
-  algoliaAppId: string;
-  algoliaApiKey: string;
-  algoliaIndex: [];
-  algoliaModel: [];
+  inputPlaceholder?: string
+  activeIndex?: number
+  algoliaAppId: string
+  algoliaApiKey: string
+  algoliaIndex: []
+  algoliaModel: []
 }
 
 /**
@@ -31,7 +31,7 @@ export interface TabMenuWithSearchLinkSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -41,18 +41,22 @@ export interface TabMenuWithSearchLinkEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class TabMenuWithSearchLink extends ClassComponent<TabMenuWithSearchLinkProps, TabMenuWithSearchLinkSlots, TabMenuWithSearchLinkEmits> { }
+declare class TabMenuWithSearchLink extends ClassComponent<
+  TabMenuWithSearchLinkProps,
+  TabMenuWithSearchLinkSlots,
+  TabMenuWithSearchLinkEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    TabMenuWithSearchLink: GlobalComponentConstructor<TabMenuWithSearchLink>;
+    TabMenuWithSearchLink: GlobalComponentConstructor<TabMenuWithSearchLink>
   }
 }
 
-export default TabMenuWithSearchLink;
+export default TabMenuWithSearchLink

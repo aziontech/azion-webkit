@@ -15,7 +15,7 @@ export default {
     customGradient: {
       description: 'Pass through para definir o gradiente shadow do elemento'
     }
-  },
+  }
 }
 
 const cardTemplate = `<CardBase>
@@ -34,6 +34,6 @@ const Template = (args) => ({
 
 export const Default = Template.bind({})
 Default.args = {
-  "image": "https://www.azion.com/assets/pages/about/azion-01.jpg",
-  "alt": "A team of professionals from Azion, aligned in a meeting room, discussing business strategies and collaborating in a modern and dynamic work environment."
+  image: 'https://www.azion.com/assets/pages/about/azion-01.jpg',
+  alt: 'A team of professionals from Azion, aligned in a meeting room, discussing business strategies and collaborating in a modern and dynamic work environment.'
 }

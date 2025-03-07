@@ -5,29 +5,31 @@
  *
  * @module `bignumbers`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
-
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 type BigNumbersItems = {
-  icon: string, title: string, titleup: string, description: string
+  icon: string
+  title: string
+  titleup: string
+  description: string
 }
 
 /**
  * Defines valid properties in AisIndexHit component.
  */
 export interface BigNumbersProps {
-  items: BigNumbersItems[];
+  items: BigNumbersItems[]
   /**
    * Defines the text to display is centralized.
    * @defaultValue true
    */
-  centralized: boolean;
+  centralized: boolean
   /**
    * Defines the text to display with border.
    * @defaultValue true
    */
-  border: boolean;
+  border: boolean
 }
 
 /**
@@ -37,7 +39,7 @@ export interface BigNumbersSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -47,18 +49,22 @@ export interface BigNumbersEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class BigNumbers extends ClassComponent<BigNumbersProps, BigNumbersSlots, BigNumbersEmits> { }
+declare class BigNumbers extends ClassComponent<
+  BigNumbersProps,
+  BigNumbersSlots,
+  BigNumbersEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    BigNumbers: GlobalComponentConstructor<BigNumbers>;
+    BigNumbers: GlobalComponentConstructor<BigNumbers>
   }
 }
 
-export default BigNumbers;
+export default BigNumbers

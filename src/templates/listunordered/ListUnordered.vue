@@ -9,21 +9,35 @@
       v-for="({ icon, title, description }, index) in data"
       :key="index"
     >
-      <li class="flex" :class="[icon ? 'gap-3' : 'gap-4 lg:gap-8', { 'flex-col' : direction == 'horizontal' }]">
+      <li
+        class="flex"
+        :class="[icon ? 'gap-3' : 'gap-4 lg:gap-8', { 'flex-col': direction == 'horizontal' }]"
+      >
         <template v-if="icon">
-          <Tile class="mt-0.5 min-w-6" v-bind="{ severity }">
-            <i
-              class="text-xs"
-              :class="icon"
-            />
-          </Tile>
+          <div>
+            <Tile
+              class="mt-0.5 min-w-6"
+              v-bind="{ severity }"
+            >
+              <i
+                class="text-xs"
+                :class="icon"
+              />
+            </Tile>
+          </div>
         </template>
-        <div v-if="!icon && direction !== 'horizontal'" class="flex relative">
+        <div
+          v-if="!icon && direction !== 'horizontal'"
+          class="flex relative"
+        >
           <div class="h-full bg-[--surface-300] w-[2px]" />
-          <div class="h-4 mt-2 bg-white	w-[2px] blur-sm	left-0 absolute" />
+          <div class="h-4 mt-2 bg-white w-[2px] blur-sm left-0 absolute" />
           <div class="h-4 mt-2 bg-[--text-color] w-[3px] -left-[0.5px] absolute" />
         </div>
-        <div class="flex flex-col gap-3 justify-center mt-0.5">
+        <div
+          class="flex flex-col justify-center"
+          :class="title ? 'mt-0.5 gap-3' : 'mt-0 gap-0'"
+        >
           <template v-if="title || icon">
             <div
               class="flex"
@@ -69,15 +83,13 @@
     },
     direction: {
       type: String,
-      required: false,
-      default: 'vertical',
+      default: () => 'vertical',
       options: ['vertical', 'horizontal']
     },
     severity: {
       type: String,
-      required: false,
-      default: 'default',
-      options: ['default', 'primary', 'secondary', 'warning', 'success', 'info' ]
+      default: () => 'default',
+      options: ['default', 'primary', 'secondary', 'warning', 'success', 'info']
     }
   })
 </script>

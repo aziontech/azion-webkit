@@ -56,9 +56,8 @@
     const colorScheme = localStorage.getItem('prefers-color-scheme') // Check if there is pre-defined site prefered color scheme
 
     if (colorScheme && colorScheme !== 'System')
-      selectedTheme.value = themes.find(
-        (theme) => theme.label === colorScheme
-      ) // update dropdown placeholder value
+      selectedTheme.value = themes.find((theme) => theme.label === colorScheme)
+    // update dropdown placeholder value
     else watchSystemColorSchemePreferences()
   })
 

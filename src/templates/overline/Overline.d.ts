@@ -5,14 +5,14 @@
  *
  * @module `overline`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in Overline component.
  */
 export interface OverlineProps {
-  label: string;
+  label: string
 }
 
 /**
@@ -22,7 +22,7 @@ export interface OverlineSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -32,18 +32,18 @@ export interface OverlineEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class Overline extends ClassComponent<OverlineProps, OverlineSlots, OverlineEmits> { }
+declare class Overline extends ClassComponent<OverlineProps, OverlineSlots, OverlineEmits> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Overline: GlobalComponentConstructor<Overline>;
+    Overline: GlobalComponentConstructor<Overline>
   }
 }
 
-export default Overline;
+export default Overline

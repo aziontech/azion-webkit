@@ -5,7 +5,6 @@ export default {
   component: Container,
   tags: ['autodocs'],
   argTypes: {}
-};
-
+}
 
 export const Default = {}

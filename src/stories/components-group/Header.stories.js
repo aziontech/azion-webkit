@@ -1,16 +1,15 @@
-import Header from "../../templates/header"
+import Header from '../../templates/header'
 import AzionLogo from '../../templates/azionlogo'
 import HeaderNavigation from '../../templates/headermenutabpanel'
-import Button from 'primevue/button';
+import Button from 'primevue/button'
 import MockHeader from '../../mock/header.js'
-
 
 export default {
   title: 'Components Group/Header',
   component: Header,
   tags: ['autodocs'],
   argTypes: {}
-};
+}
 
 const compositionDefault = `
     <Header v-bind="args">

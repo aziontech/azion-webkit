@@ -5,8 +5,8 @@
  *
  * @module `aisindexhit`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in AisIndexHit component.
@@ -15,11 +15,11 @@ export interface AisIndexHitProps {
   /**
    * Defines the text to display.
    */
-  label: string;
+  label: string
   /**
    * Defines which index to hit
    */
-  indexName?: string | undefined;
+  indexName?: string | undefined
 }
 
 /**
@@ -29,7 +29,7 @@ export interface AisIndexHitSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -39,18 +39,22 @@ export interface AisIndexHitEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class AisIndexHit extends ClassComponent<AisIndexHitProps, AisIndexHitSlots, AisIndexHitEmits> { }
+declare class AisIndexHit extends ClassComponent<
+  AisIndexHitProps,
+  AisIndexHitSlots,
+  AisIndexHitEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    AisIndexHit: GlobalComponentConstructor<AisIndexHit>;
+    AisIndexHit: GlobalComponentConstructor<AisIndexHit>
   }
 }
 
-export default AisIndexHit;
+export default AisIndexHit

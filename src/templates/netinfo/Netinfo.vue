@@ -34,68 +34,101 @@
         class="block rounded border surface-border"
       >
         <li class="flex flex-row gap-2 border-b surface-border p-2">
-          <p>
-            <strong class="text-nowrap">UUID:</strong> {{ data.uuid }}
-          </p>
+          <p><strong class="text-nowrap">UUID:</strong> {{ data.uuid }}</p>
         </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
-          <p>
-            <strong class="text-nowrap">Client IP:</strong> {{ data.client.label }}
-          </p>
+          <p><strong class="text-nowrap">Client IP:</strong> {{ data.client.label }}</p>
         </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
-          <p>
-            <strong class="text-nowrap">Azion Edge IP:</strong> {{ data.azion.label }}
-          </p>
+          <p><strong class="text-nowrap">Azion Edge IP:</strong> {{ data.azion.label }}</p>
         </li>
         <li
           class="flex flex-row gap-2 border-b surface-border p-2"
           v-if="data.subnet.ip"
         >
-          <p>
-            <strong class="text-nowrap">EDNS Client Subnet:</strong> {{ data.subnet.ip }}
-          </p>
+          <p><strong class="text-nowrap">EDNS Client Subnet:</strong> {{ data.subnet.ip }}</p>
         </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
-          <p>
-            <strong class="text-nowrap">Resolver IP:</strong> {{ data.resolver.label }}
-          </p>
+          <p><strong class="text-nowrap">Resolver IP:</strong> {{ data.resolver.label }}</p>
         </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
-          <p>
-            <strong class="text-nowrap">User Agent:</strong> {{ data.userAgent }}
-          </p>
+          <p><strong class="text-nowrap">User Agent:</strong> {{ data.userAgent }}</p>
         </li>
       </ul>
-      <ul v-else class="block rounded border surface-border">
+      <ul
+        v-else
+        class="block rounded border surface-border"
+      >
         <li class="flex flex-row gap-2 border-b surface-border p-2">
           <p class="flex flex-row gap-2">
-            <Skeleton width="4rem" height="25px" />: <Skeleton width="16rem" height="25px" />
+            <Skeleton
+              width="4rem"
+              height="25px"
+            />:
+            <Skeleton
+              width="16rem"
+              height="25px"
+            />
           </p>
         </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
           <p class="flex flex-row gap-2">
-            <Skeleton width="5rem" height="25px" />: <Skeleton width="12rem" height="25px" />
+            <Skeleton
+              width="5rem"
+              height="25px"
+            />:
+            <Skeleton
+              width="12rem"
+              height="25px"
+            />
           </p>
         </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
           <p class="flex flex-row gap-2">
-            <Skeleton width="6rem" height="25px" />: <Skeleton width="12rem" height="25px" />
+            <Skeleton
+              width="6rem"
+              height="25px"
+            />:
+            <Skeleton
+              width="12rem"
+              height="25px"
+            />
           </p>
         </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
           <p class="flex flex-row gap-2">
-            <Skeleton width="5rem" height="25px" />: <Skeleton width="12rem" height="25px" />
+            <Skeleton
+              width="5rem"
+              height="25px"
+            />:
+            <Skeleton
+              width="12rem"
+              height="25px"
+            />
           </p>
         </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
           <p class="flex flex-row gap-2">
-            <Skeleton width="5rem" height="25px" />: <Skeleton width="12rem" height="25px" />
+            <Skeleton
+              width="5rem"
+              height="25px"
+            />:
+            <Skeleton
+              width="12rem"
+              height="25px"
+            />
           </p>
         </li>
         <li class="flex flex-row gap-2 border-b surface-border p-2">
           <p class="flex flex-row gap-2">
-            <Skeleton width="5rem" height="25px" />: <Skeleton width="20rem" height="25px" />
+            <Skeleton
+              width="5rem"
+              height="25px"
+            />:
+            <Skeleton
+              width="20rem"
+              height="25px"
+            />
           </p>
         </li>
       </ul>
@@ -120,14 +153,15 @@
 
   const buildpage = () => {
     getData(service)
-      .then(json => {
-        if(json.message) {
+      .then((json) => {
+        if (json.message) {
           setMessageError(json.message === 'Failed to fetch' ? 'Network error.' : json)
           return
         }
 
         data.value = parseData(json)
-      }).catch(error => {
+      })
+      .catch((error) => {
         setMessageError(error.message === 'Failed to fetch' ? 'Network error.' : error)
       })
   }
@@ -156,7 +190,7 @@
 
   const getData = async (service) => {
     return fetch(service)
-      .then(response => {
+      .then((response) => {
         if (!response.ok) {
           const errorData = {
             status: response.status,
@@ -169,13 +203,13 @@
 
         return response
       })
-      .then(response => {
+      .then((response) => {
         return response.json()
       })
-      .then(json => {
+      .then((json) => {
         return json
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error)
         return error
       })
@@ -214,7 +248,7 @@
         region: data.resolver_ip_region,
         city: data.resolver_ip_city,
         country: data.resolver_ip_country
-      },
+      }
     }
   }
 </script>

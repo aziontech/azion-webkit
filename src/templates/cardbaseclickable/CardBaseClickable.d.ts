@@ -4,8 +4,8 @@
  *
  * @module cardbaseclickable
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in cardbase component.
@@ -15,9 +15,9 @@ export interface CardBaseClickableProps {
    * options: ['compact', 'relaxed', 'base'],
    * @defaultValue 'base'
    */
-  spacing?: string,
-  link: string;
-  title?: string;
+  spacing?: string
+  link: string
+  title?: string
 }
 
 /**
@@ -27,7 +27,7 @@ export interface CardBaseClickableSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -37,18 +37,22 @@ export interface CardBaseClickableEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class CardBaseClickable extends ClassComponent<CardBaseClickableProps, CardBaseClickableSlots, CardBaseClickableEmits> { }
+declare class CardBaseClickable extends ClassComponent<
+  CardBaseClickableProps,
+  CardBaseClickableSlots,
+  CardBaseClickableEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CardBaseClickable: GlobalComponentConstructor<CardBaseClickable>;
+    CardBaseClickable: GlobalComponentConstructor<CardBaseClickable>
   }
 }
 
-export default CardBaseClickable;
+export default CardBaseClickable

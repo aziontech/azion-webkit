@@ -1,2 +1,2 @@
-import Community from './Community.vue';
-export default Community;
+import Community from './Community.vue'
+export default Community

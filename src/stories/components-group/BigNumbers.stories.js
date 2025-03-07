@@ -12,28 +12,28 @@ export default {
 }
 
 const MOCK = {
-    items: [
-      {
-        "icon": "pi pi-verified",
-        "title": "80%",
-        "description": "Better TCO"
-      },
-      {
-        "icon": "pi pi-shield",
-        "title": "100%",
-        "description": "Availability, backed by an SLA"
-      },
-      {
-        "icon": "pi pi-code",
-        "title": "10x",
-        "description": "Faster Applications"
-      },
-      {
-        "icon": "pi pi-stopwatch",
-        "title": "15ms",
-        "description": "Response Time"
-      }
-    ],
+  items: [
+    {
+      icon: 'pi pi-verified',
+      title: '80%',
+      description: 'Better TCO'
+    },
+    {
+      icon: 'pi pi-shield',
+      title: '100%',
+      description: 'Availability, backed by an SLA'
+    },
+    {
+      icon: 'pi pi-code',
+      title: '10x',
+      description: 'Faster Applications'
+    },
+    {
+      icon: 'pi pi-stopwatch',
+      title: '15ms',
+      description: 'Response Time'
+    }
+  ]
 }
 
 const template = `
@@ -54,5 +54,5 @@ export const Default = Template.bind({})
 Default.args = MOCK
 
 Default.parameters = {
-  docs: { source: { code: template } },
-};
+  docs: { source: { code: template } }
+}

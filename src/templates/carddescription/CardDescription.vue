@@ -8,19 +8,18 @@
 </template>
 
 <script setup>
-
-defineProps({
-  color: {
-    type: String,
-    options: ['primary', 'secondary'],
-    required: false,
-    default: 'secondary'
-  },
-  size: {
-    type: String,
-    options: ['small', 'medium', 'large'],
-    required: false,
-    default: 'medium'
-  }
-})
+  defineProps({
+    color: {
+      type: String,
+      options: ['primary', 'secondary'],
+      required: false,
+      default: 'secondary'
+    },
+    size: {
+      type: String,
+      options: ['small', 'medium', 'large'],
+      required: false,
+      default: 'medium'
+    }
+  })
 </script>

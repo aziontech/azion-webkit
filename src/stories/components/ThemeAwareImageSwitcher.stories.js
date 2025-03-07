@@ -3,7 +3,7 @@ import ImageSwitcher from '../../templates/themeawareimageswitcher'
 export default {
   title: 'Components/ThemeAwareImageSwitcher',
   component: ImageSwitcher,
-  tags: ['autodocs'],
+  tags: ['autodocs']
 }
 
 const Template = (args) => ({
@@ -21,4 +21,4 @@ const Template = (args) => ({
              </ImageSwitcher>`
 })
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})

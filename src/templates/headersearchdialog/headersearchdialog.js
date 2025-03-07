@@ -1,2 +1,2 @@
-import HeaderSearchDialog from './HeaderSearchDialog.vue';
-export default HeaderSearchDialog;
+import HeaderSearchDialog from './HeaderSearchDialog.vue'
+export default HeaderSearchDialog

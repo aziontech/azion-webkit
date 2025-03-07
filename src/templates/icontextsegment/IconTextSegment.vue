@@ -2,13 +2,14 @@
   <a
     :href="href"
     :title="title"
-    class="p-3 group hover:surface-hover rounded-md transition-all">
+    class="p-3 group hover:surface-hover rounded-md transition-all"
+  >
     <IconText v-bind="{ title, description, icon, tag, tagSeverity, severity }" />
   </a>
 </template>
 
 <script setup>
-  import IconText from "../icontext"
+  import IconText from '../icontext'
 
   defineProps({
     href: {
@@ -18,19 +19,19 @@
     },
     title: {
       type: String,
-      required: true,
+      required: true
     },
     description: {
       type: String,
-      required: false,
+      required: false
     },
     icon: {
       type: String,
-      required: false,
+      required: false
     },
     tag: {
       type: String,
-      required: false,
+      required: false
     },
     tagSeverity: {
       type: String,
@@ -43,5 +44,5 @@
       default: 'default',
       options: ['default', 'primary']
     }
-  });
+  })
 </script>

@@ -5,8 +5,8 @@
  *
  * @module community
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in newslettercard component.
@@ -22,7 +22,7 @@ export interface CommunitySlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -32,18 +32,18 @@ export interface CommunityEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class Community extends ClassComponent<CommunityProps, CommunitySlots, CommunityEmits> { }
+declare class Community extends ClassComponent<CommunityProps, CommunitySlots, CommunityEmits> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Community: GlobalComponentConstructor<Community>;
+    Community: GlobalComponentConstructor<Community>
   }
 }
 
-export default Community;
+export default Community

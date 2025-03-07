@@ -5,25 +5,25 @@
  *
  * @module `quote`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
  * Defines valid properties in Quote component.
  */
 export interface QuoteProps {
-  text: string;
-  imageLight: string;
-  imageDark: string;
-  label?: string;
+  text: string
+  imageLight: string
+  imageDark: string
+  label?: string
   /**
    * @defautValue 'row'
    */
-  direction?: string;
+  direction?: string
   /**
    * @defautValue false
    */
-  alt?: string;
+  alt?: string
 }
 
 /**
@@ -33,7 +33,7 @@ export interface QuoteSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -43,18 +43,18 @@ export interface QuoteEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class Quote extends ClassComponent<QuoteProps, QuoteSlots, QuoteEmits> { }
+declare class Quote extends ClassComponent<QuoteProps, QuoteSlots, QuoteEmits> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Quote: GlobalComponentConstructor<Quote>;
+    Quote: GlobalComponentConstructor<Quote>
   }
 }
 
-export default Quote;
+export default Quote

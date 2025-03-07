@@ -7,9 +7,9 @@ export default {
   argTypes: {
     lang: {
       options: ['en', 'es', 'pt-br'],
-      control: { type: 'radio' },
+      control: { type: 'radio' }
     }
-  },
+  }
 }
 
 export const Default = {}

@@ -33,21 +33,24 @@
       </Dropdown>
     </div>
     <div class="w-full flex items-start sm:col-span-2 lg:col-span-1">
-        <button @click="activeDialog" class="p-inputtext flex items-center gap-2 w-full text-color-secondary text-sm">
-          <i class="p-button-icon pi pi-search" />
-          <span>{{ inputPlaceholder }}</span>
-        </button>
+      <button
+        @click="activeDialog"
+        class="p-inputtext flex items-center gap-2 w-full text-color-secondary text-sm"
+      >
+        <i class="p-button-icon pi pi-search" />
+        <span>{{ inputPlaceholder }}</span>
+      </button>
 
-        <AlgoliaDialog
-          :isDialogActive="isDialogActive"
-          @close="closeDialog"
-          :inputPlaceholder="inputPlaceholder"
-          :algoliaAppId="algoliaAppId"
-          :algoliaApiKey="algoliaApiKey"
-          :algoliaIndex="algoliaIndex"
-          :algoliaModel="algoliaModel"
-        />
-      </div>
+      <AlgoliaDialog
+        :isDialogActive="isDialogActive"
+        @close="closeDialog"
+        :inputPlaceholder="inputPlaceholder"
+        :algoliaAppId="algoliaAppId"
+        :algoliaApiKey="algoliaApiKey"
+        :algoliaIndex="algoliaIndex"
+        :algoliaModel="algoliaModel"
+      />
+    </div>
   </div>
 </template>
 

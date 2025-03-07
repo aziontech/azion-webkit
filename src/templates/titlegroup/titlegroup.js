@@ -1,2 +1,2 @@
-import Titlegroup from './Titlegroup.vue';
-export default Titlegroup;
+import Titlegroup from './Titlegroup.vue'
+export default Titlegroup

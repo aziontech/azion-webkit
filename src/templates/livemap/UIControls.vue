@@ -26,11 +26,11 @@
       >
         <div class="mb-8">
           <Overline label="Ao vivo" />
-          <h2 class="text-color text-3xl font-medium">
-            Azion Live Map
-          </h2>
+          <h2 class="text-color text-3xl font-medium">Azion Live Map</h2>
         </div>
-        <div class="relative overflow-hidden transition-[width, height] ease-in-out duration-[350ms]">
+        <div
+          class="relative overflow-hidden transition-[width, height] ease-in-out duration-[350ms]"
+        >
           <div class="controls flex flex-row gap-0 md:gap-2">
             <Button
               label="Vendas"
@@ -67,38 +67,49 @@
               class="text-xs text-color-secondary"
               v-show="activeGlobe === 'sales'"
             >
-              O mapa apresenta cidades ativas no processo de checkout em
-              44 dos 50 maiores ecommerces do Brasil. São mais de 100 mil
-              lojas na América Latina.
+              O mapa apresenta cidades ativas no processo de checkout em 44 dos 50 maiores
+              ecommerces do Brasil. São mais de 100 mil lojas na América Latina.
             </p>
             <p
               class="text-xs text-color-secondary"
               v-show="activeGlobe === 'traffic'"
             >
-              Veja o tráfego do mundo que está passando pela Edge da Azion para as lojas de Ecommerce.
+              Veja o tráfego do mundo que está passando pela Edge da Azion para as lojas de
+              Ecommerce.
             </p>
             <p
               class="text-xs text-color-secondary"
               v-show="activeGlobe === 'attacks'"
             >
-              Edge Computing promove a segurança da infra-estrutura do Ecommerce. Os dados passam por uma camada de Web
-              Application Firewall (WAF), quando identificado uma requisição maliciosa ela automaticamente será
-              bloqueada.
+              Edge Computing promove a segurança da infra-estrutura do Ecommerce. Os dados passam
+              por uma camada de Web Application Firewall (WAF), quando identificado uma requisição
+              maliciosa ela automaticamente será bloqueada.
             </p>
             <p
               class="text-xs text-color-secondary"
               v-show="activeGlobe === 'edges'"
             >
-              Cidades onde a Azion possui Edge Nodes - servidores que atendem requisições de usuários. O usuário acessa
-              o Edge Node mais próximo para ter uma resposta imediata da aplicação. <a
-                href="https://www.azion.com/pt-br/produtos/edge-network/" target="_blank"
-                title="Saiba mais sobre Azion Edge Network">Saiba mais.</a>
+              Cidades onde a Azion possui Edge Nodes - servidores que atendem requisições de
+              usuários. O usuário acessa o Edge Node mais próximo para ter uma resposta imediata da
+              aplicação.
+              <a
+                href="https://www.azion.com/pt-br/produtos/edge-network/"
+                target="_blank"
+                title="Saiba mais sobre Azion Edge Network"
+                >Saiba mais.</a
+              >
             </p>
           </div>
 
-          <form class="platform-filter" v-if="activeGlobe !== 'edges'">
+          <form
+            class="platform-filter"
+            v-if="activeGlobe !== 'edges'"
+          >
             <fieldset class="p-0 m-0 block">
-              <label class="mb-[0.725rem] block hover:cursor-pointer flex flex-row gap-1 items-center" for="checkboxDesktop">
+              <label
+                class="mb-[0.725rem] block hover:cursor-pointer flex flex-row gap-1 items-center"
+                for="checkboxDesktop"
+              >
                 <input
                   name="platform-filter"
                   type="radio"
@@ -107,12 +118,13 @@
                   v-on:change="filter.platform($event)"
                 />
                 <span></span>
-                <small class="text-color">
-                  Desktop
-                </small>
+                <small class="text-color"> Desktop </small>
               </label>
 
-              <label class="mb-[0.725rem] block hover:cursor-pointer flex flex-row gap-1 items-center" for="checkboxMobile">
+              <label
+                class="mb-[0.725rem] block hover:cursor-pointer flex flex-row gap-1 items-center"
+                for="checkboxMobile"
+              >
                 <input
                   name="platform-filter"
                   type="radio"
@@ -121,12 +133,13 @@
                   v-on:change="filter.platform($event)"
                 />
                 <span></span>
-                <small class="text-color">
-                  Mobile
-                </small>
+                <small class="text-color"> Mobile </small>
               </label>
 
-              <label class="mb-[0.725rem] block hover:cursor-pointer flex flex-row gap-1 items-center" for="checkboxAll">
+              <label
+                class="mb-[0.725rem] block hover:cursor-pointer flex flex-row gap-1 items-center"
+                for="checkboxAll"
+              >
                 <input
                   checked
                   name="platform-filter"
@@ -136,9 +149,7 @@
                   v-on:change="filter.platform($event)"
                 />
                 <span></span>
-                <small class="text-color">
-                  Todos dispositivos
-                </small>
+                <small class="text-color"> Todos dispositivos </small>
               </label>
             </fieldset>
           </form>
@@ -156,7 +167,9 @@
         v-show="activeGlobe === 'sales'"
         v-if="status"
       >
-        <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight flex flex-col gap-3 md:gap-5">
+        <strong
+          class="md:text-7xl text-5xl font-semibold w-fit leading-tight flex flex-col gap-3 md:gap-5"
+        >
           <div class="flex flex-col items-end">
             <Tile severity="primary">
               <i class="ai ai-marketplace text-xs"></i>
@@ -168,9 +181,7 @@
           </span>
         </strong>
         <!-- <BigNumbers :items="[{title: }]" /> -->
-        <p class="text-sm text-color-secondary mt-3">
-          Acessos ao carrinho
-        </p>
+        <p class="text-sm text-color-secondary mt-3">Acessos ao carrinho</p>
       </div>
 
       <div
@@ -178,7 +189,9 @@
         v-show="activeGlobe === 'traffic'"
         v-if="status"
       >
-        <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight flex flex-col gap-3 md:gap-5">
+        <strong
+          class="md:text-7xl text-5xl font-semibold w-fit leading-tight flex flex-col gap-3 md:gap-5"
+        >
           <div class="flex flex-col items-end">
             <Tile severity="primary">
               <i class="ai ai-network-lists text-xs"></i>
@@ -191,9 +204,7 @@
         </strong>
         <!-- <BigNumbers :items="[{title: noLabelunitHelper(activeGlobe, status)}]" /> -->
         <p class="text-sm text-color-secondary mt-3">
-          <span class="block">
-            Dados trafegados
-          </span>
+          <span class="block"> Dados trafegados </span>
           <span class="block">
             {{ unitHelper('traffic-offload', offload) }}
           </span>
@@ -205,7 +216,9 @@
         v-show="activeGlobe === 'attacks'"
         v-if="status"
       >
-        <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight flex flex-col gap-3 md:gap-5">
+        <strong
+          class="md:text-7xl text-5xl font-semibold w-fit leading-tight flex flex-col gap-3 md:gap-5"
+        >
           <div class="flex flex-col items-end">
             <Tile severity="primary">
               <i class="ai ai-secure-pillar text-xs"></i>
@@ -217,27 +230,23 @@
           </span>
         </strong>
         <!-- <BigNumbers :items="[{title: noLabelunitHelper(activeGlobe, status)}]" /> -->
-        <p class="text-sm text-color-secondary mt-3">
-          Ataques bloqueados
-        </p>
+        <p class="text-sm text-color-secondary mt-3">Ataques bloqueados</p>
       </div>
 
       <div v-show="activeGlobe === 'edges'">
-        <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight flex flex-col gap-3 md:gap-5">
+        <strong
+          class="md:text-7xl text-5xl font-semibold w-fit leading-tight flex flex-col gap-3 md:gap-5"
+        >
           <div class="flex flex-col items-end">
             <Tile severity="primary">
               <i class="pi pi-map-marker text-xs"></i>
             </Tile>
           </div>
-          <span class="block">
-            +100
-          </span>
+          <span class="block"> +100 </span>
         </strong>
         <!-- <BigNumbers :items="[{title: '+100'}]" /> -->
-        <p class="text-sm text-color-secondary mt-3x">
-          Edge Locations
-        </p>
-    </div>
+        <p class="text-sm text-color-secondary mt-3x">Edge Locations</p>
+      </div>
     </div>
 
     <div>
@@ -256,212 +265,211 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue"
-import Timeline from "./Timeline.vue"
-import { dateHelper, noLabelunitHelper, unitHelper } from "./helper/formatter"
+  import { onMounted, ref } from 'vue'
+  import Timeline from './Timeline.vue'
+  import { dateHelper, noLabelunitHelper, unitHelper } from './helper/formatter'
 
-import Button from "primevue/button"
-import Overline from "../overline"
-import Tile from "../tile"
-// import BigNumbers from "../bignumbers"
+  import Button from 'primevue/button'
+  import Overline from '../overline'
+  import Tile from '../tile'
+  // import BigNumbers from "../bignumbers"
 
+  ///////////////////
+  // HANDLE PROPS //
+  //////////////////
 
-///////////////////
-// HANDLE PROPS //
-//////////////////
+  let epochtime = ref(0)
+  const windowSize = ref(0)
 
+  ////////////
+  // EVENTS //
+  ////////////
 
-let epochtime = ref(0);
-const windowSize = ref(0)
+  const emit = defineEmits(['updateGlobeView', 'updateTimestamp', 'updateFilter'])
+  const activeGlobe = ref('sales')
+  const platform = ref('all')
+  const status = ref(null)
+  const offload = ref(null)
+  const toggleControlBox = ref(true)
 
+  const changeGlobe = (globeId) => {
+    activeGlobe.value = globeId
 
-////////////
-// EVENTS //
-////////////
+    status.value = ''
+    offload.value = ''
 
+    if (document.body.offsetWidth < 768) toggleControl()
 
-const emit = defineEmits(["updateGlobeView", "updateTimestamp", "updateFilter"]);
-const activeGlobe = ref("sales");
-const platform = ref("all");
-const status = ref(null);
-const offload = ref(null);
-const toggleControlBox = ref(true);
+    emit('updateGlobeView', activeGlobe.value)
+  }
 
+  const handlerTimestampUpdate = (epoch) => {
+    if (activeGlobe.value === 'edges') {
+      return
+    }
 
-const changeGlobe = (globeId) => {
-  activeGlobe.value = globeId;
+    epochtime.value = epoch
 
-  status.value = '';
-  offload.value = '';
+    load.status(epoch).then((newTimestamp) => {
+      emit('updateTimestamp', newTimestamp)
+    })
+  }
 
-  if(document.body.offsetWidth < 768) toggleControl()
+  const getWindowSize = () => {
+    return windowSize.value
+  }
 
-  emit("updateGlobeView", activeGlobe.value);
-};
+  const getToggleControlBox = () => {
+    return toggleControlBox.value
+  }
 
+  const toggleControl = () => {
+    toggleControlBox.value = !toggleControlBox.value
+  }
 
-const handlerTimestampUpdate = (epoch) => {
-  if (activeGlobe.value === 'edges') {
-    return
-  };
+  const uiControlRenderByViewSize = () => {
+    windowSize.value = window.innerWidth
 
-  epochtime.value = epoch;
+    if (!getToggleControlBox() && window.innerWidth > 768) toggleControl()
+    if (getToggleControlBox() && window.innerWidth < 768) toggleControl()
+  }
 
-  load.status(epoch).then((newTimestamp) => {
-    emit("updateTimestamp", newTimestamp);
-  });
-};
+  ////////////////////
+  // INITIAL EVENTS //
+  ////////////////////
 
-const getWindowSize = () => {
-  return windowSize.value
-}
-
-const getToggleControlBox = () => {
-  return toggleControlBox.value
-}
-
-const toggleControl = () => {
-  toggleControlBox.value = !toggleControlBox.value
-}
-
-const uiControlRenderByViewSize = () => {
-  windowSize.value = window.innerWidth
-
-  if(!getToggleControlBox() && window.innerWidth > 768) toggleControl()
-  if(getToggleControlBox() && window.innerWidth < 768) toggleControl()
-}
-
-
-////////////////////
-// INITIAL EVENTS //
-////////////////////
-
-
-onMounted(() => {
-  uiControlRenderByViewSize()
-
-  window.addEventListener("resize", function() {
+  onMounted(() => {
     uiControlRenderByViewSize()
-  });
-});
 
+    window.addEventListener('resize', function () {
+      uiControlRenderByViewSize()
+    })
+  })
 
-/////////////
-// METHODS //
-/////////////
+  /////////////
+  // METHODS //
+  /////////////
 
+  async function dataFetch(type, epoch) {
+    let url = `https://o6y84w32t0.map.azionedge.net/${type}?timestamp=${epoch}`
+    let response = await fetch(url).catch((error) => {
+      console.error(error)
+    })
+    let data = await response.json().catch((error) => {
+      console.error(error)
+    })
 
-async function dataFetch(type, epoch) {
-  let url = `https://o6y84w32t0.map.azionedge.net/${type}?timestamp=${epoch}`;
-  let response = await fetch(url).catch((error) => {
-    console.error(error);
-  });
-  let data = await response.json().catch((error) => {
-    console.error(error);
-  });
+    return data
+  }
 
-  return data;
-}
+  ///////////
+  // LOADS //
+  ///////////
 
+  let load = {}
 
-///////////
-// LOADS //
-///////////
+  load.status = async (epochtime) => {
+    return dataFetch('agregacao', epochtime).then((response) => {
+      extract[activeGlobe.value](response)
+      return epochtime
+    })
+  }
 
+  /////////////
+  // EXTRACT //
+  /////////////
 
-let load = {};
-
-load.status = async (epochtime) => {
-  return dataFetch('agregacao', epochtime).then(response => {
-    extract[activeGlobe.value](response);
-    return epochtime;
-  });
-}
-
-
-/////////////
-// EXTRACT //
-/////////////
-
-
-let extract = {
-  parse: (data) => {
-    return {
-      req: {
-        mob: data[0],
-        desk: data[1],
-        sales: {
-          mob: data[2],
-          desk: data[3]
+  let extract = {
+    parse: (data) => {
+      return {
+        req: {
+          mob: data[0],
+          desk: data[1],
+          sales: {
+            mob: data[2],
+            desk: data[3]
+          },
+          blocked: {
+            mob: data[6],
+            desk: data[7]
+          }
         },
-        blocked: {
-          mob: data[6],
-          desk: data[7]
+        bytes: {
+          mob: data[4],
+          desk: data[5],
+          ims_economize: {
+            mob: data[8],
+            desk: data[9]
+          },
+          cache: {
+            mob: data[10],
+            desk: data[11]
+          },
+          offload: data[14]
+        },
+        hosts: {
+          mob: data[12],
+          desk: data[13]
         }
-      },
-      bytes: {
-        mob: data[4],
-        desk: data[5],
-        ims_economize: {
-          mob: data[8],
-          desk: data[9]
-        },
-        cache: {
-          mob: data[10],
-          desk: data[11]
-        },
-        offload: data[14]
-      },
-      hosts: {
-        mob: data[12],
-        desk: data[13]
       }
     }
   }
-};
 
-extract.sales = (data) => {
-  let parsedData = extract.parse(data);
-  status.value = platform.value === 'all' ? parsedData.req.sales.mob + parsedData.req.sales.desk : platform.value === 'mobile' ? parsedData.req.sales.mob : parsedData.req.sales.desk;
-};
-
-extract.traffic = (data) => {
-  let parsedData = extract.parse(data);
-
-  offload.value = parsedData.bytes.offload;
-  status.value = platform.value === 'all' ? parsedData.bytes.mob + parsedData.bytes.desk : platform.value === "mobile" ? parsedData.bytes.mob : parsedData.bytes.desk;
-};
-
-extract.attacks = (data) => {
-  let parsedData = extract.parse(data);
-  status.value = platform.value === 'all' ? parsedData.req.blocked.mob + parsedData.req.blocked.desk : platform.value === 'mobile' ? parsedData.req.blocked.mob : parsedData.req.blocked.desk;
-};
-
-extract.edges = () => {
-  status.value = '+100';
-};
-
-
-//////////////
-// FILTERS //
-////////////
-
-
-let filter = {};
-
-filter.platform = (event) => {
-  const whitelist = ['all', 'mobile', 'desktop'];
-  platform.value = event.target.value.toLowerCase();
-
-  let hasOnWhitelist = whitelist.indexOf(platform.value);
-
-  if (hasOnWhitelist === -1) {
-    console.info(`Filter value has not configured`);
-    return;
+  extract.sales = (data) => {
+    let parsedData = extract.parse(data)
+    status.value =
+      platform.value === 'all'
+        ? parsedData.req.sales.mob + parsedData.req.sales.desk
+        : platform.value === 'mobile'
+          ? parsedData.req.sales.mob
+          : parsedData.req.sales.desk
   }
 
-  load.status(epochtime.value);
+  extract.traffic = (data) => {
+    let parsedData = extract.parse(data)
 
-  emit("updateFilter", platform.value);
-};
+    offload.value = parsedData.bytes.offload
+    status.value =
+      platform.value === 'all'
+        ? parsedData.bytes.mob + parsedData.bytes.desk
+        : platform.value === 'mobile'
+          ? parsedData.bytes.mob
+          : parsedData.bytes.desk
+  }
+
+  extract.attacks = (data) => {
+    let parsedData = extract.parse(data)
+    status.value =
+      platform.value === 'all'
+        ? parsedData.req.blocked.mob + parsedData.req.blocked.desk
+        : platform.value === 'mobile'
+          ? parsedData.req.blocked.mob
+          : parsedData.req.blocked.desk
+  }
+
+  extract.edges = () => {
+    status.value = '+100'
+  }
+
+  //////////////
+  // FILTERS //
+  ////////////
+
+  let filter = {}
+
+  filter.platform = (event) => {
+    const whitelist = ['all', 'mobile', 'desktop']
+    platform.value = event.target.value.toLowerCase()
+
+    let hasOnWhitelist = whitelist.indexOf(platform.value)
+
+    if (hasOnWhitelist === -1) {
+      console.info(`Filter value has not configured`)
+      return
+    }
+
+    load.status(epochtime.value)
+
+    emit('updateFilter', platform.value)
+  }
 </script>

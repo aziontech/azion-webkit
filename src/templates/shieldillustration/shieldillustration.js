@@ -1,2 +1,2 @@
-import ShieldIllustration from './ShieldIllustration.vue';
-export default ShieldIllustration;
+import ShieldIllustration from './ShieldIllustration.vue'
+export default ShieldIllustration

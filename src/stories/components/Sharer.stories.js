@@ -6,7 +6,7 @@ export default {
   tags: ['autodocs'],
   argTypes: {
     sharedURL: {
-      description: "Url que vai ser usada no clipboard"
+      description: 'Url que vai ser usada no clipboard'
     }
   }
 }
@@ -25,7 +25,7 @@ export const Default = {
         title: 'Facebook'
       }
     ],
-    tooltipText: "Copied to clipboard",
-    sharedURL: "/"
+    tooltipText: 'Copied to clipboard',
+    sharedURL: '/'
   }
 }

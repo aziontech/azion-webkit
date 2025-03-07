@@ -5,21 +5,21 @@
  *
  * @module `sectionsticky`
  */
-import { VNode } from 'vue';
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers';
+import { VNode } from 'vue'
+import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 type Sections = {
-  overline: string;
-  title: string;
-  description: string;
+  overline: string
+  title: string
+  description: string
   buttons: Array<{
-    severity?: string;
-    outlined?: boolean;
-    link: string;
-    label: string;
-  }>;
+    severity?: string
+    outlined?: boolean
+    link: string
+    label: string
+  }>
   images: {
-    light: string,
+    light: string
     dark: string
     alt: string
   }
@@ -29,9 +29,9 @@ type Sections = {
  * Defines valid properties in SectionStickys component.
  */
 export interface SectionStickysProps {
-  sections: Array<Sections>;
-  title: string;
-  overline: string;
+  sections: Array<Sections>
+  title: string
+  overline: string
 }
 
 /**
@@ -41,7 +41,7 @@ export interface SectionStickysSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
-  default(): VNode[];
+  default(): VNode[]
 }
 
 /**
@@ -51,18 +51,22 @@ export interface SectionStickysEmits {
   /**
    * Triggered when an error occurs
    */
-  error(event: Event): void;
+  error(event: Event): void
 }
 
 /**
  * @group Component
  */
-declare class SectionStickys extends ClassComponent<SectionStickysProps, SectionStickysSlots, SectionStickysEmits> { }
+declare class SectionStickys extends ClassComponent<
+  SectionStickysProps,
+  SectionStickysSlots,
+  SectionStickysEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    SectionStickys: GlobalComponentConstructor<SectionStickys>;
+    SectionStickys: GlobalComponentConstructor<SectionStickys>
   }
 }
 
-export default SectionStickys;
+export default SectionStickys
