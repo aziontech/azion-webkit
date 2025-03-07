@@ -7,7 +7,7 @@
     </div>
     <div class="max-w-lg">
       <div class="flex gap-3 items-center">
-        <p class="text-sm font-medium leading-tight">
+        <p class="text-heading-0 font-medium leading-tight">
           {{ title }}
         </p>
         <Tag
@@ -21,10 +21,7 @@
           }"
         />
       </div>
-      <p
-        v-if="description"
-        class="text-xs font-normal text-color-secondary mt-2"
-      >
+      <p v-if="description" class="text-body-1 text-color-secondary mt-2">
         {{ description }}
       </p>
     </div>

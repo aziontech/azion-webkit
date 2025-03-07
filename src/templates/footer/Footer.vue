@@ -75,7 +75,7 @@
         <div class="md:hidden">
           <Divider />
         </div>
-        <p class="text-xs">
+        <p class="text-body-1">
           {{ copyright }}
         </p>
       </div>
