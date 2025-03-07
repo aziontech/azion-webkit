@@ -2,6 +2,7 @@
   "name": "azion-webkit",
   "author": "aziontech",
   "version": "1.86.1",
+  "url": "http://webkit.azion.com/",
   "contributors": [
     {
       "name": "Robson Junior",
@@ -23,12 +24,7 @@
     "vue3",
     "ui library",
     "component library",
-    "material",
-    "bootstrap",
-    "fluent",
-    "tailwindcss",
-    "unstyled",
-    "passthrough"
+    "tailwindcss"
   ],
   "repository": {
     "type": "git",
