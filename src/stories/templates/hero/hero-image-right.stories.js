@@ -3,7 +3,7 @@ import Container from '../../../templates/container'
 import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Hero/hero-thumb-right',
+  title: 'Blocks/Hero/hero-image-right',
   tags: ['autodocs'],
   parameters: {
     docs: {
@@ -66,7 +66,8 @@ const MOCK = {
         icon: 'pi pi-check'
       }
     ]
-  }
+  },
+  justify: 'center'
 }
 
 const HeroDisplay = `

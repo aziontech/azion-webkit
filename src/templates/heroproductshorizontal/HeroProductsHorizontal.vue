@@ -2,6 +2,7 @@
   <HeroBlockBase
     :overline="overline"
     :description="description"
+    :justify="justify"
   >
     <template #title>
       <Titlegroup v-bind="hgroup" />
@@ -47,13 +48,15 @@
 <script setup>
   import HeroBlockBase from '../herobase'
   import LinkButton from '../linkbutton'
-  import ContentLogoBlock from '../contentlogo'
   import ImageSwitcher from '../themeawareimageswitcher'
   import ListUnordered from '../listunordered'
   import Titlegroup from '../titlegroup'
-  import Container from '../container'
 
   defineProps({
+    justify: {
+      type: String,
+      options: ['center']
+    },
     overline: {
       type: String,
       required: false
