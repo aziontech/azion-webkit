@@ -8,6 +8,7 @@
         <p class="font-medium text-base">{{ title }}</p>
         <UnorderedList
           class="!gap-4"
+          gap="small"
           :severity="severity"
           :direction="direction"
           :data="items"

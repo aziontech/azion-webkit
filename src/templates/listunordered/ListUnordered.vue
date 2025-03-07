@@ -1,7 +1,8 @@
 <template>
   <ul
     :class="[
-      { 'flex flex-col gap-8': direction === 'vertical' },
+      { 'flex flex-col gap-4': direction === 'vertical' && gap === 'small' },
+      { 'flex flex-col gap-8': direction === 'vertical' && gap === 'default' },
       { 'grid m-0 md:grid-cols-3 gap-10 md:gap-20': direction === 'horizontal' }
     ]"
   >
@@ -90,6 +91,11 @@
       type: String,
       default: () => 'default',
       options: ['default', 'primary', 'secondary', 'warning', 'success', 'info']
+    },
+    gap: {
+      type: String,
+      default: () => 'default',
+      options: ['small', 'default']
     }
   })
 </script>
