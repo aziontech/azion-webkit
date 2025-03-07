@@ -34,7 +34,7 @@
       type: Boolean,
       default() {
         return true
-      },
+      }
     },
     overline: {
       type: String
@@ -45,14 +45,7 @@
         return 'h2'
       },
       validator(value) {
-        return [
-          'h1',
-          'h2',
-          'h3',
-          'h4',
-          'h5',
-          'h6'
-        ].includes(value)
+        return ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
       }
     },
     title: {
@@ -65,21 +58,12 @@
     },
     buttons: {
       type: Array,
-      default() {
-        return []
-      }
+      default: () => []
     },
     severity: {
       type: String,
       default: () => 'primary',
-      options: [
-        'default',
-        'primary',
-        'secondary',
-        'warning',
-        'success',
-        'info'
-      ]
+      options: ['default', 'primary', 'secondary', 'warning', 'success', 'info']
     },
     data: {
       type: Array,

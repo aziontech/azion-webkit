@@ -22,14 +22,7 @@ ${Rules.section.buttons}
     severity: {
       description: 'Change icon color',
       control: { type: 'select' },
-      options: [
-        'default',
-        'primary',
-        'secondary',
-        'warning',
-        'success',
-        'info'
-      ],
+      options: ['default', 'primary', 'secondary', 'warning', 'success', 'info'],
       default: 'primary'
     }
   }
@@ -96,8 +89,7 @@ Default.args = {
       items: [
         {
           icon: 'pi pi-check',
-          description:
-            'Reducing the impact of bots on applications and the entire infrastructure.'
+          description: 'Reducing the impact of bots on applications and the entire infrastructure.'
         },
         {
           icon: 'pi pi-check',
