@@ -8,15 +8,8 @@ export default {
     severity: {
       description: 'Change icon color',
       control: { type: 'select' },
-      options: [
-        'default',
-        'primary',
-        'secondary',
-        'warning',
-        'success',
-        'info'
-      ]
-    },
+      options: ['default', 'primary', 'secondary', 'warning', 'success', 'info']
+    }
     // direction: {
     //   options: ['vertical', 'horizontal'],
     //   control: { type: 'select' },
@@ -30,32 +23,32 @@ const data = new Array(3).fill({
   items: [
     {
       description:
-      'lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor et aliquet',
+        'lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor et aliquet',
       icon: 'pi pi-check'
     },
     {
       description:
-      'lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor et aliquet',
+        'lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor et aliquet',
       icon: 'pi pi-check'
     },
     {
       description:
-      'lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor et aliquet',
+        'lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor et aliquet',
       icon: 'pi pi-check'
     },
     {
       description:
-      'lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor et aliquet',
+        'lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor et aliquet',
       icon: 'pi pi-check'
     },
     {
       description:
-      'lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor et aliquet',
+        'lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor et aliquet',
       icon: 'pi pi-check'
     },
     {
       description:
-      'lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor et aliquet',
+        'lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolor et aliquet',
       icon: 'pi pi-check'
     }
   ]

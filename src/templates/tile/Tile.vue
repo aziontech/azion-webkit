@@ -23,22 +23,12 @@
     severity: {
       type: String,
       default: 'default',
-      options: [
-        'default',
-        'primary',
-        'secondary',
-        'warning',
-        'success',
-        'info'
-      ]
+      options: ['default', 'primary', 'secondary', 'warning', 'success', 'info']
     },
     size: {
       type: String,
       default: 'default',
-      options: [
-        'small',
-        'default'
-      ]
+      options: ['small', 'default']
     }
   })
 </script>

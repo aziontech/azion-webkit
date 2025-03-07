@@ -1,9 +1,9 @@
-import HeroProductHorizontal from '../../../templates/heroproductshorizontal'
-import Container from '../../../templates/container'
+import HeroProductHorizontal from '../../../templates/heroproductshorizontal/HeroProductsHorizontal'
+import Container from '../../../templates/container/Container'
 import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Hero/hero-thumb-right',
+  title: 'Blocks/Hero/hero-image-right',
   tags: ['autodocs'],
   parameters: {
     docs: {
@@ -66,7 +66,8 @@ const MOCK = {
         icon: 'pi pi-check'
       }
     ]
-  }
+  },
+  justify: 'center'
 }
 
 const HeroDisplay = `
