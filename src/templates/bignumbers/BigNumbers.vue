@@ -19,6 +19,7 @@
         <Tile
           v-if="item.icon"
           severity="primary"
+          size="large"
         >
           <i
             :class="item.icon"

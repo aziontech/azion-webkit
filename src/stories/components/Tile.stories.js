@@ -8,6 +8,10 @@ export default {
     severity: {
       control: { type: 'select' },
       options: ['default', 'primary', 'warning', 'success', 'info']
+    },
+    size: {
+      control: { type: 'select' },
+      options: ['default', 'large']
     }
   }
 }

@@ -58,9 +58,7 @@
     },
     buttons: {
       type: Array,
-      default() {
-        return []
-      }
+      default: () => []
     },
     severity: {
       type: String,
