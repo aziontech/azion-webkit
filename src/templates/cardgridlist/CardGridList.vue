@@ -1,6 +1,6 @@
 <template>
   <div
-    class="transition-all surface-ground grid m-0 p-0 justify-between gap-5 lg:gap-10"
+    class="transition-all surface-ground grid m-0 p-0 justify-between gap-8 lg:gap-10"
     :class="pt.class"
   >
     <template v-if="cardType === 'blog'">
