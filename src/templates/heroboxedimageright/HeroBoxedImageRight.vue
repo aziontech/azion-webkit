@@ -36,9 +36,9 @@
 </template>
 
 <script setup>
-  import HeroBlockBase from '../herobase/HeroBase'
-  import ContentLogoBlock from '../contentlogo/ContentLogo'
-  import ImageSwitcher from '../themeawareimageswitcher/ImageSwitcher'
+  import HeroBlockBase from '../herobase'
+  import ContentLogoBlock from '../contentlogo'
+  import ImageSwitcher from '../themeawareimageswitcher'
 
   defineProps({
     title: {
