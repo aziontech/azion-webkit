@@ -1,7 +1,7 @@
 {
   "main": "./heroboxedimageright.js",
-  "types": "./HeroImageRightLogos.d.ts",
+  "types": "./HeroBoxedImageRight.d.ts",
   "browser": {
-    "./sfc": "./HeroImageRightLogos.vue"
+    "./sfc": "./HeroBoxedImageRight.vue"
   }
 }
