@@ -1,5 +1,8 @@
-import HeroBoxedImageRight from '../../../templates/heroboxedimageright'
 import Rules from '../../rules'
+import HeroBoxedImageRight from '../../../templates/heroboxedimageright'
+import ContentLogoBlock from '../../../templates/contentlogo'
+import ImageSwitcher from '../../../templates/themeawareimageswitcher'
+import Container from '../../../templates/container'
 
 export default {
   title: 'Blocks/Hero/hero-boxed-image-right',
@@ -9,10 +12,10 @@ export default {
       description: {
         component: `
 ### Content rules
-${Rules.heroProduct.title}
-${Rules.heroProduct.description}
-${Rules.heroProduct.image}
-${Rules.heroProduct.logo}
+${Rules.hero.title}
+${Rules.hero.description}
+${Rules.hero.image}
+${Rules.hero.logos}
         `
       }
     }
@@ -20,14 +23,14 @@ ${Rules.heroProduct.logo}
 }
 
 const MOCK = {
-  title: '',
-  description: '',
+  title: 'Jamstack Websites',
+  description: 'Enhance the performance, security, and scalability of your websites and web applications',
   logos: {
-    title: 'Azion',
+    title: 'Azion logos template',
     images: [
-      '/assets/mocks/_asset-product.png',
-      '/assets/mocks/_asset-product.png',
-      '/assets/mocks/_asset-product.png'
+      '/assets/dark/illustration-demo.svg',
+      '/assets/dark/illustration-demo.svg',
+      '/assets/dark/illustration-demo.svg'
     ]
   },
   imagesRight: {
@@ -38,42 +41,12 @@ const MOCK = {
 }
 
 const HeroDisplay = `
-  <div class="min-h-[calc(100vh-56px)] flex justify-center items-center relative py-10 md:py-0">
-    <HeroBlockBase
-      :title="title"
-      :description="description"
-    >
-      <template #content>
-        <div class="w-full flex items-center justify-center lg:items-start lg:justify-start">
-          <ContentLogoBlock
-            :title="logos.title"
-            :logos="logos.images"
-          />
-        </div>
-      </template>
-      <template #main>
-        <div class="flex justify-center">
-          <ImageSwitcher>
-            <template #darkImage>
-              <img
-                :alt="images.alt"
-                :src="images.dark"
-              />
-            </template>
-            <template #lightImage>
-              <img
-                :alt="images.alt"
-                :src="images.light"
-              />
-            </template>
-          </ImageSwitcher>
-        </div>
-      </template>
-    </HeroBlockBase>
-  </div>`
+<Container class="surface-ground">
+  <HeroBoxedImageRight v-bind="args" />
+</Container>`
 
 const Template = (args) => ({
-  components: { HeroBoxedImageRight },
+  components: { HeroBoxedImageRight, ContentLogoBlock, ImageSwitcher, Container },
   setup() {
     return { args }
   },
