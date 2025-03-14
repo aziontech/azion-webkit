@@ -14,7 +14,7 @@
       />
       <h1
         itemprop="headline"
-        class="text-3xl lg:text-4xl font-medium text-color"
+        class="text-heading-3 font-medium text-color"
         id="overview"
       >
         {{ title }}
@@ -26,7 +26,7 @@
         />
         <h2
           itemprop="alternativeHeadline"
-          class="font-normal text-xl lg:text-2xl text-color-secondary"
+          class="text-body-3 text-color-secondary"
         >
           {{ description }}
         </h2>
@@ -35,7 +35,7 @@
     <template v-if="date">
       <p
         itemprop="datePublished"
-        class="font-normal text-xs text-color-secondary"
+        class="font-normal text-body-1 text-color-secondary"
       >
         {{ date }}
       </p>
@@ -56,10 +56,10 @@
               />
             </div>
             <div itemprop="author">
-              <p class="font-normal text-sm">
+              <p class="ftext-heading-0">
                 {{ title }}
               </p>
-              <p class="font-normal text-xs text-color-secondary">
+              <p class="text-body-1 text-color-secondary">
                 {{ role }}
               </p>
             </div>

@@ -22,10 +22,10 @@
       </div>
       <div class="flex flex-col xl:max-w-lg min-w-1/2 xl:min-w-[512px] lg:items-start gap-5">
         <div class="flex flex-col gap-3 lg:gap-4">
-          <h1 class="text-2xl lg:text-3xl font-bold text-color">
+          <h1 class="text-heading-3 font-medium text-color">
             {{ title }}
           </h1>
-          <p class="font-normal text-color-secondary">
+          <p class="text-body-3 text-color-secondary">
             {{ description }}
           </p>
         </div>
