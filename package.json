@@ -48,9 +48,9 @@
     "algoliasearch": "^4.21.1",
     "autoprefixer": "^10.4.16",
     "azion-theme": "^1.7.4",
-    "d3": "^7.6.1",
+    "d3": "^7.9.0",
     "fs-extra": "^11.2.0",
-    "globe.gl": "^2.26.6",
+    "globe.gl": "^2.41.1",
     "instantsearch.css": "^8.1.0",
     "primeflex": "^3.3.1",
     "primeicons": "^6.0.1",
@@ -80,7 +80,7 @@
     "@storybook/blocks": "^8.6.3",
     "@storybook/vue3": "^8.6.3",
     "@storybook/vue3-vite": "^8.6.3",
-    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue": "^5.2.1",
     "@vue/eslint-config-prettier": "^7.1.0",
     "@whitespace/storybook-addon-html": "^6.1.1",
     "conventional-changelog-conventionalcommits": "^8.0.0",
@@ -95,6 +95,6 @@
     "semantic-release": "^23.0.0",
     "start-server-and-test": "^2.0.0",
     "storybook": "^8.6.3",
-    "vite": "^4.4.9"
+    "vite": "^6.2.2"
   }
 }

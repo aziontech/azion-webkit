@@ -1,6 +1,7 @@
-import { fileURLToPath, URL } from 'node:url';
-import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
+import { fileURLToPath, URL } from 'node:url'
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import path from 'path'
 
 export default defineConfig(() => {
   let config = {
@@ -8,24 +9,17 @@ export default defineConfig(() => {
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
-      },
-    },
-    // build: {
-    //   minify: 'esbuild',
-    //   cssMinify: true,
-    //   sourcemap: 'inline',
-    //   rollupOptions: {
-    //     external: ['vue'],
-    //     input: [
-    //     ],
-    //     output: {
-    //       // inlineDynamicImports: false,
-    //       globals: {vue: 'vue'},
-    //       dir: 'dist'
-    //     }
-    //   }
-    // }
+        '@assets': fileURLToPath(new URL('./src/assets', import.meta.url)),
+        '@components': fileURLToPath(new URL('./src/templates', import.meta.url)),
+        '@services': fileURLToPath(new URL('./src/services', import.meta.url)),
+        '@helpers': fileURLToPath(new URL('./src/helpers', import.meta.url)),
+        'three/build/three.webgpu.js': path.resolve(
+                                        __dirname,
+                                        'node_modules/three/build/three.webgpu.js'
+                                      ) // fix to wrong compilation of Globe dependencie
+      }
+    }
   }
 
-  return config;
-});
+  return config
+})
