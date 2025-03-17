@@ -9,8 +9,8 @@
   import SectionBignumbersLivemap from './templates/sectionbignumberslivemap'
 
   const MOCK = {
-    overline: "Overline",
-    title: "Teste shim",
+    overline: 'Overline',
+    title: 'Teste shim',
     data: {
       jusify: 'center'
     }
