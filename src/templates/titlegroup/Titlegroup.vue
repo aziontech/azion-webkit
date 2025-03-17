@@ -1,8 +1,8 @@
 <template>
   <hgroup>
-    <p class="text-[--surface-700] text-heading-2">{{ subtitle }}</p>
+    <p class="text-[--surface-700] text-heading-3">{{ subtitle }}</p>
     <h1
-      class="text-heading-2 text-balance"
+      class="text-heading-3 text-balance"
       style="line-height: 125% !important"
     >
       {{ title }}
