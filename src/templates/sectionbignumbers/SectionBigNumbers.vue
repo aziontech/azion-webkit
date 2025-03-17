@@ -9,10 +9,12 @@
       v-if="button"
       #main
     >
-      <div class="flex justify-end lg:items-end">
+      <div class="w-full flex lg:justify-end lg:items-end">
         <LinkButton
           v-bind="button"
           textLink
+          iconPos="right"
+          icon="pi pi-arrow-right"
         />
       </div>
     </template>
