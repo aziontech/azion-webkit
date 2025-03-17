@@ -21,7 +21,10 @@
           }"
         />
       </div>
-      <p v-if="description" class="text-body-1 text-color-secondary mt-2">
+      <p
+        v-if="description"
+        class="text-body-1 text-color-secondary mt-2"
+      >
         {{ description }}
       </p>
     </div>
