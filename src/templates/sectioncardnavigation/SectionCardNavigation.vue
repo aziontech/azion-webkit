@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-col gap-14 px-container w-full">
     <hgroup>
-      <h1 class="text-4xl font-medium pb-5">
+      <h1 class="text-heading-3 font-medium pb-5">
         {{ title }}
       </h1>
-      <p class="text-color-secondary">{{ description }}</p>
+      <p class="text-body-3 text-color-secondary">{{ description }}</p>
     </hgroup>
     <div
       class="transition-all surface-ground grid m-0 p-0 justify-between gap-6 lg:gap-16 md:grid-cols-2 lg:grid-cols-3"
