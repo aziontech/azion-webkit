@@ -1,7 +1,5 @@
 <template>
   <ContentSection
-    isContentCentralized
-    textCenter
     position="center"
     :overline="props.overline"
     :title="props.title"
@@ -9,7 +7,7 @@
   >
     <template #main>
       <div
-        class="gap-4 grid place-content-center m-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(2,_33%)]"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 grid place-content-center m-0"
       >
         <CardBase
           v-for="{ title, icon, description, link, addons } in props.list"
