@@ -26,7 +26,7 @@
 /* Body's */
 
 .text-body-1 {
-  @apply text-[10px] sm:text-xs leading-normal sm:leading-relaxed;
+  @apply text-xs leading-normal sm:leading-relaxed;
 }
 
 .text-body-2 {
@@ -48,4 +48,8 @@
 /* Others */
 .text-overline {
   @apply text-[.625rem] sm:text-xs uppercase tracking-widest font-mono;
+}
+
+.text-big-number {
+  @apply text-5xl md:text-7xl leading-tight;
 }

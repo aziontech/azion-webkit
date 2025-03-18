@@ -33,7 +33,7 @@
           >
             {{ item.titleup }}
           </p>
-          <strong class="md:text-7xl text-5xl font-semibold w-fit leading-tight text-nowrap">
+          <strong class="text-big-number font-semibold w-fit text-nowrap">
             {{ item.title }}
           </strong>
           <p
