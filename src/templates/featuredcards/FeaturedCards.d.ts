@@ -9,15 +9,29 @@ import { VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
- * Defines valid properties in AisIndexHit component.
+ * Defines valid properties in FeaturedCards component.
  */
 export interface FeaturedCardsProps {
-  title: string
-  description: string | undefined
+  cards: Array<{
+    image: {
+      alt: string
+      src: string
+    }
+    tag: string
+    description: string
+    button: {
+      label: string
+      click: Function
+    }
+    logo: {
+      src: string
+      alt: string
+    }
+  }>
 }
 
 /**
- * Defines valid slots in AisIndexHit component.
+ * Defines valid slots in FeaturedCards component.
  */
 export interface FeaturedCardsSlots {
   /**
@@ -27,7 +41,7 @@ export interface FeaturedCardsSlots {
 }
 
 /**
- * Defines valid emits in AisIndexHit component.
+ * Defines valid emits in FeaturedCards component.
  */
 export interface FeaturedCardsEmits {
   /**
