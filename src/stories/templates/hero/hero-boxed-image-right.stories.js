@@ -24,7 +24,8 @@ ${Rules.hero.logos}
 
 const MOCK = {
   title: 'Jamstack Websites',
-  description: 'Enhance the performance, security, and scalability of your websites and web applications',
+  description:
+    'Enhance the performance, security, and scalability of your websites and web applications',
   logos: {
     title: 'Azion logos template',
     images: [

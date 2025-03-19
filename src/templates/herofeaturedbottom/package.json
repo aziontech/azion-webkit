@@ -1,0 +1,7 @@
+{
+  "main": "./herofeaturedbottom.js",
+  "types": "./HeroFeaturedBottom.d.ts",
+  "browser": {
+    "./sfc": "./HeroFeaturedBottom.vue"
+  }
+}

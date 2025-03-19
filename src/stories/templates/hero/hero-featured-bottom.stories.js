@@ -1,48 +1,42 @@
 import FeaturedCards from '../../../templates/featuredcards'
+import HeroFeaturedBottom from '../../../templates/herofeaturedbottom'
+import Container from '../../../templates/container'
+import Rules from '../../rules'
 
 export default {
-  title: 'Components Group/Cards/Featured Cards',
-  component: FeaturedCards,
+  title: 'Blocks/Hero/hero-featured-bottom',
   tags: ['autodocs'],
-  argTypes: {
-    image: {
-      description: 'Imagem de fundo do card.',
-      type: 'object'
-    },
-    tag: {
-      description: 'Texto da tag a direita superior do card.',
-      type: 'string'
-    },
-    logo: {
-      description: 'Logo a esquerda superior do card.',
-      type: 'object'
-    },
-    description: {
-      description: 'Texto descritivo do card.',
-      type: 'string'
-    },
-    link: {
-      description: 'Caminho para o click no card.',
-      type: 'string'
-    },
-    button: {
-      description: 'Botão do card.',
-      type: 'object'
+  parameters: {
+    docs: {
+      description: {
+        component: `
+### Content rules
+${Rules.section.overline}
+${Rules.section.title}
+${Rules.section.cards}
+        `
+      }
     }
   }
 }
 
-const cardTemplate = ` <FeaturedCards v-bind="args" />`
-
-const Template = (args) => ({
-  components: { FeaturedCards },
-  setup() {
-    return { args }
-  },
-  template: cardTemplate
-})
-
-const DefaultProps = {
+const MOCK = {
+  overline: 'Build',
+  title: 'Edge Application',
+  description:
+    'Edge Application allows you to build your web applications to run on Azion Edge Platform.',
+  buttons: [
+    {
+      label: 'Start Now',
+      link: 'https://console.azion.com/signup/',
+      outlined: false
+    },
+    {
+      label: 'Get a Demo',
+      link: '/en/contact-sales/',
+      outlined: true
+    }
+  ],
   cards: [
     {
       image: {
@@ -77,26 +71,22 @@ const DefaultProps = {
         label: 'Get started'
       },
       tag: 'Edge Computing'
-    },
-    {
-      image: {
-        src: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Azion logo'
-      },
-      logo: {
-        src: 'https://www.azion.com/assets/pages/products/images/dark/edge-functions/renner-logo.svg',
-        alt: 'Brand logo'
-      },
-      description:
-        'VTEX builds ultra-low latency serverless applications with Azion and allows thousands of customers to accelerate their sales on the web..',
-      link: 'https://www.azion.com/en/documentation/products/get-started/',
-      button: {
-        label: 'Get started'
-      },
-      tag: 'Edge Computing'
     }
   ]
 }
 
+const HeroDisplay = `
+<Container class="surface-ground">
+  <HeroFeaturedBottom v-bind="args" />
+</Container>`
+
+const Template = (args) => ({
+  components: { HeroFeaturedBottom, Container, FeaturedCards },
+  setup() {
+    return { args }
+  },
+  template: HeroDisplay
+})
+
 export const Default = Template.bind({})
-Default.args = DefaultProps
+Default.args = MOCK
