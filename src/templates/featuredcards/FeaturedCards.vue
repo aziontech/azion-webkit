@@ -23,9 +23,8 @@
               :alt="card.logo.alt"
               class="absolute top-4 left-4 h-6 z-10"
             />
-            <span class="z-10 absolute top-4 right-4 bg-black text-white text-xs px-2 py-1 rounded">
-              {{ card.tag }}
-            </span>
+
+            <Tag class="z-10 absolute top-4 right-4" severity="info" :value="card.tag"></Tag>
           </div>
         </template>
 
@@ -107,6 +106,7 @@
   import Card from 'primevue/card'
   import Carousel from 'primevue/carousel'
   import Button from 'primevue/button'
+  import Tag from 'primevue/tag'
   import { defineProps } from 'vue'
 
   defineProps({
