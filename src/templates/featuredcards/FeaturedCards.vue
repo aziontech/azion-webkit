@@ -18,9 +18,7 @@
                 class="h-full w-full object-cover object-center group-hover:scale-[1.10] transition-all duration-300"
               />
 
-              <div
-                class="h-24 absolute inset-0 z-10 bg-gradient-to-b from-[#171717e0] to-transparent"
-              ></div>
+              <div class="h-24 absolute inset-0 z-10 degrade-to-bottom"></div>
 
               <div
                 v-html="card.logo.src"
@@ -78,9 +76,7 @@
                 class="h-full w-full object-cover object-center group-hover:scale-[1.10] transition-all duration-300"
               />
 
-              <div
-                class="h-24 absolute inset-0 z-10 bg-gradient-to-b from-[#171717e0] to-transparent"
-              ></div>
+              <div class="h-24 absolute inset-0 z-10 degrade-to-bottom"></div>
 
               <div
                 v-html="slotProps.data.logo.src"
@@ -136,3 +132,9 @@
     }
   })
 </script>
+
+<style scoped>
+  .degrade-to-bottom {
+    background: linear-gradient(to bottom, rgba(var(--degrade-secondary), 0.88), transparent);
+  }
+</style>

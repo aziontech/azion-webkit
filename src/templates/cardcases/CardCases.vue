@@ -9,22 +9,31 @@
       :pt="{
         root: {
           class:
-            'w-full p-6 shadow-none bg-transparent flex flex-col gap-9 rounded-md border surface-border overflow-hidden group-hover:border-current'
+            'w-full p-6 shadow-none bg-transparent flex flex-col gap-6 rounded-md border surface-border overflow-hidden group-hover:border-current'
         }
       }"
     >
       <template #header>
-        <div class="flex justify-between items-center">
-          <template v-if="image">
-            <div v-html="image" />
-          </template>
-          <Tag
-            :value="tagList"
-            severity="info"
+        <template v-if="image">
+          <div
+            class="svg-customer-logo"
+            v-html="image"
           />
-        </div>
+        </template>
       </template>
+
       <template #content>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <template
+            v-for="(tag, index) in tagList"
+            :key="index"
+          >
+            <Tag
+              :value="tag"
+              severity="info"
+            />
+          </template>
+        </div>
         <p class="text-sm text-color-secondary">{{ description }}</p>
       </template>
     </Card>
@@ -45,7 +54,7 @@
       required: false
     },
     tagList: {
-      type: String,
+      type: Array,
       required: true
     },
     description: {
@@ -64,3 +73,10 @@
     }
   })
 </script>
+
+<style>
+  .svg-customer-logo > svg {
+    width: 158px;
+    height: 58px;
+  }
+</style>
