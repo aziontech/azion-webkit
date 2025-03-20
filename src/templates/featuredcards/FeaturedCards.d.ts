@@ -21,12 +21,12 @@ export interface FeaturedCardsProps {
     description: string
     button: {
       label: string
-      click: Function
     }
     logo: {
       src: string
       alt: string
     }
+    link: string
   }>
 }
 

@@ -13,10 +13,22 @@ interface Button {
   href: string
   target?: string
 }
-interface Images {
-  light: string
-  dark: string
-  alt: string
+
+interface Card {
+  image: {
+    alt: string
+    src: string
+  }
+  tag: string
+  description: string
+  button: {
+    label: string
+  }
+  logo: {
+    src: string
+    alt: string
+  }
+  link: string
 }
 /**
  * Defines valid properties in HeroFeaturedBottom component.
@@ -26,7 +38,7 @@ export interface HeroFeaturedBottomProps {
   title?: string
   description?: string
   buttons: Button[]
-  images: Images
+  cards: Card[]
 }
 
 /**
