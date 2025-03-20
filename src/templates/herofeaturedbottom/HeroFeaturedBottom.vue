@@ -19,9 +19,9 @@
 </template>
 
 <script setup>
-  import HeroBlockBase from '../herobase/HeroBase'
-  import LinkButton from '../linkbutton/LinkButton'
-  import FeaturedCards from '../featuredcards/FeaturedCards'
+  import HeroBlockBase from '../herobase'
+  import LinkButton from '../linkbutton'
+  import FeaturedCards from '../featuredcards'
 
   defineProps({
     overline: {
