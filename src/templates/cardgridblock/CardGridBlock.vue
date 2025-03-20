@@ -11,6 +11,16 @@
         :algoliaModel="algoliaModel"
       />
     </template>
+    <template v-else-if="isSearchAndLinkEnabled">
+      <TabMenuSearchLink
+        :tabList="categories"
+        :inputPlaceholder="inputPlaceholder"
+        :algoliaAppId="algoliaAppId"
+        :algoliaApiKey="algoliaApiKey"
+        :algoliaIndex="algoliaIndex"
+        :algoliaModel="algoliaModel"
+      />
+    </template>
     <template v-else>
       <TabMenu
         :tabList="categories"
@@ -41,6 +51,8 @@
   import CardGridListLoadMore from '../cardgridlistwithloadmore/CardGridListWithLoadMore.vue'
   import TabMenu from '../tabmenu/TabMenu.vue'
   import TabMenuSearch from '../tabmenuwithsearch/TabMenuWithSearch.vue'
+  import TabMenuSearchLink from '../tabmenuwithsearchlink/TabMenuWithSearchLink.vue'
+
   import { ref } from 'vue'
 
   const props = defineProps({
@@ -89,6 +101,11 @@
     algoliaIndex: Array,
     algoliaModel: Array,
     isSearchEnabled: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    isSearchAndLinkEnabled: {
       type: Boolean,
       required: false,
       default: false
