@@ -14,7 +14,7 @@
             <div class="relative h-[412px] overflow-hidden rounded-md">
               <img
                 :alt="`${card.image.alt}`"
-                :src="`${card.image.src}?ims=372x209`"
+                :src="`${card.image.src}?ims=356x412`"
                 class="h-full w-full object-cover object-center group-hover:scale-[1.10] transition-all duration-300"
               />
 
