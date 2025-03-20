@@ -34,7 +34,21 @@
             />
           </template>
         </div>
-        <p class="text-sm text-color-secondary">{{ description }}</p>
+
+        <div class="flex flex-col gap-6 justify-between">
+          <p class="text-sm text-color-secondary">{{ description }}</p>
+          <div>
+            <Button
+              v-if="buttonLabel"
+              link
+              aria-label="Read Story"
+              :label="buttonLabel"
+              iconPos="right"
+              class="p-0 text-sm"
+              icon="pi pi-arrow-right"
+            />
+          </div>
+        </div>
       </template>
     </Card>
   </a>
@@ -43,6 +57,7 @@
 <script setup>
   import Card from 'primevue/card'
   import Tag from 'primevue/tag'
+  import Button from 'primevue/button'
 
   defineProps({
     image: {
@@ -64,6 +79,10 @@
     link: {
       type: String,
       required: true
+    },
+    buttonLabel: {
+      type: String,
+      required: false
     },
     size: {
       type: String,
