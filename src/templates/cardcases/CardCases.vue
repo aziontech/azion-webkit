@@ -10,6 +10,9 @@
         root: {
           class:
             'w-full p-6 shadow-none bg-transparent flex flex-col gap-6 rounded-md border surface-border overflow-hidden group-hover:border-current'
+        },
+        body: {
+          class: 'h-full flex flex-col justify-between'
         }
       }"
     >
@@ -37,18 +40,19 @@
 
         <div class="flex flex-col gap-6 justify-between">
           <p class="text-sm text-color-secondary">{{ description }}</p>
-          <div>
-            <Button
-              v-if="buttonLabel"
-              link
-              aria-label="Read Story"
-              :label="buttonLabel"
-              iconPos="right"
-              class="p-0 text-sm"
-              icon="pi pi-arrow-right"
-            />
-          </div>
         </div>
+      </template>
+
+      <template #footer>
+        <Button
+          v-if="buttonLabel"
+          link
+          aria-label="Read Story"
+          :label="buttonLabel"
+          iconPos="right"
+          class="p-0 text-sm mt-4"
+          icon="pi pi-arrow-right"
+        />
       </template>
     </Card>
   </a>
