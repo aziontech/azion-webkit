@@ -28,7 +28,6 @@ const logoSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="75" height="18" 
   </defs>
 </svg>`
 
-
 const MOCK = {
   overline: 'Build',
   title: 'Edge Application',
