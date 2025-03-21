@@ -1,12 +1,12 @@
 <template>
   <Dialog
     modal
+    v-model:visible="isDialogActive"
+    @hide="toggleDialog(false)"
     :showHeader="false"
     :blockScroll="true"
     position="top"
-    v-model:visible="isDialogActive"
     class="w-[95vw] md:w-[85vw] lg:w-[75vw] xl:w-[65vw]"
-    @hide="toggleDialog(false)"
     dismissableMask
     :pt="{
       content: {

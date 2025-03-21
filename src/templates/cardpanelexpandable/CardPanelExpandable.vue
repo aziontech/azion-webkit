@@ -1,7 +1,7 @@
 <template>
   <div
-    class="flex flex-col xl:flex-row justify-center gap-6 xl:gap-3 w-full max-w-3xl xl:max-w-full"
     :class="maxHeight"
+    class="flex flex-col xl:flex-row justify-center gap-6 xl:gap-3 w-full max-w-3xl xl:max-w-full"
     id="cardExpandable"
   >
     <template
