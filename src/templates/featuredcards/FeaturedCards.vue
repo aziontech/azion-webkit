@@ -14,7 +14,7 @@
             <div class="relative h-[412px] overflow-hidden rounded-md">
               <img
                 :alt="`${card.image.alt}`"
-                :src="`${card.image.src}?ims=356x412`"
+                :src="`${card.image.src}?ims=726x412`"
                 class="h-full w-full object-cover object-center group-hover:scale-[1.10] transition-all duration-300"
               />
 
@@ -55,7 +55,7 @@
   </div>
 
   <Carousel
-    class="block md:hidden"
+    class="block md:hidden mx-3"
     :value="cards"
     :numVisible="1"
     :numScroll="1"
@@ -72,7 +72,7 @@
             <div class="relative h-[412px] overflow-hidden rounded-md">
               <img
                 :alt="`${slotProps.data.image.alt}`"
-                :src="`${slotProps.data.image.src}?ims=372x209`"
+                :src="`${slotProps.data.image.src}?ims=726x412`"
                 class="h-full w-full object-cover object-center group-hover:scale-[1.10] transition-all duration-300"
               />
 
