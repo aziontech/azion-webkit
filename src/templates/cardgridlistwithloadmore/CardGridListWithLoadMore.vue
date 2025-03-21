@@ -5,14 +5,25 @@
     :cardType="cardType"
     :cardDirection="cardDirection"
   />
-  <div class="flex justify-center">
-    <Button
-      size="small"
-      :label="buttonText"
-      outlined
-      @click="addCards(LOADMORE_MAGIC_NUMBER)"
-      :disabled="disableButton"
-    />
+  <div>
+    <p
+      v-if="!cardDataList.length"
+      class="text-color-secondary text-sm py-3"
+    >
+      {{ noDataText }}
+    </p>
+    <div
+      class="text-center"
+      v-else
+    >
+      <Button
+        size="small"
+        :label="buttonText"
+        outlined
+        @click="addCards(LOADMORE_MAGIC_NUMBER)"
+        :disabled="disableButton"
+      />
+    </div>
   </div>
 </template>
 
@@ -51,6 +62,11 @@
       required: false,
       default: 'column',
       options: ['column', 'row']
+    },
+    noDataText: {
+      type: String,
+      required: false,
+      default: 'No data'
     }
   })
 
