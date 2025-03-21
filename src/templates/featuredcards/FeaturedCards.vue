@@ -36,7 +36,7 @@
 
           <template #content>
             <div class="mt-4">
-              <h2 class="text-xl font-medium text-color mb-1">
+              <h2 class="text-xl font-medium text-color mb-4">
                 {{ card.description }}
               </h2>
               <Button
@@ -94,7 +94,7 @@
 
           <template #content>
             <div class="mt-4">
-              <h2 class="text-xl font-medium text-color mb-1">
+              <h2 class="text-xl font-medium text-color mb-4">
                 {{ slotProps.data.description }}
               </h2>
               <Button
