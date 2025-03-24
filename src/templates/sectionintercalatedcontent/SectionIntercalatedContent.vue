@@ -1,12 +1,14 @@
 <template>
   <div class="flex flex-col gap-20 lg:gap-40">
-    <ContentSection
-      :overline="overline"
-      :title="title"
-      position="center"
-      titleTag="h2"
-      isContentCentralized
-    />
+    <template v-if="title || overline">
+      <ContentSection
+        :overline="overline"
+        :title="title"
+        position="center"
+        titleTag="h2"
+        isContentCentralized
+      />
+    </template>
 
     <template
       :key="item.title"
