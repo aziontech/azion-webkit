@@ -64,6 +64,4 @@
       required: true
     }
   })
-
-  console.log(props.items)
 </script>
