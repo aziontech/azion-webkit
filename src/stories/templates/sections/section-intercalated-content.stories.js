@@ -2,7 +2,7 @@ import Container from '../../../templates/container'
 import SectionIntercalatedContent from '../../../templates/sectionintercalatedcontent'
 
 export default {
-  title: 'Blocks/Sections/section-intercalatedcontent',
+  title: 'Blocks/Sections/section-intercalated-content',
   tags: ['autodocs']
 }
 
