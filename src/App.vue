@@ -1,29 +1,48 @@
 <template>
   <Container>
-    <FeaturedCards :cards="cards" />
+    <SectionIntercalatedContent v-bind="mock" />
   </Container>
 </template>
 
 <script setup>
   import Container from './templates/container'
-  import FeaturedCards from './templates/featuredcards'
+  import SectionIntercalatedContent from './templates/sectionintercalatedcontent'
 
-  const cards = [
-    {
-      image: {
-        src: 'https://images.unsplash.com/photo-1724963950078-8378a0b46793?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Logo Renner'
+  const mock = {
+    overline: 'Edge Application',
+    title: 'Como Funciona',
+    items: [
+      {
+        title:
+          'A Azion usa uma arquitetura de proxy reverso, que conecta seus usuários aos Edge Nodes de nossa rede global altamente distribuída.',
+        description: '',
+        imageDark:
+          'https://www.azion.com/assets/pages/products/images/dark/edge-application/asset-1.svg',
+        imageLight:
+          'https://www.azion.com/assets/pages/products/images/light/edge-application/asset-11.svg',
+        alt: 'Edge Application text image'
       },
-      logo: {
-        src: 'https://www.azion.com/assets/pages/products/images/dark/edge-functions/renner-logo.svg',
-        alt: 'Brand logo'
+      {
+        title:
+          'Configure seu cache. O conteúdo nos Edge Nodes da Azion pode ser entregue diretamente aos seus usuários por meio do nosso edge node mais próximo.',
+        description: '',
+        imageDark:
+          'https://www.azion.com/assets/pages/products/images/dark/edge-application/asset-2.svg',
+        imageLight:
+          'https://www.azion.com/assets/pages/products/images/light/edge-application/asset-21.svg',
+        alt: 'Edge Application text image',
+        position: 'right'
       },
-      tag: 'Edge Functions',
-      description: 'Integração com a plataforma de e-commerce Renner',
-      link: 'https://www.azion.com/edge-functions/renner',
-      button: {
-        label: 'Saiba mais'
+      {
+        title:
+          'Habilite os módulos de rede, computação e segurança da sua edge application para garantir a máxima performance, escalabilidade e segurança.',
+        description: '',
+        imageDark:
+          'https://www.azion.com/assets/pages/products/images/dark/edge-application/asset-3.svg',
+        imageLight:
+          'https://www.azion.com/assets/pages/products/images/light/edge-application/asset-31.svg',
+        alt: 'Edge Application text image'
       }
-    }
-  ]
+    ]
+  }
 </script>
