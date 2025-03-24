@@ -15,7 +15,7 @@
       </p>
       <div
         class="mt-3"
-        v-if="button"
+        v-if="button && button.label"
       >
         <LinkButton
           v-bind="button"
@@ -54,7 +54,7 @@
 </template>
 
 <script setup>
-  import ImageSwitcher from '../themeawareimageswitcher/ImageSwitcher.vue'
+  import ImageSwitcher from '../themeawareimageswitcher'
   import LinkButton from '../linkbutton'
 
   defineProps({
@@ -64,12 +64,10 @@
     },
     border: {
       type: Boolean,
-      default: true,
-      required: false
+      default: true
     },
     author: {
-      type: String,
-      required: false
+      type: String
     },
     imageLight: {
       type: String,
@@ -80,15 +78,12 @@
       required: true
     },
     button: {
-      type: Object,
-      required: false
+      type: Object
     },
     alt: {
-      type: String,
-      required: false
+      type: String
     },
     disableDegrade: {
-      required: false,
       default: false,
       type: Boolean
     }
