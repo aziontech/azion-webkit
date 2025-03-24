@@ -49,7 +49,11 @@ export interface SectionQuoteEmits {
 /**
  * @group Component
  */
-declare class SectionQuote extends ClassComponent<SectionQuoteProps, SectionQuoteSlots, SectionQuoteEmits> {}
+declare class SectionQuote extends ClassComponent<
+  SectionQuoteProps,
+  SectionQuoteSlots,
+  SectionQuoteEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {

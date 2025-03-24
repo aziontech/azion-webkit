@@ -23,7 +23,10 @@
             v-for="(button, index) in buttons"
             :key="index"
           >
-            <LinkButton v-bind="button" />
+            <LinkButton
+              v-if="button.link"
+              v-bind="button"
+            />
           </template>
         </template>
         <template #main>
