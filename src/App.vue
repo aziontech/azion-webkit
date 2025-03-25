@@ -1,47 +1,83 @@
 <template>
   <Container>
-    <SectionIntercalatedContent v-bind="mock" />
+    <SectionGridBento2c5i v-bind="mock" />
   </Container>
 </template>
 
 <script setup>
   import Container from './templates/container'
-  import SectionIntercalatedContent from './templates/sectionintercalatedcontent'
+  import SectionGridBento2c5i from './templates/sectiongridbento2c5i'
 
   const mock = {
-    overline: 'Edge Application',
-    title: 'Como Funciona',
-    items: [
+    overline: 'capacidades adicionais',
+    title: 'Potencialize sua edge application habilitando qualquer uma ou todas as nossas funcionalidades avançadas.',
+    description: "",
+    gridType: '2-columns-5-items',
+    cards: [
       {
-        title:
-          'A Azion usa uma arquitetura de proxy reverso, que conecta seus usuários aos Edge Nodes de nossa rede global altamente distribuída.',
-        description: '',
-        imageDark:
-          'https://www.azion.com/assets/pages/products/images/dark/edge-application/asset-1.svg',
-        imageLight:
-          'https://www.azion.com/assets/pages/products/images/light/edge-application/asset-11.svg',
-        alt: 'Edge Application text image'
+        overline: 'add-on',
+        title: 'Edge Functions',
+        description: 'Que conecta seus usuários aos Edge Nodes de nossa rede global altamente distribuída.',
+        buttons: [
+          {
+            label: 'ver detalhes',
+            link: '/pt-br/',
+            outlined: true
+          }
+        ],
+        image: {
+          imageDark: 'https://www.azion.com/assets/pages/products/images/dark/edge-application/console-edge-function.svg',
+          imageLight:'https://www.azion.com/assets/pages/products/images/light/edge-application/console-edge-function.svg',
+          alt: 'Edge Application text image'
+        }
       },
       {
-        title:
-          'Configure seu cache. O conteúdo nos Edge Nodes da Azion pode ser entregue diretamente aos seus usuários por meio do nosso edge node mais próximo.',
-        description: '',
-        imageDark:
-          'https://www.azion.com/assets/pages/products/images/dark/edge-application/asset-2.svg',
-        imageLight:
-          'https://www.azion.com/assets/pages/products/images/light/edge-application/asset-21.svg',
-        alt: 'Edge Application text image',
-        position: 'right'
+        overline: 'add-on',
+        title: 'Image Processor',
+        description: 'Otimize, converta e modifique suas imagens just-in-time para melhorar a experiência do usuário.',
+        buttons: [
+          {
+            label: 'ver detalhes',
+            link: '/pt-br/',
+            outlined: true
+          }
+        ]
       },
       {
-        title:
-          'Habilite os módulos de rede, computação e segurança da sua edge application para garantir a máxima performance, escalabilidade e segurança.',
-        description: '',
-        imageDark:
-          'https://www.azion.com/assets/pages/products/images/dark/edge-application/asset-3.svg',
-        imageLight:
-          'https://www.azion.com/assets/pages/products/images/light/edge-application/asset-31.svg',
-        alt: 'Edge Application text image'
+        overline: 'add-on',
+        title: 'Edge Cache',
+        description: 'Ative uma camada adicional de cache que reduz o tráfego para sua origem, melhorando a performance e disponibilidade.',
+        buttons: [
+          {
+            label: 'ver detalhes',
+            link: '/pt-br/',
+            outlined: true
+          }
+        ],
+      },
+      {
+        overline: 'add-on',
+        title: 'Load Balancer',
+        description: 'Equilibre o tráfego para suas origens, garantindo a melhor confiabilidade e controle de congestionamento de rede.',
+        buttons: [
+          {
+            label: 'ver detalhes',
+            link: '/pt-br/',
+            outlined: true
+          }
+        ]
+      },
+      {
+        overline: 'add-on',
+        title: 'Application Accelerator',
+        description: 'Acelere a performance de suas aplicações e APIs com otimizações de protocolo e regras avançadas de caching.',
+        buttons: [
+          {
+            label: 'ver detalhes',
+            link: '/pt-br/',
+            outlined: true
+          }
+        ],
       }
     ]
   }
