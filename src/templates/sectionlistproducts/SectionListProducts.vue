@@ -28,7 +28,7 @@
               />
               <div
                 class="ml-12"
-                v-if="addons"
+                v-if="addons && (addons[0].label || addons[0].link)"
               >
                 <Overline label="Add-ons" />
                 <div class="flex flex-col gap-2 pt-3 -ml-4">

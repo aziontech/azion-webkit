@@ -94,7 +94,6 @@
               </template>
             </CardBase>
           </template>
-
         </template>
         <template v-slot:item-3>
           <template v-if="cards[2].title || cards[2].description">
