@@ -59,7 +59,7 @@ declare class SectionGridBento2c5i extends ClassComponent<
 
 declare module 'vue' {
   export interface GlobalComponents {
-    sectiongridbento: GlobalComponentConstructor<SectionGridBento2c5i>
+    sectiongridbento2c5i: GlobalComponentConstructor<SectionGridBento2c5i>
   }
 }
 
