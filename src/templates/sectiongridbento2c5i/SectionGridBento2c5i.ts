@@ -1,9 +1,9 @@
 /**
  *
- * sectiongridbento
+ * sectiongridbento2c5i
  *
  *
- * @module `sectiongridbento`
+ * @module `sectiongridbento2c5i`
  */
 import { VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
@@ -11,15 +11,17 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 type Cards = Array<{
   title: string
   description: string
-  imageDark: string
-  imageLight: string
-  alt: string
+  image: {
+    imageDark: string
+    imageLight: string
+    alt: string
+  }
 }>
 
 /**
- * Defines valid properties in sectiongridbento component.
+ * Defines valid properties in sectiongridbento2c5i component.
  */
-export interface SectionGridBentoProps {
+export interface SectionGridBento2c5iProps {
   overline: string
   title: string
   description: string
@@ -27,9 +29,9 @@ export interface SectionGridBentoProps {
 }
 
 /**
- * Defines valid slots in sectiongridbento component.
+ * Defines valid slots in sectiongridbento2c5i component.
  */
-export interface SectionGridBentoSlots {
+export interface SectionGridBento2c5iSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
@@ -37,9 +39,9 @@ export interface SectionGridBentoSlots {
 }
 
 /**
- * Defines valid emits in sectiongridbento component.
+ * Defines valid emits in sectiongridbento2c5i component.
  */
-export interface SectionGridBentoEmits {
+export interface SectionGridBento2c5iEmits {
   /**
    * Triggered when an error occurs
    */
@@ -49,16 +51,16 @@ export interface SectionGridBentoEmits {
 /**
  * @group Component
  */
-declare class sectiongridbento extends ClassComponent<
-  SectionGridBentoProps,
-  SectionGridBentoSlots,
-  SectionGridBentoEmits
+declare class SectionGridBento2c5i extends ClassComponent<
+  SectionGridBento2c5iProps,
+  SectionGridBento2c5iSlots,
+  SectionGridBento2c5iEmits
 > {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    sectiongridbento: GlobalComponentConstructor<sectiongridbento>
+    sectiongridbento: GlobalComponentConstructor<SectionGridBento2c5i>
   }
 }
 
-export default sectiongridbento
+export default SectionGridBento2c5i
