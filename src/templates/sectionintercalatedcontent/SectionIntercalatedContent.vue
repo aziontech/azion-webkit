@@ -19,7 +19,7 @@
         titleTag="h3"
         :title="item.title"
         :description="item.description"
-        :position="item.position"
+        :position="item.position || 'left'"
       >
         <template v-slot:main>
           <div class="w-full flex justify-center">
