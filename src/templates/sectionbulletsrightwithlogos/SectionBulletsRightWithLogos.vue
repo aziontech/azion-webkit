@@ -13,7 +13,7 @@
     </template>
 
     <template v-slot:content>
-      <ContentLogoBlock v-bind="logos" />
+      <ContentLogoBlock :logos="logos" />
     </template>
 
 
@@ -47,7 +47,7 @@
       type: Object
     },
     logos: {
-      type: Object
+      type: Array
     },
     severity: {
       type: String,
