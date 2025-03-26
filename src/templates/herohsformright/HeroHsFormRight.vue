@@ -15,7 +15,10 @@
           data-form
           class="hbspt-form"
         >
-          <p class="mb-6">
+          <p
+            class="mb-6 font-medium text-xl"
+            :class="{ hidden: formIsSubmitted }"
+          >
             {{ props.form.title }}
           </p>
           <div class="field-wrap">
@@ -59,6 +62,7 @@
   })
 
   const isLoading = ref(true)
+  const formIsSubmitted = ref(false)
 
   const loadHubSpotScript = () => {
     return new Promise((resolve, reject) => {
@@ -76,7 +80,10 @@
         region: 'na1',
         portalId: '5759082',
         formId: props.form.id,
-        target: '.field-wrap'
+        target: '.field-wrap',
+        onFormSubmit: function () {
+          formIsSubmitted.value = true
+        }
       })
     }
   }
