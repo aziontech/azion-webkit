@@ -13,7 +13,11 @@
           v-for="{ title, icon, description, link, addons } in props.list"
           spacing="compact"
           backgroundColor="default"
-          :class="[addons && 'row-span-2']"
+          :class="[
+            addons &&
+              addons.some((addon) => addon.label && addon.label.trim() !== '') &&
+              'row-span-2'
+          ]"
         >
           <template #content>
             <div class="flex flex-col w-full gap-2 justify-end">
@@ -21,28 +25,31 @@
                 class="h-full"
                 :href="link"
                 :title="title"
-                r
                 :description="description"
                 :icon="icon"
                 severity="primary"
               />
-              <div
-                class="ml-12"
-                v-if="addons && (addons[0].label || addons[0].link)"
+
+              <template
+                v-if="addons && addons.some((addon) => addon.label && addon.label.trim() !== '')"
               >
-                <Overline label="Add-ons" />
-                <div class="flex flex-col gap-2 pt-3 -ml-4">
-                  <LinkButton
-                    v-for="{ label, link } in addons"
-                    text
-                    :label="label"
-                    :link="link"
-                    class="max-w-fit"
-                    icon="pi pi-arrow-right"
-                    iconPos="rigth"
-                  />
+                <div class="ml-12">
+                  <Overline label="Add-ons" />
+                  <div class="flex flex-col gap-2 pt-3 -ml-4">
+                    <LinkButton
+                      v-for="{ label, link } in addons.filter(
+                        (addon) => addon.label && addon.label.trim() !== ''
+                      )"
+                      text
+                      :label="label"
+                      :link="link"
+                      class="max-w-fit"
+                      icon="pi pi-arrow-right"
+                      iconPos="right"
+                    />
+                  </div>
                 </div>
-              </div>
+              </template>
             </div>
           </template>
         </CardBase>
@@ -76,7 +83,8 @@
       required: true
     },
     list: {
-      type: Array
+      type: Array,
+      default: () => []
     }
   })
 </script>
