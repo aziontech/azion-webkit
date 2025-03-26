@@ -1,41 +1,42 @@
 /**
  *
- * SectionBulletsRight
+ * SectionBulletsRightWithLogos
  *
  *
- * @module `sectionbulletsright`
+ * @module `sectionbulletsrightwithlogos`
  */
 import { VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
-interface Button {
-  label: string
-  link: string
-  outlined?: boolean // Optional, as not all buttons have this property
-}
-
-// Type for individual content block objects
-interface ContentBlock {
-  icon: string
+/**
+ * Defines valid properties in SectionBulletsRightWithLogos component.
+ */
+export interface SectionBulletsRightWithLogosProps {
   title: string
-  description: string
+  button: {
+    label: string
+    link: string
+  }
+  logos: Array<{
+    imageSrc: string
+    title?: string
+    link?: string
+  }>
+  list: Array<{
+    severity: string
+    gap: string
+    data?: Array<{
+      icon: string
+      title: string
+      description: string
+    }>
+  }>
 }
 
 /**
- * Defines valid properties in SectionBulletsRight component.
+ * Defines valid slots in SectionBulletsRightWithLogos component.
  */
-export interface SectionBulletsRightProps {
-  overline: string
-  title: string
-  description: string
-  buttons: Button[]
-  data: ContentBlock[]
-}
-
-/**
- * Defines valid slots in SectionBulletsRight component.
- */
-export interface SectionBulletsRightSlots {
+export interface SectionBulletsRightWithLogosSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
@@ -43,9 +44,9 @@ export interface SectionBulletsRightSlots {
 }
 
 /**
- * Defines valid emits in SectionBulletsRight component.
+ * Defines valid emits in SectionBulletsRightWithLogos component.
  */
-export interface SectionBulletsRightEmits {
+export interface SectionBulletsRightWithLogosEmits {
   /**
    * Triggered when an error occurs
    */
@@ -55,16 +56,16 @@ export interface SectionBulletsRightEmits {
 /**
  * @group Component
  */
-declare class SectionBulletsRight extends ClassComponent<
-  SectionBulletsRightProps,
-  SectionBulletsRightSlots,
-  SectionBulletsRightEmits
+declare class SectionBulletsRightWithLogos extends ClassComponent<
+  SectionBulletsRightWithLogosProps,
+  SectionBulletsRightWithLogosSlots,
+  SectionBulletsRightWithLogosEmits
 > {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    SectionBulletsRight: GlobalComponentConstructor<SectionBulletsRight>
+    SectionBulletsRightWithLogos: GlobalComponentConstructor<SectionBulletsRightWithLogos>
   }
 }
 
-export default SectionBulletsRight
+export default SectionBulletsRightWithLogos
