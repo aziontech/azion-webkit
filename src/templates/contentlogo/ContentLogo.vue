@@ -41,6 +41,7 @@
         >
           <a
             :href="logo.href"
+            :title="logo.title"
             class="*:h-10 max-h-10 flex justify-center"
             :class="[
               { '*:max-w-28': !isCentralized },
