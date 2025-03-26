@@ -12,7 +12,8 @@ const MOCK = {
   items: [
     {
       title: 'A versatilidade de configuração que você estava procurando',
-      description: 'Ative proteções prontas para uso ou crie regras e limites personalizados por meio de uma interface intuitiva ou APIs.',
+      description:
+        'Ative proteções prontas para uso ou crie regras e limites personalizados por meio de uma interface intuitiva ou APIs.',
       position: 'left',
       imageLight: '/assets/mocks/proteja-1.png',
       imageDark: '/assets/mocks/proteja-1.png',
@@ -20,15 +21,18 @@ const MOCK = {
     },
     {
       title: 'Suas regras em seu pipeline de CI/CD',
-      description: 'Teste e implemente regras de firewall, aproveitando os pipelines CI/CD existentes.',
+      description:
+        'Teste e implemente regras de firewall, aproveitando os pipelines CI/CD existentes.',
       position: 'right',
       imageLight: '/assets/mocks/proteja-1.png',
       imageDark: '/assets/mocks/proteja-1.png',
       alt: 'Azion Console | Web Application Firewall'
     },
     {
-      title: 'Acompanhe dados em tempo real da Azion e de suas soluções de observabilidade favoritas',
-      description: 'Colete dados em tempo real e os transmita para suas plataformas de SIEM e analitica, para uma resposta automática a incidentes com os conectores do Data Stream da Azion.',
+      title:
+        'Acompanhe dados em tempo real da Azion e de suas soluções de observabilidade favoritas',
+      description:
+        'Colete dados em tempo real e os transmita para suas plataformas de SIEM e analitica, para uma resposta automática a incidentes com os conectores do Data Stream da Azion.',
       position: 'left',
       imageLight: '/assets/mocks/proteja-1.png',
       imageDark: '/assets/mocks/proteja-1.png',
