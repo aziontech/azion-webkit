@@ -47,7 +47,9 @@
               { '*:max-w-36 *:lg:max-w-56 logo-container': isCentralized }
             ]"
             v-html="logo.imageSrc"
+            v-if="logo.href"
           ></a>
+          <span v-else v-html="logo.imageSrc"></span>
         </div>
       </div>
     </div>
