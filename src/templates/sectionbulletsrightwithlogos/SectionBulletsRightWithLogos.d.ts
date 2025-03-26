@@ -13,6 +13,7 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  */
 export interface SectionBulletsRightWithLogosProps {
   title: string
+  severity: string
   button: {
     label: string
     link: string
@@ -23,13 +24,9 @@ export interface SectionBulletsRightWithLogosProps {
     link?: string
   }>
   list: Array<{
-    severity: string
-    gap: string
-    data?: Array<{
-      icon: string
-      title: string
-      description: string
-    }>
+    icon: string
+    title: string
+    description: string
   }>
 }
 

@@ -31,31 +31,27 @@
         alt: ""
       }
     ],
-    list: {
-      severity: "primary",
-      gap: "default",
-      data: [
-        {
-          "icon": "pi pi-check",
-          "title": "Entrega mais rápida",
-          "description": "Evite solicitações desnecessárias aos servidores de origem e utilize nossa rede de edge distribuída para reduzir a latência e mitigar gargalos de rede."
-        },
-        {
-          "icon": "pi pi-check",
-          "title": "Escalável e segura",
-          "description": "Construa aplicações web ainda mais poderosas, capazes de gerenciar grandes picos de acesso com uma alta performance e segurança para seus usuários."
-        },
-        {
-          "icon": "pi pi-check",
-          "title": "Proximidade e cobertura",
-          "description": "Aproveite uma plataforma de edge computing global, aberta, extensível, próxima aos seus usuários e amigável para os desenvolvedores."
-        },
-        {
-          "icon": "pi pi-check",
-          "title": "Economia de custos de infraestrutura",
-          "description": "Escale instantaneamente a entrega de conteúdo globalmente, mesmo durante picos de tráfego, e reduza o custo, tempo e risco de gerenciar infraestrutura."
-        }
-      ]
-    }
+    list: [
+      {
+        "icon": "pi pi-check",
+        "title": "Entrega mais rápida",
+        "description": "Evite solicitações desnecessárias aos servidores de origem e utilize nossa rede de edge distribuída para reduzir a latência e mitigar gargalos de rede."
+      },
+      {
+        "icon": "pi pi-check",
+        "title": "Escalável e segura",
+        "description": "Construa aplicações web ainda mais poderosas, capazes de gerenciar grandes picos de acesso com uma alta performance e segurança para seus usuários."
+      },
+      {
+        "icon": "pi pi-check",
+        "title": "Proximidade e cobertura",
+        "description": "Aproveite uma plataforma de edge computing global, aberta, extensível, próxima aos seus usuários e amigável para os desenvolvedores."
+      },
+      {
+        "icon": "pi pi-check",
+        "title": "Economia de custos de infraestrutura",
+        "description": "Escale instantaneamente a entrega de conteúdo globalmente, mesmo durante picos de tráfego, e reduza o custo, tempo e risco de gerenciar infraestrutura."
+      }
+    ]
   }
 </script>

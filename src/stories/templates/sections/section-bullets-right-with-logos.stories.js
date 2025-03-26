@@ -4,24 +4,22 @@ import Container from '../../../templates/container'
 export default {
   title: 'Blocks/Sections/section-bullets-right-with-logos',
   tags: ['autodocs'],
-  // parameters: {
-  //   argTypes: {
-  //     severity: {
-  //       options: [
-  //         'default',
-  //         'primary',
-  //         'secondary',
-  //         'warning',
-  //         'success',
-  //         'info'
-  //       ],
-  //       default: 'primary',
-  //       control: {
-  //         type: 'select'
-  //       }
-  //     }
-  //   }
-  // }
+  argTypes: {
+    severity: {
+      options: [
+        'default',
+        'primary',
+        'secondary',
+        'warning',
+        'success',
+        'info'
+      ],
+      default: 'primary',
+      control: {
+        type: 'select'
+      }
+    }
+  }
 }
 
 const config = (args) => {
@@ -42,6 +40,7 @@ const Template = (args) => config(args)
 export const Default = Template.bind({})
 Default.args = {
   "title": "Confiabilidade atestada por líderes de mercado em bancos, e-commerce, tecnologia e outros setores.",
+  "severity": "primary",
   "button": {
     "label": "Leia os casos de sucesso de nossos clientes",
     "link": "https://www.azion.com/pt-br/resource-hub/"
@@ -63,30 +62,26 @@ Default.args = {
       alt: ""
     }
   ],
-  list: {
-    severity: "primary",
-    gap: "default",
-    data: [
-      {
-        "icon": "pi pi-check",
-        "title": "Entrega mais rápida",
-        "description": "Evite solicitações desnecessárias aos servidores de origem e utilize nossa rede de edge distribuída para reduzir a latência e mitigar gargalos de rede."
-      },
-      {
-        "icon": "pi pi-check",
-        "title": "Escalável e segura",
-        "description": "Construa aplicações web ainda mais poderosas, capazes de gerenciar grandes picos de acesso com uma alta performance e segurança para seus usuários."
-      },
-      {
-        "icon": "pi pi-check",
-        "title": "Proximidade e cobertura",
-        "description": "Aproveite uma plataforma de edge computing global, aberta, extensível, próxima aos seus usuários e amigável para os desenvolvedores."
-      },
-      {
-        "icon": "pi pi-check",
-        "title": "Economia de custos de infraestrutura",
-        "description": "Escale instantaneamente a entrega de conteúdo globalmente, mesmo durante picos de tráfego, e reduza o custo, tempo e risco de gerenciar infraestrutura."
-      }
-    ]
-  }
+  list: [
+    {
+      "icon": "pi pi-check",
+      "title": "Entrega mais rápida",
+      "description": "Evite solicitações desnecessárias aos servidores de origem e utilize nossa rede de edge distribuída para reduzir a latência e mitigar gargalos de rede."
+    },
+    {
+      "icon": "pi pi-check",
+      "title": "Escalável e segura",
+      "description": "Construa aplicações web ainda mais poderosas, capazes de gerenciar grandes picos de acesso com uma alta performance e segurança para seus usuários."
+    },
+    {
+      "icon": "pi pi-check",
+      "title": "Proximidade e cobertura",
+      "description": "Aproveite uma plataforma de edge computing global, aberta, extensível, próxima aos seus usuários e amigável para os desenvolvedores."
+    },
+    {
+      "icon": "pi pi-check",
+      "title": "Economia de custos de infraestrutura",
+      "description": "Escale instantaneamente a entrega de conteúdo globalmente, mesmo durante picos de tráfego, e reduza o custo, tempo e risco de gerenciar infraestrutura."
+    }
+  ]
 }

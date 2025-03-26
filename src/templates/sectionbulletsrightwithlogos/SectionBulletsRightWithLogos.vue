@@ -21,7 +21,7 @@
       <UnorderedList
         class="w-full"
         :severity="severity"
-        :data="list.data"
+        :data="list"
       />
     </template>
   </ContentSection>
