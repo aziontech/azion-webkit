@@ -50,7 +50,10 @@
             v-html="logo.imageSrc"
             v-if="logo.href"
           ></a>
-          <span v-else v-html="logo.imageSrc"></span>
+          <span
+            v-else
+            v-html="logo.imageSrc"
+          ></span>
         </div>
       </div>
     </div>

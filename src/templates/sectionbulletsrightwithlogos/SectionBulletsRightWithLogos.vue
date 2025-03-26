@@ -3,7 +3,7 @@
     titleTag="h2"
     :title="title"
   >
-     <template v-slot:actions>
+    <template v-slot:actions>
       <template v-if="button && button.label">
         <LinkButton
           v-bind="button"
@@ -15,7 +15,6 @@
     <template v-slot:content>
       <ContentLogoBlock :logos="logos" />
     </template>
-
 
     <template v-slot:main>
       <UnorderedList
