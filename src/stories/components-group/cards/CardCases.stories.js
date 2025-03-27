@@ -41,7 +41,8 @@ const DefaultProps = {
   description:
     'VTEX builds ultra-low latency serverless applications with Azion and allows thousands of customers to accelerate their sales on the web..',
   link: 'https://www.azion.com/en/documentation/products/get-started/',
-  tagList: 'Categorie'
+  tagList: ['Categorie', 'Cases'],
+  buttonLabel: 'Read story'
 }
 
 export const Default = Template.bind({})

@@ -1,0 +1,2 @@
+import SectionBulletsRightWithLogos from './SectionBulletsRightWithLogos.vue'
+export default SectionBulletsRightWithLogos

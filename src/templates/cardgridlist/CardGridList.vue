@@ -15,13 +15,14 @@
     </template>
     <template v-if="cardType === 'cases'">
       <CardCases
-        v-for="({ image, link, description, alt, tagList }, index) in data"
+        v-for="({ image, link, description, alt, tagList, buttonLabel }, index) in data"
         :key="index"
         :image="image"
         :imgAlt="alt"
         :description="description"
         :link="link"
         :tagList="tagList"
+        :buttonLabel="buttonLabel"
       />
     </template>
   </div>

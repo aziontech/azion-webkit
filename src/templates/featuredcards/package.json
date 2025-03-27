@@ -1,0 +1,7 @@
+{
+  "main": "./featuredcards.js",
+  "types": "./FeaturedCards.d.ts",
+  "browser": {
+    "./sfc": "./FeaturedCards.vue"
+  }
+}
