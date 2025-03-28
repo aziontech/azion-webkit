@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+      "baseUrl": ".",
       "target": "es5",
       "lib": ["dom", "dom.iterable", "esnext"],
       "allowJs": true,
@@ -13,11 +14,11 @@
       "resolveJsonModule": true,
       "isolatedModules": false,
       "jsx": "preserve",
-      "incremental": true
-  },
-  "paths": {
-    "@assets/*": ["src/assets/*"],
-    "@templates/*": ["src/templates/*"],
+      "incremental": true,
+      "paths": {
+        "@assets/*": ["src/assets/*"],
+        "@templates/*": ["src/templates/*"],
+      }
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules", "dist", "storybook-static"]

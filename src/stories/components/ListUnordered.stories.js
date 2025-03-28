@@ -18,6 +18,14 @@ export default {
         type: 'select'
       },
       description: 'Chnage orientation'
+    },
+    gap: {
+      default: 'default',
+      options: ['small', 'default'],
+      control: {
+        type: 'select'
+      },
+      description: 'Chnage gap size'
     }
   }
 }

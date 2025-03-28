@@ -7,7 +7,8 @@
   >
     <template #actions>
       <LinkButton
-        v-for="button in buttons"
+        v-for="(button, index) in buttons"
+        :key="index"
         v-bind="button"
       />
     </template>

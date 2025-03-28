@@ -9,23 +9,50 @@
       :pt="{
         root: {
           class:
-            'w-full p-6 shadow-none bg-transparent flex flex-col gap-9 rounded-md border surface-border overflow-hidden group-hover:border-current'
+            'w-full p-6 shadow-none bg-transparent flex flex-col gap-6 rounded-md border surface-border overflow-hidden group-hover:border-current'
+        },
+        body: {
+          class: 'h-full flex flex-col justify-between'
         }
       }"
     >
       <template #header>
-        <div class="flex justify-between items-center">
-          <template v-if="image">
-            <div v-html="image" />
-          </template>
-          <Tag
-            :value="tagList"
-            severity="info"
+        <template v-if="image">
+          <div
+            class="svg-customer-logo"
+            v-html="image"
           />
+        </template>
+      </template>
+
+      <template #content>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <template
+            v-for="(tag, index) in tagList"
+            :key="index"
+          >
+            <Tag
+              :value="tag"
+              severity="info"
+            />
+          </template>
+        </div>
+
+        <div class="flex flex-col gap-6 justify-between">
+          <p class="text-sm text-color-secondary">{{ description }}</p>
         </div>
       </template>
-      <template #content>
-        <p class="text-body-2 text-color-secondary">{{ description }}</p>
+
+      <template #footer>
+        <Button
+          v-if="buttonLabel"
+          link
+          aria-label="Read Story"
+          :label="buttonLabel"
+          iconPos="right"
+          class="p-0 text-sm mt-4"
+          icon="pi pi-arrow-right"
+        />
       </template>
     </Card>
   </a>
@@ -34,6 +61,7 @@
 <script setup>
   import Card from 'primevue/card'
   import Tag from 'primevue/tag'
+  import Button from 'primevue/button'
 
   defineProps({
     image: {
@@ -45,7 +73,7 @@
       required: false
     },
     tagList: {
-      type: String,
+      type: Array,
       required: true
     },
     description: {
@@ -56,6 +84,10 @@
       type: String,
       required: true
     },
+    buttonLabel: {
+      type: String,
+      required: false
+    },
     size: {
       type: String,
       required: false,
@@ -64,3 +96,10 @@
     }
   })
 </script>
+
+<style>
+  .svg-customer-logo > svg {
+    width: 158px;
+    height: 58px;
+  }
+</style>

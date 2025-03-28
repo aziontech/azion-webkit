@@ -6,12 +6,21 @@
     :titleTag="props.titleTag"
   >
     <template #actions>
-      <LinkButton
+      <!-- <LinkButton
         v-for="{ link, label } in props.buttons"
         :link="link"
         :label="label"
         outlined
-      />
+      /> -->
+      <template
+        v-for="(button, index) in buttons"
+        :key="index"
+      >
+        <LinkButton
+          v-if="button.link"
+          v-bind="button"
+        />
+      </template>
     </template>
     <template #main>
       <div class="w-full">

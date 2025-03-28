@@ -1,0 +1,7 @@
+{
+  "main": "./sectionquote.js",
+  "types": "./SectionQuote.d.ts",
+  "browser": {
+    "./sfc": "./SectionQuote.vue"
+  }
+}

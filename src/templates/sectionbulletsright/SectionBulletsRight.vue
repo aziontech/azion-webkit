@@ -6,12 +6,21 @@
     titleTag="h2"
   >
     <template #actions>
-      <LinkButton
+      <!-- <LinkButton
         v-for="{ link, label, outlined } in buttons"
         :link="link"
         :label="label"
         :outlined="outlined"
-      />
+      /> -->
+      <template
+        v-for="(button, index) in buttons"
+        :key="index"
+      >
+        <LinkButton
+          v-if="button.link"
+          v-bind="button"
+        />
+      </template>
     </template>
     <template #main>
       <UnorderedList

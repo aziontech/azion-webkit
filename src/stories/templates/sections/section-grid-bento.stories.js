@@ -59,20 +59,33 @@ const config = (args) => {
     },
     template: `
       <Container class="surface-ground">
-        <ContentSection :title="args.title" :overline="args.overline" :description="args.description" position="center"
-          titleTag="h1" isContentCentralized textCenter>
+        <ContentSection
+          :title="args.title"
+          :overline="args.overline"
+          :description="args.description"
+          position="center"
+          titleTag="h2"
+          isContentCentralized
+          textCenter
+        >
           <template #main>
             <GridBentoBlock :gridType="args.gridType">
               <template v-for="({ title, img, overline, actions }, index) in args.cards" v-slot:[\`item-\${++index}\`]>
                 <CardBase grid spacing="relaxed">
                   <template #content>
                     <Overline :label="overline" />
-                    <CardTitle> {{ title }} </CardTitle>
+                    <CardTitle>
+                      {{ title }}
+                    </CardTitle>
                   </template>
                   <template v-if="actions" #actions>
                     <div>
-                      <LinkButton v-for="button in actions" :outlined="button.outlined" :label="button.label"
-                        :link="button.href" />
+                      <LinkButton
+                        v-for="button in actions"
+                        :outlined="button.outlined"
+                        :label="button.label"
+                        :link="button.href"
+                      />
                     </div>
                   </template>
                   <template #content-raw>
@@ -80,10 +93,20 @@ const config = (args) => {
                       <div v-if="img">
                         <ImageSwitcher>
                           <template #lightImage>
-                            <img :src="img.src" loading="lazy" height="40" />
+                            <img
+                              class="w-full"
+                              :src="img.src"
+                              loading="lazy"
+                              height="40"
+                            />
                           </template>
                           <template #darkImage>
-                            <img :src="img.src" loading="lazy" height="40"/>
+                            <img
+                              class="w-full"
+                              :src="img.src"
+                              loading="lazy"
+                              height="40
+                            />
                           </template>
                         </ImageSwitcher>
                       </div>
