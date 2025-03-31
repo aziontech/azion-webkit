@@ -325,7 +325,6 @@
 
   const getBreakpointClass = (menu) => {
     const breakpoint = menu?.minBreakpoint
-    console.log('breakpoint :', breakpoint)
     if (!breakpoint) return ''
 
     const breakpoints = {

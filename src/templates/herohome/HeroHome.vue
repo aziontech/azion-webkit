@@ -7,7 +7,7 @@
   >
     <template #title>
       <h1
-        class="font-medium 2xl:text-7xl/[4.875rem] sm:text-6xl/[4.125rem] text-4xl text-balance"
+        class="font-medium text-heading-5 text-balance"
         v-html="title"
       />
     </template>
