@@ -27,81 +27,59 @@
             class="w-full flex flex-col gap-8"
             :class="[{ 'items-center': isContentCentralized }]"
           >
-            <div
-              class="flex flex-col gap-5 max-w-3xl"
-              :class="[
-                { 'items-center text-center': isContentCentralized },
-                { 'justify-center h-full': textCenter }
-              ]"
-            >
-              <template v-if="overline && overline.length">
-                <Overline :label="overline" />
-              </template>
-              <template v-if="title">
-                <h1
-                  v-if="titleTag === 'h1'"
-                  class="text-2xl md:text-3xl font-medium text-balance"
-                  style="line-height: 125% !important"
-                >
-                  {{ title }}
-                </h1>
-                <h2
-                  v-if="titleTag === 'h2'"
-                  class="text-2xl md:text-3xl font-medium text-balance"
-                  style="line-height: 125% !important"
-                >
-                  {{ title }}
-                </h2>
-                <h3
-                  v-if="titleTag === 'h3'"
-                  class="text-2xl md:text-3xl font-medium text-balance"
-                  style="line-height: 125% !important"
-                >
-                  {{ title }}
-                </h3>
-                <h4
-                  v-if="titleTag === 'h4'"
-                  class="text-2xl md:text-3xl font-medium text-balance"
-                  style="line-height: 125% !important"
-                >
-                  {{ title }}
-                </h4>
-                <h5
-                  v-if="titleTag === 'h5'"
-                  class="text-2xl md:text-3xl font-medium text-balance"
-                  style="line-height: 125% !important"
-                >
-                  {{ title }}
-                </h5>
-                <h6
-                  v-if="titleTag === 'h6'"
-                  class="text-2xl md:text-3xl font-medium text-balance"
-                  style="line-height: 125% !important"
-                >
-                  {{ title }}
-                </h6>
-              </template>
-              <template v-else-if="$slots.title">
-                <div
-                  class="text-2xl md:text-3xl lg:text-4xl font-medium text-balance"
-                  style="line-height: 125% !important"
-                >
-                  <slot name="title" />
-                </div>
-              </template>
-              <template v-if="description">
-                <p class="text-color-secondary text-sm md:text-base leading-relaxed text-balance">
-                  {{ description }}
-                </p>
-              </template>
-            </div>
-
-            <template v-if="$slots.actions">
-              <div
-                class="flex flex-col sm:flex-row gap-3 w-full"
-                :class="[{ 'justify-center items-center text-center': isContentCentralized }]"
+            <template v-if="overline && overline.length">
+              <Overline :label="overline" />
+            </template>
+            <template v-if="title">
+              <h1
+                v-if="titleTag === 'h1'"
+                class="text-heading-2 font-medium text-balance"
+                style="line-height: 125% !important"
               >
-                <slot name="actions" />
+                {{ title }}
+              </h1>
+              <h2
+                v-if="titleTag === 'h2'"
+                class="text-heading-2 font-medium text-balance"
+                style="line-height: 125% !important"
+              >
+                {{ title }}
+              </h2>
+              <h3
+                v-if="titleTag === 'h3'"
+                class="text-heading-2 font-medium text-balance"
+                style="line-height: 125% !important"
+              >
+                {{ title }}
+              </h3>
+              <h4
+                v-if="titleTag === 'h4'"
+                class="text-heading-2 font-medium text-balance"
+                style="line-height: 125% !important"
+              >
+                {{ title }}
+              </h4>
+              <h5
+                v-if="titleTag === 'h5'"
+                class="text-heading-2 font-medium text-balance"
+                style="line-height: 125% !important"
+              >
+                {{ title }}
+              </h5>
+              <h6
+                v-if="titleTag === 'h6'"
+                class="text-heading-2 font-medium text-balance"
+                style="line-height: 125% !important"
+              >
+                {{ title }}
+              </h6>
+            </template>
+            <template v-else-if="$slots.title">
+              <div
+                class="text-heading-2 font-medium text-balance"
+                style="line-height: 125% !important"
+              >
+                <slot name="title" />
               </div>
             </template>
           </div>
