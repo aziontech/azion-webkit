@@ -27,7 +27,7 @@ export interface ArticleNavigationProps {
    * Defines which index to hit
    */
   overline?: {
-    prev: string,
+    prev: string
     next: string
   }
 }
