@@ -1,36 +1,32 @@
 /**
  *
- * GridBento represents people using links in the page with css buttons look.
+ * GridHighlight represents a grid layout with clickable cards.
  *
  *
- * @module `gridbento`
+ * @module `gridhighlight`
  */
 import { VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
- * Defines valid properties in GridBento component.
+ * Defines valid properties in GridHighlight component.
  */
-export interface GridBentoProps {
+export interface GridHighlightProps {
   /**
-   * Defines type of grid bento
-   * @defaultValue true2-column-6-items
-   *  options: [
-   *   '2-columns-3-items',
-   *   '2-columns-4-items',
-   *   '2-columns-5-items',
-   *   '2-columns-6-items',
-   *   '3-columns-7-items',
-   *   '4-columns-5-items'
-   * ]
+   * Array of card objects to be displayed in the grid.
    */
-  gridType: string | undefined
+  cards: Array<{
+    image: string
+    alt: string
+    link: string
+    description: string
+  }>
 }
 
 /**
- * Defines valid slots in GridBento component.
+ * Defines valid slots in GridHighlight component.
  */
-export interface GridBentoSlots {
+export interface GridHighlightSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
@@ -38,9 +34,9 @@ export interface GridBentoSlots {
 }
 
 /**
- * Defines valid emits in GridBento component.
+ * Defines valid emits in GridHighlight component.
  */
-export interface GridBentoEmits {
+export interface GridHighlightEmits {
   /**
    * Triggered when an error occurs
    */
@@ -50,12 +46,12 @@ export interface GridBentoEmits {
 /**
  * @group Component
  */
-declare class GridBento extends ClassComponent<GridBentoProps, GridBentoSlots, GridBentoEmits> {}
+declare class GridHighlight extends ClassComponent<GridHighlightProps, GridHighlightSlots, GridHighlightEmits> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    GridBento: GlobalComponentConstructor<GridBento>
+    GridHighlight: GlobalComponentConstructor<GridHighlight>
   }
 }
 
-export default GridBento
+export default GridHighlight
