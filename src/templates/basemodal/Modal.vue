@@ -58,8 +58,6 @@
   }
 
   const getPTOptions = () => {
-    console.log('[props.backgroundColor]:', props.backgroundColor)
-
     if (props.backgroundColor == 'outlined') {
       return {
         content: 'bg-transparent p-0',

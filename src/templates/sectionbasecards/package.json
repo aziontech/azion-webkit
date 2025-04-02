@@ -1,0 +1,7 @@
+{
+  "main": "./sectionbasecards.js",
+  "types": "./SectionBaseCards.d.ts",
+  "browser": {
+    "./sfc": "./SectionBaseCards.vue"
+  }
+}

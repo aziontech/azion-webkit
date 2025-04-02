@@ -1,7 +1,9 @@
 <template>
   <div
-    class="rounded h-8 w-8 flex justify-center items-center"
+    class="rounded flex justify-center items-center"
     :class="[
+      { 'h-6 w-6': size == 'default' },
+      { 'h-8 w-8': size == 'large' },
       { 'bg-[--surface-400] text-color-secondary': severity == 'default' },
       { 'p-tag': severity == 'primary' },
       { 'p-tag p-tag-warning': severity == 'warning' },
@@ -20,9 +22,13 @@
   defineProps({
     severity: {
       type: String,
-      required: false,
       default: 'default',
       options: ['default', 'primary', 'secondary', 'warning', 'success', 'info']
+    },
+    size: {
+      type: String,
+      default: 'default',
+      options: ['default', 'large']
     }
   })
 </script>

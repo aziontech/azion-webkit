@@ -41,13 +41,19 @@
         >
           <a
             :href="logo.href"
+            :title="logo.title"
             class="*:h-10 max-h-10 flex justify-center"
             :class="[
               { '*:max-w-28': !isCentralized },
               { '*:max-w-36 *:lg:max-w-56 logo-container': isCentralized }
             ]"
             v-html="logo.imageSrc"
+            v-if="logo.href"
           ></a>
+          <span
+            v-else
+            v-html="logo.imageSrc"
+          ></span>
         </div>
       </div>
     </div>

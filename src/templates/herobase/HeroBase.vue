@@ -43,39 +43,39 @@
           <template v-if="title">
             <h1
               v-if="titleTag === 'h1'"
-              class="leading-loose font-medium text-3xl md:text-4xl 2xl:text-5xl text-balance"
+              class="leading-loose font-medium text-heading-3 text-balance"
               style="line-height: 125% !important"
-              :class="[{ 'text-4xl md:text-5xl': isDisplay }]"
+              :class="[{ 'text-heading-5': isDisplay }]"
             >
               {{ title }}
             </h1>
             <h2
               v-if="titleTag === 'h2'"
-              class="text-3xl md:text-4xl 2xl:text-5xl leading-relaxed font-medium text-balance"
+              class="text-heading-3 leading-relaxed font-medium text-balance"
             >
               {{ title }}
             </h2>
             <h3
               v-if="titleTag === 'h3'"
-              class="text-3xl md:text-4xl 2xl:text-5xl leading-relaxed font-medium text-balance"
+              class="text-heading-3 leading-relaxed font-medium text-balance"
             >
               {{ title }}
             </h3>
             <h4
               v-if="titleTag === 'h4'"
-              class="text-3xl md:text-4xl 2xl:text-5xl leading-relaxed font-medium text-balance"
+              class="text-heading-3 leading-relaxed font-medium text-balance"
             >
               {{ title }}
             </h4>
             <h5
               v-if="titleTag === 'h5'"
-              class="text-3xl md:text-4xl 2xl:text-5xl leading-relaxed font-medium text-balance"
+              class="text-heading-3 leading-relaxed font-medium text-balance"
             >
               {{ title }}
             </h5>
             <h6
               v-if="titleTag === 'h6'"
-              class="text-3xl md:text-4xl 2xl:text-5xl leading-relaxed font-medium text-balance"
+              class="text-heading-3 leading-relaxed font-medium text-balance"
             >
               {{ title }}
             </h6>
@@ -85,7 +85,7 @@
           </template>
           <p
             v-if="description"
-            class="text-color-secondary text-sm md:text-base 2xl:text-lg leading-relaxed text-balance"
+            class="text-color-secondary text-body-3 leading-relaxed text-balance"
           >
             {{ description }}
           </p>
@@ -109,7 +109,7 @@
       </template>
     </div>
     <template v-if="$slots.principal">
-      <div class="px-container">
+      <div class="px-container w-full">
         <slot name="principal" />
       </div>
     </template>
@@ -122,49 +122,39 @@
 
   defineProps({
     bannerNews: {
-      type: Object,
-      required: false
+      type: Object
     },
     overline: {
-      type: String,
-      required: false
+      type: String
     },
     isReverse: {
       type: Boolean,
-      required: false,
       default: false
     },
     title: {
-      type: String,
-      required: false
+      type: String
     },
     titleTag: {
       type: String,
-      required: false,
       default: 'h1'
     },
     description: {
-      type: String,
-      required: false
+      type: String
     },
     justify: {
       type: String,
-      required: false,
       options: ['center']
     },
     align: {
       type: String,
-      required: false,
       options: ['center']
     },
     isCentralized: {
       type: Boolean,
-      required: false,
       default: false
     },
     isDisplay: {
-      type: Boolean,
-      required: false
+      type: Boolean
     }
   })
 </script>

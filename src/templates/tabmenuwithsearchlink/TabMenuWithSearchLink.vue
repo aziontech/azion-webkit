@@ -36,7 +36,7 @@
         @click="activeDialog"
         class="p-inputtext flex items-center gap-2 w-full text-color-secondary text-sm"
       >
-        <i class="p-button-icon pi pi-search" />
+        <i class="p-button-icon pi pi-search"></i>
         <span>{{ inputPlaceholder }}</span>
       </button>
       <AlgoliaDialog
@@ -55,7 +55,6 @@
 <script setup>
   import TabMenu from 'primevue/tabmenu'
   import AlgoliaDialog from '../aisdialog/AlgoliaDialog.vue'
-  import Button from 'primevue/button'
   import Dropdown from 'primevue/dropdown'
   import { ref, onMounted } from 'vue'
 

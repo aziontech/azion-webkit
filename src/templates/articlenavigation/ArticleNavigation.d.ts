@@ -1,31 +1,41 @@
 /**
  *
- * AisIndexHit represents hit in the algilia index, the small peace of result
  *
- *
- * @module `aisindexhit`
+ * @module `articlenavigation`
  */
 import { VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
- * Defines valid properties in AisIndexHit component.
+ * Defines valid properties in ArticleNavigation component.
  */
-export interface AisIndexHitProps {
+export interface ArticleNavigationProps {
   /**
    * Defines the text to display.
    */
-  label: string
+  cards: {
+    prev: {
+      text: string
+      link: string
+    }
+    next: {
+      text: string
+      link: string
+    }
+  }
   /**
    * Defines which index to hit
    */
-  indexName?: string | undefined
+  overline?: {
+    prev: string
+    next: string
+  }
 }
 
 /**
- * Defines valid slots in AisIndexHit component.
+ * Defines valid slots in ArticleNavigation component.
  */
-export interface AisIndexHitSlots {
+export interface ArticleNavigationSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
@@ -33,9 +43,9 @@ export interface AisIndexHitSlots {
 }
 
 /**
- * Defines valid emits in AisIndexHit component.
+ * Defines valid emits in ArticleNavigation component.
  */
-export interface AisIndexHitEmits {
+export interface ArticleNavigationEmits {
   /**
    * Triggered when an error occurs while loading an image file.
    */
@@ -45,16 +55,16 @@ export interface AisIndexHitEmits {
 /**
  * @group Component
  */
-declare class AisIndexHit extends ClassComponent<
-  AisIndexHitProps,
-  AisIndexHitSlots,
-  AisIndexHitEmits
+declare class ArticleNavigation extends ClassComponent<
+  ArticleNavigationProps,
+  ArticleNavigationSlots,
+  ArticleNavigationEmits
 > {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    AisIndexHit: GlobalComponentConstructor<AisIndexHit>
+    ArticleNavigation: GlobalComponentConstructor<ArticleNavigation>
   }
 }
 
-export default AisIndexHit
+export default ArticleNavigation

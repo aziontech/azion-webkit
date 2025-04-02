@@ -1,7 +1,0 @@
-{
-  "main": "./sectionbigtitles.js",
-  "types": "./SectionBigTitles.d.ts",
-  "browser": {
-    "./sfc": "./SectionBigTitles.vue"
-  }
-}

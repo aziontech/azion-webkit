@@ -10,6 +10,7 @@
           :href="menuitem.href || ''"
           :title="menuitem.label || ''"
           class="p-button p-button-text p-button-primary p-button-sm whitespace-nowrap text-white active:bg-header-button-hover hover:surface-hover"
+          :class="getBreakpointClass(menuitem)"
         >
           <span class="text-white">
             {{ menuitem.label }}
@@ -320,5 +321,20 @@
     } catch (error) {
       console.error('Error in toggle method:', error)
     }
+  }
+
+  const getBreakpointClass = (menu) => {
+    const breakpoint = menu?.minBreakpoint
+    if (!breakpoint) return ''
+
+    const breakpoints = {
+      sm: 'block',
+      md: 'hidden md:block',
+      lg: 'hidden lg:block',
+      xl: 'hidden xl:block',
+      '2xl': 'hidden 2xl:block'
+    }
+
+    return breakpoints[breakpoint] || ''
   }
 </script>

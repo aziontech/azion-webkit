@@ -1,6 +1,6 @@
 <template>
   <div
-    class="transition-all surface-ground grid m-0 p-0 justify-between gap-5 lg:gap-10"
+    class="transition-all surface-ground grid m-0 p-0 justify-between gap-8 lg:gap-10"
     :class="pt.class"
   >
     <template v-if="cardType === 'blog'">
@@ -15,13 +15,14 @@
     </template>
     <template v-if="cardType === 'cases'">
       <CardCases
-        v-for="({ image, link, description, alt, tagList }, index) in data"
+        v-for="({ image, link, description, alt, tagList, buttonLabel }, index) in data"
         :key="index"
         :image="image"
         :imgAlt="alt"
         :description="description"
         :link="link"
         :tagList="tagList"
+        :buttonLabel="buttonLabel"
       />
     </template>
   </div>
