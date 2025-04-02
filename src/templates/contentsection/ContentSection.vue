@@ -82,6 +82,14 @@
                 <slot name="title" />
               </div>
             </template>
+            <template v-if="description">
+              <p
+                class="text-color-secondary text-base leading-relaxed text-balance"
+                :class="[{ 'text-center': isContentCentralized }]"
+              >
+                {{ description }}
+              </p>
+            </template>
           </div>
 
           <template v-if="$slots.content">
