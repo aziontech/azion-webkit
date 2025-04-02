@@ -14,13 +14,12 @@
   defineProps({
     href: {
       type: String,
-      required: false,
+      required: true,
       default: '#'
     },
     title: {
       type: String,
-      required: false,
-      default: 'default'
+      required: true
     },
     description: {
       type: String,
