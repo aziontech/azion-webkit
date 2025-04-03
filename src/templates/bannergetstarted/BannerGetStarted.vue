@@ -12,7 +12,8 @@
       <div class="flex flex-col md:flex-row gap-3 md:justify-end md:min-w-fit md:items-end">
         <LinkButton
           class="md:w-fit w-full"
-          v-for="{ link, label, outlined } in buttons"
+          v-for="({ link, label, outlined }, index) in buttons"
+          :key="index"
           :link="link"
           :label="label"
           :outlined="outlined"
@@ -22,7 +23,8 @@
     <template #main>
       <div class="flex flex-col md:flex-row gap-3 justify-between">
         <div
-          v-for="{ icon, text } in items"
+          v-for="({ icon, text }, index) in items"
+          :key="index"
           class="flex gap-3"
         >
           <Tile>
@@ -43,10 +45,10 @@
   import ContentSection from '../contentsection'
   import Tile from '../tile'
 
-  const props = defineProps({
+  defineProps({
     overline: {
       type: String,
-      required: true
+      required: false
     },
     title: {
       type: String,
