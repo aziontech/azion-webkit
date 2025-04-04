@@ -51,6 +51,11 @@
             v-if="logo.href"
           ></a>
           <span
+            class="*:h-10 max-h-10 flex justify-center"
+            :class="[
+              { '*:max-w-28': !isCentralized },
+              { '*:max-w-36 *:lg:max-w-56 logo-container': isCentralized }
+            ]"
             v-else
             v-html="logo.imageSrc"
           ></span>
