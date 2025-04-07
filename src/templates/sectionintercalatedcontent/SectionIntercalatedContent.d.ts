@@ -9,6 +9,7 @@ import { VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 type Items = Array<{
+  overline: string
   title: string
   description: string
   imageDark: string
