@@ -33,21 +33,21 @@
             <template v-if="title">
               <h1
                 v-if="titleTag === 'h1'"
-                class="text-heading-2 font-medium text-balance editable"
+                class="text-heading-2 font-medium text-balance"
                 style="line-height: 125% !important"
               >
                 {{ title }}
               </h1>
               <h2
                 v-if="titleTag === 'h2'"
-                class="text-heading-2 font-medium text-balance editable"
+                class="text-heading-2 font-medium text-balance"
                 style="line-height: 125% !important"
               >
                 {{ title }}
               </h2>
               <h3
                 v-if="titleTag === 'h3'"
-                class="text-heading-2 font-medium text-balance editable"
+                class="text-heading-2 font-medium text-balance"
                 style="line-height: 125% !important"
               >
                 {{ title }}
@@ -61,14 +61,14 @@
               </h4>
               <h5
                 v-if="titleTag === 'h5'"
-                class="text-heading-2 font-medium text-balance editable"
+                class="text-heading-2 font-medium text-balance"
                 style="line-height: 125% !important"
               >
                 {{ title }}
               </h5>
               <h6
                 v-if="titleTag === 'h6'"
-                class="text-heading-2 font-medium text-balance editable"
+                class="text-heading-2 font-medium text-balance"
                 style="line-height: 125% !important"
               >
                 {{ title }}
@@ -84,7 +84,7 @@
             </template>
             <template v-if="description">
               <p
-                class="text-color-secondary text-base leading-relaxed text-balance editable"
+                class="text-color-secondary text-base leading-relaxed text-balance"
                 :class="[{ 'text-center': isContentCentralized }]"
               >
                 {{ description }}

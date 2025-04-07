@@ -43,7 +43,7 @@
           <template v-if="title">
             <h1
               v-if="titleTag === 'h1'"
-              class="leading-loose font-medium text-heading-3 text-balance editable"
+              class="leading-loose font-medium text-heading-3 text-balance"
               style="line-height: 125% !important"
               :class="[{ 'text-heading-5': isDisplay }]"
             >
@@ -51,31 +51,31 @@
             </h1>
             <h2
               v-if="titleTag === 'h2'"
-              class="text-heading-3 leading-relaxed font-medium text-balance editable"
+              class="text-heading-3 leading-relaxed font-medium text-balance"
             >
               {{ title }}
             </h2>
             <h3
               v-if="titleTag === 'h3'"
-              class="text-heading-3 leading-relaxed font-medium text-balance editable"
+              class="text-heading-3 leading-relaxed font-medium text-balance"
             >
               {{ title }}
             </h3>
             <h4
               v-if="titleTag === 'h4'"
-              class="text-heading-3 leading-relaxed font-medium text-balance editable"
+              class="text-heading-3 leading-relaxed font-medium text-balance"
             >
               {{ title }}
             </h4>
             <h5
               v-if="titleTag === 'h5'"
-              class="text-heading-3 leading-relaxed font-medium text-balance editable"
+              class="text-heading-3 leading-relaxed font-medium text-balance"
             >
               {{ title }}
             </h5>
             <h6
               v-if="titleTag === 'h6'"
-              class="text-heading-3 leading-relaxed font-medium text-balance editable"
+              class="text-heading-3 leading-relaxed font-medium text-balance"
             >
               {{ title }}
             </h6>
@@ -85,7 +85,7 @@
           </template>
           <p
             v-if="description"
-            class="text-color-secondary text-body-3 leading-relaxed text-balance editable"
+            class="text-color-secondary text-body-3 leading-relaxed text-balance"
           >
             {{ description }}
           </p>
