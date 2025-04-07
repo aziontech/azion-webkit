@@ -1,0 +1,7 @@
+{
+  "main": "./gridhighlight.js",
+  "types": "./GridHighlight.d.ts",
+  "browser": {
+    "./sfc": "./GridHighlight.vue"
+  }
+}
