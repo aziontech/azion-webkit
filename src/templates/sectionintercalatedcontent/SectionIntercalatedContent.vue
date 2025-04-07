@@ -17,6 +17,7 @@
       <ContentSection
         textCenter
         titleTag="h3"
+        :overline="item.overline"
         :title="item.title"
         :description="item.description"
         :position="item.position || 'left'"
