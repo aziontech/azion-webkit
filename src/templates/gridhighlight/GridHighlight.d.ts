@@ -46,7 +46,11 @@ export interface GridHighlightEmits {
 /**
  * @group Component
  */
-declare class GridHighlight extends ClassComponent<GridHighlightProps, GridHighlightSlots, GridHighlightEmits> {}
+declare class GridHighlight extends ClassComponent<
+  GridHighlightProps,
+  GridHighlightSlots,
+  GridHighlightEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {
