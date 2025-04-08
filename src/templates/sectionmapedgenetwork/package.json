@@ -1,0 +1,7 @@
+{
+  "main": "./sectionmapedgenetwork.js",
+  "types": "./SectionMapEdgeNetwork.d.ts",
+  "browser": {
+    "./sfc": "./SectionMapEdgeNetwork.vue"
+  }
+}

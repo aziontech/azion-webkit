@@ -24,7 +24,7 @@
           ]"
         >
           <div
-            class="w-full flex flex-col gap-8"
+            class="w-full flex flex-col gap-8 z-0"
             :class="[{ 'items-center': isContentCentralized }]"
           >
             <template v-if="overline && overline.length">

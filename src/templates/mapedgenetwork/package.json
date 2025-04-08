@@ -1,0 +1,7 @@
+{
+  "main": "./mapedgenetwork.js",
+  "types": "./MapEdgeNetwork.d.ts",
+  "browser": {
+    "./sfc": "./MapEdgeNetwork.vue"
+  }
+}
