@@ -4,8 +4,6 @@
     :title="title"
     :description="description"
     titleTag="h2"
-    position="center"
-    isContentCentralized
   >
     <template v-slot:content>
       <GridBentoBlock :gridType="gridType">
