@@ -1,12 +1,10 @@
 <template>
   <Container>
-
     <SectionMapEdgeNetwork v-bind="MOCK">
       <template #content>
         <EdgeNetworkTabView :locations="MOCK.locations" />
       </template>
     </SectionMapEdgeNetwork>
-
   </Container>
 </template>
 

@@ -74,7 +74,10 @@
               class="overflow-clip"
             >
               <template v-slot:content>
-                <Overline v-if="cards[1].overline" :label="cards[1].overline" />
+                <Overline
+                  v-if="cards[1].overline"
+                  :label="cards[1].overline"
+                />
                 <CardTitle v-if="cards[1].title">
                   {{ cards[1].title }}
                 </CardTitle>
@@ -105,7 +108,10 @@
               class="overflow-clip"
             >
               <template v-slot:content>
-                <Overline v-if="cards[2].overline" :label="cards[2].overline" />
+                <Overline
+                  v-if="cards[2].overline"
+                  :label="cards[2].overline"
+                />
                 <CardTitle v-if="cards[2].title">
                   {{ cards[2].title }}
                 </CardTitle>
@@ -136,7 +142,10 @@
               class="overflow-clip"
             >
               <template v-slot:content>
-                <Overline v-if="cards[3].overline" :label="cards[3].overline" />
+                <Overline
+                  v-if="cards[3].overline"
+                  :label="cards[3].overline"
+                />
                 <CardTitle v-if="cards[3].title">
                   {{ cards[3].title }}
                 </CardTitle>
@@ -167,7 +176,10 @@
               class="overflow-clip"
             >
               <template v-slot:content>
-                <Overline v-if="cards[4].overline" :label="cards[4].overline" />
+                <Overline
+                  v-if="cards[4].overline"
+                  :label="cards[4].overline"
+                />
                 <CardTitle v-if="cards[4].title">
                   {{ cards[4].title }}
                 </CardTitle>

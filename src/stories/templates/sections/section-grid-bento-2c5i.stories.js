@@ -29,13 +29,15 @@ export const Default = Template.bind({})
 Default.args = {
   overline: 'capacidades adicionais',
   title: 'Potencialize sua edge application habilitando qualquer.',
-  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+  description:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
   gridType: '2-columns-5-items',
   cards: [
     {
       overline: 'add-on',
       title: 'Edge Functions',
-      description: 'Que conecta seus usuários aos Edge Nodes de nossa rede global altamente distribuída.',
+      description:
+        'Que conecta seus usuários aos Edge Nodes de nossa rede global altamente distribuída.',
       buttons: [
         {
           label: 'ver detalhes',
