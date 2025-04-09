@@ -78,6 +78,32 @@ Default.args = {
           outlined: true
         }
       ]
+    },
+    {
+      overline: 'add-on',
+      title: 'Image Processor',
+      description:
+        'Otimize, converta e modifique suas imagens just-in-time para melhorar a experiência do usuário.',
+      buttons: [
+        {
+          label: 'ver detalhes',
+          link: '/pt-br/',
+          outlined: true
+        }
+      ]
+    },
+    {
+      overline: 'add-on',
+      title: 'Edge Cache',
+      description:
+        'Ative uma camada adicional de cache que reduz o tráfego para sua origem, melhorando a performance e disponibilidade.',
+      buttons: [
+        {
+          label: 'ver detalhes',
+          link: '/pt-br/',
+          outlined: true
+        }
+      ]
     }
   ]
 }
