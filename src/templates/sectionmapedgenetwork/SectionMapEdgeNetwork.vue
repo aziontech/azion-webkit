@@ -4,9 +4,7 @@
     :titleTag="titleTag"
     :title="title"
     :description="description"
-    position="center"
     isContentCentralized
-    textCenter
   >
     <template #content>
       <MapEdgeNetwork
