@@ -12,7 +12,7 @@
       <MapEdgeNetwork
         :cities="cities"
         :tags="tags"
-        class="-mt-36"
+        class="-mt-14 sm:-mt-20 md:-mt-28"
       />
 
       <div class="flex gap-3 mt-4 mb-16">
