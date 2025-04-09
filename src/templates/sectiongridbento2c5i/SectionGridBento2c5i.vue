@@ -10,17 +10,20 @@
     <template v-slot:content>
       <GridBentoBlock :gridType="gridType">
         <template v-slot:item-1>
-          <template v-if="cards[0].title || cards[0].description">
+          <template v-if="cards[0]">
             <CardBase
               grid
               class="overflow-clip"
             >
               <template v-slot:content>
-                <Overline :label="cards[0].overline" />
-                <CardTitle>
+                <Overline
+                  v-if="cards[0].overline"
+                  :label="cards[0].overline"
+                />
+                <CardTitle v-if="cards[0].title">
                   {{ cards[0].title }}
                 </CardTitle>
-                <CardDescription>
+                <CardDescription v-if="cards[0].description">
                   {{ cards[0].description }}
                 </CardDescription>
               </template>
@@ -31,7 +34,7 @@
                   :key="index"
                 >
                   <LinkButton
-                    v-if="button.link"
+                    v-if="button.label && button.link"
                     v-bind="button"
                   />
                 </template>
@@ -65,18 +68,19 @@
             </CardBase>
           </template>
         </template>
+
         <template v-slot:item-2>
-          <template v-if="cards[1].title || cards[1].description">
+          <template v-if="cards[1]">
             <CardBase
               grid
               class="overflow-clip"
             >
               <template v-slot:content>
-                <Overline :label="cards[1].overline" />
-                <CardTitle>
+                <Overline v-if="cards[1].overline" :label="cards[1].overline" />
+                <CardTitle v-if="cards[1].title">
                   {{ cards[1].title }}
                 </CardTitle>
-                <CardDescription>
+                <CardDescription v-if="cards[1].description">
                   {{ cards[1].description }}
                 </CardDescription>
               </template>
@@ -87,7 +91,7 @@
                   :key="index"
                 >
                   <LinkButton
-                    v-if="button.link"
+                    v-if="button.label && button.link"
                     v-bind="button"
                   />
                 </template>
@@ -95,18 +99,19 @@
             </CardBase>
           </template>
         </template>
+
         <template v-slot:item-3>
-          <template v-if="cards[2].title || cards[2].description">
+          <template v-if="cards[2]">
             <CardBase
               grid
               class="overflow-clip"
             >
               <template v-slot:content>
-                <Overline :label="cards[2].overline" />
-                <CardTitle>
+                <Overline v-if="cards[2].overline" :label="cards[2].overline" />
+                <CardTitle v-if="cards[2].title">
                   {{ cards[2].title }}
                 </CardTitle>
-                <CardDescription>
+                <CardDescription v-if="cards[2].description">
                   {{ cards[2].description }}
                 </CardDescription>
               </template>
@@ -117,7 +122,7 @@
                   :key="index"
                 >
                   <LinkButton
-                    v-if="button.link"
+                    v-if="button.label && button.link"
                     v-bind="button"
                   />
                 </template>
@@ -125,18 +130,19 @@
             </CardBase>
           </template>
         </template>
+
         <template v-slot:item-4>
-          <template v-if="cards[3].title || cards[3].description">
+          <template v-if="cards[3]">
             <CardBase
               grid
               class="overflow-clip"
             >
               <template v-slot:content>
-                <Overline :label="cards[2].overline" />
-                <CardTitle>
+                <Overline v-if="cards[3].overline" :label="cards[3].overline" />
+                <CardTitle v-if="cards[3].title">
                   {{ cards[3].title }}
                 </CardTitle>
-                <CardDescription>
+                <CardDescription v-if="cards[3].description">
                   {{ cards[3].description }}
                 </CardDescription>
               </template>
@@ -147,7 +153,7 @@
                   :key="index"
                 >
                   <LinkButton
-                    v-if="button.link"
+                    v-if="button.label && button.link"
                     v-bind="button"
                   />
                 </template>
@@ -155,18 +161,19 @@
             </CardBase>
           </template>
         </template>
+
         <template v-slot:item-5>
-          <template v-if="cards[4].title || cards[4].description">
+          <template v-if="cards[4]">
             <CardBase
               grid
               class="overflow-clip"
             >
               <template v-slot:content>
-                <Overline :label="cards[4].overline" />
-                <CardTitle>
+                <Overline v-if="cards[4].overline" :label="cards[4].overline" />
+                <CardTitle v-if="cards[4].title">
                   {{ cards[4].title }}
                 </CardTitle>
-                <CardDescription>
+                <CardDescription v-if="cards[4].description">
                   {{ cards[4].description }}
                 </CardDescription>
               </template>
@@ -177,7 +184,7 @@
                   :key="index"
                 >
                   <LinkButton
-                    v-if="button.link"
+                    v-if="button.label && button.link"
                     v-bind="button"
                   />
                 </template>

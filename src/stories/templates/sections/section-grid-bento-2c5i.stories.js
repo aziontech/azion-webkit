@@ -78,32 +78,6 @@ Default.args = {
           outlined: true
         }
       ]
-    },
-    {
-      overline: 'add-on',
-      title: 'Load Balancer',
-      description:
-        'Equilibre o tráfego para suas origens, garantindo a melhor confiabilidade e controle de congestionamento de rede.',
-      buttons: [
-        {
-          label: 'ver detalhes',
-          link: '/pt-br/',
-          outlined: true
-        }
-      ]
-    },
-    {
-      overline: 'add-on',
-      title: 'Application Accelerator',
-      description:
-        'Acelere a performance de suas aplicações e APIs com otimizações de protocolo e regras avançadas de caching.',
-      buttons: [
-        {
-          label: 'ver detalhes',
-          link: '/pt-br/',
-          outlined: true
-        }
-      ]
     }
   ]
 }
