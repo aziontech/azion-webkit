@@ -2567,8 +2567,8 @@
 </template>
 
 <script setup>
-  import tippy from "tippy.js"
-  import { onMounted } from 'vue';
+  import tippy from 'tippy.js'
+  import { onMounted } from 'vue'
 
   defineProps({
     cities: {
@@ -2578,32 +2578,32 @@
   })
 
   onMounted(() => {
-    tippy(".az-map-primary", {
+    tippy('.az-map-primary', {
       theme: 'az-map',
       delay: 0,
       offset: [0, 24],
       duration: 0,
-      placement: "top",
-      arrow: `<svg width="2" height="32" viewBox="0 0 1 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: linear-gradient(180deg, rgba(243, 101, 43, 0) 0%, #F3652B 100%);"></svg>`,
+      placement: 'top',
+      arrow: `<svg width="2" height="32" viewBox="0 0 1 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: linear-gradient(180deg, rgba(243, 101, 43, 0) 0%, #F3652B 100%);"></svg>`
     })
 
-    tippy(".az-map-secondary-dark", {
-      theme: "az-map",
+    tippy('.az-map-secondary-dark', {
+      theme: 'az-map',
       delay: 0,
-      placement: "top",
+      placement: 'top',
       duration: 0,
       offset: [0, 24],
-      arrow: `<svg width="2" height="32" viewBox="0 0 1 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: linear-gradient(180deg, rgba(102, 102, 102, 0) 0%, #666666 100%);"></svg>`,
-    });
+      arrow: `<svg width="2" height="32" viewBox="0 0 1 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: linear-gradient(180deg, rgba(102, 102, 102, 0) 0%, #666666 100%);"></svg>`
+    })
 
-    tippy(".az-map-secondary-light", {
-      theme: "az-map",
+    tippy('.az-map-secondary-light', {
+      theme: 'az-map',
       delay: 0,
-      placement: "top",
+      placement: 'top',
       duration: 0,
       offset: [0, 26],
-      arrow: `<svg width="2" height="32" viewBox="0 0 1 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: linear-gradient(180deg, rgba(102, 102, 102, 0) 0%, #C9C9C9 100%);"></svg>`,
-    });
+      arrow: `<svg width="2" height="32" viewBox="0 0 1 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: linear-gradient(180deg, rgba(102, 102, 102, 0) 0%, #C9C9C9 100%);"></svg>`
+    })
   })
 </script>
 

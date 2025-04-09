@@ -1,0 +1,7 @@
+{
+  "main": "./edgenetworktabview.js",
+  "types": "./EdgeNetworkTabView.d.ts",
+  "browser": {
+    "./sfc": "./EdgeNetworkTabView.vue"
+  }
+}

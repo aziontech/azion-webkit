@@ -1,12 +1,19 @@
 <template>
   <Container>
-    <SectionMapEdgeNetwork v-bind="MOCK" />
+
+    <SectionMapEdgeNetwork v-bind="MOCK">
+      <template #content>
+        <EdgeNetworkTabView :locations="MOCK.locations" />
+      </template>
+    </SectionMapEdgeNetwork>
+
   </Container>
 </template>
 
 <script setup>
   import Container from './templates/container'
   import SectionMapEdgeNetwork from './templates/sectionmapedgenetwork'
+  import EdgeNetworkTabView from './templates/edgenetworktabview'
 
   const MOCK = {
     overline: 'NOSSA REDE',
@@ -446,9 +453,6 @@
       rioBranco: 'Rio Branco',
       vitoria: 'Vitória'
     },
-    tags: [
-      "Current Cities",
-      "Planned Cities"
-    ]
+    tags: ['Current Cities', 'Planned Cities']
   }
 </script>

@@ -16,15 +16,21 @@
       />
 
       <div class="flex gap-3 mt-4 mb-16">
-        <template v-for="(tag, index) in tags" :key="index">
+        <template
+          v-for="(tag, index) in tags"
+          :key="index"
+        >
           <Tag severity="info">
             <div class="flex align-items-center gap-2 px-1">
-              <i :class="[
-                'text-xs',
-                'pi',
-                'pi-circle-fill',
-                index === 0 ? 'text-orange-500' : 'text-gray-600'
-              ]"></i>
+              <i
+                :class="[
+                  'text-xs',
+                  'pi',
+                  'pi-circle-fill',
+                  index === 0 ? 'text-orange-500' : 'text-gray-600'
+                ]"
+              >
+              </i>
               <span class="text-color-secondary">
                 {{ tag }}
               </span>
@@ -33,7 +39,9 @@
         </template>
       </div>
 
-      <TabView
+      <slot name="content"></slot>
+
+      <!-- <TabView
         :pt="{
           root: {
             class: 'w-full max-w-4xl'
@@ -88,7 +96,7 @@
             </template>
           </div>
         </TabPanel>
-      </TabView>
+      </TabView> -->
     </template>
   </ContentSection>
 </template>
@@ -97,9 +105,9 @@
   import ContentSection from '../contentsection'
   import MapEdgeNetwork from '../mapedgenetwork'
   import Tag from 'primevue/tag'
-  import TabView from 'primevue/tabview'
-  import TabPanel from 'primevue/tabpanel'
-  import Badge from 'primevue/badge'
+  // import TabView from 'primevue/tabview'
+  // import TabPanel from 'primevue/tabpanel'
+  // import Badge from 'primevue/badge'
 
   defineProps({
     overline: {
@@ -121,15 +129,15 @@
     description: {
       type: String
     },
-    locations: {
-      type: Array
-    },
+    // locations: {
+    //   type: Array
+    // },
     cities: {
       type: Object
     },
     tags: {
       type: Array
-    },
+    }
   })
 </script>
 

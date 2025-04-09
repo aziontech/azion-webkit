@@ -1,5 +1,6 @@
 import Container from '../../../templates/container'
 import SectionMapEdgeNetwork from '../../../templates/sectionmapedgenetwork'
+import EdgeNetworkTabView from '../../../templates/edgenetworktabview'
 
 export default {
   title: 'Blocks/Sections/section-map-edge-network',
@@ -444,19 +445,20 @@ const MOCK = {
     rioBranco: 'Rio Branco',
     vitoria: 'Vitória'
   },
-  tags: [
-    "Current Cities",
-    "Planned Cities"
-  ]
+  tags: ['Current Cities', 'Planned Cities']
 }
 
 const template = `
 <Container class="surface-ground">
-  <SectionMapEdgeNetwork v-bind="args" />
+  <SectionMapEdgeNetwork v-bind="args">
+    <template #content>
+      <EdgeNetworkTabView :locations="args.locations" />
+    </template>
+  </SectionMapEdgeNetwork>
 </Container>`
 
 const Template = (args) => ({
-  components: { Container, SectionMapEdgeNetwork },
+  components: { Container, SectionMapEdgeNetwork, EdgeNetworkTabView },
   setup() {
     return { args }
   },

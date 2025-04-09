@@ -16,16 +16,16 @@ export interface SectionMapOurNetworkProps {
   title: string
   description: string
   tags: Array<string>
-  locations: Array<{
-    title: string
-    points: Array<{
-      country: string
-      cities: Array<{
-        name: string
-        number: string | number
-      }>
-    }>
-  }>
+  // locations: Array<{
+  //   title: string
+  //   points: Array<{
+  //     country: string
+  //     cities: Array<{
+  //       name: string
+  //       number: string | number
+  //     }>
+  //   }>
+  // }>
   cities: Object
 }
 
