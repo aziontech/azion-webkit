@@ -1,0 +1,7 @@
+{
+  "main": "./sectionpriceandpartner.js",
+  "types": "./SectionPriceAndPartner.d.ts",
+  "browser": {
+    "./sfc": "./SectionPriceAndPartner.vue"
+  }
+}

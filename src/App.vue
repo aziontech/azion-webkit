@@ -1,16 +1,19 @@
 <template>
   <Container>
-    <SectionMapEdgeNetwork v-bind="MOCK">
-      <template #content>
-        <EdgeNetworkTabView :locations="MOCK.locations" />
-      </template>
-    </SectionMapEdgeNetwork>
+    <SectionPriceAndPartner
+      description="Our highly distributed architecture includes edge nodes strategically located inside ISPs' (Internet Service Providers) last-mile networks and connectivity to multiple IXPs (Internet Exchange Points), private and public peerings, and Tier 1 transit providers around the world."
+      :isSticky="false"
+      lang="en"
+      overline="Edge Connectivity"
+      title="Azion’s robust connectivity strategy helps us deliver the best performance, availability, and resiliency to our customers"
+      titleTag="h2"
+    />
   </Container>
 </template>
 
 <script setup>
   import Container from './templates/container'
-  import SectionMapEdgeNetwork from './templates/sectionmapedgenetwork'
+  import SectionPriceAndPartner from './templates/sectionpriceandpartner'
   import EdgeNetworkTabView from './templates/edgenetworktabview'
 
   const MOCK = {
