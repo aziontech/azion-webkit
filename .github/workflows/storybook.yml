@@ -2,7 +2,7 @@ name: Storybook Publish
 on:
   push:
     branches:
-      - main
+      - release
 jobs:
   deploy:
     name: Storybook
@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: aziontech/azion-webkit
-          ref: main
+          ref: release
           path: '.'
           clean: true
           fetch-depth: '0'
