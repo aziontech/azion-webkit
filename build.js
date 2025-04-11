@@ -79,9 +79,10 @@ function addPackageJson() {
 
 addPackageJson();
 copyDependencies('./src/templates/', `${outDir}/`);
-fs.copySync(path.resolve(__dirname, './.releaserc'), `${outDir}/.releaserc`);
 fs.copySync(path.resolve(__dirname, './tailwind.config.js'), `${outDir}/tailwind.config.js`);
 fs.copySync(path.resolve(__dirname, './src/assets'), `${outDir}/src/assets`);
 fs.copySync(path.resolve(__dirname, './src/services'), `${outDir}/src/services`);
 fs.copySync(path.resolve(__dirname, './README.md'), `${outDir}/README.md`);
 fs.copySync(path.resolve(__dirname, './LICENSE'), `${outDir}/LICENSE`);
+fs.copySync(path.resolve(__dirname, './.releaserc'), `${outDir}/.releaserc`);
+fs.copySync(path.resolve(__dirname, './.gitignore'), `${outDir}/.gitignore`);
