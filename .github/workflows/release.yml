@@ -32,7 +32,8 @@ jobs:
       - name: Release
         shell: bash
         run: |
-          npm install fs-extra && git clone --branch release https://github.com/aziontech/azion-webkit.git && cd ./azion-webkit && npm run build:package && cd dist && npx semantic-release
+          rm -rf ./*
+          npm install fs-extra && git clone --branch release https://github.com/aziontech/azion-webkit.git && cd ./azion-webkit && npm run build:package && cd dist && npx semantic-release --debug
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
           GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
