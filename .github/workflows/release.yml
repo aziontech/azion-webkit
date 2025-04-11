@@ -25,7 +25,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
-          registry-url: 'https://registry.npmjs.org/'
       - name: Node.js Installing release dependencies
         shell: bash
         run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog conventional-changelog-conventionalcommits@8.0.0 -D
