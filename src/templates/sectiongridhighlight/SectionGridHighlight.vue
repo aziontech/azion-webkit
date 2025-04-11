@@ -14,8 +14,8 @@
 </template>
 
 <script setup>
-  import ContentSection from '../contentsection/ContentSection'
-  import GridHighlight from '../gridhighlight/GridHighlight'
+  import ContentSection from '../contentsection'
+  import GridHighlight from '../gridhighlight'
   defineProps({
     overline: {
       type: String,
