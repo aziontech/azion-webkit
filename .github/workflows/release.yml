@@ -25,6 +25,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
+          registry-url: 'https://registry.npmjs.org/'
       - name: Node.js Installing release dependencies
         shell: bash
         run: npm install -g semantic-release @semantic-release/git @semantic-release/changelog conventional-changelog-conventionalcommits@8.0.0 -D
@@ -34,6 +35,6 @@ jobs:
           rm -rf ./*
           npm install fs-extra && git clone --branch main https://github.com/aziontech/azion-webkit.git && cd ./azion-webkit && npm run build:package && cd dist && npx semantic-release
         env:
-          GH_TOKEN: ${{ secrets.GIT_PKG }}
-          GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
           NPM_TOKEN: ${{ secrets.PKG_NPM_TOKEN }}
+          # GH_TOKEN: ${{ secrets.GIT_PKG }}
+          # GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
