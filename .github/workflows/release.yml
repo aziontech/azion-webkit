@@ -6,8 +6,8 @@ on:
     types: [semantic-release] # curl -v -H "Accept: application/vnd.github.everest-preview+json" -H "Authorization: token ${GITHUB_TOKEN}" https://api.github.com/repos/[org-name-or-username]/[repository]/dispatches -d '{ "event_type": "semantic-release" }'
   push:
     branches:
-      - release
       - main
+      - release
 jobs:
   deploy:
     name: Release
@@ -36,4 +36,6 @@ jobs:
           rm -rf ./*
           npm install fs-extra && git clone --branch main https://github.com/aziontech/azion-webkit.git && cd ./azion-webkit && npm run build:package && cd dist && npx semantic-release
         env:
+          GH_TOKEN: ${{ secrets.GIT_PKG }}
+          GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
           NPM_TOKEN: ${{ secrets.PKG_NPM_TOKEN }}
