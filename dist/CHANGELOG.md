@@ -1,3 +1,10 @@
+## [1.113.1](https://github.com/aziontech/azion-webkit/compare/v1.113.0...v1.113.1) (2025-04-13)
+
+### Bug Fixes
+
+* banner-launch.stories ([069a14f](https://github.com/aziontech/azion-webkit/commit/069a14f7a10aefb3b725a19f8e8003051fdb7ae1))
+* storybook bannerlaunch ([82a1eab](https://github.com/aziontech/azion-webkit/commit/82a1eab8a516e37cbbb0e4ebdfc9a81c6ce34320))
+
 ## [1.113.0](https://github.com/aziontech/azion-webkit/compare/v1.112.4...v1.113.0) (2025-04-13)
 
 ### Features
