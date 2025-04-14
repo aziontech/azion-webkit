@@ -3,47 +3,46 @@
     <CardBase
       grid
       backgroundColor="shape"
-      class="md:max-h-[429px] overflow-hidden"
     >
       <template #content-raw>
         <div
-          class="flex flex-col surface-border border rounded-lg md:flex-row justify-between md:gap-8 items-end md:items-center pl-6 md:pl-8 lg:pl-16"
+          class="flex flex-col surface-border overflow-hidden border gap-5 md:gap-0 rounded-lg md:flex-row justify-between items-end md:items-center pl-6 md:pl-8 lg:pl-16"
         >
           <div class="flex flex-col gap-4 md:gap-8 py-6 md:py-0 w-full">
             <h1
               v-if="titleTag === 'h1'"
               v-html="title"
-              class="leading-loose text-heading-3  text-balance font-mono uppercase font-bold"
+              class="leading-loose text-heading-2 text-balance font-mono uppercase font-bold"
               style="line-height: 114% !important"
             />
             <h2
               v-if="titleTag === 'h2'"
               v-html="title"
-              class="text-heading-3 leading-relaxed text-balance font-mono uppercase font-bold"
+              class="text-heading-2 leading-relaxed text-balance font-mono uppercase font-bold"
               style="line-height: 114% !important"
             />
             <h3
               v-if="titleTag === 'h3'"
               v-html="title"
-              class="text-heading-3 leading-relaxed text-balance font-mono uppercase font-bold"
+              class="text-heading-2 leading-relaxed text-balance font-mono uppercase font-bold"
               style="line-height: 114% !important"
             />
             <h4
               v-if="titleTag === 'h4'"
               v-html="title"
-              class="text-heading-3 leading-relaxed text-balance font-mono uppercase font-bold"
+              class="text-heading-2 leading-relaxed text-balance font-mono uppercase font-bold"
               style="line-height: 114% !important"
             />
             <h5
               v-if="titleTag === 'h5'"
               v-html="title"
-              class="text-heading-3 leading-relaxed text-balance font-mono uppercase font-bold"
+              class="text-heading-2 leading-relaxed text-balance font-mono uppercase font-bold"
               style="line-height: 114% !important"
             />
             <h6
               v-if="titleTag === 'h6'"
               v-html="title"
-              class="text-heading-3 leading-relaxed text-balance font-mono uppercase font-bold"
+              class="text-heading-2 leading-relaxed text-balance font-mono uppercase font-bold"
               style="line-height: 114% !important"
             />
 
@@ -56,14 +55,12 @@
           <ImageSwitcher>
             <template #darkImage>
               <img
-                class="h-auto md:h-fit"
                 :alt="alt"
                 :src="imageDark"
               />
             </template>
             <template #lightImage>
               <img
-                class="h-auto md:h-fit"
                 :alt="alt"
                 :src="imageLight"
               />
