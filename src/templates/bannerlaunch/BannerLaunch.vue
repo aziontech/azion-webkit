@@ -54,14 +54,14 @@
           <ImageSwitcher>
             <template #darkImage>
               <img
-                class="max-h-[453px] -mt-[14px]"
+                class="max-h-[453px]"
                 :alt="alt"
                 :src="imageDark"
               />
             </template>
             <template #lightImage>
               <img
-                class="max-h-[453px] -mt-[14px]"
+                class="max-h-[453px]"
                 :alt="alt"
                 :src="imageLight"
               />
