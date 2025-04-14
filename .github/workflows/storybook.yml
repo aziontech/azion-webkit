@@ -30,6 +30,8 @@ jobs:
           node-version: 'lts/*'
       - name: Installing dependencies
         run: npm install
+      - name: Building azion-webkit
+        run: npm build
       - name: Building Storybook
         run: npm run build:storybook
       - name: PREPARING TO DEPLOY
