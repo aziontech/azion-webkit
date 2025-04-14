@@ -2,12 +2,11 @@ import HeroVideoRight from '../../../templates/herovideoright'
 import Rules from '../../rules'
 
 const MOCK = {
-  hero: {
-    overline: 'About us',
-    title: 'Our mission is to power the hyper-connected economy',
-    description:
-      'From the beginning, our goal has been to create technologies that unlock new possibilities.'
-  },
+  overline: 'About us',
+  titleTag: 'h1',
+  title: 'Our mission is to power the hyper-connected economy',
+  description:
+    'From the beginning, our goal has been to create technologies that unlock new possibilities.',
   video: {
     title: 'Azion Overview',
     src: 'https://www.youtube.com/embed/your_video_id',
@@ -103,6 +102,13 @@ ${Rules.hero.imageVideo}
 ${Rules.hero.cards}
         `
       }
+    }
+  },
+  titleTag: {
+    options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+    default: 'h1',
+    control: {
+      type: 'select'
     }
   }
 }
