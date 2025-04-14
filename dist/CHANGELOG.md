@@ -1,3 +1,9 @@
+## [1.113.8](https://github.com/aziontech/azion-webkit/compare/v1.113.7...v1.113.8) (2025-04-14)
+
+### Bug Fixes
+
+* herovideoright fix when cards[0].title is null ([5fc9aeb](https://github.com/aziontech/azion-webkit/commit/5fc9aebaaede263fff8960f845650d0d75f9ac0b))
+
 ## [1.113.7](https://github.com/aziontech/azion-webkit/compare/v1.113.6...v1.113.7) (2025-04-14)
 
 ### Bug Fixes
