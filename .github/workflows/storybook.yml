@@ -31,7 +31,7 @@ jobs:
       - name: Installing dependencies
         run: npm install
       - name: Building azion-webkit
-        run: npm build
+        run: npm build:package
       - name: Building Storybook
         run: npm run build:storybook
       - name: PREPARING TO DEPLOY
