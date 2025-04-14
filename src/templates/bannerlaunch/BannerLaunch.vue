@@ -7,9 +7,9 @@
     >
       <template #content-raw>
         <div
-          class="flex flex-col surface-border border rounded-lg md:flex-row justify-between md:gap-8 items-center md:pl-8 lg:pl-16"
+          class="flex flex-col surface-border border rounded-lg md:flex-row justify-between md:gap-8 items-end md:items-center pl-6 md:pl-8 lg:pl-16"
         >
-          <div class="flex flex-col gap-8 py-10 md:py-0">
+          <div class="flex flex-col gap-4 md:gap-8 py-6 md:py-0 w-full">
             <h1
               v-if="titleTag === 'h1'"
               v-html="title"
@@ -56,14 +56,14 @@
           <ImageSwitcher>
             <template #darkImage>
               <img
-                class="max-h-[453px]"
+                class="h-auto md:h-fit"
                 :alt="alt"
                 :src="imageDark"
               />
             </template>
             <template #lightImage>
               <img
-                class="max-h-[453px]"
+                class="h-auto md:h-fit"
                 :alt="alt"
                 :src="imageLight"
               />
