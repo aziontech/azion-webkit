@@ -1,3 +1,9 @@
+## [1.113.9](https://github.com/aziontech/azion-webkit/compare/v1.113.8...v1.113.9) (2025-04-14)
+
+### Bug Fixes
+
+* section-card-background - enable description, button ([8d5b8f6](https://github.com/aziontech/azion-webkit/commit/8d5b8f6f5c55fd793f535e42241ed665c8365c82))
+
 ## [1.113.8](https://github.com/aziontech/azion-webkit/compare/v1.113.7...v1.113.8) (2025-04-14)
 
 ### Bug Fixes
