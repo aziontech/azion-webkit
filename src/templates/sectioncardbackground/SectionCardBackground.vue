@@ -2,6 +2,7 @@
   <ContentSection
     titleTag="h2"
     position="center"
+    isContentCentralized
     :title="props.title"
     :description="props.description"
   >
