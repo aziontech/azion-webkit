@@ -1,3 +1,10 @@
+## [1.113.3](https://github.com/aziontech/azion-webkit/compare/v1.113.2...v1.113.3) (2025-04-14)
+
+### Bug Fixes
+
+* remove banner launch padding to wait the new azion image ([cc0a4e4](https://github.com/aziontech/azion-webkit/commit/cc0a4e4d5ea9e40c2f662c6dec28c67dfb259b68))
+* storybook building ([b5923fe](https://github.com/aziontech/azion-webkit/commit/b5923fe7f767af983e22382b94ef6dcd0442ef34))
+
 ## [1.113.2](https://github.com/aziontech/azion-webkit/compare/v1.113.1...v1.113.2) (2025-04-14)
 
 ### Bug Fixes
