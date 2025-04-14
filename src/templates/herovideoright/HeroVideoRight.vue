@@ -1,9 +1,9 @@
 <template>
   <HeroBlockBase
     justify="center"
-    :overline="hero.overline"
-    :title="hero.title"
-    :description="hero.description"
+    :overline="overline"
+    :title="title"
+    :description="description"
   >
     <template #main>
       <BaseModal backgroundColor="outlined">
@@ -113,6 +113,22 @@
   import Tile from '../tile'
 
   defineProps({
+    overline: {
+      type: String
+    },
+    titleTag: {
+      required: true,
+      type: String,
+      default: () => 'h1',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
+    },
+    title: {
+      rquired: true,
+      type: String
+    },
+    description: {
+      type: String
+    },
     hero: {
       type: Object,
       required: true,
@@ -133,7 +149,6 @@
     },
     cards: {
       type: Array,
-      required: true,
       validator: (value) => {
         return value.every(
           (item) =>

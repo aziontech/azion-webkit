@@ -40,24 +40,26 @@
 
   const props = defineProps({
     overline: {
+      type: String
+    },
+    titleTag: {
+      required: true,
       type: String,
-      required: false
+      default: () => 'h1',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
     },
     title: {
       type: String,
-      required: false
+      required: true
     },
     description: {
-      type: String,
-      required: false
+      type: String
     },
     list: {
-      type: Array, // title, description, icon
-      required: false
+      type: Array // title, description, icon
     },
     form: {
-      type: Object,
-      required: false // id, title
+      type: Object // id, title
     }
   })
 
