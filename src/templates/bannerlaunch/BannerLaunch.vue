@@ -6,7 +6,9 @@
       class="md:max-h-[429px] overflow-hidden"
     >
       <template #content-raw>
-        <div class="flex flex-col md:flex-row justify-between md:gap-8 items-center md:pl-10 md:pl-20 md:lg:pl-40">
+        <div
+          class="flex flex-col md:flex-row justify-between md:gap-8 items-center md:pl-10 md:pl-20 md:lg:pl-40"
+        >
           <div class="flex flex-col gap-8 py-10 md:py-0">
             <h1
               v-if="titleTag === 'h1'"
