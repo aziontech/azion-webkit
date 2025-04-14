@@ -1,3 +1,9 @@
+## [1.113.6](https://github.com/aziontech/azion-webkit/compare/v1.113.5...v1.113.6) (2025-04-14)
+
+### Bug Fixes
+
+* videovideoright removing hero object ([e1de069](https://github.com/aziontech/azion-webkit/commit/e1de06960bd989bbc83b50632766fa98bc591d46))
+
 ## [1.113.5](https://github.com/aziontech/azion-webkit/compare/v1.113.4...v1.113.5) (2025-04-14)
 
 ### Bug Fixes
