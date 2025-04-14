@@ -1,3 +1,10 @@
+## [1.113.7](https://github.com/aziontech/azion-webkit/compare/v1.113.6...v1.113.7) (2025-04-14)
+
+### Bug Fixes
+
+* delete section video right, we have the herovideoright ([1665b98](https://github.com/aziontech/azion-webkit/commit/1665b9896f3107a3beabdc4ad57262dd3be931de))
+* herovideoright ([ab5b233](https://github.com/aziontech/azion-webkit/commit/ab5b233866fea8591a2ad6f831686eddb1fc7133))
+
 ## [1.113.6](https://github.com/aziontech/azion-webkit/compare/v1.113.5...v1.113.6) (2025-04-14)
 
 ### Bug Fixes
