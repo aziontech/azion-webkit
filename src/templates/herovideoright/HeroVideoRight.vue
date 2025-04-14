@@ -2,6 +2,7 @@
   <HeroBlockBase
     justify="center"
     :overline="overline"
+    :titleTag="titleTag"
     :title="title"
     :description="description"
   >
@@ -128,13 +129,6 @@
     },
     description: {
       type: String
-    },
-    hero: {
-      type: Object,
-      required: true,
-      validator: (value) => {
-        return ['overline', 'title', 'description'].every((key) => key in value)
-      }
     },
     video: {
       type: Object,
