@@ -1,3 +1,9 @@
+## [1.113.4](https://github.com/aziontech/azion-webkit/compare/v1.113.3...v1.113.4) (2025-04-14)
+
+### Bug Fixes
+
+* storybook building ([36c2854](https://github.com/aziontech/azion-webkit/commit/36c2854d98cb5374b86d9207f0786672a1c45c75))
+
 ## [1.113.3](https://github.com/aziontech/azion-webkit/compare/v1.113.2...v1.113.3) (2025-04-14)
 
 ### Bug Fixes
