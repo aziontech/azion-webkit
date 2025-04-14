@@ -1,3 +1,9 @@
+## [1.113.10](https://github.com/aziontech/azion-webkit/compare/v1.113.9...v1.113.10) (2025-04-14)
+
+### Bug Fixes
+
+* isContentCentralized sectioncardbackground ([90764c3](https://github.com/aziontech/azion-webkit/commit/90764c3da2b91a0179159fd320faa2fca889c37f))
+
 ## [1.113.9](https://github.com/aziontech/azion-webkit/compare/v1.113.8...v1.113.9) (2025-04-14)
 
 ### Bug Fixes
