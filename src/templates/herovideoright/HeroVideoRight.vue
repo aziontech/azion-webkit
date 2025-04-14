@@ -77,7 +77,10 @@
       </BaseModal>
     </template>
 
-    <template #principal>
+    <template
+      #principal
+      v-if="cards[0] && cards[0].title && cards[0].title.lenght"
+    >
       <div class="grid m-0 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 w-full">
         <CardBaseClickable
           v-for="item in cards"
