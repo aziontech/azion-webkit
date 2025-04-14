@@ -1,3 +1,9 @@
+## [1.113.2](https://github.com/aziontech/azion-webkit/compare/v1.113.1...v1.113.2) (2025-04-14)
+
+### Bug Fixes
+
+* resize banner launch ([589a82e](https://github.com/aziontech/azion-webkit/commit/589a82eeacf1fd03c28351945edc0f12ffee311a))
+
 ## [1.113.1](https://github.com/aziontech/azion-webkit/compare/v1.113.0...v1.113.1) (2025-04-13)
 
 ### Bug Fixes
