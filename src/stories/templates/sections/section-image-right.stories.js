@@ -44,16 +44,21 @@ Default.args = {
   title:
     'Azion’s robust connectivity strategy helps us deliver the best performance, availability, and resiliency to our customers',
   wysisyg: false,
-  description:
-    `<p>
-    <strong>14h00 - 14h05</strong> - Boas vindas<.br>14h05 - 15h00 - Apresentação dos Lançamentos
+  description: `<p>
+    <strong>14h00 - 14h05</strong> - Boas vindas
     </br>
-    <strong>15h00 - 15h30</strong> - Intervalo </br >15h30 - 16h00 - Criando um agente com Azion
+    14h05 - 15h00 - Apresentação dos Lançamentos
+    </br>
+    <strong>15h00 - 15h30</strong> - Intervalo
+    </br>
+    15h30 - 16h00 - Criando um agente com Azion
     </br>
     <strong>16h00 - 16h30</strong> - Compute e melhorando uma aplicaçao com Functions
     </br>
     <strong>16h30 - 17h00</strong> - Developer Experience
     </p>`,
-  image: "https://www.azion.com/assets/pages/products/images/light/edge-network/network-ilustrationEN.png",
-  imageDark: "https://www.azion.com/assets/pages/products/images/dark/edge-network/network-ilustrationEN.png"
+  image:
+    'https://www.azion.com/assets/pages/products/images/light/edge-network/network-ilustrationEN.png',
+  imageDark:
+    'https://www.azion.com/assets/pages/products/images/dark/edge-network/network-ilustrationEN.png'
 }
