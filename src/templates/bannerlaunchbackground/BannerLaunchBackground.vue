@@ -6,7 +6,7 @@
     >
       <template #content-raw>
         <div
-          class="flex flex-col md:flex-row justify-between md:gap-8 items-center pl-6 md:pl-8 lg:pl-16 md:min-h-[336px] lg:min-h-[450px] xl:min-h-[600px]"
+          class="flex flex-col md:flex-row justify-between md:gap-8 items-center pl-6 md:pl-8 lg:pl-16 md:min-h-[336px] lg:min-h-[426px]"
           :style="backgroundStyle"
         >
           <div class="flex flex-col gap-8 py-10 md:py-0">
