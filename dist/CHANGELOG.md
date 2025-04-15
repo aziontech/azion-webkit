@@ -1,3 +1,9 @@
+## [1.114.1](https://github.com/aziontech/azion-webkit/compare/v1.114.0...v1.114.1) (2025-04-15)
+
+### Bug Fixes
+
+* tag with v-html closed to pass in the editor ([9f32b59](https://github.com/aziontech/azion-webkit/commit/9f32b59cfbe98c05a22e95354d545ec5a02839dc))
+
 ## [1.114.0](https://github.com/aziontech/azion-webkit/compare/v1.113.11...v1.114.0) (2025-04-15)
 
 ### Features
