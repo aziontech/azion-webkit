@@ -1,3 +1,9 @@
+## [1.114.0](https://github.com/aziontech/azion-webkit/compare/v1.113.11...v1.114.0) (2025-04-15)
+
+### Features
+
+* added bannerlaunchbackground ([2b09d79](https://github.com/aziontech/azion-webkit/commit/2b09d799ec3001fffa8cfa2a51dfa3196a6c378a))
+
 ## [1.113.11](https://github.com/aziontech/azion-webkit/compare/v1.113.10...v1.113.11) (2025-04-15)
 
 ### Bug Fixes
