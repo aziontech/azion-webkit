@@ -59,7 +59,7 @@
       type: Array // title, description, icon
     },
     form: {
-      type: Object // id, title, action
+      type: Object // id, title, action, successMessage
     }
   })
 
@@ -76,14 +76,14 @@
     })
   }
 
-  function appendThankYouMessage() {
+  function appendSuccessMessage() {
     const intervalId = setInterval(() => {
-      var thankYouMessageElement = document.querySelector('.submitted-message')
+      var successMessageElement = document.querySelector('.submitted-message')
 
-      if (thankYouMessageElement) {
+      if (successMessageElement) {
         var paragraph = document.createElement('p')
-        paragraph.textContent = 'Sua mensagem de agradecimento aqui'
-        thankYouMessageElement.appendChild(paragraph)
+        paragraph.textContent = props.form.successMessage
+        successMessageElement.appendChild(paragraph)
 
         clearInterval(intervalId)
       }
@@ -106,8 +106,7 @@
         },
         onFormSubmitted: function () {
           formIsSubmitted.value = true
-
-          appendThankYouMessage()
+          appendSuccessMessage()
         }
       })
     }
