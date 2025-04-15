@@ -1,3 +1,9 @@
+## [1.114.3](https://github.com/aziontech/azion-webkit/compare/v1.114.2...v1.114.3) (2025-04-15)
+
+### Bug Fixes
+
+* small adjust to responsive bannerlaunchbackgorund ([e40412c](https://github.com/aziontech/azion-webkit/commit/e40412c4f52f03bb1b8ca7317ccd1a7d888b335c))
+
 ## [1.114.2](https://github.com/aziontech/azion-webkit/compare/v1.114.1...v1.114.2) (2025-04-15)
 
 ### Bug Fixes
