@@ -11,9 +11,9 @@
   const MOCK = {
     titleTag: 'h1',
     title:
-      "Product</br><span class='animate-pretty bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-500'>LaunchWeek#01</span></br>May 05-06",
-    description: '2 days of new features</br>and ways change the game',
-    imageDark: 'https://www.azion.com/assets/images/components/bannerlaunch/a-background.png',
+      "Product</br><i class='text-orange-500 font-mono not-italic font-bold'>LaunchWeek#01</i></br>May 05-06",
+    description: '2 days of new features</br>and ways change tnpmhe game',
+    imageDark: 'https://www.azion.com/assets/images/components/bannerlaunch/a-background-wide.png',
     imageLight: 'https://www.azion.com/assets/images/components/bannerlaunch/a-background.png'
   }
 </script>
