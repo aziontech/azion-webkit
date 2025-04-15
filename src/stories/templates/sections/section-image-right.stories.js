@@ -45,9 +45,13 @@ Default.args = {
     'Azion’s robust connectivity strategy helps us deliver the best performance, availability, and resiliency to our customers',
   wysisyg: false,
   description: `<p>
-    <strong>14h00 - 14h05</strong> - Boas vindas<.br>14h05 - 15h00 - Apresentação dos Lançamentos
+    <strong>14h00 - 14h05</strong> - Boas vindas
     </br>
-    <strong>15h00 - 15h30</strong> - Intervalo </br >15h30 - 16h00 - Criando um agente com Azion
+    14h05 - 15h00 - Apresentação dos Lançamentos
+    </br>
+    <strong>15h00 - 15h30</strong> - Intervalo
+    </br>
+    15h30 - 16h00 - Criando um agente com Azion
     </br>
     <strong>16h00 - 16h30</strong> - Compute e melhorando uma aplicaçao com Functions
     </br>

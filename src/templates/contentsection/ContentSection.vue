@@ -99,6 +99,7 @@
               <div
                 v-else
                 v-html="description"
+                class="text-color-secondary text-base leading-relaxed text-balance"
               ></div>
             </template>
           </div>

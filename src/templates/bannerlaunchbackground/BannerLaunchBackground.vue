@@ -6,10 +6,10 @@
     >
       <template #content-raw>
         <div
-          class="flex flex-col md:flex-row justify-between md:gap-8 md:items-center pl-6 md:pl-8 lg:pl-16 md:min-h-[336px] lg:min-h-[426px]"
+          class="flex md:flex-row justify-between md:gap-8 items-center p-6 md:p-8 lg:p-16 min-h-[240px] md:min-h-[336px] lg:min-h-[426px]"
           :style="backgroundStyle"
         >
-          <div class="flex flex-col gap-8 py-10 md:py-0">
+          <div class="flex flex-col gap-8">
             <h1
               v-if="titleTag === 'h1'"
               v-html="title"
@@ -116,8 +116,8 @@
       backgroundImage: document.documentElement.classList.contains('azion-dark')
         ? currentBackgroundDark.value
         : currentBackgroundLight.value,
-      backgroundSize: 'cover',
-      backgroundPosition: 'right center'
+      backgroundPosition: 'center center',
+      backgroundSize: 'cover'
     }
   }
 </script>
