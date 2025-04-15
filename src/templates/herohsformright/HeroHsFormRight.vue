@@ -59,7 +59,7 @@
       type: Array // title, description, icon
     },
     form: {
-      type: Object // id, title
+      type: Object // id, title, action
     }
   })
 
@@ -76,6 +76,20 @@
     })
   }
 
+  function appendThankYouMessage() {
+    const intervalId = setInterval(() => {
+      var thankYouMessageElement = document.querySelector('.submitted-message')
+
+      if (thankYouMessageElement) {
+        var paragraph = document.createElement('p')
+        paragraph.textContent = 'Sua mensagem de agradecimento aqui'
+        thankYouMessageElement.appendChild(paragraph)
+
+        clearInterval(intervalId)
+      }
+    }, 100)
+  }
+
   const createHubSpotForm = () => {
     if (window.hbspt) {
       window.hbspt.forms.create({
@@ -83,8 +97,17 @@
         portalId: '5759082',
         formId: props.form.id,
         target: '.field-wrap',
-        onFormSubmit: function () {
+        onFormReady: function ($form) {
+          var inputElement = $form.querySelector('input[name="form_action"]')
+
+          if (inputElement && props.form?.action) {
+            inputElement.value = props.form.action
+          }
+        },
+        onFormSubmitted: function () {
           formIsSubmitted.value = true
+
+          appendThankYouMessage()
         }
       })
     }

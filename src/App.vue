@@ -1,19 +1,40 @@
 <template>
-  <Container>
-    <BannerLaunchBackground v-bind="MOCK" />
+  <Container class="surface-ground">
+    <HeroHsFormRight v-bind="MOCK" />
   </Container>
 </template>
 
 <script setup>
   import Container from './templates/container'
-  import BannerLaunchBackground from './templates/bannerlaunchbackground'
+  import HeroHsFormRight from './templates/herohsformright'
 
   const MOCK = {
-    titleTag: 'h1',
-    title:
-      "Product</br><i class='text-orange-500 font-mono not-italic font-bold'>LaunchWeek#01</i></br>May 05-06",
-    description: '2 days of new features</br>and ways change tnpmhe game',
-    imageDark: 'https://www.azion.com/assets/images/components/bannerlaunch/a-background-wide.png',
-    imageLight: 'https://www.azion.com/assets/images/components/bannerlaunch/a-background-wide.png'
+    overline: 'WEB APPLICATION FIREWALL (WAF)',
+    title: 'Web Application Firewall: a proteção avançada que especialistas de segurança confiam',
+    description:
+      'Com o WAF da Azion, você protege suas aplicações e APIs das ameaças OWASP Top 10 até os mais sofisticados ataques zero-day.',
+    list: [
+      {
+        icon: 'pi pi-shield',
+        title: 'Proteja',
+        description:
+          'Proteja suas aplicações e APIs contra SQL Injection, XSS, RFI e outras ameaças'
+      },
+      {
+        icon: 'pi pi-check',
+        title: 'Bloqueie',
+        description: 'Bloqueie ameaças no edge, antes de chegarem a sua aplicação ou infraestrutura'
+      },
+      {
+        icon: 'pi pi-dollar',
+        title: 'Economize',
+        description: 'Economize tempo com regras gerenciadas e passe mais tempo criando aplicações'
+      }
+    ],
+    form: {
+      title: 'Transforme a segurança da Azion em seu diferencial competitivo',
+      id: '29df57c8-07c8-4c5b-9b2f-7a7154744287',
+      action: 'test_action'
+    }
   }
 </script>
