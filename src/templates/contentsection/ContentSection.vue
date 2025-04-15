@@ -90,11 +90,16 @@
             </template>
             <template v-if="description">
               <p
+                v-if="!wysisyg"
                 class="text-color-secondary text-base leading-relaxed text-balance"
                 :class="[{ 'text-center': isContentCentralized }]"
               >
                 {{ description }}
               </p>
+              <div
+                v-else
+                v-html="description"
+              ></div>
             </template>
           </div>
 
@@ -132,6 +137,13 @@
       type: String,
       required: false,
       default: 'h2'
+    },
+    wysisyg: {
+      type: Boolean,
+      required: true,
+      default() {
+        return false
+      }
     },
     description: {
       type: String,

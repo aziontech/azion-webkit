@@ -2,16 +2,11 @@
   <ContentSection
     :title="props.title"
     :overline="props.overline"
+    :wysisyg="props.wysisyg"
     :description="props.description"
     :titleTag="props.titleTag"
   >
     <template #actions>
-      <!-- <LinkButton
-        v-for="{ link, label } in props.buttons"
-        :link="link"
-        :label="label"
-        outlined
-      /> -->
       <template
         v-for="(button, index) in buttons"
         :key="index"
@@ -65,6 +60,13 @@
       },
       validator(value) {
         return ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
+      }
+    },
+    wysisyg: {
+      type: Boolean,
+      required: true,
+      default() {
+        return false
       }
     },
     description: {
