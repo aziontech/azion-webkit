@@ -48,6 +48,7 @@
             ></h6>
 
             <p
+              v-if="description"
               v-html="description"
               class="text-body-3 font-mono uppercase text-color-secondary"
               style="line-height: 150% !important; letter-spacing: 5%"
@@ -87,7 +88,6 @@
     }
   })
 
-
   const currentBackgroundDark = ref('')
   const currentBackgroundLight = ref('')
   const backgroundStyle = ref({})
@@ -113,7 +113,9 @@
 
   const updateBackgroundStyle = () => {
     backgroundStyle.value = {
-      backgroundImage: document.documentElement.classList.contains('azion-dark') ? currentBackgroundDark.value : currentBackgroundLight.value,
+      backgroundImage: document.documentElement.classList.contains('azion-dark')
+        ? currentBackgroundDark.value
+        : currentBackgroundLight.value,
       backgroundSize: 'cover',
       backgroundPosition: 'right center'
     }
