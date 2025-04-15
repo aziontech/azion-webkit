@@ -1,0 +1,7 @@
+{
+  "main": "./bannerlaunchbackground.js",
+  "types": "./BannerLaunchBackground.d.ts",
+  "browser": {
+    "./sfc": "./BannerLaunchBackground.vue"
+  }
+}

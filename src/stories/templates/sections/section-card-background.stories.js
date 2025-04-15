@@ -64,7 +64,8 @@ Default.args = {
       label: 'Quality',
       title:
         'Meeting high expectations is the norm. Exceeding them is what sets us apart and drives our success.',
-      description: 'Ajudamos você a melhorar a entrega de conteúdo, criar casos de uso inovadores de IoT, virtualizar sua infraestrutura de edge com Multi-Access Edge Computing (MEC) e integrar Zero Trust, reduzindo custos em mais de 70% em relação às soluções legadas enquanto aumenta o desempenho e muito mais.',
+      description:
+        'Ajudamos você a melhorar a entrega de conteúdo, criar casos de uso inovadores de IoT, virtualizar sua infraestrutura de edge com Multi-Access Edge Computing (MEC) e integrar Zero Trust, reduzindo custos em mais de 70% em relação às soluções legadas enquanto aumenta o desempenho e muito mais.',
       image: 'https://www.azion.com/assets/pages/careers/quality.png',
       alt: 'A group of Azion employees collaborating in a bright and spacious office environment, with modern decor and vibrant energy.',
       buttons: [
@@ -79,7 +80,8 @@ Default.args = {
       label: 'Quality',
       title:
         'Meeting high expectations is the norm. Exceeding them is what sets us apart and drives our success.',
-      description: 'Ajudamos você a melhorar a entrega de conteúdo, criar casos de uso inovadores de IoT, virtualizar sua infraestrutura de edge com Multi-Access Edge Computing (MEC) e integrar Zero Trust, reduzindo custos em mais de 70% em relação às soluções legadas enquanto aumenta o desempenho e muito mais.',
+      description:
+        'Ajudamos você a melhorar a entrega de conteúdo, criar casos de uso inovadores de IoT, virtualizar sua infraestrutura de edge com Multi-Access Edge Computing (MEC) e integrar Zero Trust, reduzindo custos em mais de 70% em relação às soluções legadas enquanto aumenta o desempenho e muito mais.',
       image: 'https://www.azion.com/assets/pages/careers/quality.png',
       alt: 'A group of Azion employees collaborating in a bright and spacious office environment, with modern decor and vibrant energy.',
       buttons: [
@@ -94,7 +96,8 @@ Default.args = {
       label: 'Quality',
       title:
         'Meeting high expectations is the norm. Exceeding them is what sets us apart and drives our success.',
-      description: 'Ajudamos você a melhorar a entrega de conteúdo, criar casos de uso inovadores de IoT, virtualizar sua infraestrutura de edge com Multi-Access Edge Computing (MEC) e integrar Zero Trust, reduzindo custos em mais de 70% em relação às soluções legadas enquanto aumenta o desempenho e muito mais.',
+      description:
+        'Ajudamos você a melhorar a entrega de conteúdo, criar casos de uso inovadores de IoT, virtualizar sua infraestrutura de edge com Multi-Access Edge Computing (MEC) e integrar Zero Trust, reduzindo custos em mais de 70% em relação às soluções legadas enquanto aumenta o desempenho e muito mais.',
       image: 'https://www.azion.com/assets/pages/careers/quality.png',
       alt: 'A group of Azion employees collaborating in a bright and spacious office environment, with modern decor and vibrant energy.',
       buttons: [
@@ -109,7 +112,8 @@ Default.args = {
       label: 'Quality',
       title:
         'Meeting high expectations is the norm. Exceeding them is what sets us apart and drives our success.',
-      description: 'Ajudamos você a melhorar a entrega de conteúdo, criar casos de uso inovadores de IoT, virtualizar sua infraestrutura de edge com Multi-Access Edge Computing (MEC) e integrar Zero Trust, reduzindo custos em mais de 70% em relação às soluções legadas enquanto aumenta o desempenho e muito mais.',
+      description:
+        'Ajudamos você a melhorar a entrega de conteúdo, criar casos de uso inovadores de IoT, virtualizar sua infraestrutura de edge com Multi-Access Edge Computing (MEC) e integrar Zero Trust, reduzindo custos em mais de 70% em relação às soluções legadas enquanto aumenta o desempenho e muito mais.',
       image: 'https://www.azion.com/assets/pages/careers/quality.png',
       alt: 'A group of Azion employees collaborating in a bright and spacious office environment, with modern decor and vibrant energy.',
       buttons: [

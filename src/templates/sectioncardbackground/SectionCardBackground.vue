@@ -56,7 +56,7 @@
   import Overline from '../overline'
   import CardTitle from '../cardtitle'
   import CardBgImage from '../cardbgimage'
-  import CardDescription from '../carddescription';
+  import CardDescription from '../carddescription'
 
   const props = defineProps({
     title: {

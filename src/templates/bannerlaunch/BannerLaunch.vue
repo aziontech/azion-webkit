@@ -14,37 +14,37 @@
               v-html="title"
               class="leading-loose text-heading-2 text-balance font-mono uppercase font-bold"
               style="line-height: 114% !important"
-            />
+            ></h1>
             <h2
               v-if="titleTag === 'h2'"
               v-html="title"
               class="text-heading-2 leading-relaxed text-balance font-mono uppercase font-bold"
               style="line-height: 114% !important"
-            />
+            ></h2>
             <h3
               v-if="titleTag === 'h3'"
               v-html="title"
               class="text-heading-2 leading-relaxed text-balance font-mono uppercase font-bold"
               style="line-height: 114% !important"
-            />
+            ></h3>
             <h4
               v-if="titleTag === 'h4'"
               v-html="title"
               class="text-heading-2 leading-relaxed text-balance font-mono uppercase font-bold"
               style="line-height: 114% !important"
-            />
+            ></h4>
             <h5
               v-if="titleTag === 'h5'"
               v-html="title"
               class="text-heading-2 leading-relaxed text-balance font-mono uppercase font-bold"
               style="line-height: 114% !important"
-            />
+            ></h5>
             <h6
               v-if="titleTag === 'h6'"
               v-html="title"
               class="text-heading-2 leading-relaxed text-balance font-mono uppercase font-bold"
               style="line-height: 114% !important"
-            />
+            ></h6>
 
             <p
               v-html="description"
