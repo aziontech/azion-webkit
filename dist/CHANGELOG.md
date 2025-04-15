@@ -1,3 +1,9 @@
+## [1.114.2](https://github.com/aziontech/azion-webkit/compare/v1.114.1...v1.114.2) (2025-04-15)
+
+### Bug Fixes
+
+* conditional p in the banner launch ([8fabd53](https://github.com/aziontech/azion-webkit/commit/8fabd53ca71a7dba028133f9e61534c3cb7f87f0))
+
 ## [1.114.1](https://github.com/aziontech/azion-webkit/compare/v1.114.0...v1.114.1) (2025-04-15)
 
 ### Bug Fixes
