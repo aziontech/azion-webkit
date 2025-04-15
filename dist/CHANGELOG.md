@@ -1,3 +1,9 @@
+## [1.114.5](https://github.com/aziontech/azion-webkit/compare/v1.114.4...v1.114.5) (2025-04-15)
+
+### Bug Fixes
+
+* remove items center of BannerLaunchBackground ([489fa0f](https://github.com/aziontech/azion-webkit/commit/489fa0f6962ff9d45b8d60fb194df06100f392d0))
+
 ## [1.114.4](https://github.com/aziontech/azion-webkit/compare/v1.114.3...v1.114.4) (2025-04-15)
 
 ### Bug Fixes
