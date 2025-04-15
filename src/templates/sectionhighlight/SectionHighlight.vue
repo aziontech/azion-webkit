@@ -15,7 +15,7 @@
             </h2>
           </div>
           <LinkButton
-            v-if="button"
+            v-if="button?.label"
             v-bind="button"
             class="w-fit"
           />
@@ -50,9 +50,7 @@
 </template>
 
 <script setup>
-  import ContentSection from '../contentsection'
   import LinkButton from '../linkbutton'
-  import CardBase from '../cardbase'
   import Overline from '../overline'
   import ImageSwitcher from '../themeawareimageswitcher'
 
