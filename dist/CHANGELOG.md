@@ -1,3 +1,11 @@
+## [1.113.11](https://github.com/aziontech/azion-webkit/compare/v1.113.10...v1.113.11) (2025-04-15)
+
+### Bug Fixes
+
+* responsive adjsuments ([370ccc2](https://github.com/aziontech/azion-webkit/commit/370ccc273067a6f30bc3dc62792b31abc8ae00f6))
+* text adjustments ([1f83224](https://github.com/aziontech/azion-webkit/commit/1f832243095822fdce94fd820aaf9b7bc3ebad18))
+* update banner launch ([2f8abff](https://github.com/aziontech/azion-webkit/commit/2f8abffceace2ebde14f0dde1c115611eb1886f8))
+
 ## [1.113.10](https://github.com/aziontech/azion-webkit/compare/v1.113.9...v1.113.10) (2025-04-14)
 
 ### Bug Fixes
