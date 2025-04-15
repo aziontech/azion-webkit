@@ -81,13 +81,15 @@
       var successMessageElement = document.querySelector('.submitted-message')
 
       if (successMessageElement) {
+        successMessageElement.innerHTML = ''
+
         var paragraph = document.createElement('p')
         paragraph.textContent = props.form.successMessage
         successMessageElement.appendChild(paragraph)
 
         clearInterval(intervalId)
       }
-    }, 100)
+    }, 50)
   }
 
   const createHubSpotForm = () => {

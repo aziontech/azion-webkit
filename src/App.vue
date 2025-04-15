@@ -34,7 +34,8 @@
     form: {
       title: 'Transforme a segurança da Azion em seu diferencial competitivo',
       id: '29df57c8-07c8-4c5b-9b2f-7a7154744287',
-      action: 'test_action'
+      action: 'test_action',
+      successMessage: 'Mensagem de sucesso!'
     }
   }
 </script>
