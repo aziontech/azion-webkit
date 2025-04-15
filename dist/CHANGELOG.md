@@ -1,3 +1,9 @@
+## [1.115.1](https://github.com/aziontech/azion-webkit/compare/v1.115.0...v1.115.1) (2025-04-15)
+
+### Bug Fixes
+
+* bannerlaunchbackground and sectioncontent with default txt class ([7a2f61f](https://github.com/aziontech/azion-webkit/commit/7a2f61fb45a0666a8f4e883466d2042a015a680d))
+
 ## [1.115.0](https://github.com/aziontech/azion-webkit/compare/v1.114.5...v1.115.0) (2025-04-15)
 
 ### Features
