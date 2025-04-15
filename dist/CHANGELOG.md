@@ -1,3 +1,9 @@
+## [1.115.0](https://github.com/aziontech/azion-webkit/compare/v1.114.5...v1.115.0) (2025-04-15)
+
+### Features
+
+* adding wysisyg sectioncontent ([609ffa2](https://github.com/aziontech/azion-webkit/commit/609ffa24045490313ddf53af969ee96db2af2f66))
+
 ## [1.114.5](https://github.com/aziontech/azion-webkit/compare/v1.114.4...v1.114.5) (2025-04-15)
 
 ### Bug Fixes
