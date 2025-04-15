@@ -50,7 +50,7 @@
               v-html="description"
               class="text-body-2 font-mono uppercase text-color-secondary"
               style="line-height: 150% !important; letter-spacing: 5%"
-            />
+            ></p>
           </div>
           <ImageSwitcher>
             <template #darkImage>

@@ -51,7 +51,7 @@
               v-html="description"
               class="text-body-3 font-mono uppercase text-color-secondary"
               style="line-height: 150% !important; letter-spacing: 5%"
-            />
+            ></p>
           </div>
         </div>
       </template>
