@@ -1,3 +1,10 @@
+## [1.116.0](https://github.com/aziontech/azion-webkit/compare/v1.115.4...v1.116.0) (2025-04-16)
+
+### Features
+
+* added section basic content ([7ca65f1](https://github.com/aziontech/azion-webkit/commit/7ca65f13be76d80095b276cedd3257350f6e7f69))
+* added sectionbasiccontent ([f0c9d12](https://github.com/aziontech/azion-webkit/commit/f0c9d12883918ee3637cb828f0da499d027f985d))
+
 ## [1.115.4](https://github.com/aziontech/azion-webkit/compare/v1.115.3...v1.115.4) (2025-04-16)
 
 ### Bug Fixes
