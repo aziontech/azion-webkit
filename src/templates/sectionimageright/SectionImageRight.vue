@@ -64,7 +64,6 @@
     },
     wysisyg: {
       type: Boolean,
-      required: true,
       default() {
         return false
       }

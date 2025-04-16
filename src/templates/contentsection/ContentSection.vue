@@ -104,6 +104,14 @@
             </template>
           </div>
 
+          <div
+            v-if="$slots.actions"
+            class="flex flex-row gap-3"
+            :class="{ 'justify-center items-center': isCentralized }"
+          >
+            <slot name="actions" />
+          </div>
+
           <template v-if="$slots.content">
             <slot name="content" />
           </template>
