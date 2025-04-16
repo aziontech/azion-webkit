@@ -127,16 +127,13 @@
 
   defineProps({
     overline: {
-      type: String,
-      required: false
+      type: String
     },
     title: {
-      type: String,
-      required: false
+      type: String
     },
     titleTag: {
       type: String,
-      required: false,
       default: 'h2'
     },
     wysisyg: {
@@ -147,38 +144,32 @@
       }
     },
     description: {
-      type: String,
-      required: false
+      type: String
     },
     position: {
       type: String,
       options: ['left', 'right', 'center', 'full'],
-      required: false,
-      default: 'left'
+      default: () => 'left'
     },
     isContentCentralized: {
       type: Boolean,
-      required: false,
-      default: false
+      default: () => false
     },
     textCenter: {
       type: Boolean,
-      required: false,
-      default: false
+      default: () => false
     },
     reverse: {
       type: Boolean,
-      required: false,
-      default: false
+      default: () => false
     },
     isSticky: {
       type: Boolean,
-      required: false,
-      default: false
+      default: () => false
     },
     pt: {
       type: Object,
-      required: false
+      default: () => {}
     }
   })
 </script>

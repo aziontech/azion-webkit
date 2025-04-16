@@ -31,12 +31,7 @@ const config = (args) => {
     },
     template: `
       <Container class="surface-ground">
-        <SectionCardBackground
-          :title="args.title"
-          :description="args.description"
-          :buttons="args.buttons"
-          :cards="args.cards"
-        />
+        <SectionCardBackground v-bind="args" />
       </Container>
     `
   }
@@ -45,6 +40,8 @@ const config = (args) => {
 const Template = (args) => config(args)
 export const Default = Template.bind({})
 Default.args = {
+  overline: 'OVERLINE',
+  titleTag: "h2",
   title: "Let's build together",
   description:
     'Azion has always focused on the core values of innovation, reliability, and the ability to make transparent, forward-looking decisions, and execute them with precision and agility. We believe that our success depends on the success of our customers.',
@@ -65,7 +62,7 @@ Default.args = {
       title:
         'Meeting high expectations is the norm. Exceeding them is what sets us apart and drives our success.',
       description:
-        'Ajudamos você a melhorar a entrega de conteúdo, criar casos de uso inovadores de IoT, virtualizar sua infraestrutura de edge com Multi-Access Edge Computing (MEC) e integrar Zero Trust, reduzindo custos em mais de 70% em relação às soluções legadas enquanto aumenta o desempenho e muito mais.',
+        'Ajudamos você a melhorar a entrega de conteúdo, criar casos de uso inovadores de IoT, virtualizar sua infraestrutura de edge com Multi-Access Edge Computing (MEC) e integrar Zero Trust.',
       image: 'https://www.azion.com/assets/pages/careers/quality.png',
       alt: 'A group of Azion employees collaborating in a bright and spacious office environment, with modern decor and vibrant energy.',
       buttons: [

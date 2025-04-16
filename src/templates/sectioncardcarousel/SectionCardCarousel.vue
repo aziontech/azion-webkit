@@ -1,9 +1,10 @@
 <template>
   <ContentSection
-    :title="title"
     :overline="overline"
+    :titleTag="titleTag"
+    :title="title"
+    :description="description"
     position="center"
-    titleTag="h2"
     isContentCentralized
   >
     <template #main>
@@ -51,11 +52,22 @@
 
   defineProps({
     overline: {
-      type: String
+      type: String,
+      default: () => ''
+    },
+    titleTag: {
+      required: true,
+      type: String,
+      default: () => 'h2',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
     },
     title: {
       type: String,
       required: true
+    },
+    description: {
+      type: String,
+      default: () => ''
     },
     cards: {
       type: Array

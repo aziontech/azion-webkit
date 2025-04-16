@@ -3,6 +3,8 @@
     titleTag="h2"
     position="center"
     isContentCentralized
+    :overline="props.overline"
+    :titleTag="props.titleTag"
     :title="props.title"
     :description="props.description"
   >
@@ -59,18 +61,31 @@
   import CardDescription from '../carddescription'
 
   const props = defineProps({
+    overline: {
+      type: String,
+      default: () => ''
+    },
+    titleTag: {
+      required: true,
+      type: String,
+      default: () => 'h2',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
+    },
     title: {
       type: String,
-      required: true
+      default: () => ''
     },
     description: {
-      type: String
+      type: String,
+      default: () => ''
     },
     buttons: {
-      type: Array
+      type: Array,
+      default: () => []
     },
     cards: {
-      type: Array
+      type: Array,
+      default: () => []
     }
   })
 </script>
