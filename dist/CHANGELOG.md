@@ -1,3 +1,9 @@
+## [1.115.2](https://github.com/aziontech/azion-webkit/compare/v1.115.1...v1.115.2) (2025-04-16)
+
+### Bug Fixes
+
+* adjusts and validations ([e908804](https://github.com/aziontech/azion-webkit/commit/e9088046becf6463d9fb71b6aa6c67136e2606a3))
+
 ## [1.115.1](https://github.com/aziontech/azion-webkit/compare/v1.115.0...v1.115.1) (2025-04-15)
 
 ### Bug Fixes
