@@ -1,3 +1,9 @@
+## [1.115.4](https://github.com/aziontech/azion-webkit/compare/v1.115.3...v1.115.4) (2025-04-16)
+
+### Bug Fixes
+
+* conditional render ([92c08b2](https://github.com/aziontech/azion-webkit/commit/92c08b25b0aa8e8671570584577352c47757997b))
+
 ## [1.115.3](https://github.com/aziontech/azion-webkit/compare/v1.115.2...v1.115.3) (2025-04-16)
 
 ### Bug Fixes
