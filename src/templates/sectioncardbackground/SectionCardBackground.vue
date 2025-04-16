@@ -9,12 +9,14 @@
     :description="props.description"
   >
     <template #actions>
-      <LinkButton
-        v-for="{ link, label, outlined } in props.buttons"
-        :link="link"
-        :label="label"
-        :outlined="outlined"
-      />
+      <template v-if="props.buttons[0] && props.buttons[0].label">
+        <LinkButton
+          v-for="{ link, label, outlined } in props.buttons"
+          :link="link"
+          :label="label"
+          :outlined="outlined"
+        />
+      </template>
     </template>
 
     <template #main>
@@ -66,7 +68,6 @@
       default: () => ''
     },
     titleTag: {
-      required: true,
       type: String,
       default: () => 'h2',
       validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)

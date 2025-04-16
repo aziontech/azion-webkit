@@ -1,0 +1,7 @@
+{
+  "main": "./herovideorightcardbackground.js",
+  "types": "./HeroVideoRightCardBackground.d.ts",
+  "browser": {
+    "./sfc": "./HeroVHeroVideoRightCardBackgroundideoRight.vue"
+  }
+}

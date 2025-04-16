@@ -138,10 +138,7 @@
     },
     wysisyg: {
       type: Boolean,
-      required: true,
-      default() {
-        return false
-      }
+      default: () => false
     },
     description: {
       type: String

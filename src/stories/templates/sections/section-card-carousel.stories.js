@@ -65,7 +65,8 @@ Default.args = {
   overline: 'Choose a challenge',
   titleTag: 'h2',
   title: 'Open job roles',
-  description: 'Improve your skills while building the future of computing and delivering mission-critical services to global customers.',
+  description:
+    'Improve your skills while building the future of computing and delivering mission-critical services to global customers.',
   cards: [
     {
       title: 'Engineering',
