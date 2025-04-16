@@ -1,3 +1,9 @@
+## [1.115.3](https://github.com/aziontech/azion-webkit/compare/v1.115.2...v1.115.3) (2025-04-16)
+
+### Bug Fixes
+
+* herovideorightcardbackground added ([009ae8e](https://github.com/aziontech/azion-webkit/commit/009ae8e7a8eafa018298e6ccee81e06e7e0f7949))
+
 ## [1.115.2](https://github.com/aziontech/azion-webkit/compare/v1.115.1...v1.115.2) (2025-04-16)
 
 ### Bug Fixes
