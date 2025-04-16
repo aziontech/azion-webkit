@@ -98,6 +98,7 @@
                     {{ description }}
                   </CardDescription>
                   <LinkButton
+                    v-if="buttons[0] && buttons[0].label"
                     v-for="{ link, label, outlined } in buttons"
                     :link="link"
                     :label="label"
