@@ -155,19 +155,4 @@
       type: Array
     }
   })
-
-  // {
-  //   "label": "O que fazemos",
-  //   "title": "Com a nossa plataforma, você pode escrever e implementar aplicações serverless no edge",
-  //   "description": "Ajudamos você a melhorar a entrega de conteúdo, criar casos de uso inovadores de IoT, virtualizar sua infraestrutura de edge com Multi-Access Edge Computing (MEC) e integrar Zero Trust, reduzindo custos em mais de 70% em relação às soluções legadas enquanto aumenta o desempenho e muito mais.",
-  //   "image": "/assets/pages/about/azion-01.jpg",
-  //   "alt": "Uma equipe de profissionais da Azion, alinhados em uma sala de reuniões, discutindo estratégias de negócios e colaborando em um ambiente de trabalho moderno e dinâmico.",
-  //   "buttons": [
-  //     {
-  //       "label": "Veja nosso manifesto",
-  //       "link": "https://www.youtube.com/watch?v=IMxOiJZWNY0",
-  //       "outlined": null
-  //     }
-  //   ]
-  // }
 </script>
