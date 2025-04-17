@@ -1,3 +1,9 @@
+## [1.116.1](https://github.com/aziontech/azion-webkit/compare/v1.116.0...v1.116.1) (2025-04-17)
+
+### Bug Fixes
+
+* SimpleFooter height size ([2cae41a](https://github.com/aziontech/azion-webkit/commit/2cae41a542b6f142fd90337d3a336d75632ba2dd))
+
 ## [1.116.0](https://github.com/aziontech/azion-webkit/compare/v1.115.4...v1.116.0) (2025-04-16)
 
 ### Features
