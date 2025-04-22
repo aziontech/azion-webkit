@@ -1,3 +1,9 @@
+## [1.118.0](https://github.com/aziontech/azion-webkit/compare/v1.117.2...v1.118.0) (2025-04-22)
+
+### Features
+
+* new section numbered cards ([6b042fb](https://github.com/aziontech/azion-webkit/commit/6b042fb9380f12f8c13eca0f4a94bfd0d3d3907d))
+
 ## [1.117.2](https://github.com/aziontech/azion-webkit/compare/v1.117.1...v1.117.2) (2025-04-22)
 
 ### Bug Fixes
