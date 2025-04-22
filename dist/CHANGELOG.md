@@ -1,3 +1,9 @@
+## [1.117.0](https://github.com/aziontech/azion-webkit/compare/v1.116.1...v1.117.0) (2025-04-22)
+
+### Features
+
+* enabling descriptionRawHtml to ContentSection and HeroBase ([4792d7a](https://github.com/aziontech/azion-webkit/commit/4792d7a8baffa33a5c5ed5c5cf439e93b746aa4b))
+
 ## [1.116.1](https://github.com/aziontech/azion-webkit/compare/v1.116.0...v1.116.1) (2025-04-17)
 
 ### Bug Fixes
