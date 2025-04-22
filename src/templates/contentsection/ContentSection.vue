@@ -88,6 +88,14 @@
                 <slot name="title" />
               </div>
             </template>
+
+            <template v-if="descriptionRawHtml">
+              <div
+                v-html="descriptionRawHtml"
+                class="text-color-secondary text-base leading-relaxed text-balance"
+              ></div>
+            </template>
+
             <template v-if="description">
               <p
                 v-if="!wysisyg"
@@ -149,6 +157,9 @@
       default: () => false
     },
     description: {
+      type: String
+    },
+    descriptionRawHtml: {
       type: String
     },
     position: {

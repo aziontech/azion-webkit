@@ -1,10 +1,11 @@
 <template>
   <ContentSection
-    :title="props.title"
     :overline="props.overline"
+    :titleTag="props.titleTag"
+    :title="props.title"
     :wysisyg="props.wysisyg"
     :description="props.description"
-    :titleTag="props.titleTag"
+    :descriptionRawHtml="props.descriptionRawHtml"
   >
     <template #actions>
       <template
@@ -17,6 +18,7 @@
         />
       </template>
     </template>
+
     <template #main>
       <div class="w-full">
         <ImageSwitcher>
@@ -69,8 +71,10 @@
       }
     },
     description: {
-      type: String,
-      required: true
+      type: String
+    },
+    descriptionRawHtml: {
+      type: String
     },
     buttons: {
       type: Array

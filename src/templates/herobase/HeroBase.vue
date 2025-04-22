@@ -83,20 +83,33 @@
           <template v-else>
             <slot name="title" />
           </template>
-          <p
-            v-if="description"
+
+          <template v-if="descriptionRawHtml">
+            <div
+              v-html="descriptionRawHtml"
+              class="text-color-secondary text-base leading-relaxed text-balance"
+              :class="[{ 'text-center': isCentralized }]"
+            >
+            </div>
+          </template>
+          <template v-if="description">
+            <p
             class="text-color-secondary text-body-3 leading-relaxed text-balance"
-          >
-            {{ description }}
-          </p>
-          <div
-            v-if="$slots.actions"
-            class="flex flex-row gap-3"
-            :class="{ 'justify-center items-center': isCentralized }"
-          >
-            <slot name="actions" />
-          </div>
+            :class="[{ 'text-center': isCentralized }]"
+            >
+              {{ description }}
+            </p>
+          </template>
+          <template v-if="$slots.actions">
+            <div
+              class="flex flex-row gap-3"
+              :class="{ 'justify-center items-center': isCentralized }"
+            >
+              <slot name="actions" />
+            </div>
+          </template>
         </div>
+
         <template v-if="$slots.content">
           <slot name="content" />
         </template>
