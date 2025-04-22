@@ -1,3 +1,9 @@
+## [1.117.1](https://github.com/aziontech/azion-webkit/compare/v1.117.0...v1.117.1) (2025-04-22)
+
+### Bug Fixes
+
+* contentsection actions slot ([5eae401](https://github.com/aziontech/azion-webkit/commit/5eae4012700e4edfb8f392b56e86d1790d08678b))
+
 ## [1.117.0](https://github.com/aziontech/azion-webkit/compare/v1.116.1...v1.117.0) (2025-04-22)
 
 ### Features
