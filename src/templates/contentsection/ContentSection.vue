@@ -110,14 +110,13 @@
                 class="text-color-secondary text-base leading-relaxed text-balance"
               ></div>
             </template>
-          </div>
-
-          <div
-            v-if="$slots.actions"
-            class="flex flex-row gap-3"
-            :class="{ 'justify-center items-center': isCentralized }"
-          >
-            <slot name="actions" />
+            <div
+              v-if="$slots.actions"
+              class="flex flex-row gap-3"
+              :class="{ 'justify-center items-center': isCentralized }"
+            >
+              <slot name="actions" />
+            </div>
           </div>
 
           <template v-if="$slots.content">

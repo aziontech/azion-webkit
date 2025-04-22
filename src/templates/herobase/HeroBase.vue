@@ -89,13 +89,12 @@
               v-html="descriptionRawHtml"
               class="text-color-secondary text-base leading-relaxed text-balance"
               :class="[{ 'text-center': isCentralized }]"
-            >
-            </div>
+            ></div>
           </template>
           <template v-if="description">
             <p
-            class="text-color-secondary text-body-3 leading-relaxed text-balance"
-            :class="[{ 'text-center': isCentralized }]"
+              class="text-color-secondary text-body-3 leading-relaxed text-balance"
+              :class="[{ 'text-center': isCentralized }]"
             >
               {{ description }}
             </p>
