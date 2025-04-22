@@ -1,3 +1,9 @@
+## [1.117.2](https://github.com/aziontech/azion-webkit/compare/v1.117.1...v1.117.2) (2025-04-22)
+
+### Bug Fixes
+
+* optional missing button in section highlight ([fc9ca19](https://github.com/aziontech/azion-webkit/commit/fc9ca1954a98d509fc7e4b9be7f86c33ab336eb3))
+
 ## [1.117.1](https://github.com/aziontech/azion-webkit/compare/v1.117.0...v1.117.1) (2025-04-22)
 
 ### Bug Fixes
