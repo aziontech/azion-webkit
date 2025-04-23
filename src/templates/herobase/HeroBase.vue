@@ -19,10 +19,7 @@
       >
         <div
           class="flex flex-col gap-5 md:gap-8"
-          :class="[
-            { 'max-w-3xl 2xl:max-w-4xl text-center': isCentralized },
-            { 'max-w-3xl 2xl:max-w-4xl': !isCentralized }
-          ]"
+          :class="[{ 'text-center': isCentralized }]"
         >
           <template v-if="bannerNews?.description">
             <div
