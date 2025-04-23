@@ -33,7 +33,7 @@ const logos = Array(4).fill({
 
 const MOCK = {
   title:
-    "Simplify how you <span class='animate-pretty bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-500'>Build</span> and <span class='animate-pretty bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-300'>Secure</span> applications",
+    "Simplify how you <span class='animate-pretty bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-500'>Build</span><br class='hidden lg:block' /> and <span class='animate-pretty bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-300'>Secure</span> applications",
   description:
     'Experience a fully integrated edge computing platform, powered by the planet’s most reliable network.',
   logos: {
