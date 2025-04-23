@@ -3,7 +3,6 @@
     :overline="props.overline"
     :titleTag="props.titleTag"
     :title="props.title"
-    :wysisyg="props.wysisyg"
     :description="props.description"
     :descriptionRawHtml="props.descriptionRawHtml"
   >
@@ -49,7 +48,8 @@
 
   const props = defineProps({
     overline: {
-      type: String
+      type: String,
+      default : () => ''
     },
     title: {
       type: String,
@@ -64,17 +64,13 @@
         return ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
       }
     },
-    wysisyg: {
-      type: Boolean,
-      default() {
-        return false
-      }
-    },
     description: {
-      type: String
+      type: String,
+      default : () => '',
     },
     descriptionRawHtml: {
-      type: String
+      type: String,
+      default : () => '',
     },
     buttons: {
       type: Array
