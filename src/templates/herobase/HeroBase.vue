@@ -177,6 +177,4 @@
       default: () => false
     }
   })
-
-  console.log('HeroBase.vue - props.bannerNews: ', props.bannerNews)
 </script>
