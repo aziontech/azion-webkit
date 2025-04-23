@@ -1,3 +1,9 @@
+## [1.118.2](https://github.com/aziontech/azion-webkit/compare/v1.118.1...v1.118.2) (2025-04-23)
+
+### Bug Fixes
+
+* remove console.log ([2e8552d](https://github.com/aziontech/azion-webkit/commit/2e8552dfbff9482ec32e59ea5e33c1fcd803fa27))
+
 ## [1.118.1](https://github.com/aziontech/azion-webkit/compare/v1.118.0...v1.118.1) (2025-04-23)
 
 ### Bug Fixes
