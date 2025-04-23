@@ -1,3 +1,9 @@
+## [1.118.4](https://github.com/aziontech/azion-webkit/compare/v1.118.3...v1.118.4) (2025-04-23)
+
+### Bug Fixes
+
+* remove unused prop setionimageright ([eb2c8db](https://github.com/aziontech/azion-webkit/commit/eb2c8db29462aa8e61fab701d7899794311b5653))
+
 ## [1.118.3](https://github.com/aziontech/azion-webkit/compare/v1.118.2...v1.118.3) (2025-04-23)
 
 ### Bug Fixes
