@@ -1,3 +1,4 @@
+e
 <template>
   <section class="px-container w-full flex flex-col gap-10 md:gap-20">
     <div
@@ -89,26 +90,19 @@
               </div>
             </template>
 
-            <template v-if="descriptionRawHtml">
+            <template v-if="descriptionRawHtml && descriptionRawHtml.trim().length">
               <div
                 v-html="descriptionRawHtml"
                 class="text-color-secondary text-base leading-relaxed text-balance"
               ></div>
             </template>
-
-            <template v-if="description">
+            <template v-else-if="description && description.trim().length">
               <p
-                v-if="!wysisyg"
                 class="text-color-secondary text-base leading-relaxed text-balance"
                 :class="[{ 'text-center': isContentCentralized }]"
               >
                 {{ description }}
               </p>
-              <div
-                v-else
-                v-html="description"
-                class="text-color-secondary text-base leading-relaxed text-balance"
-              ></div>
             </template>
             <div
               v-if="$slots.actions"
@@ -142,10 +136,12 @@
 
   defineProps({
     overline: {
-      type: String
+      type: String,
+      default: () => ''
     },
     title: {
-      type: String
+      type: String,
+      default: () => ''
     },
     titleTag: {
       type: String,
@@ -156,10 +152,12 @@
       default: () => false
     },
     description: {
-      type: String
+      type: String,
+      default: () => ''
     },
     descriptionRawHtml: {
-      type: String
+      type: String,
+      default: () => ''
     },
     position: {
       type: String,

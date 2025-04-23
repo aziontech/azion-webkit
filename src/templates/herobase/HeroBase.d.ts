@@ -24,6 +24,7 @@ export interface HeroBaseProps {
    */
   titleTag?: string
   description?: string
+  descriptionRawHtml?: string
   justify?: string
   /**
    * @defaultValue: false

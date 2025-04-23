@@ -84,14 +84,14 @@
             <slot name="title" />
           </template>
 
-          <template v-if="descriptionRawHtml">
+          <template v-if="descriptionRawHtml && descriptionRawHtml.trim().length">
             <div
               v-html="descriptionRawHtml"
               class="text-color-secondary text-base leading-relaxed text-balance"
               :class="[{ 'text-center': isCentralized }]"
             ></div>
           </template>
-          <template v-if="description">
+          <template v-else-if="description && description.trim().length">
             <p
               class="text-color-secondary text-body-3 leading-relaxed text-balance"
               :class="[{ 'text-center': isCentralized }]"
@@ -137,11 +137,12 @@
       type: Object
     },
     overline: {
-      type: String
+      type: String,
+      default: () => ''
     },
     isReverse: {
       type: Boolean,
-      default: false
+      default: () => false
     },
     title: {
       type: String
@@ -151,7 +152,12 @@
       default: 'h1'
     },
     description: {
-      type: String
+      type: String,
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     justify: {
       type: String,
@@ -163,10 +169,11 @@
     },
     isCentralized: {
       type: Boolean,
-      default: false
+      default: () => false
     },
     isDisplay: {
-      type: Boolean
+      type: Boolean,
+      default: () => false
     }
   })
 </script>
