@@ -1,3 +1,9 @@
+## [1.118.3](https://github.com/aziontech/azion-webkit/compare/v1.118.2...v1.118.3) (2025-04-23)
+
+### Bug Fixes
+
+* remove herobase max-w, title use br and description balanced, testing with a larger title ([d3cecc8](https://github.com/aziontech/azion-webkit/commit/d3cecc8c3525996807537880665dc7730db99cc0))
+
 ## [1.118.2](https://github.com/aziontech/azion-webkit/compare/v1.118.1...v1.118.2) (2025-04-23)
 
 ### Bug Fixes
