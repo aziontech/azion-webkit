@@ -1,3 +1,10 @@
+## [1.118.1](https://github.com/aziontech/azion-webkit/compare/v1.118.0...v1.118.1) (2025-04-23)
+
+### Bug Fixes
+
+* descriptionRawHtml support ([bd88124](https://github.com/aziontech/azion-webkit/commit/bd88124eab8f48859b59f08050a55e3e28a0e5c9))
+* herobase with banner ([7d22819](https://github.com/aziontech/azion-webkit/commit/7d228198e30d5cdaeab88789816b35caa0a32809))
+
 ## [1.118.0](https://github.com/aziontech/azion-webkit/compare/v1.117.2...v1.118.0) (2025-04-22)
 
 ### Features
