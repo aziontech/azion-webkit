@@ -24,7 +24,7 @@
             { 'max-w-3xl 2xl:max-w-4xl': !isCentralized }
           ]"
         >
-          <template v-if="bannerNews">
+          <template v-if="bannerNews?.description">
             <div
               class="flex"
               :class="[{ 'justify-center': isCentralized }]"
@@ -36,6 +36,7 @@
               />
             </div>
           </template>
+
           <Overline
             v-if="overline && overline.length"
             :label="overline"
@@ -129,10 +130,10 @@
 </template>
 
 <script setup>
-  import Overline from '../overline/Overline.vue'
-  import Banner from '../banner/Banner.vue'
+  import Overline from '../overline'
+  import Banner from '../banner'
 
-  defineProps({
+  const props = defineProps({
     bannerNews: {
       type: Object
     },
@@ -176,4 +177,6 @@
       default: () => false
     }
   })
+
+  console.log('HeroBase.vue - props.bannerNews: ', props.bannerNews)
 </script>

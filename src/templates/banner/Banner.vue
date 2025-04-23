@@ -9,11 +9,13 @@
         {{ description }}
       </span>
       <a
+        :title="cta"
         :href="link"
         class="text-sm font-medium ml-1"
         style="color: var(--text-color-link); display: inline"
-        >{{ cta }}</a
       >
+        {{ cta }}
+      </a>
     </p>
   </div>
 </template>
@@ -23,16 +25,13 @@
 
   defineProps({
     description: {
-      type: String,
-      required: true
+      type: String
     },
     cta: {
-      type: String,
-      required: true
+      type: String
     },
     link: {
-      type: String,
-      required: true
+      type: String
     }
   })
 </script>
