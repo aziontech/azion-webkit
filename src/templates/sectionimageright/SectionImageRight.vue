@@ -49,7 +49,7 @@
   const props = defineProps({
     overline: {
       type: String,
-      default : () => ''
+      default: () => ''
     },
     title: {
       type: String,
@@ -66,11 +66,11 @@
     },
     description: {
       type: String,
-      default : () => '',
+      default: () => ''
     },
     descriptionRawHtml: {
       type: String,
-      default : () => '',
+      default: () => ''
     },
     buttons: {
       type: Array
