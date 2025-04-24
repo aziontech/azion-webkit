@@ -1,11 +1,12 @@
 <template>
   <ContentSection
+    position="center"
+    :isContentCentralized="true"
     :overline="overline"
+    :titleTag="titleTag"
     :title="title"
     :description="description"
-    titleTag="h2"
-    isContentCentralized
-    position="center"
+    :descriptionRawHtml="descriptionRawHtml"
   >
     <template v-slot:content>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
@@ -36,17 +37,30 @@
 
   const props = defineProps({
     overline: {
-      type: String
+      type: String,
+      default: () => ''
+    },
+    titleTag: {
+      type: String,
+      default: () => 'h2',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
     },
     title: {
-      type: String
+      type: String,
+      default: () => ''
     },
     description: {
-      type: String
+      type: String,
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     cards: {
       type: Array,
-      required: true
+      required: true,
+      default: () => []
     }
   })
 </script>
