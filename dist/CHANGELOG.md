@@ -1,3 +1,9 @@
+## [1.123.0](https://github.com/aziontech/azion-webkit/compare/v1.122.0...v1.123.0) (2025-04-24)
+
+### Features
+
+* enable descriptionRawHtml/titleTag and update validations to SectionBulletsRight ([c8cfe2f](https://github.com/aziontech/azion-webkit/commit/c8cfe2f5112b78c120a828a2273b6ff654e4ae12))
+
 ## [1.122.0](https://github.com/aziontech/azion-webkit/compare/v1.121.0...v1.122.0) (2025-04-24)
 
 ### Features
