@@ -5,6 +5,7 @@
     :titleTag="titleTag"
     :title="title"
     :description="description"
+    :descriptionRawHtml="descriptionRawHtml"
   >
     <template #main>
       <BaseModal backgroundColor="outlined">
@@ -127,7 +128,8 @@
 
   defineProps({
     overline: {
-      type: String
+      type: String,
+      default: () => ''
     },
     titleTag: {
       type: String,
@@ -139,7 +141,12 @@
       type: String
     },
     description: {
-      type: String
+      type: String,
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     video: {
       type: Object,
@@ -153,7 +160,8 @@
       }
     },
     cards: {
-      type: Array
+      type: Array,
+      default: () => []
     }
   })
 </script>

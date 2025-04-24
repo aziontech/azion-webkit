@@ -13,8 +13,10 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  */
 export interface HeroVideoRightCardBackgroundProps {
   overline: string
+  titleTag: string
   title: string
   description: string
+  descriptionRawHtml: string
   video: {
     title: string
     src: string

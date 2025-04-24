@@ -1,12 +1,12 @@
 <template>
   <ContentSection
     position="center"
-    isContentCentralized
+    :isContentCentralized="true"
     :overline="overline"
     :titleTag="titleTag"
     :title="title"
     :description="description"
-    :wysisyg="wysisyg"
+    :descriptionRawHtml="descriptionRawHtml"
   >
     <template #actions>
       <template
@@ -28,7 +28,8 @@
 
   defineProps({
     overline: {
-      type: String
+      type: String,
+      default: () => ''
     },
     titleTag: {
       type: String,
@@ -39,12 +40,13 @@
       type: String,
       rquired: true
     },
-    wysisyg: {
-      type: Boolean,
-      default: () => false
-    },
     description: {
-      type: String
+      type: String,
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     buttons: {
       type: Array,
