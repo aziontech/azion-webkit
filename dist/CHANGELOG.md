@@ -1,3 +1,9 @@
+## [1.119.0](https://github.com/aziontech/azion-webkit/compare/v1.118.4...v1.119.0) (2025-04-24)
+
+### Features
+
+* herohsformright descriptionRawHtml ([79781e7](https://github.com/aziontech/azion-webkit/commit/79781e75dfa00bbb32830f946a98b55d2d704d8b))
+
 ## [1.118.4](https://github.com/aziontech/azion-webkit/compare/v1.118.3...v1.118.4) (2025-04-23)
 
 ### Bug Fixes
