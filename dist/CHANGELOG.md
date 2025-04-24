@@ -1,3 +1,9 @@
+## [1.122.0](https://github.com/aziontech/azion-webkit/compare/v1.121.0...v1.122.0) (2025-04-24)
+
+### Features
+
+* enabled descriptionRawHtml SectionBaseCards ([b503889](https://github.com/aziontech/azion-webkit/commit/b503889bccb0bf7a3bd541d76a41064f70eeed50))
+
 ## [1.121.0](https://github.com/aziontech/azion-webkit/compare/v1.120.0...v1.121.0) (2025-04-24)
 
 ### Features
