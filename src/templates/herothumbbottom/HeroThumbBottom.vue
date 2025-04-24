@@ -1,9 +1,10 @@
 <template>
   <HeroBlockBase
-    isCentralized
+    :isCentralized="true"
     :overline="overline"
     :title="title"
     :description="description"
+    :descriptionRawHtml="descriptionRawHtml"
   >
     <template #actions>
       <LinkButton
@@ -12,6 +13,7 @@
         v-bind="button"
       />
     </template>
+
     <template #main>
       <ImageSwitcher>
         <template #darkImage>
@@ -45,15 +47,20 @@
   defineProps({
     overline: {
       type: String,
-      required: false
+      default: () => ''
     },
     description: {
       type: String,
-      required: false
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     buttons: {
       type: Array,
-      required: true
+      required: true,
+      default: () => []
     },
     images: {
       light: {
