@@ -1,3 +1,9 @@
+## [1.120.0](https://github.com/aziontech/azion-webkit/compare/v1.119.0...v1.120.0) (2025-04-24)
+
+### Features
+
+* HeroThumbBottom enablin descriptionRawHtml ([1523dbe](https://github.com/aziontech/azion-webkit/commit/1523dbe077df85b44d9360f3c10a621c57747495))
+
 ## [1.119.0](https://github.com/aziontech/azion-webkit/compare/v1.118.4...v1.119.0) (2025-04-24)
 
 ### Features
