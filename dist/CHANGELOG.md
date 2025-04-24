@@ -1,3 +1,9 @@
+## [1.121.0](https://github.com/aziontech/azion-webkit/compare/v1.120.0...v1.121.0) (2025-04-24)
+
+### Features
+
+* enabled descriptionRawHtml - SectionBasicContent/HeroVideoRight/HeroVideoRightCardBackground ([3e2ffef](https://github.com/aziontech/azion-webkit/commit/3e2ffef23878a51873e570c45fe5a4c4d3e42029))
+
 ## [1.120.0](https://github.com/aziontech/azion-webkit/compare/v1.119.0...v1.120.0) (2025-04-24)
 
 ### Features
