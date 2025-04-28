@@ -8,22 +8,23 @@
 import { VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
-type CardsType = Array<{
-  title: string
-  description: string
-  links: {
-    label: string
-    link: string
-  }
-}>
-
 /**
  * Defines valid properties in SectionCardNavigation component.
  */
 export interface SectionCardNavigationProps {
+  overline: string
+  titleTag: string
   title: string
-  descriptionk: string
-  cards: CardsType
+  description: string
+  descriptionRawHtml: string
+  cards: Array<{
+    title: string
+    description: string
+    links: {
+      label: string
+      link: string
+    }
+  }>
 }
 
 /**
