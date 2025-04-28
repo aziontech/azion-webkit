@@ -1,3 +1,9 @@
+## [1.125.4](https://github.com/aziontech/azion-webkit/compare/v1.125.3...v1.125.4) (2025-04-28)
+
+### Bug Fixes
+
+* support descriptionRawHtml to sectioncompliance ([98c54d7](https://github.com/aziontech/azion-webkit/commit/98c54d713978661c7a45f94c18d3b586aba57691))
+
 ## [1.125.3](https://github.com/aziontech/azion-webkit/compare/v1.125.2...v1.125.3) (2025-04-28)
 
 ### Bug Fixes
