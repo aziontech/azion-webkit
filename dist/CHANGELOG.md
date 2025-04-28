@@ -1,3 +1,9 @@
+## [1.125.5](https://github.com/aziontech/azion-webkit/compare/v1.125.4...v1.125.5) (2025-04-28)
+
+### Bug Fixes
+
+* sectiongridbento2c5i enable descriptionRawHtml ([00bc75d](https://github.com/aziontech/azion-webkit/commit/00bc75d78602c5852dfe96f21edb42a12445cf70))
+
 ## [1.125.4](https://github.com/aziontech/azion-webkit/compare/v1.125.3...v1.125.4) (2025-04-28)
 
 ### Bug Fixes
