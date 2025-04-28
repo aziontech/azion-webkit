@@ -1,3 +1,9 @@
+## [1.125.6](https://github.com/aziontech/azion-webkit/compare/v1.125.5...v1.125.6) (2025-04-28)
+
+### Bug Fixes
+
+* descriptionRawHtml to SectionHorizontalNavigation ([9485b99](https://github.com/aziontech/azion-webkit/commit/9485b99fa098c2ed550145b93bff3e4b30fba116))
+
 ## [1.125.5](https://github.com/aziontech/azion-webkit/compare/v1.125.4...v1.125.5) (2025-04-28)
 
 ### Bug Fixes
