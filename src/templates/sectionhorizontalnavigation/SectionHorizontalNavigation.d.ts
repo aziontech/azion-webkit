@@ -13,8 +13,10 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  */
 export interface SectionHorizontalNavitaionProps {
   overline: string
+  titleTag: string
   title: string
   description: string
+  descriptionRawHtml: string
   buttons: Array<{
     link: string
     label: string
