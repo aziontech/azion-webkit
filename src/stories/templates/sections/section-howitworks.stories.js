@@ -8,13 +8,14 @@ export default {
 
 const MOCK = {
   overline: 'Como funciona',
+  titleTag: 'h2',
   title: 'Como você pode usar o Azion WAF nos diversos contextos',
   sections: [
     {
       overline: 'Proteção',
-      description:
-        'Ative proteções prontas para uso ou crie regras e limites personalizados por meio de uma interface intuitiva ou APIs.',
+      titleTag: 'h3',
       title: 'A versatilidade de configuração que você estava procurando',
+      description:'Ative proteções prontas para uso ou crie regras e limites personalizados por meio de uma interface intuitiva ou APIs.',
       image: {
         light: '/assets/mocks/proteja-1.png',
         dark: '/assets/mocks/proteja-1.png',
@@ -34,6 +35,7 @@ const MOCK = {
     },
     {
       overline: 'Teste',
+      titleTag: 'h3',
       title: 'Suas regras em seu pipeline de CI/CD',
       description:
         'Teste e implemente regras de firewall, aproveitando os pipelines CI/CD existentes.',
@@ -56,6 +58,7 @@ const MOCK = {
     },
     {
       overline: 'Observe',
+      titleTag: 'h3',
       title:
         'Acompanhe dados em tempo real da Azion e de suas soluções de observabilidade favoritas',
       description:
@@ -82,12 +85,13 @@ const MOCK = {
 
 const template = `
 <div class="px-container fixed top-0 h-12 surface-ground w-full" />
-<Container class="surface-ground">
-  <SectionSticky v-bind="args" />
-</Container>`
+  <Container class="surface-ground">
+    <SectionSticky v-bind="args" />
+  </Container>
+</div>`
 
 const Template = (args) => ({
-  components: { SectionSticky, Container },
+  components: { Container, SectionSticky },
   setup() {
     return { args }
   },

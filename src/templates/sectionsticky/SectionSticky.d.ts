@@ -10,8 +10,10 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 type Sections = {
   overline: string
+  titleTag: string
   title: string
   description: string
+  descriptionRawHtml: string
   buttons: Array<{
     severity?: string
     outlined?: boolean
@@ -29,9 +31,9 @@ type Sections = {
  * Defines valid properties in SectionStickys component.
  */
 export interface SectionStickysProps {
-  sections: Array<Sections>
   title: string
   overline: string
+  sections: Sections[]
 }
 
 /**
