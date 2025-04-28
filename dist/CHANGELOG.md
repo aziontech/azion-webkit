@@ -1,3 +1,9 @@
+## [1.125.0](https://github.com/aziontech/azion-webkit/compare/v1.124.0...v1.125.0) (2025-04-28)
+
+### Features
+
+* enable descriptionRawHtml to sectionhowitworks ([c3d9ac7](https://github.com/aziontech/azion-webkit/commit/c3d9ac73b5a5b8fd1d92624a57416ce81c9f7c9e))
+
 ## [1.124.0](https://github.com/aziontech/azion-webkit/compare/v1.123.0...v1.124.0) (2025-04-28)
 
 ### Features
