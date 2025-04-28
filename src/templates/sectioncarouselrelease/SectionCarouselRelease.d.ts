@@ -49,7 +49,10 @@ interface AnalystItem {
  */
 export interface SectionCarouselReleaseProps {
   overline: string
+  titleTag: string
   title: string
+  description: string
+  descriptionRawHtml: string
   items: AnalystItem[]
 }
 

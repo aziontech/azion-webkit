@@ -4,7 +4,8 @@
     :titleTag="titleTag"
     :title="title"
     :description="description"
-    isContentCentralized
+    :descriptionRawHtml="descriptionRawHtml"
+    :isContentCentralized="true"
   >
     <template #principal>
       <div class="relative">
@@ -33,6 +34,10 @@
       required: true
     },
     description: {
+      type: String,
+      default: () => ''
+    },
+    descriptionRawHtml: {
       type: String,
       default: () => ''
     },
