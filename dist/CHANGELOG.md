@@ -1,3 +1,9 @@
+## [1.125.3](https://github.com/aziontech/azion-webkit/compare/v1.125.2...v1.125.3) (2025-04-28)
+
+### Bug Fixes
+
+* enable descriptionRawHtml sectioncardnavigation ([f6c4f4f](https://github.com/aziontech/azion-webkit/commit/f6c4f4f0dc150cd2ba47525fd069076ba58168cc))
+
 ## [1.125.2](https://github.com/aziontech/azion-webkit/compare/v1.125.1...v1.125.2) (2025-04-28)
 
 ### Bug Fixes
