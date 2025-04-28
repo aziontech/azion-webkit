@@ -1,3 +1,9 @@
+## [1.124.0](https://github.com/aziontech/azion-webkit/compare/v1.123.0...v1.124.0) (2025-04-28)
+
+### Features
+
+* SectionCarouselRelease enable descriptionRawHtml ([04ba672](https://github.com/aziontech/azion-webkit/commit/04ba672df110dfa1c08061650e1c805d58bf9a86))
+
 ## [1.123.0](https://github.com/aziontech/azion-webkit/compare/v1.122.0...v1.123.0) (2025-04-24)
 
 ### Features
