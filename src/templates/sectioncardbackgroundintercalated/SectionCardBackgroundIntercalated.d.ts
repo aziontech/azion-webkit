@@ -8,35 +8,21 @@
 import { VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
-type HeroType = {
-  title: string
-  description: string
-  image: string
-  buttons: Array<{
-    label: string
-    link: string
-  }>
-}
-
-type CardsType = {
-  cards: {
-    title: string
-    description: string
-    cards: Array<{
-      label: string
-      title: string
-      image: string
-      alt: string
-    }>
-  }
-}
-
 /**
  * Defines valid properties in SectionCardBackgroundIntercalated component.
  */
 export interface SectionCardBackgroundIntercalatedProps {
-  hero: HeroType
-  cards: CardsType
+  overline: string
+  titleTag: string
+  title: string
+  description: string
+  descriptionRawHtml: string
+  cards: Array<{
+    label: string
+    title: string
+    image: string
+    alt: string
+  }>
 }
 
 /**
