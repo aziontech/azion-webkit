@@ -1,11 +1,12 @@
 <template>
   <ContentSection
+    position="center"
     :overline="overline"
     :titleTag="titleTag"
     :title="title"
     :description="description"
-    position="center"
-    isContentCentralized
+    :descriptionRawHtml="descriptionRawHtml"
+    :isContentCentralized="true"
   >
     <template #main>
       <Carousel
@@ -69,11 +70,37 @@
       type: String,
       default: () => ''
     },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
+    },
     cards: {
       type: Array
     },
     responsiveOptions: {
-      type: Array
+      type: Array,
+      default: () => [
+        {
+          breakpoint: '1400px',
+          numVisible: '3',
+          numScroll: '1'
+        },
+        {
+          breakpoint: '1199px',
+          numVisible: '3',
+          numScroll: '1'
+        },
+        {
+          breakpoint: '767px',
+          numVisible: '2',
+          numScroll: '1'
+        },
+        {
+          breakpoint: '575px',
+          numVisible: '3',
+          numScroll: '1'
+        }
+      ]
     }
   })
 </script>

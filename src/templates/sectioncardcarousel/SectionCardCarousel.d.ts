@@ -27,10 +27,13 @@ type ResponsiveOptionsType = Array<{
  * Defines valid properties in SectionCardCarousel component.
  */
 export interface SectionCardCarouselProps {
-  responsiveOptions: ResponsiveOptionsType
-  title: string
   overline: string
+  titleTag: string
+  title: string
+  description: string
+  descriptionRawHtml: string
   cards: CardsType
+  responsiveOptions: ResponsiveOptionsType
 }
 
 /**
