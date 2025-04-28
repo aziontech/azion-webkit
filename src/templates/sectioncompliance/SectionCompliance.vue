@@ -1,9 +1,10 @@
 <template>
   <ContentSection
     :overline="overline"
+    :titleTag="titleTag"
     :title="title"
     :description="description"
-    titleTag="h2"
+    :descriptionRawHtml="descriptionRawHtml"
   >
     <template #main>
       <div class="w-full flex lg:justify-end lg:items-end">
@@ -16,6 +17,7 @@
         />
       </div>
     </template>
+
     <template #principal>
       <div class="grid md:grid-cols-3 gap-8">
         <CardBase
@@ -50,13 +52,23 @@
       type: String,
       required: false
     },
+    titleTag: {
+      required: true,
+      type: String,
+      default: () => 'h2',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
+    },
     title: {
       type: String,
       required: true
     },
     description: {
       type: String,
-      required: false
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     button: {
       type: Object,
