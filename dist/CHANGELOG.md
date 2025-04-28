@@ -1,3 +1,9 @@
+## [1.125.2](https://github.com/aziontech/azion-webkit/compare/v1.125.1...v1.125.2) (2025-04-28)
+
+### Bug Fixes
+
+* props and enable descriptionRawContent ([1122f9b](https://github.com/aziontech/azion-webkit/commit/1122f9b7c8e19613a51dd7261c767c8a134e76be))
+
 ## [1.125.1](https://github.com/aziontech/azion-webkit/compare/v1.125.0...v1.125.1) (2025-04-28)
 
 ### Bug Fixes
