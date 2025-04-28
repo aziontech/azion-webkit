@@ -1,12 +1,12 @@
 <template>
   <ContentSection
-    titleTag="h2"
     position="center"
-    isContentCentralized
+    :isContentCentralized="true"
     :overline="props.overline"
     :titleTag="props.titleTag"
     :title="props.title"
     :description="props.description"
+    :descriptionRawHtml="props.descriptionRawHtml"
   >
     <template #actions>
       <template v-if="props.buttons[0] && props.buttons[0].label">
@@ -77,6 +77,10 @@
       default: () => ''
     },
     description: {
+      type: String,
+      default: () => ''
+    },
+    descriptionRawHtml: {
       type: String,
       default: () => ''
     },

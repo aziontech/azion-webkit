@@ -8,8 +8,11 @@ import { VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 export interface SectionCardBackgroundProps {
+  overline: string
+  titleTag: string
   title: string
   description: string
+  descriptionRawHtml: string
   buttons: Array<{
     label: string
     link: string
