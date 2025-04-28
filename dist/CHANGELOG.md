@@ -1,3 +1,10 @@
+## [1.125.1](https://github.com/aziontech/azion-webkit/compare/v1.125.0...v1.125.1) (2025-04-28)
+
+### Bug Fixes
+
+* SectionCardBackground enable descriptionRawHtml ([4d8e3a0](https://github.com/aziontech/azion-webkit/commit/4d8e3a04e48b345c8b7d1835dcee25a0cf74945b))
+* SectionCardCarousel enabled descriptionRawHtml ([64f5c7d](https://github.com/aziontech/azion-webkit/commit/64f5c7d4553b47450c138af2ba184532ce7b1c3e))
+
 ## [1.125.0](https://github.com/aziontech/azion-webkit/compare/v1.124.0...v1.125.0) (2025-04-28)
 
 ### Features
