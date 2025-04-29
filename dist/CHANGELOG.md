@@ -1,3 +1,9 @@
+## [1.125.7](https://github.com/aziontech/azion-webkit/compare/v1.125.6...v1.125.7) (2025-04-29)
+
+### Bug Fixes
+
+* SectionIntercalatedContent ([6042b4b](https://github.com/aziontech/azion-webkit/commit/6042b4b2b01f23ac1a90ee10cc1ac7e48e164fee))
+
 ## [1.125.6](https://github.com/aziontech/azion-webkit/compare/v1.125.5...v1.125.6) (2025-04-28)
 
 ### Bug Fixes
