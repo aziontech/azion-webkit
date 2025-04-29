@@ -1,11 +1,12 @@
 <template>
   <ContentSection
+    position="center"
+    :isContentCentralized="true"
     :overline="overline"
+    :titleTag="titleTag"
     :title="title"
     :description="description"
-    position="center"
-    isContentCentralized
-    titleTag="h2"
+    :descriptionRawHtml="descriptionRawHtml"
   >
     <template #main>
       <GridHighlight :cards="cards" />
@@ -21,13 +22,23 @@
       type: String,
       required: false
     },
+    titleTag: {
+      required: true,
+      type: String,
+      default: () => 'h2',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
+    },
     title: {
       type: String,
       required: true
     },
     description: {
       type: String,
-      required: false
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     button: {
       type: Object,
