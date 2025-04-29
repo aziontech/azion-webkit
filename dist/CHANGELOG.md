@@ -1,3 +1,9 @@
+## [1.125.9](https://github.com/aziontech/azion-webkit/compare/v1.125.8...v1.125.9) (2025-04-29)
+
+### Bug Fixes
+
+* enable descriptionRawHtml to SectionGridHighlight ([1fafba8](https://github.com/aziontech/azion-webkit/commit/1fafba8529e897d289f226075f237f36380f3053))
+
 ## [1.125.8](https://github.com/aziontech/azion-webkit/compare/v1.125.7...v1.125.8) (2025-04-29)
 
 ### Bug Fixes
