@@ -2,11 +2,11 @@
   <div class="flex flex-col gap-20 lg:gap-40">
     <template v-if="title || overline">
       <ContentSection
-        :overline="overline"
-        :title="title"
         position="center"
-        titleTag="h2"
-        isContentCentralized
+        :isContentCentralized="true"
+        :overline="overline"
+        :titleTag="titleTag"
+        :title="title"
       />
     </template>
 
@@ -16,10 +16,10 @@
     >
       <ContentSection
         textCenter
-        titleTag="h3"
         :overline="item.overline"
+        :titleTag="item.titleTag"
         :title="item.title"
-        :description="item.description"
+        :descriptionRawHtml="item.descriptionRawHtml"
         :position="item.position || 'left'"
       >
         <template v-slot:main>
@@ -58,6 +58,15 @@
   const props = defineProps({
     overline: {
       type: String
+    },
+    titleTag: {
+      type: String,
+      default() {
+        return 'h2'
+      },
+      validator(value) {
+        return ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
+      }
     },
     title: {
       type: String
