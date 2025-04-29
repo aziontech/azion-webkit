@@ -1,3 +1,9 @@
+## [1.125.10](https://github.com/aziontech/azion-webkit/compare/v1.125.9...v1.125.10) (2025-04-29)
+
+### Bug Fixes
+
+* enable descriptionRawHtml to SectionNumberedCards ([2d49014](https://github.com/aziontech/azion-webkit/commit/2d490144fd1600a441429e2e1daaa685efcd14c6))
+
 ## [1.125.9](https://github.com/aziontech/azion-webkit/compare/v1.125.8...v1.125.9) (2025-04-29)
 
 ### Bug Fixes
