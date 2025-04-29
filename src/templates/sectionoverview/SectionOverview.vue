@@ -4,6 +4,7 @@
     :title="title"
     :overline="overline"
     :description="description"
+    :descriptionRawHtml="descriptionRawHtml"
     :isSticky="isSticky"
   >
     <template #actions>
@@ -32,12 +33,11 @@
   defineProps({
     isSticky: {
       type: Boolean,
-      default() {
-        return true
-      }
+      default: () => true
     },
     overline: {
-      type: String
+      type: String,
+      default: () => ''
     },
     titleTag: {
       type: String,
@@ -54,7 +54,11 @@
     },
     description: {
       type: String,
-      required: true
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     buttons: {
       type: Array,
@@ -67,9 +71,7 @@
     },
     data: {
       type: Array,
-      default() {
-        return []
-      }
+      default: () => []
     }
   })
 </script>
