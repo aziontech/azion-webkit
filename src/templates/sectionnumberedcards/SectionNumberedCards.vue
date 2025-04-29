@@ -1,11 +1,12 @@
 <template>
   <ContentSection
+    position="center"
+    :isContentCentralized="true"
+    :titleTag="titleTag"
     :title="title"
     :overline="overline"
     :description="description"
-    position="center"
-    titleTag="h1"
-    isContentCentralized
+    :descriptionRawHtml="descriptionRawHtml"
     textCenter
   >
     <template #main>
@@ -17,10 +18,17 @@
             grid
           >
             <template #content>
-              <Tile> {{ index + 1 }} </Tile>
-              <CardTitle> {{ card.title }} </CardTitle>
-              <CardDescription> {{ card.description }} </CardDescription>
+              <Tile>
+                {{ index + 1 }}
+              </Tile>
+              <CardTitle>
+                {{ card.title }}
+              </CardTitle>
+              <CardDescription>
+                {{ card.description }}
+              </CardDescription>
             </template>
+
             <template
               v-if="card.button"
               #actions
@@ -48,14 +56,26 @@
 
   defineProps({
     overline: {
-      type: String
+      type: String,
+      required: false
+    },
+    titleTag: {
+      required: true,
+      type: String,
+      default: () => 'h2',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
     },
     title: {
       type: String,
       required: true
     },
     description: {
-      type: String
+      type: String,
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     cards: {
       type: Array

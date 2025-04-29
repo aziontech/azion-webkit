@@ -9,7 +9,9 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 export interface SectionNumberedCardsProps {
   overline?: string
   title: string
+  titleTag: string
   description?: string
+  descriptionRawHtml?: string
   cards?: Array<{
     title: string
     description: string

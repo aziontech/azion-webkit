@@ -29,7 +29,9 @@ interface ButtonProps {
 export interface SectionGridHighlightProps {
   overline?: string
   title: string
+  titleTag: string
   description?: string
+  descriptionRawHtml?: string
   button?: ButtonProps
   cards: Card[]
 }
