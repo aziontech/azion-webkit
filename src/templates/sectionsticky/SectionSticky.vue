@@ -8,7 +8,17 @@
       />
     </div>
     <div class="flex flex-col gap-20 lg:gap-40 xl:gap-60 2xl:gap-80">
-      <template v-for="({ overline, titleTag, title, description, buttons, image }) in sections">
+      <template
+        v-for="{
+          overline,
+          titleTag,
+          title,
+          description,
+          descriptionRawHtml,
+          buttons,
+          image
+        } in sections"
+      >
         <ContentSection
           reverse
           position="right"
@@ -64,7 +74,7 @@
   import LinkButton from '../linkbutton'
   import ImageSwitcher from '../themeawareimageswitcher'
 
-  defineProps({
+  const props = defineProps({
     overline: {
       type: String,
       required: false
