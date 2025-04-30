@@ -1,3 +1,10 @@
+## [1.125.12](https://github.com/aziontech/azion-webkit/compare/v1.125.11...v1.125.12) (2025-04-30)
+
+### Bug Fixes
+
+* remove deprecated param from contentsection wysiwyg ([1ec48a2](https://github.com/aziontech/azion-webkit/commit/1ec48a29bd6348bb0a3b6181958c831e2a264ccf))
+* rollback the deleted sectionvideoright ([528b698](https://github.com/aziontech/azion-webkit/commit/528b69802a599a01a007b450a45a238e4f0bc134))
+
 ## [1.125.11](https://github.com/aziontech/azion-webkit/compare/v1.125.10...v1.125.11) (2025-04-30)
 
 ### Bug Fixes
