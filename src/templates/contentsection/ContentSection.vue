@@ -147,10 +147,6 @@ e
       type: String,
       default: 'h2'
     },
-    wysisyg: {
-      type: Boolean,
-      default: () => false
-    },
     description: {
       type: String,
       default: () => ''
