@@ -1,3 +1,9 @@
+## [1.125.11](https://github.com/aziontech/azion-webkit/compare/v1.125.10...v1.125.11) (2025-04-30)
+
+### Bug Fixes
+
+* SectionSticky.vue using descriptionRawHtml ([cb2db87](https://github.com/aziontech/azion-webkit/commit/cb2db8781bfdf98724752e26cd98261c22861516))
+
 ## [1.125.10](https://github.com/aziontech/azion-webkit/compare/v1.125.9...v1.125.10) (2025-04-29)
 
 ### Bug Fixes
