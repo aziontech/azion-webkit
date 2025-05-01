@@ -164,6 +164,10 @@ e
       type: Boolean,
       default: () => false
     },
+    isCentralized: {
+      type: Boolean,
+      default: () => false
+    },
     textCenter: {
       type: Boolean,
       default: () => false
