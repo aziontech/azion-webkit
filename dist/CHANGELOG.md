@@ -1,3 +1,11 @@
+## [1.125.13](https://github.com/aziontech/azion-webkit/compare/v1.125.12...v1.125.13) (2025-05-01)
+
+### Bug Fixes
+
+* add key and removed unused variable ([5cddcba](https://github.com/aziontech/azion-webkit/commit/5cddcbad42c54853821ec4354b8fe62f6715e5b7))
+* content section missing props ([dcf8d8f](https://github.com/aziontech/azion-webkit/commit/dcf8d8fd711a00a24c44834defd7e3b042697108))
+* index added for section sticky ([8afdfdb](https://github.com/aziontech/azion-webkit/commit/8afdfdba636c8bfc4f2de950cd89dac028808693))
+
 ## [1.125.12](https://github.com/aziontech/azion-webkit/compare/v1.125.11...v1.125.12) (2025-04-30)
 
 ### Bug Fixes
