@@ -9,15 +9,9 @@
     </div>
     <div class="flex flex-col gap-20 lg:gap-40 xl:gap-60 2xl:gap-80">
       <template
-        v-for="({
-          overline,
-          titleTag,
-          title,
-          description,
-          descriptionRawHtml,
-          buttons,
-          image
-        }, index) in sections"
+        v-for="(
+          { overline, titleTag, title, description, descriptionRawHtml, buttons, image }, index
+        ) in sections"
         :key="index"
       >
         <ContentSection
