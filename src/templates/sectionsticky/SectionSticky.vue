@@ -18,6 +18,7 @@
           buttons,
           image
         } in sections"
+        :key="title"
       >
         <ContentSection
           reverse
@@ -74,7 +75,7 @@
   import LinkButton from '../linkbutton'
   import ImageSwitcher from '../themeawareimageswitcher'
 
-  const props = defineProps({
+  defineProps({
     overline: {
       type: String,
       required: false
