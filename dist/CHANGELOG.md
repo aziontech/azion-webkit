@@ -1,3 +1,9 @@
+## [1.125.14](https://github.com/aziontech/azion-webkit/compare/v1.125.13...v1.125.14) (2025-05-01)
+
+### Bug Fixes
+
+* ContentSection remove missing e char and adjust isContentCentralized param ([cb09283](https://github.com/aziontech/azion-webkit/commit/cb09283e39b74f01411f2a3d04b44e474b0a5c42))
+
 ## [1.125.13](https://github.com/aziontech/azion-webkit/compare/v1.125.12...v1.125.13) (2025-05-01)
 
 ### Bug Fixes
