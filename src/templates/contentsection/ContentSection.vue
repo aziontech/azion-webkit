@@ -1,4 +1,3 @@
-e
 <template>
   <section class="px-container w-full flex flex-col gap-10 md:gap-20">
     <div
@@ -107,7 +106,7 @@ e
             <div
               v-if="$slots.actions"
               class="flex flex-row gap-3"
-              :class="{ 'justify-center items-center': isCentralized }"
+              :class="{ 'justify-center items-center': isContentCentralized }"
             >
               <slot name="actions" />
             </div>
@@ -161,10 +160,6 @@ e
       default: () => 'left'
     },
     isContentCentralized: {
-      type: Boolean,
-      default: () => false
-    },
-    isCentralized: {
       type: Boolean,
       default: () => false
     },
