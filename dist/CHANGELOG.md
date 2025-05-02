@@ -1,3 +1,9 @@
+## [1.125.15](https://github.com/aziontech/azion-webkit/compare/v1.125.14...v1.125.15) (2025-05-02)
+
+### Bug Fixes
+
+* adding .prose class to descriptionRawHtml ([4b37e4a](https://github.com/aziontech/azion-webkit/commit/4b37e4a07c728dfc42bedcb8b8bbbd0c5ea300eb))
+
 ## [1.125.14](https://github.com/aziontech/azion-webkit/compare/v1.125.13...v1.125.14) (2025-05-01)
 
 ### Bug Fixes
