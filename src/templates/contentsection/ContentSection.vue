@@ -92,7 +92,7 @@
             <template v-if="descriptionRawHtml && descriptionRawHtml.trim().length">
               <div
                 v-html="descriptionRawHtml"
-                class="text-color-secondary text-base leading-relaxed text-balance"
+                class="prose text-color-secondary text-base leading-relaxed text-balance"
               ></div>
             </template>
             <template v-else-if="description && description.trim().length">

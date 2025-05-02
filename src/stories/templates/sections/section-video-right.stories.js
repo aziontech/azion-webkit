@@ -5,7 +5,8 @@ const MOCK = {
   overline: 'ABOUT US',
   titleTag: 'h2',
   title: 'Our mission is to power the hyper-connected economy',
-  description: 'From the beginning, our goal has been to create technologies that unlock new possibilities.',
+  description:
+    'From the beginning, our goal has been to create technologies that unlock new possibilities.',
   video: {
     title: 'Azion Overview',
     src: 'https://www.youtube.com/embed/your_video_id',
