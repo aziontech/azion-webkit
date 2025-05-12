@@ -1,3 +1,9 @@
+## [1.125.16](https://github.com/aziontech/azion-webkit/compare/v1.125.15...v1.125.16) (2025-05-12)
+
+### Bug Fixes
+
+* text-center to descriptionRawHtml if isContentCentralized ([7652a09](https://github.com/aziontech/azion-webkit/commit/7652a095dfa2fb354b3747131d80edaaf182f44e))
+
 ## [1.125.15](https://github.com/aziontech/azion-webkit/compare/v1.125.14...v1.125.15) (2025-05-02)
 
 ### Bug Fixes
