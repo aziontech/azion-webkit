@@ -85,7 +85,7 @@ const MOCK = {
 }
 
 const template = `
-<div class="px-container fixed top-0 h-12 surface-ground w-full" />
+<div class="px-container fixed top-0 h-12 surface-ground w-full">
   <Container class="surface-ground">
     <SectionSticky v-bind="args" />
   </Container>
