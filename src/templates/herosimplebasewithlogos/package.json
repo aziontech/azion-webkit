@@ -1,0 +1,7 @@
+{
+  "main": "./herosimplebasewithlogos.js",
+  "types": "./HeroSimpleBaseWithLogos.d.ts",
+  "browser": {
+    "./sfc": "./HeroSimpleBaseWithLogos.vue"
+  }
+}
