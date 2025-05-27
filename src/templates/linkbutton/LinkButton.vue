@@ -14,7 +14,7 @@
       { 'flex flex-row-reverse': iconPos === 'left' },
       { 'p-button-icon-only': iconPos === 'center' },
       { 'md:justify-start': iconPos !== 'center' },
-      { 'p-button-link pl-0 pr-0 hover:underline': textLink }
+      { 'p-button-link pl-0 pr-0': textLink }
     ]"
   >
     <template v-if="label">
