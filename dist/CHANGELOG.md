@@ -1,3 +1,10 @@
+## [1.125.18](https://github.com/aziontech/azion-webkit/compare/v1.125.17...v1.125.18) (2025-05-27)
+
+### Bug Fixes
+
+* hover linkbutton linktext ([c5f884e](https://github.com/aziontech/azion-webkit/commit/c5f884ee17afeada69917aa716e76399eef28962))
+* hover linkbutton linktext ([d4cde4a](https://github.com/aziontech/azion-webkit/commit/d4cde4a64665400b5b5cd40fabf4ab05e4269559))
+
 ## [1.125.17](https://github.com/aziontech/azion-webkit/compare/v1.125.16...v1.125.17) (2025-05-27)
 
 ### Bug Fixes
