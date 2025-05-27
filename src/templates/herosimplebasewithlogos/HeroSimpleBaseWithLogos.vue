@@ -8,8 +8,8 @@
   >
     <template #content>
       <ContentLogoBlock
-        :title="logos.title"
-        :logos="logos.images"
+        :title="logosTitle"
+        :logos="logos"
       />
     </template>
   </HeroBlockBase>
@@ -41,9 +41,13 @@
       type: String,
       default: () => ''
     },
+    logosTitle: {
+      type: String,
+      default: () => ''
+    },
     logos: {
-      type: Object,
-      default: () => {}
+      type: Array,
+      default: () => []
     }
   })
 </script>
