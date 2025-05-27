@@ -1,3 +1,10 @@
+## [1.125.17](https://github.com/aziontech/azion-webkit/compare/v1.125.16...v1.125.17) (2025-05-27)
+
+### Bug Fixes
+
+* replace cases resourcehub to home of success cases ([adbd646](https://github.com/aziontech/azion-webkit/commit/adbd646b48da266b8daf94ce79efbf49277e301b))
+* SectionHorizontalNavigation ([4872f0c](https://github.com/aziontech/azion-webkit/commit/4872f0c0201d121de5b6c78ac999d37c618decfa))
+
 ## [1.125.16](https://github.com/aziontech/azion-webkit/compare/v1.125.15...v1.125.16) (2025-05-12)
 
 ### Bug Fixes
