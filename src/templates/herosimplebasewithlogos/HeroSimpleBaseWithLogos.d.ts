@@ -14,11 +14,10 @@ export interface HeroSimpleBaseWithLogosProps {
   title?: string
   description?: string
   descriptionRawHtml?: string
+  logosTitle: string
   logos: Array<{
-    title: string
-    images: Array<{
-      imageSrc: string
-    }>
+    imageSrc: string
+    alt: string
   }>
 }
 
