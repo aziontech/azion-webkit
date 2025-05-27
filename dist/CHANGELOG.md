@@ -1,3 +1,10 @@
+## [1.126.1](https://github.com/aziontech/azion-webkit/compare/v1.126.0...v1.126.1) (2025-05-27)
+
+### Bug Fixes
+
+* params of hero-simple-base-with-logos ([2b277e8](https://github.com/aziontech/azion-webkit/commit/2b277e8bfed3f0470ccf850ce7663ff874eebdc5))
+* params of hero-simple-base-with-logos d.ts ([f23ff78](https://github.com/aziontech/azion-webkit/commit/f23ff78ea85d3b6f7e76f3e10f4f7e6ab92c48a9))
+
 ## [1.126.0](https://github.com/aziontech/azion-webkit/compare/v1.125.19...v1.126.0) (2025-05-27)
 
 ### Features
