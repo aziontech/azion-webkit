@@ -1,3 +1,9 @@
+## [1.125.19](https://github.com/aziontech/azion-webkit/compare/v1.125.18...v1.125.19) (2025-05-27)
+
+### Bug Fixes
+
+* LinkButton ([c9398f9](https://github.com/aziontech/azion-webkit/commit/c9398f97f1979f441c8af2c9fc4925c141b08181))
+
 ## [1.125.18](https://github.com/aziontech/azion-webkit/compare/v1.125.17...v1.125.18) (2025-05-27)
 
 ### Bug Fixes
