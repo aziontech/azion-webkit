@@ -14,11 +14,11 @@
       { 'flex flex-row-reverse': iconPos === 'left' },
       { 'p-button-icon-only': iconPos === 'center' },
       { 'md:justify-start': iconPos !== 'center' },
-      { 'p-button-link pl-0 pr-0': textLink }
+      { 'p-button-link pl-0 pr-0 hover:underline': textLink }
     ]"
   >
     <template v-if="label">
-      <span :class="textLink ? 'group-hover:underline' : ''">
+      <span :class="textLink ? 'hover:underline' : ''">
         {{ capitalizeLetter(String(label).trim()) }}
       </span>
     </template>
