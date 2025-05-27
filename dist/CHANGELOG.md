@@ -1,3 +1,9 @@
+## [1.126.0](https://github.com/aziontech/azion-webkit/compare/v1.125.19...v1.126.0) (2025-05-27)
+
+### Features
+
+* herosimplebasewithlogos ([5933974](https://github.com/aziontech/azion-webkit/commit/5933974a684c2d587ac31caa0e2de88393e271d6))
+
 ## [1.125.19](https://github.com/aziontech/azion-webkit/compare/v1.125.18...v1.125.19) (2025-05-27)
 
 ### Bug Fixes
