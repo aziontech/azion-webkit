@@ -1,3 +1,9 @@
+## [1.126.4](https://github.com/aziontech/azion-webkit/compare/v1.126.3...v1.126.4) (2025-05-29)
+
+### Bug Fixes
+
+* herohome params order ([36a9012](https://github.com/aziontech/azion-webkit/commit/36a9012f5561c863cde5250d8a545b183ec0ebfc))
+
 ## [1.126.3](https://github.com/aziontech/azion-webkit/compare/v1.126.2...v1.126.3) (2025-05-29)
 
 ### Bug Fixes
