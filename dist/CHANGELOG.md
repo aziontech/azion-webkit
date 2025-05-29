@@ -1,3 +1,9 @@
+## [1.126.3](https://github.com/aziontech/azion-webkit/compare/v1.126.2...v1.126.3) (2025-05-29)
+
+### Bug Fixes
+
+* HeroHome overline, titletag and descriptionRawHtml ([80bbcdd](https://github.com/aziontech/azion-webkit/commit/80bbcdd18b503b49b4826d588ea24ab9ba9b534c))
+
 ## [1.126.2](https://github.com/aziontech/azion-webkit/compare/v1.126.1...v1.126.2) (2025-05-29)
 
 ### Bug Fixes
