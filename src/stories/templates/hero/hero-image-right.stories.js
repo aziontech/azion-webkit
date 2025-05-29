@@ -28,6 +28,7 @@ const MOCK = {
     title:
       'Enhance the performance, security, and scalability of your websites and web applications'
   },
+  description: 'Tornamos as aplicações mais rápidas e confiáveis. Faça o deploy de seus projetos instantaneamente na rede global mais confiável, proteja suas aplicações com segurança avançada.',
   buttons: [
     {
       label: 'Start Now',

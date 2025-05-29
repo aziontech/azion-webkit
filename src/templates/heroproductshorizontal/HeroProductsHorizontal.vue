@@ -2,16 +2,19 @@
   <HeroBlockBase
     :overline="overline"
     :description="description"
+    :descriptionRawHtml="descriptionRawHtml"
     :justify="justify"
   >
     <template #title>
       <Titlegroup v-bind="hgroup" />
     </template>
     <template #actions>
-      <LinkButton
-        v-for="button in buttons"
-        v-bind="button"
-      />
+      <template v-for="button in buttons">
+        <LinkButton
+          v-if="button.label"
+          v-bind="button"
+        />
+      </template>
     </template>
     <template #main>
       <ImageSwitcher>
@@ -59,15 +62,19 @@
     },
     overline: {
       type: String,
-      required: false
+      default: () => ''
     },
     description: {
       type: String,
-      required: false
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     buttons: {
       type: Array,
-      required: true
+      default: () => []
     },
     hgroup: {
       title: {
