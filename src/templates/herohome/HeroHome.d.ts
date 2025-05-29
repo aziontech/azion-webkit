@@ -8,10 +8,6 @@
 import { VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
-/**
- * Defines valid properties in HeroHome component.
- */
-
 interface Button {
   label: string
   href: string
@@ -34,30 +30,21 @@ interface BannerNews {
 }
 
 export interface HeroHomeProps {
+  overline: string
+  titleTag: string
   title: string
   description: string
+  descriptionRawHtml: string
   bannerNews?: BannerNews
   buttons?: Button[]
   logos: Logo
 }
 
-/**
- * Defines valid slots in HeroHome component.
- */
 export interface HeroHomeSlots {
-  /**
-   * Content can easily be customized with the default slot instead of using the built-in modes.
-   */
   default(): VNode[]
 }
 
-/**
- * Defines valid emits in HeroHome component.
- */
 export interface HeroHomeEmits {
-  /**
-   * Triggered when an error occurs
-   */
   error(event: Event): void
 }
 

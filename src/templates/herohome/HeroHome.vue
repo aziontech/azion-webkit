@@ -38,23 +38,38 @@
   defineProps({
     bannerNews: {
       type: Object,
-      required: false
+      default: () => {}
+    },
+    overline: {
+      type: String,
+      default: () => ''
+    },
+    titleTag: {
+      required: true,
+      type: String,
+      default: () => 'h1',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
     },
     title: {
       type: String,
-      required: false
+      default: () => ''
     },
     description: {
       type: String,
-      required: false
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     logos: {
       type: Object,
-      required: true
+      required: true,
+      default: () => {}
     },
     buttons: {
       type: Array,
-      required: false
+      default: () => []
     }
   })
 </script>
