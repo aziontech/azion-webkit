@@ -85,8 +85,8 @@
           <template v-if="descriptionRawHtml && descriptionRawHtml.trim().length">
             <div
               v-html="descriptionRawHtml"
-              class="prose text-color-secondary text-base leading-relaxed text-balance"
               :class="[{ 'text-center': isCentralized }]"
+              class="text-color-secondary text-base leading-relaxed text-balance prose max-w-none"
             ></div>
           </template>
           <template v-else-if="description && description.trim().length">
@@ -97,6 +97,7 @@
               {{ description }}
             </p>
           </template>
+
           <template v-if="$slots.actions">
             <div
               class="flex flex-row gap-3"
@@ -142,12 +143,12 @@
       type: Boolean,
       default: () => false
     },
-    title: {
-      type: String
-    },
     titleTag: {
       type: String,
       default: 'h1'
+    },
+    title: {
+      type: String
     },
     description: {
       type: String,

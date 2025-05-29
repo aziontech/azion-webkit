@@ -92,7 +92,7 @@
             <template v-if="descriptionRawHtml && descriptionRawHtml.trim().length">
               <div
                 v-html="descriptionRawHtml"
-                class="prose text-color-secondary text-base leading-relaxed text-balance"
+                class="text-color-secondary text-base leading-relaxed text-balance prose max-w-none"
                 :class="[{ 'text-center': isContentCentralized }]"
               ></div>
             </template>
