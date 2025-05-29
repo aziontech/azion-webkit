@@ -22,8 +22,8 @@
         <ContentLogoBlock
           size="small"
           :isCentralized="true"
-          :title="logos.title"
-          :logos="logos.images"
+          :title="logosTitle"
+          :logos="logos"
         />
       </div>
     </template>
@@ -62,10 +62,14 @@
       type: String,
       default: () => ''
     },
+    logosTitle: {
+      type: String,
+      default: () => ''
+    },
     logos: {
-      type: Object,
+      type: Array,
       required: true,
-      default: () => {}
+      default: () => []
     },
     buttons: {
       type: Array,

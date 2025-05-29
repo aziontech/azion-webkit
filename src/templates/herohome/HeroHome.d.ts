@@ -37,7 +37,10 @@ export interface HeroHomeProps {
   descriptionRawHtml: string
   bannerNews?: BannerNews
   buttons?: Button[]
-  logos: Logo
+  logosTitle: string
+  logos: Array<{
+    imageSrc: string
+  }>
 }
 
 export interface HeroHomeSlots {
