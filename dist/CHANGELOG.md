@@ -1,3 +1,9 @@
+## [1.126.5](https://github.com/aziontech/azion-webkit/compare/v1.126.4...v1.126.5) (2025-05-29)
+
+### Bug Fixes
+
+* herohome params and descriptionRawHtml size ([dec82e9](https://github.com/aziontech/azion-webkit/commit/dec82e9beefb974226971d14f77c2eaccef1ca43))
+
 ## [1.126.4](https://github.com/aziontech/azion-webkit/compare/v1.126.3...v1.126.4) (2025-05-29)
 
 ### Bug Fixes
