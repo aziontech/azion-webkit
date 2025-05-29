@@ -1,3 +1,10 @@
+## [1.126.2](https://github.com/aziontech/azion-webkit/compare/v1.126.1...v1.126.2) (2025-05-29)
+
+### Bug Fixes
+
+* adding description/descriptionRawHtml to HeroProductsHorizontal.vue ([9f8352c](https://github.com/aziontech/azion-webkit/commit/9f8352c5494fca5e3ddc71653d0e6d319f8779fd))
+* remove not used/oficial hero block section ([0d39c7b](https://github.com/aziontech/azion-webkit/commit/0d39c7b4c859fe636a644e59e0c8d1c277f6f334))
+
 ## [1.126.1](https://github.com/aziontech/azion-webkit/compare/v1.126.0...v1.126.1) (2025-05-27)
 
 ### Bug Fixes
