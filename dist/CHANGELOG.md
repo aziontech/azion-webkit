@@ -1,3 +1,9 @@
+## [1.127.0](https://github.com/aziontech/azion-webkit/compare/v1.126.5...v1.127.0) (2025-05-30)
+
+### Features
+
+* section sticky position prop ([a5cdff6](https://github.com/aziontech/azion-webkit/commit/a5cdff6bb82c7df719ece30237e9c5c04ea1cd5f))
+
 ## [1.126.5](https://github.com/aziontech/azion-webkit/compare/v1.126.4...v1.126.5) (2025-05-29)
 
 ### Bug Fixes
