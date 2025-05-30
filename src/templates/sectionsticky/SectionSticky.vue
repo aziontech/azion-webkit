@@ -10,13 +10,14 @@
     <div class="flex flex-col gap-20 lg:gap-40 xl:gap-60 2xl:gap-80">
       <template
         v-for="(
-          { overline, titleTag, title, description, descriptionRawHtml, buttons, image }, index
+          { overline, titleTag, title, description, descriptionRawHtml, buttons, image, position },
+          index
         ) in sections"
         :key="index"
       >
         <ContentSection
           reverse
-          position="right"
+          :position="position ?? 'right'"
           :titleTag="titleTag"
           :overline="overline"
           :title="title"
