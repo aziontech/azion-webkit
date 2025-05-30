@@ -14,6 +14,7 @@ const MOCK = {
     {
       overline: 'Proteção',
       titleTag: 'h3',
+      position: 'left',
       title: 'A versatilidade de configuração que você estava procurando',
       description:
         'Ative proteções prontas para uso ou crie regras e limites personalizados por meio de uma interface intuitiva ou APIs.',

@@ -14,6 +14,11 @@ type Sections = {
   title: string
   description: string
   descriptionRawHtml: string
+  position: string
+  /**
+   * options: ['left', 'right', 'center', 'full'],
+   * @defaultValue left
+   */
   buttons: Array<{
     severity?: string
     outlined?: boolean
