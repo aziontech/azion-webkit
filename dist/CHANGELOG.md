@@ -1,3 +1,10 @@
+## [1.127.1](https://github.com/aziontech/azion-webkit/compare/v1.127.0...v1.127.1) (2025-06-02)
+
+### Bug Fixes
+
+*  Prevent carousel rotation if item count is too low. ([8181dad](https://github.com/aziontech/azion-webkit/commit/8181dad10b883ddc80554e837562881002b0f4af))
+* section card carousel disable rotation if cards <= numVisible ([cde88fe](https://github.com/aziontech/azion-webkit/commit/cde88fe87b7456ffd08e6d4a70ecf8e0564fa8c5))
+
 ## [1.127.0](https://github.com/aziontech/azion-webkit/compare/v1.126.5...v1.127.0) (2025-05-30)
 
 ### Features
