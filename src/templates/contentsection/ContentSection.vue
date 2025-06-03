@@ -34,7 +34,7 @@
               <h1
                 v-if="titleTag === 'h1'"
                 :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance prose"
+                class="text-heading-2 font-medium text-balance"
                 style="line-height: 125% !important"
               >
                 {{ title }}
@@ -42,7 +42,7 @@
               <h2
                 v-if="titleTag === 'h2'"
                 :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance prose"
+                class="text-heading-2 font-medium text-balance"
                 style="line-height: 125% !important"
               >
                 {{ title }}
@@ -50,7 +50,7 @@
               <h3
                 v-if="titleTag === 'h3'"
                 :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance prose"
+                class="text-heading-2 font-medium text-balance"
                 style="line-height: 125% !important"
               >
                 {{ title }}
@@ -58,7 +58,7 @@
               <h4
                 v-if="titleTag === 'h4'"
                 :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance prose"
+                class="text-heading-2 font-medium text-balance"
                 style="line-height: 125% !important"
               >
                 {{ title }}
@@ -66,7 +66,7 @@
               <h5
                 v-if="titleTag === 'h5'"
                 :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance prose"
+                class="text-heading-2 font-medium text-balance"
                 style="line-height: 125% !important"
               >
                 {{ title }}
@@ -74,7 +74,7 @@
               <h6
                 v-if="titleTag === 'h6'"
                 :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance prose"
+                class="text-heading-2 font-medium text-balance"
                 style="line-height: 125% !important"
               >
                 {{ title }}
@@ -82,7 +82,7 @@
             </template>
             <template v-else-if="$slots.title">
               <div
-                class="text-heading-2 font-medium text-balance prose"
+                class="text-heading-2 font-medium text-balance"
                 style="line-height: 125% !important"
               >
                 <slot name="title" />
