@@ -1,0 +1,6 @@
+{
+  "name": "@aziontech/azion-web-kit-herodocs",
+  "version": "1.0.0",
+  "main": "herodocs.js",
+  "types": "HeroDocs.d.ts"
+} 
