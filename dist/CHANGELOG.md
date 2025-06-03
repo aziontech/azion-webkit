@@ -1,3 +1,9 @@
+## [1.127.2](https://github.com/aziontech/azion-webkit/compare/v1.127.1...v1.127.2) (2025-06-03)
+
+### Bug Fixes
+
+* balance title and description ([893fba4](https://github.com/aziontech/azion-webkit/commit/893fba462692d820e2c8c5df2bddbad7177d696e))
+
 ## [1.127.1](https://github.com/aziontech/azion-webkit/compare/v1.127.0...v1.127.1) (2025-06-02)
 
 ### Bug Fixes
