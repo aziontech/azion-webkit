@@ -93,7 +93,6 @@
     isCircularEnabled.value = props.cards.length > numVisible
   }
 
-
   onBeforeMount(() => {
     checkScreenSize()
     window.addEventListener('resize', checkScreenSize)

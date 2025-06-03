@@ -32,7 +32,7 @@
 </template>
 
 <script setup>
-  import { ref, onBeforeMount} from 'vue'
+  import { ref, onBeforeMount } from 'vue'
   import CardRelease from '../cardrelease'
   import Carousel from 'primevue/carousel'
 

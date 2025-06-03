@@ -46,7 +46,7 @@
 </template>
 
 <script setup>
-  import { ref, onBeforeMount} from 'vue'
+  import { ref, onBeforeMount } from 'vue'
   import Carousel from 'primevue/carousel'
   import ContentSection from '../contentsection'
   import CardBaseClickable from '../cardbaseclickable'
