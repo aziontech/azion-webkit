@@ -1,3 +1,9 @@
+## [1.127.3](https://github.com/aziontech/azion-webkit/compare/v1.127.2...v1.127.3) (2025-06-03)
+
+### Bug Fixes
+
+* color content section ([42cb838](https://github.com/aziontech/azion-webkit/commit/42cb838b037a1eb3d05449d7d478d95bdddeddb3))
+
 ## [1.127.2](https://github.com/aziontech/azion-webkit/compare/v1.127.1...v1.127.2) (2025-06-03)
 
 ### Bug Fixes
