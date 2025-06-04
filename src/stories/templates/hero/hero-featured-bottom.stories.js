@@ -52,7 +52,7 @@ const MOCK = {
         alt: 'Azion logo'
       },
       logo: {
-        src: logoSvg,
+        imageSrc: logoSvg,
         alt: 'Brand logo'
       },
       description:
@@ -69,7 +69,7 @@ const MOCK = {
         alt: 'Azion logo'
       },
       logo: {
-        src: logoSvg,
+        imageSrc: logoSvg,
         alt: 'Brand logo'
       },
       description:

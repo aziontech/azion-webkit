@@ -58,7 +58,7 @@ const DefaultProps = {
         alt: 'Azion logo'
       },
       logo: {
-        src: logoSvg,
+        imageSrc: logoSvg,
         alt: 'Brand logo'
       },
       description:
@@ -75,7 +75,7 @@ const DefaultProps = {
         alt: 'Azion logo'
       },
       logo: {
-        src: logoSvg,
+        imageSrc: logoSvg,
         alt: 'Brand logo'
       },
       description:
@@ -92,7 +92,7 @@ const DefaultProps = {
         alt: 'Azion logo'
       },
       logo: {
-        src: logoSvg,
+        imageSrc: logoSvg,
         alt: 'Brand logo'
       },
       description:

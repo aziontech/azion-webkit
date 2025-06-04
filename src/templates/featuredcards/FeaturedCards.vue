@@ -21,7 +21,7 @@
               <div class="h-24 absolute inset-0 z-10 degrade-to-bottom"></div>
 
               <div
-                v-html="card.logo.src"
+                v-html="card.logo.imageSrc"
                 :alt="card.logo.alt"
                 class="absolute top-4 left-4 h-6 z-10"
               />
@@ -79,7 +79,7 @@
               <div class="h-24 absolute inset-0 z-10 degrade-to-bottom"></div>
 
               <div
-                v-html="slotProps.data.logo.src"
+                v-html="slotProps.data.logo.imageSrc"
                 :alt="slotProps.data.logo.alt"
                 class="absolute top-4 left-4 h-6 z-10"
               />
