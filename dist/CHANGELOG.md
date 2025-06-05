@@ -1,3 +1,9 @@
+## [1.128.1](https://github.com/aziontech/azion-webkit/compare/v1.128.0...v1.128.1) (2025-06-05)
+
+### Bug Fixes
+
+* SectionCardExpandable.vue hidden img ([2bcbb99](https://github.com/aziontech/azion-webkit/commit/2bcbb999ded572d678dd157a7f22a874fd05ccc7))
+
 ## [1.128.0](https://github.com/aziontech/azion-webkit/compare/v1.127.3...v1.128.0) (2025-06-05)
 
 ### Features
