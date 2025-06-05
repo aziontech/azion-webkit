@@ -1,3 +1,9 @@
+## [1.128.0](https://github.com/aziontech/azion-webkit/compare/v1.127.3...v1.128.0) (2025-06-05)
+
+### Features
+
+* blocked sectioncardexpandable ([1721ab9](https://github.com/aziontech/azion-webkit/commit/1721ab9a25763ee0db234a13b46bc67c00943465))
+
 ## [1.127.3](https://github.com/aziontech/azion-webkit/compare/v1.127.2...v1.127.3) (2025-06-03)
 
 ### Bug Fixes
