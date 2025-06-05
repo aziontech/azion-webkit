@@ -20,6 +20,7 @@
               <ImageSwitcher>
                 <template #darkImage>
                   <img
+                    v-if="slotProps.data.img?.src"
                     v-bind="{
                       ...slotProps.data.img,
                       src: slotProps.data.img.src
@@ -32,6 +33,7 @@
                 </template>
                 <template #lightImage>
                   <img
+                    v-if="slotProps.data.imgLight?.src"
                     v-bind="{
                       ...slotProps.data.imgLight,
                       src: slotProps.data.imgLight.src
@@ -46,19 +48,21 @@
             </div>
             <div
               class="hide-on-light absolute w-full h-full top-0 left-0 overflow-hidden rounded gradient-to-top"
-            />
+            ></div>
           </div>
         </template>
         <template #actions="slotProps">
           <LinkButton
-            v-if="slotProps.data.button"
+            v-if="slotProps.data.button?.link && slotProps.data.button?.label"
             v-bind="slotProps.data.button"
           />
         </template>
+
         <template #disabledContent="slotProps">
           <div class="relative min-h-40 h-full flex flex-col justify-end rounded">
             <div class="absolute w-full h-full top-0 left-0 overflow-hidden rounded">
               <img
+                v-if="slotProps.data.img?.src"
                 v-bind="{
                   ...slotProps.data.img,
                   src: slotProps.data.img.src
@@ -69,6 +73,7 @@
                 width="auto"
               />
               <img
+                v-if="slotProps.data.imgLight?.src"
                 v-bind="{
                   ...slotProps.data.imgLight,
                   src: slotProps.data.imgLight.src
