@@ -1,3 +1,14 @@
+## [1.129.0](https://github.com/aziontech/azion-webkit/compare/v1.128.1...v1.129.0) (2025-06-06)
+
+### Features
+
+* added new form props ([63ca266](https://github.com/aziontech/azion-webkit/commit/63ca2661fc68d211989dc9db462e08d828fcf4bf))
+* enhances hero hs form and submission handling ([3178378](https://github.com/aziontech/azion-webkit/commit/3178378e466f5db7f0d1181a0b95b6d0c434b9a9))
+
+### Bug Fixes
+
+* clear old message ([61230d5](https://github.com/aziontech/azion-webkit/commit/61230d5058433e85b01b717dc98c2140496db354))
+
 ## [1.128.1](https://github.com/aziontech/azion-webkit/compare/v1.128.0...v1.128.1) (2025-06-05)
 
 ### Bug Fixes
