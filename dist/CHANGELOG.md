@@ -1,3 +1,9 @@
+## [1.129.1](https://github.com/aziontech/azion-webkit/compare/v1.129.0...v1.129.1) (2025-06-06)
+
+### Bug Fixes
+
+* Hero HS Form Right with redirect ([6821840](https://github.com/aziontech/azion-webkit/commit/68218403d1f6063a1fd7043932e29d94df46a743))
+
 ## [1.129.0](https://github.com/aziontech/azion-webkit/compare/v1.128.1...v1.129.0) (2025-06-06)
 
 ### Features
