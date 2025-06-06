@@ -28,7 +28,8 @@ const MOCK = {
     title: 'Transforme a segurança da Azion em seu diferencial competitivo',
     id: '2cb5ef91-3c22-4d2d-b657-5bd102d2d737',
     action: 'action',
-    successMessage: 'Mensagem de sucesso!'
+    successMessage: 'Mensagem de sucesso!',
+    redirect: ''
   }
 }
 
