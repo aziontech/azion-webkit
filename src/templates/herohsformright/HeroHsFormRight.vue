@@ -74,12 +74,14 @@
   const isLoading = ref(true)
   const formIsSubmitted = ref(false)
 
-  const loadHubSpotScript = () => {
+  const loadHubSpotScript = async () => {
     return new Promise((resolve, reject) => {
       const script = document.createElement('script')
+
       script.src = 'https://js.hsforms.net/forms/v2.js'
       script.onload = resolve
       script.onerror = reject
+
       document.head.appendChild(script)
     })
   }
@@ -100,6 +102,10 @@
     }, 50)
   }
 
+  const redirect = (destiny) => {
+    window.location.href = destiny
+  }
+
   const createHubSpotForm = () => {
     if (window.hbspt) {
       window.hbspt.forms.create({
@@ -108,7 +114,7 @@
         formId: props.form.id,
         target: '.field-wrap',
         onFormReady: function ($form) {
-          var inputElement = $form.querySelector('input[name="form_action"]')
+          let inputElement = $form.querySelector('input[name="form_action"]')
 
           if (inputElement && props.form?.action) {
             inputElement.value = props.form.action
@@ -116,7 +122,11 @@
         },
         onFormSubmitted: function () {
           formIsSubmitted.value = true
-          appendSuccessMessage()
+
+          const redirect = props.form.redirect
+          const destiny = redirect && redirect.length ? redirect : null
+
+          destiny ? redirect(destiny) : appendSuccessMessage()
         }
       })
     }
@@ -148,14 +158,15 @@
       })
     }
 
-    // Check for form every second for up to 10 attempts
     let attempts = 0
     const checkForm = setInterval(() => {
       const form = document.querySelector('form')
+
       if (form || attempts >= 10) {
         clearInterval(checkForm)
         if (form) trackFormFilling(form)
       }
+
       attempts++
     }, 1000)
   }
