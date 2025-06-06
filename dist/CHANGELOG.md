@@ -1,3 +1,9 @@
+## [1.129.2](https://github.com/aziontech/azion-webkit/compare/v1.129.1...v1.129.2) (2025-06-06)
+
+### Bug Fixes
+
+* herohsformright d.ts ([6660a68](https://github.com/aziontech/azion-webkit/commit/6660a68927f9c0430096cbd97a911262c7f1b359))
+
 ## [1.129.1](https://github.com/aziontech/azion-webkit/compare/v1.129.0...v1.129.1) (2025-06-06)
 
 ### Bug Fixes
