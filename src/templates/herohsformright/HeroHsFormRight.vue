@@ -3,6 +3,7 @@
     :overline="props.overline"
     :title="props.title"
     :description="props.description"
+    :descriptionRawHtml="props.descriptionRawHtml"
   >
     <template #content>
       <div class="flex flex-col gap-10 w-full">
@@ -40,7 +41,8 @@
 
   const props = defineProps({
     overline: {
-      type: String
+      type: String,
+      default: () => ''
     },
     titleTag: {
       required: true,
@@ -53,10 +55,16 @@
       required: true
     },
     description: {
-      type: String
+      type: String,
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     list: {
-      type: Array // title, description, icon
+      type: Array, // title, description, icon
+      default: () => []
     },
     form: {
       type: Object // id, title, action, successMessage

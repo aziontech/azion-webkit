@@ -10,8 +10,9 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 type Items = Array<{
   overline: string
+  titleTag: string
   title: string
-  description: string
+  descriptionRawHtml: string
   imageDark: string
   imageLight: string
   alt: string
@@ -22,8 +23,9 @@ type Items = Array<{
  */
 export interface SectionIntercalatedContentProps {
   overline: string
+  titleTag: string
   title: string
-  items: Array<Items>
+  items: Items[]
 }
 
 /**

@@ -18,8 +18,10 @@ type Cards = Array<{
  */
 export interface SectionBaseCardsProps {
   overline: string
+  titleTag: string
   title: string
   description: string
+  descriptionRawHtml: string
   cards: Array<Cards>
 }
 

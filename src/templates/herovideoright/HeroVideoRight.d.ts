@@ -12,11 +12,11 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  * Defines valid properties in HeroVideoRight component.
  */
 export interface HeroVideoRightProps {
-  hero: {
-    overline: string
-    title: string
-    description: string
-  }
+  overline: string
+  titleTag: string
+  title: string
+  description: string
+  descriptioRawHtml: string
   video: {
     title: string
     src: string

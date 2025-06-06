@@ -88,20 +88,29 @@
                 <slot name="title" />
               </div>
             </template>
-            <template v-if="description">
+
+            <template v-if="descriptionRawHtml && descriptionRawHtml.trim().length">
+              <div
+                v-html="descriptionRawHtml"
+                class="text-color-secondary text-base leading-relaxed text-balance prose max-w-none"
+                :class="[{ 'text-center': isContentCentralized }]"
+              ></div>
+            </template>
+            <template v-else-if="description && description.trim().length">
               <p
-                v-if="!wysisyg"
                 class="text-color-secondary text-base leading-relaxed text-balance"
                 :class="[{ 'text-center': isContentCentralized }]"
               >
                 {{ description }}
               </p>
-              <div
-                v-else
-                v-html="description"
-                class="text-color-secondary text-base leading-relaxed text-balance"
-              ></div>
             </template>
+            <div
+              v-if="$slots.actions"
+              class="flex flex-row gap-3"
+              :class="{ 'justify-center items-center': isContentCentralized }"
+            >
+              <slot name="actions" />
+            </div>
           </div>
 
           <template v-if="$slots.content">
@@ -128,57 +137,48 @@
   defineProps({
     overline: {
       type: String,
-      required: false
+      default: () => ''
     },
     title: {
       type: String,
-      required: false
+      default: () => ''
     },
     titleTag: {
       type: String,
-      required: false,
       default: 'h2'
-    },
-    wysisyg: {
-      type: Boolean,
-      required: true,
-      default() {
-        return false
-      }
     },
     description: {
       type: String,
-      required: false
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     position: {
       type: String,
       options: ['left', 'right', 'center', 'full'],
-      required: false,
-      default: 'left'
+      default: () => 'left'
     },
     isContentCentralized: {
       type: Boolean,
-      required: false,
-      default: false
+      default: () => false
     },
     textCenter: {
       type: Boolean,
-      required: false,
-      default: false
+      default: () => false
     },
     reverse: {
       type: Boolean,
-      required: false,
-      default: false
+      default: () => false
     },
     isSticky: {
       type: Boolean,
-      required: false,
-      default: false
+      default: () => false
     },
     pt: {
       type: Object,
-      required: false
+      default: () => {}
     }
   })
 </script>

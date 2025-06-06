@@ -2,8 +2,10 @@
   <ContentSection
     position="right"
     :overline="props.overline"
+    :titleTag="props.titleTag"
     :title="props.title"
     :description="props.description"
+    :descriptionRawHtml="props.descriptionRawHtml"
   >
     <template #actions>
       <LinkButton
@@ -67,8 +69,11 @@
                   <div class="order-2 flex flex-col justify-end gap-3">
                     <LinkButton
                       v-for="{ link, label } in links"
-                      text
+                      textLink
+                      class="!p-0"
                       size="small"
+                      icon-pos="right"
+                      icon="pi pi-arrow-up-right"
                       :link="link"
                       :label="label"
                     />
@@ -97,7 +102,12 @@
 
   const props = defineProps({
     overline: {
-      type: [String, undefined, null]
+      type: String
+    },
+    titleTag: {
+      type: String,
+      default: () => 'h2',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
     },
     title: {
       type: String,
@@ -105,7 +115,11 @@
     },
     description: {
       type: String,
-      required: true
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     buttons: {
       type: [Object, undefined, null]

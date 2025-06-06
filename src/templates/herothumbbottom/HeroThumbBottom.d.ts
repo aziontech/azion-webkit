@@ -25,6 +25,7 @@ export interface HeroButtonBottomnProps {
   overline?: string
   title?: string
   description?: string
+  descriptionRawHtml?: string
   buttons: Button[]
   images: Images
 }

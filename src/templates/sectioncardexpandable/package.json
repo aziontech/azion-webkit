@@ -1,0 +1,7 @@
+{
+  "main": "./sectioncardexpandable.js",
+  "types": "./SectionCardExpandable.d.ts",
+  "browser": {
+    "./sfc": "./SectionCardExpandable.vue"
+  }
+}

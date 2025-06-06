@@ -1,6 +1,6 @@
 /** @type { import('@storybook/vue3-vite').StorybookConfig } */
 
-import { setup } from '@storybook/vue3';
+import { setup } from '@storybook/vue3-vite';
 import PrimeVue from 'primevue/config';
 
 import 'primeflex/primeflex.css';

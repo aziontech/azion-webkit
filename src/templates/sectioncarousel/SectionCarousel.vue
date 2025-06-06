@@ -22,13 +22,13 @@
     <template #principal>
       <Carousel
         :value="cards"
-        :numVisible="3"
+        :numVisible="DEFAULT_NUMVISIBLE"
         :numScroll="1"
-        :circular="true"
+        :circular="isCircularEnabled"
         :autoplayInterval="5000"
         :responsiveOptions="responsiveOptions"
-        :showNavigators="isLargeScreen"
-        :showIndicators="!isLargeScreen"
+        :showNavigators="isLargeScreen && isCircularEnabled"
+        :showIndicators="!isLargeScreen && isCircularEnabled"
       >
         <template #item="slotProps">
           <div class="px-3 h-full">
@@ -74,7 +74,7 @@
   import Carousel from 'primevue/carousel'
   import Tag from 'primevue/tag'
 
-  defineProps({
+  const props = defineProps({
     overline: {
       type: String,
       required: false
@@ -115,10 +115,24 @@
     }
   ]
 
+  const reversedResponsiveOptions = [...responsiveOptions].reverse()
+
+  const isCircularEnabled = ref(true)
   const isLargeScreen = ref(true)
+  const DEFAULT_NUMVISIBLE = 3
 
   const checkScreenSize = () => {
-    isLargeScreen.value = window.innerWidth >= 767
+    const screenSize = window.innerWidth
+    isLargeScreen.value = screenSize >= 767
+
+    const breakpoint = reversedResponsiveOptions.find(({ breakpoint }) => {
+      const breakpointValue = parseInt(breakpoint)
+      return screenSize < breakpointValue
+    })
+
+    let numVisible = DEFAULT_NUMVISIBLE
+    if (breakpoint) numVisible = breakpoint.numVisible
+    isCircularEnabled.value = props.cards.length > numVisible
   }
 
   onBeforeMount(() => {

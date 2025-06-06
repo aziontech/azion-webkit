@@ -16,6 +16,7 @@ export interface HeroHsFormRightProps {
   overline: string
   title: string
   description: string
+  descriptionRawHtml: string
   list: Array<{
     title: string
     description: string

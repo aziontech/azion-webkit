@@ -3,57 +3,64 @@
     <div class="lg:sticky lg:top-12 surface-ground lg:pt-10 lg:-mt-10 z-10">
       <ContentSection
         :overline="overline"
+        :titleTag="titleTag"
         :title="title"
-        titleTag="h2"
       />
     </div>
     <div class="flex flex-col gap-20 lg:gap-40 xl:gap-60 2xl:gap-80">
-      <ContentSection
-        v-for="({ overline, title, description, buttons, image }, index) in sections"
+      <template
+        v-for="(
+          { overline, titleTag, title, description, descriptionRawHtml, buttons, image, position },
+          index
+        ) in sections"
         :key="index"
-        position="right"
-        titleTag="h3"
-        reverse
-        :overline="overline"
-        :title="title"
-        :description="description"
       >
-        <template #actions>
-          <template
-            v-for="(button, index) in buttons"
-            :key="index"
-          >
-            <LinkButton
-              v-if="button.link"
-              v-bind="button"
-            />
+        <ContentSection
+          reverse
+          :position="position ?? 'right'"
+          :titleTag="titleTag"
+          :overline="overline"
+          :title="title"
+          :description="description"
+          :descriptionRawHtml="descriptionRawHtml"
+        >
+          <template #actions>
+            <template
+              v-for="(button, index) in buttons"
+              :key="index"
+            >
+              <LinkButton
+                v-if="button.link"
+                v-bind="button"
+              />
+            </template>
           </template>
-        </template>
-        <template #main>
-          <div class="w-full">
-            <ImageSwitcher>
-              <template #lightImage>
-                <img
-                  height="655"
-                  width="auto"
-                  loading="lazy"
-                  :src="image.light"
-                  :alt="image.alt"
-                />
-              </template>
-              <template #darkImage>
-                <img
-                  height="655"
-                  width="auto"
-                  loading="lazy"
-                  :src="image.dark"
-                  :alt="image.alt"
-                />
-              </template>
-            </ImageSwitcher>
-          </div>
-        </template>
-      </ContentSection>
+          <template #main>
+            <div class="w-full">
+              <ImageSwitcher>
+                <template #lightImage>
+                  <img
+                    height="655"
+                    width="auto"
+                    loading="lazy"
+                    :src="image.light"
+                    :alt="image.alt"
+                  />
+                </template>
+                <template #darkImage>
+                  <img
+                    height="655"
+                    width="auto"
+                    loading="lazy"
+                    :src="image.dark"
+                    :alt="image.alt"
+                  />
+                </template>
+              </ImageSwitcher>
+            </div>
+          </template>
+        </ContentSection>
+      </template>
     </div>
   </div>
 </template>
@@ -67,6 +74,11 @@
     overline: {
       type: String,
       required: false
+    },
+    titleTag: {
+      type: String,
+      default: () => 'h2',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
     },
     title: {
       type: String,

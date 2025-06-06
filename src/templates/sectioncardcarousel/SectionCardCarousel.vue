@@ -1,20 +1,23 @@
 <template>
   <ContentSection
-    :title="title"
-    :overline="overline"
     position="center"
-    titleTag="h2"
-    isContentCentralized
+    :overline="overline"
+    :titleTag="titleTag"
+    :title="title"
+    :description="description"
+    :descriptionRawHtml="descriptionRawHtml"
+    :isContentCentralized="true"
   >
     <template #main>
       <Carousel
         :value="cards"
-        :numVisible="4"
+        :numVisible="DEFAULT_NUMVISIBLE"
         :numScroll="1"
-        :circular="true"
+        :circular="isCircularEnabled"
         :autoplayInterval="5000"
         :responsiveOptions="responsiveOptions"
         :showIndicators="false"
+        :showNavigators="isCircularEnabled"
       >
         <template #item="slotProps">
           <div class="px-3 h-full">
@@ -43,25 +46,85 @@
 </template>
 
 <script setup>
+  import { ref, onBeforeMount } from 'vue'
   import Carousel from 'primevue/carousel'
   import ContentSection from '../contentsection'
   import CardBaseClickable from '../cardbaseclickable'
   import CardTitle from '../cardtitle'
   import CardDescription from '../carddescription'
 
-  defineProps({
+  const props = defineProps({
     overline: {
-      type: String
+      type: String,
+      default: () => ''
+    },
+    titleTag: {
+      required: true,
+      type: String,
+      default: () => 'h2',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
     },
     title: {
       type: String,
       required: true
     },
+    description: {
+      type: String,
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
+    },
     cards: {
       type: Array
     },
     responsiveOptions: {
-      type: Array
+      type: Array,
+      default: () => [
+        {
+          breakpoint: '1400px',
+          numVisible: '3',
+          numScroll: '1'
+        },
+        {
+          breakpoint: '1199px',
+          numVisible: '3',
+          numScroll: '1'
+        },
+        {
+          breakpoint: '767px',
+          numVisible: '2',
+          numScroll: '1'
+        },
+        {
+          breakpoint: '575px',
+          numVisible: '3',
+          numScroll: '1'
+        }
+      ]
     }
+  })
+
+  const reversedResponsiveOptions = [...props.responsiveOptions].reverse()
+
+  const isCircularEnabled = ref(true)
+  const DEFAULT_NUMVISIBLE = 4
+
+  const checkScreenSize = () => {
+    const screenSize = window.innerWidth
+    const breakpoint = reversedResponsiveOptions.find(({ breakpoint }) => {
+      const breakpointValue = parseInt(breakpoint)
+      return screenSize < breakpointValue
+    })
+
+    let numVisible = DEFAULT_NUMVISIBLE
+    if (breakpoint) numVisible = breakpoint.numVisible
+    isCircularEnabled.value = props.cards.length > numVisible
+  }
+
+  onBeforeMount(() => {
+    checkScreenSize()
+    window.addEventListener('resize', checkScreenSize)
   })
 </script>

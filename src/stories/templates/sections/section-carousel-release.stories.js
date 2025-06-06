@@ -37,7 +37,9 @@ const Template = (args) => config(args)
 export const Default = Template.bind({})
 Default.args = {
   overline: 'MARKET RECOGNITION',
+  titleTag: 'h2',
   title: 'What analysts say about Azion',
+  description: '',
   items: [
     {
       title:

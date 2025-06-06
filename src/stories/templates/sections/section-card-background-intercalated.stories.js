@@ -40,53 +40,36 @@ const config = (args) => {
 const Template = (args) => config(args)
 export const Default = Template.bind({})
 Default.args = {
-  hero: {
-    title: "Let's build together",
-    description:
-      'Azion has always focused on the core values of innovation, reliability, and the ability to make transparent, forward-looking decisions, and execute them with precision and agility. We believe that our success depends on the success of our customers.',
-    image: '/assets/pages/careers/_hero-illustration.png'
-    // "buttons": [
-    //   {
-    //     "label": "See jobs",
-    //     "link": "/en/careers/jobs/"
-    //   },
-    //   {
-    //     "label": "About us",
-    //     "link": "/en/about-us/",
-    //     "outlined": true
-    //   }
-    // ]
-  },
-  cards: {
-    title: 'Azion values',
-    description:
-      'Our values underpin the way we work and interact, not only among us, but also with our customers and the global community',
-    cards: [
-      {
-        label: 'Quality',
-        title:
-          'Meeting high expectations is the norm. Exceeding them is what sets us apart and drives our success.',
-        image: 'https://www.azion.com/assets/pages/careers/quality.png',
-        alt: 'A group of Azion employees collaborating in a bright and spacious office environment, with modern decor and vibrant energy.'
-      },
-      {
-        label: 'Agility',
-        title: 'We move quickly in response to a challenge or opportunity.',
-        image: 'https://www.azion.com/assets/pages/careers/agility.png',
-        alt: 'Employees in an office working on their computers, appearing happy and engaged.'
-      },
-      {
-        label: 'Ownership',
-        title: 'We are empowered to act and accountable for our actions.',
-        image: 'https://www.azion.com/assets/pages/careers/ownership.png',
-        alt: 'An image illustrating a sense of ownership and responsibility in the workplace at Azion.'
-      },
-      {
-        label: 'Innovation',
-        title: 'We create solutions that unlock new possibilities.',
-        image: 'https://www.azion.com/assets/pages/careers/innovation.png',
-        alt: 'An image representing innovation and creativity in the workplace at Azion.'
-      }
-    ]
-  }
+  overline: 'OVERLINE',
+  titleTag: 'h2',
+  title: "Let's build together",
+  description:
+    'Azion has always focused on the core values of innovation, reliability, and the ability to make transparent, forward-looking decisions, and execute them with precision and agility. We believe that our success depends on the success of our customers.',
+  cards: [
+    {
+      label: 'Quality',
+      title:
+        'Meeting high expectations is the norm. Exceeding them is what sets us apart and drives our success.',
+      image: 'https://www.azion.com/assets/pages/careers/quality.png',
+      alt: 'A group of Azion employees collaborating in a bright and spacious office environment, with modern decor and vibrant energy.'
+    },
+    {
+      label: 'Agility',
+      title: 'We move quickly in response to a challenge or opportunity.',
+      image: 'https://www.azion.com/assets/pages/careers/agility.png',
+      alt: 'Employees in an office working on their computers, appearing happy and engaged.'
+    },
+    {
+      label: 'Ownership',
+      title: 'We are empowered to act and accountable for our actions.',
+      image: 'https://www.azion.com/assets/pages/careers/ownership.png',
+      alt: 'An image illustrating a sense of ownership and responsibility in the workplace at Azion.'
+    },
+    {
+      label: 'Innovation',
+      title: 'We create solutions that unlock new possibilities.',
+      image: 'https://www.azion.com/assets/pages/careers/innovation.png',
+      alt: 'An image representing innovation and creativity in the workplace at Azion.'
+    }
+  ]
 }

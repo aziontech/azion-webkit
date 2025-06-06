@@ -1,17 +1,12 @@
 <template>
   <ContentSection
+    :titleTag="titleTag"
     :title="title"
     :overline="overline"
     :description="description"
-    titleTag="h2"
+    :descriptionRawHtml="descriptionRawHtml"
   >
     <template #actions>
-      <!-- <LinkButton
-        v-for="{ link, label, outlined } in buttons"
-        :link="link"
-        :label="label"
-        :outlined="outlined"
-      /> -->
       <template
         v-for="(button, index) in buttons"
         :key="index"
@@ -22,6 +17,7 @@
         />
       </template>
     </template>
+
     <template #main>
       <UnorderedList
         :data="data"
@@ -37,24 +33,34 @@
   import UnorderedList from '../listunordered'
 
   defineProps({
-    buttons: {
-      type: Array,
-      required: true
+    overline: {
+      type: String,
+      default: () => ''
+    },
+    titleTag: {
+      type: String,
+      default: () => 'h2',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
     },
     title: {
       type: String,
       required: true
     },
-    overline: {
-      type: String,
-      required: false
-    },
     description: {
       type: String,
-      required: true
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
+    },
+    buttons: {
+      type: Array,
+      default: () => []
     },
     data: {
-      required: false
+      type: Array,
+      default: () => []
     }
   })
 </script>

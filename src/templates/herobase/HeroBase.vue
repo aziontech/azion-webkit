@@ -19,12 +19,9 @@
       >
         <div
           class="flex flex-col gap-5 md:gap-8"
-          :class="[
-            { 'max-w-3xl 2xl:max-w-4xl text-center': isCentralized },
-            { 'max-w-3xl 2xl:max-w-4xl': !isCentralized }
-          ]"
+          :class="[{ 'text-center': isCentralized }]"
         >
-          <template v-if="bannerNews">
+          <template v-if="bannerNews?.description">
             <div
               class="flex"
               :class="[{ 'justify-center': isCentralized }]"
@@ -36,6 +33,7 @@
               />
             </div>
           </template>
+
           <Overline
             v-if="overline && overline.length"
             :label="overline"
@@ -83,20 +81,33 @@
           <template v-else>
             <slot name="title" />
           </template>
-          <p
-            v-if="description"
-            class="text-color-secondary text-body-3 leading-relaxed text-balance"
-          >
-            {{ description }}
-          </p>
-          <div
-            v-if="$slots.actions"
-            class="flex flex-row gap-3"
-            :class="{ 'justify-center items-center': isCentralized }"
-          >
-            <slot name="actions" />
-          </div>
+
+          <template v-if="descriptionRawHtml && descriptionRawHtml.trim().length">
+            <div
+              v-html="descriptionRawHtml"
+              :class="[{ 'text-center': isCentralized }]"
+              class="text-color-secondary text-base leading-relaxed text-balance prose max-w-none"
+            ></div>
+          </template>
+          <template v-else-if="description && description.trim().length">
+            <p
+              class="text-color-secondary text-body-3 leading-relaxed text-balance"
+              :class="[{ 'text-center': isCentralized }]"
+            >
+              {{ description }}
+            </p>
+          </template>
+
+          <template v-if="$slots.actions">
+            <div
+              class="flex flex-row gap-3"
+              :class="{ 'justify-center items-center': isCentralized }"
+            >
+              <slot name="actions" />
+            </div>
+          </template>
         </div>
+
         <template v-if="$slots.content">
           <slot name="content" />
         </template>
@@ -117,29 +128,35 @@
 </template>
 
 <script setup>
-  import Overline from '../overline/Overline.vue'
-  import Banner from '../banner/Banner.vue'
+  import Overline from '../overline'
+  import Banner from '../banner'
 
-  defineProps({
+  const props = defineProps({
     bannerNews: {
       type: Object
     },
     overline: {
-      type: String
+      type: String,
+      default: () => ''
     },
     isReverse: {
       type: Boolean,
-      default: false
-    },
-    title: {
-      type: String
+      default: () => false
     },
     titleTag: {
       type: String,
       default: 'h1'
     },
-    description: {
+    title: {
       type: String
+    },
+    description: {
+      type: String,
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     justify: {
       type: String,
@@ -151,10 +168,11 @@
     },
     isCentralized: {
       type: Boolean,
-      default: false
+      default: () => false
     },
     isDisplay: {
-      type: Boolean
+      type: Boolean,
+      default: () => false
     }
   })
 </script>

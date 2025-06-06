@@ -1,10 +1,10 @@
 <template>
   <ContentSection
-    :title="props.title"
     :overline="props.overline"
-    :wysisyg="props.wysisyg"
-    :description="props.description"
     :titleTag="props.titleTag"
+    :title="props.title"
+    :description="props.description"
+    :descriptionRawHtml="props.descriptionRawHtml"
   >
     <template #actions>
       <template
@@ -17,6 +17,7 @@
         />
       </template>
     </template>
+
     <template #main>
       <div class="w-full">
         <ImageSwitcher>
@@ -47,7 +48,8 @@
 
   const props = defineProps({
     overline: {
-      type: String
+      type: String,
+      default: () => ''
     },
     title: {
       type: String,
@@ -62,16 +64,13 @@
         return ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
       }
     },
-    wysisyg: {
-      type: Boolean,
-      required: true,
-      default() {
-        return false
-      }
-    },
     description: {
       type: String,
-      required: true
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     buttons: {
       type: Array

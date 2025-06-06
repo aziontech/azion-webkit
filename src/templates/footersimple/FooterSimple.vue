@@ -1,7 +1,7 @@
 <template>
-  <footer class="flex flex-col gap-8 justify-center items-center pb-12">
+  <footer class="flex flex-col justify-center items-center">
     <Divider />
-    <div class="px-container">
+    <div class="px-container py-4">
       <p class="text-color-secondary text-xs">
         {{ text }}
       </p>

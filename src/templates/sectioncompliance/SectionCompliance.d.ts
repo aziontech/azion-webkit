@@ -27,8 +27,10 @@ interface ButtonProps {
  */
 export interface SectionCompliancesProps {
   overline?: string
+  titleTag: string
   title: string
   description?: string
+  descriptionRawHtml?: string
   button?: ButtonProps
   cards: Card[]
 }

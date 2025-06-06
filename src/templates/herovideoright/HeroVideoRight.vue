@@ -5,6 +5,7 @@
     :titleTag="titleTag"
     :title="title"
     :description="description"
+    :descriptionRawHtml="descriptionRawHtml"
   >
     <template #main>
       <BaseModal backgroundColor="outlined">
@@ -118,10 +119,10 @@
 
   defineProps({
     overline: {
-      type: String
+      type: String,
+      default: () => ''
     },
     titleTag: {
-      required: true,
       type: String,
       default: () => 'h1',
       validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
@@ -131,7 +132,12 @@
       type: String
     },
     description: {
-      type: String
+      type: String,
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     video: {
       type: Object,

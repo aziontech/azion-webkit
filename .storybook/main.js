@@ -6,12 +6,10 @@ const config = {
   ],
   addons: [
     '@storybook/addon-links',
-    '@storybook/addon-essentials',
     '@storybook/addon-docs',
     '@chromatic-com/storybook',
-    '@storybook/addon-interactions',
     '@storybook/addon-themes',
-    "@whitespace/storybook-addon-html",
+    "@whitespace/storybook-addon-html"
   ],
   framework: {
     name: '@storybook/vue3-vite',

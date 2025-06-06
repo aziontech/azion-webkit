@@ -1,9 +1,10 @@
 <template>
   <ContentSection
     :overline="overline"
+    :titleTag="titleTag"
     :title="title"
     :description="description"
-    titleTag="h2"
+    :descriptionRawHtml="descriptionRawHtml"
   >
     <template v-slot:content>
       <GridBentoBlock :gridType="gridType">
@@ -225,13 +226,25 @@
 
   const props = defineProps({
     overline: {
-      type: String
+      type: String,
+      default: () => ''
+    },
+    titleTag: {
+      required: true,
+      type: String,
+      default: () => 'h2',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
     },
     title: {
       type: String
     },
     description: {
-      type: String
+      type: String,
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     gridType: {
       type: String,

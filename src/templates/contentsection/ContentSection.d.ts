@@ -19,7 +19,8 @@ export interface ContentSectionProps {
    * @defaultValue h2
    */
   titleTag?: string
-  description?: string | undefined
+  description?: string
+  descriptionRawHtml?: string
   /**
    * options: ['left', 'right', 'center'],
    * @defaultValue left

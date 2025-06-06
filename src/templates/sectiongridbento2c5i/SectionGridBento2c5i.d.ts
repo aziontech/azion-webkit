@@ -9,8 +9,11 @@ import { VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 type Cards = Array<{
+  overline: string
+  titleTag: string
   title: string
   description: string
+  descriptionRawHtml: string
   image: {
     imageDark: string
     imageLight: string

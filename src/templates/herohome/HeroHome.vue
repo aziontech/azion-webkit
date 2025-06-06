@@ -1,8 +1,9 @@
 <template>
-  <HeroBlockBase
+  <HeroBase
     isDisplay
     :isCentralized="true"
     :description="description"
+    :descriptionRawHtml="descriptionRawHtml"
     :bannerNews="bannerNews"
   >
     <template #title>
@@ -19,42 +20,61 @@
     </template>
     <template #content>
       <div class="flex flex-col gap-4 md:gap-8 items-center text-center">
-        <ContentLogoBlock
+        <ContentLogo
           size="small"
           :isCentralized="true"
-          :title="logos.title"
-          :logos="logos.images"
+          :title="logosTitle"
+          :logos="logos"
         />
       </div>
     </template>
-  </HeroBlockBase>
+  </HeroBase>
 </template>
 
 <script setup>
-  import HeroBlockBase from '../herobase'
+  import HeroBase from '../herobase'
   import LinkButton from '../linkbutton'
-  import ContentLogoBlock from '../contentlogo'
+  import ContentLogo from '../contentlogo'
 
   defineProps({
     bannerNews: {
       type: Object,
-      required: false
+      default: () => {}
+    },
+    overline: {
+      type: String,
+      default: () => ''
+    },
+    titleTag: {
+      required: true,
+      type: String,
+      default: () => 'h1',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
     },
     title: {
       type: String,
-      required: false
+      default: () => ''
     },
     description: {
       type: String,
-      required: false
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
+    },
+    logosTitle: {
+      type: String,
+      default: () => ''
     },
     logos: {
-      type: Object,
-      required: true
+      type: Array,
+      required: true,
+      default: () => []
     },
     buttons: {
       type: Array,
-      required: false
+      default: () => []
     }
   })
 </script>

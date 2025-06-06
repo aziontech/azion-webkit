@@ -26,8 +26,10 @@ interface ContentBlock {
  */
 export interface SectionBulletsRightProps {
   overline: string
+  titleTag: string
   title: string
   description: string
+  descriptionRawHtml: string
   buttons: Button[]
   data: ContentBlock[]
 }
