@@ -1,58 +1,41 @@
 <template>
-  <Container>
-    <SectionNumberedCards v-bind="MOCK" />
+  <Container class="surface-ground">
+    <HeroHsFormRight v-bind="MOCK" />
   </Container>
 </template>
 
 <script setup>
   import Container from './templates/container'
-  import SectionNumberedCards from './templates/sectionnumberedcards'
+  import HeroHsFormRight from './templates/herohsformright'
 
   const MOCK = {
-    overline: 'Pricing Model',
-    title: 'All products and features, no upfront commitment required—cancel anytime.',
+    overline: 'WEB APPLICATION FIREWALL (WAF)',
+    title: 'Web Application Firewall: a proteção avançada que especialistas de segurança confiam',
     description:
-      'Our pay-as-you-go pricing model gives you the freedom to customize your choice for more efficiency paying only for what you use: Data transferred, requests, compute time, etc.',
-    cards: [
+      'Com o WAF da Azion, você protege suas aplicações e APIs das ameaças OWASP Top 10 até os mais sofisticados ataques zero-day.',
+    list: [
       {
-        title: 'Start for free',
+        icon: 'pi pi-shield',
+        title: 'Proteja',
         description:
-          'Get free, hands-on experience with the Azion Edge Computing Platform with $300 in credits valid for 12 months. No upfront commitment—cancel anytime.',
-        button: {
-          label: 'Create a free account',
-          link: 'https://console.azion.com/signup'
-        }
+          'Proteja suas aplicações e APIs contra SQL Injection, XSS, RFI e outras ameaças'
       },
       {
-        title: 'Pay as you grow',
-        description:
-          'Pay only for the resources you use, and pay less as you grow with our on-demand, tiered pricing model. Ideal for any business stage, with no account maintenance fees.',
-        button: {
-          label: 'Check prices',
-          link: '/en/documentation/products/pricing/',
-          outlined: true
-        }
+        icon: 'pi pi-check',
+        title: 'Bloqueie',
+        description: 'Bloqueie ameaças no edge, antes de chegarem a sua aplicação ou infraestrutura'
       },
       {
-        title: 'Commit and save',
-        description:
-          'Save more by committing to a 1, 2, or 3-year plan, and selecting the most cost-effective payment terms for your needs. Ideal for cost-effective, sustained growth.',
-        button: {
-          label: 'Check prices',
-          link: '/en/documentation/products/pricing/',
-          outlined: true
-        }
-      },
-      {
-        title: 'Add a Service Plan',
-        description:
-          "Select a Service Plan that aligns with your service and compliance requirements for successfully running your workloads with Azion. From Developer to Mission-Critical, we've got your back.",
-        button: {
-          label: 'Compare plans',
-          link: '/en/professional-services/',
-          outlined: true
-        }
+        icon: 'pi pi-dollar',
+        title: 'Economize',
+        description: 'Economize tempo com regras gerenciadas e passe mais tempo criando aplicações'
       }
-    ]
+    ],
+    form: {
+      title: 'Transforme a segurança da Azion em seu diferencial competitivo',
+      id: '29df57c8-07c8-4c5b-9b2f-7a7154744287',
+      action: 'test_action',
+      successMessage: 'Mensagem de sucesso!'
+    }
   }
 </script>

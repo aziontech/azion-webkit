@@ -67,7 +67,7 @@
       default: () => []
     },
     form: {
-      type: Object // id, title
+      type: Object // id, title, action, successMessage
     }
   })
 
@@ -84,6 +84,22 @@
     })
   }
 
+  function appendSuccessMessage() {
+    const intervalId = setInterval(() => {
+      var successMessageElement = document.querySelector('.submitted-message')
+
+      if (successMessageElement) {
+        successMessageElement.innerHTML = ''
+
+        var paragraph = document.createElement('p')
+        paragraph.textContent = props.form.successMessage
+        successMessageElement.appendChild(paragraph)
+
+        clearInterval(intervalId)
+      }
+    }, 50)
+  }
+
   const createHubSpotForm = () => {
     if (window.hbspt) {
       window.hbspt.forms.create({
@@ -91,8 +107,16 @@
         portalId: '5759082',
         formId: props.form.id,
         target: '.field-wrap',
-        onFormSubmit: function () {
+        onFormReady: function ($form) {
+          var inputElement = $form.querySelector('input[name="form_action"]')
+
+          if (inputElement && props.form?.action) {
+            inputElement.value = props.form.action
+          }
+        },
+        onFormSubmitted: function () {
           formIsSubmitted.value = true
+          appendSuccessMessage()
         }
       })
     }
