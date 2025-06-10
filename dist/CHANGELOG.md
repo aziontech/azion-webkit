@@ -1,3 +1,9 @@
+## [1.130.0](https://github.com/aziontech/azion-webkit/compare/v1.129.4...v1.130.0) (2025-06-10)
+
+### Features
+
+* add theme-switch slot to the simple footer ([eaf5e41](https://github.com/aziontech/azion-webkit/commit/eaf5e41694449b1907863c4056b9676f2728f456))
+
 ## [1.129.4](https://github.com/aziontech/azion-webkit/compare/v1.129.3...v1.129.4) (2025-06-10)
 
 ### Bug Fixes
