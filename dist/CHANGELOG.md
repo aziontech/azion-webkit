@@ -1,3 +1,9 @@
+## [1.129.3](https://github.com/aziontech/azion-webkit/compare/v1.129.2...v1.129.3) (2025-06-10)
+
+### Bug Fixes
+
+* prop to form redirect HeroHsFormRight.vue ([20d02de](https://github.com/aziontech/azion-webkit/commit/20d02dec09c45b810d8966645df22c75875f54ce))
+
 ## [1.129.2](https://github.com/aziontech/azion-webkit/compare/v1.129.1...v1.129.2) (2025-06-06)
 
 ### Bug Fixes
