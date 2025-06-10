@@ -23,7 +23,7 @@ export interface FeaturedCardsProps {
       label: string
     }
     logo: {
-      src: string
+      imageSrc: string
       alt: string
     }
     link: string
