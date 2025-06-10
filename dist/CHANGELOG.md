@@ -1,3 +1,75 @@
+## [1.129.3](https://github.com/aziontech/azion-webkit/compare/v1.129.2...v1.129.3) (2025-06-10)
+
+### Bug Fixes
+
+* prop to form redirect HeroHsFormRight.vue ([20d02de](https://github.com/aziontech/azion-webkit/commit/20d02dec09c45b810d8966645df22c75875f54ce))
+
+## [1.129.2](https://github.com/aziontech/azion-webkit/compare/v1.129.1...v1.129.2) (2025-06-06)
+
+### Bug Fixes
+
+* herohsformright d.ts ([6660a68](https://github.com/aziontech/azion-webkit/commit/6660a68927f9c0430096cbd97a911262c7f1b359))
+
+## [1.129.1](https://github.com/aziontech/azion-webkit/compare/v1.129.0...v1.129.1) (2025-06-06)
+
+### Bug Fixes
+
+* Hero HS Form Right with redirect ([6821840](https://github.com/aziontech/azion-webkit/commit/68218403d1f6063a1fd7043932e29d94df46a743))
+
+## [1.129.0](https://github.com/aziontech/azion-webkit/compare/v1.128.1...v1.129.0) (2025-06-06)
+
+### Features
+
+* added new form props ([63ca266](https://github.com/aziontech/azion-webkit/commit/63ca2661fc68d211989dc9db462e08d828fcf4bf))
+* enhances hero hs form and submission handling ([3178378](https://github.com/aziontech/azion-webkit/commit/3178378e466f5db7f0d1181a0b95b6d0c434b9a9))
+
+### Bug Fixes
+
+* clear old message ([61230d5](https://github.com/aziontech/azion-webkit/commit/61230d5058433e85b01b717dc98c2140496db354))
+
+## [1.128.1](https://github.com/aziontech/azion-webkit/compare/v1.128.0...v1.128.1) (2025-06-05)
+
+### Bug Fixes
+
+* SectionCardExpandable.vue hidden img ([2bcbb99](https://github.com/aziontech/azion-webkit/commit/2bcbb999ded572d678dd157a7f22a874fd05ccc7))
+
+## [1.128.0](https://github.com/aziontech/azion-webkit/compare/v1.127.3...v1.128.0) (2025-06-05)
+
+### Features
+
+* blocked sectioncardexpandable ([1721ab9](https://github.com/aziontech/azion-webkit/commit/1721ab9a25763ee0db234a13b46bc67c00943465))
+
+## [1.127.3](https://github.com/aziontech/azion-webkit/compare/v1.127.2...v1.127.3) (2025-06-03)
+
+### Bug Fixes
+
+* color content section ([42cb838](https://github.com/aziontech/azion-webkit/commit/42cb838b037a1eb3d05449d7d478d95bdddeddb3))
+
+## [1.127.2](https://github.com/aziontech/azion-webkit/compare/v1.127.1...v1.127.2) (2025-06-03)
+
+### Bug Fixes
+
+* balance title and description ([893fba4](https://github.com/aziontech/azion-webkit/commit/893fba462692d820e2c8c5df2bddbad7177d696e))
+
+## [1.127.1](https://github.com/aziontech/azion-webkit/compare/v1.127.0...v1.127.1) (2025-06-02)
+
+### Bug Fixes
+
+*  Prevent carousel rotation if item count is too low. ([8181dad](https://github.com/aziontech/azion-webkit/commit/8181dad10b883ddc80554e837562881002b0f4af))
+* section card carousel disable rotation if cards <= numVisible ([cde88fe](https://github.com/aziontech/azion-webkit/commit/cde88fe87b7456ffd08e6d4a70ecf8e0564fa8c5))
+
+## [1.127.0](https://github.com/aziontech/azion-webkit/compare/v1.126.5...v1.127.0) (2025-05-30)
+
+### Features
+
+* section sticky position prop ([a5cdff6](https://github.com/aziontech/azion-webkit/commit/a5cdff6bb82c7df719ece30237e9c5c04ea1cd5f))
+
+## [1.126.5](https://github.com/aziontech/azion-webkit/compare/v1.126.4...v1.126.5) (2025-05-29)
+
+### Bug Fixes
+
+* herohome params and descriptionRawHtml size ([dec82e9](https://github.com/aziontech/azion-webkit/commit/dec82e9beefb974226971d14f77c2eaccef1ca43))
+
 ## [1.126.4](https://github.com/aziontech/azion-webkit/compare/v1.126.3...v1.126.4) (2025-05-29)
 
 ### Bug Fixes

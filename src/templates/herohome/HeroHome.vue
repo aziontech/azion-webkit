@@ -1,8 +1,9 @@
 <template>
-  <HeroBlockBase
+  <HeroBase
     isDisplay
     :isCentralized="true"
     :description="description"
+    :descriptionRawHtml="descriptionRawHtml"
     :bannerNews="bannerNews"
   >
     <template #title>
@@ -19,7 +20,7 @@
     </template>
     <template #content>
       <div class="flex flex-col gap-4 md:gap-8 items-center text-center">
-        <ContentLogoBlock
+        <ContentLogo
           size="small"
           :isCentralized="true"
           :title="logosTitle"
@@ -27,13 +28,13 @@
         />
       </div>
     </template>
-  </HeroBlockBase>
+  </HeroBase>
 </template>
 
 <script setup>
-  import HeroBlockBase from '../herobase'
+  import HeroBase from '../herobase'
   import LinkButton from '../linkbutton'
-  import ContentLogoBlock from '../contentlogo'
+  import ContentLogo from '../contentlogo'
 
   defineProps({
     bannerNews: {

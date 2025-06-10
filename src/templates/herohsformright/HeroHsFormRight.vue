@@ -67,21 +67,43 @@
       default: () => []
     },
     form: {
-      type: Object // id, title
+      type: Object // id, title, action, successMessage
     }
   })
 
   const isLoading = ref(true)
   const formIsSubmitted = ref(false)
 
-  const loadHubSpotScript = () => {
+  const loadHubSpotScript = async () => {
     return new Promise((resolve, reject) => {
       const script = document.createElement('script')
+
       script.src = 'https://js.hsforms.net/forms/v2.js'
       script.onload = resolve
       script.onerror = reject
+
       document.head.appendChild(script)
     })
+  }
+
+  function appendSuccessMessage() {
+    const intervalId = setInterval(() => {
+      var successMessageElement = document.querySelector('.submitted-message')
+
+      if (successMessageElement) {
+        successMessageElement.innerHTML = ''
+
+        var paragraph = document.createElement('p')
+        paragraph.textContent = props.form.successMessage
+        successMessageElement.appendChild(paragraph)
+
+        clearInterval(intervalId)
+      }
+    }, 50)
+  }
+
+  const redirect = (destiny) => {
+    window.location.href = destiny
   }
 
   const createHubSpotForm = () => {
@@ -91,8 +113,20 @@
         portalId: '5759082',
         formId: props.form.id,
         target: '.field-wrap',
-        onFormSubmit: function () {
+        onFormReady: function ($form) {
+          let inputElement = $form.querySelector('input[name="form_action"]')
+
+          if (inputElement && props.form?.action) {
+            inputElement.value = props.form.action
+          }
+        },
+        onFormSubmitted: function () {
           formIsSubmitted.value = true
+
+          const formRedirect = props.form.redirect
+          const destiny = formRedirect && formRedirect.length ? formRedirect : null
+
+          destiny ? redirect(destiny) : appendSuccessMessage()
         }
       })
     }
@@ -124,14 +158,15 @@
       })
     }
 
-    // Check for form every second for up to 10 attempts
     let attempts = 0
     const checkForm = setInterval(() => {
       const form = document.querySelector('form')
+
       if (form || attempts >= 10) {
         clearInterval(checkForm)
         if (form) trackFormFilling(form)
       }
+
       attempts++
     }, 1000)
   }

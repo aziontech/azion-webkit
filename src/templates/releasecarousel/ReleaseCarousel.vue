@@ -4,9 +4,10 @@
       :value="data"
       :responsiveOptions="responsiveOptions"
       :numVisible="numVisible"
-      :circular="true"
+      :circular="isCircularEnabled"
       :autoplayInterval="autoplayInterval"
       :numScroll="numScroll"
+      :showNavigators="isCircularEnabled"
       :pt="{
         itemsContent: { class: 'pt-6' },
         previousButton: { class: 'hidden md:block' },
@@ -31,10 +32,11 @@
 </template>
 
 <script setup>
+  import { ref, onBeforeMount } from 'vue'
   import CardRelease from '../cardrelease'
   import Carousel from 'primevue/carousel'
 
-  defineProps({
+  const props = defineProps({
     data: {
       type: Array,
       required: true
@@ -73,4 +75,24 @@
       numScroll: 1
     }
   ]
+
+  const reversedResponsiveOptions = [...responsiveOptions].reverse()
+  const isCircularEnabled = ref(true)
+
+  const checkScreenSize = () => {
+    const screenSize = window.innerWidth
+    const breakpoint = reversedResponsiveOptions.find(({ breakpoint }) => {
+      const breakpointValue = parseInt(breakpoint)
+      return screenSize < breakpointValue
+    })
+
+    let numVisible = props.numVisible
+    if (breakpoint) numVisible = breakpoint.numVisible
+    isCircularEnabled.value = props.data.length > numVisible
+  }
+
+  onBeforeMount(() => {
+    checkScreenSize()
+    window.addEventListener('resize', checkScreenSize)
+  })
 </script>

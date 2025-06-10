@@ -25,6 +25,8 @@ export interface HeroHsFormRightProps {
   form: {
     id: string
     title: string
+    successMessage: string
+    redirect: string
   }
 }
 

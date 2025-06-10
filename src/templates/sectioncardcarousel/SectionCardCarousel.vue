@@ -11,12 +11,13 @@
     <template #main>
       <Carousel
         :value="cards"
-        :numVisible="4"
+        :numVisible="DEFAULT_NUMVISIBLE"
         :numScroll="1"
-        :circular="true"
+        :circular="isCircularEnabled"
         :autoplayInterval="5000"
         :responsiveOptions="responsiveOptions"
         :showIndicators="false"
+        :showNavigators="isCircularEnabled"
       >
         <template #item="slotProps">
           <div class="px-3 h-full">
@@ -45,13 +46,14 @@
 </template>
 
 <script setup>
+  import { ref, onBeforeMount } from 'vue'
   import Carousel from 'primevue/carousel'
   import ContentSection from '../contentsection'
   import CardBaseClickable from '../cardbaseclickable'
   import CardTitle from '../cardtitle'
   import CardDescription from '../carddescription'
 
-  defineProps({
+  const props = defineProps({
     overline: {
       type: String,
       default: () => ''
@@ -102,5 +104,27 @@
         }
       ]
     }
+  })
+
+  const reversedResponsiveOptions = [...props.responsiveOptions].reverse()
+
+  const isCircularEnabled = ref(true)
+  const DEFAULT_NUMVISIBLE = 4
+
+  const checkScreenSize = () => {
+    const screenSize = window.innerWidth
+    const breakpoint = reversedResponsiveOptions.find(({ breakpoint }) => {
+      const breakpointValue = parseInt(breakpoint)
+      return screenSize < breakpointValue
+    })
+
+    let numVisible = DEFAULT_NUMVISIBLE
+    if (breakpoint) numVisible = breakpoint.numVisible
+    isCircularEnabled.value = props.cards.length > numVisible
+  }
+
+  onBeforeMount(() => {
+    checkScreenSize()
+    window.addEventListener('resize', checkScreenSize)
   })
 </script>

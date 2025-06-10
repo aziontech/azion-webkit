@@ -10,10 +10,10 @@
       :value="data"
       :responsiveOptions="responsiveOptions"
       :numVisible="numVisible"
-      :circular="true"
-      :showNavigators="isLargeScreen"
+      :circular="isCircularEnabled"
+      :showNavigators="isLargeScreen && isCircularEnabled"
       :showIndicators="!isLargeScreen"
-      :autoplayInterval="autoplayInterval"
+      :autoplayInterval="autoplayInterval && isCircularEnabled"
       :numScroll="numScroll"
       :pt="{ itemsContent: { class: 'py-6' } }"
     >
@@ -34,7 +34,7 @@
   import Quote from '../quote'
   import Carousel from 'primevue/carousel'
 
-  defineProps({
+  const props = defineProps({
     data: {
       type: Array,
       required: true
@@ -74,9 +74,23 @@
     }
   ])
 
+  const reversedResponsiveOptions = [...responsiveOptions].reverse()
+
+  const isCircularEnabled = ref(true)
   const isLargeScreen = ref(true)
+
   const checkScreenSize = () => {
-    isLargeScreen.value = window.innerWidth >= 767
+    const screenSize = window.innerWidth
+    isLargeScreen.value = screenSize >= 767
+
+    const breakpoint = reversedResponsiveOptions.find(({ breakpoint }) => {
+      const breakpointValue = parseInt(breakpoint)
+      return screenSize < breakpointValue
+    })
+
+    let numVisible = props.numVisible
+    if (breakpoint) numVisible = breakpoint.numVisible
+    isCircularEnabled.value = props.cards.length > numVisible
   }
 
   onBeforeMount(() => {
