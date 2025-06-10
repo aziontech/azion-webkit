@@ -123,8 +123,8 @@
         onFormSubmitted: function () {
           formIsSubmitted.value = true
 
-          const redirect = props.form.redirect
-          const destiny = redirect && redirect.length ? redirect : null
+          const formRedirect = props.form.redirect
+          const destiny = formRedirect && formRedirect.length ? formRedirect : null
 
           destiny ? redirect(destiny) : appendSuccessMessage()
         }
