@@ -1,3 +1,9 @@
+## [1.129.4](https://github.com/aziontech/azion-webkit/compare/v1.129.3...v1.129.4) (2025-06-10)
+
+### Bug Fixes
+
+* featuredcards props name to match cloudcannon logo field ([466d71b](https://github.com/aziontech/azion-webkit/commit/466d71b09554c511f9b79930b6d6673e0a400fd2))
+
 ## [1.129.3](https://github.com/aziontech/azion-webkit/compare/v1.129.2...v1.129.3) (2025-06-10)
 
 ### Bug Fixes
