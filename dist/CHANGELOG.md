@@ -1,3 +1,9 @@
+## [1.130.1](https://github.com/aziontech/azion-webkit/compare/v1.130.0...v1.130.1) (2025-06-11)
+
+### Bug Fixes
+
+* Footer simple replace px-container class to px-shell ([6615223](https://github.com/aziontech/azion-webkit/commit/6615223c08ef51366cb58df9aeac47b3eeee236b))
+
 ## [1.130.0](https://github.com/aziontech/azion-webkit/compare/v1.129.4...v1.130.0) (2025-06-10)
 
 ### Features
