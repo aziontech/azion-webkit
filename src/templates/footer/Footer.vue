@@ -26,13 +26,14 @@
             v-if="socialButtons"
           >
             <LinkButton
-              v-for="({ icon, link, title }, index) in socialButtons"
+              v-for="({ icon, link, title, target }, index) in socialButtons"
               outlined
+              iconPos="center"
               :aria-label="title"
               :key="index"
               :icon="icon"
-              iconPos="center"
               :link="link"
+              :target="target || '_blank'"
             />
           </div>
         </div>
