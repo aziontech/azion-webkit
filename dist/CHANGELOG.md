@@ -1,3 +1,9 @@
+## [1.130.2](https://github.com/aziontech/azion-webkit/compare/v1.130.1...v1.130.2) (2025-06-18)
+
+### Bug Fixes
+
+* footer links with target prop ([a047ed7](https://github.com/aziontech/azion-webkit/commit/a047ed72fa8d3796c329f3f8b7195315afc9a34e))
+
 ## [1.130.1](https://github.com/aziontech/azion-webkit/compare/v1.130.0...v1.130.1) (2025-06-11)
 
 ### Bug Fixes
