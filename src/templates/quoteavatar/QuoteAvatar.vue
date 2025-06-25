@@ -1,9 +1,11 @@
 <template>
   <div
-    class="rounded px-10 md:px-20 md:gap-10 md:pt-10 pb-10 flex flex-col md:flex-row w-full items-center"
+    class="min-w-[360px] rounded p-10 md:p-20 md:gap-10 flex flex-col-reverse flex-col md:flex-row w-full"
     :class="[{ 'border surface-border': border }, { degrade: !disableDegrade }]"
   >
-    <div class="max-w-md w-full flex flex-col gap-4 py-10 min-h-60 justify-center">
+    <div
+      class="md:max-w-md w-full flex flex-col sm:justify-center gap-4 pt-10 md:pt-0 sm:text-center md:text-left"
+    >
       <p class="text-xl leading-normal">
         {{ text }}
       </p>
@@ -23,38 +25,22 @@
         />
       </div>
     </div>
-    <div class="h-full flex items-center justify-center w-full">
-      <ImageSwitcher>
-        <template
-          #lightImage
-          v-if="imageLight"
-        >
-          <img
-            :src="`${imageLight}?ims=x60`"
-            loading="lazy"
-            class="max-h-[60px]"
-            width="auto"
-            height="60"
-            :alt="alt"
-          />
-        </template>
-        <template #darkImage>
-          <img
-            :src="`${imageDark}?ims=x60`"
-            loading="lazy"
-            class="max-h-[60px]"
-            width="auto"
-            height="60"
-            :alt="alt"
-          />
-        </template>
-      </ImageSwitcher>
+    <div class="w-full h-full flex sm:justify-center">
+      <picture class="rounded overflow-hidden">
+        <img
+          :src="`${image}`"
+          loading="lazy"
+          class="max-h-[128px] rounded"
+          width="128"
+          height="128"
+          :alt="author"
+        />
+      </picture>
     </div>
   </div>
 </template>
 
 <script setup>
-  import ImageSwitcher from '../themeawareimageswitcher'
   import LinkButton from '../linkbutton'
 
   defineProps({
@@ -73,19 +59,12 @@
     author: {
       type: String
     },
-    imageLight: {
+    image: {
       type: String,
       required: false
     },
-    imageDark: {
-      type: String,
-      required: true
-    },
     button: {
       type: Object
-    },
-    alt: {
-      type: String
     }
   })
 </script>
