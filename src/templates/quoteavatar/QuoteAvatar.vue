@@ -6,7 +6,7 @@
       { degrade: !disableDegrade }
     ]"
   >
-    <div class="md:max-w-md w-full flex flex-col sm:justify-center gap-4 pt-10 md:pt-0 sm:text-center md:text-left">
+    <div class="md:max-w-md w-full flex flex-col sm:justify-center gap-4 pt-10 md:pt-0">
       <p class="text-xl leading-normal">
         {{ text }}
       </p>
@@ -26,7 +26,7 @@
         />
       </div>
     </div>
-    <div class="w-full h-full flex sm:justify-center">
+    <div class="w-full h-full flex md:justify-center">
       <picture class="rounded overflow-hidden">
         <img
           :src="`${image}`"
