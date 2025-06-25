@@ -1,11 +1,12 @@
 <template>
   <div
     class="min-w-[360px] rounded p-10 md:p-20 md:gap-10 flex flex-col-reverse flex-col md:flex-row w-full"
-    :class="[{ 'border surface-border': border }, { degrade: !disableDegrade }]"
+    :class="[
+      { 'border surface-border': border },
+      { degrade: !disableDegrade }
+    ]"
   >
-    <div
-      class="md:max-w-md w-full flex flex-col sm:justify-center gap-4 pt-10 md:pt-0 sm:text-center md:text-left"
-    >
+    <div class="md:max-w-md w-full flex flex-col sm:justify-center gap-4 pt-10 md:pt-0 sm:text-center md:text-left">
       <p class="text-xl leading-normal">
         {{ text }}
       </p>
