@@ -1,3 +1,14 @@
+## [1.131.0](https://github.com/aziontech/azion-webkit/compare/v1.130.2...v1.131.0) (2025-06-25)
+
+### Features
+
+* quoteavatar component and ajudsts d.ts of quote.d.ts ([0df5d1e](https://github.com/aziontech/azion-webkit/commit/0df5d1ef40cecf1f5d75cff409b93d7613f88eb1))
+
+### Bug Fixes
+
+* renaming file QuoteCarousel.ts --> QuoteCarousel.d.ts ([8391800](https://github.com/aziontech/azion-webkit/commit/839180028e0c21c4028f10da7bee61af742fbaaf))
+* renaming file QuoteCarousel.ts --> QuoteCarousel.d.ts ([4ff89c1](https://github.com/aziontech/azion-webkit/commit/4ff89c1be04d30552ff6752958fc70661ae86cac))
+
 ## [1.130.2](https://github.com/aziontech/azion-webkit/compare/v1.130.1...v1.130.2) (2025-06-18)
 
 ### Bug Fixes
