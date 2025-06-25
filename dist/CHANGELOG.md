@@ -1,3 +1,9 @@
+## [1.132.0](https://github.com/aziontech/azion-webkit/compare/v1.131.0...v1.132.0) (2025-06-25)
+
+### Features
+
+* adding sectionquoteavatar ([2928667](https://github.com/aziontech/azion-webkit/commit/2928667257b95c06e4df39db2c820008a54db013))
+
 ## [1.131.0](https://github.com/aziontech/azion-webkit/compare/v1.130.2...v1.131.0) (2025-06-25)
 
 ### Features
