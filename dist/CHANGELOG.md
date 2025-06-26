@@ -1,3 +1,9 @@
+## [1.133.2](https://github.com/aziontech/azion-webkit/compare/v1.133.1...v1.133.2) (2025-06-26)
+
+### Bug Fixes
+
+* SectionQuoteAvatar with single and multiple items ([6d79d1e](https://github.com/aziontech/azion-webkit/commit/6d79d1e1ec1322bc35f1c39e56a541303537159f))
+
 ## [1.133.1](https://github.com/aziontech/azion-webkit/compare/v1.133.0...v1.133.1) (2025-06-26)
 
 ### Bug Fixes
