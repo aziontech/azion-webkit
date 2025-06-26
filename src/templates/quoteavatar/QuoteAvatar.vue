@@ -1,18 +1,15 @@
 <template>
   <div
     class="min-w-[360px] rounded p-10 md:p-20 md:gap-10 flex flex-col-reverse flex-col md:flex-row w-full"
-    :class="[
-      { 'border surface-border': border },
-      { degrade: !disableDegrade }
-    ]"
+    :class="[{ 'border surface-border': border }, { degrade: !disableDegrade }]"
   >
     <div class="md:max-w-md w-full flex flex-col sm:justify-center gap-4 pt-10 md:pt-0">
-      <p class="text-xl leading-normal">
+      <p class="text-base text-color-secondary leading-normal">
         {{ text }}
       </p>
       <p
         v-if="author"
-        class="text-sm text-color-secondary text-medium"
+        class="text-xs text-color"
       >
         {{ author }}
       </p>
