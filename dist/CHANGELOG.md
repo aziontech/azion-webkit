@@ -1,3 +1,10 @@
+## [1.132.1](https://github.com/aziontech/azion-webkit/compare/v1.132.0...v1.132.1) (2025-06-26)
+
+### Bug Fixes
+
+* font-size quoteavatar ([9f6c031](https://github.com/aziontech/azion-webkit/commit/9f6c0316f8e5e9683a4c1c38015aba8b4e4841e8))
+* quoteavatar remove md centered items ([c0a0c6a](https://github.com/aziontech/azion-webkit/commit/c0a0c6a15b9fcf84782b9408637acdf1cff2c097))
+
 ## [1.132.0](https://github.com/aziontech/azion-webkit/compare/v1.131.0...v1.132.0) (2025-06-25)
 
 ### Features
