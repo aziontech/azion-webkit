@@ -9,6 +9,8 @@ export default {
 const data = [
   {
     quote: {
+      border: true,
+      disableDegrade: false,
       text: `A Azion protege o Agibank, banco omnichannel brasileiro com 1M+ de clientes, de ataques que ameaçam suas aplicações.`,
       imageLight:
         'https://www.azion.com/assets/pages/products/images/light/edge-application/omelete-co-logo-black.png',
@@ -27,6 +29,8 @@ const data = [
   },
   {
     quote: {
+      border: true,
+      disableDegrade: false,
       text: `A Azion protege o Agibank, banco omnichannel brasileiro com 1M+ de clientes, de ataques que ameaçam suas aplicações.`,
       imageLight:
         'https://www.azion.com/assets/pages/products/images/dark/edge-functions/renner-logo.svg',
@@ -45,6 +49,8 @@ const data = [
   },
   {
     quote: {
+      border: true,
+      disableDegrade: false,
       text: `A Azion protege o Agibank, banco omnichannel brasileiro com 1M+ de clientes, de ataques que ameaçam suas aplicações.`,
       imageLight:
         'https://www.azion.com/assets/pages/products/images/light/edge-application/omelete-co-logo-black.png',

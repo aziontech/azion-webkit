@@ -11,8 +11,8 @@
       }"
     >
       <template #item="slotProps">
-        <Quote
-          v-bind="slotProps.data.quote"
+        <QuoteAvatar
+          v-bind="slotProps.data"
           :border="false"
           disableDegrade
         />
@@ -23,7 +23,7 @@
 
 <script setup>
   import { ref } from 'vue'
-  import Quote from '../quote'
+  import QuoteAvatar from '../quoteavatar'
   import Carousel from 'primevue/carousel'
 
   const props = defineProps({
