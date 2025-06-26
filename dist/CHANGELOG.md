@@ -1,3 +1,9 @@
+## [1.133.0](https://github.com/aziontech/azion-webkit/compare/v1.132.1...v1.133.0) (2025-06-26)
+
+### Features
+
+* addind component group contentquoteavatar ([586c733](https://github.com/aziontech/azion-webkit/commit/586c7336c9c76477b7781050ec22d64a985fa046))
+
 ## [1.132.1](https://github.com/aziontech/azion-webkit/compare/v1.132.0...v1.132.1) (2025-06-26)
 
 ### Bug Fixes
