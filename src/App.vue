@@ -1,41 +1,42 @@
 <template>
   <Container class="surface-ground">
-    <HeroHsFormRight v-bind="MOCK" />
+    <SectionQuoteAvatar v-bind="MOCK" />
   </Container>
 </template>
 
 <script setup>
   import Container from './templates/container'
-  import HeroHsFormRight from './templates/herohsformright'
+  import SectionQuoteAvatar from './templates/sectionquoteavatar'
 
   const MOCK = {
-    overline: 'WEB APPLICATION FIREWALL (WAF)',
-    title: 'Web Application Firewall: a proteção avançada que especialistas de segurança confiam',
-    description:
-      'Com o WAF da Azion, você protege suas aplicações e APIs das ameaças OWASP Top 10 até os mais sofisticados ataques zero-day.',
-    list: [
+    data: [
       {
-        icon: 'pi pi-shield',
-        title: 'Proteja',
-        description:
-          'Proteja suas aplicações e APIs contra SQL Injection, XSS, RFI e outras ameaças'
+        text: `”Azion accelerates content delivery for Brazil's largest entertainment company.”`,
+        image: 'https://www.azion.com/assets/pages/about/perfil-6.png',
+        author: 'Rafael Umann, Chief Executive Officer, Azion Technologies',
+        button: {
+          link: 'https://www.azion.com/en/success-case/axur-reduced-time-to-takedown-with-ai/',
+          label: 'See success case'
+        }
       },
       {
-        icon: 'pi pi-check',
-        title: 'Bloqueie',
-        description: 'Bloqueie ameaças no edge, antes de chegarem a sua aplicação ou infraestrutura'
+        text: `”Azion accelerates content delivery for Brazil's largest entertainment company.”`,
+        image: 'https://www.azion.com/assets/pages/about/perfil-6.png',
+        author: 'Rafael Umann, Chief Executive Officer, Azion Technologies',
+        button: {
+          link: 'https://www.azion.com/en/success-case/axur-reduced-time-to-takedown-with-ai/',
+          label: 'See success case'
+        }
       },
       {
-        icon: 'pi pi-dollar',
-        title: 'Economize',
-        description: 'Economize tempo com regras gerenciadas e passe mais tempo criando aplicações'
+        text: `”Azion accelerates content delivery for Brazil's largest entertainment company.”`,
+        image: 'https://www.azion.com/assets/pages/about/perfil-6.png',
+        author: 'Rafael Umann, Chief Executive Officer, Azion Technologies',
+        button: {
+          link: 'https://www.azion.com/en/success-case/axur-reduced-time-to-takedown-with-ai/',
+          label: 'See success case'
+        }
       }
-    ],
-    form: {
-      title: 'Transforme a segurança da Azion em seu diferencial competitivo',
-      id: '29df57c8-07c8-4c5b-9b2f-7a7154744287',
-      action: 'test_action',
-      successMessage: 'Mensagem de sucesso!'
-    }
+    ]
   }
 </script>

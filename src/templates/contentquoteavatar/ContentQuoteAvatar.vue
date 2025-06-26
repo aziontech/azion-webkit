@@ -3,6 +3,7 @@
     <Carousel
       :value="carouselData"
       :showNavigators="false"
+      :showIndicators="isToShowIndicators"
       :numVisible="1"
       :page="pageProp"
       :pt="{
@@ -33,6 +34,7 @@
       default: () => []
     }
   })
+  const isToShowIndicators = props.data.length > 1 ? true : false
 
   const carouselData = props.data.slice(0, 3)
   const pageProp = ref(0)

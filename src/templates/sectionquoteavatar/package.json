@@ -1,7 +1,7 @@
 {
-  "main": "./sectionquote.js",
-  "types": "./SectionQuote.d.ts",
+  "main": "./sectionquoteavatar.js",
+  "types": "./SectionQuoteAvatar.d.ts",
   "browser": {
-    "./sfc": "./SectionQuote.vue"
+    "./sfc": "./SectionQuoteAvatar.vue"
   }
 }
