@@ -1,3 +1,9 @@
+## [1.133.1](https://github.com/aziontech/azion-webkit/compare/v1.133.0...v1.133.1) (2025-06-26)
+
+### Bug Fixes
+
+* contentquoteavatar border ([ae947aa](https://github.com/aziontech/azion-webkit/commit/ae947aafee890527cda56bebf5ad191966a3a1df))
+
 ## [1.133.0](https://github.com/aziontech/azion-webkit/compare/v1.132.1...v1.133.0) (2025-06-26)
 
 ### Features
