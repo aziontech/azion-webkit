@@ -8,8 +8,6 @@ export default {
 
 const data = [
   {
-    border: true,
-    disableDegrade: false,
     text: `”Azion accelerates content delivery for Brazil's largest entertainment company.”`,
     image: 'https://www.azion.com/assets/pages/about/perfil-6.png',
     author: 'Rafael Umann, Chief Executive Officer, Azion Technologies',
@@ -19,8 +17,6 @@ const data = [
     }
   },
   {
-    border: true,
-    disableDegrade: false,
     text: `”Azion accelerates content delivery for Brazil's largest entertainment company.”`,
     image: 'https://www.azion.com/assets/pages/about/perfil-6.png',
     author: 'Rafael Umann, Chief Executive Officer, Azion Technologies',
@@ -30,8 +26,6 @@ const data = [
     }
   },
   {
-    border: true,
-    disableDegrade: false,
     text: `”Azion accelerates content delivery for Brazil's largest entertainment company.”`,
     image: 'https://www.azion.com/assets/pages/about/perfil-6.png',
     author: 'Rafael Umann, Chief Executive Officer, Azion Technologies',
