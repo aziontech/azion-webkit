@@ -25,8 +25,8 @@
                 size="small"
                 :label="item.label"
                 :link="item.link"
-                :icon="item.arrow ? 'pi pi-arrow-right' : undefined"
-                :iconPos="item.arrow ? 'right' : undefined"
+                :icon="item.icon || ''"
+                :iconPos="item.icon ? 'right' : undefined"
                 class="max-w-fit"
               />
             </li>

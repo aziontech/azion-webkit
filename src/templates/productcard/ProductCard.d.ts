@@ -20,12 +20,12 @@ export interface ProductCardProps {
   /** Optional href for main segment */
   link?: string
   /**
-   * List of link objects { label, link, arrow? }
+   * List of link objects { label, link, icon? }
    */
   links: Array<{
     label: string
     link: string
-    arrow?: boolean
+    icon?: string
   }>
   /**
    * When true, displays an overline labeled "Add-ons" above the links
