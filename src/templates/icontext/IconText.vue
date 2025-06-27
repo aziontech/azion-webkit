@@ -2,7 +2,9 @@
   <div class="flex gap-3">
     <div>
       <Tile v-bind="{ severity }">
-        <i :class="icon" />
+        <slot name="icon">
+          <i :class="icon" />
+        </slot>
       </Tile>
     </div>
     <div class="max-w-lg">

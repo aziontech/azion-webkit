@@ -3,9 +3,13 @@
     :is="href ? 'a' : 'div'"
     :href="href"
     :title="title"
-    class="p-3 group hover:surface-hover rounded-md transition-all"
+    :class="['p-3 group rounded-md transition-all', href ? 'hover:surface-hover' : '']"
   >
-    <IconText v-bind="{ title, description, icon, tag, tagSeverity, severity }" />
+    <IconText v-bind="{ title, description, icon, tag, tagSeverity, severity }">
+      <template #icon>
+        <slot name="icon" />
+      </template>
+    </IconText>
   </component>
 </template>
 

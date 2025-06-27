@@ -4,7 +4,11 @@
     <ProductCard
       v-bind="FEATURE"
       class="mt-8"
-    />
+    >
+      <template #icon>
+        <span class="pi pi-bolt text-xl text-primary-500" />
+      </template>
+    </ProductCard>
   </Container>
 </template>
 

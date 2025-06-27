@@ -9,7 +9,11 @@
           :description="description"
           :icon="icon"
           severity="primary"
-        />
+        >
+          <template #icon>
+            <slot name="icon" />
+          </template>
+        </IconTextSegment>
         <ul class="flex flex-col gap-2 ml-12">
           <li
             v-for="(item, index) in links"

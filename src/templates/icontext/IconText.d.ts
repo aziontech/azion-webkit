@@ -33,6 +33,8 @@ export interface IconTextSegmentSlots {
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
   default(): VNode[]
+  /** Custom icon slot */
+  icon(): VNode[]
 }
 
 /**
