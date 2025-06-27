@@ -19,8 +19,21 @@ export interface ProductCardProps {
   icon?: string
   /** Optional href for main segment */
   link?: string
-  /** List of link objects { label, link } */
-  links: []
+  /**
+   * List of link objects { label, link, arrow? }
+   */
+  links: Array<{
+    label: string
+    link: string
+    arrow?: boolean
+  }>
+  /**
+   * Optional list of add-ons { label, link }
+   */
+  addons?: Array<{
+    label: string
+    link: string
+  }>
   /**
    * Card background color style
    * @defaultValue 'outlined'

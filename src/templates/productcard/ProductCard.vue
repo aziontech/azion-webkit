@@ -24,10 +24,31 @@
               size="small"
               :label="item.label"
               :link="item.link"
+              :icon="item.arrow ? 'pi pi-arrow-right' : undefined"
+              :iconPos="item.arrow ? 'right' : undefined"
               class="max-w-fit"
             />
           </li>
         </ul>
+
+        <template v-if="addons && addons.some((addon) => addon.label && addon.label.trim() !== '')">
+          <div class="ml-12">
+            <Overline label="Add-ons" />
+            <div class="flex flex-col gap-2 pt-3 -ml-4">
+              <LinkButton
+                v-for="{ label, link } in addons.filter(
+                  (addon) => addon.label && addon.label.trim() !== ''
+                )"
+                text
+                :label="label"
+                :link="link"
+                icon="pi pi-arrow-right"
+                iconPos="right"
+                class="max-w-fit"
+              />
+            </div>
+          </div>
+        </template>
       </div>
     </template>
   </CardBase>
@@ -37,6 +58,7 @@
   import CardBase from '../cardbase'
   import LinkButton from '../linkbutton'
   import IconTextSegment from '../icontextsegment'
+  import Overline from '../overline'
 
   const props = defineProps({
     title: {
@@ -61,6 +83,11 @@
     links: {
       type: Array,
       required: true,
+      default: () => []
+    },
+    addons: {
+      type: Array,
+      required: false,
       default: () => []
     },
     backgroundColor: {
