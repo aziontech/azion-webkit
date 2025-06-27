@@ -12,10 +12,7 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  * Defines valid properties in IconTextSegment component.
  */
 export interface IconTextSegmentProps {
-  /**
-   * @defaultValue '#'
-   */
-  href: string
+  href?: string
   title: string
   description?: string
   icon?: string

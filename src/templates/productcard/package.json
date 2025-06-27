@@ -1,0 +1,7 @@
+{
+  "main": "./productcard.js",
+  "types": "./ProductCard.d.ts",
+  "browser": {
+    "./sfc": "./ProductCard.vue"
+  }
+}

@@ -1,11 +1,12 @@
 <template>
-  <a
+  <component
+    :is="href ? 'a' : 'div'"
     :href="href"
     :title="title"
-    class="p-3 group hover:surface-hover rounded-md transition-all"
+    :class="['p-3 group rounded-md transition-all', href ? 'hover:surface-hover' : '']"
   >
     <IconText v-bind="{ title, description, icon, tag, tagSeverity, severity }" />
-  </a>
+  </component>
 </template>
 
 <script setup>
@@ -14,8 +15,7 @@
   defineProps({
     href: {
       type: String,
-      required: true,
-      default: '#'
+      required: false
     },
     title: {
       type: String,
