@@ -11,9 +11,9 @@
       { 'p-button-secondary': severity === 'secondary' },
       { 'p-button-info': severity === 'info' },
       { 'p-button-sm': size === 'small' },
-      { 'flex flex-row-reverse': finalIconPos === 'left' },
-      { 'p-button-icon-only': finalIconPos === 'center' },
-      { 'md:justify-start': finalIconPos !== 'center' },
+      { 'flex flex-row-reverse': computedIconPos === 'left' },
+      { 'p-button-icon-only': computedIconPos === 'center' },
+      { 'md:justify-start': computedIconPos !== 'center' },
       { 'p-button-link pl-0 pr-0 hover:underline': textLink }
     ]"
   >
@@ -22,9 +22,9 @@
     </template>
 
     <span
-      v-if="finalIconPos"
+      v-if="computedIconPos"
       :style="customIconStyle"
-      :class="`pi p-button-icon ${finalIcon}`"
+      :class="`pi p-button-icon ${computedIcon}`"
       data-pc-section="icon"
     />
   </a>
@@ -93,12 +93,12 @@
     }
   })
 
-  const finalIcon = computed(() => {
+  const computedIcon = computed(() => {
     if (props.icon) return props.icon
     return props.arrow ? 'pi pi-arrow-right' : undefined
   })
 
-  const finalIconPos = computed(() => {
+  const computedIconPos = computed(() => {
     if (props.iconPos) return props.iconPos
     return props.arrow ? 'right' : undefined
   })
