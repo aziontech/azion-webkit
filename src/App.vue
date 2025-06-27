@@ -5,6 +5,10 @@
       v-bind="FEATURE"
       class="mt-8"
     />
+    <FeatureCategoryCard
+      class="mt-8"
+      v-bind="FEATURE_CATEGORY"
+    />
   </Container>
 </template>
 
@@ -12,6 +16,7 @@
   import Container from './templates/container'
   import SectionQuoteAvatar from './templates/sectionquoteavatar'
   import ProductCard from './templates/productcard'
+  import FeatureCategoryCard from './templates/featurecategorycard'
 
   const MOCK = {
     data: [
@@ -54,5 +59,15 @@
       { label: 'Get started', link: '#', arrow: true }
     ],
     addons: true
+  }
+
+  const FEATURE_CATEGORY = {
+    title: 'Edge Functions',
+    description: 'Run serverless functions close to your users.',
+    icon: 'pi pi-bolt',
+    links: [
+      { label: 'Docs', link: '#' },
+      { label: 'Get started', link: '#' }
+    ]
   }
 </script>

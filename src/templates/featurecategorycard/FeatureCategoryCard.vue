@@ -1,21 +1,18 @@
 <template>
-  <CardBase :backgroundColor="backgroundColor">
+  <CardBase backgroundColor="outlined">
     <template #content>
       <div class="flex flex-col gap-6">
-        <IconTextSegment
-          class="h-full"
-          :href="link"
-          :title="title"
-          :description="description"
-          :icon="icon"
-          severity="primary"
-        />
+        <div class="flex gap-4 items-start">
+          <Tile severity="primary">
+            <i :class="icon" />
+          </Tile>
+          <div class="flex flex-col">
+            <h4 class="m-0 font-semibold">{{ title }}</h4>
+            <p class="m-0 text-color-secondary">{{ description }}</p>
+          </div>
+        </div>
         <div class="ml-12">
-          <Overline
-            v-if="addons"
-            label="Add-ons"
-          />
-          <ul :class="['flex flex-col gap-2', addons ? 'pt-3 -ml-4' : '']">
+          <ul class="flex flex-col gap-2">
             <li
               v-for="(item, index) in links"
               :key="index"
@@ -25,8 +22,6 @@
                 size="small"
                 :label="item.label"
                 :link="item.link"
-                :icon="item.arrow ? 'pi pi-arrow-right' : undefined"
-                :iconPos="item.arrow ? 'right' : undefined"
                 class="max-w-fit"
               />
             </li>
@@ -40,8 +35,7 @@
 <script setup>
   import CardBase from '../cardbase'
   import LinkButton from '../linkbutton'
-  import IconTextSegment from '../icontextsegment'
-  import Overline from '../overline'
+  import Tile from '../tile'
 
   const props = defineProps({
     title: {
@@ -59,25 +53,10 @@
       required: false,
       default: ''
     },
-    link: {
-      type: String,
-      required: false
-    },
     links: {
       type: Array,
       required: true,
       default: () => []
-    },
-    addons: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
-    backgroundColor: {
-      type: String,
-      required: false,
-      default: 'outlined',
-      options: ['outlined', 'highlighted', 'shape', 'default']
     }
   })
 </script>

@@ -11,9 +11,9 @@
       { 'p-button-secondary': severity === 'secondary' },
       { 'p-button-info': severity === 'info' },
       { 'p-button-sm': size === 'small' },
-      { 'flex flex-row-reverse': computedIconPos === 'left' },
-      { 'p-button-icon-only': computedIconPos === 'center' },
-      { 'md:justify-start': computedIconPos !== 'center' },
+      { 'flex flex-row-reverse': iconPos === 'left' },
+      { 'p-button-icon-only': iconPos === 'center' },
+      { 'md:justify-start': iconPos !== 'center' },
       { 'p-button-link pl-0 pr-0 hover:underline': textLink }
     ]"
   >
@@ -22,18 +22,16 @@
     </template>
 
     <span
-      v-if="computedIconPos"
+      v-if="iconPos"
       :style="customIconStyle"
-      :class="`pi p-button-icon ${computedIcon}`"
+      :class="`pi p-button-icon ${icon}`"
       data-pc-section="icon"
     />
   </a>
 </template>
 
 <script setup>
-  import { computed } from 'vue'
-
-  const props = defineProps({
+  defineProps({
     icon: {
       type: String,
       required: false
@@ -46,11 +44,6 @@
       type: String,
       required: false,
       options: ['left', 'right', 'center']
-    },
-    arrow: {
-      type: Boolean,
-      required: false,
-      default: false
     },
     label: {
       type: String,
@@ -91,16 +84,6 @@
       type: Boolean,
       required: false
     }
-  })
-
-  const computedIcon = computed(() => {
-    if (props.icon) return props.icon
-    return props.arrow ? 'pi pi-arrow-right' : undefined
-  })
-
-  const computedIconPos = computed(() => {
-    if (props.iconPos) return props.iconPos
-    return props.arrow ? 'right' : undefined
   })
 
   function capitalizeLetter(word) {
