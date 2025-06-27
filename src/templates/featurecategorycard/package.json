@@ -1,0 +1,7 @@
+{
+  "main": "./featurecategorycard.js",
+  "types": "./FeatureCategoryCard.d.ts",
+  "browser": {
+    "./sfc": "./FeatureCategoryCard.vue"
+  }
+}
