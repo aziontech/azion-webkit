@@ -1,7 +1,7 @@
 <template>
   <CardBase :backgroundColor="backgroundColor">
     <template #content>
-      <div class="flex flex-col gap-6">
+      <div class="flex flex-col gap-2">
         <IconTextSegment
           class="h-full"
           :href="link"

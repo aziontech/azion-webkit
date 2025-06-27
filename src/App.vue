@@ -50,9 +50,9 @@
     description: 'Cache your content at the edge to improve performance.',
     icon: 'pi pi-star',
     links: [
-      { label: 'Docs', link: '#', icon: 'pi pi-arrow-right' },
+      { label: 'Docs', link: '#', icon: '' },
       { label: 'Get started', link: '#', icon: 'pi pi-arrow-right' }
     ],
-    addons: true
+    // addons: true
   }
 </script>
