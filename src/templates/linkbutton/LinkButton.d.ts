@@ -30,6 +30,11 @@ export interface LinkButtonProps {
    */
   link?: string | undefined
   /**
+   * When enabled, displays a right arrow icon
+   * @defaultValue false
+   */
+  arrow?: boolean
+  /**
    * Severity of LinkButton [info, secondary]
    * @defaultValue info
    */

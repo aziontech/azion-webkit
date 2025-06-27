@@ -9,46 +9,28 @@
           :description="description"
           :icon="icon"
           severity="primary"
-        >
-          <template #icon>
-            <slot name="icon" />
-          </template>
-        </IconTextSegment>
-        <ul class="flex flex-col gap-2 ml-12">
-          <li
-            v-for="(item, index) in links"
-            :key="index"
-          >
-            <LinkButton
-              text
-              size="small"
-              :label="item.label"
-              :link="item.link"
-              :icon="item.arrow ? 'pi pi-arrow-right' : undefined"
-              :iconPos="item.arrow ? 'right' : undefined"
-              class="max-w-fit"
-            />
-          </li>
-        </ul>
-
-        <template v-if="addons && addons.some((addon) => addon.label && addon.label.trim() !== '')">
-          <div class="ml-12">
-            <Overline label="Add-ons" />
-            <div class="flex flex-col gap-2 pt-3 -ml-4">
+        />
+        <div class="ml-12">
+          <Overline
+            v-if="addons"
+            label="Add-ons"
+          />
+          <ul :class="['flex flex-col gap-2', addons ? 'pt-3 -ml-4' : '']">
+            <li
+              v-for="(item, index) in links"
+              :key="index"
+            >
               <LinkButton
-                v-for="{ label, link } in addons.filter(
-                  (addon) => addon.label && addon.label.trim() !== ''
-                )"
                 text
-                :label="label"
-                :link="link"
-                icon="pi pi-arrow-right"
-                iconPos="right"
+                size="small"
+                :label="item.label"
+                :link="item.link"
+                :arrow="item.arrow"
                 class="max-w-fit"
               />
-            </div>
-          </div>
-        </template>
+            </li>
+          </ul>
+        </div>
       </div>
     </template>
   </CardBase>
@@ -86,9 +68,9 @@
       default: () => []
     },
     addons: {
-      type: Array,
+      type: Boolean,
       required: false,
-      default: () => []
+      default: false
     },
     backgroundColor: {
       type: String,

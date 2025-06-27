@@ -28,12 +28,10 @@ export interface ProductCardProps {
     arrow?: boolean
   }>
   /**
-   * Optional list of add-ons { label, link }
+   * When true, displays an overline labeled "Add-ons" above the links
+   * @defaultValue false
    */
-  addons?: Array<{
-    label: string
-    link: string
-  }>
+  addons?: boolean
   /**
    * Card background color style
    * @defaultValue 'outlined'
@@ -49,8 +47,6 @@ export interface ProductCardSlots {
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
   default(): VNode[]
-  /** Custom icon slot */
-  icon(): VNode[]
 }
 
 /**

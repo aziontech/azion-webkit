@@ -4,11 +4,7 @@
     <ProductCard
       v-bind="FEATURE"
       class="mt-8"
-    >
-      <template #icon>
-        <span class="pi pi-bolt text-xl text-primary-500" />
-      </template>
-    </ProductCard>
+    />
   </Container>
 </template>
 
@@ -55,11 +51,8 @@
     icon: 'pi pi-star',
     links: [
       { label: 'Docs', link: '#', arrow: true },
-      { label: 'Get started', link: '#' }
+      { label: 'Get started', link: '#', arrow: true }
     ],
-    addons: [
-      { label: 'Advanced security', link: '#' },
-      { label: 'High availability', link: '#' }
-    ]
+    addons: true
   }
 </script>
