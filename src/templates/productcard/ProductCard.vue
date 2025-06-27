@@ -15,7 +15,7 @@
             v-if="addons"
             label="Add-ons"
           />
-          <ul :class="['flex flex-col gap-2', addons ? 'pt-3 -ml-4' : '']">
+          <ul :class="['flex flex-col gap-2 -ml-4', addons ? 'pt-3' : '']">
             <li
               v-for="(item, index) in links"
               :key="index"
