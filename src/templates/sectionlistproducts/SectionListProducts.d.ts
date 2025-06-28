@@ -12,6 +12,11 @@ type List = {
   icon: string
   title: string
   description: string
+  link?: string
+  addons?: Array<{
+    label: string
+    link: string
+  }>
 }
 
 /**
@@ -21,7 +26,7 @@ export interface SectionListProductsProps {
   titleTag: string
   title: string
   overline: string
-  list: List
+  list: List[]
 }
 
 /**
