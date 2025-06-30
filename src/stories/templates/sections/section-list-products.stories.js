@@ -47,8 +47,9 @@ Default.args = {
       title: 'Edge Application',
       description:
         'Enables the development of web applications to run on the Azion Edge Computing Platform.',
-      link: 'https://www.azion.com/en/products/edge-application/',
-      addons: [
+      // link: 'https://www.azion.com/en/products/edge-application/',
+      addons: true,
+      links: [
         {
           label: 'Application Accelerator',
           link: 'https://www.azion.com/en/products/application-accelerator/'
@@ -64,6 +65,29 @@ Default.args = {
       ]
     },
     {
+      icon: 'ai ai-edge-storage',
+      title: 'Edge Storage',
+      description:
+        'Facilitates low-latency storage and retrieval of objects anywhere, with no vendor lock-in via an S3-compatible API.',
+      link: 'https://www.azion.com/en/products/edge-storage/',
+      addons: true,
+      links: [
+        {
+          label: 'Application Accelerator',
+          link: 'https://www.azion.com/en/products/application-accelerator/'
+        }
+      ]
+    },
+    {
+      addons: false,
+      icon: 'ai ai-edge-storage',
+      title: 'Edge Storage',
+      description:
+        'Facilitates low-latency storage and retrieval of objects anywhere, with no vendor lock-in via an S3-compatible API.',
+      link: 'https://www.azion.com/en/products/edge-storage/'
+    },
+    {
+      addons: false,
       icon: 'ai ai-edge-storage',
       title: 'Edge Storage',
       description:
