@@ -1,11 +1,9 @@
 <template>
   <Container class="surface-ground">
-    <ProductCard v-bind="FEATURE" />
     <div class="px-container flex flex-row gap-3">
       <ProductCard v-bind="FEATURE2" />
       <ProductCard v-bind="FEATURE" />
       <ProductCard v-bind="FEATURE2" />
-
     </div>
   </Container>
 </template>
@@ -22,7 +20,7 @@ const FEATURE = {
     { label: 'Docs', link: '#', icon: '' },
     { label: 'Get started', link: '#', icon: 'pi pi-arrow-right' }
   ],
-  // addons: true
+  addons: false
 }
 
 const FEATURE2 = {
