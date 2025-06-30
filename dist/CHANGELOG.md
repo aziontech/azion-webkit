@@ -1,3 +1,9 @@
+## [1.134.1](https://github.com/aziontech/azion-webkit/compare/v1.134.0...v1.134.1) (2025-06-30)
+
+### Bug Fixes
+
+* trigger and up minor ([2705b92](https://github.com/aziontech/azion-webkit/commit/2705b9265c2c04626076da3034f3249d95456f26))
+
 ## [1.134.0](https://github.com/aziontech/azion-webkit/compare/v1.133.2...v1.134.0) (2025-06-30)
 
 ### Features
