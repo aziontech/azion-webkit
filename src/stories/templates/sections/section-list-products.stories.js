@@ -41,6 +41,7 @@ export const Default = Template.bind({})
 Default.args = {
   overline: 'Products',
   title: 'Products and Services Related to Jamstack Websites',
+  grid: false,
   list: [
     {
       icon: 'ai ai-edge-application',
@@ -70,6 +71,20 @@ Default.args = {
       description:
         'Facilitates low-latency storage and retrieval of objects anywhere, with no vendor lock-in via an S3-compatible API.',
       link: 'https://www.azion.com/en/products/edge-storage/',
+      addons: false,
+      links: [
+        {
+          label: 'Application Accelerator',
+          link: 'https://www.azion.com/en/products/application-accelerator/'
+        }
+      ]
+    },
+    {
+      icon: 'ai ai-edge-storage',
+      title: 'Edge Storage',
+      description:
+        'Facilitates low-latency storage and retrieval of objects anywhere, with no vendor lock-in via an S3-compatible API.',
+      link: 'https://www.azion.com/en/products/edge-storage/',
       addons: true,
       links: [
         {
@@ -77,6 +92,32 @@ Default.args = {
           link: 'https://www.azion.com/en/products/application-accelerator/'
         }
       ]
+    },
+    {
+      addons: false,
+      icon: 'ai ai-edge-storage',
+      title: 'Edge Storage',
+      description:
+        'Facilitates low-latency storage and retrieval of objects anywhere, with no vendor lock-in via an S3-compatible API.',
+      // link: 'https://www.azion.com/en/products/edge-storage/',
+      links: [
+        {
+          label: 'Application Accelerator',
+          link: 'https://www.azion.com/en/products/application-accelerator/'
+        },
+        {
+          label: 'Application Accelerator',
+          link: 'https://www.azion.com/en/products/application-accelerator/'
+        }
+      ]
+    },
+    {
+      addons: false,
+      icon: 'ai ai-edge-storage',
+      title: 'Edge Storage',
+      description:
+        'Facilitates low-latency storage and retrieval of objects anywhere, with no vendor lock-in via an S3-compatible API.',
+      link: 'https://www.azion.com/en/products/edge-storage/'
     },
     {
       addons: false,
