@@ -1,3 +1,16 @@
+## [1.134.0](https://github.com/aziontech/azion-webkit/compare/v1.133.2...v1.134.0) (2025-06-30)
+
+### Features
+
+* add FeatureCategoryCard and adjust ProductCard ([1c30f96](https://github.com/aziontech/azion-webkit/commit/1c30f962b280d2298355c95e031b9fb6a0d52fb0))
+* refine ProductCard and add arrow option ([c085f26](https://github.com/aziontech/azion-webkit/commit/c085f26baf824c37dbf93b7c73dfad802a2a8657))
+* support icon prop in ProductCard links ([5e2b750](https://github.com/aziontech/azion-webkit/commit/5e2b750dc89a320978ab6d709eb91939339cd8d8))
+
+### Bug Fixes
+
+* SecionListProducts adding grid prop to respect the decision to be align or not ([f0989e2](https://github.com/aziontech/azion-webkit/commit/f0989e2d668ff612247e15d803ecf2da6a93ab36))
+* small adjust margin when not addin ([17ac308](https://github.com/aziontech/azion-webkit/commit/17ac30832e02460497912e5826c3cf688128eadd))
+
 ## [1.133.2](https://github.com/aziontech/azion-webkit/compare/v1.133.1...v1.133.2) (2025-06-26)
 
 ### Bug Fixes
