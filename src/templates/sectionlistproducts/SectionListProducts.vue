@@ -6,9 +6,7 @@
     :titleTag="props.titleTag"
   >
     <template #main>
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-content-center m-0"
-      >
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-content-center m-0">
         <ProductCard
           v-for="{ title, icon, description, link, addons, links } in props.list"
           :key="title"
@@ -50,7 +48,7 @@
       type: Array,
       default: () => []
     },
-    grid:{
+    grid: {
       type: Boolean,
       default: () => false
     }
