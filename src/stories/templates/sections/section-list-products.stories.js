@@ -84,7 +84,7 @@ Default.args = {
       title: 'Edge Storage',
       description:
         'Facilitates low-latency storage and retrieval of objects anywhere, with no vendor lock-in via an S3-compatible API.',
-      link: 'https://www.azion.com/en/products/edge-storage/',
+      // link: 'https://www.azion.com/en/products/edge-storage/',
       addons: true,
       links: [
         {
