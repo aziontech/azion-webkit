@@ -1,3 +1,9 @@
+## [1.134.2](https://github.com/aziontech/azion-webkit/compare/v1.134.1...v1.134.2) (2025-07-01)
+
+### Bug Fixes
+
+* adding description and descriptionRawHtml to sectionlistproducts ([dd7a6fe](https://github.com/aziontech/azion-webkit/commit/dd7a6fe5ab75d5b8cbae3603f3623f93d360c38c))
+
 ## [1.134.1](https://github.com/aziontech/azion-webkit/compare/v1.134.0...v1.134.1) (2025-06-30)
 
 ### Bug Fixes
