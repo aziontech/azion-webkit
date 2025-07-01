@@ -1,3 +1,9 @@
+## [1.134.3](https://github.com/aziontech/azion-webkit/compare/v1.134.2...v1.134.3) (2025-07-01)
+
+### Bug Fixes
+
+* SectionListProducts ([13262de](https://github.com/aziontech/azion-webkit/commit/13262de1801096c8f159b1f0960bbcb901ef8041))
+
 ## [1.134.2](https://github.com/aziontech/azion-webkit/compare/v1.134.1...v1.134.2) (2025-07-01)
 
 ### Bug Fixes
