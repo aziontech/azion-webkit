@@ -40,6 +40,7 @@ const Template = (args) => config(args)
 export const Default = Template.bind({})
 Default.args = {
   overline: 'Products',
+  titleTag: 'h2',
   title: 'Products and Services Related to Jamstack Websites',
   grid: false,
   list: [
@@ -53,7 +54,8 @@ Default.args = {
       links: [
         {
           label: 'Application Accelerator',
-          link: 'https://www.azion.com/en/products/application-accelerator/'
+          link: 'https://www.azion.com/en/products/application-accelerator/',
+          icon: 'pi pi-check',
         },
         {
           label: 'Edge Functions',

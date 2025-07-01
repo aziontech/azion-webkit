@@ -2,8 +2,10 @@
   <ContentSection
     position="center"
     :overline="props.overline"
-    :title="props.title"
     :titleTag="props.titleTag"
+    :title="props.title"
+    :description="description"
+    :descriptionRawHtml="descriptionRawHtml"
   >
     <template #main>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-content-center m-0">
@@ -43,6 +45,14 @@
     title: {
       type: String,
       required: true
+    },
+    description: {
+      type: String,
+      default: () => ''
+    },
+    descriptionRawHtml: {
+      type: String,
+      default: () => ''
     },
     list: {
       type: Array,

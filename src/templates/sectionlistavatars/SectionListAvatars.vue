@@ -3,9 +3,9 @@
     position="center"
     isContentCentralized
     textCenter
-    :title="props.title"
     :overline="props.overline"
     :titleTag="props.titleTag"
+    :title="props.title"
   >
     <template #main>
       <div class="flex flex-wrap gap-2 gap-y-4 w-full justify-center">
