@@ -1,6 +1,6 @@
 <template>
   <div class="flex gap-3">
-    <div>
+    <div v-if="icon">
       <Tile v-bind="{ severity }">
         <i :class="icon" />
       </Tile>

@@ -10,7 +10,10 @@
           :icon="icon"
           severity="primary"
         />
-        <div class="ml-12">
+        <div
+          v-if="hasLinks"
+          class="ml-12"
+        >
           <Overline
             v-if="addons"
             label="Add-ons"
@@ -38,10 +41,17 @@
 </template>
 
 <script setup>
+  import { computed } from 'vue'
+
   import CardBase from '../cardbase'
   import LinkButton from '../linkbutton'
   import IconTextSegment from '../icontextsegment'
   import Overline from '../overline'
+
+  const hasLinks = computed(() => {
+    const hasLinks = props.links && props.links.length > 0 && props.links[0].label.length
+    return hasLinks
+  })
 
   const props = defineProps({
     title: {

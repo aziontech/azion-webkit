@@ -15,12 +15,13 @@
   const FEATURE = {
     title: 'Edge Cache',
     description: 'Cache your content at the edge to improve performance.',
-    icon: 'pi pi-star',
+    icon: '',
     links: [
-      { label: 'Docs', link: '#', icon: '' },
-      { label: 'Get started', link: '#', icon: 'pi pi-arrow-right' }
+      { label: '', link: '', icon: '' },
+      { label: '', link: '', icon: '' }
     ],
-    addons: false
+    addons: false,
+
   }
 
   const FEATURE2 = {
