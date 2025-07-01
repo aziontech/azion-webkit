@@ -55,7 +55,7 @@ Default.args = {
         {
           label: 'Application Accelerator',
           link: 'https://www.azion.com/en/products/application-accelerator/',
-          icon: 'pi pi-check',
+          icon: 'pi pi-check'
         },
         {
           label: 'Edge Functions',

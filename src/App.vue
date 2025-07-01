@@ -20,8 +20,7 @@
       { label: '', link: '', icon: '' },
       { label: '', link: '', icon: '' }
     ],
-    addons: false,
-
+    addons: false
   }
 
   const FEATURE2 = {
