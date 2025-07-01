@@ -1,3 +1,9 @@
+## [1.134.4](https://github.com/aziontech/azion-webkit/compare/v1.134.3...v1.134.4) (2025-07-01)
+
+### Bug Fixes
+
+* space and removing icon if not configured ([9671260](https://github.com/aziontech/azion-webkit/commit/9671260f5d5ae0357883b9433b82e4e1f03cf32c))
+
 ## [1.134.3](https://github.com/aziontech/azion-webkit/compare/v1.134.2...v1.134.3) (2025-07-01)
 
 ### Bug Fixes
