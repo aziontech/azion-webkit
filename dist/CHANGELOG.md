@@ -1,3 +1,9 @@
+## [1.135.3](https://github.com/aziontech/azion-webkit/compare/v1.135.2...v1.135.3) (2025-07-04)
+
+### Bug Fixes
+
+* remove the specialized slot code ([416a993](https://github.com/aziontech/azion-webkit/commit/416a993a9978e460488c956772f6725daecdef02))
+
 ## [1.135.2](https://github.com/aziontech/azion-webkit/compare/v1.135.1...v1.135.2) (2025-07-04)
 
 ### Bug Fixes
