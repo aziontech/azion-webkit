@@ -1,11 +1,11 @@
 <template>
-  <div class="p-4 space-y-4">
+  <div class="p-4 space-y-4 px-continer">
     <h1 class="text-2xl font-bold mb-6">Message Component Examples</h1>
 
     <!-- Success Message -->
     <div class="space-y-2">
       <h2 class="text-lg font-semibold">Success Message</h2>
-      <Message size="large" severity="success">
+      <Message size="small" severity="success">
         Operation completed successfully!
       </Message>
     </div>

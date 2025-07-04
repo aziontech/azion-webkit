@@ -46,39 +46,32 @@
   const props = defineProps({
     size: {
       type: String,
-      required: false,
-      default: '',
+      default: null,
       options: ['small', 'large']
     },
     severity: {
       type: String,
-      required: false,
       default: 'info',
       options: ['success', 'info', 'warn', 'error', 'secondary', 'contrast']
     },
     closable: {
       type: Boolean,
-      required: false,
       default: false
     },
     sticky: {
       type: Boolean,
-      required: false,
       default: true
     },
     life: {
       type: Number,
-      required: false,
       default: 3000
     },
     icon: {
       type: String,
-      required: false,
       default: null
     },
     customClass: {
       type: String,
-      required: false,
       default: ''
     }
   })
@@ -100,7 +93,7 @@
       class: 'azion-message-icon'
     },
     text: {
-      class: 'azion-message-text'
+      class: ''
     },
     closeButton: {
       class: 'azion-message-close-button'
