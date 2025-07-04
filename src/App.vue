@@ -5,7 +5,7 @@
     <!-- Success Message -->
     <div class="space-y-2">
       <h2 class="text-lg font-semibold">Success Message</h2>
-      <Message severity="success">
+      <Message size="large" severity="success">
         Operation completed successfully!
       </Message>
     </div>
