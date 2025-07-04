@@ -5,8 +5,8 @@
     <!-- Success Message -->
     <div class="space-y-2">
       <h2 class="text-lg font-semibold">Success Message</h2>
-      <Message size="small" severity="success">
-        Operation completed successfully!
+      <Message severity="success">
+        Operation completed successfully <a href="https://www.azion.com/" class="text-link">https://www.azion.com/</a>!
       </Message>
     </div>
 

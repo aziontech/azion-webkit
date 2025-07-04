@@ -1,6 +1,5 @@
 <template>
   <Message
-    :size="size"
     :severity="severity"
     :closable="closable"
     :sticky="sticky"
@@ -15,6 +14,13 @@
     >
       <slot name="default" />
     </template>
+
+    <template
+      #messageicon
+      v-if="$slots.messageicon"
+    >
+      <slot name="messageicon" />
+    </template>
   </Message>
 </template>
 
@@ -22,11 +28,6 @@
   import Message from 'primevue/message'
 
   const props = defineProps({
-    size: {
-      type: String,
-      default: null,
-      options: ['small', 'large']
-    },
     severity: {
       type: String,
       default: 'info',

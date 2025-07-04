@@ -5,11 +5,6 @@ export default {
   component: Message,
   tags: ['autodocs'],
   argTypes: {
-    size: {
-      description: 'Size of the message',
-      options: ['small', 'large'],
-      control: { type: 'select' }
-    },
     severity: {
       description: 'Severity level of the message',
       options: ['success', 'info', 'warn', 'error', 'secondary', 'contrast'],
@@ -124,20 +119,6 @@ CustomStyling.args = {
   content: 'This message has custom styling applied.'
 }
 
-export const SmallSize = Template.bind({})
-SmallSize.args = {
-  ...DefaultProps,
-  size: 'small',
-  content: 'This is a small message.'
-}
-
-export const LargeSize = Template.bind({})
-LargeSize.args = {
-  ...DefaultProps,
-  size: 'large',
-  content: 'This is a large message.'
-}
-
 // Showcase all severities
 const AllSeveritiesTemplate = () => ({
   components: { Message },
@@ -164,30 +145,6 @@ AllSeverities.parameters = {
 <Message severity="error">Error message</Message>
 <Message severity="secondary">Secondary message</Message>
 <Message severity="contrast">Contrast message</Message>`
-    }
-  }
-}
-
-// All Sizes Demo
-const AllSizesTemplate = () => ({
-  components: { Message },
-  template: `
-    <div class="space-y-4">
-      <h2 class="text-lg font-semibold mb-4">Message Sizes</h2>
-      <Message size="small" icon="pi pi-send">Small Message</Message>
-      <Message icon="pi pi-user">Normal Message</Message>
-      <Message size="large" icon="pi pi-check">Large Message</Message>
-    </div>
-  `
-})
-
-export const AllSizes = AllSizesTemplate.bind({})
-AllSizes.parameters = {
-  docs: {
-    source: {
-      code: `<Message size="small" icon="pi pi-send">Small Message</Message>
-<Message icon="pi pi-user">Normal Message</Message>
-<Message size="large" icon="pi pi-check">Large Message</Message>`
     }
   }
 }

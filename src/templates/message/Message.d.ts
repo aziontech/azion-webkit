@@ -13,10 +13,6 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  */
 export interface MessageProps {
   /**
-   * Size of the message.
-   */
-  size?: 'small' | 'large'
-  /**
    * Severity level of the message.
    * @defaultValue 'info'
    */
@@ -55,17 +51,9 @@ export interface MessageSlots {
    */
   default(): VNode[]
   /**
-   * Custom icon template.
+   * Custom message icon template.
    */
-  icon(): VNode[]
-  /**
-   * Custom container template.
-   */
-  container(): VNode[]
-  /**
-   * Custom close icon template.
-   */
-  closeicon(): VNode[]
+  messageicon(): VNode[]
 }
 
 /**
