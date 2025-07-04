@@ -1,36 +1,122 @@
 <template>
-  <Container class="surface-ground">
-    <div class="px-container flex flex-row gap-3">
-      <ProductCard v-bind="FEATURE2" />
-      <ProductCard v-bind="FEATURE" />
-      <ProductCard v-bind="FEATURE2" />
+  <div class="p-4 space-y-4">
+    <h1 class="text-2xl font-bold mb-6">Message Component Examples</h1>
+
+    <!-- Success Message -->
+    <div class="space-y-2">
+      <h2 class="text-lg font-semibold">Success Message</h2>
+      <Message severity="success">
+        Operation completed successfully!
+      </Message>
     </div>
-  </Container>
+
+    <!-- Info Message -->
+    <div class="space-y-2">
+      <h2 class="text-lg font-semibold">Info Message</h2>
+      <Message severity="info">
+        Here's some useful information for you.
+      </Message>
+    </div>
+
+    <!-- Warning Message -->
+    <div class="space-y-2">
+      <h2 class="text-lg font-semibold">Warning Message</h2>
+      <Message severity="warn">
+        Please be careful with this action.
+      </Message>
+    </div>
+
+    <!-- Error Message -->
+    <div class="space-y-2">
+      <h2 class="text-lg font-semibold">Error Message</h2>
+      <Message severity="error">
+        An error occurred while processing your request.
+      </Message>
+    </div>
+
+    <!-- Secondary Message -->
+    <div class="space-y-2">
+      <h2 class="text-lg font-semibold">Secondary Message</h2>
+      <Message severity="secondary">
+        This is a secondary message with neutral styling.
+      </Message>
+    </div>
+
+    <!-- Contrast Message -->
+    <div class="space-y-2">
+      <h2 class="text-lg font-semibold">Contrast Message</h2>
+      <Message severity="contrast">
+        High contrast message for better visibility.
+      </Message>
+    </div>
+
+    <!-- Closable Message -->
+    <div class="space-y-2">
+      <h2 class="text-lg font-semibold">Closable Message</h2>
+      <Message
+        severity="info"
+        :closable="true"
+        @close="handleMessageClose"
+      >
+        This message can be closed by clicking the X button.
+      </Message>
+    </div>
+
+    <!-- Non-sticky Message -->
+    <div class="space-y-2">
+      <h2 class="text-lg font-semibold">Auto-close Message</h2>
+      <Message
+        severity="success"
+        :sticky="false"
+        :life="2000"
+      >
+        This message will disappear after 2 seconds.
+      </Message>
+    </div>
+
+    <!-- Custom Icon Message -->
+    <div class="space-y-2">
+      <h2 class="text-lg font-semibold">Custom Icon Message</h2>
+      <Message
+        severity="info"
+        icon="pi pi-star"
+      >
+        Message with a custom star icon.
+      </Message>
+    </div>
+
+    <!-- Custom Class Message -->
+    <div class="space-y-2">
+      <h2 class="text-lg font-semibold">Custom Styled Message</h2>
+      <Message
+        severity="info"
+        custom-class="custom-message-style"
+      >
+        This message has custom styling applied.
+      </Message>
+    </div>
+  </div>
 </template>
 
 <script setup>
-  import Container from './templates/container'
-  import ProductCard from './templates/productcard'
+  import Message from './templates/message'
 
-  const FEATURE = {
-    title: 'Edge Cache',
-    description: 'Cache your content at the edge to improve performance.',
-    icon: '',
-    links: [
-      { label: '', link: '', icon: '' },
-      { label: '', link: '', icon: '' }
-    ],
-    addons: false
-  }
-
-  const FEATURE2 = {
-    title: 'Edge Cache',
-    description: 'Cache your content at the edge to improve performance.',
-    icon: 'pi pi-star',
-    links: [
-      { label: 'Docs', link: '#', icon: '' },
-      { label: 'Get started', link: '#', icon: 'pi pi-arrow-right' }
-    ],
-    addons: true
+  const handleMessageClose = (event) => {
+    console.log('Message closed:', event)
   }
 </script>
+
+<style scoped>
+  .space-y-4 > * + * {
+    margin-top: 1rem;
+  }
+
+  .space-y-2 > * + * {
+    margin-top: 0.5rem;
+  }
+
+  :deep(.custom-message-style) {
+    border: 2px dashed #f3652b;
+    background: linear-gradient(45deg, #f0f9ff, #eff6ff);
+  }
+</style>
