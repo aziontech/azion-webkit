@@ -1,3 +1,9 @@
+## [1.135.0](https://github.com/aziontech/azion-webkit/compare/v1.134.4...v1.135.0) (2025-07-04)
+
+### Features
+
+* adding message wrapper from Message Primevue component ([248d763](https://github.com/aziontech/azion-webkit/commit/248d763cf994b1285932a90e445f39098140b0dd))
+
 ## [1.134.4](https://github.com/aziontech/azion-webkit/compare/v1.134.3...v1.134.4) (2025-07-01)
 
 ### Bug Fixes
