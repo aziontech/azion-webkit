@@ -1,3 +1,10 @@
+## [1.135.4](https://github.com/aziontech/azion-webkit/compare/v1.135.3...v1.135.4) (2025-07-04)
+
+### Bug Fixes
+
+* adding v4 size message prop ([1816541](https://github.com/aziontech/azion-webkit/commit/18165412db03c73f5a7f845d2fe5bedb80724e81))
+* remove size prop, message icon to person pic ([c5e9058](https://github.com/aziontech/azion-webkit/commit/c5e9058fee0466a4eea3922dfa4b888a2f327597))
+
 ## [1.135.3](https://github.com/aziontech/azion-webkit/compare/v1.135.2...v1.135.3) (2025-07-04)
 
 ### Bug Fixes
