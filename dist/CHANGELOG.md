@@ -1,3 +1,9 @@
+## [1.135.1](https://github.com/aziontech/azion-webkit/compare/v1.135.0...v1.135.1) (2025-07-04)
+
+### Bug Fixes
+
+* remove css inline from message component ([9a0fb59](https://github.com/aziontech/azion-webkit/commit/9a0fb598fd580bd4122427c94e65b94835e85d7d))
+
 ## [1.135.0](https://github.com/aziontech/azion-webkit/compare/v1.134.4...v1.135.0) (2025-07-04)
 
 ### Features
