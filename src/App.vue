@@ -95,6 +95,20 @@
         This message has custom styling applied.
       </Message>
     </div>
+
+    <!-- Size Examples -->
+    <div class="space-y-2">
+      <h2 class="text-lg font-semibold">Message Sizes</h2>
+      <Message size="small" severity="info" icon="pi pi-send">
+        Small message with icon
+      </Message>
+      <Message severity="success" icon="pi pi-user">
+        Normal message with icon
+      </Message>
+      <Message size="large" severity="warn" icon="pi pi-check">
+        Large message with icon
+      </Message>
+    </div>
   </div>
 </template>
 

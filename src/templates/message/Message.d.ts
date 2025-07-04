@@ -13,6 +13,10 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  */
 export interface MessageProps {
   /**
+   * Size of the message (custom implementation).
+   */
+  size?: 'small' | 'large'
+  /**
    * Severity level of the message.
    * @defaultValue 'info'
    */
