@@ -1,3 +1,9 @@
+## [1.135.2](https://github.com/aziontech/azion-webkit/compare/v1.135.1...v1.135.2) (2025-07-04)
+
+### Bug Fixes
+
+* size prop ([0c7a113](https://github.com/aziontech/azion-webkit/commit/0c7a1132cc1d8ec3e759381f0298b3ba796581bd))
+
 ## [1.135.1](https://github.com/aziontech/azion-webkit/compare/v1.135.0...v1.135.1) (2025-07-04)
 
 ### Bug Fixes
