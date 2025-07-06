@@ -19,7 +19,9 @@ const MOCK = {
         src: 'https://www.azion.com/assets/pages/about/globe-about-light.png'
       }
     }
-  }
+  },
+  videoPlayOverlay: false,
+  cards: []
 }
 
 const MOCK_WITH_CARDS = {

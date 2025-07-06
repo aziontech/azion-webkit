@@ -53,7 +53,8 @@ const MOCK = {
         }
       ]
     }
-  ]
+  ],
+  videoPlayOverlay: false
 }
 
 const config = (args) => {
