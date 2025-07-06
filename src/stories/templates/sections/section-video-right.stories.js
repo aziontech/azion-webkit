@@ -20,6 +20,8 @@ const MOCK = {
       }
     }
   },
+  videoPlayOverlay: false,
+  cards: [],
   position: 'left'
 }
 
