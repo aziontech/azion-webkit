@@ -11,7 +11,11 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  * Defines valid properties in container component.
  */
 export interface ContainerProps {
-  // title: string;
+  /**
+   * Whether to use compact spacing or default spacing
+   * @defaultValue false
+   */
+  compact?: boolean
 }
 
 /**
