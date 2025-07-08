@@ -1,3 +1,9 @@
+## [1.136.0](https://github.com/aziontech/azion-webkit/compare/v1.135.4...v1.136.0) (2025-07-08)
+
+### Features
+
+* adding sectionlistcardclickable ([9cd1549](https://github.com/aziontech/azion-webkit/commit/9cd1549efe5d5b6f70b45f9c734eaea082c536a7))
+
 ## [1.135.4](https://github.com/aziontech/azion-webkit/compare/v1.135.3...v1.135.4) (2025-07-04)
 
 ### Bug Fixes
