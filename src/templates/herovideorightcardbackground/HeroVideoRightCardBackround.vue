@@ -8,9 +8,16 @@
     :descriptionRawHtml="descriptionRawHtml"
   >
     <template #main>
-      <BaseModal backgroundColor="outlined">
+      <BaseModal
+        backgroundColor="outlined"
+        :disableVisibilityToggle="videoPlayOverlay"
+      >
         <template #action>
           <div class="relative flex items-center justify-center group">
+            <div
+              v-if="videoPlayOverlay"
+              class="absolute z-20 inset-0 backdrop-blur-sm"
+            ></div>
             <img
               class="hide-on-light"
               width="auto"
@@ -29,7 +36,10 @@
               :src="video.image.light.src"
             />
 
-            <div class="absolute opacity-50 transition-all ease group-hover:opacity-100">
+            <div
+              class="absolute z-10 opacity-50"
+              :class="{ 'transition-all ease group-hover:opacity-100': !videoPlayOverlay }"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="45"
@@ -162,6 +172,11 @@
     cards: {
       type: Array,
       default: () => []
+    },
+    videoPlayOverlay: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   })
 </script>

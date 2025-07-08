@@ -6,48 +6,43 @@
     <div class="space-y-2">
       <h2 class="text-lg font-semibold">Success Message</h2>
       <Message severity="success">
-        Operation completed successfully <a href="https://www.azion.com/" class="text-link">https://www.azion.com/</a>!
+        Operation completed successfully
+        <a
+          href="https://www.azion.com/"
+          class="text-link"
+          >https://www.azion.com/</a
+        >!
       </Message>
     </div>
 
     <!-- Info Message -->
     <div class="space-y-2">
       <h2 class="text-lg font-semibold">Info Message</h2>
-      <Message severity="info">
-        Here's some useful information for you.
-      </Message>
+      <Message severity="info"> Here's some useful information for you. </Message>
     </div>
 
     <!-- Warning Message -->
     <div class="space-y-2">
       <h2 class="text-lg font-semibold">Warning Message</h2>
-      <Message severity="warn">
-        Please be careful with this action.
-      </Message>
+      <Message severity="warn"> Please be careful with this action. </Message>
     </div>
 
     <!-- Error Message -->
     <div class="space-y-2">
       <h2 class="text-lg font-semibold">Error Message</h2>
-      <Message severity="error">
-        An error occurred while processing your request.
-      </Message>
+      <Message severity="error"> An error occurred while processing your request. </Message>
     </div>
 
     <!-- Secondary Message -->
     <div class="space-y-2">
       <h2 class="text-lg font-semibold">Secondary Message</h2>
-      <Message severity="secondary">
-        This is a secondary message with neutral styling.
-      </Message>
+      <Message severity="secondary"> This is a secondary message with neutral styling. </Message>
     </div>
 
     <!-- Contrast Message -->
     <div class="space-y-2">
       <h2 class="text-lg font-semibold">Contrast Message</h2>
-      <Message severity="contrast">
-        High contrast message for better visibility.
-      </Message>
+      <Message severity="contrast"> High contrast message for better visibility. </Message>
     </div>
 
     <!-- Closable Message -->
@@ -99,13 +94,24 @@
     <!-- Size Examples -->
     <div class="space-y-2">
       <h2 class="text-lg font-semibold">Message Sizes</h2>
-      <Message size="small" severity="info" icon="pi pi-send">
+      <Message
+        size="small"
+        severity="info"
+        icon="pi pi-send"
+      >
         Small message with icon
       </Message>
-      <Message severity="success" icon="pi pi-user">
+      <Message
+        severity="success"
+        icon="pi pi-user"
+      >
         Normal message with icon
       </Message>
-      <Message size="large" severity="warn" icon="pi pi-check">
+      <Message
+        size="large"
+        severity="warn"
+        icon="pi pi-check"
+      >
         Large message with icon
       </Message>
     </div>
