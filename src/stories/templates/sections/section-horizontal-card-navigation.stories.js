@@ -18,36 +18,6 @@ export default {
   component: SectionHorizontalCardNavigation,
   tags: ['autodocs'],
   argTypes: {
-    position: {
-      control: 'select',
-      options: ['left', 'right'],
-      description: 'Layout position for content section'
-    },
-    overline: {
-      control: 'text',
-      description: 'Small text above the title'
-    },
-    titleTag: {
-      control: 'select',
-      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
-      description: 'HTML tag for the title element'
-    },
-    title: {
-      control: 'text',
-      description: 'Main title of the section'
-    },
-    description: {
-      control: 'text',
-      description: 'Description text for the section'
-    },
-    descriptionRawHtml: {
-      control: 'text',
-      description: 'HTML description (overrides description if provided)'
-    },
-    buttons: {
-      control: 'object',
-      description: 'Array of action buttons with link, label, and optional outlined property'
-    },
     leftSidebar: {
       control: 'object',
       description: 'Array of navigation menu items for the left sidebar'
@@ -64,23 +34,6 @@ export default {
 export const Default = {
   render: config,
   args: {
-    position: 'right',
-    overline: 'Developer Resources',
-    titleTag: 'h1',
-    title: 'Explore Azion Platform',
-    description:
-      'Comprehensive documentation and tools to help you build, deploy, and scale your applications at the edge.',
-    buttons: [
-      {
-        link: 'https://console.azion.com',
-        label: 'Access Console'
-      },
-      {
-        link: 'https://www.azion.com/contact/',
-        label: 'Contact Sales',
-        outlined: true
-      }
-    ],
     leftSidebar: [
       {
         label: 'Getting Started',
@@ -172,73 +125,9 @@ export const Default = {
   }
 }
 
-// Left position layout
-export const LeftPosition = {
-  render: config,
-  args: {
-    position: 'left',
-    overline: 'Resources',
-    titleTag: 'h1',
-    title: 'Development Resources',
-    description: 'Tools and documentation for developers.',
-    buttons: [
-      {
-        link: '#',
-        label: 'View All',
-        outlined: true
-      }
-    ],
-    leftSidebar: [
-      {
-        label: 'API',
-        link: '#api'
-      },
-      {
-        label: 'SDKs',
-        link: '#sdks'
-      }
-    ],
-    items: [
-      {
-        titleTag: 'h2',
-        title: 'Developer Tools',
-        id: 'api',
-        description: 'APIs and SDKs for building applications',
-        cards: [
-          {
-            title: 'REST API',
-            description: 'Complete REST API reference',
-            link: '#',
-            action: { label: '' }
-          },
-          {
-            title: 'JavaScript SDK',
-            description: 'JavaScript SDK for web applications',
-            link: '#',
-            action: { label: '' }
-          }
-        ]
-      }
-    ]
-  }
-}
-
-// With HTML description
 export const WithHtmlDescription = {
   render: config,
   args: {
-    position: 'right',
-    overline: 'Enhanced Content',
-    titleTag: 'h1',
-    title: 'Rich Content Example',
-    descriptionRawHtml:
-      '<p>This example shows <strong>HTML formatting</strong> in descriptions with <em>emphasis</em> and <a href="#">links</a>.</p>',
-    buttons: [
-      {
-        link: '#',
-        label: 'Learn More'
-      }
-    ],
     leftSidebar: [
       {
         label: 'Overview',

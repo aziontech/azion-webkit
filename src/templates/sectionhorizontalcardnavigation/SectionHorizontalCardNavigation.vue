@@ -1,22 +1,7 @@
 <template>
   <ContentSection
-    :position="props.position"
-    :overline="props.overline"
-    :titleTag="props.titleTag"
-    :title="props.title"
-    :description="props.description"
-    :descriptionRawHtml="props.descriptionRawHtml"
+    position="right"
   >
-    <template #actions>
-      <LinkButton
-        v-for="{ link, label, outlined } in props.buttons"
-        severity="secondary"
-        :link="link"
-        :label="label"
-        :outlined="outlined"
-      />
-    </template>
-
     <template #main>
       <div class="w-full max-w-80">
         <div class="hidden md:block lg:top-20 lg:sticky">
@@ -39,11 +24,11 @@
     </template>
 
     <template #content>
-      <div class="flex flex-col gap-10 lg:gap-20 mt-12">
+      <div class="flex flex-col gap-10 lg:gap-20">
         <div
           :id="id"
           class="flex flex-col gap-6"
-          v-for="{ titleTag, title, id, cards } in props.items"
+          v-for="{ id, titleTag, title, description, cards } in props.items"
         >
           <template v-if="title">
             <h1
@@ -126,39 +111,9 @@
   import CardBaseClickable from '../cardbaseclickable'
   import CardTitle from '../cardtitle'
   import CardDescription from '../carddescription'
-  import Overline from '../overline'
-  import LinkButton from '../linkbutton'
   import Menu from 'primevue/menu'
 
   const props = defineProps({
-    position: {
-      type: String,
-      default: () => 'right',
-      validator: (value) => ['left', 'right'].includes(value)
-    },
-    overline: {
-      type: String
-    },
-    titleTag: {
-      type: String,
-      default: () => 'h2',
-      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
-    },
-    title: {
-      type: String,
-      required: true
-    },
-    description: {
-      type: String,
-      default: () => ''
-    },
-    descriptionRawHtml: {
-      type: String,
-      default: () => ''
-    },
-    buttons: {
-      type: [Object, undefined, null]
-    },
     leftSidebar: {
       type: [Array, undefined, null]
     },

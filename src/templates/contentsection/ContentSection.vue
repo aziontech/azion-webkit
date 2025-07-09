@@ -24,6 +24,7 @@
           ]"
         >
           <div
+            v-if="overline || title || description || $slots.actions"
             class="w-full flex flex-col gap-8 z-0"
             :class="[{ 'items-center': isContentCentralized }]"
           >
@@ -104,6 +105,7 @@
                 {{ description }}
               </p>
             </template>
+
             <div
               v-if="$slots.actions"
               class="flex flex-row gap-3"
