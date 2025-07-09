@@ -9,10 +9,7 @@
         pt?.content || ''
       ]"
     >
-      <div
-        class="w-full"
-        v-if="overline || title || description || $slots.content"
-      >
+      <div class="w-full">
         <div
           class="w-full flex gap-8"
           :class="[
@@ -24,7 +21,7 @@
           ]"
         >
           <div
-            v-if="overline || title || description || $slots.actions"
+            v-if="overline || title || $slots.title || $slots.actions"
             class="w-full flex flex-col gap-8 z-0"
             :class="[{ 'items-center': isContentCentralized }]"
           >
