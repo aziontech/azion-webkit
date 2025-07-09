@@ -1,3 +1,9 @@
+## [1.137.6](https://github.com/aziontech/azion-webkit/compare/v1.137.5...v1.137.6) (2025-07-09)
+
+### Bug Fixes
+
+* ContentSection slot title validation ([b76b6b2](https://github.com/aziontech/azion-webkit/commit/b76b6b2fc40454090b704b8113c9bb8607294461))
+
 ## [1.137.5](https://github.com/aziontech/azion-webkit/compare/v1.137.4...v1.137.5) (2025-07-09)
 
 ### Bug Fixes
