@@ -1,3 +1,9 @@
+## [1.137.1](https://github.com/aziontech/azion-webkit/compare/v1.137.0...v1.137.1) (2025-07-09)
+
+### Bug Fixes
+
+* adjusts ([9bd1bca](https://github.com/aziontech/azion-webkit/commit/9bd1bcab560cad1dec703fb6caf563cb109ad420))
+
 ## [1.137.0](https://github.com/aziontech/azion-webkit/compare/v1.136.0...v1.137.0) (2025-07-09)
 
 ### Features
