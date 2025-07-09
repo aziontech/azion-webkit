@@ -84,7 +84,7 @@
     font-size: 0.875rem !important;
   }
 
-   .p-message-wrapper {
+  .p-message-wrapper {
     padding: 0.5rem 0.75rem !important;
   }
 

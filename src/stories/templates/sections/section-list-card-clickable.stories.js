@@ -4,7 +4,8 @@ import Rules from '../../rules'
 
 export default {
   title: 'Blocks/Sections/section-list-card-clickable',
-  component: Container, SectionListCardClickable,
+  component: Container,
+  SectionListCardClickable,
   tags: ['autodocs'],
   parameters: {
     docs: {

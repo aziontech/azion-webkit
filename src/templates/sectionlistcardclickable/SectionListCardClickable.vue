@@ -1,4 +1,5 @@
 <template>
+
   <ContentSection
     position="center"
     :overline="overline"
@@ -61,8 +62,8 @@
       type: String,
       default: () => ''
     },
-    cards: {
-      type: Array
+    items: {
+      type: Array //{ overline, id, cards}
     }
   })
 </script>
