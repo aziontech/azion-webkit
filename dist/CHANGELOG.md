@@ -1,3 +1,9 @@
+## [1.137.2](https://github.com/aziontech/azion-webkit/compare/v1.137.1...v1.137.2) (2025-07-09)
+
+### Bug Fixes
+
+* SectionListCardClickable ([f411431](https://github.com/aziontech/azion-webkit/commit/f411431fde7dce83315638bdd5b46187b9f4fb8e))
+
 ## [1.137.1](https://github.com/aziontech/azion-webkit/compare/v1.137.0...v1.137.1) (2025-07-09)
 
 ### Bug Fixes
