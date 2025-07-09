@@ -21,7 +21,6 @@
     {
       link: 'https://console.azion.com',
       label: 'Access Console'
-
     },
     {
       link: 'https://www.azion.com/contact/',
@@ -179,7 +178,8 @@
     {
       titleTag: 'h2',
       title: 'Development',
-      description: 'Development tools and resources for building and deploying applications at the edge',
+      description:
+        'Development tools and resources for building and deploying applications at the edge',
       id: 'developer-tools',
       cards: [
         {

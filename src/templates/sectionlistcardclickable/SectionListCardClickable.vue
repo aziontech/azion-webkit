@@ -1,5 +1,4 @@
 <template>
-
   <ContentSection
     position="center"
     :overline="overline"

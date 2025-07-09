@@ -2,7 +2,7 @@ import Container from '../../../templates/container'
 import SectionHorizontalCardNavigation from '../../../templates/sectionhorizontalcardnavigation'
 
 const config = (args) => ({
-  components: { Container,SectionHorizontalCardNavigation },
+  components: { Container, SectionHorizontalCardNavigation },
   setup() {
     return { args }
   },
@@ -54,7 +54,8 @@ export default {
     },
     items: {
       control: 'object',
-      description: 'Array of content sections, each with titleTag, title, id, description, and cards'
+      description:
+        'Array of content sections, each with titleTag, title, id, description, and cards'
     }
   }
 }
@@ -67,7 +68,8 @@ export const Default = {
     overline: 'Developer Resources',
     titleTag: 'h1',
     title: 'Explore Azion Platform',
-    description: 'Comprehensive documentation and tools to help you build, deploy, and scale your applications at the edge.',
+    description:
+      'Comprehensive documentation and tools to help you build, deploy, and scale your applications at the edge.',
     buttons: [
       {
         link: 'https://console.azion.com',
@@ -229,7 +231,8 @@ export const WithHtmlDescription = {
     overline: 'Enhanced Content',
     titleTag: 'h1',
     title: 'Rich Content Example',
-    descriptionRawHtml: '<p>This example shows <strong>HTML formatting</strong> in descriptions with <em>emphasis</em> and <a href="#">links</a>.</p>',
+    descriptionRawHtml:
+      '<p>This example shows <strong>HTML formatting</strong> in descriptions with <em>emphasis</em> and <a href="#">links</a>.</p>',
     buttons: [
       {
         link: '#',
@@ -247,7 +250,8 @@ export const WithHtmlDescription = {
         titleTag: 'h2',
         title: 'Overview',
         id: 'overview',
-        description: 'Content sections can include rich formatting and multiple interaction patterns.',
+        description:
+          'Content sections can include rich formatting and multiple interaction patterns.',
         cards: [
           {
             title: 'Rich Text Support',
@@ -266,4 +270,3 @@ export const WithHtmlDescription = {
     ]
   }
 }
-

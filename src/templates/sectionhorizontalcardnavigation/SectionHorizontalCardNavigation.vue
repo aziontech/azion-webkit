@@ -41,9 +41,9 @@
     <template #content>
       <div class="flex flex-col gap-10 lg:gap-20 mt-12">
         <div
-        :id="id"
-        class="flex flex-col gap-6"
-        v-for="{ titleTag, title, id, cards } in props.items"
+          :id="id"
+          class="flex flex-col gap-6"
+          v-for="{ titleTag, title, id, cards } in props.items"
         >
           <template v-if="title">
             <h1
@@ -91,9 +91,7 @@
             ></div>
           </template>
           <template v-else-if="description && description.trim().length">
-            <p
-              class="text-color-secondary text-body-3 leading-relaxed text-balance"
-            >
+            <p class="text-color-secondary text-body-3 leading-relaxed text-balance">
               {{ description }}
             </p>
           </template>
