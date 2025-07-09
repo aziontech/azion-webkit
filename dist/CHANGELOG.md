@@ -1,3 +1,9 @@
+## [1.137.4](https://github.com/aziontech/azion-webkit/compare/v1.137.3...v1.137.4) (2025-07-09)
+
+### Bug Fixes
+
+* sectionhorizontalcardnavigation ([8c539ad](https://github.com/aziontech/azion-webkit/commit/8c539ad050ba0d62ea5a210c93b9ae7e41a5e9d7))
+
 ## [1.137.3](https://github.com/aziontech/azion-webkit/compare/v1.137.2...v1.137.3) (2025-07-09)
 
 ### Bug Fixes
