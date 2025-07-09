@@ -61,8 +61,10 @@
       type: String,
       default: () => ''
     },
-    items: {
-      type: Array //{ overline, id, cards}
+    cards: {
+      type: Array,
+      required: true,
+      default: () => []
     }
   })
 </script>
