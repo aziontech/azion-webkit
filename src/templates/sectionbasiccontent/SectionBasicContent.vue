@@ -1,7 +1,6 @@
 <template>
   <ContentSection
-    position="center"
-    :isContentCentralized="true"
+    :isContentCentralized="isContentCentralized"
     :overline="overline"
     :titleTag="titleTag"
     :title="title"
@@ -27,6 +26,10 @@
   import LinkButton from '../linkbutton'
 
   defineProps({
+    isContentCentralized: {
+      type: Boolean,
+      default: () => true
+    },
     overline: {
       type: String,
       default: () => ''

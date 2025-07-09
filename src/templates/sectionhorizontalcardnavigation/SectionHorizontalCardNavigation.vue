@@ -1,7 +1,5 @@
 <template>
-  <ContentSection
-    position="right"
-  >
+  <ContentSection position="right">
     <template #main>
       <div class="w-full max-w-80">
         <div class="hidden md:block lg:top-20 lg:sticky">
