@@ -1,3 +1,9 @@
+## [1.137.0](https://github.com/aziontech/azion-webkit/compare/v1.136.0...v1.137.0) (2025-07-09)
+
+### Features
+
+* adding section-horizontal-card-navigation ([1ded398](https://github.com/aziontech/azion-webkit/commit/1ded3988ad7c6835ab6dc549270b40ca5f768041))
+
 ## [1.136.0](https://github.com/aziontech/azion-webkit/compare/v1.135.4...v1.136.0) (2025-07-08)
 
 ### Features
