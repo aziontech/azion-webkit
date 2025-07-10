@@ -30,43 +30,37 @@
         <div
           :id="id"
           class="flex flex-col gap-6"
-          v-for="{ id, titleTag, title, description, cards } in props.items"
+          v-for="{ id, titleTag, title, description, descriptionRawHtml, cards } in props.items"
         >
-          <TitleSection
-            :tag="titleTag"
+          <ContentSection
             :title="title"
-          />
-          <template v-if="descriptionRawHtml && descriptionRawHtml.trim().length">
-            <div
-              v-html="descriptionRawHtml"
-              class="text-color-secondary text-base leading-relaxed text-balance prose max-w-none"
-            ></div>
-          </template>
-          <template v-else-if="description && description.trim().length">
-            <p class="text-color-secondary text-body-3 leading-relaxed text-balance">
-              {{ description }}
-            </p>
-          </template>
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 place-content-center m-0">
-            <CardBaseClickable
-              grid
-              :link="card.link"
-              :action="card.action"
-              :key="index"
-              v-for="(card, index) in cards"
-            >
-              <template #content>
-                <CardTitle>
-                  {{ card.title }}
-                </CardTitle>
-                <template v-if="card.description">
-                  <CardDescription>
-                    {{ card.description }}
-                  </CardDescription>
-                </template>
-              </template>
-            </CardBaseClickable>
-          </div>
+            :titleTag="titleTag"
+            :description="description"
+            :descriptionRawHtml="descriptionRawHtml"
+          >
+            <template #principal>
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 place-content-center m-0">
+                <CardBaseClickable
+                  grid
+                  :link="card.link"
+                  :action="card.action"
+                  :key="index"
+                  v-for="(card, index) in cards"
+                >
+                  <template #content>
+                    <CardTitle>
+                      {{ card.title }}
+                    </CardTitle>
+                    <template v-if="card.description">
+                      <CardDescription>
+                        {{ card.description }}
+                      </CardDescription>
+                    </template>
+                  </template>
+                </CardBaseClickable>
+              </div>
+            </template>
+          </ContentSection>
         </div>
       </div>
     </template>
@@ -75,7 +69,6 @@
 
 <script setup>
   import ContentSection from '../contentsection'
-  import TitleSection from '../titlesection'
   import CardBaseClickable from '../cardbaseclickable'
   import CardTitle from '../cardtitle'
   import CardDescription from '../carddescription'
