@@ -144,7 +144,8 @@
     },
     titleTag: {
       type: String,
-      default: 'h2'
+      default: () => 'h2',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
     },
     description: {
       type: String,
