@@ -1,3 +1,9 @@
+## [1.137.7](https://github.com/aziontech/azion-webkit/compare/v1.137.6...v1.137.7) (2025-07-10)
+
+### Bug Fixes
+
+* clickable area of sidebar menu of horizontal navigation sections ([94e81f8](https://github.com/aziontech/azion-webkit/commit/94e81f892db9229bbc189e3af694001746a8083a))
+
 ## [1.137.6](https://github.com/aziontech/azion-webkit/compare/v1.137.5...v1.137.6) (2025-07-09)
 
 ### Bug Fixes
