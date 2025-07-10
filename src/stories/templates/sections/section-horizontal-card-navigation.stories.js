@@ -139,8 +139,8 @@ export const WithHtmlDescription = {
         titleTag: 'h2',
         title: 'Overview',
         id: 'overview',
-        description:
-          'Content sections can include rich formatting and multiple interaction patterns.',
+        descriptionRawHtml:
+          '<p>Content sections can include rich formatting and multiple interaction patterns. <a href="https://www.azion.com/">Access Link</a>.</p>',
         cards: [
           {
             title: 'Rich Text Support',
