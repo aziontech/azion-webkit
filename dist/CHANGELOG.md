@@ -1,3 +1,13 @@
+## [1.138.0](https://github.com/aziontech/azion-webkit/compare/v1.137.7...v1.138.0) (2025-07-10)
+
+### Features
+
+* applu titlesection and added it to the elements storybook section ([8e1deea](https://github.com/aziontech/azion-webkit/commit/8e1deeae14ab0c282fe5741839cc01ac666105e1))
+
+### Bug Fixes
+
+* SectionHorizontalCardNavigation using contentsection inside self ([b3985af](https://github.com/aziontech/azion-webkit/commit/b3985afa851ff6d98134583a3a58e8997211d586))
+
 ## [1.137.7](https://github.com/aziontech/azion-webkit/compare/v1.137.6...v1.137.7) (2025-07-10)
 
 ### Bug Fixes
