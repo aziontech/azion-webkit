@@ -28,55 +28,13 @@
             <template v-if="overline && overline.length">
               <Overline :label="overline" />
             </template>
+
             <template v-if="title">
-              <h1
-                v-if="titleTag === 'h1'"
-                :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance"
-                style="line-height: 125% !important"
-              >
-                {{ title }}
-              </h1>
-              <h2
-                v-if="titleTag === 'h2'"
-                :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance"
-                style="line-height: 125% !important"
-              >
-                {{ title }}
-              </h2>
-              <h3
-                v-if="titleTag === 'h3'"
-                :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance"
-                style="line-height: 125% !important"
-              >
-                {{ title }}
-              </h3>
-              <h4
-                v-if="titleTag === 'h4'"
-                :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance"
-                style="line-height: 125% !important"
-              >
-                {{ title }}
-              </h4>
-              <h5
-                v-if="titleTag === 'h5'"
-                :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance"
-                style="line-height: 125% !important"
-              >
-                {{ title }}
-              </h5>
-              <h6
-                v-if="titleTag === 'h6'"
-                :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance"
-                style="line-height: 125% !important"
-              >
-                {{ title }}
-              </h6>
+              <TitleSection
+                :isContentCentralized="isContentCentralized"
+                :tag="titleTag"
+                :title="title"
+              />
             </template>
             <template v-else-if="$slots.title">
               <div
@@ -131,7 +89,8 @@
 </template>
 
 <script setup>
-  import Overline from '../overline/Overline.vue'
+  import TitleSection from '../titlesection'
+  import Overline from '../overline'
 
   defineProps({
     overline: {

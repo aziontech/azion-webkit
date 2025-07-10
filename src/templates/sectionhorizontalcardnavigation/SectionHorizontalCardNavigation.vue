@@ -32,45 +32,10 @@
           class="flex flex-col gap-6"
           v-for="{ id, titleTag, title, description, cards } in props.items"
         >
-          <template v-if="title">
-            <h1
-              v-if="titleTag === 'h1'"
-              class="leading-loose font-medium text-heading-2 text-balance"
-              style="line-height: 125% !important"
-            >
-              {{ title }}
-            </h1>
-            <h2
-              v-if="titleTag === 'h2'"
-              class="text-heading-2 leading-relaxed font-medium text-balance"
-            >
-              {{ title }}
-            </h2>
-            <h3
-              v-if="titleTag === 'h3'"
-              class="text-heading-2 leading-relaxed font-medium text-balance"
-            >
-              {{ title }}
-            </h3>
-            <h4
-              v-if="titleTag === 'h4'"
-              class="text-heading-2 leading-relaxed font-medium text-balance"
-            >
-              {{ title }}
-            </h4>
-            <h5
-              v-if="titleTag === 'h5'"
-              class="text-heading-2 leading-relaxed font-medium text-balance"
-            >
-              {{ title }}
-            </h5>
-            <h6
-              v-if="titleTag === 'h6'"
-              class="text-heading-2 leading-relaxed font-medium text-balance"
-            >
-              {{ title }}
-            </h6>
-          </template>
+          <TitleSection
+            :tag="titleTag"
+            :title="title"
+          />
           <template v-if="descriptionRawHtml && descriptionRawHtml.trim().length">
             <div
               v-html="descriptionRawHtml"
@@ -110,6 +75,7 @@
 
 <script setup>
   import ContentSection from '../contentsection'
+  import TitleSection from '../titlesection'
   import CardBaseClickable from '../cardbaseclickable'
   import CardTitle from '../cardtitle'
   import CardDescription from '../carddescription'
