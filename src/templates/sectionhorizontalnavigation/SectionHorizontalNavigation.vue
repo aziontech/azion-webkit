@@ -28,7 +28,11 @@
             }"
           >
             <template #item="{ item }">
-              <a :href="item.link">
+              <a
+                :href="item.link"
+                :title="item.label"
+                class="block"
+              >
                 <span class="text-sm">{{ item.label }}</span>
               </a>
             </template>
