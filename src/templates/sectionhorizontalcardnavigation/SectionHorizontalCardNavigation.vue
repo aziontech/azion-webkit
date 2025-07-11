@@ -13,11 +13,12 @@
           >
             <template #item="{ item }">
               <a
-                :href="item.link"
+                href="javascript: void(0)"
                 :title="item.label"
-                class="block"
+                class="block text-sm"
+                @click="scrollTo(item.link)"
               >
-                <span class="text-sm">{{ item.label }}</span>
+                {{ item.label }}
               </a>
             </template>
           </Menu>
@@ -82,4 +83,14 @@
       type: [Array, undefined, null]
     }
   })
+
+  function scrollTo(id) {
+    const element = document.querySelector(id)
+
+    if (!element) return
+
+    element.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
 </script>
