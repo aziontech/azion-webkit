@@ -1,3 +1,13 @@
+## [1.139.0](https://github.com/aziontech/azion-webkit/compare/v1.138.1...v1.139.0) (2025-07-11)
+
+### Features
+
+* new desktop header ([d7730c2](https://github.com/aziontech/azion-webkit/commit/d7730c2d551dc477039e0af1697149be581091ad))
+
+### Bug Fixes
+
+* soutions menu condition ([603666b](https://github.com/aziontech/azion-webkit/commit/603666b9f0d69caa78720aeb313864c10604d164))
+
 ## [1.138.1](https://github.com/aziontech/azion-webkit/compare/v1.138.0...v1.138.1) (2025-07-11)
 
 ### Bug Fixes
