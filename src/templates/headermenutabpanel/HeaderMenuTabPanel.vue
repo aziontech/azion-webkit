@@ -167,7 +167,12 @@
                             :class="{ 'pl-9': link.icon }"
                           >
                             <li
-                              v-for="(sublink, subIndex) in link.subitems"
+                              v-for="(sublink, subIndex) in link.subitems.length >= 4
+                                ? [
+                                    ...link.subitems.slice(0, 3),
+                                    link.subitems[link.subitems.length - 1]
+                                  ]
+                                : link.subitems"
                               :key="subIndex"
                               class="flex flex-col gap-2"
                             >
@@ -175,11 +180,12 @@
                                 :href="sublink.href"
                                 :title="sublink.label"
                                 class="w-full p-button p-button-sm text-sm"
-                                :class="
+                                :class="[
                                   sublink.isLink
                                     ? 'p-button-link hover:underline'
-                                    : 'hover:surface-hover text-color p-button-text'
-                                "
+                                    : 'hover:surface-hover text-color p-button-text',
+                                  sublink.isLink && link.subitems.length <= 4 ? 'hidden' : ''
+                                ]"
                               >
                                 <p class="text-left font-medium">
                                   {{ sublink.label }}
