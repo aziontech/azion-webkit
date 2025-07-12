@@ -18,6 +18,7 @@ export interface SectionImageRightProps {
   description: string
   image: string
   imageDark: string
+  position?: 'left' | 'right'
 }
 
 /**

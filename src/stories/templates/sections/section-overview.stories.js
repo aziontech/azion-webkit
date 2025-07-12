@@ -24,6 +24,11 @@ ${Rules.section.buttons}
       control: { type: 'select' },
       options: ['default', 'primary', 'secondary', 'warning', 'success', 'info'],
       default: 'primary'
+    },
+    position: {
+      control: { type: 'select' },
+      options: ['left', 'right'],
+      description: 'Controls the layout position of content and main slot'
     }
   }
 }
@@ -122,5 +127,16 @@ Default.args = {
         }
       ]
     }
-  ]
+  ],
+  position: 'left'
+}
+
+export const PositionRight = Template.bind({})
+PositionRight.args = { ...Default.args, position: 'right' }
+PositionRight.parameters = {
+  docs: {
+    description: {
+      story: 'Section with content positioned on the right side'
+    }
+  }
 }

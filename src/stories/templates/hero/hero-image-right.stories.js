@@ -5,6 +5,13 @@ import Rules from '../../rules'
 export default {
   title: 'Blocks/Hero/hero-image-right',
   tags: ['autodocs'],
+  argTypes: {
+    position: {
+      control: { type: 'select' },
+      options: ['left', 'right'],
+      description: 'Controls the layout position of content and main slot'
+    }
+  },
   parameters: {
     docs: {
       description: {
@@ -69,7 +76,8 @@ const MOCK = {
       }
     ]
   },
-  justify: 'center'
+  justify: 'center',
+  position: 'left'
 }
 
 const HeroDisplay = `
@@ -90,4 +98,15 @@ Default.args = MOCK
 
 Default.parameters = {
   docs: { source: { code: HeroDisplay } }
+}
+
+export const PositionRight = Template.bind({})
+PositionRight.args = { ...MOCK, position: 'right' }
+PositionRight.parameters = {
+  docs: {
+    description: {
+      story: 'Hero with content positioned on the right side'
+    },
+    source: { code: HeroDisplay }
+  }
 }

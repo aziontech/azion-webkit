@@ -34,6 +34,11 @@ export interface HeroBaseProps {
    * @defaultValue: false
    */
   isDisplay?: boolean
+  /**
+   * options: ['right'],
+   * @defaultValue: left
+   */
+  position?: string
 }
 
 /**

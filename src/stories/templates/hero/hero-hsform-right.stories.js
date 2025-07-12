@@ -30,7 +30,8 @@ const MOCK = {
     action: 'action',
     successMessage: 'Mensagem de sucesso!',
     redirect: ''
-  }
+  },
+  position: 'left'
 }
 
 const HeroDisplay = `
@@ -42,6 +43,13 @@ const HeroDisplay = `
 export default {
   title: 'Blocks/Hero/hero-hsform-right',
   tags: ['autodocs'],
+  argTypes: {
+    position: {
+      control: { type: 'select' },
+      options: ['left', 'right'],
+      description: 'Controls the layout position of content and main slot'
+    }
+  },
   parameters: {
     docs: {
       description: {
@@ -70,6 +78,17 @@ Default.parameters = {
   docs: {
     description: {
       story: ''
+    },
+    source: { code: HeroDisplay }
+  }
+}
+
+export const PositionRight = Template.bind({})
+PositionRight.args = { ...MOCK, position: 'right' }
+PositionRight.parameters = {
+  docs: {
+    description: {
+      story: 'Hero with content positioned on the right side'
     },
     source: { code: HeroDisplay }
   }

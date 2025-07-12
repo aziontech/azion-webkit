@@ -5,6 +5,13 @@ import Rules from '../../rules'
 export default {
   title: 'Blocks/Sections/section-image-right',
   tags: ['autodocs'],
+  argTypes: {
+    position: {
+      control: { type: 'select' },
+      options: ['left', 'right'],
+      description: 'Controls the layout position of content and main slot'
+    }
+  },
   parameters: {
     docs: {
       description: {
@@ -42,7 +49,7 @@ export const Default = Template.bind({})
 Default.args = {
   overline: 'Edge Connectivity',
   title:
-    'Azion’s robust connectivity strategy helps us deliver the best performance, availability, and resiliency to our customers',
+    "Azion's robust connectivity strategy helps us deliver the best performance, availability, and resiliency to our customers",
   wysisyg: false,
   description: `<p>
     <strong>14h00 - 14h05</strong> - Boas vindas
@@ -60,5 +67,16 @@ Default.args = {
   image:
     'https://www.azion.com/assets/pages/products/images/light/edge-network/network-ilustrationEN.png',
   imageDark:
-    'https://www.azion.com/assets/pages/products/images/dark/edge-network/network-ilustrationEN.png'
+    'https://www.azion.com/assets/pages/products/images/dark/edge-network/network-ilustrationEN.png',
+  position: 'left'
+}
+
+export const PositionRight = Template.bind({})
+PositionRight.args = { ...Default.args, position: 'right' }
+PositionRight.parameters = {
+  docs: {
+    description: {
+      story: 'Section with content positioned on the right side'
+    }
+  }
 }

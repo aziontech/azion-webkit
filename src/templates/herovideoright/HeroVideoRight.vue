@@ -6,6 +6,7 @@
     :title="title"
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
+    :position="position"
   >
     <template #main>
       <BaseModal backgroundColor="outlined">
@@ -160,6 +161,11 @@
             'label' in item.cta.action
         )
       }
+    },
+    position: {
+      type: String,
+      options: ['left', 'right'],
+      default: () => 'left'
     }
   })
 </script>
