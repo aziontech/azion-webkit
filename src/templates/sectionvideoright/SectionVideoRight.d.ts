@@ -40,6 +40,7 @@ export interface SectionVideoRightProps {
       }
     }>
   }
+  position?: 'left' | 'right'
 }
 
 /**

@@ -19,7 +19,9 @@ const MOCK = {
         src: 'https://www.azion.com/assets/pages/about/globe-about-light.png'
       }
     }
-  }
+  },
+  cards: [],
+  position: 'left'
 }
 
 const MOCK_WITH_CARDS = {
@@ -86,10 +88,28 @@ const TemplateWithCards = (args) => config(args)
 export const DefaultWithCards = TemplateWithCards.bind({})
 DefaultWithCards.args = MOCK_WITH_CARDS
 
+export const PositionRight = Template.bind({})
+PositionRight.args = { ...MOCK, position: 'right' }
+PositionRight.parameters = {
+  docs: {
+    description: {
+      story: 'Hero with content positioned on the right side'
+    }
+  }
+}
+
+
 export default {
   title: 'Blocks/Hero/hero-video-right',
   component: HeroVideoRight,
   tags: ['autodocs'],
+  argTypes: {
+    position: {
+      control: { type: 'select' },
+      options: ['left', 'right'],
+      description: 'Controls the layout position of content and main slot'
+    }
+  },
   parameters: {
     docs: {
       description: {

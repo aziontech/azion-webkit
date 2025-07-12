@@ -53,6 +53,7 @@ export interface LinkButtonProps {
    * @defaultValue false
    */
   text?: boolean
+  position?: 'left' | 'right'
 }
 
 /**

@@ -5,6 +5,13 @@ import Rules from '../../rules'
 export default {
   title: 'Blocks/Sections/section-bullets-right',
   tags: ['autodocs'],
+  argTypes: {
+    position: {
+      control: { type: 'select' },
+      options: ['left', 'right'],
+      description: 'Controls the layout position of content and main slot'
+    }
+  },
   parameters: {
     docs: {
       description: {
@@ -71,5 +78,16 @@ Default.args = {
       title: 'Cost-effective',
       description: 'Pricing is based on the edge resources and/or private edge locations in use.'
     }
-  ]
+  ],
+  position: 'left'
+}
+
+export const PositionRight = Template.bind({})
+PositionRight.args = { ...Default.args, position: 'right' }
+PositionRight.parameters = {
+  docs: {
+    description: {
+      story: 'Section with content positioned on the right side'
+    }
+  }
 }

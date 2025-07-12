@@ -27,6 +27,11 @@ export default {
     },
     isDisplay: {
       description: 'Aumenta o tamanho do texto'
+    },
+    position: {
+      description: 'Controla a ordem de layout entre conteúdo de texto e slot main',
+      options: ['right', 'left'],
+      control: { type: 'select' }
     }
   }
 }
@@ -80,4 +85,10 @@ isReverse.args = {
   ...props,
   isCentralized: true,
   isReverse: true
+}
+
+export const MainContentFirst = Template.bind({})
+MainContentFirst.args = {
+  ...props,
+  position: 'right'
 }

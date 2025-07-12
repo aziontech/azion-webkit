@@ -4,6 +4,7 @@
     :title="props.title"
     :description="props.description"
     :descriptionRawHtml="props.descriptionRawHtml"
+    :position="props.position"
   >
     <template #content>
       <div class="flex flex-col gap-10 w-full">
@@ -68,6 +69,11 @@
     },
     form: {
       type: Object // id, title, action, successMessage
+    },
+    position: {
+      type: String,
+      options: ['left', 'right'],
+      default: () => 'left'
     }
   })
 

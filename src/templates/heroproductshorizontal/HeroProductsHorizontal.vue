@@ -4,6 +4,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :justify="justify"
+    :position="position"
   >
     <template #title>
       <Titlegroup v-bind="hgroup" />
@@ -103,6 +104,11 @@
     list: {
       type: Object,
       required: true
+    },
+    position: {
+      type: String,
+      options: ['left', 'right'],
+      default: () => 'left'
     }
   })
 </script>
