@@ -30,6 +30,7 @@ interface BannerNews {
 }
 
 export interface HeroHomeProps {
+  id?: string
   overline: string
   titleTag: string
   title: string

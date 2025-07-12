@@ -4,6 +4,7 @@
     :overline="overline"
     :title="title"
     :description="description"
+    :id="id"
   >
     <template #actions>
       <LinkButton
@@ -24,6 +25,10 @@
   import FeaturedCards from '../featuredcards'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       required: false

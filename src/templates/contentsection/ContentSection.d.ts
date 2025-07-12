@@ -12,6 +12,7 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  * Defines valid properties in AisIndexHit component.
  */
 export interface ContentSectionProps {
+  id?: string | undefined
   overline?: string | undefined
   title?: string | undefined
   /**

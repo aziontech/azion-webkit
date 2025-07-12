@@ -4,6 +4,7 @@
     :overline="overline"
     :title="title"
     :description="description"
+    :id="id"
   >
     <template
       v-if="button"
@@ -75,6 +76,10 @@
   import Tag from 'primevue/tag'
 
   const props = defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       required: false

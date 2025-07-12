@@ -1,64 +1,43 @@
 /**
  *
- * LinkButton represents people using links in the page with css buttons look.
+ * HeroProductsHorizontal
  *
  *
- * @module `linkbutton`
+ * @module `heroproductshorizontal`
  */
 import { VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
- * Defines valid properties in LinkButton component.
+ * Defines valid properties in HeroProductsHorizontal component.
  */
-export interface LinkButtonProps {
-  /**
-   * Defines the text to display.
-   */
-  label: string
-  /**
-   * Defines the icon to display.
-   */
-  icon?: string | undefined
-  /**
-   * Defines icon position, options: [left, right]
-   * @defaultValue left
-   */
-  iconPos?: 'left' | 'right' | undefined
-  /**
-   * Defines the href attribute of LinkButton
-   */
-  link?: string | undefined
-  /**
-   * Severity of LinkButton [info, secondary]
-   * @defaultValue info
-   */
-  severity?: 'info' | 'secondary' | undefined
-  /**
-   * Shape of the element.
-   * @defaultValue _self
-   */
-  target?: '_self' | '_blank' | undefined
-  /**
-   * Options [small], apply text-sm class
-   */
-  size?: string | undefined
-  /**
-   * When enabled, it add the borders
-   * @defaultValue false
-   */
-  outlined?: boolean
-  /**
-   * When enabled, it add the borders
-   * @defaultValue false
-   */
-  text?: boolean
+export interface HeroProductsHorizontalProps {
+  id?: string
+  justify?: string
+  overline?: string
+  description?: string
+  descriptionRawHtml?: string
+  buttons?: Array<{
+    label: string
+    link: string
+    outlined?: boolean
+  }>
+  hgroup: {
+    title: string
+    subtitle: string
+  }
+  images: {
+    light: string
+    dark: string
+    alt: string
+  }
+  list: object
 }
 
 /**
- * Defines valid slots in LinkButton component.
+ * Defines valid slots in HeroProductsHorizontal component.
  */
-export interface LinkButtonSlots {
+export interface HeroProductsHorizontalSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
@@ -66,11 +45,11 @@ export interface LinkButtonSlots {
 }
 
 /**
- * Defines valid emits in LinkButton component.
+ * Defines valid emits in HeroProductsHorizontal component.
  */
-export interface LinkButtonEmits {
+export interface HeroProductsHorizontalEmits {
   /**
-   * Triggered when an error occurs while loading an image file.
+   * Triggered when an error occurs
    */
   error(event: Event): void
 }
@@ -78,16 +57,16 @@ export interface LinkButtonEmits {
 /**
  * @group Component
  */
-declare class LinkButton extends ClassComponent<
-  LinkButtonProps,
-  LinkButtonSlots,
-  LinkButtonEmits
+declare class HeroProductsHorizontal extends ClassComponent<
+  HeroProductsHorizontalProps,
+  HeroProductsHorizontalSlots,
+  HeroProductsHorizontalEmits
 > {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    LinkButton: GlobalComponentConstructor<LinkButton>
+    HeroProductsHorizontal: GlobalComponentConstructor<HeroProductsHorizontal>
   }
 }
 
-export default LinkButton
+export default HeroProductsHorizontal

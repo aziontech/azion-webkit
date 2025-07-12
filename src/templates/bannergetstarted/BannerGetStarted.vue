@@ -3,6 +3,7 @@
     :pt="{ content: 'surface-50 py-8 lg:py-16 px-5 lg:px-10 rounded' }"
     :overline="overline"
     titleTag="h2"
+    :id="id"
     position="full"
   >
     <template #title>
@@ -46,6 +47,10 @@
   import Tile from '../tile'
 
   defineProps({
+    id: {
+      type: String,
+      required: false
+    },
     overline: {
       type: String,
       required: false

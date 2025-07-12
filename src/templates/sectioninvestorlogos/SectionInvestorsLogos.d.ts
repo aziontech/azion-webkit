@@ -12,6 +12,11 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  * Defines valid properties in SectionInvestorLogos component.
  */
 export interface SectionInvestorLogosProps {
+  id?: string | undefined
+  /**
+   * Defines the id of the section
+   * @defaultValue ''
+   */
   logos: string[]
   title: string
   overline: string

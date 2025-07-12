@@ -24,6 +24,7 @@ interface DataBlock {
  * Defines valid properties in SectionBigNumbersLivemap component.
  */
 export interface SectionBigNumbersLivemapProps {
+  id?: string
   title: string
   overline: string
   lang: string

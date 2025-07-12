@@ -12,6 +12,11 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  * Defines valid properties in SectionImageRight component.
  */
 export interface SectionImageRightProps {
+  id?: string | undefined
+  /**
+   * Defines the id of the section
+   * @defaultValue ''
+   */
   titleTag: string
   overline: string
   title: string

@@ -7,6 +7,7 @@
     :title="title"
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
+    :id="id"
   >
     <template #main>
       <GridHighlight :cards="cards" />
@@ -18,6 +19,10 @@
   import ContentSection from '../contentsection'
   import GridHighlight from '../gridhighlight'
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       required: false

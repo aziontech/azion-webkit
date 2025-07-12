@@ -6,6 +6,7 @@
     :title="props.title"
     :description="props.description"
     :descriptionRawHtml="props.descriptionRawHtml"
+    :id="id"
   >
     <template #actions>
       <LinkButton
@@ -100,7 +101,11 @@
   import LinkButton from '../linkbutton'
   import Menu from 'primevue/menu'
 
-  const props = defineProps({
+  const props = defineProps({ 
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String
     },

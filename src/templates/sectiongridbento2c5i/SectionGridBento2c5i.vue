@@ -5,6 +5,7 @@
     :title="title"
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
+    :id="id"
   >
     <template v-slot:content>
       <GridBentoBlock :gridType="gridType">
@@ -225,6 +226,10 @@
   import Overline from '../overline'
 
   const props = defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       default: () => ''

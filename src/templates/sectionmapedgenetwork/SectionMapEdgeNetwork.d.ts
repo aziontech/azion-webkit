@@ -12,6 +12,11 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  * Defines valid properties in SectionMapOurNetwork component.
  */
 export interface SectionMapOurNetworkProps {
+  id?: string | undefined
+  /**
+   * Defines the id of the section
+   * @defaultValue ''
+   */
   overline: string
   title: string
   description: string

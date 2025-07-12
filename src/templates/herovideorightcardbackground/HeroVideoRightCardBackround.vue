@@ -6,6 +6,7 @@
     :title="title"
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
+    :id="id"
   >
     <template #main>
       <BaseModal backgroundColor="outlined">
@@ -127,6 +128,10 @@
   import CardDescription from '../carddescription'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       default: () => ''
