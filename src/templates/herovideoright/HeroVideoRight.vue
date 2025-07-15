@@ -80,7 +80,7 @@
 
     <template
       #principal
-      v-if="cards[0] && cards[0].title && cards[0].title.lenght"
+      v-if="cards[0] && cards[0].title && cards[0].title.length"
     >
       <div class="grid m-0 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 w-full">
         <CardBaseClickable
@@ -128,7 +128,7 @@
       validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
     },
     title: {
-      rquired: true,
+      required: true,
       type: String
     },
     description: {
@@ -152,6 +152,7 @@
     },
     cards: {
       type: Array,
+      default: () => [],
       validator: (value) => {
         return value.every(
           (item) =>
