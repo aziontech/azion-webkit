@@ -46,13 +46,14 @@
             :pt="{
               content: {
                 class:
-                  'fixed p-0 hidden lg:flex flex-row border surface-border rounded-md surface-0 w-fit'
+                  'fixed p-0 hidden lg:flex flex-row border surface-border rounded-md surface-0 max-w-[calc(100%-8.5rem)] xl:max-w-6xl 2xl:max-w-screen-xl w-full'
               },
               root: { class: 'left-8 lg:left-[8.5rem] top-12 z-50' }
             }"
-            :breakpoints="{ '960px': '75vw', '640px': '100vw' }"
           >
-            <div class="flex flex-col gap-1 border-r surface-border p-3 surface-50 rounded-l-md">
+            <div
+              class="flex flex-col gap-1 border-r surface-border p-3 surface-50 rounded-l-md min-w-56"
+            >
               <template
                 v-for="(subitem, index) in menuitem.items"
                 v-bind:key="index"
@@ -62,7 +63,7 @@
                     text
                     size="small"
                     :class="{ 'surface-hover': active === index }"
-                    class="flex gap-2 justify-between min-w-fit w-full text-nowrap text-left min-w-52"
+                    class="flex gap-2 justify-between w-full text-nowrap text-left min-w-52"
                     @click="active = index"
                   >
                     <span class="flex gap-2 items-center">
@@ -104,10 +105,7 @@
                 >
                   <Overline :label="subitem.overline" />
                 </div>
-                <div
-                  class="flex flex-row justify-between min-h-56"
-                  :class="menuitem.rightBlock ? 'max-w-4xl' : 'max-w-5xl'"
-                >
+                <div class="flex flex-row justify-between min-h-56 min-w-full">
                   <ul
                     class="grid m-0 p-3 h-fit min-h-20 w-full"
                     :class="
@@ -122,9 +120,12 @@
                       class="flex flex-col gap-2"
                     >
                       <a
-                        :href="link.href"
+                        v-bind="link.href ? { href: link.href } : {}"
                         :title="link.label"
-                        class="p-button p-button-text p-button-sm w-full hover:surface-hover p-3 flex flex-col justify-start items-start"
+                        class="p-button p-button-text p-button-sm w-full p-3 flex flex-col justify-start items-start"
+                        :class="
+                          link.href ? 'hover:surface-hover' : 'cursor-default hover:bg-inherit'
+                        "
                       >
                         <div class="flex gap-3">
                           <div v-if="link.icon">
@@ -179,7 +180,7 @@
                               <a
                                 :href="sublink.href"
                                 :title="sublink.label"
-                                class="w-full p-button p-button-sm text-sm"
+                                class="w-full p-button p-button-sm text-xs"
                                 :class="[
                                   sublink.isLink
                                     ? 'p-button-link hover:underline'
