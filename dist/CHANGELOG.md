@@ -1,3 +1,9 @@
+## [1.140.1](https://github.com/aziontech/azion-webkit/compare/v1.140.0...v1.140.1) (2025-07-15)
+
+### Bug Fixes
+
+* HeroVideoRight to be used with Cards ([b432b68](https://github.com/aziontech/azion-webkit/commit/b432b68223929a15936d06dbdbfb6fbf73869a3b))
+
 ## [1.140.0](https://github.com/aziontech/azion-webkit/compare/v1.139.0...v1.140.0) (2025-07-15)
 
 ### Features
