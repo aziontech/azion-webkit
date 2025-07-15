@@ -390,8 +390,3 @@
     return breakpoints[breakpoint] || ''
   }
 </script>
-
-<style scoped>
-  .overlay-panel-position {
-  }
-</style>
