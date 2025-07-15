@@ -1,3 +1,13 @@
+## [1.140.0](https://github.com/aziontech/azion-webkit/compare/v1.139.0...v1.140.0) (2025-07-15)
+
+### Features
+
+* enhance header menu panel responsive layout and link behavior ([01f8533](https://github.com/aziontech/azion-webkit/commit/01f8533c4761131c648151787bd1acfab8434295))
+
+### Bug Fixes
+
+* remove unnecessary code ([999e2de](https://github.com/aziontech/azion-webkit/commit/999e2de46c7850da4b9f878ff4c7d4b6095b6bf8))
+
 ## [1.139.0](https://github.com/aziontech/azion-webkit/compare/v1.138.1...v1.139.0) (2025-07-11)
 
 ### Features
