@@ -1,3 +1,13 @@
+## [1.141.0](https://github.com/aziontech/azion-webkit/compare/v1.140.1...v1.141.0) (2025-07-16)
+
+### Features
+
+* readme doc tempalte system generation, used to ai ([384cdd1](https://github.com/aziontech/azion-webkit/commit/384cdd1eefaed104c74f38871364d675c8161b20))
+
+### Bug Fixes
+
+* form job inhire application - validation salary with min 1000 and linkedin profile url ([83e856a](https://github.com/aziontech/azion-webkit/commit/83e856aa0678c0a0088f13009c361f7dd98bff53))
+
 ## [1.140.1](https://github.com/aziontech/azion-webkit/compare/v1.140.0...v1.140.1) (2025-07-15)
 
 ### Bug Fixes
