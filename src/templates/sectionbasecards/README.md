@@ -7,22 +7,25 @@ Component SectionBaseCards
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type    | Description    |
+| ------- | ------- | -------------- |
 | `cards` | `Array` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | `() => ''` | - | No description |
-| `titleTag` | `String` | `() => 'h2'` | - | No description |
-| `title` | `String` | `() => ''` | - | No description |
-| `description` | `String` | `() => ''` | - | No description |
-| `descriptionRawHtml` | `String` | `() => ''` | - | No description |
+
+| Prop                 | Type     | Default      | Values | Description    |
+| -------------------- | -------- | ------------ | ------ | -------------- |
+| `overline`           | `String` | `() => ''`   | -      | No description |
+| `titleTag`           | `String` | `() => 'h2'` | -      | No description |
+| `title`              | `String` | `() => ''`   | -      | No description |
+| `description`        | `String` | `() => ''`   | -      | No description |
+| `descriptionRawHtml` | `String` | `() => ''`   | -      | No description |
 
 ## Dependencies
 
 ### Internal
+
 - ../contentsection
 - ../cardbase
 - ../cardtitle
@@ -32,10 +35,7 @@ Component SectionBaseCards
 
 ```vue
 <template>
-  <SectionBaseCards
-    :cards="[]"
-  >
-  </SectionBaseCards>
+  <SectionBaseCards :cards="[]"> </SectionBaseCards>
 </template>
 ```
 

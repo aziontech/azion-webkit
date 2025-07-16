@@ -7,20 +7,23 @@ Component SectionIntercalatedContent
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type    | Description    |
+| ------- | ------- | -------------- |
 | `items` | `Array` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | - | - | No description |
-| `titleTag` | `String` | - | - | No description |
-| `title` | `String` | - | - | No description |
+
+| Prop       | Type     | Default | Values | Description    |
+| ---------- | -------- | ------- | ------ | -------------- |
+| `overline` | `String` | -       | -      | No description |
+| `titleTag` | `String` | -       | -      | No description |
+| `title`    | `String` | -       | -      | No description |
 
 ## Dependencies
 
 ### Internal
+
 - ../contentsection
 - ../themeawareimageswitcher
 
@@ -28,10 +31,7 @@ Component SectionIntercalatedContent
 
 ```vue
 <template>
-  <SectionIntercalatedContent
-    :items="[]"
-  >
-  </SectionIntercalatedContent>
+  <SectionIntercalatedContent :items="[]"> </SectionIntercalatedContent>
 </template>
 ```
 

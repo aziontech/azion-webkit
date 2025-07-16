@@ -8,9 +8,7 @@ Component ShieldIllustration
 
 ```vue
 <template>
-  <ShieldIllustration
-  >
-  </ShieldIllustration>
+  <ShieldIllustration> </ShieldIllustration>
 </template>
 ```
 

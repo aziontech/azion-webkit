@@ -7,15 +7,17 @@ Component StatHighlightBanner
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `icon` | `String` | - | - | No description |
-| `description` | `String` | - | - | No description |
+
+| Prop          | Type     | Default | Values | Description    |
+| ------------- | -------- | ------- | ------ | -------------- |
+| `icon`        | `String` | -       | -      | No description |
+| `description` | `String` | -       | -      | No description |
 
 ## Usage Example
 

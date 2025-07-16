@@ -7,29 +7,33 @@ Component SharerBlock
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
-| `data` | `Array` | No description |
+
+| Prop          | Type     | Description    |
+| ------------- | -------- | -------------- |
+| `data`        | `Array`  | No description |
 | `tooltipText` | `String` | No description |
-| `sharedURL` | `URL` | No description |
+| `sharedURL`   | `URL`    | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `title` | `String` | `'Share this post'` | - | No description |
+
+| Prop    | Type     | Default             | Values | Description    |
+| ------- | -------- | ------------------- | ------ | -------------- |
+| `title` | `String` | `'Share this post'` | -      | No description |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event   | Description |
+| ------- | ----------- |
 | `click` | click event |
 
 ## Dependencies
 
 ### External
+
 - primevue/button
 
 ### Internal
+
 - ../linkbutton
 
 ## Usage Example

@@ -7,30 +7,32 @@ Component FormJobApplication
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
-| `t` | `Object` | No description |
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
+| `t`     | `Object` | No description |
 | `jobId` | `String` | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description  |
+| --------- | ------------ |
 | `content` | content slot |
 | `actions` | actions slot |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
-| `submit` | submit event |
+| Event      | Description    |
+| ---------- | -------------- |
+| `submit`   | submit event   |
 | `uploader` | uploader event |
-| `click` | click event |
-| `vee` | vee event |
+| `click`    | click event    |
+| `vee`      | vee event      |
 
 ## Dependencies
 
 ### External
+
 - primevue/inputtext
 - primevue/button
 - primevue/inlinemessage
@@ -41,6 +43,7 @@ Component FormJobApplication
 - @vee-validate/yup
 
 ### Internal
+
 - ../formblock/FormBlock.vue
 
 ## Usage Example

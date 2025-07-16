@@ -7,33 +7,33 @@ Component ContentQuoteAvatar
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop   | Type    | Description    |
+| ------ | ------- | -------------- |
 | `data` | `Array` | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `item` | item slot |
+| Slot   | Description |
+| ------ | ----------- |
+| `item` | item slot   |
 
 ## Dependencies
 
 ### External
+
 - vue
 - primevue/carousel
 
 ### Internal
+
 - ../quoteavatar
 
 ## Usage Example
 
 ```vue
 <template>
-  <ContentQuoteAvatar
-    :data="[]"
-  >
-  </ContentQuoteAvatar>
+  <ContentQuoteAvatar :data="[]"> </ContentQuoteAvatar>
 </template>
 ```
 

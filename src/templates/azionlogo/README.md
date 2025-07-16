@@ -7,19 +7,18 @@ Component AzionLogo
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `href` | `String` | - | - | No description |
-| `hrefTitle` | `String` | - | - | No description |
-| `target` | `String` | `'_self'` | - | No description |
+
+| Prop        | Type     | Default   | Values | Description    |
+| ----------- | -------- | --------- | ------ | -------------- |
+| `href`      | `String` | -         | -      | No description |
+| `hrefTitle` | `String` | -         | -      | No description |
+| `target`    | `String` | `'_self'` | -      | No description |
 
 ## Usage Example
 
 ```vue
 <template>
-  <AzionLogo
-  >
-  </AzionLogo>
+  <AzionLogo> </AzionLogo>
 </template>
 ```
 

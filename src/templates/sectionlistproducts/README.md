@@ -7,29 +7,32 @@ Component SectionListProducts
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | - | - | No description |
-| `titleTag` | `String` | - | - | No description |
-| `description` | `String` | `() => ''` | - | No description |
-| `descriptionRawHtml` | `String` | `() => ''` | - | No description |
-| `list` | `Array` | `() => []` | - | No description |
-| `grid` | `Boolean` | `() => false` | - | No description |
+
+| Prop                 | Type      | Default       | Values | Description    |
+| -------------------- | --------- | ------------- | ------ | -------------- |
+| `overline`           | `String`  | -             | -      | No description |
+| `titleTag`           | `String`  | -             | -      | No description |
+| `description`        | `String`  | `() => ''`    | -      | No description |
+| `descriptionRawHtml` | `String`  | `() => ''`    | -      | No description |
+| `list`               | `Array`   | `() => []`    | -      | No description |
+| `grid`               | `Boolean` | `() => false` | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `main` | main slot |
+| Slot   | Description |
+| ------ | ----------- |
+| `main` | main slot   |
 
 ## Dependencies
 
 ### Internal
+
 - ../contentsection
 - ../productcard
 

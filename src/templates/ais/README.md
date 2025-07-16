@@ -7,33 +7,34 @@ Component AlgoliaInstantSearch
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `inputPlaceholder` | `String` | `'Search Azion'` | - | No description |
+
+| Prop               | Type     | Default          | Values | Description    |
+| ------------------ | -------- | ---------------- | ------ | -------------- |
+| `inputPlaceholder` | `String` | `'Search Azion'` | -      | No description |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event   | Description |
+| ------- | ----------- |
 | `click` | click event |
 
 ## Dependencies
 
 ### External
+
 - vue
 - algoliasearch
 - primevue/tabmenu
 
 ### Internal
+
 - ../aisindexhit/AlgoliaIndexHit.vue
 
 ## Usage Example
 
 ```vue
 <template>
-  <AlgoliaInstantSearch
-  >
-  </AlgoliaInstantSearch>
+  <AlgoliaInstantSearch> </AlgoliaInstantSearch>
 </template>
 ```
 

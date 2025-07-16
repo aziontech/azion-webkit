@@ -6,18 +6,15 @@ Component Header
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description               |
+| --------- | ------------------------- |
 | `default` | Default component content |
 
 ## Usage Example
 
 ```vue
 <template>
-  <Header
-  >
-    Component content
-  </Header>
+  <Header> Component content </Header>
 </template>
 ```
 

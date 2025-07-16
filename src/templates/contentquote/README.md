@@ -7,33 +7,33 @@ Component ContentQuote
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop   | Type    | Description    |
+| ------ | ------- | -------------- |
 | `data` | `Array` | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `item` | item slot |
+| Slot   | Description |
+| ------ | ----------- |
+| `item` | item slot   |
 
 ## Dependencies
 
 ### External
+
 - vue
 - primevue/carousel
 
 ### Internal
+
 - ../quote
 
 ## Usage Example
 
 ```vue
 <template>
-  <ContentQuote
-    :data="[]"
-  >
-  </ContentQuote>
+  <ContentQuote :data="[]"> </ContentQuote>
 </template>
 ```
 

@@ -7,25 +7,29 @@ Component IconText
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `description` | `String` | - | - | No description |
-| `icon` | `String` | - | - | No description |
-| `tag` | `String` | - | - | No description |
-| `tagSeverity` | `String` | `'info'` | - | No description |
-| `severity` | `String` | `'default'` | `default\|primary` | No description |
+
+| Prop          | Type     | Default     | Values             | Description    |
+| ------------- | -------- | ----------- | ------------------ | -------------- |
+| `description` | `String` | -           | -                  | No description |
+| `icon`        | `String` | -           | -                  | No description |
+| `tag`         | `String` | -           | -                  | No description |
+| `tagSeverity` | `String` | `'info'`    | -                  | No description |
+| `severity`    | `String` | `'default'` | `default\|primary` | No description |
 
 ## Dependencies
 
 ### External
+
 - primevue/tag
 
 ### Internal
+
 - ../tile
 
 ## Usage Example

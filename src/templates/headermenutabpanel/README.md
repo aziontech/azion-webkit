@@ -7,20 +7,22 @@ Component HeaderMenuTabPanel
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `menuData` | `Object` | - | - | No description |
+
+| Prop       | Type     | Default | Values | Description    |
+| ---------- | -------- | ------- | ------ | -------------- |
+| `menuData` | `Object` | -       | -      | No description |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event   | Description |
+| ------- | ----------- |
 | `click` | click event |
-| `hide` | hide event |
+| `hide`  | hide event  |
 
 ## Dependencies
 
 ### External
+
 - vue
 - primevue/button
 - primevue/overlaypanel
@@ -29,15 +31,14 @@ Component HeaderMenuTabPanel
 - primevue/tag
 
 ### Internal
+
 - ../overline/Overline.vue
 
 ## Usage Example
 
 ```vue
 <template>
-  <HeaderMenuTabPanel
-  >
-  </HeaderMenuTabPanel>
+  <HeaderMenuTabPanel> </HeaderMenuTabPanel>
 </template>
 ```
 

@@ -7,25 +7,27 @@ SectionBasicContent
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `isContentCentralized` | `Boolean` | `() => true` | - | No description |
-| `overline` | `String` | `() => ''` | - | No description |
-| `titleTag` | `String` | `() => 'h2'` | - | No description |
-| `title` | `String` | - | - | No description |
-| `description` | `String` | `() => ''` | - | No description |
-| `descriptionRawHtml` | `String` | `() => ''` | - | No description |
-| `buttons` | `Array` | `() => []` | - | No description |
+
+| Prop                   | Type      | Default      | Values | Description    |
+| ---------------------- | --------- | ------------ | ------ | -------------- |
+| `isContentCentralized` | `Boolean` | `() => true` | -      | No description |
+| `overline`             | `String`  | `() => ''`   | -      | No description |
+| `titleTag`             | `String`  | `() => 'h2'` | -      | No description |
+| `title`                | `String`  | -            | -      | No description |
+| `description`          | `String`  | `() => ''`   | -      | No description |
+| `descriptionRawHtml`   | `String`  | `() => ''`   | -      | No description |
+| `buttons`              | `Array`   | `() => []`   | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description  |
+| --------- | ------------ |
 | `actions` | actions slot |
 
 ## Dependencies
 
 ### Internal
+
 - ../contentsection
 - ../linkbutton
 
@@ -33,9 +35,7 @@ SectionBasicContent
 
 ```vue
 <template>
-  <SectionBasicContent
-  >
-  </SectionBasicContent>
+  <SectionBasicContent> </SectionBasicContent>
 </template>
 ```
 

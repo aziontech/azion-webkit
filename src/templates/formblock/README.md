@@ -7,19 +7,21 @@ Component FormBlock
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `description` | `String` | - | - | No description |
+
+| Prop          | Type     | Default | Values | Description    |
+| ------------- | -------- | ------- | ------ | -------------- |
+| `description` | `String` | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description               |
+| --------- | ------------------------- |
 | `default` | Default component content |
 
 ## Usage Example

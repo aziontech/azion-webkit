@@ -7,24 +7,27 @@ Component SectionQuote
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
-| `text` | `String` | No description |
+
+| Prop        | Type     | Description    |
+| ----------- | -------- | -------------- |
+| `text`      | `String` | No description |
 | `imageDark` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `border` | `Boolean` | `true` | - | No description |
-| `author` | `String` | - | - | No description |
-| `imageLight` | `String` | - | - | No description |
-| `button` | `Object` | - | - | No description |
-| `alt` | `String` | - | - | No description |
-| `disableDegrade` | `Boolean` | `false` | - | No description |
+
+| Prop             | Type      | Default | Values | Description    |
+| ---------------- | --------- | ------- | ------ | -------------- |
+| `border`         | `Boolean` | `true`  | -      | No description |
+| `author`         | `String`  | -       | -      | No description |
+| `imageLight`     | `String`  | -       | -      | No description |
+| `button`         | `Object`  | -       | -      | No description |
+| `alt`            | `String`  | -       | -      | No description |
+| `disableDegrade` | `Boolean` | `false` | -      | No description |
 
 ## Dependencies
 
 ### Internal
+
 - ../quote
 
 ## Usage Example

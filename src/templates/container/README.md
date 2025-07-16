@@ -7,29 +7,28 @@ container
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `compact` | `Boolean` | `false` | - | No description |
+
+| Prop      | Type      | Default | Values | Description    |
+| --------- | --------- | ------- | ------ | -------------- |
+| `compact` | `Boolean` | `false` | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description               |
+| --------- | ------------------------- |
 | `default` | Default component content |
 
 ## Dependencies
 
 ### External
+
 - vue
 
 ## Usage Example
 
 ```vue
 <template>
-  <Container
-  >
-    Component content
-  </Container>
+  <Container> Component content </Container>
 </template>
 ```
 

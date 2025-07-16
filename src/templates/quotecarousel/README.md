@@ -7,40 +7,41 @@ Component QuoteCarousel
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop   | Type    | Description    |
+| ------ | ------- | -------------- |
 | `data` | `Array` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `numVisible` | `Number` | `1` | - | No description |
-| `numScroll` | `Number` | `1` | - | No description |
-| `autoplayInterval` | `Number` | `3500` | - | No description |
+
+| Prop               | Type     | Default | Values | Description    |
+| ------------------ | -------- | ------- | ------ | -------------- |
+| `numVisible`       | `Number` | `1`     | -      | No description |
+| `numScroll`        | `Number` | `1`     | -      | No description |
+| `autoplayInterval` | `Number` | `3500`  | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `item` | item slot |
+| Slot   | Description |
+| ------ | ----------- |
+| `item` | item slot   |
 
 ## Dependencies
 
 ### External
+
 - vue
 - primevue/carousel
 
 ### Internal
+
 - ../quote
 
 ## Usage Example
 
 ```vue
 <template>
-  <QuoteCarousel
-    :data="[]"
-  >
-  </QuoteCarousel>
+  <QuoteCarousel :data="[]"> </QuoteCarousel>
 </template>
 ```
 

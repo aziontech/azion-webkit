@@ -7,37 +7,40 @@ Component NewsletterWide
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
-| `title` | `String` | No description |
-| `overline` | `String` | No description |
+
+| Prop          | Type     | Description    |
+| ------------- | -------- | -------------- |
+| `title`       | `String` | No description |
+| `overline`    | `String` | No description |
 | `description` | `String` | No description |
-| `formData` | `Object` | No description |
+| `formData`    | `Object` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `placeholderInput` | `String` | `'Your Full Name'` | - | No description |
-| `placeholderEmail` | `String` | `'Your e-mail'` | - | No description |
-| `buttonText` | `String` | `'submit'` | - | No description |
-| `responseMessages` | `String` | `'Thanks for subscribing to Azion newsletter'` | - | No description |
-| `errorMessage` | `String` | `'Error while subscribing to Azion newsletter` | - | No description |
+
+| Prop               | Type     | Default                                        | Values | Description    |
+| ------------------ | -------- | ---------------------------------------------- | ------ | -------------- |
+| `placeholderInput` | `String` | `'Your Full Name'`                             | -      | No description |
+| `placeholderEmail` | `String` | `'Your e-mail'`                                | -      | No description |
+| `buttonText`       | `String` | `'submit'`                                     | -      | No description |
+| `responseMessages` | `String` | `'Thanks for subscribing to Azion newsletter'` | -      | No description |
+| `errorMessage`     | `String` | `'Error while subscribing to Azion newsletter` | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description  |
+| --------- | ------------ |
 | `content` | content slot |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event    | Description  |
+| -------- | ------------ |
 | `submit` | submit event |
 
 ## Dependencies
 
 ### External
+
 - primevue/inputtext
 - primevue/inputgroup
 - primevue/inputgroupaddon
@@ -48,6 +51,7 @@ Component NewsletterWide
 - vue
 
 ### Internal
+
 - ../cardbase
 - ../overline
 - ../cardtitle

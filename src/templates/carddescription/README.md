@@ -7,25 +7,23 @@ Component CardDescription
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `color` | `String` | `'secondary'` | `primary\|secondary` | No description |
-| `size` | `String` | `'medium'` | `small\|medium\|large` | No description |
+
+| Prop    | Type     | Default       | Values                 | Description    |
+| ------- | -------- | ------------- | ---------------------- | -------------- |
+| `color` | `String` | `'secondary'` | `primary\|secondary`   | No description |
+| `size`  | `String` | `'medium'`    | `small\|medium\|large` | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description               |
+| --------- | ------------------------- |
 | `default` | Default component content |
 
 ## Usage Example
 
 ```vue
 <template>
-  <CardDescription
-  >
-    Component content
-  </CardDescription>
+  <CardDescription> Component content </CardDescription>
 </template>
 ```
 

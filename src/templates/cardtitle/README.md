@@ -7,24 +7,22 @@ Component CardTitle
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `titleTag` | `String` | `''` | - | No description |
+
+| Prop       | Type     | Default | Values | Description    |
+| ---------- | -------- | ------- | ------ | -------------- |
+| `titleTag` | `String` | `''`    | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description               |
+| --------- | ------------------------- |
 | `default` | Default component content |
 
 ## Usage Example
 
 ```vue
 <template>
-  <CardTitle
-  >
-    Component content
-  </CardTitle>
+  <CardTitle> Component content </CardTitle>
 </template>
 ```
 

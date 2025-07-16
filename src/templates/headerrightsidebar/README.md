@@ -6,20 +6,21 @@ Component HeaderRightSidebar
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description               |
+| --------- | ------------------------- |
 | `default` | Default component content |
-| `item` | item slot |
+| `item`    | item slot                 |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event   | Description |
+| ------- | ----------- |
 | `click` | click event |
 
 ## Dependencies
 
 ### External
+
 - vue
 - primevue/button
 - primevue/divider
@@ -31,10 +32,7 @@ Component HeaderRightSidebar
 
 ```vue
 <template>
-  <HeaderRightSidebar
-  >
-    Component content
-  </HeaderRightSidebar>
+  <HeaderRightSidebar> Component content </HeaderRightSidebar>
 </template>
 ```
 

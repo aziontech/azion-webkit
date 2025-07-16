@@ -6,13 +6,14 @@ Component ThemeSwitcher
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event   | Description |
+| ------- | ----------- |
 | `click` | click event |
 
 ## Dependencies
 
 ### External
+
 - vue
 - primevue/togglebutton
 
@@ -20,9 +21,7 @@ Component ThemeSwitcher
 
 ```vue
 <template>
-  <ThemeSwitcher
-  >
-  </ThemeSwitcher>
+  <ThemeSwitcher> </ThemeSwitcher>
 </template>
 ```
 

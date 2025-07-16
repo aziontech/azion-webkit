@@ -7,17 +7,16 @@ Component Community
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `lang` | `String` | `'en'` | - | No description |
+
+| Prop   | Type     | Default | Values | Description    |
+| ------ | -------- | ------- | ------ | -------------- |
+| `lang` | `String` | `'en'`  | -      | No description |
 
 ## Usage Example
 
 ```vue
 <template>
-  <Community
-  >
-  </Community>
+  <Community> </Community>
 </template>
 ```
 

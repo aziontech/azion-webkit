@@ -7,15 +7,16 @@ Component EmptyStateBlock
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
-| `title` | `String` | No description |
+
+| Prop          | Type     | Description    |
+| ------------- | -------- | -------------- |
+| `title`       | `String` | No description |
 | `description` | `String` | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description               |
+| --------- | ------------------------- |
 | `default` | Default component content |
 
 ## Usage Example

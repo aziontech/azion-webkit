@@ -6,13 +6,14 @@ Component Netinfo
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event   | Description |
+| ------- | ----------- |
 | `click` | click event |
 
 ## Dependencies
 
 ### External
+
 - vue
 - primevue/button
 - primevue/skeleton
@@ -22,9 +23,7 @@ Component Netinfo
 
 ```vue
 <template>
-  <Netinfo
-  >
-  </Netinfo>
+  <Netinfo> </Netinfo>
 </template>
 ```
 

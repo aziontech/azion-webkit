@@ -7,19 +7,21 @@ Component ArticleNavigation
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `cards` | `Object` | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description  |
+| --------- | ------------ |
 | `content` | content slot |
 
 ## Dependencies
 
 ### Internal
+
 - ../cardbaseclickable
 - ../overline
 - ../cardtitle
@@ -29,10 +31,7 @@ Component ArticleNavigation
 
 ```vue
 <template>
-  <ArticleNavigation
-    :cards="{}"
-  >
-  </ArticleNavigation>
+  <ArticleNavigation :cards="{}"> </ArticleNavigation>
 </template>
 ```
 

@@ -7,28 +7,31 @@ Component BannerGetStarted
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
-| `title` | `String` | No description |
-| `buttons` | `Array` | No description |
-| `items` | `Array` | No description |
+
+| Prop      | Type     | Description    |
+| --------- | -------- | -------------- |
+| `title`   | `String` | No description |
+| `buttons` | `Array`  | No description |
+| `items`   | `Array`  | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | - | - | No description |
+
+| Prop       | Type     | Default | Values | Description    |
+| ---------- | -------- | ------- | ------ | -------------- |
+| `overline` | `String` | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `title` | title slot |
+| Slot      | Description  |
+| --------- | ------------ |
+| `title`   | title slot   |
 | `content` | content slot |
-| `main` | main slot |
+| `main`    | main slot    |
 
 ## Dependencies
 
 ### Internal
+
 - ../linkbutton
 - ../contentsection
 - ../tile

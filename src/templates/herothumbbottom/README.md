@@ -7,32 +7,35 @@ Component HeroThumbBottom
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
-| `buttons` | `Array` | No description |
-| `images` | `String` | No description |
-| `dark` | `String` | No description |
-| `alt` | `String` | No description |
+
+| Prop      | Type     | Description    |
+| --------- | -------- | -------------- |
+| `buttons` | `Array`  | No description |
+| `images`  | `String` | No description |
+| `dark`    | `String` | No description |
+| `alt`     | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | `() => ''` | - | No description |
-| `description` | `String` | `() => ''` | - | No description |
-| `descriptionRawHtml` | `String` | `() => ''` | - | No description |
+
+| Prop                 | Type     | Default    | Values | Description    |
+| -------------------- | -------- | ---------- | ------ | -------------- |
+| `overline`           | `String` | `() => ''` | -      | No description |
+| `description`        | `String` | `() => ''` | -      | No description |
+| `descriptionRawHtml` | `String` | `() => ''` | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `actions` | actions slot |
-| `main` | main slot |
-| `darkImage` | darkImage slot |
+| Slot         | Description     |
+| ------------ | --------------- |
+| `actions`    | actions slot    |
+| `main`       | main slot       |
+| `darkImage`  | darkImage slot  |
 | `lightImage` | lightImage slot |
 
 ## Dependencies
 
 ### Internal
+
 - ../herobase
 - ../linkbutton
 - ../themeawareimageswitcher

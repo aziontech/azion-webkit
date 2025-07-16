@@ -6,20 +6,21 @@ Component SelectTheme
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `value` | value slot |
+| Slot     | Description |
+| -------- | ----------- |
+| `value`  | value slot  |
 | `option` | option slot |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event    | Description  |
+| -------- | ------------ |
 | `update` | update event |
 
 ## Dependencies
 
 ### External
+
 - vue
 - primevue/dropdown
 
@@ -27,9 +28,7 @@ Component SelectTheme
 
 ```vue
 <template>
-  <SelectTheme
-  >
-  </SelectTheme>
+  <SelectTheme> </SelectTheme>
 </template>
 ```
 

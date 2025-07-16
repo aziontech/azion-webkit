@@ -7,25 +7,28 @@ Component SelectLang
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop   | Type     | Description    |
+| ------ | -------- | -------------- |
 | `lang` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `i18nPages` | `Array` | - | - | No description |
+
+| Prop        | Type    | Default | Values | Description    |
+| ----------- | ------- | ------- | ------ | -------------- |
+| `i18nPages` | `Array` | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `value` | value slot |
+| Slot     | Description |
+| -------- | ----------- |
+| `value`  | value slot  |
 | `option` | option slot |
 
 ## Dependencies
 
 ### External
+
 - primevue/dropdown
 
 ## Usage Example

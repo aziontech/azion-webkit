@@ -7,29 +7,31 @@ Component ContentSection
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | `() => ''` | - | No description |
-| `title` | `String` | `() => ''` | - | No description |
-| `titleTag` | `String` | `() => 'h2'` | - | No description |
-| `description` | `String` | `() => ''` | - | No description |
-| `descriptionRawHtml` | `String` | `() => ''` | - | No description |
-| `position` | `String` | `() => 'left'` | `left\|right\|center\|full` | No description |
-| `isContentCentralized` | `Boolean` | `() => false` | - | No description |
-| `textCenter` | `Boolean` | `() => false` | - | No description |
-| `reverse` | `Boolean` | `() => false` | - | No description |
-| `isSticky` | `Boolean` | `() => false` | - | No description |
-| `pt` | `Object` | - | - | No description |
+
+| Prop                   | Type      | Default        | Values                      | Description    |
+| ---------------------- | --------- | -------------- | --------------------------- | -------------- |
+| `overline`             | `String`  | `() => ''`     | -                           | No description |
+| `title`                | `String`  | `() => ''`     | -                           | No description |
+| `titleTag`             | `String`  | `() => 'h2'`   | -                           | No description |
+| `description`          | `String`  | `() => ''`     | -                           | No description |
+| `descriptionRawHtml`   | `String`  | `() => ''`     | -                           | No description |
+| `position`             | `String`  | `() => 'left'` | `left\|right\|center\|full` | No description |
+| `isContentCentralized` | `Boolean` | `() => false`  | -                           | No description |
+| `textCenter`           | `Boolean` | `() => false`  | -                           | No description |
+| `reverse`              | `Boolean` | `() => false`  | -                           | No description |
+| `isSticky`             | `Boolean` | `() => false`  | -                           | No description |
+| `pt`                   | `Object`  | -              | -                           | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description               |
+| --------- | ------------------------- |
 | `default` | Default component content |
 
 ## Dependencies
 
 ### Internal
+
 - ../titlesection
 - ../overline
 
@@ -37,10 +39,7 @@ Component ContentSection
 
 ```vue
 <template>
-  <ContentSection
-  >
-    Component content
-  </ContentSection>
+  <ContentSection> Component content </ContentSection>
 </template>
 ```
 

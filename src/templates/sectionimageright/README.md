@@ -7,33 +7,36 @@ Component SectionImageRight
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
-| `title` | `String` | No description |
-| `image` | `String` | No description |
+
+| Prop        | Type     | Description    |
+| ----------- | -------- | -------------- |
+| `title`     | `String` | No description |
+| `image`     | `String` | No description |
 | `imageDark` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | `() => ''` | - | No description |
-| `titleTag` | `String` | - | - | No description |
-| `description` | `String` | `() => ''` | - | No description |
-| `descriptionRawHtml` | `String` | `() => ''` | - | No description |
-| `buttons` | `Array` | - | - | No description |
+
+| Prop                 | Type     | Default    | Values | Description    |
+| -------------------- | -------- | ---------- | ------ | -------------- |
+| `overline`           | `String` | `() => ''` | -      | No description |
+| `titleTag`           | `String` | -          | -      | No description |
+| `description`        | `String` | `() => ''` | -      | No description |
+| `descriptionRawHtml` | `String` | `() => ''` | -      | No description |
+| `buttons`            | `Array`  | -          | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `actions` | actions slot |
-| `main` | main slot |
-| `darkImage` | darkImage slot |
+| Slot         | Description     |
+| ------------ | --------------- |
+| `actions`    | actions slot    |
+| `main`       | main slot       |
+| `darkImage`  | darkImage slot  |
 | `lightImage` | lightImage slot |
 
 ## Dependencies
 
 ### Internal
+
 - ../contentsection
 - ../linkbutton
 - ../themeawareimageswitcher

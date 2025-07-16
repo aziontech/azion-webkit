@@ -7,30 +7,34 @@ Component Footer
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
-| `lang` | `String` | No description |
-| `listData` | `Array` | No description |
+
+| Prop        | Type     | Description    |
+| ----------- | -------- | -------------- |
+| `lang`      | `String` | No description |
+| `listData`  | `Array`  | No description |
 | `copyright` | `String` | No description |
-| `cta` | `Object` | No description |
+| `cta`       | `Object` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `socialButtons` | `Array` | - | - | No description |
+
+| Prop            | Type    | Default | Values | Description    |
+| --------------- | ------- | ------- | ------ | -------------- |
+| `socialButtons` | `Array` | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description               |
+| --------- | ------------------------- |
 | `default` | Default component content |
 
 ## Dependencies
 
 ### External
+
 - primevue/divider
 
 ### Internal
+
 - ../src/assets/icons/azion-icon-logo.vue
 - ../overline/Overline.vue
 - ../linkbutton/LinkButton.vue

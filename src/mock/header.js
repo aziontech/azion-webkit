@@ -10,14 +10,14 @@ const menuData = {
       items: [
         {
           label: 'Industries',
-          overline: "Solutions by industries",
+          overline: 'Solutions by industries',
           type: 'solutions',
           items: [
             {
               label: 'Financial Services',
               description: 'Accelerate digital banking with enhanced security and compliance',
               href: '/en/solutions/financial-services/',
-              icon: 'pi pi-dollar',
+              icon: 'pi pi-dollar'
             },
             {
               label: 'Retail',
@@ -35,13 +35,12 @@ const menuData = {
         },
         {
           label: 'Use Cases',
-          overline: "Solutions by use cases",
+          overline: 'Solutions by use cases',
           type: 'solutions',
           items: [
             {
               label: 'Application Development',
-              description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
               href: '/en/solutions/jamstack-websites/',
               icon: 'pi pi-desktop',
               subitems: [
@@ -66,8 +65,7 @@ const menuData = {
             },
             {
               label: 'Application and Network Security',
-              description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
               href: '/en/solutions/serverless-applications/',
               icon: 'pi pi-shield',
               subitems: [
@@ -92,8 +90,7 @@ const menuData = {
             },
             {
               label: 'Service Performance and Reliability ',
-              description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
               href: '/en/solutions/application-modernization/',
               icon: 'pi pi-stopwatch',
               subitems: [
@@ -118,8 +115,7 @@ const menuData = {
             },
             {
               label: 'Application and Infraestructure Automation',
-              description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
               href: '/en/solutions/microservices-applications/',
               icon: 'pi pi-server',
               subitems: [
@@ -130,25 +126,24 @@ const menuData = {
                 {
                   label: 'Infrastructure Orchestration',
                   href: '/en/products/application-accelerator/'
-                },
+                }
               ]
             },
             {
               label: 'Artificial Intelligence (AI)',
-              description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
               href: '/en/solutions/edge-enhanced-applications/',
               icon: 'pi pi-user-edit',
               subitems: [
                 {
                   label: 'Azion AI',
                   href: '/en/products/application-accelerator/'
-                },
+                }
               ]
-            },
+            }
           ]
-        },
-      ],
+        }
+      ]
     },
     {
       label: 'Products',

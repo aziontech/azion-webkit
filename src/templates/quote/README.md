@@ -7,31 +7,34 @@ Component Quote
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
-| `text` | `String` | No description |
+
+| Prop        | Type     | Description    |
+| ----------- | -------- | -------------- |
+| `text`      | `String` | No description |
 | `imageDark` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `border` | `Boolean` | `true` | - | No description |
-| `disableDegrade` | `Boolean` | `false` | - | No description |
-| `author` | `String` | - | - | No description |
-| `imageLight` | `String` | - | - | No description |
-| `button` | `Object` | - | - | No description |
-| `alt` | `String` | - | - | No description |
+
+| Prop             | Type      | Default | Values | Description    |
+| ---------------- | --------- | ------- | ------ | -------------- |
+| `border`         | `Boolean` | `true`  | -      | No description |
+| `disableDegrade` | `Boolean` | `false` | -      | No description |
+| `author`         | `String`  | -       | -      | No description |
+| `imageLight`     | `String`  | -       | -      | No description |
+| `button`         | `Object`  | -       | -      | No description |
+| `alt`            | `String`  | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot         | Description     |
+| ------------ | --------------- |
 | `lightImage` | lightImage slot |
-| `darkImage` | darkImage slot |
+| `darkImage`  | darkImage slot  |
 
 ## Dependencies
 
 ### Internal
+
 - ../themeawareimageswitcher
 - ../linkbutton
 

@@ -7,29 +7,32 @@ Component SectionGridHighlight
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop       | Type     | Description    |
+| ---------- | -------- | -------------- |
 | `titleTag` | `String` | No description |
-| `title` | `String` | No description |
-| `cards` | `Array` | No description |
+| `title`    | `String` | No description |
+| `cards`    | `Array`  | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | - | - | No description |
-| `description` | `String` | `() => ''` | - | No description |
-| `descriptionRawHtml` | `String` | `() => ''` | - | No description |
-| `button` | `Object` | - | - | No description |
+
+| Prop                 | Type     | Default    | Values | Description    |
+| -------------------- | -------- | ---------- | ------ | -------------- |
+| `overline`           | `String` | -          | -      | No description |
+| `description`        | `String` | `() => ''` | -      | No description |
+| `descriptionRawHtml` | `String` | `() => ''` | -      | No description |
+| `button`             | `Object` | -          | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `main` | main slot |
+| Slot   | Description |
+| ------ | ----------- |
+| `main` | main slot   |
 
 ## Dependencies
 
 ### Internal
+
 - ../contentsection
 - ../gridhighlight
 

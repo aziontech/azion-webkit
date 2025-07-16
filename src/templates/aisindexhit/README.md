@@ -7,35 +7,35 @@ Component AlgoliaIndexHit
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `indexName` | `String` | - | - | No description |
-| `label` | `String` | - | - | No description |
+
+| Prop        | Type     | Default | Values | Description    |
+| ----------- | -------- | ------- | ------ | -------------- |
+| `indexName` | `String` | -       | -      | No description |
+| `label`     | `String` | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description  |
+| --------- | ------------ |
 | `content` | content slot |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event   | Description |
+| ------- | ----------- |
 | `media` | media event |
 
 ## Dependencies
 
 ### Internal
+
 - ../cardbaseclickable
 
 ## Usage Example
 
 ```vue
 <template>
-  <AlgoliaIndexHit
-  >
-  </AlgoliaIndexHit>
+  <AlgoliaIndexHit> </AlgoliaIndexHit>
 </template>
 ```
 

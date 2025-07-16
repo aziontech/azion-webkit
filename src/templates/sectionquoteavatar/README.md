@@ -7,23 +7,26 @@ Component SectionQuoteAvatar
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
-| `text` | `String` | No description |
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
+| `text`  | `String` | No description |
 | `image` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `data` | `Array` | `() => []` | - | No description |
-| `border` | `Boolean` | `() => true` | - | No description |
-| `disableDegrade` | `Boolean` | `() => false` | - | No description |
-| `author` | `String` | - | - | No description |
-| `button` | `Object` | - | - | No description |
+
+| Prop             | Type      | Default       | Values | Description    |
+| ---------------- | --------- | ------------- | ------ | -------------- |
+| `data`           | `Array`   | `() => []`    | -      | No description |
+| `border`         | `Boolean` | `() => true`  | -      | No description |
+| `disableDegrade` | `Boolean` | `() => false` | -      | No description |
+| `author`         | `String`  | -             | -      | No description |
+| `button`         | `Object`  | -             | -      | No description |
 
 ## Dependencies
 
 ### Internal
+
 - ../contentquoteavatar
 
 ## Usage Example

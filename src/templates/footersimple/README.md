@@ -7,19 +7,21 @@ Component FooterSimple
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop   | Type     | Description    |
+| ------ | -------- | -------------- |
 | `text` | `String` | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description               |
+| --------- | ------------------------- |
 | `default` | Default component content |
 
 ## Dependencies
 
 ### External
+
 - primevue/divider
 
 ## Usage Example

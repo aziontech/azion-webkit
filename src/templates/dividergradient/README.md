@@ -8,9 +8,7 @@ Component DividerGradient
 
 ```vue
 <template>
-  <DividerGradient
-  >
-  </DividerGradient>
+  <DividerGradient> </DividerGradient>
 </template>
 ```
 

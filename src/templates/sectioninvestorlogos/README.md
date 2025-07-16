@@ -7,25 +7,28 @@ Component SectionInvestorsLogos
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
-| `logos` | `Array` | No description |
+| `logos` | `Array`  | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | - | - | No description |
+
+| Prop       | Type     | Default | Values | Description    |
+| ---------- | -------- | ------- | ------ | -------------- |
+| `overline` | `String` | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description  |
+| --------- | ------------ |
 | `content` | content slot |
 
 ## Dependencies
 
 ### Internal
+
 - ../contentsection
 
 ## Usage Example

@@ -7,10 +7,11 @@ Component Titlegroup
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop       | Type     | Description    |
+| ---------- | -------- | -------------- |
 | `subtitle` | `String` | No description |
-| `title` | `String` | No description |
+| `title`    | `String` | No description |
 
 ## Usage Example
 

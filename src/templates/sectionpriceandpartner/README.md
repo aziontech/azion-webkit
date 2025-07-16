@@ -7,28 +7,31 @@ Component SectionPriceAndPartner
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
-| `title` | `String` | No description |
+
+| Prop          | Type     | Description    |
+| ------------- | -------- | -------------- |
+| `title`       | `String` | No description |
 | `description` | `String` | No description |
-| `lang` | `String` | No description |
+| `lang`        | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `isSticky` | `Boolean` | - | - | No description |
-| `overline` | `String` | - | - | No description |
-| `titleTag` | `String` | - | - | No description |
+
+| Prop       | Type      | Default | Values | Description    |
+| ---------- | --------- | ------- | ------ | -------------- |
+| `isSticky` | `Boolean` | -       | -      | No description |
+| `overline` | `String`  | -       | -      | No description |
+| `titleTag` | `String`  | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `main` | main slot |
+| Slot   | Description |
+| ------ | ----------- |
+| `main` | main slot   |
 
 ## Dependencies
 
 ### Internal
+
 - ../priceandpartner
 - ../contentsection
 

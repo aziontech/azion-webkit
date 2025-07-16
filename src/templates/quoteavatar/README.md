@@ -7,22 +7,25 @@ Component QuoteAvatar
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop   | Type     | Description    |
+| ------ | -------- | -------------- |
 | `text` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `border` | `Boolean` | `true` | - | No description |
-| `disableDegrade` | `Boolean` | `false` | - | No description |
-| `author` | `String` | - | - | No description |
-| `image` | `String` | - | - | No description |
-| `button` | `Object` | - | - | No description |
+
+| Prop             | Type      | Default | Values | Description    |
+| ---------------- | --------- | ------- | ------ | -------------- |
+| `border`         | `Boolean` | `true`  | -      | No description |
+| `disableDegrade` | `Boolean` | `false` | -      | No description |
+| `author`         | `String`  | -       | -      | No description |
+| `image`          | `String`  | -       | -      | No description |
+| `button`         | `Object`  | -       | -      | No description |
 
 ## Dependencies
 
 ### Internal
+
 - ../linkbutton
 
 ## Usage Example

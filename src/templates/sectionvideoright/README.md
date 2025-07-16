@@ -7,32 +7,35 @@ Component SectionVideoRight
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `video` | `Object` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | `() => ''` | - | No description |
-| `title` | `String` | `() => ''` | - | No description |
-| `titleTag` | `String` | `'h2'` | - | No description |
-| `description` | `String` | `() => ''` | - | No description |
-| `descriptionRawHtml` | `String` | `() => ''` | - | No description |
-| `cards` | `Array` | - | - | No description |
+
+| Prop                 | Type     | Default    | Values | Description    |
+| -------------------- | -------- | ---------- | ------ | -------------- |
+| `overline`           | `String` | `() => ''` | -      | No description |
+| `title`              | `String` | `() => ''` | -      | No description |
+| `titleTag`           | `String` | `'h2'`     | -      | No description |
+| `description`        | `String` | `() => ''` | -      | No description |
+| `descriptionRawHtml` | `String` | `() => ''` | -      | No description |
+| `cards`              | `Array`  | -          | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `main` | main slot |
-| `action` | action slot |
-| `content` | content slot |
+| Slot        | Description    |
+| ----------- | -------------- |
+| `main`      | main slot      |
+| `action`    | action slot    |
+| `content`   | content slot   |
 | `principal` | principal slot |
 
 ## Dependencies
 
 ### Internal
+
 - ../contentsection
 - ../basemodal
 - ../cardbaseclickable
@@ -44,10 +47,7 @@ Component SectionVideoRight
 
 ```vue
 <template>
-  <SectionVideoRight
-    :video="{}"
-  >
-  </SectionVideoRight>
+  <SectionVideoRight :video="{}"> </SectionVideoRight>
 </template>
 ```
 

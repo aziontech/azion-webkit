@@ -7,30 +7,33 @@ Component HeroImageRightLogos
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
-| `title` | `String` | No description |
+
+| Prop     | Type     | Description    |
+| -------- | -------- | -------------- |
+| `title`  | `String` | No description |
 | `images` | `Object` | No description |
-| `logos` | `Object` | No description |
+| `logos`  | `Object` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `buttons` | `Array` | - | - | No description |
+
+| Prop      | Type    | Default | Values | Description    |
+| --------- | ------- | ------- | ------ | -------------- |
+| `buttons` | `Array` | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `actions` | actions slot |
-| `content` | content slot |
-| `main` | main slot |
-| `darkImage` | darkImage slot |
+| Slot         | Description     |
+| ------------ | --------------- |
+| `actions`    | actions slot    |
+| `content`    | content slot    |
+| `main`       | main slot       |
+| `darkImage`  | darkImage slot  |
 | `lightImage` | lightImage slot |
 
 ## Dependencies
 
 ### Internal
+
 - ../herobase
 - ../linkbutton
 - ../contentlogo

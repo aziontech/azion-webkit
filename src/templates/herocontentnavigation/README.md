@@ -7,34 +7,38 @@ HeroContentNavigation
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `breadcrumbItems` | `Array // url` | - | - | No description |
-| `date` | `String` | - | - | No description |
-| `authors` | `Array // avatar` | - | - | No description |
-| `description` | `String` | - | - | No description |
-| `menuTitle` | `String` | - | - | No description |
-| `mobileLabel` | `String` | - | - | No description |
-| `menuItems` | `Array` | - | - | No description |
+
+| Prop              | Type              | Default | Values | Description    |
+| ----------------- | ----------------- | ------- | ------ | -------------- |
+| `breadcrumbItems` | `Array // url`    | -       | -      | No description |
+| `date`            | `String`          | -       | -      | No description |
+| `authors`         | `Array // avatar` | -       | -      | No description |
+| `description`     | `String`          | -       | -      | No description |
+| `menuTitle`       | `String`          | -       | -      | No description |
+| `mobileLabel`     | `String`          | -       | -      | No description |
+| `menuItems`       | `Array`           | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot          | Description      |
+| ------------- | ---------------- |
 | `breadcrumbs` | breadcrumbs slot |
 
 ## Dependencies
 
 ### External
+
 - primevue/breadcrumb
 - primevue/divider
 
 ### Internal
+
 - ../../templates/heroarticle
 - ../../templates/menunavigationblock
 

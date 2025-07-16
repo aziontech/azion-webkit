@@ -7,29 +7,29 @@ Component ContentLogo
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type    | Description    |
+| ------- | ------- | -------------- |
 | `logos` | `Array` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `isCentralized` | `Boolean` | `false` | - | No description |
-| `title` | `String` | - | - | No description |
+
+| Prop            | Type      | Default | Values | Description    |
+| --------------- | --------- | ------- | ------ | -------------- |
+| `isCentralized` | `Boolean` | `false` | -      | No description |
+| `title`         | `String`  | -       | -      | No description |
 
 ## Dependencies
 
 ### Internal
+
 - ../overline
 
 ## Usage Example
 
 ```vue
 <template>
-  <ContentLogo
-    :logos="[]"
-  >
-  </ContentLogo>
+  <ContentLogo :logos="[]"> </ContentLogo>
 </template>
 ```
 

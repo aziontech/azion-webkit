@@ -7,23 +7,26 @@ Component SectionGridBento2c5i
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop       | Type     | Description    |
+| ---------- | -------- | -------------- |
 | `titleTag` | `String` | No description |
-| `cards` | `Array` | No description |
+| `cards`    | `Array`  | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | `() => ''` | - | No description |
-| `title` | `String` | - | - | No description |
-| `description` | `String` | `() => ''` | - | No description |
-| `descriptionRawHtml` | `String` | `() => ''` | - | No description |
-| `gridType` | `String` | `'2-columns-5-items'` | `2-columns-3-items\|2-columns-4-items\|2-columns-5-items\|2-columns-6-items\|3-columns-4-items\|3-columns-7-items\|4-columns-5-items` | No description |
+
+| Prop                 | Type     | Default               | Values                                                                                                                                | Description    |
+| -------------------- | -------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| `overline`           | `String` | `() => ''`            | -                                                                                                                                     | No description |
+| `title`              | `String` | -                     | -                                                                                                                                     | No description |
+| `description`        | `String` | `() => ''`            | -                                                                                                                                     | No description |
+| `descriptionRawHtml` | `String` | `() => ''`            | -                                                                                                                                     | No description |
+| `gridType`           | `String` | `'2-columns-5-items'` | `2-columns-3-items\|2-columns-4-items\|2-columns-5-items\|2-columns-6-items\|3-columns-4-items\|3-columns-7-items\|4-columns-5-items` | No description |
 
 ## Dependencies
 
 ### Internal
+
 - ../contentsection
 - ../cardbase
 - ../cardtitle

@@ -7,31 +7,35 @@ Component SectionSuccessCases
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
-| `cards` | `Array` | No description |
+| `cards` | `Array`  | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | - | - | No description |
-| `button` | `Object` | - | - | No description |
+
+| Prop       | Type     | Default | Values | Description    |
+| ---------- | -------- | ------- | ------ | -------------- |
+| `overline` | `String` | -       | -      | No description |
+| `button`   | `Object` | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `main` | main slot |
+| Slot        | Description    |
+| ----------- | -------------- |
+| `main`      | main slot      |
 | `principal` | principal slot |
-| `content` | content slot |
+| `content`   | content slot   |
 
 ## Dependencies
 
 ### External
+
 - primevue/tag
 
 ### Internal
+
 - ../contentsection
 - ../cardbaseclickable
 - ../carddescription

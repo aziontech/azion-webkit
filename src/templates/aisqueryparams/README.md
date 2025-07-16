@@ -7,38 +7,39 @@ Component AisQueryParams
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `inputPlaceholder` | `String` | `'Search Azion'` | - | No description |
+
+| Prop               | Type     | Default          | Values | Description    |
+| ------------------ | -------- | ---------------- | ------ | -------------- |
+| `inputPlaceholder` | `String` | `'Search Azion'` | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description  |
+| --------- | ------------ |
 | `content` | content slot |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event   | Description |
+| ------- | ----------- |
 | `media` | media event |
 
 ## Dependencies
 
 ### External
+
 - vue
 - algoliasearch
 
 ### Internal
+
 - ../cardbaseclickable
 
 ## Usage Example
 
 ```vue
 <template>
-  <AisQueryParams
-  >
-  </AisQueryParams>
+  <AisQueryParams> </AisQueryParams>
 </template>
 ```
 

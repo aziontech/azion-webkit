@@ -7,34 +7,38 @@ Component SectionCarousel
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
-| `cards` | `Array` | No description |
+| `cards` | `Array`  | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | - | - | No description |
-| `description` | `String` | - | - | No description |
-| `button` | `Object` | - | - | No description |
+
+| Prop          | Type     | Default | Values | Description    |
+| ------------- | -------- | ------- | ------ | -------------- |
+| `overline`    | `String` | -       | -      | No description |
+| `description` | `String` | -       | -      | No description |
+| `button`      | `Object` | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot        | Description    |
+| ----------- | -------------- |
 | `principal` | principal slot |
-| `item` | item slot |
-| `content` | content slot |
+| `item`      | item slot      |
+| `content`   | content slot   |
 
 ## Dependencies
 
 ### External
+
 - vue
 - primevue/carousel
 - primevue/tag
 
 ### Internal
+
 - ../contentsection
 - ../linkbutton
 - ../cardbaseclickable

@@ -6,18 +6,15 @@ Component ImageSwitcher
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description               |
+| --------- | ------------------------- |
 | `default` | Default component content |
 
 ## Usage Example
 
 ```vue
 <template>
-  <ImageSwitcher
-  >
-    Component content
-  </ImageSwitcher>
+  <ImageSwitcher> Component content </ImageSwitcher>
 </template>
 ```
 

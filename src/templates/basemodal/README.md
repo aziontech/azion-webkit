@@ -7,28 +7,30 @@ Component Modal
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `backgroundColor` | `String` | `'default'` | `outlined\|default` | No description |
-| `showHeader` | `Boolean` | `true` | - | No description |
+
+| Prop              | Type      | Default     | Values              | Description    |
+| ----------------- | --------- | ----------- | ------------------- | -------------- |
+| `backgroundColor` | `String`  | `'default'` | `outlined\|default` | No description |
+| `showHeader`      | `Boolean` | `true`      | -                   | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description               |
+| --------- | ------------------------- |
 | `default` | Default component content |
-| `header` | header slot |
-| `footer` | footer slot |
+| `header`  | header slot               |
+| `footer`  | footer slot               |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event   | Description |
+| ------- | ----------- |
 | `click` | click event |
 
 ## Dependencies
 
 ### External
+
 - primevue/dialog
 - vue
 
@@ -36,10 +38,7 @@ Component Modal
 
 ```vue
 <template>
-  <Modal
-  >
-    Component content
-  </Modal>
+  <Modal> Component content </Modal>
 </template>
 ```
 

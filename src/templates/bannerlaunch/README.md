@@ -7,30 +7,33 @@ Component BannerLaunch
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `titleTag` | `String` | `() => 'h1'` | - | No description |
-| `description` | `String` | - | - | No description |
-| `imageDark` | `String` | - | - | No description |
-| `imageLight` | `String` | - | - | No description |
-| `alt` | `String` | - | - | No description |
+
+| Prop          | Type     | Default      | Values | Description    |
+| ------------- | -------- | ------------ | ------ | -------------- |
+| `titleTag`    | `String` | `() => 'h1'` | -      | No description |
+| `description` | `String` | -            | -      | No description |
+| `imageDark`   | `String` | -            | -      | No description |
+| `imageLight`  | `String` | -            | -      | No description |
+| `alt`         | `String` | -            | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `content` | content slot |
-| `darkImage` | darkImage slot |
+| Slot         | Description     |
+| ------------ | --------------- |
+| `content`    | content slot    |
+| `darkImage`  | darkImage slot  |
 | `lightImage` | lightImage slot |
 
 ## Dependencies
 
 ### Internal
+
 - ../cardbase
 - ../themeawareimageswitcher
 

@@ -7,16 +7,19 @@ Component SystemStatus
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop   | Type     | Description    |
+| ------ | -------- | -------------- |
 | `lang` | `String` | No description |
 
 ## Dependencies
 
 ### External
+
 - vue
 
 ### Internal
+
 - ../linkbutton/LinkButton.vue
 
 ## Usage Example

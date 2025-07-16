@@ -7,48 +7,49 @@ Component TabMenuWithSearchLink
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop      | Type    | Description    |
+| --------- | ------- | -------------- |
 | `tabList` | `Array` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `inputPlaceholder` | `String` | `'Search articles...'` | - | No description |
-| `activeIndex` | `Number` | - | - | No description |
+
+| Prop               | Type     | Default                | Values | Description    |
+| ------------------ | -------- | ---------------------- | ------ | -------------- |
+| `inputPlaceholder` | `String` | `'Search articles...'` | -      | No description |
+| `activeIndex`      | `Number` | -                      | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `value` | value slot |
+| Slot     | Description |
+| -------- | ----------- |
+| `value`  | value slot  |
 | `option` | option slot |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event   | Description |
+| ------- | ----------- |
 | `click` | click event |
 | `close` | close event |
 
 ## Dependencies
 
 ### External
+
 - primevue/tabmenu
 - primevue/dropdown
 - vue
 
 ### Internal
+
 - ../aisdialog/AlgoliaDialog.vue
 
 ## Usage Example
 
 ```vue
 <template>
-  <TabMenuWithSearchLink
-    :tabList="[]"
-  >
-  </TabMenuWithSearchLink>
+  <TabMenuWithSearchLink :tabList="[]"> </TabMenuWithSearchLink>
 </template>
 ```
 

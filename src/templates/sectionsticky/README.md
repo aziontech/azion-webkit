@@ -7,29 +7,32 @@ Component SectionSticky
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
-| `title` | `String` | No description |
-| `sections` | `Array` | No description |
+
+| Prop       | Type     | Description    |
+| ---------- | -------- | -------------- |
+| `title`    | `String` | No description |
+| `sections` | `Array`  | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | - | - | No description |
-| `titleTag` | `String` | `() => 'h2'` | - | No description |
+
+| Prop       | Type     | Default      | Values | Description    |
+| ---------- | -------- | ------------ | ------ | -------------- |
+| `overline` | `String` | -            | -      | No description |
+| `titleTag` | `String` | `() => 'h2'` | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `actions` | actions slot |
-| `main` | main slot |
+| Slot         | Description     |
+| ------------ | --------------- |
+| `actions`    | actions slot    |
+| `main`       | main slot       |
 | `lightImage` | lightImage slot |
-| `darkImage` | darkImage slot |
+| `darkImage`  | darkImage slot  |
 
 ## Dependencies
 
 ### Internal
+
 - ../contentsection
 - ../linkbutton
 - ../themeawareimageswitcher

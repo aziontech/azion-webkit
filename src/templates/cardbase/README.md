@@ -7,34 +7,33 @@
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `spacing` | `String` | `'base'` | `compact\|relaxed\|base` | No description |
-| `grid` | `Boolean` | - | - | No description |
-| `backgroundColor` | `String` | `'default'` | `outlined\|highlighted\|shape\|default` | No description |
-| `hover` | `String` | - | `default\|outlined\|slide-up` | No description |
-| `pt` | `Object` | - | - | No description |
+
+| Prop              | Type      | Default     | Values                                  | Description    |
+| ----------------- | --------- | ----------- | --------------------------------------- | -------------- |
+| `spacing`         | `String`  | `'base'`    | `compact\|relaxed\|base`                | No description |
+| `grid`            | `Boolean` | -           | -                                       | No description |
+| `backgroundColor` | `String`  | `'default'` | `outlined\|highlighted\|shape\|default` | No description |
+| `hover`           | `String`  | -           | `default\|outlined\|slide-up`           | No description |
+| `pt`              | `Object`  | -           | -                                       | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description               |
+| --------- | ------------------------- |
 | `default` | Default component content |
-| `content` | content slot |
+| `content` | content slot              |
 
 ## Dependencies
 
 ### External
+
 - primevue/card
 
 ## Usage Example
 
 ```vue
 <template>
-  <CardBase
-  >
-    Component content
-  </CardBase>
+  <CardBase> Component content </CardBase>
 </template>
 ```
 

@@ -7,32 +7,35 @@ Component HeroVideoRight
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
 | `video` | `Object` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | `() => ''` | - | No description |
-| `titleTag` | `String` | `() => 'h1'` | - | No description |
-| `description` | `String` | `() => ''` | - | No description |
-| `descriptionRawHtml` | `String` | `() => ''` | - | No description |
-| `cards` | `Array` | `() => []` | - | No description |
+
+| Prop                 | Type     | Default      | Values | Description    |
+| -------------------- | -------- | ------------ | ------ | -------------- |
+| `overline`           | `String` | `() => ''`   | -      | No description |
+| `titleTag`           | `String` | `() => 'h1'` | -      | No description |
+| `description`        | `String` | `() => ''`   | -      | No description |
+| `descriptionRawHtml` | `String` | `() => ''`   | -      | No description |
+| `cards`              | `Array`  | `() => []`   | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `main` | main slot |
-| `action` | action slot |
-| `content` | content slot |
+| Slot        | Description    |
+| ----------- | -------------- |
+| `main`      | main slot      |
+| `action`    | action slot    |
+| `content`   | content slot   |
 | `principal` | principal slot |
 
 ## Dependencies
 
 ### Internal
+
 - ../herobase
 - ../basemodal
 - ../cardbaseclickable

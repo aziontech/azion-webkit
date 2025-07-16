@@ -6,23 +6,22 @@ Component KeyboardKey
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
-| `click` | click event |
+| Event     | Description   |
+| --------- | ------------- |
+| `click`   | click event   |
 | `clicked` | clicked event |
 
 ## Dependencies
 
 ### External
+
 - primevue/button
 
 ## Usage Example
 
 ```vue
 <template>
-  <KeyboardKey
-  >
-  </KeyboardKey>
+  <KeyboardKey> </KeyboardKey>
 </template>
 ```
 

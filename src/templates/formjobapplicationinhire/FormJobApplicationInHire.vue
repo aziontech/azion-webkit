@@ -298,8 +298,19 @@
       name: yup.string().required('nameRequiredError'),
       email: yup.string().required('emailRequiredError').email('emailRequiredError'),
       phone: yup.string().required('phoneRequiredError'),
-      targetSalary: yup.number().required('targetSalaryRequiredError'),
-      linkedinUsername: yup.string().required('linkedinRequiredError'),
+      targetSalary: yup
+        .number()
+        .required('targetSalaryRequiredError')
+        .positive('targetSalaryRequiredError')
+        .min(1000, 'targetSalaryRequiredError'),
+      linkedinUsername: yup
+        .string()
+        .required('linkedinRequiredError')
+        .transform((value) => {
+          if (!value) return value
+          if (value.match(/linkedin\.com\/in\/([^\/]+)/)) return match[1]
+          return value
+        }),
       file: yup.boolean().required('resumeRequiredError'),
       state: yup.string().required('stateRequiredError'),
       city: yup.string().required('cityRequiredError'),
@@ -327,6 +338,7 @@
 
   const uploadHandler = async (event) => {
     const file = event.files[0]
+
     fileName.value = file.name
     setFieldValue('file', true)
     formData.append('file', file)

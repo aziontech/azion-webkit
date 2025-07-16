@@ -7,29 +7,29 @@
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop   | Type    | Description    |
+| ------ | ------- | -------------- |
 | `data` | `Array` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `buttonText` | `String` | `'See all posts'` | - | No description |
-| `link` | `String` | - | - | No description |
+
+| Prop         | Type     | Default           | Values | Description    |
+| ------------ | -------- | ----------------- | ------ | -------------- |
+| `buttonText` | `String` | `'See all posts'` | -      | No description |
+| `link`       | `String` | -                 | -      | No description |
 
 ## Dependencies
 
 ### Internal
+
 - ../linkbutton/LinkButton.vue
 
 ## Usage Example
 
 ```vue
 <template>
-  <TitleList
-    :data="[]"
-  >
-  </TitleList>
+  <TitleList :data="[]"> </TitleList>
 </template>
 ```
 

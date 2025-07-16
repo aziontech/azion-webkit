@@ -7,30 +7,34 @@ HeroContent
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `breadcrumbItems` | `Array // url` | - | - | No description |
-| `date` | `String` | - | - | No description |
-| `authors` | `Array // avatar` | - | - | No description |
-| `description` | `String` | - | - | No description |
+
+| Prop              | Type              | Default | Values | Description    |
+| ----------------- | ----------------- | ------- | ------ | -------------- |
+| `breadcrumbItems` | `Array // url`    | -       | -      | No description |
+| `date`            | `String`          | -       | -      | No description |
+| `authors`         | `Array // avatar` | -       | -      | No description |
+| `description`     | `String`          | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot          | Description      |
+| ------------- | ---------------- |
 | `breadcrumbs` | breadcrumbs slot |
 
 ## Dependencies
 
 ### External
+
 - primevue/breadcrumb
 
 ### Internal
+
 - ../../templates/heroarticle
 
 ## Usage Example

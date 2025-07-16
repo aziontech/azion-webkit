@@ -7,8 +7,9 @@ Component Overline
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `label` | `String` | No description |
 
 ## Usage Example

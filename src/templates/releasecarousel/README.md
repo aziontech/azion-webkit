@@ -7,40 +7,41 @@ Component ReleaseCarousel
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop   | Type    | Description    |
+| ------ | ------- | -------------- |
 | `data` | `Array` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `numVisible` | `Number` | `3` | - | No description |
-| `numScroll` | `Number` | `3` | - | No description |
-| `autoplayInterval` | `Number` | `5000` | - | No description |
+
+| Prop               | Type     | Default | Values | Description    |
+| ------------------ | -------- | ------- | ------ | -------------- |
+| `numVisible`       | `Number` | `3`     | -      | No description |
+| `numScroll`        | `Number` | `3`     | -      | No description |
+| `autoplayInterval` | `Number` | `5000`  | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `item` | item slot |
+| Slot   | Description |
+| ------ | ----------- |
+| `item` | item slot   |
 
 ## Dependencies
 
 ### External
+
 - vue
 - primevue/carousel
 
 ### Internal
+
 - ../cardrelease
 
 ## Usage Example
 
 ```vue
 <template>
-  <ReleaseCarousel
-    :data="[]"
-  >
-  </ReleaseCarousel>
+  <ReleaseCarousel :data="[]"> </ReleaseCarousel>
 </template>
 ```
 

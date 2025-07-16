@@ -7,22 +7,26 @@ Component TableOfContents
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop       | Type      | Description    |
+| ---------- | --------- | -------------- |
 | `headings` | `unknown` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `title` | `String` | `'Jump to Section'` | - | No description |
-| `initialHeadingTitle` | `String` | `'Overview'` | - | No description |
+
+| Prop                  | Type     | Default             | Values | Description    |
+| --------------------- | -------- | ------------------- | ------ | -------------- |
+| `title`               | `String` | `'Jump to Section'` | -      | No description |
+| `initialHeadingTitle` | `String` | `'Overview'`        | -      | No description |
 
 ## Dependencies
 
 ### External
+
 - vue
 
 ### Internal
+
 - ./TableOfContentsItem.vue
 
 ## Usage Example

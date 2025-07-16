@@ -7,22 +7,24 @@ Component BannerLiveMap
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
-| `overline` | `String` | No description |
-| `title` | `String` | No description |
+
+| Prop          | Type     | Description    |
+| ------------- | -------- | -------------- |
+| `overline`    | `String` | No description |
+| `title`       | `String` | No description |
 | `description` | `String` | No description |
-| `button` | `Object` | No description |
+| `button`      | `Object` | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description  |
+| --------- | ------------ |
 | `content` | content slot |
 
 ## Dependencies
 
 ### Internal
+
 - ../overline
 - ../linkbutton
 - ../cardbase

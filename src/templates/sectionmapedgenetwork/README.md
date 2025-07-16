@@ -7,30 +7,33 @@ Component SectionMapEdgeNetwork
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | - | - | No description |
-| `titleTag` | `String` | - | - | No description |
-| `description` | `String` | - | - | No description |
-| `locations` | `Array` | - | - | No description |
-| `cities` | `Object` | - | - | No description |
-| `tags` | `Array` | - | - | No description |
+
+| Prop          | Type     | Default | Values | Description    |
+| ------------- | -------- | ------- | ------ | -------------- |
+| `overline`    | `String` | -       | -      | No description |
+| `titleTag`    | `String` | -       | -      | No description |
+| `description` | `String` | -       | -      | No description |
+| `locations`   | `Array`  | -       | -      | No description |
+| `cities`      | `Object` | -       | -      | No description |
+| `tags`        | `Array`  | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description               |
+| --------- | ------------------------- |
 | `default` | Default component content |
-| `content` | content slot |
+| `content` | content slot              |
 
 ## Dependencies
 
 ### External
+
 - primevue/tag
 - primevue/tabview
 - primevue/tabpanel
@@ -38,6 +41,7 @@ Component SectionMapEdgeNetwork
 - tippy.js
 
 ### Internal
+
 - ../contentsection
 - ../mapedgenetwork
 

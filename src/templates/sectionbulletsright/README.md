@@ -7,30 +7,33 @@ Component SectionBulletsRight
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | `() => ''` | - | No description |
-| `titleTag` | `String` | `() => 'h2'` | - | No description |
-| `description` | `String` | `() => ''` | - | No description |
-| `descriptionRawHtml` | `String` | `() => ''` | - | No description |
-| `buttons` | `Array` | `() => []` | - | No description |
-| `data` | `Array` | `() => []` | - | No description |
+
+| Prop                 | Type     | Default      | Values | Description    |
+| -------------------- | -------- | ------------ | ------ | -------------- |
+| `overline`           | `String` | `() => ''`   | -      | No description |
+| `titleTag`           | `String` | `() => 'h2'` | -      | No description |
+| `description`        | `String` | `() => ''`   | -      | No description |
+| `descriptionRawHtml` | `String` | `() => ''`   | -      | No description |
+| `buttons`            | `Array`  | `() => []`   | -      | No description |
+| `data`               | `Array`  | `() => []`   | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description  |
+| --------- | ------------ |
 | `actions` | actions slot |
-| `main` | main slot |
+| `main`    | main slot    |
 
 ## Dependencies
 
 ### Internal
+
 - ../contentsection
 - ../linkbutton
 - ../listunordered

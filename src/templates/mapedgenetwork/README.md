@@ -7,19 +7,21 @@ Component MapEdgeNetwork
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop     | Type     | Description    |
+| -------- | -------- | -------------- |
 | `cities` | `Object` | No description |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event       | Description     |
+| ----------- | --------------- |
 | `keyframes` | keyframes event |
 
 ## Dependencies
 
 ### External
+
 - tippy.js
 - vue
 
@@ -27,10 +29,7 @@ Component MapEdgeNetwork
 
 ```vue
 <template>
-  <MapEdgeNetwork
-    :cities="{}"
-  >
-  </MapEdgeNetwork>
+  <MapEdgeNetwork :cities="{}"> </MapEdgeNetwork>
 </template>
 ```
 

@@ -6,15 +6,16 @@ Component FeaturedCards
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `header` | header slot |
+| Slot      | Description  |
+| --------- | ------------ |
+| `header`  | header slot  |
 | `content` | content slot |
-| `item` | item slot |
+| `item`    | item slot    |
 
 ## Dependencies
 
 ### External
+
 - primevue/card
 - primevue/carousel
 - primevue/button
@@ -25,9 +26,7 @@ Component FeaturedCards
 
 ```vue
 <template>
-  <FeaturedCards
-  >
-  </FeaturedCards>
+  <FeaturedCards> </FeaturedCards>
 </template>
 ```
 

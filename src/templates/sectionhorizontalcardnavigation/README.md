@@ -7,32 +7,35 @@ Component SectionHorizontalCardNavigation
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `leftSidebar` | `[Array` | - | - | No description |
-| `items` | `[Array` | - | - | No description |
+
+| Prop          | Type     | Default | Values | Description    |
+| ------------- | -------- | ------- | ------ | -------------- |
+| `leftSidebar` | `[Array` | -       | -      | No description |
+| `items`       | `[Array` | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `main` | main slot |
-| `item` | item slot |
-| `content` | content slot |
+| Slot        | Description    |
+| ----------- | -------------- |
+| `main`      | main slot      |
+| `item`      | item slot      |
+| `content`   | content slot   |
 | `principal` | principal slot |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event   | Description |
+| ------- | ----------- |
 | `click` | click event |
 
 ## Dependencies
 
 ### External
+
 - primevue/menu
 
 ### Internal
+
 - ../contentsection
 - ../cardbaseclickable
 - ../cardtitle
@@ -42,9 +45,7 @@ Component SectionHorizontalCardNavigation
 
 ```vue
 <template>
-  <SectionHorizontalCardNavigation
-  >
-  </SectionHorizontalCardNavigation>
+  <SectionHorizontalCardNavigation> </SectionHorizontalCardNavigation>
 </template>
 ```
 

@@ -7,20 +7,22 @@ Component PriceAndPartner
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop   | Type     | Description    |
+| ------ | -------- | -------------- |
 | `lang` | `String` | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description  |
+| --------- | ------------ |
 | `content` | content slot |
 | `actions` | actions slot |
 
 ## Dependencies
 
 ### Internal
+
 - ../cardbase
 - ../overline
 - ../cardtitle

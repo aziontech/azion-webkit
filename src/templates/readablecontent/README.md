@@ -6,23 +6,21 @@
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description               |
+| --------- | ------------------------- |
 | `default` | Default component content |
 
 ## Dependencies
 
 ### External
+
 - vue
 
 ## Usage Example
 
 ```vue
 <template>
-  <ReadableContent
-  >
-    Component content
-  </ReadableContent>
+  <ReadableContent> Component content </ReadableContent>
 </template>
 ```
 

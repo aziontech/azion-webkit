@@ -7,19 +7,18 @@ Component TitleSection
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `isContentCentralized` | `Boolean` | `() => false` | - | No description |
-| `tag` | `String` | `() => 'h2'` | - | No description |
-| `title` | `[String` | - | - | No description |
+
+| Prop                   | Type      | Default       | Values | Description    |
+| ---------------------- | --------- | ------------- | ------ | -------------- |
+| `isContentCentralized` | `Boolean` | `() => false` | -      | No description |
+| `tag`                  | `String`  | `() => 'h2'`  | -      | No description |
+| `title`                | `[String` | -             | -      | No description |
 
 ## Usage Example
 
 ```vue
 <template>
-  <TitleSection
-  >
-  </TitleSection>
+  <TitleSection> </TitleSection>
 </template>
 ```
 

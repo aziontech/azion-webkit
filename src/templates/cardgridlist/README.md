@@ -7,20 +7,23 @@ Component CardGridList
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop   | Type    | Description    |
+| ------ | ------- | -------------- |
 | `data` | `Array` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `pt` | `Object` | `() => {` | - | No description |
-| `cardType` | `String` | `'blog'` | `blog\|cases` | No description |
+
+| Prop            | Type     | Default    | Values        | Description    |
+| --------------- | -------- | ---------- | ------------- | -------------- |
+| `pt`            | `Object` | `() => {`  | -             | No description |
+| `cardType`      | `String` | `'blog'`   | `blog\|cases` | No description |
 | `cardDirection` | `String` | `'column'` | `column\|row` | No description |
 
 ## Dependencies
 
 ### Internal
+
 - ../cardblog/CardBlog.vue
 - ../cardcases/CardCases.vue
 
@@ -28,10 +31,7 @@ Component CardGridList
 
 ```vue
 <template>
-  <CardGridList
-    :data="[]"
-  >
-  </CardGridList>
+  <CardGridList :data="[]"> </CardGridList>
 </template>
 ```
 

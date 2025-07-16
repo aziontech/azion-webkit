@@ -7,23 +7,26 @@ Component IconTextSegment
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `href` | `String` | - | - | No description |
-| `description` | `String` | - | - | No description |
-| `icon` | `String` | - | - | No description |
-| `tag` | `String` | - | - | No description |
-| `tagSeverity` | `String` | `'info'` | - | No description |
-| `severity` | `String` | `'default'` | `default\|primary` | No description |
+
+| Prop          | Type     | Default     | Values             | Description    |
+| ------------- | -------- | ----------- | ------------------ | -------------- |
+| `href`        | `String` | -           | -                  | No description |
+| `description` | `String` | -           | -                  | No description |
+| `icon`        | `String` | -           | -                  | No description |
+| `tag`         | `String` | -           | -                  | No description |
+| `tagSeverity` | `String` | `'info'`    | -                  | No description |
+| `severity`    | `String` | `'default'` | `default\|primary` | No description |
 
 ## Dependencies
 
 ### Internal
+
 - ../icontext
 
 ## Usage Example

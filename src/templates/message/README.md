@@ -7,32 +7,34 @@ Component Message
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `size` | `String` | `undefined` | - | No description |
-| `severity` | `String` | `'info'` | `success\|info\|warn\|error\|secondary\|contrast` | No description |
-| `closable` | `Boolean` | `false` | - | No description |
-| `sticky` | `Boolean` | `true` | - | No description |
-| `life` | `Number` | `3000` | - | No description |
-| `icon` | `String` | `null` | - | No description |
-| `customClass` | `String` | `''` | - | No description |
+
+| Prop          | Type      | Default     | Values                                            | Description    |
+| ------------- | --------- | ----------- | ------------------------------------------------- | -------------- |
+| `size`        | `String`  | `undefined` | -                                                 | No description |
+| `severity`    | `String`  | `'info'`    | `success\|info\|warn\|error\|secondary\|contrast` | No description |
+| `closable`    | `Boolean` | `false`     | -                                                 | No description |
+| `sticky`      | `Boolean` | `true`      | -                                                 | No description |
+| `life`        | `Number`  | `3000`      | -                                                 | No description |
+| `icon`        | `String`  | `null`      | -                                                 | No description |
+| `customClass` | `String`  | `''`        | -                                                 | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `default` | Default component content |
-| `messageicon` | messageicon slot |
+| Slot          | Description               |
+| ------------- | ------------------------- |
+| `default`     | Default component content |
+| `messageicon` | messageicon slot          |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event   | Description |
+| ------- | ----------- |
 | `close` | close event |
 
 ## Dependencies
 
 ### External
+
 - primevue/message
 - vue
 
@@ -40,10 +42,7 @@ Component Message
 
 ```vue
 <template>
-  <Message
-  >
-    Component content
-  </Message>
+  <Message> Component content </Message>
 </template>
 ```
 

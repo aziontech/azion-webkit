@@ -7,33 +7,37 @@
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
 | `image` | `Object` | No description |
-| `tag` | `Object` | No description |
-| `card` | `Object` | No description |
+| `tag`   | `Object` | No description |
+| `card`  | `Object` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `grid` | `Boolean` | `false` | - | No description |
-| `hover` | `String` | - | `slide-up\|outlined` | No description |
+
+| Prop    | Type      | Default | Values               | Description    |
+| ------- | --------- | ------- | -------------------- | -------------- |
+| `grid`  | `Boolean` | `false` | -                    | No description |
+| `hover` | `String`  | -       | `slide-up\|outlined` | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `content` | content slot |
-| `darkImage` | darkImage slot |
+| Slot         | Description     |
+| ------------ | --------------- |
+| `content`    | content slot    |
+| `darkImage`  | darkImage slot  |
 | `lightImage` | lightImage slot |
 
 ## Dependencies
 
 ### External
+
 - primevue/tag
 
 ### Internal
+
 - ../cardbaseclickable
 - ../themeawareimageswitcher
 

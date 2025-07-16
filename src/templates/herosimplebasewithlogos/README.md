@@ -7,25 +7,27 @@ Component HeroSimpleBaseWithLogos
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | `() => ''` | - | No description |
-| `titleTag` | `String` | `() => 'h1'` | - | No description |
-| `title` | `String` | - | - | No description |
-| `description` | `String` | `() => ''` | - | No description |
-| `descriptionRawHtml` | `String` | `() => ''` | - | No description |
-| `logosTitle` | `String` | `() => ''` | - | No description |
-| `logos` | `Array` | `() => []` | - | No description |
+
+| Prop                 | Type     | Default      | Values | Description    |
+| -------------------- | -------- | ------------ | ------ | -------------- |
+| `overline`           | `String` | `() => ''`   | -      | No description |
+| `titleTag`           | `String` | `() => 'h1'` | -      | No description |
+| `title`              | `String` | -            | -      | No description |
+| `description`        | `String` | `() => ''`   | -      | No description |
+| `descriptionRawHtml` | `String` | `() => ''`   | -      | No description |
+| `logosTitle`         | `String` | `() => ''`   | -      | No description |
+| `logos`              | `Array`  | `() => []`   | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description  |
+| --------- | ------------ |
 | `content` | content slot |
 
 ## Dependencies
 
 ### Internal
+
 - ../herobase
 - ../contentlogo
 
@@ -33,9 +35,7 @@ Component HeroSimpleBaseWithLogos
 
 ```vue
 <template>
-  <HeroSimpleBaseWithLogos
-  >
-  </HeroSimpleBaseWithLogos>
+  <HeroSimpleBaseWithLogos> </HeroSimpleBaseWithLogos>
 </template>
 ```
 

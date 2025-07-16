@@ -7,26 +7,29 @@ Component HeroArticle
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `date` | `String` | - | - | No description |
-| `authors` | `Object` | - | - | No description |
-| `description` | `String` | - | - | No description |
+
+| Prop          | Type     | Default | Values | Description    |
+| ------------- | -------- | ------- | ------ | -------------- |
+| `date`        | `String` | -       | -      | No description |
+| `authors`     | `Object` | -       | -      | No description |
+| `description` | `String` | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description               |
+| --------- | ------------------------- |
 | `default` | Default component content |
 
 ## Dependencies
 
 ### External
+
 - primevue/avatar
 
 ## Usage Example

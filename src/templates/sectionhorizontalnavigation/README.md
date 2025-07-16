@@ -7,42 +7,46 @@ Component SectionHorizontalNavigation
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | - | - | No description |
-| `titleTag` | `String` | `() => 'h2'` | - | No description |
-| `description` | `String` | `() => ''` | - | No description |
-| `descriptionRawHtml` | `String` | `() => ''` | - | No description |
-| `buttons` | `[Object` | - | - | No description |
-| `leftSidebar` | `[Array` | - | - | No description |
-| `cardContent` | `[Array` | - | - | No description |
+
+| Prop                 | Type      | Default      | Values | Description    |
+| -------------------- | --------- | ------------ | ------ | -------------- |
+| `overline`           | `String`  | -            | -      | No description |
+| `titleTag`           | `String`  | `() => 'h2'` | -      | No description |
+| `description`        | `String`  | `() => ''`   | -      | No description |
+| `descriptionRawHtml` | `String`  | `() => ''`   | -      | No description |
+| `buttons`            | `[Object` | -            | -      | No description |
+| `leftSidebar`        | `[Array`  | -            | -      | No description |
+| `cardContent`        | `[Array`  | -            | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description  |
+| --------- | ------------ |
 | `actions` | actions slot |
-| `main` | main slot |
-| `item` | item slot |
+| `main`    | main slot    |
+| `item`    | item slot    |
 | `content` | content slot |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event   | Description |
+| ------- | ----------- |
 | `click` | click event |
 
 ## Dependencies
 
 ### External
+
 - primevue/menu
 
 ### Internal
+
 - ../contentsection
 - ../cardbase
 - ../cardtitle

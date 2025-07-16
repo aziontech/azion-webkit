@@ -7,30 +7,33 @@
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `title` | `String` | `'Browse Integrations'` | - | No description |
+
+| Prop    | Type     | Default                 | Values | Description    |
+| ------- | -------- | ----------------------- | ------ | -------------- |
+| `title` | `String` | `'Browse Integrations'` | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description  |
+| --------- | ------------ |
 | `content` | content slot |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event   | Description |
+| ------- | ----------- |
 | `click` | click event |
 | `apply` | apply event |
 
 ## Dependencies
 
 ### External
+
 - primevue/card
 - primevue/button
 
 ### Internal
+
 - ../../assets/icons/tools/VSCode.vue
 - ../../assets/icons/tools/TerminalLight.vue
 - ../../assets/icons/tools/TerminalDark.vue
@@ -42,9 +45,7 @@
 
 ```vue
 <template>
-  <ConsoleIntegration
-  >
-  </ConsoleIntegration>
+  <ConsoleIntegration> </ConsoleIntegration>
 </template>
 ```
 

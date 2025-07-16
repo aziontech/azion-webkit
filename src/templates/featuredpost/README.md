@@ -7,24 +7,27 @@ Component FeaturedPost
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
-| `description` | `String` | No description |
-| `link` | `String` | No description |
-| `title` | `String` | No description |
-| `authors` | `Object` | No description |
-| `date` | `String` | No description |
+
+| Prop               | Type     | Description    |
+| ------------------ | -------- | -------------- |
+| `description`      | `String` | No description |
+| `link`             | `String` | No description |
+| `title`            | `String` | No description |
+| `authors`          | `Object` | No description |
+| `date`             | `String` | No description |
 | `estimateReadTime` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
+
+| Prop         | Type     | Default   | Values          | Description    |
+| ------------ | -------- | --------- | --------------- | -------------- |
 | `linkTarget` | `String` | `'_self'` | `_blank\|_self` | No description |
-| `image` | `String` | - | - | No description |
+| `image`      | `String` | -         | -               | No description |
 
 ## Dependencies
 
 ### External
+
 - primevue/avatar
 - primevue/avatargroup
 

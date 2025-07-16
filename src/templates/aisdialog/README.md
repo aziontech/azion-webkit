@@ -7,28 +7,31 @@ Component AlgoliaDialog
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `inputPlaceholder` | `String` | `'Search Azion'` | - | No description |
+
+| Prop               | Type     | Default          | Values | Description    |
+| ------------------ | -------- | ---------------- | ------ | -------------- |
+| `inputPlaceholder` | `String` | `'Search Azion'` | -      | No description |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
-| `hide` | hide event |
+| Event     | Description   |
+| --------- | ------------- |
+| `hide`    | hide event    |
 | `clicked` | clicked event |
-| `keyup` | keyup event |
+| `keyup`   | keyup event   |
 | `keydown` | keydown event |
-| `close` | close event |
-| `open` | open event |
+| `close`   | close event   |
+| `open`    | open event    |
 
 ## Dependencies
 
 ### External
+
 - vue
 - primevue/dialog
 
 ### Internal
+
 - ../ais/AlgoliaInstantSearch.vue
 - ../keyboardkey/KeyboardKey.vue
 
@@ -36,9 +39,7 @@ Component AlgoliaDialog
 
 ```vue
 <template>
-  <AlgoliaDialog
-  >
-  </AlgoliaDialog>
+  <AlgoliaDialog> </AlgoliaDialog>
 </template>
 ```
 

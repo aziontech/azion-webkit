@@ -7,29 +7,31 @@ Component TabMenu
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop      | Type    | Description    |
+| --------- | ------- | -------------- |
 | `tabList` | `Array` | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `value` | value slot |
+| Slot     | Description |
+| -------- | ----------- |
+| `value`  | value slot  |
 | `option` | option slot |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
-| `click` | click event |
-| `keyup` | keyup event |
-| `change` | change event |
+| Event          | Description        |
+| -------------- | ------------------ |
+| `click`        | click event        |
+| `keyup`        | keyup event        |
+| `change`       | change event       |
 | `indexChanged` | indexChanged event |
 
 ## Dependencies
 
 ### External
+
 - primevue/tabmenu
 - primevue/dropdown
 - vue
@@ -38,10 +40,7 @@ Component TabMenu
 
 ```vue
 <template>
-  <TabMenu
-    :tabList="[]"
-  >
-  </TabMenu>
+  <TabMenu :tabList="[]"> </TabMenu>
 </template>
 ```
 

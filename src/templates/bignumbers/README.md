@@ -7,28 +7,28 @@ Component BigNumbers
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type    | Description    |
+| ------- | ------- | -------------- |
 | `items` | `Array` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
+
+| Prop      | Type     | Default    | Values          | Description    |
+| --------- | -------- | ---------- | --------------- | -------------- |
 | `justify` | `String` | `'center'` | `center\|start` | No description |
 
 ## Dependencies
 
 ### Internal
+
 - ../tile
 
 ## Usage Example
 
 ```vue
 <template>
-  <BigNumbers
-    :items="[]"
-  >
-  </BigNumbers>
+  <BigNumbers :items="[]"> </BigNumbers>
 </template>
 ```
 

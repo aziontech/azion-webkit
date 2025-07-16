@@ -7,33 +7,37 @@ Component HeroHsFormRight
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop       | Type     | Description    |
+| ---------- | -------- | -------------- |
 | `titleTag` | `String` | No description |
-| `title` | `String` | No description |
+| `title`    | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | `() => ''` | - | No description |
-| `description` | `String` | `() => ''` | - | No description |
-| `descriptionRawHtml` | `String` | `() => ''` | - | No description |
-| `list` | `Array` | `() => []` | - | No description |
-| `form` | `Object // id` | - | - | No description |
+
+| Prop                 | Type           | Default    | Values | Description    |
+| -------------------- | -------------- | ---------- | ------ | -------------- |
+| `overline`           | `String`       | `() => ''` | -      | No description |
+| `description`        | `String`       | `() => ''` | -      | No description |
+| `descriptionRawHtml` | `String`       | `() => ''` | -      | No description |
+| `list`               | `Array`        | `() => []` | -      | No description |
+| `form`               | `Object // id` | -          | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description  |
+| --------- | ------------ |
 | `content` | content slot |
-| `main` | main slot |
+| `main`    | main slot    |
 
 ## Dependencies
 
 ### External
+
 - vue
 
 ### Internal
+
 - ../herobase
 - ../listunordered
 

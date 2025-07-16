@@ -7,27 +7,30 @@ Component MenuNavigationBlock
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop        | Type     | Description    |
+| ----------- | -------- | -------------- |
 | `menuTitle` | `String` | No description |
-| `menuItems` | `Array` | No description |
+| `menuItems` | `Array`  | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `mobileLabel` | `String` | - | - | No description |
-| `isContainer` | `Boolean` | - | - | No description |
+
+| Prop          | Type      | Default | Values | Description    |
+| ------------- | --------- | ------- | ------ | -------------- |
+| `mobileLabel` | `String`  | -       | -      | No description |
+| `isContainer` | `Boolean` | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `start` | start slot |
-| `item` | item slot |
+| Slot    | Description |
+| ------- | ----------- |
+| `start` | start slot  |
+| `item`  | item slot   |
 
 ## Dependencies
 
 ### External
+
 - vue
 - primevue/menubar
 - primevue/panelmenu

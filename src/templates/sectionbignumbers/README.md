@@ -7,26 +7,29 @@ Component SectionBigNumbers
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
-| `data` | `Object` | No description |
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
+| `data`  | `Object` | No description |
 | `title` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `overline` | `String` | - | - | No description |
-| `button` | `Object` | - | - | No description |
+
+| Prop       | Type     | Default | Values | Description    |
+| ---------- | -------- | ------- | ------ | -------------- |
+| `overline` | `String` | -       | -      | No description |
+| `button`   | `Object` | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot        | Description    |
+| ----------- | -------------- |
 | `principal` | principal slot |
 
 ## Dependencies
 
 ### Internal
+
 - ../contentsection
 - ../bignumbers
 - ../linkbutton

@@ -7,19 +7,18 @@ Component Arrow
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `direction` | `String` | `'left'` | `left\|right\|top\|bottom` | No description |
+
+| Prop          | Type     | Default    | Values                         | Description    |
+| ------------- | -------- | ---------- | ------------------------------ | -------------- |
+| `direction`   | `String` | `'left'`   | `left\|right\|top\|bottom`     | No description |
 | `borderStyle` | `String` | `'dotted'` | `solid\|dotted\|dashed\|ridge` | No description |
-| `width` | `String` | `'auto'` | - | No description |
+| `width`       | `String` | `'auto'`   | -                              | No description |
 
 ## Usage Example
 
 ```vue
 <template>
-  <Arrow
-  >
-  </Arrow>
+  <Arrow> </Arrow>
 </template>
 ```
 

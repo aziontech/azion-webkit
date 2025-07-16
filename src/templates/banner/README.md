@@ -7,24 +7,24 @@ Component Banner
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `description` | `String` | - | - | No description |
-| `cta` | `String` | - | - | No description |
-| `link` | `String` | - | - | No description |
+
+| Prop          | Type     | Default | Values | Description    |
+| ------------- | -------- | ------- | ------ | -------------- |
+| `description` | `String` | -       | -      | No description |
+| `cta`         | `String` | -       | -      | No description |
+| `link`        | `String` | -       | -      | No description |
 
 ## Dependencies
 
 ### External
+
 - primevue/tag
 
 ## Usage Example
 
 ```vue
 <template>
-  <Banner
-  >
-  </Banner>
+  <Banner> </Banner>
 </template>
 ```
 

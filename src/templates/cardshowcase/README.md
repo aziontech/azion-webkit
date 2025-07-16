@@ -7,29 +7,32 @@
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `title` | `String` | `'Browse Integrations'` | - | No description |
+
+| Prop    | Type     | Default                 | Values | Description    |
+| ------- | -------- | ----------------------- | ------ | -------------- |
+| `title` | `String` | `'Browse Integrations'` | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description  |
+| --------- | ------------ |
 | `content` | content slot |
 
 ## Events
 
-| Event | Description |
-|-------|-------------|
+| Event   | Description |
+| ------- | ----------- |
 | `apply` | apply event |
 | `media` | media event |
 
 ## Dependencies
 
 ### External
+
 - primevue/card
 
 ### Internal
+
 - ../src/assets/icons/frameworks/AstroDark.vue
 - ../src/assets/icons/frameworks/AstroLight.vue
 - ../src/assets/icons/frameworks/Angular.vue
@@ -40,9 +43,7 @@
 
 ```vue
 <template>
-  <CardShowCase
-  >
-  </CardShowCase>
+  <CardShowCase> </CardShowCase>
 </template>
 ```
 

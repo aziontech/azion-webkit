@@ -7,13 +7,15 @@ Component EdgeNetworkTabView
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop        | Type    | Description    |
+| ----------- | ------- | -------------- |
 | `locations` | `Array` | No description |
 
 ## Dependencies
 
 ### External
+
 - primevue/tabview
 - primevue/tabpanel
 - primevue/badge
@@ -22,10 +24,7 @@ Component EdgeNetworkTabView
 
 ```vue
 <template>
-  <EdgeNetworkTabView
-    :locations="[]"
-  >
-  </EdgeNetworkTabView>
+  <EdgeNetworkTabView :locations="[]"> </EdgeNetworkTabView>
 </template>
 ```
 

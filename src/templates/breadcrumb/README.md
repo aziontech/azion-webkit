@@ -7,28 +7,28 @@
 ## Props
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `data` | `Array` | - | - | No description |
+
+| Prop   | Type    | Default | Values | Description    |
+| ------ | ------- | ------- | ------ | -------------- |
+| `data` | `Array` | -       | -      | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `item` | item slot |
+| Slot   | Description |
+| ------ | ----------- |
+| `item` | item slot   |
 
 ## Dependencies
 
 ### External
+
 - primevue/breadcrumb
 
 ## Usage Example
 
 ```vue
 <template>
-  <Breadcrumb
-  >
-  </Breadcrumb>
+  <Breadcrumb> </Breadcrumb>
 </template>
 ```
 

@@ -7,29 +7,32 @@ ProductCard
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type    | Description    |
+| ------- | ------- | -------------- |
 | `links` | `Array` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `title` | `String` | `''` | - | No description |
-| `description` | `String` | `''` | - | No description |
-| `icon` | `String` | `''` | - | No description |
-| `link` | `String` | - | - | No description |
-| `addons` | `Boolean` | `false` | - | No description |
-| `backgroundColor` | `String` | `'outlined'` | `outlined\|highlighted\|shape\|default` | No description |
+
+| Prop              | Type      | Default      | Values                                  | Description    |
+| ----------------- | --------- | ------------ | --------------------------------------- | -------------- |
+| `title`           | `String`  | `''`         | -                                       | No description |
+| `description`     | `String`  | `''`         | -                                       | No description |
+| `icon`            | `String`  | `''`         | -                                       | No description |
+| `link`            | `String`  | -            | -                                       | No description |
+| `addons`          | `Boolean` | `false`      | -                                       | No description |
+| `backgroundColor` | `String`  | `'outlined'` | `outlined\|highlighted\|shape\|default` | No description |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
+| Slot      | Description  |
+| --------- | ------------ |
 | `content` | content slot |
 
 ## Dependencies
 
 ### Internal
+
 - ../cardbase
 - ../linkbutton
 - ../icontextsegment
@@ -39,10 +42,7 @@ ProductCard
 
 ```vue
 <template>
-  <ProductCard
-    :links="[]"
-  >
-  </ProductCard>
+  <ProductCard :links="[]"> </ProductCard>
 </template>
 ```
 

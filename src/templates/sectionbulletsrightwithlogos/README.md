@@ -7,22 +7,25 @@ Component SectionBulletsRightWithLogos
 ## Props
 
 ### Required
-| Prop | Type | Description |
-|------|------|-------------|
+
+| Prop    | Type     | Description    |
+| ------- | -------- | -------------- |
 | `title` | `String` | No description |
 
 ### Optional
-| Prop | Type | Default | Values | Description |
-|------|------|---------|--------|-------------|
-| `gap` | `String` | `() => 'default'` | `small\|default` | No description |
-| `button` | `Object` | - | - | No description |
-| `logos` | `Array` | - | - | No description |
+
+| Prop       | Type     | Default           | Values                                                | Description    |
+| ---------- | -------- | ----------------- | ----------------------------------------------------- | -------------- |
+| `gap`      | `String` | `() => 'default'` | `small\|default`                                      | No description |
+| `button`   | `Object` | -                 | -                                                     | No description |
+| `logos`    | `Array`  | -                 | -                                                     | No description |
 | `severity` | `String` | `() => 'primary'` | `default\|primary\|secondary\|warning\|success\|info` | No description |
-| `list` | `Array` | - | - | No description |
+| `list`     | `Array`  | -                 | -                                                     | No description |
 
 ## Dependencies
 
 ### Internal
+
 - ../contentsection
 - ../contentlogo
 - ../linkbutton
