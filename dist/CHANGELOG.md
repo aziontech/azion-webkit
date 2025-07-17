@@ -1,3 +1,9 @@
+## [1.141.1](https://github.com/aziontech/azion-webkit/compare/v1.141.0...v1.141.1) (2025-07-17)
+
+### Bug Fixes
+
+* titleTag to sectioncardbackgroundintercalated ([a3a497e](https://github.com/aziontech/azion-webkit/commit/a3a497e099fd68a24a11e22263901cc6a959e781))
+
 ## [1.141.0](https://github.com/aziontech/azion-webkit/compare/v1.140.1...v1.141.0) (2025-07-16)
 
 ### Features
