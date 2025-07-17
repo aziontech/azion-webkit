@@ -2,6 +2,7 @@
   <ContentSection
     titleTag="h2"
     :title="title"
+    :position="position"
   >
     <template v-slot:actions>
       <template v-if="button && button.label">
@@ -55,6 +56,11 @@
     },
     list: {
       type: Array
+    },
+    position: {
+      type: String,
+      options: ['left', 'right'],
+      default: () => 'left'
     }
   })
 </script>

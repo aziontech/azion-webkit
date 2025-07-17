@@ -19,7 +19,8 @@ const MOCK = {
         src: 'https://www.azion.com/assets/pages/about/globe-about-light.png'
       }
     }
-  }
+  },
+  position: 'left'
 }
 
 const MOCK_WITH_CARDS = {
@@ -86,10 +87,37 @@ const TemplateWithCards = (args) => config(args)
 export const DefaultWithCards = TemplateWithCards.bind({})
 DefaultWithCards.args = MOCK_WITH_CARDS
 
+export const PositionRight = Template.bind({})
+PositionRight.args = { ...MOCK, position: 'right' }
+PositionRight.parameters = {
+  docs: {
+    description: {
+      story: 'Section with content positioned on the right side'
+    }
+  }
+}
+
+export const PositionRightWithCards = TemplateWithCards.bind({})
+PositionRightWithCards.args = { ...MOCK_WITH_CARDS, position: 'right' }
+PositionRightWithCards.parameters = {
+  docs: {
+    description: {
+      story: 'Section with content positioned on the right side and cards'
+    }
+  }
+}
+
 export default {
   title: 'Blocks/Sections/section-video-right',
   component: SectionVideoRight,
   tags: ['autodocs'],
+  argTypes: {
+    position: {
+      control: { type: 'select' },
+      options: ['left', 'right'],
+      description: 'Controls the layout position of content and main slot'
+    }
+  },
   parameters: {
     docs: {
       description: {

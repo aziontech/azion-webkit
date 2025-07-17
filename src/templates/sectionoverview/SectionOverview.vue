@@ -6,6 +6,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :isSticky="isSticky"
+    :position="position"
   >
     <template #actions>
       <LinkButton
@@ -72,6 +73,11 @@
     data: {
       type: Array,
       default: () => []
+    },
+    position: {
+      type: String,
+      options: ['left', 'right'],
+      default: () => 'left'
     }
   })
 </script>

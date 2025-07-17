@@ -3,7 +3,9 @@
     <div
       class="px-container flex flex-col w-full"
       :class="[
-        { 'lg:flex-row gap-10': !isCentralized },
+        { 'gap-10': !isCentralized },
+        { 'lg:flex-row': !isCentralized && position !== 'right' },
+        { 'flex-col-reverse lg:flex-row-reverse': !isCentralized && position === 'right' },
         { 'items-center justify-center gap-12 md:gap-24': isCentralized },
         { 'flex-col-reverse': isReverse }
       ]"
@@ -173,6 +175,11 @@
     isDisplay: {
       type: Boolean,
       default: () => false
+    },
+    position: {
+      type: String,
+      options: ['right'],
+      default: () => 'left'
     }
   })
 </script>
