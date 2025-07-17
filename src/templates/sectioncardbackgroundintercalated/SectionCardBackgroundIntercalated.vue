@@ -1,6 +1,7 @@
 <template>
   <ContentSection
     :overline="overline"
+    :titleTag="titleTag"
     :title="title"
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
