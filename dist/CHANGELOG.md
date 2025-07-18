@@ -1,3 +1,9 @@
+## [1.141.2](https://github.com/aziontech/azion-webkit/compare/v1.141.1...v1.141.2) (2025-07-18)
+
+### Bug Fixes
+
+* regex linkedin progile ([841a2d1](https://github.com/aziontech/azion-webkit/commit/841a2d16704e396c25ce465062ffe3b2532a7935))
+
 ## [1.141.1](https://github.com/aziontech/azion-webkit/compare/v1.141.0...v1.141.1) (2025-07-17)
 
 ### Bug Fixes
