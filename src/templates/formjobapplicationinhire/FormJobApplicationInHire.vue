@@ -308,8 +308,10 @@
         .required('linkedinRequiredError')
         .transform((value) => {
           if (!value) return value
-          if (value.match(/linkedin\.com\/in\/([^\/]+)/)) return match[1]
-          return value
+
+          const match = value.match(/linkedin\.com\/in\/([^\/]+)/)
+
+          return match ? match[1] : value
         }),
       file: yup.boolean().required('resumeRequiredError'),
       state: yup.string().required('stateRequiredError'),
