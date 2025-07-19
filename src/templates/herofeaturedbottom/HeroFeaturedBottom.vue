@@ -12,7 +12,7 @@
         v-bind="button"
       />
     </template>
-    <template #main>
+    <template v-if="cards" #main>
       <FeaturedCards :cards="cards" />
     </template>
   </HeroBlockBase>
@@ -42,7 +42,7 @@
     },
     cards: {
       type: Array,
-      required: true,
+      required: false,
       validator: (value) => {
         return value.every((card) => {
           return ['image', 'tag', 'description', 'button', 'logo'].every((key) => key in card)
