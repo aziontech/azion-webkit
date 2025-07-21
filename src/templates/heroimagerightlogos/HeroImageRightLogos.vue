@@ -3,6 +3,7 @@
     <HeroBlockBase
       align="center"
       :title="title"
+      :id="id"
     >
       <template #actions>
         <div class="flex flex-col md:flex-row lg:justify-start justify-center gap-2 w-full">
@@ -50,6 +51,10 @@
   import ImageSwitcher from '../themeawareimageswitcher'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     title: {
       type: String,
       required: true

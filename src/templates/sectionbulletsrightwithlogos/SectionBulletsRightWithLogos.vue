@@ -3,6 +3,7 @@
     titleTag="h2"
     :title="title"
     :position="position"
+    :id="id"
   >
     <template v-slot:actions>
       <template v-if="button && button.label">
@@ -34,6 +35,10 @@
   import UnorderedList from '../listunordered'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     // gap: {
     //   type: String,
     //   default: () => 'default',

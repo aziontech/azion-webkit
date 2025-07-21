@@ -1,15 +1,15 @@
 /**
  *
- * LinkButton represents people using links in the page with css buttons look.
+ * HeroProductsHorizontal
  *
  *
- * @module `linkbutton`
+ * @module `heroproductshorizontal`
  */
 import { VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 /**
- * Defines valid properties in LinkButton component.
+ * Defines valid properties in HeroProductsHorizontal component.
  */
 export interface LinkButtonProps {
   /**
@@ -54,12 +54,13 @@ export interface LinkButtonProps {
    */
   text?: boolean
   position?: 'left' | 'right'
+  id?: string
 }
 
 /**
- * Defines valid slots in LinkButton component.
+ * Defines valid slots in HeroProductsHorizontal component.
  */
-export interface LinkButtonSlots {
+export interface HeroProductsHorizontalSlots {
   /**
    * Content can easily be customized with the default slot instead of using the built-in modes.
    */
@@ -67,11 +68,11 @@ export interface LinkButtonSlots {
 }
 
 /**
- * Defines valid emits in LinkButton component.
+ * Defines valid emits in HeroProductsHorizontal component.
  */
-export interface LinkButtonEmits {
+export interface HeroProductsHorizontalEmits {
   /**
-   * Triggered when an error occurs while loading an image file.
+   * Triggered when an error occurs
    */
   error(event: Event): void
 }
@@ -79,16 +80,16 @@ export interface LinkButtonEmits {
 /**
  * @group Component
  */
-declare class LinkButton extends ClassComponent<
-  LinkButtonProps,
-  LinkButtonSlots,
-  LinkButtonEmits
+declare class HeroProductsHorizontal extends ClassComponent<
+  HeroProductsHorizontalProps,
+  HeroProductsHorizontalSlots,
+  HeroProductsHorizontalEmits
 > {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    LinkButton: GlobalComponentConstructor<LinkButton>
+    HeroProductsHorizontal: GlobalComponentConstructor<HeroProductsHorizontal>
   }
 }
 
-export default LinkButton
+export default HeroProductsHorizontal

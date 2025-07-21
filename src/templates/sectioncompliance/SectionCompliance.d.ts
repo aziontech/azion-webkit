@@ -26,6 +26,11 @@ interface ButtonProps {
  * Defines valid properties in SectionCompliances component.
  */
 export interface SectionCompliancesProps {
+  id?: string | undefined
+  /**
+   * Defines the id of the section
+   * @defaultValue ''
+   */
   overline?: string
   titleTag: string
   title: string

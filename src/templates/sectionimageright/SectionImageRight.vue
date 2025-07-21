@@ -6,6 +6,7 @@
     :description="props.description"
     :descriptionRawHtml="props.descriptionRawHtml"
     :position="props.position"
+    :id="id"
   >
     <template #actions>
       <template
@@ -48,6 +49,10 @@
   import ImageSwitcher from '../themeawareimageswitcher'
 
   const props = defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       default: () => ''

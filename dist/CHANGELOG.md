@@ -1,3 +1,82 @@
+## [1.143.0](https://github.com/aziontech/azion-webkit/compare/v1.142.4...v1.143.0) (2025-07-21)
+
+### Features
+
+* add id prop to ContentSection and HeroBase wrapper components ([c87b080](https://github.com/aziontech/azion-webkit/commit/c87b0801813532415539fc2c6aac73d9024df7ef))
+
+## [1.142.4](https://github.com/aziontech/azion-webkit/compare/v1.142.3...v1.142.4) (2025-07-21)
+
+### Bug Fixes
+
+* hero hs form list not required ([0f63327](https://github.com/aziontech/azion-webkit/commit/0f63327fa86d9ce29d002c5ceaf5f4efd89a017a))
+
+## [1.142.3](https://github.com/aziontech/azion-webkit/compare/v1.142.2...v1.142.3) (2025-07-21)
+
+### Bug Fixes
+
+* hubspot checkbox list margin and gaps ([fe856f8](https://github.com/aziontech/azion-webkit/commit/fe856f831bb9d8c5b77490ddd68a181d433fcc2b))
+
+## [1.142.2](https://github.com/aziontech/azion-webkit/compare/v1.142.1...v1.142.2) (2025-07-21)
+
+### Bug Fixes
+
+* hubspot checkbox list margin and gaps ([cc0bcac](https://github.com/aziontech/azion-webkit/commit/cc0bcacc06ebb1dfdae0fc08363272f902eaacd1))
+
+## [1.142.1](https://github.com/aziontech/azion-webkit/compare/v1.142.0...v1.142.1) (2025-07-21)
+
+### Bug Fixes
+
+* hubspot form checkbox alignment ([917d9de](https://github.com/aziontech/azion-webkit/commit/917d9de2f61f4508e8bb06a76f16419c692d75a5))
+
+## [1.142.0](https://github.com/aziontech/azion-webkit/compare/v1.141.2...v1.142.0) (2025-07-21)
+
+### Features
+
+* hero featured bottom cards not required ([827f8cf](https://github.com/aziontech/azion-webkit/commit/827f8cffcee627edb98a763772605a0f92a3dff9))
+
+### Bug Fixes
+
+* cms validation ([7f22d77](https://github.com/aziontech/azion-webkit/commit/7f22d77e5522a4a96c028e8fd90e2374ee1c67f1))
+* sure contain cards[0] ([1f9d15d](https://github.com/aziontech/azion-webkit/commit/1f9d15d7426d30248e41140e7448d574db90b747))
+
+## [1.141.2](https://github.com/aziontech/azion-webkit/compare/v1.141.1...v1.141.2) (2025-07-18)
+
+### Bug Fixes
+
+* regex linkedin progile ([841a2d1](https://github.com/aziontech/azion-webkit/commit/841a2d16704e396c25ce465062ffe3b2532a7935))
+
+## [1.141.1](https://github.com/aziontech/azion-webkit/compare/v1.141.0...v1.141.1) (2025-07-17)
+
+### Bug Fixes
+
+* titleTag to sectioncardbackgroundintercalated ([a3a497e](https://github.com/aziontech/azion-webkit/commit/a3a497e099fd68a24a11e22263901cc6a959e781))
+
+## [1.141.0](https://github.com/aziontech/azion-webkit/compare/v1.140.1...v1.141.0) (2025-07-16)
+
+### Features
+
+* readme doc tempalte system generation, used to ai ([384cdd1](https://github.com/aziontech/azion-webkit/commit/384cdd1eefaed104c74f38871364d675c8161b20))
+
+### Bug Fixes
+
+* form job inhire application - validation salary with min 1000 and linkedin profile url ([83e856a](https://github.com/aziontech/azion-webkit/commit/83e856aa0678c0a0088f13009c361f7dd98bff53))
+
+## [1.140.1](https://github.com/aziontech/azion-webkit/compare/v1.140.0...v1.140.1) (2025-07-15)
+
+### Bug Fixes
+
+* HeroVideoRight to be used with Cards ([b432b68](https://github.com/aziontech/azion-webkit/commit/b432b68223929a15936d06dbdbfb6fbf73869a3b))
+
+## [1.140.0](https://github.com/aziontech/azion-webkit/compare/v1.139.0...v1.140.0) (2025-07-15)
+
+### Features
+
+* enhance header menu panel responsive layout and link behavior ([01f8533](https://github.com/aziontech/azion-webkit/commit/01f8533c4761131c648151787bd1acfab8434295))
+
+### Bug Fixes
+
+* remove unnecessary code ([999e2de](https://github.com/aziontech/azion-webkit/commit/999e2de46c7850da4b9f878ff4c7d4b6095b6bf8))
+
 ## [1.139.0](https://github.com/aziontech/azion-webkit/compare/v1.138.1...v1.139.0) (2025-07-11)
 
 ### Features

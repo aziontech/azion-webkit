@@ -12,6 +12,7 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  * Defines valid properties in SectionBulletsRightWithLogos component.
  */
 export interface SectionBulletsRightWithLogosProps {
+  id?: string | undefined
   title: string
   severity: string
   button: {

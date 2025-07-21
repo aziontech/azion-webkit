@@ -3,6 +3,7 @@
     :overline="overline"
     :title="title"
     titleTag="h2"
+    :id="id"
   >
     <template
       #main
@@ -62,6 +63,10 @@
   import Tag from 'primevue/tag'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       required: false

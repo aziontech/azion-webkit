@@ -6,6 +6,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :position="position"
+    :id="id"
   >
     <template #actions>
       <template
@@ -34,6 +35,10 @@
   import UnorderedList from '../listunordered'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       default: () => ''

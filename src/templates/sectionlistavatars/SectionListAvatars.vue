@@ -6,6 +6,7 @@
     :overline="props.overline"
     :titleTag="props.titleTag"
     :title="props.title"
+    :id="id"
   >
     <template #main>
       <div class="flex flex-wrap gap-2 gap-y-4 w-full justify-center">
@@ -38,6 +39,10 @@
   import ContentSection from '../contentsection'
 
   const props = defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     titleTag: {
       type: String,
       default() {

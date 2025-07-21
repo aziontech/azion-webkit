@@ -9,6 +9,7 @@ import { VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 export interface SectionListProductsProps {
+  id?: string
   overline: string
   titleTag: string
   title: string

@@ -7,6 +7,7 @@
     :isSticky="isSticky"
     position="center"
     isContentCentralized
+    :id="id"
   >
     <template #main>
       <div class="flex justify-center">
@@ -21,6 +22,10 @@
   import ContentSection from '../contentsection'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     isSticky: {
       type: Boolean,
       default() {

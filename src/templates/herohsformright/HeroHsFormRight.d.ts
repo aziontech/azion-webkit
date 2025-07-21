@@ -13,6 +13,7 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  */
 
 export interface HeroHsFormRightProps {
+  id?: string | undefined
   overline: string
   title: string
   description: string

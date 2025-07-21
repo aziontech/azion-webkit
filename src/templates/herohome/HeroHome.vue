@@ -5,6 +5,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :bannerNews="bannerNews"
+    :id="id"
   >
     <template #title>
       <h1
@@ -37,6 +38,10 @@
   import ContentLogo from '../contentlogo'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     bannerNews: {
       type: Object,
       default: () => {}

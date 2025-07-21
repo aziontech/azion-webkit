@@ -170,3 +170,17 @@ strong {
 .form-columns-2 > .hs-form-field:first-of-type > .input {
   margin-right: 24px;
 }
+
+.inputs-list.multi-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.25rem !important;
+  margin-bottom: 1rem;
+}
+
+.hs-form-checkbox-display {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  line-height: 2rem;
+}

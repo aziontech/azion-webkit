@@ -22,6 +22,7 @@ interface Images {
  * Defines valid properties in HeroButtonBottomn component.
  */
 export interface HeroButtonBottomnProps {
+  id?: string
   overline?: string
   title?: string
   description?: string

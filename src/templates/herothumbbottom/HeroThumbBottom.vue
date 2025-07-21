@@ -5,6 +5,7 @@
     :title="title"
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
+    :id="id"
   >
     <template #actions>
       <LinkButton
@@ -45,6 +46,10 @@
   import ImageSwitcher from '../themeawareimageswitcher'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       default: () => ''
