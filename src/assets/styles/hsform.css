@@ -184,3 +184,12 @@ strong {
   gap: 0.5rem !important;
   line-height: 2rem;
 }
+
+.hbspt-form form label span.hs-form-required {
+  color: #f3652b !important;
+  margin-left: 0.25rem;
+}
+
+.hs_submit.hs-submit .actions {
+  text-align: right;
+}
