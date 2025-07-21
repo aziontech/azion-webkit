@@ -23,11 +23,11 @@ export interface HeroBaseProps {
    * @defaultValue: false
    */
   isReverse?: boolean
-  title: false
   /**
    * @defaultValue: h1
    */
   titleTag?: string
+  title: string
   description?: string
   descriptionRawHtml?: string
   justify?: string

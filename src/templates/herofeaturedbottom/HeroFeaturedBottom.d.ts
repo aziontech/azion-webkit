@@ -21,6 +21,7 @@ interface Card {
   }
   tag: string
   description: string
+  descriptionRawHtml: string
   button: {
     label: string
   }

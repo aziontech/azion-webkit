@@ -2,6 +2,7 @@
   <HeroBlockBase
     isCentralized
     :overline="overline"
+    :titleTag="titleTag"
     :title="title"
     :description="description"
     :id="id"
@@ -36,13 +37,19 @@
       type: String,
       required: false
     },
-    title: {
+    titleTag: {
       type: String,
-      required: false
+      default: () => 'h1',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
+    },
+    title: {
+      type: String
     },
     description: {
-      type: String,
-      required: false
+      type: String
+    },
+    descriptionRawHtml: {
+      type: String
     },
     buttons: {
       type: Array,
