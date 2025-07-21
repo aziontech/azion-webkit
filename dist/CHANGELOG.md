@@ -1,3 +1,9 @@
+## [1.142.4](https://github.com/aziontech/azion-webkit/compare/v1.142.3...v1.142.4) (2025-07-21)
+
+### Bug Fixes
+
+* hero hs form list not required ([0f63327](https://github.com/aziontech/azion-webkit/commit/0f63327fa86d9ce29d002c5ceaf5f4efd89a017a))
+
 ## [1.142.3](https://github.com/aziontech/azion-webkit/compare/v1.142.2...v1.142.3) (2025-07-21)
 
 ### Bug Fixes
