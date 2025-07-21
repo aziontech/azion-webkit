@@ -1,3 +1,9 @@
+## [1.142.2](https://github.com/aziontech/azion-webkit/compare/v1.142.1...v1.142.2) (2025-07-21)
+
+### Bug Fixes
+
+* hubspot checkbox list margin and gaps ([cc0bcac](https://github.com/aziontech/azion-webkit/commit/cc0bcacc06ebb1dfdae0fc08363272f902eaacd1))
+
 ## [1.142.1](https://github.com/aziontech/azion-webkit/compare/v1.142.0...v1.142.1) (2025-07-21)
 
 ### Bug Fixes
