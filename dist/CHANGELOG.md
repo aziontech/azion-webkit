@@ -1,3 +1,9 @@
+## [1.142.1](https://github.com/aziontech/azion-webkit/compare/v1.142.0...v1.142.1) (2025-07-21)
+
+### Bug Fixes
+
+* hubspot form checkbox alignment ([917d9de](https://github.com/aziontech/azion-webkit/commit/917d9de2f61f4508e8bb06a76f16419c692d75a5))
+
 ## [1.142.0](https://github.com/aziontech/azion-webkit/compare/v1.141.2...v1.142.0) (2025-07-21)
 
 ### Features
