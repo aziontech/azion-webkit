@@ -12,6 +12,7 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  * Defines valid properties in HeroVideoRightCardBackground component.
  */
 export interface HeroVideoRightCardBackgroundProps {
+  id?: string
   overline: string
   titleTag: string
   title: string

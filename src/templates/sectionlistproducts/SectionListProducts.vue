@@ -6,6 +6,7 @@
     :title="props.title"
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
+    :id="id"
   >
     <template #main>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-content-center m-0">
@@ -30,6 +31,10 @@
   import ProductCard from '../productcard'
 
   const props = defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String
     },

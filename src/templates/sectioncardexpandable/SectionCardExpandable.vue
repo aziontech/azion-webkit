@@ -8,6 +8,7 @@
     :overline="overline"
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
+    :id="id"
   >
     <template #main>
       <CardPanelExpandable
@@ -101,6 +102,10 @@
   import LinkButton from '../linkbutton'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       default: () => ''

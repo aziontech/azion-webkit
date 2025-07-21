@@ -7,6 +7,11 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  * Defines valid properties in SectionNumberedCards component.
  */
 export interface SectionNumberedCardsProps {
+  id?: string | undefined
+  /**
+   * Defines the id of the section
+   * @defaultValue ''
+   */
   overline?: string
   title: string
   titleTag: string

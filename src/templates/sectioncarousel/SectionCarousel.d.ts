@@ -25,6 +25,7 @@ type CardsType = {
  * Defines valid properties in SectionCarousels component.
  */
 export interface SectionCarouselsProps {
+  id?: string
   title: string
   overline: string
   description: string

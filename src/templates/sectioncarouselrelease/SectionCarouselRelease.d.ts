@@ -48,6 +48,7 @@ interface AnalystItem {
  * Defines valid properties in SectionCarouselRelease component.
  */
 export interface SectionCarouselReleaseProps {
+  id?: string
   overline: string
   titleTag: string
   title: string

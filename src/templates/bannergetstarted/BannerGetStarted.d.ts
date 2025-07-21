@@ -30,6 +30,11 @@ type BannerGetStartedItems = {
  * Defines valid properties in AisIndexHit component.
  */
 export interface BannerGetStartedProps {
+  id?: string | undefined
+  /**
+   * Defines the id of the section
+   * @defaultValue ''
+   */
   items: BannerGetStartedItems[]
   /**
    * Defines the text to display is centralized.

@@ -6,6 +6,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :isContentCentralized="true"
+    :id="id"
   >
     <template #principal>
       <div class="relative">
@@ -20,6 +21,10 @@
   import ReleaseCarousel from '../releasecarousel'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       default: () => ''

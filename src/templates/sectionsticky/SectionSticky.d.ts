@@ -36,6 +36,7 @@ type Sections = {
  * Defines valid properties in SectionStickys component.
  */
 export interface SectionStickysProps {
+  id?: string
   title: string
   overline: string
   sections: Sections[]

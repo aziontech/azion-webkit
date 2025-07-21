@@ -12,17 +12,22 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  * Defines valid properties in HeroBase component.
  */
 export interface HeroBaseProps {
+  id?: string | undefined
+  /**
+   * Defines the id of the section
+   * @defaultValue ''
+   */
   bannerNews?: object
   overline?: string
   /**
    * @defaultValue: false
    */
   isReverse?: boolean
-  title: false
   /**
    * @defaultValue: h1
    */
   titleTag?: string
+  title: string
   description?: string
   descriptionRawHtml?: string
   justify?: string

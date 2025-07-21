@@ -7,6 +7,7 @@
     :title="props.title"
     :description="props.description"
     :descriptionRawHtml="props.descriptionRawHtml"
+    :id="id"
   >
     <template #actions>
       <template v-if="props.buttons[0] && props.buttons[0].label">
@@ -63,6 +64,10 @@
   import CardDescription from '../carddescription'
 
   const props = defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       default: () => ''

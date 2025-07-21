@@ -1,0 +1,7 @@
+{
+  "main": "./sectionlistcardclickable.js",
+  "types": "./SectionListCardClickable.d.ts",
+  "browser": {
+    "./sfc": "./SectionListCardClickable.vue"
+  }
+}

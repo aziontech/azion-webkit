@@ -6,6 +6,7 @@
     :title="props.title"
     :description="props.description"
     :descriptionRawHtml="props.descriptionRawHtml"
+    :id="id"
   >
     <template #actions>
       <LinkButton
@@ -28,8 +29,13 @@
             }"
           >
             <template #item="{ item }">
-              <a :href="item.link">
-                <span class="text-sm">{{ item.label }}</span>
+              <a
+                href="javascript: void(0)"
+                :title="item.label"
+                class="block text-sm"
+                @click="scrollTo(item.link)"
+              >
+                {{ item.label }}
               </a>
             </template>
           </Menu>
@@ -100,7 +106,11 @@
   import LinkButton from '../linkbutton'
   import Menu from 'primevue/menu'
 
-  const props = defineProps({
+  const props = defineProps({ 
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String
     },
@@ -131,4 +141,14 @@
       type: [Array, undefined, null]
     }
   })
+
+  function scrollTo(id) {
+    const element = document.querySelector(id)
+
+    if (!element) return
+
+    element.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
 </script>

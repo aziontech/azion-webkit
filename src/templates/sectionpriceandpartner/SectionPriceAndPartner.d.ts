@@ -12,6 +12,7 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  * Defines valid properties in SectionPriceAndPartner component.
  */
 export interface SectionPriceAndPartnerProps {
+  id?: string
   overline?: string
   title: string
   description: string

@@ -21,6 +21,7 @@ interface Card {
   }
   tag: string
   description: string
+  descriptionRawHtml: string
   button: {
     label: string
   }
@@ -34,6 +35,7 @@ interface Card {
  * Defines valid properties in HeroFeaturedBottom component.
  */
 export interface HeroFeaturedBottomProps {
+  id?: string
   overline?: string
   title?: string
   description?: string

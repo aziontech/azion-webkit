@@ -1,9 +1,11 @@
 <template>
   <ContentSection
     :overline="overline"
+    :titleTag="titleTag"
     :title="title"
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
+    :id="id"
   >
     <template #content>
       <div class="m-0 grid grid-cols-1 md:grid-cols-2 gap-10 md:pt-32">
@@ -42,6 +44,10 @@
   import CardBgImage from '../cardbgimage'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       default: () => ''

@@ -5,6 +5,7 @@
     :title="title"
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
+    :id="id"
   >
     <template #main>
       <div class="w-full flex lg:justify-end lg:items-end">
@@ -48,6 +49,10 @@
   import Tile from '../tile'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       required: false

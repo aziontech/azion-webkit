@@ -11,6 +11,7 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  * Defines valid properties in SectionBasicContent component.
  */
 export interface SectionBasicContentProps {
+  id?: string | undefined
   overline: string
   title: string
   titleTag: string

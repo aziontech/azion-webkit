@@ -1,0 +1,2 @@
+import SectionHorizontalCardNavigation from './SectionHorizontalCardNavigation.vue'
+export default SectionHorizontalCardNavigation

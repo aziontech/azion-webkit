@@ -24,6 +24,11 @@ type ButtonType = {}
  * Defines valid properties in SectionSuccessCases component.
  */
 export interface SectionSuccessCasesProps {
+  id?: string | undefined
+  /**
+   * Defines the id of the section
+   * @defaultValue ''
+   */
   button: ButtonType
   title: string
   overline: string

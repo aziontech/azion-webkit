@@ -7,6 +7,7 @@
     :overline="overline"
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
+    :id="id"
     textCenter
   >
     <template #main>
@@ -55,6 +56,10 @@
   import LinkButton from '../linkbutton'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       required: false

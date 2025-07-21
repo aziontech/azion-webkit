@@ -7,6 +7,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :isContentCentralized="true"
+    :id="id"
   >
     <template #main>
       <Carousel
@@ -54,6 +55,10 @@
   import CardDescription from '../carddescription'
 
   const props = defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       default: () => ''

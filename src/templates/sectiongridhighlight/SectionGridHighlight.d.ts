@@ -27,6 +27,7 @@ interface ButtonProps {
  * Defines valid properties in SectionGridHighlight component.
  */
 export interface SectionGridHighlightProps {
+  id?: string
   overline?: string
   title: string
   titleTag: string

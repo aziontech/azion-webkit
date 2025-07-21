@@ -4,6 +4,7 @@
     :overline="overline"
     :title="title"
     :isContentCentralized="data.justify === 'center' ? true : false"
+    :id="id"
   >
     <template
       v-if="button"
@@ -31,6 +32,10 @@
   import LinkButton from '../linkbutton'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     data: {
       type: Object,
       required: true

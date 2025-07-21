@@ -1,12 +1,12 @@
 <template>
   <ContentSection
-    position="center"
-    :isContentCentralized="true"
+    :isContentCentralized="isContentCentralized"
     :overline="overline"
     :titleTag="titleTag"
     :title="title"
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
+    :id="id"
   >
     <template #actions>
       <template
@@ -27,6 +27,14 @@
   import LinkButton from '../linkbutton'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
+    isContentCentralized: {
+      type: Boolean,
+      default: () => true
+    },
     overline: {
       type: String,
       default: () => ''

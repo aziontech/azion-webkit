@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col gap-10 md:gap-20 2xl:gap-40">
+  <section class="flex flex-col gap-10 md:gap-20 2xl:gap-40" :id="id">
     <div
       class="px-container flex flex-col w-full"
       :class="[
@@ -132,6 +132,10 @@
   import Banner from '../banner'
 
   const props = defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     bannerNews: {
       type: Object
     },
@@ -145,7 +149,8 @@
     },
     titleTag: {
       type: String,
-      default: 'h1'
+      default: () => 'h1',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
     },
     title: {
       type: String

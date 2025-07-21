@@ -16,6 +16,11 @@ type Avatars = Array<{
 }>
 
 export interface SectionListAvatarsProps {
+  id?: string | undefined
+  /**
+   * Defines the id of the section
+   * @defaultValue ''
+   */
   titleTag: string
   image: string
   title: string

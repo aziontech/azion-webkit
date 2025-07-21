@@ -4,6 +4,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :justify="justify"
+    :id="id"
   >
     <template #title>
       <Titlegroup v-bind="hgroup" />
@@ -56,6 +57,10 @@
   import Titlegroup from '../titlegroup'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     justify: {
       type: String,
       options: ['center']

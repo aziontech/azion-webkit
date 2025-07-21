@@ -30,6 +30,7 @@ interface Logo {
 }
 
 export interface HeroImageRightLogoProps {
+  id?: string
   title: string
   images: Images
   logos: Logo

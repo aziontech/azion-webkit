@@ -5,6 +5,7 @@
     :title="title"
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
+    :id="id"
   >
     <template #content>
       <div
@@ -38,6 +39,10 @@
   import LinkButton from '../linkbutton'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       default: () => ''

@@ -12,6 +12,7 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  * Defines valid properties in SectionCardBackgroundIntercalated component.
  */
 export interface SectionCardBackgroundIntercalatedProps {
+  id?: string
   overline: string
   titleTag: string
   title: string

@@ -24,6 +24,7 @@ interface DataBlock {
  * Defines valid properties in SectionBigNumbers component.
  */
 export interface SectionBigNumbersProps {
+  id?: string
   title: string
   overline: string
   data: DataBlock

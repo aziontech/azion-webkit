@@ -25,6 +25,7 @@ interface ContentBlock {
  * Defines valid properties in SectionOverview component.
  */
 export interface SectionOverviewProps {
+  id?: string
   overline: string
   title: string
   description: string

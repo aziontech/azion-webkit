@@ -25,6 +25,11 @@ interface ContentBlock {
  * Defines valid properties in SectionBulletsRight component.
  */
 export interface SectionBulletsRightProps {
+  id?: string | undefined
+  /**
+   * Defines the id of the section
+   * @defaultValue ''
+   */
   overline: string
   titleTag: string
   title: string

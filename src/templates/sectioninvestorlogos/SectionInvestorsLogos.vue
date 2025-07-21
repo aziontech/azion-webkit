@@ -6,6 +6,7 @@
     textCenter
     :title="title"
     :overline="overline"
+    :id="id"
   >
     <template #content>
       <div class="flex items-center flex-col md:flex-row justify-center gap-8">
@@ -23,7 +24,11 @@
 <script setup>
   import ContentSection from '../contentsection'
 
-  defineProps({
+  defineProps({ 
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       required: false

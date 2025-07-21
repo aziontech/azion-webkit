@@ -12,6 +12,11 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  * Defines valid properties in SectionVideoRight component.
  */
 export interface SectionVideoRightProps {
+  id?: string | undefined
+  /**
+   * Defines the id of the section
+   * @defaultValue ''
+   */
   overline: string
   titleTag: string
   title: string

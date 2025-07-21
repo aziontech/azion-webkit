@@ -1,0 +1,7 @@
+{
+  "main": "./sectionhorizontalcardnavigation.js",
+  "types": "./SectionHorizontalCardNavigation.d.ts",
+  "browser": {
+    "./sfc": "./SectionHorizontalCardNavigation.vue"
+  }
+}
