@@ -1,3 +1,10 @@
+## [1.143.1](https://github.com/aziontech/azion-webkit/compare/v1.143.0...v1.143.1) (2025-07-21)
+
+### Bug Fixes
+
+* herobase e herofeaturedbottom titleTag added ([7ec9bf3](https://github.com/aziontech/azion-webkit/commit/7ec9bf39c17e6b545e8270c639c8103af1554c9d))
+* required * color, btn in the right ([6871f2b](https://github.com/aziontech/azion-webkit/commit/6871f2bd791e6a717f5013eb943aba6538eda469))
+
 ## [1.143.0](https://github.com/aziontech/azion-webkit/compare/v1.142.4...v1.143.0) (2025-07-21)
 
 ### Features
