@@ -1,3 +1,9 @@
+## [1.143.0](https://github.com/aziontech/azion-webkit/compare/v1.142.4...v1.143.0) (2025-07-21)
+
+### Features
+
+* add id prop to ContentSection and HeroBase wrapper components ([c87b080](https://github.com/aziontech/azion-webkit/commit/c87b0801813532415539fc2c6aac73d9024df7ef))
+
 ## [1.142.4](https://github.com/aziontech/azion-webkit/compare/v1.142.3...v1.142.4) (2025-07-21)
 
 ### Bug Fixes
