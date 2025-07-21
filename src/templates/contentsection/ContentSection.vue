@@ -9,10 +9,7 @@
         pt?.content || ''
       ]"
     >
-      <div
-        class="w-full"
-        v-if="overline || title || description || $slots.content"
-      >
+      <div class="w-full">
         <div
           class="w-full flex gap-8"
           :class="[
@@ -24,61 +21,20 @@
           ]"
         >
           <div
+            v-if="overline || title || $slots.title || $slots.actions"
             class="w-full flex flex-col gap-8 z-0"
             :class="[{ 'items-center': isContentCentralized }]"
           >
             <template v-if="overline && overline.length">
               <Overline :label="overline" />
             </template>
+
             <template v-if="title">
-              <h1
-                v-if="titleTag === 'h1'"
-                :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance"
-                style="line-height: 125% !important"
-              >
-                {{ title }}
-              </h1>
-              <h2
-                v-if="titleTag === 'h2'"
-                :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance"
-                style="line-height: 125% !important"
-              >
-                {{ title }}
-              </h2>
-              <h3
-                v-if="titleTag === 'h3'"
-                :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance"
-                style="line-height: 125% !important"
-              >
-                {{ title }}
-              </h3>
-              <h4
-                v-if="titleTag === 'h4'"
-                :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance"
-                style="line-height: 125% !important"
-              >
-                {{ title }}
-              </h4>
-              <h5
-                v-if="titleTag === 'h5'"
-                :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance"
-                style="line-height: 125% !important"
-              >
-                {{ title }}
-              </h5>
-              <h6
-                v-if="titleTag === 'h6'"
-                :class="[{ 'text-center': isContentCentralized }]"
-                class="text-heading-2 font-medium text-balance"
-                style="line-height: 125% !important"
-              >
-                {{ title }}
-              </h6>
+              <TitleSection
+                :isContentCentralized="isContentCentralized"
+                :tag="titleTag"
+                :title="title"
+              />
             </template>
             <template v-else-if="$slots.title">
               <div
@@ -104,6 +60,7 @@
                 {{ description }}
               </p>
             </template>
+
             <div
               v-if="$slots.actions"
               class="flex flex-row gap-3"
@@ -132,7 +89,8 @@
 </template>
 
 <script setup>
-  import Overline from '../overline/Overline.vue'
+  import TitleSection from '../titlesection'
+  import Overline from '../overline'
 
   defineProps({
     id: {
@@ -149,7 +107,8 @@
     },
     titleTag: {
       type: String,
-      default: 'h2'
+      default: () => 'h2',
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
     },
     description: {
       type: String,

@@ -1,3 +1,156 @@
+## [1.142.4](https://github.com/aziontech/azion-webkit/compare/v1.142.3...v1.142.4) (2025-07-21)
+
+### Bug Fixes
+
+* hero hs form list not required ([0f63327](https://github.com/aziontech/azion-webkit/commit/0f63327fa86d9ce29d002c5ceaf5f4efd89a017a))
+
+## [1.142.3](https://github.com/aziontech/azion-webkit/compare/v1.142.2...v1.142.3) (2025-07-21)
+
+### Bug Fixes
+
+* hubspot checkbox list margin and gaps ([fe856f8](https://github.com/aziontech/azion-webkit/commit/fe856f831bb9d8c5b77490ddd68a181d433fcc2b))
+
+## [1.142.2](https://github.com/aziontech/azion-webkit/compare/v1.142.1...v1.142.2) (2025-07-21)
+
+### Bug Fixes
+
+* hubspot checkbox list margin and gaps ([cc0bcac](https://github.com/aziontech/azion-webkit/commit/cc0bcacc06ebb1dfdae0fc08363272f902eaacd1))
+
+## [1.142.1](https://github.com/aziontech/azion-webkit/compare/v1.142.0...v1.142.1) (2025-07-21)
+
+### Bug Fixes
+
+* hubspot form checkbox alignment ([917d9de](https://github.com/aziontech/azion-webkit/commit/917d9de2f61f4508e8bb06a76f16419c692d75a5))
+
+## [1.142.0](https://github.com/aziontech/azion-webkit/compare/v1.141.2...v1.142.0) (2025-07-21)
+
+### Features
+
+* hero featured bottom cards not required ([827f8cf](https://github.com/aziontech/azion-webkit/commit/827f8cffcee627edb98a763772605a0f92a3dff9))
+
+### Bug Fixes
+
+* cms validation ([7f22d77](https://github.com/aziontech/azion-webkit/commit/7f22d77e5522a4a96c028e8fd90e2374ee1c67f1))
+* sure contain cards[0] ([1f9d15d](https://github.com/aziontech/azion-webkit/commit/1f9d15d7426d30248e41140e7448d574db90b747))
+
+## [1.141.2](https://github.com/aziontech/azion-webkit/compare/v1.141.1...v1.141.2) (2025-07-18)
+
+### Bug Fixes
+
+* regex linkedin progile ([841a2d1](https://github.com/aziontech/azion-webkit/commit/841a2d16704e396c25ce465062ffe3b2532a7935))
+
+## [1.141.1](https://github.com/aziontech/azion-webkit/compare/v1.141.0...v1.141.1) (2025-07-17)
+
+### Bug Fixes
+
+* titleTag to sectioncardbackgroundintercalated ([a3a497e](https://github.com/aziontech/azion-webkit/commit/a3a497e099fd68a24a11e22263901cc6a959e781))
+
+## [1.141.0](https://github.com/aziontech/azion-webkit/compare/v1.140.1...v1.141.0) (2025-07-16)
+
+### Features
+
+* readme doc tempalte system generation, used to ai ([384cdd1](https://github.com/aziontech/azion-webkit/commit/384cdd1eefaed104c74f38871364d675c8161b20))
+
+### Bug Fixes
+
+* form job inhire application - validation salary with min 1000 and linkedin profile url ([83e856a](https://github.com/aziontech/azion-webkit/commit/83e856aa0678c0a0088f13009c361f7dd98bff53))
+
+## [1.140.1](https://github.com/aziontech/azion-webkit/compare/v1.140.0...v1.140.1) (2025-07-15)
+
+### Bug Fixes
+
+* HeroVideoRight to be used with Cards ([b432b68](https://github.com/aziontech/azion-webkit/commit/b432b68223929a15936d06dbdbfb6fbf73869a3b))
+
+## [1.140.0](https://github.com/aziontech/azion-webkit/compare/v1.139.0...v1.140.0) (2025-07-15)
+
+### Features
+
+* enhance header menu panel responsive layout and link behavior ([01f8533](https://github.com/aziontech/azion-webkit/commit/01f8533c4761131c648151787bd1acfab8434295))
+
+### Bug Fixes
+
+* remove unnecessary code ([999e2de](https://github.com/aziontech/azion-webkit/commit/999e2de46c7850da4b9f878ff4c7d4b6095b6bf8))
+
+## [1.139.0](https://github.com/aziontech/azion-webkit/compare/v1.138.1...v1.139.0) (2025-07-11)
+
+### Features
+
+* new desktop header ([d7730c2](https://github.com/aziontech/azion-webkit/commit/d7730c2d551dc477039e0af1697149be581091ad))
+
+### Bug Fixes
+
+* soutions menu condition ([603666b](https://github.com/aziontech/azion-webkit/commit/603666b9f0d69caa78720aeb313864c10604d164))
+
+## [1.138.1](https://github.com/aziontech/azion-webkit/compare/v1.138.0...v1.138.1) (2025-07-11)
+
+### Bug Fixes
+
+* SectionHorizontalCardNavigation ([07868d9](https://github.com/aziontech/azion-webkit/commit/07868d9477b9f3a8b4e13607eb25a6eb667becc3))
+
+## [1.138.0](https://github.com/aziontech/azion-webkit/compare/v1.137.7...v1.138.0) (2025-07-10)
+
+### Features
+
+* applu titlesection and added it to the elements storybook section ([8e1deea](https://github.com/aziontech/azion-webkit/commit/8e1deeae14ab0c282fe5741839cc01ac666105e1))
+
+### Bug Fixes
+
+* SectionHorizontalCardNavigation using contentsection inside self ([b3985af](https://github.com/aziontech/azion-webkit/commit/b3985afa851ff6d98134583a3a58e8997211d586))
+
+## [1.137.7](https://github.com/aziontech/azion-webkit/compare/v1.137.6...v1.137.7) (2025-07-10)
+
+### Bug Fixes
+
+* clickable area of sidebar menu of horizontal navigation sections ([94e81f8](https://github.com/aziontech/azion-webkit/commit/94e81f892db9229bbc189e3af694001746a8083a))
+
+## [1.137.6](https://github.com/aziontech/azion-webkit/compare/v1.137.5...v1.137.6) (2025-07-09)
+
+### Bug Fixes
+
+* ContentSection slot title validation ([b76b6b2](https://github.com/aziontech/azion-webkit/commit/b76b6b2fc40454090b704b8113c9bb8607294461))
+
+## [1.137.5](https://github.com/aziontech/azion-webkit/compare/v1.137.4...v1.137.5) (2025-07-09)
+
+### Bug Fixes
+
+* SectionHorizontalCardNavigation + SectionBasicContent ([4769af6](https://github.com/aziontech/azion-webkit/commit/4769af68efe5037a4242cc4be845ecfe4fb76e31))
+
+## [1.137.4](https://github.com/aziontech/azion-webkit/compare/v1.137.3...v1.137.4) (2025-07-09)
+
+### Bug Fixes
+
+* sectionhorizontalcardnavigation ([8c539ad](https://github.com/aziontech/azion-webkit/commit/8c539ad050ba0d62ea5a210c93b9ae7e41a5e9d7))
+
+## [1.137.3](https://github.com/aziontech/azion-webkit/compare/v1.137.2...v1.137.3) (2025-07-09)
+
+### Bug Fixes
+
+* formcontactus ([61676d7](https://github.com/aziontech/azion-webkit/commit/61676d7d7b7d72049f884543604bbb940a323b1b))
+
+## [1.137.2](https://github.com/aziontech/azion-webkit/compare/v1.137.1...v1.137.2) (2025-07-09)
+
+### Bug Fixes
+
+* SectionListCardClickable ([f411431](https://github.com/aziontech/azion-webkit/commit/f411431fde7dce83315638bdd5b46187b9f4fb8e))
+
+## [1.137.1](https://github.com/aziontech/azion-webkit/compare/v1.137.0...v1.137.1) (2025-07-09)
+
+### Bug Fixes
+
+* adjusts ([9bd1bca](https://github.com/aziontech/azion-webkit/commit/9bd1bcab560cad1dec703fb6caf563cb109ad420))
+
+## [1.137.0](https://github.com/aziontech/azion-webkit/compare/v1.136.0...v1.137.0) (2025-07-09)
+
+### Features
+
+* adding section-horizontal-card-navigation ([1ded398](https://github.com/aziontech/azion-webkit/commit/1ded3988ad7c6835ab6dc549270b40ca5f768041))
+
+## [1.136.0](https://github.com/aziontech/azion-webkit/compare/v1.135.4...v1.136.0) (2025-07-08)
+
+### Features
+
+* adding sectionlistcardclickable ([9cd1549](https://github.com/aziontech/azion-webkit/commit/9cd1549efe5d5b6f70b45f9c734eaea082c536a7))
+
 ## [1.135.4](https://github.com/aziontech/azion-webkit/compare/v1.135.3...v1.135.4) (2025-07-04)
 
 ### Bug Fixes

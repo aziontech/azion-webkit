@@ -1,0 +1,7 @@
+{
+  "main": "./titlesection.js",
+  "types": "./TitleSection.d.ts",
+  "browser": {
+    "./sfc": "./TitleSection.vue"
+  }
+}

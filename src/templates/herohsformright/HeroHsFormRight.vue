@@ -6,7 +6,7 @@
     :descriptionRawHtml="props.descriptionRawHtml"
     :id="id"
   >
-    <template #content>
+    <template v-if="props.list.length" #content>
       <div class="flex flex-col gap-10 w-full">
         <UnorderedList :data="props.list" />
       </div>

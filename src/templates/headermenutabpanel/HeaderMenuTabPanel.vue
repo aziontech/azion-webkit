@@ -46,13 +46,14 @@
             :pt="{
               content: {
                 class:
-                  'fixed p-0 hidden lg:flex flex-row border surface-border rounded-md surface-0 w-fit'
+                  'fixed p-0 hidden lg:flex flex-row border surface-border rounded-md surface-0 max-w-[calc(100%-8.5rem)] xl:max-w-6xl 2xl:max-w-screen-xl w-full'
               },
               root: { class: 'left-8 lg:left-[8.5rem] top-12 z-50' }
             }"
-            :breakpoints="{ '960px': '75vw', '640px': '100vw' }"
           >
-            <div class="flex flex-col gap-1 border-r surface-border p-3 surface-50 rounded-l-md">
+            <div
+              class="flex flex-col gap-1 border-r surface-border p-3 surface-50 rounded-l-md min-w-56"
+            >
               <template
                 v-for="(subitem, index) in menuitem.items"
                 v-bind:key="index"
@@ -62,7 +63,7 @@
                     text
                     size="small"
                     :class="{ 'surface-hover': active === index }"
-                    class="flex gap-2 justify-between min-w-fit w-full text-nowrap text-left min-w-52"
+                    class="flex gap-2 justify-between w-full text-nowrap text-left min-w-52"
                     @click="active = index"
                   >
                     <span class="flex gap-2 items-center">
@@ -98,9 +99,20 @@
                 v-for="(subitem, jIndex) in menuitem.items"
                 :key="jIndex"
               >
-                <div class="flex flex-row justify-between max-w-4xl">
+                <div
+                  v-if="subitem.overline"
+                  class="pt-3 pl-6 pr-3 max-w-[627px] w-full"
+                >
+                  <Overline :label="subitem.overline" />
+                </div>
+                <div class="flex flex-row justify-between min-h-56 min-w-full">
                   <ul
-                    class="grid grid-cols-1 xl:grid-cols-2 m-0 p-3 h-fit min-h-20 max-w-[627px] w-full"
+                    class="grid m-0 p-3 h-fit min-h-20 w-full"
+                    :class="
+                      menuitem.rightBlock
+                        ? 'grid-cols-1 xl:grid-cols-2 max-w-[627px]'
+                        : 'grid-cols-2 xl:grid-cols-3'
+                    "
                   >
                     <li
                       v-for="(link, index) in subitem.items"
@@ -108,9 +120,12 @@
                       class="flex flex-col gap-2"
                     >
                       <a
-                        :href="link.href"
+                        v-bind="link.href ? { href: link.href } : {}"
                         :title="link.label"
-                        class="p-button p-button-text p-button-sm w-full hover:surface-hover p-3 flex flex-col justify-start items-start"
+                        class="p-button p-button-text p-button-sm w-full p-3 flex flex-col justify-start items-start"
+                        :class="
+                          link.href ? 'hover:surface-hover' : 'cursor-default hover:bg-inherit'
+                        "
                       >
                         <div class="flex gap-3">
                           <div v-if="link.icon">
@@ -143,48 +158,85 @@
                         </div>
                       </a>
                       <div
-                        class="pl-9 flex flex-col gap-2"
+                        class="flex flex-col gap-2"
+                        :class="{ 'pl-9': link.overline }"
                         v-if="link.subitems"
                       >
-                        <template v-if="link.overline">
-                          <Overline
-                            :label="link.overline"
-                            class="px-[10.5px]"
-                          />
-                        </template>
-                        <ul>
-                          <li
-                            v-for="(sublink, subIndex) in link.subitems"
-                            :key="subIndex"
-                            class="flex- flex-col gap-2"
+                        <template v-if="!link.overline">
+                          <ul
+                            class="pb-3"
+                            :class="{ 'pl-9': link.icon }"
                           >
-                            <a
-                              :href="sublink.href"
-                              :title="sublink.label"
-                              class="w-full p-button p-button-text hover:surface-hover p-button-sm text-xs hover:surface-hover"
+                            <li
+                              v-for="(sublink, subIndex) in link.subitems.length >= 4
+                                ? [
+                                    ...link.subitems.slice(0, 3),
+                                    link.subitems[link.subitems.length - 1]
+                                  ]
+                                : link.subitems"
+                              :key="subIndex"
+                              class="flex flex-col gap-2"
                             >
-                              <div class="flex gap-3">
-                                <div v-if="sublink.icon">
-                                  <span class="py-1 px-1.5 flex rounded-md surface-200">
-                                    <i
-                                      :class="sublink.icon"
-                                      class="text-xs"
-                                    ></i>
-                                  </span>
+                              <a
+                                :href="sublink.href"
+                                :title="sublink.label"
+                                class="w-full p-button p-button-sm text-xs"
+                                :class="[
+                                  sublink.isLink
+                                    ? 'p-button-link hover:underline'
+                                    : 'hover:surface-hover text-color p-button-text',
+                                  sublink.isLink && link.subitems.length <= 4 ? 'hidden' : ''
+                                ]"
+                              >
+                                <p class="text-left font-medium">
+                                  {{ sublink.label }}
+                                </p>
+                              </a>
+                            </li>
+                          </ul>
+                        </template>
+                        <template v-else>
+                          <template v-if="link.overline">
+                            <Overline
+                              :label="link.overline"
+                              class="px-[10.5px]"
+                            />
+                          </template>
+                          <ul>
+                            <li
+                              v-for="(sublink, subIndex) in link.subitems"
+                              :key="subIndex"
+                              class="flex- flex-col gap-2"
+                            >
+                              <a
+                                :href="sublink.href"
+                                :title="sublink.label"
+                                class="w-full p-button p-button-text hover:surface-hover p-button-sm text-xs hover:surface-hover"
+                              >
+                                <div class="flex gap-3">
+                                  <div v-if="sublink.icon">
+                                    <span class="py-1 px-1.5 flex rounded-md surface-200">
+                                      <i
+                                        :class="sublink.icon"
+                                        class="text-xs"
+                                      ></i>
+                                    </span>
+                                  </div>
+                                  <div>
+                                    <p class="text-left font-medium">
+                                      {{ sublink.label }}
+                                    </p>
+                                  </div>
                                 </div>
-                                <div>
-                                  <p class="text-left font-medium">
-                                    {{ sublink.label }}
-                                  </p>
-                                </div>
-                              </div>
-                            </a>
-                          </li>
-                        </ul>
+                              </a>
+                            </li>
+                          </ul>
+                        </template>
                       </div>
                     </li>
                   </ul>
                   <div
+                    v-if="menuitem.rightBlock"
                     class="border-l surface-border p-6 gap-3 flex-col min-h-52 hidden lg:flex w-full max-w-[340px] surface-50 rounded-r-md"
                   >
                     <div v-if="menuitem.rightBlock.type === 'cases'">

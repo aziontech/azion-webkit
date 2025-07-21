@@ -1,7 +1,6 @@
 <template>
   <ContentSection
-    position="center"
-    :isContentCentralized="true"
+    :isContentCentralized="isContentCentralized"
     :overline="overline"
     :titleTag="titleTag"
     :title="title"
@@ -31,6 +30,10 @@
     id: {
       type: String,
       default: () => ''
+    },
+    isContentCentralized: {
+      type: Boolean,
+      default: () => true
     },
     overline: {
       type: String,

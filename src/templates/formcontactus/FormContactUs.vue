@@ -9,7 +9,7 @@
         class="w-full hs-form"
       >
         <div class="flex flex-col gap-8">
-          <div class="flex flex-column gap-2 max-w-xl">
+          <div class="flex flex-column gap-2">
             <label
               class="text-sm"
               for="name"
@@ -22,7 +22,7 @@
             />
           </div>
           <template v-if="t.lastName">
-            <div class="flex flex-column gap-2 max-w-xl">
+            <div class="flex flex-column gap-2">
               <label
                 class="text-sm"
                 for="lastName"
@@ -36,7 +36,7 @@
             </div>
           </template>
           <template v-if="t.phone">
-            <div class="flex flex-column gap-2 max-w-xl">
+            <div class="flex flex-column gap-2">
               <label
                 class="text-sm"
                 for="phone"
@@ -49,7 +49,7 @@
               />
             </div>
           </template>
-          <div class="flex flex-column gap-2 max-w-xl">
+          <div class="flex flex-column gap-2">
             <label
               class="text-sm"
               for="email"
@@ -62,7 +62,7 @@
               :placeholder="t.emailPlaceholder"
             />
           </div>
-          <div class="flex flex-column gap-2 max-w-xs">
+          <div class="flex flex-column gap-2">
             <label
               class="text-sm"
               for="segment"
@@ -113,38 +113,12 @@
     </template>
     <template #actions>
       <div class="w-full flex flex-col gap-8">
-        <div class="flex flex-col md:flex-row gap-6 justify-between w-full">
-          <div class="flex gap-2 items-center">
-            <Checkbox
-              v-model="termsAcceptance"
-              aria-labelledby="terms"
-              :binary="true"
-            />
-            <label
-              id="terms"
-              class="text-sm"
-            >
-              {{ t.terms }}</label
-            >
-          </div>
-          <Button
-            class="justify-center lg:justify-start"
-            size="small"
-            @click="onSubmit()"
-          >
-            {{ t.buttonText }}
-          </Button>
-        </div>
-        <p class="text-color-secondary text-sm">
-          {{ t.azionPrivacy.description }}
-          <a
-            class="text-[--text-color-link] font-medium hover:underline"
-            target="_blank"
-            :href="t.azionPrivacy.link"
-          >
-            {{ t.azionPrivacy.buttonText }}</a
-          >
-        </p>
+        <Button
+          class="justify-center"
+          size="small"
+          @click="onSubmit()"
+          :label="t.buttonText"
+        />
       </div>
     </template>
   </FormBlock>
@@ -155,7 +129,6 @@
   import Button from 'primevue/button'
   import Textarea from 'primevue/textarea'
   import Dropdown from 'primevue/dropdown'
-  import Checkbox from 'primevue/checkbox'
   import InlineMessage from 'primevue/inlinemessage'
   import FormBlock from '../formblock/FormBlock.vue'
   import { hbspPostHandler } from '../src/services/hubspot-service'
@@ -181,12 +154,10 @@
     responseMessages: {
       success: {
         type: String,
-        required: false,
         default: 'Thanks for subscribing to Azion newsletter'
       },
       error: {
         type: String,
-        required: false,
         default: 'Error while subscribing to Azion newsletter, try again later'
       }
     }
@@ -197,11 +168,11 @@
   const responseStatus = ref('default')
   const segment = ref('')
   const name = ref('')
-  const email = ref('')
-  const message = ref('')
-  const termsAcceptance = ref(false)
   const lastName = ref('')
   const phone = ref('')
+  const email = ref('')
+  const message = ref('')
+  const termsAcceptance = ref(true)
 
   const onSubmit = async () => {
     const requestBody = {
