@@ -1,5 +1,8 @@
 <template>
-  <section class="flex flex-col gap-10 md:gap-20 2xl:gap-40" :id="id">
+  <section
+    class="flex flex-col gap-10 md:gap-20 2xl:gap-40"
+    :id="id"
+  >
     <div
       class="px-container flex flex-col w-full"
       :class="[

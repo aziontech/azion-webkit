@@ -98,7 +98,6 @@ PositionRight.parameters = {
   }
 }
 
-
 export default {
   title: 'Blocks/Hero/hero-video-right',
   component: HeroVideoRight,
