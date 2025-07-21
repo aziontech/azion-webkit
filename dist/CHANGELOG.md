@@ -1,3 +1,14 @@
+## [1.142.0](https://github.com/aziontech/azion-webkit/compare/v1.141.2...v1.142.0) (2025-07-21)
+
+### Features
+
+* hero featured bottom cards not required ([827f8cf](https://github.com/aziontech/azion-webkit/commit/827f8cffcee627edb98a763772605a0f92a3dff9))
+
+### Bug Fixes
+
+* cms validation ([7f22d77](https://github.com/aziontech/azion-webkit/commit/7f22d77e5522a4a96c028e8fd90e2374ee1c67f1))
+* sure contain cards[0] ([1f9d15d](https://github.com/aziontech/azion-webkit/commit/1f9d15d7426d30248e41140e7448d574db90b747))
+
 ## [1.141.2](https://github.com/aziontech/azion-webkit/compare/v1.141.1...v1.141.2) (2025-07-18)
 
 ### Bug Fixes
