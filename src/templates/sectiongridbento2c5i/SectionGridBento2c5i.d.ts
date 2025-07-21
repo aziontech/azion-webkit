@@ -25,6 +25,11 @@ type Cards = Array<{
  * Defines valid properties in sectiongridbento2c5i component.
  */
 export interface SectionGridBento2c5iProps {
+  id?: string | undefined
+  /**
+   * Defines the id of the section
+   * @defaultValue ''
+   */
   overline: string
   title: string
   description: string

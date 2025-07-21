@@ -6,6 +6,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :isSticky="isSticky"
+    :id="id"
   >
     <template #actions>
       <LinkButton
@@ -31,6 +32,10 @@
   import DescriptionUnorderedList from '../listdescriptionunordered'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     isSticky: {
       type: Boolean,
       default: () => true

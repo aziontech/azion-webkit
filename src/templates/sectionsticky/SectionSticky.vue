@@ -5,6 +5,7 @@
         :overline="overline"
         :titleTag="titleTag"
         :title="title"
+        :id="id"
       />
     </div>
     <div class="flex flex-col gap-20 lg:gap-40 xl:gap-60 2xl:gap-80">
@@ -23,6 +24,7 @@
           :title="title"
           :description="description"
           :descriptionRawHtml="descriptionRawHtml"
+          :id="id"
         >
           <template #actions>
             <template
@@ -71,6 +73,10 @@
   import ImageSwitcher from '../themeawareimageswitcher'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       required: false

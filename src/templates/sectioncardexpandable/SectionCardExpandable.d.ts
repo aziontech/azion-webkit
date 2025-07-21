@@ -9,6 +9,11 @@ import { VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 
 export interface SectionCardExpandableProps {
+  id?: string | undefined
+  /**
+   * Defines the id of the section
+   * @defaultValue ''
+   */
   overline: string
   titleTag: string
   title: string

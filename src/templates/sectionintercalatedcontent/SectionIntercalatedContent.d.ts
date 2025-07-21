@@ -22,6 +22,7 @@ type Items = Array<{
  * Defines valid properties in SectionIntercalatedContent component.
  */
 export interface SectionIntercalatedContentProps {
+  id?: string
   overline: string
   titleTag: string
   title: string

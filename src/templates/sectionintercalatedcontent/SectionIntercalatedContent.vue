@@ -7,6 +7,7 @@
         :overline="overline"
         :titleTag="titleTag"
         :title="title"
+        :id="id"
       />
     </template>
 
@@ -21,6 +22,7 @@
         :title="item.title"
         :descriptionRawHtml="item.descriptionRawHtml"
         :position="item.position || 'left'"
+        :id="id"
       >
         <template v-slot:main>
           <div class="w-full flex justify-center">
@@ -56,6 +58,10 @@
   import ImageSwitcher from '../themeawareimageswitcher'
 
   const props = defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String
     },

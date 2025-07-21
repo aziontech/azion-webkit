@@ -4,6 +4,7 @@
     :titleTag="titleTag"
     :title="title"
     :description="description"
+    :id="id"
     isContentCentralized
   >
     <template #content>
@@ -108,6 +109,10 @@
   // import Badge from 'primevue/badge'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String
     },

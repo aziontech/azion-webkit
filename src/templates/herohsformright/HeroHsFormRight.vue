@@ -4,6 +4,7 @@
     :title="props.title"
     :description="props.description"
     :descriptionRawHtml="props.descriptionRawHtml"
+    :id="id"
   >
     <template v-if="props.list.length" #content>
       <div class="flex flex-col gap-10 w-full">
@@ -40,6 +41,10 @@
   import UnorderedList from '../listunordered'
 
   const props = defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       default: () => ''

@@ -6,6 +6,7 @@
     :title="title"
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
+    :id="id"
   >
     <template #actions>
       <template
@@ -26,6 +27,10 @@
   import LinkButton from '../linkbutton'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     isContentCentralized: {
       type: Boolean,
       default: () => true

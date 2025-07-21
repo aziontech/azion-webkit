@@ -5,7 +5,8 @@
     :titleTag="titleTag"
     :title="title"
     :description="description"
-    :descriptionRawHtml="descriptionRawHtml"
+    :descriptionRawHtml="descriptionRawHtml"  
+    :id="id"
   >
     <template #main>
       <BaseModal backgroundColor="outlined">
@@ -118,6 +119,10 @@
   import Tile from '../tile'
 
   defineProps({
+    id: {
+      type: String,
+      default: () => ''
+    },
     overline: {
       type: String,
       default: () => ''

@@ -17,6 +17,11 @@ type Cards = Array<{
  * Defines valid properties in seectionbasecards component.
  */
 export interface SectionBaseCardsProps {
+  id?: string | undefined
+  /**
+   * Defines the id of the section
+   * @defaultValue ''
+   */
   overline: string
   titleTag: string
   title: string
