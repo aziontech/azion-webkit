@@ -14,7 +14,7 @@
     </template>
     <template
       #main
-      v-if="cards && cards[0]?.image  && cards[0]?.link && cards[0]?.description"
+      v-if="cards && cards[0]?.image && cards[0]?.link && cards[0]?.description"
     >
       <FeaturedCards :cards="cards" />
     </template>
