@@ -1,3 +1,9 @@
+## [1.144.0](https://github.com/aziontech/azion-webkit/compare/v1.143.1...v1.144.0) (2025-07-22)
+
+### Features
+
+* add position prop to hero and section components for layout control ([6c16d6b](https://github.com/aziontech/azion-webkit/commit/6c16d6b2fa93e40497eb08fe973b7b66503ccb6f))
+
 ## [1.143.1](https://github.com/aziontech/azion-webkit/compare/v1.143.0...v1.143.1) (2025-07-21)
 
 ### Bug Fixes
