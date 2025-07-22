@@ -4,9 +4,13 @@
     :title="props.title"
     :description="props.description"
     :descriptionRawHtml="props.descriptionRawHtml"
+    :position="props.position"
     :id="id"
   >
-    <template v-if="props.list.length" #content>
+    <template
+      v-if="props.list.length"
+      #content
+    >
       <div class="flex flex-col gap-10 w-full">
         <UnorderedList :data="props.list" />
       </div>
@@ -73,6 +77,11 @@
     },
     form: {
       type: Object // id, title, action, successMessage
+    },
+    position: {
+      type: String,
+      options: ['left', 'right'],
+      default: () => 'left'
     }
   })
 

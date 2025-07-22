@@ -37,6 +37,7 @@ export interface SectionBulletsRightProps {
   descriptionRawHtml: string
   buttons: Button[]
   data: ContentBlock[]
+  position?: 'left' | 'right'
 }
 
 /**

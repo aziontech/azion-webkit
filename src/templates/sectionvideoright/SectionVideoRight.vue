@@ -5,7 +5,9 @@
     :titleTag="titleTag"
     :title="title"
     :description="description"
-    :descriptionRawHtml="descriptionRawHtml"  
+    :descriptionRawHtml="descriptionRawHtml"
+    :position="position"
+    :descriptionRawHtml="descriptionRawHtml"
     :id="id"
   >
     <template #main>
@@ -165,6 +167,11 @@
             'label' in item.cta.action
         )
       }
+    },
+    position: {
+      type: String,
+      options: ['left', 'right'],
+      default: () => 'left'
     }
   })
 </script>

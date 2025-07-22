@@ -106,7 +106,7 @@
   import LinkButton from '../linkbutton'
   import Menu from 'primevue/menu'
 
-  const props = defineProps({ 
+  const props = defineProps({
     id: {
       type: String,
       default: () => ''

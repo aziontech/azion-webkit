@@ -41,6 +41,7 @@ export interface HeroVideoRightProps {
       }
     }>
   }
+  position?: 'left' | 'right'
 }
 
 /**

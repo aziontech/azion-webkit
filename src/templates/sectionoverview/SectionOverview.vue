@@ -6,6 +6,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :isSticky="isSticky"
+    :position="position"
     :id="id"
   >
     <template #actions>
@@ -77,6 +78,11 @@
     data: {
       type: Array,
       default: () => []
+    },
+    position: {
+      type: String,
+      options: ['left', 'right'],
+      default: () => 'left'
     }
   })
 </script>

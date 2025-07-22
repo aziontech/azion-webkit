@@ -31,6 +31,7 @@ export interface SectionOverviewProps {
   description: string
   buttons: Button[]
   data: ContentBlock[]
+  position?: 'left' | 'right'
 }
 
 /**

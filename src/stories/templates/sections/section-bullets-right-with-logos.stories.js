@@ -11,6 +11,11 @@ export default {
       control: {
         type: 'select'
       }
+    },
+    position: {
+      control: { type: 'select' },
+      options: ['left', 'right'],
+      description: 'Controls the layout position of content and main slot'
     }
   }
 }
@@ -81,5 +86,16 @@ Default.args = {
       description:
         'Escale instantaneamente a entrega de conteúdo globalmente, mesmo durante picos de tráfego, e reduza o custo, tempo e risco de gerenciar infraestrutura.'
     }
-  ]
+  ],
+  position: 'left'
+}
+
+export const PositionRight = Template.bind({})
+PositionRight.args = { ...Default.args, position: 'right' }
+PositionRight.parameters = {
+  docs: {
+    description: {
+      story: 'Section with content positioned on the right side'
+    }
+  }
 }

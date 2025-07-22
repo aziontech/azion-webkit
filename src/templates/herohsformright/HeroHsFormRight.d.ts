@@ -29,6 +29,7 @@ export interface HeroHsFormRightProps {
     successMessage: string
     redirect: string
   }
+  position?: 'left' | 'right'
 }
 
 /**

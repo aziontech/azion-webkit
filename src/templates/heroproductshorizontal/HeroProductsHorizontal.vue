@@ -4,6 +4,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :justify="justify"
+    :position="position"
     :id="id"
   >
     <template #title>
@@ -108,6 +109,11 @@
     list: {
       type: Object,
       required: true
+    },
+    position: {
+      type: String,
+      options: ['left', 'right'],
+      default: () => 'left'
     }
   })
 </script>

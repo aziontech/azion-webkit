@@ -2,6 +2,7 @@
   <ContentSection
     titleTag="h2"
     :title="title"
+    :position="position"
     :id="id"
   >
     <template v-slot:actions>
@@ -60,6 +61,11 @@
     },
     list: {
       type: Array
+    },
+    position: {
+      type: String,
+      options: ['left', 'right'],
+      default: () => 'left'
     }
   })
 </script>

@@ -24,7 +24,7 @@
 <script setup>
   import ContentSection from '../contentsection'
 
-  defineProps({ 
+  defineProps({
     id: {
       type: String,
       default: () => ''

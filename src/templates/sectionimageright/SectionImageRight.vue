@@ -5,6 +5,7 @@
     :title="props.title"
     :description="props.description"
     :descriptionRawHtml="props.descriptionRawHtml"
+    :position="props.position"
     :id="id"
   >
     <template #actions>
@@ -93,6 +94,11 @@
       default() {
         return 'https://www.azion.com/assets/pages/products/images/dark/edge-network/network-ilustrationEN.png'
       }
+    },
+    position: {
+      type: String,
+      options: ['left', 'right'],
+      default: () => 'left'
     }
   })
 </script>

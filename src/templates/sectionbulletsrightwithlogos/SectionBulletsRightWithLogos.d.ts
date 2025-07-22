@@ -29,6 +29,7 @@ export interface SectionBulletsRightWithLogosProps {
     title: string
     description: string
   }>
+  position?: 'left' | 'right'
 }
 
 /**

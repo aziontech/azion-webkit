@@ -5,6 +5,7 @@
     :overline="overline"
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
+    :position="position"
     :id="id"
   >
     <template #actions>
@@ -66,6 +67,11 @@
     data: {
       type: Array,
       default: () => []
+    },
+    position: {
+      type: String,
+      options: ['left', 'right'],
+      default: () => 'left'
     }
   })
 </script>
