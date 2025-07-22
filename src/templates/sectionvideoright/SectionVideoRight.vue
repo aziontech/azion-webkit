@@ -7,7 +7,6 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :position="position"
-    :descriptionRawHtml="descriptionRawHtml"
     :id="id"
   >
     <template #main>
