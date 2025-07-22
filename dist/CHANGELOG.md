@@ -1,3 +1,9 @@
+## [1.145.0](https://github.com/aziontech/azion-webkit/compare/v1.144.0...v1.145.0) (2025-07-22)
+
+### Features
+
+* trigger position content ([3a7828a](https://github.com/aziontech/azion-webkit/commit/3a7828a16576995b3ac862f5621a874d7c805331))
+
 ## [1.144.0](https://github.com/aziontech/azion-webkit/compare/v1.143.1...v1.144.0) (2025-07-22)
 
 ### Features
