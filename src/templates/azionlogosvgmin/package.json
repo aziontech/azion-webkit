@@ -1,0 +1,7 @@
+{
+  "main": "./azionlogosvgmin.js",
+  "types": "./AzionLogoSvgMin.d.ts",
+  "browser": {
+    "./sfc": "./AzionLogoSvgMin.vue"
+  }
+}

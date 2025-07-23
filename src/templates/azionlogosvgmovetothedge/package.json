@@ -1,0 +1,7 @@
+{
+  "main": "./azionlogosvgmovetothedge.js",
+  "types": "./AzionLogoSvgMoveToTheEdge.d.ts",
+  "browser": {
+    "./sfc": "./AzionLogoSvgMoveToTheEdge.vue"
+  }
+}
