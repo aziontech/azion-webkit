@@ -1,3 +1,9 @@
+## [1.147.1](https://github.com/aziontech/azion-webkit/compare/v1.147.0...v1.147.1) (2025-07-23)
+
+### Bug Fixes
+
+* current color full azionlogo ([86e5018](https://github.com/aziontech/azion-webkit/commit/86e50189c92aa6d318e8bbcbabde0db7c2df1e07))
+
 ## [1.147.0](https://github.com/aziontech/azion-webkit/compare/v1.146.0...v1.147.0) (2025-07-23)
 
 ### Features
