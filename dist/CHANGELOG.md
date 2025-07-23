@@ -1,3 +1,9 @@
+## [1.147.0](https://github.com/aziontech/azion-webkit/compare/v1.146.0...v1.147.0) (2025-07-23)
+
+### Features
+
+* AzionLogo select version ([3880880](https://github.com/aziontech/azion-webkit/commit/38808800a30176560f8a0e9c7b7f9f3f60d4af3e))
+
 ## [1.146.0](https://github.com/aziontech/azion-webkit/compare/v1.145.1...v1.146.0) (2025-07-23)
 
 ### Features
