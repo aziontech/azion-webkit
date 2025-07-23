@@ -1,3 +1,9 @@
+## [1.145.1](https://github.com/aziontech/azion-webkit/compare/v1.145.0...v1.145.1) (2025-07-23)
+
+### Bug Fixes
+
+* trigger ([31e4a83](https://github.com/aziontech/azion-webkit/commit/31e4a835ac74bfd4a846c5b77f34cf8bea9eb05b))
+
 ## [1.145.0](https://github.com/aziontech/azion-webkit/compare/v1.144.0...v1.145.0) (2025-07-22)
 
 ### Features
