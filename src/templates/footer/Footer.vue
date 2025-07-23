@@ -4,7 +4,7 @@
       <div class="flex flex-col lg:flex-row justify-between w-full gap-9 lg:gap-12">
         <div class="w-full flex flex-col justify-between gap-4">
           <div class="flex flex-col gap-4">
-            <a
+            <!-- <a
               :href="`/${lang}/`"
               title="Azion Technologies"
               class="mb-4 block"
@@ -14,7 +14,16 @@
                 <AzionIconLogo class="h-[26px]" />
                 <span class="leading-none"> <i class="text-xs">Move to the Edge</i> &trade; </span>
               </span>
-            </a>
+            </a> -->
+
+            <AzionLogo
+              :href="`/${lang}/`"
+              hrefTitle="Azion Technologies"
+              class="mb-4 block"
+              version="full"
+              aria-label="Azion logo"
+            />
+
             <slot name="system-status" />
             <p class="text-color-secondary text-sm">
               {{ cta.text }}
@@ -86,7 +95,8 @@
 
 <script setup>
   import Divider from 'primevue/divider'
-  import AzionIconLogo from '../src/assets/icons/azion-icon-logo.vue'
+  import AzionLogo from '../azionlogo'
+  // import AzionIconLogo from '../src/assets/icons/azion-icon-logo.vue'
   import Overline from '../overline/Overline.vue'
   import LinkButton from '../linkbutton/LinkButton.vue'
 
