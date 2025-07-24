@@ -1,3 +1,9 @@
+## [1.147.2](https://github.com/aziontech/azion-webkit/compare/v1.147.1...v1.147.2) (2025-07-24)
+
+### Bug Fixes
+
+* size logo ([50807b6](https://github.com/aziontech/azion-webkit/commit/50807b61dbe2a89aaa8c88fadafc46b58f953c93))
+
 ## [1.147.1](https://github.com/aziontech/azion-webkit/compare/v1.147.0...v1.147.1) (2025-07-23)
 
 ### Bug Fixes
