@@ -1,3 +1,9 @@
+## [1.147.3](https://github.com/aziontech/azion-webkit/compare/v1.147.2...v1.147.3) (2025-07-24)
+
+### Bug Fixes
+
+* AzionLogo version with default to default value ([9e650ce](https://github.com/aziontech/azion-webkit/commit/9e650ce6f843e7b14924a4a13431ff295ce5b526))
+
 ## [1.147.2](https://github.com/aziontech/azion-webkit/compare/v1.147.1...v1.147.2) (2025-07-24)
 
 ### Bug Fixes
