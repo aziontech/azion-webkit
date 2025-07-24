@@ -60,7 +60,7 @@
     },
     version: {
       type: String,
-      default: () => 'min',
+      default: () => 'default',
       validator: (value) =>
         ['min', 'default', 'move to the edge', 'technologies', 'full'].includes(value)
     }
