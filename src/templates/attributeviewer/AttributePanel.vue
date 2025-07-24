@@ -74,6 +74,6 @@
     }
   })
 
-  const path = ref(props.attribute.name)
-  const { path, suffix } = splitStringColor(path)
+  const attributeName = ref(props.attribute.name || '')
+  const { path, suffix } = splitStringColor(attributeName)
 </script>

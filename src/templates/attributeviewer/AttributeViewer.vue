@@ -54,8 +54,7 @@
   import Accordion from 'primevue/accordion'
   import AccordionTab from 'primevue/accordiontab'
   import AttributePanel from './AttributePanel.vue'
-  import Divider from 'primevue/divider';
-
+  
   defineProps({
     attributes: {
       type: Array,
