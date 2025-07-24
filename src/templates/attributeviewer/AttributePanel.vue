@@ -48,7 +48,7 @@
   import Accordion from 'primevue/accordion'
   import AccordionTab from 'primevue/accordiontab'
   import Tag from 'primevue/tag'
-  import { useSplitObjectPath } from '../../helpers/formatColorString'
+  import { splitStringColor } from '../../helpers/splitStringColor'
   import Divider from 'primevue/divider';
 
   const props = defineProps({
@@ -74,7 +74,6 @@
     }
   })
 
-  // Use the props after defining them
-  const input = ref(props.attribute.name)
-  const { path, suffix } = useSplitObjectPath(input)
+  const path = ref(props.attribute.name)
+  const { path, suffix } = splitStringColor(path)
 </script>

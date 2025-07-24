@@ -13,7 +13,7 @@ import { computed, ComputedRef, Ref } from 'vue'
  * // For "simple"
  * // Returns: { path: "simple", suffix: "" }
  */
-export function useSplitObjectPath(objectPath: Ref<string>): {
+export function splitStringColor(objectPath: Ref<string>): {
   path: ComputedRef<string>
   suffix: ComputedRef<string>
 } {
