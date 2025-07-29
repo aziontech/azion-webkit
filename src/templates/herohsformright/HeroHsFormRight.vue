@@ -6,6 +6,7 @@
     :descriptionRawHtml="props.descriptionRawHtml"
     :position="props.position"
     :id="id"
+    :margin="props.margin"
   >
     <template
       v-if="props.list.length"
@@ -82,6 +83,11 @@
       type: String,
       options: ['left', 'right'],
       default: () => 'left'
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 

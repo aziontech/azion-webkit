@@ -8,6 +8,7 @@
     position="center"
     isContentCentralized
     :id="id"
+    :margin="margin"
   >
     <template #main>
       <div class="flex justify-center">
@@ -55,6 +56,11 @@
     lang: {
       type: String,
       required: true
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

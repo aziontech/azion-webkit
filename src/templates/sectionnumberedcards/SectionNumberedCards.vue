@@ -9,6 +9,7 @@
     :descriptionRawHtml="descriptionRawHtml"
     :id="id"
     textCenter
+    :margin="margin"
   >
     <template #main>
       <div>
@@ -84,6 +85,11 @@
     },
     cards: {
       type: Array
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

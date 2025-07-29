@@ -9,6 +9,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :id="id"
+    :margin="margin"
   >
     <template #main>
       <CardPanelExpandable
@@ -87,7 +88,7 @@
             </div>
             <div
               class="absolute w-full h-full top-0 left-0 overflow-hidden rounded gradient-to-bottom"
-            />
+            ></div>
           </div>
         </template>
       </CardPanelExpandable>
@@ -131,6 +132,11 @@
     cards: {
       type: Array,
       required: true
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

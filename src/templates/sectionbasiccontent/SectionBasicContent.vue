@@ -7,6 +7,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :id="id"
+    :margin="margin"
   >
     <template #actions>
       <template
@@ -59,6 +60,11 @@
     buttons: {
       type: Array,
       default: () => []
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

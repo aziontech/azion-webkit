@@ -4,6 +4,7 @@
     :title="title"
     :position="position"
     :id="id"
+    :margin="margin"
   >
     <template v-slot:actions>
       <template v-if="button && button.label">
@@ -66,6 +67,11 @@
       type: String,
       options: ['left', 'right'],
       default: () => 'left'
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

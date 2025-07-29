@@ -6,6 +6,7 @@
     :descriptionRawHtml="descriptionRawHtml"
     :bannerNews="bannerNews"
     :id="id"
+    :margin="margin"
   >
     <template #title>
       <h1
@@ -80,6 +81,11 @@
     buttons: {
       type: Array,
       default: () => []
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

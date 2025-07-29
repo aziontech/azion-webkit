@@ -6,6 +6,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :id="id"
+    :margin="props.margin"
   >
     <template v-slot:content>
       <GridBentoBlock :gridType="gridType">
@@ -267,6 +268,11 @@
     cards: {
       type: Array,
       required: true
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

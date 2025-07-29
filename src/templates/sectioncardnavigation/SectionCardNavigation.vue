@@ -6,6 +6,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :id="id"
+    :margin="margin"
   >
     <template #content>
       <div
@@ -68,6 +69,11 @@
     cards: {
       type: Array,
       required: true
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

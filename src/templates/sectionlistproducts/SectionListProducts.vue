@@ -7,6 +7,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :id="id"
+    :margin="props.margin"
   >
     <template #main>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-content-center m-0">
@@ -66,6 +67,11 @@
     grid: {
       type: Boolean,
       default: () => false
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

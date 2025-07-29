@@ -4,6 +4,7 @@
     :title="title"
     titleTag="h2"
     :id="id"
+    :margin="margin"
   >
     <template
       #main
@@ -82,6 +83,11 @@
     cards: {
       type: Array,
       required: true
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

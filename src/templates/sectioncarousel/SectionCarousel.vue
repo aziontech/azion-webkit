@@ -5,6 +5,7 @@
     :title="title"
     :description="description"
     :id="id"
+    :margin="props.margin"
   >
     <template
       v-if="button"
@@ -99,6 +100,11 @@
     cards: {
       type: Array,
       required: true
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 

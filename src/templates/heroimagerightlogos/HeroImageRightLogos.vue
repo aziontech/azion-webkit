@@ -4,6 +4,7 @@
       align="center"
       :title="title"
       :id="id"
+      :margin="margin"
     >
       <template #actions>
         <div class="flex flex-col md:flex-row lg:justify-start justify-center gap-2 w-full">
@@ -70,6 +71,11 @@
     buttons: {
       type: Array,
       required: false
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

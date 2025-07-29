@@ -6,6 +6,7 @@
     :justify="justify"
     :position="position"
     :id="id"
+    :margin="margin"
   >
     <template #title>
       <Titlegroup v-bind="hgroup" />
@@ -114,6 +115,11 @@
       type: String,
       options: ['left', 'right'],
       default: () => 'left'
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

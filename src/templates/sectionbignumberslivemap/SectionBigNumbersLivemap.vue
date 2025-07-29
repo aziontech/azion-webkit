@@ -6,6 +6,7 @@
     position="left"
     :isContentCentralized="data.justify === 'center' ? true : false"
     :id="id"
+    :margin="margin"
   >
     <template
       v-if="button"
@@ -65,6 +66,11 @@
     },
     button: {
       type: Object
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

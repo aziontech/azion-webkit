@@ -8,6 +8,7 @@
     :descriptionRawHtml="descriptionRawHtml"
     :position="position"
     :id="id"
+    :margin="margin"
   >
     <template #main>
       <BaseModal backgroundColor="outlined">
@@ -172,6 +173,11 @@
       type: String,
       options: ['left', 'right'],
       default: () => 'left'
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

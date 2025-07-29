@@ -8,6 +8,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :id="id"
+    :margin="props.margin"
   >
     <template v-slot:content>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
@@ -66,6 +67,11 @@
       type: Array,
       required: true,
       default: () => []
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

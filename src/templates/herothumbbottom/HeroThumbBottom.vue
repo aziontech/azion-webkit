@@ -6,6 +6,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :id="id"
+    :margin="margin"
   >
     <template #actions>
       <LinkButton
@@ -80,6 +81,11 @@
         type: String,
         required: true
       }
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

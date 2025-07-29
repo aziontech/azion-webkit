@@ -1,5 +1,8 @@
 <template>
-  <ContentSection position="right">
+  <ContentSection
+    position="right"
+    :margin="props.margin"
+  >
     <template #main>
       <div class="w-full max-w-80">
         <div class="hidden md:block lg:top-20 lg:sticky">
@@ -81,6 +84,11 @@
     },
     items: {
       type: [Array, undefined, null]
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 

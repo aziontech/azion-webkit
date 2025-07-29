@@ -8,6 +8,7 @@
     :descriptionRawHtml="descriptionRawHtml"
     :isContentCentralized="true"
     :id="id"
+    :margin="props.margin"
   >
     <template #main>
       <Carousel
@@ -108,6 +109,11 @@
           numScroll: '1'
         }
       ]
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 

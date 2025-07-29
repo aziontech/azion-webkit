@@ -7,6 +7,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :id="id"
+    :margin="margin"
   >
     <template #main>
       <BaseModal backgroundColor="outlined">
@@ -167,6 +168,11 @@
     cards: {
       type: Array,
       default: () => []
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

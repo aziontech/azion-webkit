@@ -7,6 +7,7 @@
     :description="props.description"
     :descriptionRawHtml="props.descriptionRawHtml"
     :id="id"
+    :margin="props.margin"
   >
     <template #actions>
       <LinkButton
@@ -139,6 +140,11 @@
     },
     cardContent: {
       type: [Array, undefined, null]
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 

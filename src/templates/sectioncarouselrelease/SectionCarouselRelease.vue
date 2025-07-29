@@ -7,6 +7,7 @@
     :descriptionRawHtml="descriptionRawHtml"
     :isContentCentralized="true"
     :id="id"
+    :margin="margin"
   >
     <template #principal>
       <div class="relative">
@@ -49,6 +50,11 @@
     items: {
       type: Array,
       required: true
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>
