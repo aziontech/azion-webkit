@@ -1,0 +1,7 @@
+{
+  "main": "./index.js",
+  "types": "./Table.d.ts",
+  "browser": {
+    "./sfc": "./Table.vue"
+  }
+}
