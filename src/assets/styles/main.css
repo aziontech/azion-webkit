@@ -79,3 +79,16 @@ body {
 .cms-embed iframe {
   width: 100%;
 }
+
+.titillium-web * {
+  font-family: 'Titillium Web';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+.roboto-condensed {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}

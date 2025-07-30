@@ -23,24 +23,6 @@
   </a>
 </template>
 
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,400&display=swap');
-
-.titillium-web * {
-  font-family: 'Titillium Web';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-}
-.roboto-condensed {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-}
-</style>
-
 <script setup>
   defineProps({
     href: {
