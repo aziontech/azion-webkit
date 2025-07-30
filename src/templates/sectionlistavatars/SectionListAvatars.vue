@@ -7,6 +7,7 @@
     :titleTag="props.titleTag"
     :title="props.title"
     :id="id"
+    :margin="props.margin"
   >
     <template #main>
       <div class="flex flex-wrap gap-2 gap-y-4 w-full justify-center">
@@ -108,6 +109,11 @@
           }
         ]
       }
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

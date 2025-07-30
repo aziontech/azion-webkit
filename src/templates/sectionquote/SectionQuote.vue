@@ -1,13 +1,21 @@
 <template>
-  <div class="px-container w-full">
-    <Quote v-bind="props" />
-  </div>
+  <ContentSection :margin="margin">
+    <template #content>
+      <Quote v-bind="props" />
+    </template>
+  </ContentSection>
 </template>
 
 <script setup>
+  import ContentSection from '../contentsection'
   import Quote from '../quote'
 
   const props = defineProps({
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
+    },
     text: {
       type: String,
       required: true

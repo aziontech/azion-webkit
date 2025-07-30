@@ -7,6 +7,7 @@
     :descriptionRawHtml="descriptionRawHtml"
     :position="position"
     :id="id"
+    :margin="margin"
   >
     <template #actions>
       <template
@@ -72,6 +73,11 @@
       type: String,
       options: ['left', 'right'],
       default: () => 'left'
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

@@ -1,6 +1,7 @@
 <template>
   <section
     class="px-container w-full flex flex-col gap-10 md:gap-20"
+    :class="spacing[margin]"
     :id="id"
   >
     <div
@@ -145,6 +146,18 @@
     pt: {
       type: Object,
       default: () => {}
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
+
+  const spacing = {
+    none: 'py-0',
+    small: 'py-5 lg:py-10 xl:py-16 2xl:py-20',
+    default: 'py-10 lg:py-20 xl:py-30 2xl:py-40',
+    large: 'py-14 lg:py-30 xl:py-40 2xl:py-48'
+  }
 </script>

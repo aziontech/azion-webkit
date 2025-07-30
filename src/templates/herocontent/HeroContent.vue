@@ -4,6 +4,7 @@
     :title="props.title"
     :description="props.description"
     :authors="props.authors"
+    :margin="props.margin"
   >
     <template #breadcrumbs>
       <Breadcrumb
@@ -34,6 +35,11 @@
     },
     description: {
       type: String
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

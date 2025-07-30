@@ -8,6 +8,7 @@
     :description="props.description"
     :descriptionRawHtml="props.descriptionRawHtml"
     :id="id"
+    :margin="props.margin"
   >
     <template #actions>
       <template v-if="props.buttons[0] && props.buttons[0].label">
@@ -96,6 +97,11 @@
     cards: {
       type: Array,
       default: () => []
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

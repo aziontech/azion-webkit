@@ -7,6 +7,7 @@
     :title="title"
     :overline="overline"
     :id="id"
+    :margin="margin"
   >
     <template #content>
       <div class="flex items-center flex-col md:flex-row justify-center gap-8">
@@ -40,6 +41,11 @@
     logos: {
       type: Array,
       required: true
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

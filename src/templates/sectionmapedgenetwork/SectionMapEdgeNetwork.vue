@@ -6,6 +6,7 @@
     :description="description"
     :id="id"
     isContentCentralized
+    :margin="margin"
   >
     <template #content>
       <MapEdgeNetwork
@@ -140,6 +141,11 @@
     },
     tags: {
       type: Array
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

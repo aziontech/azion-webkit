@@ -15,7 +15,8 @@ module.exports = {
       };
       newUtilities[".px-container"] = {
         maxWidth: "1344px",
-        margin: "0 auto",
+        marginLeft: "auto",
+        marginRight: "auto",
         paddingLeft: "1rem",
         paddingRight: "1rem",
       };

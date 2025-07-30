@@ -6,6 +6,7 @@
     :title="title"
     :description="description"
     :id="id"
+    :margin="margin"
   >
     <template #actions>
       <LinkButton
@@ -63,6 +64,11 @@
           return ['image', 'tag', 'description', 'button', 'logo'].every((key) => key in card)
         })
       }
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>

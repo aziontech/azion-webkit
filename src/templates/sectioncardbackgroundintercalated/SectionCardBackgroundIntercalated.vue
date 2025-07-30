@@ -6,6 +6,7 @@
     :description="description"
     :descriptionRawHtml="descriptionRawHtml"
     :id="id"
+    :margin="margin"
   >
     <template #content>
       <div class="m-0 grid grid-cols-1 md:grid-cols-2 gap-10 md:pt-32">
@@ -72,6 +73,11 @@
     },
     cards: {
       type: Array
+    },
+    margin: {
+      type: String,
+      options: ['none', 'small', 'default', 'large'],
+      default: () => 'none'
     }
   })
 </script>
