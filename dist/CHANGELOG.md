@@ -1,3 +1,15 @@
+## [1.148.0](https://github.com/aziontech/azion-webkit/compare/v1.147.4...v1.148.0) (2025-07-30)
+
+### Features
+
+* spacing among modules, margin refactor ([a8bb3de](https://github.com/aziontech/azion-webkit/commit/a8bb3dec2f79e66335b2d8c361363adf972dc0d8))
+
+### Bug Fixes
+
+* bannerarchitecture wrapped contentsection ([bb20841](https://github.com/aziontech/azion-webkit/commit/bb208417105521d89c920487d3ba06ddb1771edc))
+* bannerlivemap content sectin ([d9d9005](https://github.com/aziontech/azion-webkit/commit/d9d9005356a1a5a5255fff658ccdfd930384f697))
+* rollback export default function (str) { ([0ac6d1d](https://github.com/aziontech/azion-webkit/commit/0ac6d1dd565a3e906a464e6ea50a7cd4e053dfeb))
+
 ## [1.147.4](https://github.com/aziontech/azion-webkit/compare/v1.147.3...v1.147.4) (2025-07-30)
 
 ### Bug Fixes
