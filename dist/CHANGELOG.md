@@ -1,3 +1,11 @@
+## [1.147.4](https://github.com/aziontech/azion-webkit/compare/v1.147.3...v1.147.4) (2025-07-30)
+
+### Bug Fixes
+
+* removed imports mocked ([01e7100](https://github.com/aziontech/azion-webkit/commit/01e710055114adb0e7e70df6d094732e638502b6))
+* update font family call ([fdb9564](https://github.com/aziontech/azion-webkit/commit/fdb95644443092d8d00d1581e7b451482712df7f))
+* update logo full with text fonts ([7001594](https://github.com/aziontech/azion-webkit/commit/70015942f9ba37b29ae7d99cb5b0d52a3e094161))
+
 ## [1.147.3](https://github.com/aziontech/azion-webkit/compare/v1.147.2...v1.147.3) (2025-07-24)
 
 ### Bug Fixes
