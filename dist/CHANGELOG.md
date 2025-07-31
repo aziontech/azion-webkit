@@ -1,3 +1,9 @@
+## [1.151.2](https://github.com/aziontech/azion-webkit/compare/v1.151.1...v1.151.2) (2025-07-31)
+
+### Bug Fixes
+
+* fix sectiontable.js import ([cb808ca](https://github.com/aziontech/azion-webkit/commit/cb808ca518e74338c3e331760bff1c86499a1c3c))
+
 ## [1.151.1](https://github.com/aziontech/azion-webkit/compare/v1.151.0...v1.151.1) (2025-07-31)
 
 ### Bug Fixes
