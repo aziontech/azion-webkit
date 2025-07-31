@@ -1,3 +1,9 @@
+## [1.151.3](https://github.com/aziontech/azion-webkit/compare/v1.151.2...v1.151.3) (2025-07-31)
+
+### Bug Fixes
+
+* lint table component ([9039344](https://github.com/aziontech/azion-webkit/commit/90393440531c5c6c61857f5efbe3de01eb9b905e))
+
 ## [1.151.2](https://github.com/aziontech/azion-webkit/compare/v1.151.1...v1.151.2) (2025-07-31)
 
 ### Bug Fixes
