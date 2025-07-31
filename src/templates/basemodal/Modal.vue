@@ -13,6 +13,7 @@
       closeOnEscape
       modal
       :showHeader="showHeader"
+      @update:visible="onVisibleChange"
     >
       <template
         #header
@@ -60,6 +61,13 @@
 
   const setVisibility = function (visibility = true) {
     if (props.disableVisibilityToggle) return
+    onVisibleChange(visibility)
     visible.value = visibility
   }
+
+  const onVisibleChange = function (newValue) {
+    emit('update:visible', newValue)
+  }
+
+  const emit = defineEmits(['update:visible'])
 </script>
