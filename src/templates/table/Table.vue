@@ -116,7 +116,6 @@
       return { columns: [], rows: [], data: [] }
     }
 
-    // Get headers from thead or first row
     const headerRow = table.querySelector('thead tr') || table.querySelector('tr')
 
     if (!headerRow) {
@@ -128,15 +127,14 @@
       cell.textContent.trim()
     )
 
-    const columns = headers.slice(1) // Skip first column (row labels)
+    const columns = headers.slice(1)
 
-    // Get body rows, excluding header if it's in tbody
     let bodyRows
     const tbody = table.querySelector('tbody')
     if (tbody) {
       bodyRows = Array.from(tbody.querySelectorAll('tr'))
     } else {
-      // If no tbody, get all rows except the first one (header)
+
       const allRows = Array.from(table.querySelectorAll('tr'))
       bodyRows = allRows.slice(1)
     }
