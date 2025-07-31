@@ -1,1 +1,1 @@
-export { default } from './SectionTableContent.vue'
+export { default } from './SectionTable.vue'
