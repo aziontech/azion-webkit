@@ -9,7 +9,7 @@ const MOCK = {
     'From the beginning, our goal has been to create technologies that unlock new possibilities.',
   video: {
     title: 'Azion Overview',
-    src: 'https://www.youtube.com/embed/your_video_id',
+    src: 'https://www.youtube.com/embed/6Pyn2T8EmC8',
     image: {
       alt: "Image of a globe illustrating Azion's connections",
       dark: {
@@ -85,6 +85,28 @@ const Template = (args) => config(args)
 export const Default = Template.bind({})
 Default.args = MOCK
 
+const MOCK_WITH_FORM = {
+  ...MOCK,
+  form: {
+    hubspot: {
+      formId: '12345678',
+      companyId: '98765432'
+    },
+    title: 'Get Started with Azion'
+  }
+}
+
+const MOCK_WITH_FORM_AND_CARDS = {
+  ...MOCK_WITH_CARDS,
+  form: {
+    hubspot: {
+      formId: 'a3b0bf4c-c170-4988-a21a-f109055c4b70',
+      companyId: '5759082'
+    },
+    title: 'Get Started with Azion'
+  }
+}
+
 const TemplateWithCards = (args) => config(args)
 export const DefaultWithCards = TemplateWithCards.bind({})
 DefaultWithCards.args = MOCK_WITH_CARDS
@@ -109,6 +131,14 @@ PositionRightWithCards.parameters = {
   }
 }
 
+const TemplateWithForm = (args) => config(args)
+export const WithVideoBlocker = TemplateWithForm.bind({})
+WithVideoBlocker.args = MOCK_WITH_FORM
+
+const TemplateWithFormAndCards = (args) => config(args)
+export const WithVideoBlockerAndCards = TemplateWithFormAndCards.bind({})
+WithVideoBlockerAndCards.args = MOCK_WITH_FORM_AND_CARDS
+
 export default {
   title: 'Blocks/Sections/section-video-right',
   component: SectionVideoRight,
@@ -129,6 +159,19 @@ ${Rules.overline}
 ${Rules.title}
 ${Rules.description}
 ${Rules.cards}
+
+### VideoBlocker Integration
+When the \`form\` prop is provided, the component will use VideoBlocker instead of the standard BaseModal. 
+VideoBlocker provides:
+- 10-second timer before showing form
+- Protective overlay to hide YouTube branding
+- HubSpot form integration
+- Click overlay to pause video and show form immediately
+
+### Usage Examples
+- **Default**: Standard video modal without form
+- **WithVideoBlocker**: Video with form integration (no cards)
+- **WithVideoBlockerAndCards**: Video with form integration and cards
         `
       }
     }

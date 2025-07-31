@@ -11,7 +11,19 @@
     :margin="margin"
   >
     <template #main>
+      <VideoBlocker
+        v-if="form"
+        :video="{
+          id: extractVideoId(video.src),
+          title: video.title,
+          image: video.image
+        }"
+        :form="form"
+        :disableVisibilityToggle="videoPlayOverlay"
+      />
+
       <BaseModal
+        v-else
         backgroundColor="outlined"
         :disableVisibilityToggle="videoPlayOverlay"
       >
@@ -125,12 +137,13 @@
 <script setup>
   import ContentSection from '../contentsection'
   import BaseModal from '../basemodal'
+  import VideoBlocker from '../videoblocker'
   import CardBaseClickable from '../cardbaseclickable'
   import CardTitle from '../cardtitle'
   import CardDescription from '../carddescription'
   import Tile from '../tile'
 
-  defineProps({
+  const props =  defineProps({
     id: {
       type: String,
       default: () => ''
@@ -192,6 +205,34 @@
       type: Boolean,
       required: false,
       default: false
+    },
+    form: {
+      type: Object,
+      required: false,
+      validator: (value) => {
+        if (!value) return true
+        return ['hubspot', 'title'].every((key) => key in value) &&
+               ['formId', 'companyId'].every((key) => key in value.hubspot)
+      }
     }
   })
+
+  // Extract YouTube video ID from URL
+  function extractVideoId(url) {
+    if (!url) return ''
+    
+    // Handle various YouTube URL formats
+    const patterns = [
+      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/,
+      /youtube\.com\/v\/([^&\n?#]+)/,
+      /youtube\.com\/watch\?.*v=([^&\n?#]+)/
+    ]
+    
+    for (const pattern of patterns) {
+      const match = url.match(pattern)
+      if (match) return match[1]
+    }
+    
+    return ''
+  }
 </script>

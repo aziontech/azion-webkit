@@ -35,15 +35,27 @@ export interface SectionVideoRightProps {
         alt: string
       }
     }
-    cards?: Array<{
-      title: string
-      description: string
-      cta: {
-        action: {
-          label: string
-        }
+  }
+  cards?: Array<{
+    title: string
+    description: string
+    cta: {
+      action: {
+        label: string
       }
-    }>
+    }
+  }>
+  videoPlayOverlay?: boolean
+  /**
+   * Form configuration for VideoBlocker functionality.
+   * When provided, the component will use VideoBlocker instead of BaseModal.
+   */
+  form?: {
+    hubspot: {
+      formId: string
+      companyId: string
+    }
+    title: string
   }
   position?: 'left' | 'right'
 }
