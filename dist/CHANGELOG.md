@@ -1,3 +1,14 @@
+## [1.150.0](https://github.com/aziontech/azion-webkit/compare/v1.149.0...v1.150.0) (2025-07-31)
+
+### Features
+
+* add AttributeViewer component for hierarchical attribute display ([6850aa0](https://github.com/aziontech/azion-webkit/commit/6850aa0373ef5e3f8b97182858da0cd97ad73a51))
+
+### Bug Fixes
+
+* adjust split color function and nested texts ([694dc63](https://github.com/aziontech/azion-webkit/commit/694dc63e28d7516e1996b83adf57dce4f4196332))
+* resolve variable naming conflict and improve null safety in AttributePanel ([fd77dca](https://github.com/aziontech/azion-webkit/commit/fd77dca5cccc7ce29c74fb32a21798fa9c5da565))
+
 ## [1.149.0](https://github.com/aziontech/azion-webkit/compare/v1.148.0...v1.149.0) (2025-07-31)
 
 ### Features
