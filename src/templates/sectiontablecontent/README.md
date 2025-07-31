@@ -1,0 +1,96 @@
+# SectionTableContent
+
+A section component that displays a table within a content section layout. Based on `SectionBasicContent` but with a `#content` slot containing the Table component instead of action buttons.
+
+## Usage
+
+```vue
+<template>
+  <SectionTableContent
+    title="Pricing Comparison"
+    description="Compare our different service plans and features"
+    :table="tableData"
+  />
+</template>
+
+<script setup>
+import SectionTableContent from './SectionTableContent.vue'
+
+const tableData = {
+  title: "Service Plans",
+  columns: ["Feature", "Basic", "Pro", "Enterprise"],
+  rows: ["Storage", "Bandwidth", "Support"],
+  data: [
+    ["10GB", "100GB", "Unlimited"],
+    ["100GB/month", "1TB/month", "Unlimited"],
+    ["Email", "Email + Chat", "24/7 Phone"]
+  ]
+}
+</script>
+```
+
+## Props
+
+### Required Props
+
+- **title** (`string`): The main title of the section
+- **table** (`TableData`): Table configuration object containing:
+  - `title` (optional `string`): Table title
+  - `columns` (`string[]`): Array of column headers
+  - `rows` (`string[]`): Array of row labels
+  - `data` (`string[][]`): 2D array of table cell data
+
+### Optional Props
+
+- **id** (`string`, default: `''`): HTML id attribute for the section
+- **isContentCentralized** (`boolean`, default: `true`): Whether to center the content
+- **overline** (`string`, default: `''`): Small text above the title
+- **titleTag** (`'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'`, default: `'h2'`): HTML tag for the title
+- **description** (`string`, default: `''`): Description text below the title
+- **descriptionRawHtml** (`string`, default: `''`): HTML description content
+- **margin** (`'none' | 'small' | 'default' | 'large'`, default: `'none'`): Section margin size
+
+## Features
+
+- Built on top of the `ContentSection` component
+- Integrates the `Table` component in the content slot
+- Supports all standard section props (title, description, overline, etc.)
+- Validates table data structure
+- TypeScript support with proper interfaces
+
+## Examples
+
+### Basic Table Section
+```vue
+<SectionTableContent
+  title="Feature Comparison"
+  :table="{
+    columns: ['Feature', 'Basic', 'Premium'],
+    rows: ['Users', 'Storage', 'Support'],
+    data: [
+      ['5', 'Unlimited'],
+      ['10GB', '1TB'],
+      ['Email', '24/7']
+    ]
+  }"
+/>
+```
+
+### With Overline and Description
+```vue
+<SectionTableContent
+  overline="Plans & Pricing"
+  title="Choose Your Plan"
+  description="Select the perfect plan for your needs"
+  :table="pricingTable"
+/>
+```
+
+### Centered Content
+```vue
+<SectionTableContent
+  title="Performance Metrics"
+  :isContentCentralized="true"
+  :table="metricsTable"
+/>
+```
