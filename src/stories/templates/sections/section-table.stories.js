@@ -36,7 +36,7 @@ export default {
     },
     table: {
       description: 'Table configuration object with title and htmlTable properties',
-      control: false
+      control: { type: 'object' }
     },
     margin: {
       description: 'Section margin size',
