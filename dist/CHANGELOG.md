@@ -1,3 +1,9 @@
+## [1.151.0](https://github.com/aziontech/azion-webkit/compare/v1.150.1...v1.151.0) (2025-07-31)
+
+### Features
+
+* add section table ([b175688](https://github.com/aziontech/azion-webkit/commit/b1756888d584542ac315e2a8d298f42e35ec0cd0))
+
 ## [1.150.1](https://github.com/aziontech/azion-webkit/compare/v1.150.0...v1.150.1) (2025-07-31)
 
 ### Bug Fixes
