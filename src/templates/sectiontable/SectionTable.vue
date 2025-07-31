@@ -21,8 +21,8 @@
 </template>
 
 <script setup>
-  import ContentSection from '../contentsection'
-  import Table from '../table'
+  import ContentSection from '../contentsection/ContentSection'
+  import Table from '../table/Table'
 
   defineProps({
     id: {

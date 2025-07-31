@@ -5,7 +5,7 @@ export interface TableData {
   data: string[][]
 }
 
-export interface SectionTableContentProps {
+export interface SectionTableProps {
   id?: string
   isContentCentralized?: boolean
   overline?: string
@@ -17,10 +17,10 @@ export interface SectionTableContentProps {
   margin?: 'none' | 'small' | 'default' | 'large'
 }
 
-declare const SectionTableContent: {
+declare const SectionTable: {
   new (): {
-    $props: SectionTableContentProps
+    $props: SectionTableProps
   }
 }
 
-export default SectionTableContent
+export default SectionTable

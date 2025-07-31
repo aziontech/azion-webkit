@@ -1,4 +1,4 @@
-import SectionTableContent from '../../../templates/sectiontablecontent'
+import SectionTableContent from '../../../templates/sectiontable'
 import { Default as tableMock } from '../../../mock/table'
 
 

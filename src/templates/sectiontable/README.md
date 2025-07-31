@@ -1,4 +1,4 @@
-# SectionTableContent
+# SectionTable
 
 A section component that displays a table within a content section layout. Based on `SectionBasicContent` but with a `#content` slot containing the Table component instead of action buttons.
 
@@ -6,7 +6,7 @@ A section component that displays a table within a content section layout. Based
 
 ```vue
 <template>
-  <SectionTableContent
+  <SectionTable
     title="Pricing Comparison"
     description="Compare our different service plans and features"
     :table="tableData"
@@ -14,7 +14,7 @@ A section component that displays a table within a content section layout. Based
 </template>
 
 <script setup>
-import SectionTableContent from './SectionTableContent.vue'
+import SectionTable from './SectionTable.vue'
 
 const tableData = {
   title: "Service Plans",
@@ -62,7 +62,7 @@ const tableData = {
 
 ### Basic Table Section
 ```vue
-<SectionTableContent
+<SectionTable
   title="Feature Comparison"
   :table="{
     columns: ['Feature', 'Basic', 'Premium'],
@@ -78,7 +78,7 @@ const tableData = {
 
 ### With Overline and Description
 ```vue
-<SectionTableContent
+<SectionTable
   overline="Plans & Pricing"
   title="Choose Your Plan"
   description="Select the perfect plan for your needs"
@@ -88,7 +88,7 @@ const tableData = {
 
 ### Centered Content
 ```vue
-<SectionTableContent
+<SectionTable 
   title="Performance Metrics"
   :isContentCentralized="true"
   :table="metricsTable"
