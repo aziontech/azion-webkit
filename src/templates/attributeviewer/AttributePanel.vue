@@ -3,8 +3,8 @@
       <div class="flex flex-col gap-2">
         <div class="flex items-center gap-2 w-full">
         <div>
-          <span :class="{'text-color-secondary font-mono': suffix, 'text-white font-mono': !suffix}">{{ path }}</span>
-          <span class="text-white font-mono">{{ suffix }}</span>
+          <span :class="{'text-color-secondary font-mono': suffix, 'text-color font-mono': !suffix}">{{ path }}</span>
+          <span class="text-color font-mono">{{ suffix }}</span>
         </div>
         <Tag
           :value="attribute.type"
@@ -44,11 +44,10 @@
 </template>
 
 <script setup>
-  import { defineProps, ref } from 'vue'
+  import { defineProps, ref, computed } from 'vue'
   import Accordion from 'primevue/accordion'
   import AccordionTab from 'primevue/accordiontab'
   import Tag from 'primevue/tag'
-  import { splitStringColor } from '../../helpers/splitStringColor'
   import Divider from 'primevue/divider';
 
   const props = defineProps({
@@ -75,5 +74,25 @@
   })
 
   const attributeName = ref(props.attribute.name || '')
+  
+  function splitStringColor(objectPath) {
+    const lastDotIndex = computed(() => objectPath.value.lastIndexOf('.'))
+    const hasNoSuffix = computed(() => lastDotIndex.value === -1)
+
+    const path = computed(() => 
+      hasNoSuffix.value 
+        ? objectPath.value 
+        : objectPath.value.slice(0, lastDotIndex.value)
+    )
+
+    const suffix = computed(() => 
+      hasNoSuffix.value 
+        ? '' 
+        : objectPath.value.slice(lastDotIndex.value)
+    )
+
+    return { path, suffix }
+  }
+
   const { path, suffix } = splitStringColor(attributeName)
 </script>
