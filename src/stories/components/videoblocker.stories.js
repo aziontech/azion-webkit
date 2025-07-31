@@ -125,4 +125,4 @@ A Vue component that provides video blocking functionality with HubSpot form int
       control: { type: 'boolean' }
     }
   }
-} 
+}

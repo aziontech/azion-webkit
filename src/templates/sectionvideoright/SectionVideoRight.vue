@@ -143,7 +143,7 @@
   import CardDescription from '../carddescription'
   import Tile from '../tile'
 
-  const props =  defineProps({
+  const props = defineProps({
     id: {
       type: String,
       default: () => ''
@@ -211,8 +211,10 @@
       required: false,
       validator: (value) => {
         if (!value) return true
-        return ['hubspot', 'title'].every((key) => key in value) &&
-               ['formId', 'companyId'].every((key) => key in value.hubspot)
+        return (
+          ['hubspot', 'title'].every((key) => key in value) &&
+          ['formId', 'companyId'].every((key) => key in value.hubspot)
+        )
       }
     }
   })
@@ -220,19 +222,19 @@
   // Extract YouTube video ID from URL
   function extractVideoId(url) {
     if (!url) return ''
-    
+
     // Handle various YouTube URL formats
     const patterns = [
       /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/,
       /youtube\.com\/v\/([^&\n?#]+)/,
       /youtube\.com\/watch\?.*v=([^&\n?#]+)/
     ]
-    
+
     for (const pattern of patterns) {
       const match = url.match(pattern)
       if (match) return match[1]
     }
-    
+
     return ''
   }
 </script>

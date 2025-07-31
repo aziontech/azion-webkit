@@ -6,23 +6,23 @@
   >
     <template #action>
       <div class="relative flex items-center justify-center group">
-                    <img
-              class="hide-on-light"
-              width="auto"
-              height="340"
-              fetchpriority="high"
-              :alt="video.image.alt"
-              :src="video.image.dark.src"
-            />
+        <img
+          class="hide-on-light"
+          width="auto"
+          height="340"
+          fetchpriority="high"
+          :alt="video.image.alt"
+          :src="video.image.dark.src"
+        />
 
-            <img
-              class="hide-on-dark"
-              width="auto"
-              height="340"
-              fetchpriority="high"
-              :alt="video.image.alt"
-              :src="video.image.light.src"
-            />
+        <img
+          class="hide-on-dark"
+          width="auto"
+          height="340"
+          fetchpriority="high"
+          :alt="video.image.alt"
+          :src="video.image.light.src"
+        />
 
         <div class="absolute z-10 opacity-50 transition-all ease group-hover:opacity-100">
           <svg
@@ -122,8 +122,10 @@
       type: Object,
       required: true,
       validator: (value) => {
-        return ['hubspot', 'title'].every((key) => key in value) &&
-               ['formId', 'companyId'].every((key) => key in value.hubspot)
+        return (
+          ['hubspot', 'title'].every((key) => key in value) &&
+          ['formId', 'companyId'].every((key) => key in value.hubspot)
+        )
       }
     },
     disableVisibilityToggle: {
