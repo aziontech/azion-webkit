@@ -12,9 +12,7 @@
     <template #content>
       <Table
         :title="table.title"
-        :columns="table.columns"
-        :rows="table.rows"
-        :data="table.data"
+        :htmlTable="table.htmlTable"
       />
     </template>
   </ContentSection>
@@ -58,13 +56,22 @@
       type: Object,
       required: true,
       validator: (value) => {
-        return (
-          value &&
-          Array.isArray(value.columns) &&
-          Array.isArray(value.rows) &&
-          Array.isArray(value.data) &&
-          (value.title === undefined || typeof value.title === 'string')
-        )
+        if (!value) {
+          console.error('SectionTable: table prop is required')
+          return false
+        }
+
+        if (typeof value.htmlTable !== 'string') {
+          console.error('SectionTable: table.htmlTable must be a string')
+          return false
+        }
+
+        if (value.title !== undefined && typeof value.title !== 'string') {
+          console.error('SectionTable: table.title must be a string if provided')
+          return false
+        }
+
+        return true
       }
     },
     margin: {

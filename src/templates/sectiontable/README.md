@@ -14,18 +14,43 @@ A section component that displays a table within a content section layout. Based
 </template>
 
 <script setup>
-import SectionTable from './SectionTable.vue'
+  import SectionTable from './SectionTable.vue'
 
-const tableData = {
-  title: "Service Plans",
-  columns: ["Feature", "Basic", "Pro", "Enterprise"],
-  rows: ["Storage", "Bandwidth", "Support"],
-  data: [
-    ["10GB", "100GB", "Unlimited"],
-    ["100GB/month", "1TB/month", "Unlimited"],
-    ["Email", "Email + Chat", "24/7 Phone"]
-  ]
-}
+  const tableData = {
+    title: 'Service Plans',
+    htmlTable: `
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Basic</th>
+          <th>Pro</th>
+          <th>Enterprise</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Storage</td>
+          <td>10GB</td>
+          <td>100GB</td>
+          <td>Unlimited</td>
+        </tr>
+        <tr>
+          <td>Bandwidth</td>
+          <td>100GB/month</td>
+          <td>1TB/month</td>
+          <td>Unlimited</td>
+        </tr>
+        <tr>
+          <td>Support</td>
+          <td>Email</td>
+          <td>Email + Chat</td>
+          <td>24/7 Phone</td>
+        </tr>
+      </tbody>
+    </table>
+  `
+  }
 </script>
 ```
 
@@ -36,9 +61,7 @@ const tableData = {
 - **title** (`string`): The main title of the section
 - **table** (`TableData`): Table configuration object containing:
   - `title` (optional `string`): Table title
-  - `columns` (`string[]`): Array of column headers
-  - `rows` (`string[]`): Array of row labels
-  - `data` (`string[][]`): 2D array of table cell data
+  - `htmlTable` (`string`): HTML string containing table element
 
 ### Optional Props
 
@@ -61,6 +84,7 @@ const tableData = {
 ## Examples
 
 ### Basic Table Section
+
 ```vue
 <SectionTable
   title="Feature Comparison"
@@ -77,6 +101,7 @@ const tableData = {
 ```
 
 ### With Overline and Description
+
 ```vue
 <SectionTable
   overline="Plans & Pricing"
@@ -87,10 +112,7 @@ const tableData = {
 ```
 
 ### Centered Content
+
 ```vue
-<SectionTable 
-  title="Performance Metrics"
-  :isContentCentralized="true"
-  :table="metricsTable"
-/>
+<SectionTable title="Performance Metrics" :isContentCentralized="true" :table="metricsTable" />
 ```
