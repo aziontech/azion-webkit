@@ -1,3 +1,9 @@
+## [1.150.1](https://github.com/aziontech/azion-webkit/compare/v1.150.0...v1.150.1) (2025-07-31)
+
+### Bug Fixes
+
+* update import path case for attributeViewer mock file ([ee2cd0e](https://github.com/aziontech/azion-webkit/commit/ee2cd0e5e8a8013b742a8aaedea8a6c51eb953fa))
+
 ## [1.150.0](https://github.com/aziontech/azion-webkit/compare/v1.149.0...v1.150.0) (2025-07-31)
 
 ### Features
