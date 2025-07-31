@@ -1,5 +1,5 @@
 import AttributeViewer from '../../templates/attributeviewer'
-import { attributeViewerMock } from '../../mock/attributeviewer'
+import { attributeViewerMock } from '../../mock/attributeViewer'
 
 export default {
   title: 'Components/AttributeViewer',
