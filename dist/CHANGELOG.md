@@ -1,3 +1,9 @@
+## [1.151.1](https://github.com/aziontech/azion-webkit/compare/v1.151.0...v1.151.1) (2025-07-31)
+
+### Bug Fixes
+
+* fix section table import ([d46969f](https://github.com/aziontech/azion-webkit/commit/d46969fe4b3f10241fafe21447ca190dfa9fa97d))
+
 ## [1.151.0](https://github.com/aziontech/azion-webkit/compare/v1.150.1...v1.151.0) (2025-07-31)
 
 ### Features
