@@ -1,8 +1,6 @@
 export interface TableData {
   title?: string
-  columns: string[]
-  rows: string[]
-  data: string[][]
+  htmlTable: string
 }
 
 export interface SectionTableProps {

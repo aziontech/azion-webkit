@@ -1,117 +1,177 @@
 # Table
 
-## Purpose
-
-A dynamic comparison table component built with PrimeVue DataTable, designed for displaying competitive analysis data. Features responsive design, sticky headers, and automatic highlighting for advantageous values. Optimized for theme switching between light and dark modes.
-
-## Props
-
-### Required
-
-| Prop      | Type       | Description                                    |
-| --------- | ---------- | ---------------------------------------------- |
-| `columns` | `Array`    | Array of column names (providers/competitors)  |
-| `rows`    | `Array`    | Array of row names (metrics/features)         |
-| `data`    | `Array`    | Matrix of cell values (row x column)          |
-
-### Optional
-
-| Prop    | Type     | Default | Values | Description           |
-| ------- | -------- | ------- | ------ | --------------------- |
-| `title` | `String` | `''`    | -      | Title of the table    |
+A dynamic comparison table component built with PrimeVue DataTable, designed for displaying competitive analysis data. Features responsive design, sticky headers, and automatic highlighting for advantageous values. Automatically parses HTML table strings into a beautiful, responsive table.
 
 ## Features
 
-- **Dynamic Structure**: Define columns, rows, and data programmatically
-- **Theme Adaptive**: Seamless switching between light and dark themes
+- **HTML Table Parsing**: Automatically parses HTML table strings into component format
 - **Responsive Design**: Adapts to different screen sizes with mobile-optimized padding
 - **Sticky Headers**: Column headers remain visible when scrolling
 - **Auto Highlighting**: Automatically highlights advantageous values (✅, ❌, ⭐)
+- **Icon Support**: Proper styling for icons (✅, ❌, ⭐)
 - **Clean Design**: Borderless table with subtle hover effects
 - **PrimeVue Integration**: Uses PrimeVue passthrough (pt) configuration for styling
 - **Accessibility**: Proper semantic structure and responsive text sizing
+- **TypeScript Support**: Complete type definitions for all props
 
-## Slots
+## Props
 
-| Name      | Description  |
-| --------- | ------------ |
-| `default` | Default slot |
+### Required Props
 
-## Dependencies
+- **htmlTable** (`string`): HTML string containing a table element
 
-### External
-- PrimeVue DataTable
-- PrimeVue Column
-- Overline component (for title display)
+### Optional Props
 
-### Styling
-- TailwindCSS utility classes
-- PrimeVue passthrough (pt) configuration
-- CSS custom properties for theme-adaptive styling
+- **title** (`string`, default: `''`): Title of the table displayed above the table
 
-## Usage Example
+## Usage
+
+### Usage
 
 ```vue
 <template>
   <Table
-    title="Produto / Métrica"
-    :columns="[
-      'Cloudflare R2 / Workers / CDN',
-      'AWS S3 + CloudFront', 
-      'Akamai NetStorage / CDN',
-      'Azion Edge Storage + Edge App'
-    ]"
-    :rows="[
-      'Armazenamento (US / BR)',
-      'Egressos / Tráfego CDN',
-      'Requests (HTTPS / 10k)'
-    ]"
-    :data="[
-      [
-        '$0.015/GB - sem egressos PUT/GET pagos',
-        '$0.023~$0.024/GB - egressos $0.085/GB',
-        '≥ $0.049/GB + ingestão e purga',
-        '✅ $0.015/GB com integração edge - sem egressos'
-      ],
-      [
-        'Incluso no plano (fair use)',
-        '$0.085~$0.060/GB + $0.0075/10k reqs',
-        '$0.049~$0.045/GB + custo variável',
-        '✅ $0.110/GB (BR) - $0.085/GB (US/EU) - decrescente'
-      ],
-      [
-        'GET $3.60 - PUT $4.5',
-        '~$0.75/10k',
-        'Geralmente incluso ou variável',
-        '✅ $0.009 (US/EU) - $0.029 (LATAM)'
-      ]
-    ]"
+    title="Service Plans Comparison"
+    :htmlTable="htmlTableData"
   />
 </template>
+
+<script setup>
+  import Table from './Table.vue'
+
+  const htmlTableData = `
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Basic</th>
+        <th>Pro</th>
+        <th>Enterprise</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Storage</td>
+        <td>10GB</td>
+        <td>100GB</td>
+        <td>Unlimited</td>
+      </tr>
+      <tr>
+        <td>Bandwidth</td>
+        <td>100GB/month</td>
+        <td>1TB/month</td>
+        <td>Unlimited</td>
+      </tr>
+      <tr>
+        <td>Support</td>
+        <td>Email</td>
+        <td>Email + Chat</td>
+        <td>24/7 Phone</td>
+      </tr>
+    </tbody>
+  </table>
+`
+</script>
 ```
+
+## Examples
+
+### HTML Table Example
+
+```vue
+<Table
+  title="Feature Comparison"
+  :htmlTable="`
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Basic</th>
+        <th>Premium</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Users</td>
+        <td>5</td>
+        <td>Unlimited</td>
+      </tr>
+      <tr>
+        <td>Storage</td>
+        <td>10GB</td>
+        <td>1TB</td>
+      </tr>
+      <tr>
+        <td>Support</td>
+        <td>Email</td>
+        <td>24/7</td>
+      </tr>
+    </tbody>
+  </table>
+`"
+/>
+```
+
+### Simple HTML Table
+
+```vue
+<Table
+  title="Simple Comparison"
+  :htmlTable="`
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>Basic</th>
+      <th>Premium</th>
+    </tr>
+    <tr>
+      <td>Users</td>
+      <td>5</td>
+      <td>Unlimited</td>
+    </tr>
+    <tr>
+      <td>Storage</td>
+      <td>10GB</td>
+      <td>1TB</td>
+    </tr>
+  </table>
+`"
+/>
+```
+
+## HTML Table Parsing
+
+The component automatically parses HTML table strings and extracts:
+
+- **Title**: From `<caption>` element or `data-title` attribute
+- **Columns**: From header cells (`<th>`) in the first row (excluding first cell)
+- **Rows**: From first cell of each row (row labels)
+- **Data**: From remaining cells in each row
+
+### Supported HTML Structures
+
+- Tables with `<thead>` and `<tbody>`
+- Simple tables with just `<tr>` elements
+- Tables with `<caption>` for title
+- Tables with `data-title` attribute
+- Mixed `<th>` and `<td>` elements
 
 ## Styling
 
-The component uses a combination of TailwindCSS and PrimeVue CSS variables for theme-adaptive styling:
+The component uses:
 
-### TailwindCSS Classes
-- Responsive padding: `p-2 md:p-4`
-- Text sizing: `text-sm md:text-base`
-- Positioning: `sticky top-0 z-10`
-- Layout: `flex items-center justify-center`
+- PrimeVue DataTable as the base component
+- Tailwind CSS for utility classes
+- PrimeVue passthrough (pt) configuration
+- CSS custom properties for theme-adaptive styling
 
-### CSS Custom Properties (Theme Adaptive)
-- `--surface-ground`: Background color for headers
-- `--surface-border`: Border color for table lines
-- `--surface-hover`: Hover background color
-- `--text-color`: Primary text color
-- `--text-color-secondary`: Secondary text color
+## TypeScript Support
 
-### PrimeVue Passthrough Configuration
-Styling is applied via PrimeVue's `pt` (passthrough) system, eliminating the need for deep CSS selectors.
+Complete TypeScript definitions are provided:
 
-## Related Links
-
-- [TypeScript Definitions](./Table.d.ts)
-- [Component Implementation](./Table.vue)
-- [Export Module](./index.js)
+```typescript
+interface TableProps {
+  title?: string // Optional title of the table
+  htmlTable: string // HTML string containing a table element
+}
+```

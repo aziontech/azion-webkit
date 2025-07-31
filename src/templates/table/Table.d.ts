@@ -17,17 +17,9 @@ export interface TableProps {
    */
   title?: string
   /**
-   * Array of column names (providers)
+   * HTML string containing a table element
    */
-  columns: string[]
-  /**
-   * Array of row names (metrics)
-   */
-  rows: string[]
-  /**
-   * Matrix of cell values (row x column)
-   */
-  data: string[][]
+  htmlTable: string
 }
 
 /**
