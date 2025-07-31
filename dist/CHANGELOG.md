@@ -1,3 +1,9 @@
+## [1.149.0](https://github.com/aziontech/azion-webkit/compare/v1.148.0...v1.149.0) (2025-07-31)
+
+### Features
+
+* implement responsive comparison table component with sticky headers and theme support ([bf0bb2d](https://github.com/aziontech/azion-webkit/commit/bf0bb2d43e845c0b592ce72b69217f3cbc64e1ec))
+
 ## [1.148.0](https://github.com/aziontech/azion-webkit/compare/v1.147.4...v1.148.0) (2025-07-30)
 
 ### Features
