@@ -1,3 +1,13 @@
+## [1.152.0](https://github.com/aziontech/azion-webkit/compare/v1.151.3...v1.152.0) (2025-08-04)
+
+### Features
+
+* add new product and framework icons ([5ae9be7](https://github.com/aziontech/azion-webkit/commit/5ae9be750b7563eada3168f3ff9e78a5e444827f))
+
+### Bug Fixes
+
+* adjust table cell whitespace and width styling for better text wrapping ([19c9502](https://github.com/aziontech/azion-webkit/commit/19c9502e72baf6e0e89775a91a06b9497615ed30))
+
 ## [1.151.3](https://github.com/aziontech/azion-webkit/compare/v1.151.2...v1.151.3) (2025-07-31)
 
 ### Bug Fixes
