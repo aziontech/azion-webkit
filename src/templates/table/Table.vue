@@ -22,7 +22,7 @@
           },
           bodycell: {
             class:
-              'font-normal font-sm max-w-0 lg:max-w-full p-4 border-t border-b-0 border-surface-border z-10'
+              'font-normal font-sm lg:max-w-full p-4 border-t border-b-0 border-surface-border z-10'
           },
           bodyrow: { class: 'z-10' }
         }"
@@ -30,11 +30,11 @@
         <template #header>
           <Overline
             :label="props.title"
-            class="pb-8 font-normal"
+            class="pb-8 font-normal whitespace-nowrap"
           />
         </template>
         <template #body="slotProps">
-          <span class="font-normal">{{ slotProps.data.row }}</span>
+          <span class="font-normal whitespace-normal">{{ slotProps.data.row }}</span>
         </template>
       </Column>
 
@@ -57,7 +57,7 @@
       >
         <template #body="slotProps">
           <div class="flex items-center justify-center">
-            <span v-html="formatCellContent(slotProps.data[`col_${index}`])"></span>
+            <span class="font-normal whitespace-normal" v-html="formatCellContent(slotProps.data[`col_${index}`])"></span>
           </div>
         </template>
       </Column>
