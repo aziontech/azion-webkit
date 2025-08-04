@@ -57,6 +57,12 @@ export interface SectionVideoRightProps {
     }
     title: string
   }
+  /**
+   * Duration in milliseconds before the form is shown after video starts playing.
+   * Only applies when form prop is provided.
+   * @default 10000
+   */
+  timerDuration?: number
   position?: 'left' | 'right'
 }
 

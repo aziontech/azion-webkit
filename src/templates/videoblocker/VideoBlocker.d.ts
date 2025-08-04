@@ -30,6 +30,11 @@ export interface VideoBlockerProps {
    * @default false
    */
   disableVisibilityToggle?: boolean
+  /**
+   * Duration in milliseconds before the form is shown after video starts playing.
+   * @default 10000
+   */
+  timerDuration?: number
 }
 
 export const VideoBlocker: import('vue').DefineComponent<VideoBlockerProps>

@@ -132,6 +132,12 @@
       type: Boolean,
       required: false,
       default: false
+    },
+    timerDuration: {
+      type: Number,
+      required: false,
+      default: 10000,
+      validator: (value) => value >= 0
     }
   })
 
@@ -186,7 +192,7 @@
           .catch((error) => {
             console.error('Error loading HubSpot form:', error)
           })
-      }, 10000)
+      }, props.timerDuration)
     }
   }
 

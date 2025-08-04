@@ -20,6 +20,7 @@
         }"
         :form="form"
         :disableVisibilityToggle="videoPlayOverlay"
+        :timerDuration="timerDuration"
       />
 
       <BaseModal
@@ -216,6 +217,12 @@
           ['formId', 'companyId'].every((key) => key in value.hubspot)
         )
       }
+    },
+    timerDuration: {
+      type: Number,
+      required: false,
+      default: 10000,
+      validator: (value) => value >= 0
     }
   })
 

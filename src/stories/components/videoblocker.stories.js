@@ -21,7 +21,8 @@ const MOCK = {
     },
     title: 'Get Started with Azion'
   },
-  disableVisibilityToggle: false
+  disableVisibilityToggle: false,
+  timerDuration: 10000
 }
 
 const MOCK_WITH_DISABLED_TOGGLE = {
@@ -50,7 +51,23 @@ const MOCK_DIFFERENT_VIDEO = {
     },
     title: 'Learn More About Edge Computing'
   },
-  disableVisibilityToggle: false
+  disableVisibilityToggle: false,
+  timerDuration: 10000
+}
+
+const MOCK_QUICK_TIMER = {
+  ...MOCK,
+  timerDuration: 3000
+}
+
+const MOCK_SLOW_TIMER = {
+  ...MOCK,
+  timerDuration: 30000
+}
+
+const MOCK_NO_TIMER = {
+  ...MOCK,
+  timerDuration: 0
 }
 
 const config = (args) => {
@@ -75,6 +92,18 @@ const TemplateDifferentVideo = (args) => config(args)
 export const DifferentVideo = TemplateDifferentVideo.bind({})
 DifferentVideo.args = MOCK_DIFFERENT_VIDEO
 
+const TemplateQuickTimer = (args) => config(args)
+export const QuickTimer = TemplateQuickTimer.bind({})
+QuickTimer.args = MOCK_QUICK_TIMER
+
+const TemplateSlowTimer = (args) => config(args)
+export const SlowTimer = TemplateSlowTimer.bind({})
+SlowTimer.args = MOCK_SLOW_TIMER
+
+const TemplateNoTimer = (args) => config(args)
+export const NoTimer = TemplateNoTimer.bind({})
+NoTimer.args = MOCK_NO_TIMER
+
 export default {
   title: 'Components/VideoBlocker',
   component: VideoBlocker,
@@ -89,7 +118,7 @@ A Vue component that provides video blocking functionality with HubSpot form int
 
 ### Features
 - **YouTube Video Embed**: Displays YouTube videos with minimal branding
-- **10-Second Timer**: Automatically pauses video and shows form after 10 seconds
+- **Configurable Timer**: Automatically pauses video and shows form after specified duration
 - **Protective Overlay**: Hides YouTube branding and allows manual form trigger
 - **HubSpot Integration**: Seamless form integration with HubSpot
 - **Modal Management**: Uses BaseModal for consistent UI
@@ -97,7 +126,7 @@ A Vue component that provides video blocking functionality with HubSpot form int
 ### Behavior
 1. **Initial State**: Shows video thumbnail with play button
 2. **Video Play**: User clicks play, video starts in modal
-3. **Timer**: After 10 seconds, video pauses and form appears
+3. **Timer**: After specified duration, video pauses and form appears
 4. **Manual Trigger**: User can click overlay to pause video and show form immediately
 5. **Form Submission**: After form submission, video resumes
 
@@ -105,6 +134,7 @@ A Vue component that provides video blocking functionality with HubSpot form int
 - **video**: Video configuration (id, title, image)
 - **form**: Form configuration (hubspot settings, title)
 - **disableVisibilityToggle**: Controls modal visibility behavior
+- **timerDuration**: Duration in milliseconds before form appears (default: 10000)
 
 ### Content rules
         `
@@ -123,6 +153,10 @@ A Vue component that provides video blocking functionality with HubSpot form int
     disableVisibilityToggle: {
       description: 'Whether to disable modal visibility toggle',
       control: { type: 'boolean' }
+    },
+    timerDuration: {
+      description: 'Duration in milliseconds before form appears',
+      control: { type: 'number', min: 0, step: 1000 }
     }
   }
 }
