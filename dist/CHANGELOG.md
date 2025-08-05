@@ -1,3 +1,14 @@
+## [1.153.0](https://github.com/aziontech/azion-webkit/compare/v1.152.0...v1.153.0) (2025-08-05)
+
+### Features
+
+* Disable visibility toggle and add video play overlay ([0155574](https://github.com/aziontech/azion-webkit/commit/015557423d953ae8b2d2d6fe01e9ef61ee810e36))
+* handle video block timer ([b353c56](https://github.com/aziontech/azion-webkit/commit/b353c562a3042479226f0754985816c8708089a6))
+
+### Bug Fixes
+
+* indentation ([d49a35c](https://github.com/aziontech/azion-webkit/commit/d49a35cd68109b77e25d02db89f6be1bea315aed))
+
 ## [1.152.0](https://github.com/aziontech/azion-webkit/compare/v1.151.3...v1.152.0) (2025-08-04)
 
 ### Features
