@@ -11,9 +11,29 @@
     :margin="margin"
   >
     <template #main>
-      <BaseModal backgroundColor="outlined">
+      <VideoBlocker
+        v-if="form"
+        :video="{
+          id: extractVideoId(video.src),
+          title: video.title,
+          image: video.image
+        }"
+        :form="form"
+        :disableVisibilityToggle="videoPlayOverlay"
+        :timerDuration="timerDuration"
+      />
+
+      <BaseModal
+        v-else
+        backgroundColor="outlined"
+        :disableVisibilityToggle="videoPlayOverlay"
+      >
         <template #action>
           <div class="relative flex items-center justify-center group">
+            <div
+              v-if="videoPlayOverlay"
+              class="absolute z-20 inset-0 backdrop-blur-sm"
+            ></div>
             <img
               class="hide-on-light"
               width="auto"
@@ -32,7 +52,10 @@
               :src="video.image.light.src"
             />
 
-            <div class="absolute opacity-50 transition-all ease group-hover:opacity-100">
+            <div
+              class="absolute z-10 opacity-50"
+              :class="{ 'transition-all ease group-hover:opacity-100': !videoPlayOverlay }"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="45"
@@ -115,12 +138,13 @@
 <script setup>
   import ContentSection from '../contentsection'
   import BaseModal from '../basemodal'
+  import VideoBlocker from '../videoblocker'
   import CardBaseClickable from '../cardbaseclickable'
   import CardTitle from '../cardtitle'
   import CardDescription from '../carddescription'
   import Tile from '../tile'
 
-  defineProps({
+  const props = defineProps({
     id: {
       type: String,
       default: () => ''
@@ -177,6 +201,47 @@
       type: String,
       options: ['none', 'small', 'default', 'large'],
       default: () => 'none'
+    },
+    videoPlayOverlay: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    form: {
+      type: Object,
+      required: false,
+      validator: (value) => {
+        if (!value) return true
+        return (
+          ['hubspot', 'title'].every((key) => key in value) &&
+          ['formId', 'companyId'].every((key) => key in value.hubspot)
+        )
+      }
+    },
+    timerDuration: {
+      type: Number,
+      required: false,
+      default: 10000,
+      validator: (value) => value >= 0
     }
   })
+
+  // Extract YouTube video ID from URL
+  function extractVideoId(url) {
+    if (!url) return ''
+
+    // Handle various YouTube URL formats
+    const patterns = [
+      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/,
+      /youtube\.com\/v\/([^&\n?#]+)/,
+      /youtube\.com\/watch\?.*v=([^&\n?#]+)/
+    ]
+
+    for (const pattern of patterns) {
+      const match = url.match(pattern)
+      if (match) return match[1]
+    }
+
+    return ''
+  }
 </script>
