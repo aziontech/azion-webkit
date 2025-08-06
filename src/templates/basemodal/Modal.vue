@@ -1,7 +1,7 @@
 <template>
   <div
     @click="setVisibility(true)"
-    class="cursor-pointer"
+    :class="disableVisibilityToggle ? 'cursor-not-allowed' : 'cursor-pointer'"
   >
     <slot name="action" />
   </div>
@@ -13,6 +13,7 @@
       closeOnEscape
       modal
       :showHeader="showHeader"
+      @update:visible="onVisibleChange"
     >
       <template
         #header
@@ -48,23 +49,25 @@
       type: Boolean,
       required: false,
       default: true
+    },
+    disableVisibilityToggle: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   })
 
   const visible = ref(false)
 
   const setVisibility = function (visibility = true) {
+    if (props.disableVisibilityToggle) return
+    onVisibleChange(visibility)
     visible.value = visibility
   }
 
-  const getPTOptions = () => {
-    if (props.backgroundColor == 'outlined') {
-      return {
-        content: 'bg-transparent p-0',
-        root: 'shadow-transparent shadow-none',
-        header: 'bg-transparent border-none p-0 pb-4 ml-auto',
-        closeButton: 'border-none hover:bg-[--surface-400] hover:text-color-secondary text-color'
-      }
-    }
+  const onVisibleChange = function (newValue) {
+    emit('update:visible', newValue)
   }
+
+  const emit = defineEmits(['update:visible'])
 </script>

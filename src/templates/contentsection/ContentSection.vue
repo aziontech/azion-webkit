@@ -153,7 +153,7 @@
     margin: {
       type: String,
       options: ['none', 'small', 'default', 'large'],
-      default: () => 'none'
+      default: () => 'small'
     },
     hasContainer: {
       type: Boolean,
