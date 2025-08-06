@@ -50,4 +50,10 @@
       position: relative;
     }
   }
+
+  // Override prose-lg h1 size to 36px (2.25em)
+  .prose-lg :where(h1):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+    font-size: 2.25em !important;
+    margin-bottom: 2rem !important;
+  }
 </style>

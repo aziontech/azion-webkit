@@ -1,7 +1,10 @@
 <template>
   <section
-    class="px-container w-full flex flex-col gap-10 md:gap-20"
-    :class="spacing[margin]"
+    :class="[
+      'w-full flex flex-col gap-10 md:gap-20',
+      { 'px-container': hasContainer },
+      spacing[margin]
+    ]"
     :id="id"
   >
     <div
@@ -151,6 +154,10 @@
       type: String,
       options: ['none', 'small', 'default', 'large'],
       default: () => 'none'
+    },
+    hasContainer: {
+      type: Boolean,
+      default: () => true
     }
   })
 
