@@ -43,6 +43,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@primevue/core": "^4.3.7",
     "@tailwindcss/typography": "^0.5.10",
     "@vee-validate/yup": "4.13.2",
     "algoliasearch": "^4.21.1",
@@ -53,8 +54,8 @@
     "globe.gl": "^2.41.1",
     "instantsearch.css": "^8.1.0",
     "primeflex": "^3.3.1",
-    "primeicons": "^6.0.1",
-    "primevue": "3.47.2",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.0.0",
     "s": "^1.0.0",
     "semantic-release": "^23.0.0",
     "tailwindcss": "^3.4.1",
