@@ -14,7 +14,17 @@ import 'azion-theme'
 const app = createApp(App)
 
 app.use(InstantSearch)
-app.use(PrimeVue)
+app.use(PrimeVue, 
+    { unstyled: true, pt: 
+        {
+            button: {
+                root: 'cursor-pointer flex ',
+                label: 'flex items-center font-proto-mono',
+                icon: 'flex items-center'
+            },
+        } 
+    }
+)
 
 app.directive('tooltip', Tooltip)
 app.mount('#app')

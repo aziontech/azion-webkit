@@ -15,7 +15,16 @@ import 'azion-theme'
 import { withThemeByClassName } from '@storybook/addon-themes';
 
 setup((app) => {
-  app.use(PrimeVue);
+  app.use(PrimeVue, 
+    { unstyled: true, pt: 
+        {
+            button: {
+                root: 'cursor-pointer flex ',
+                label: 'flex items-center font-proto-mono',
+                icon: 'flex items-center'
+            },
+        } 
+    })
 });
 
 export const parameters = {
