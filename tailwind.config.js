@@ -39,6 +39,8 @@ module.exports = {
     extend: {
       fontFamily: {
         'mono': 'Roboto Mono',
+        'sora': ['Sora', 'sans-serif'],
+        'proto-mono': ['Proto Mono', 'monospace'],
       },
       borderColor: {
         header: '#3e3e3e',
