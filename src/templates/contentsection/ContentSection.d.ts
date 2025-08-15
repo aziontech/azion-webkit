@@ -40,6 +40,10 @@ export interface ContentSectionProps {
    * @defaultValue false
    */
   isSticky?: boolean
+  /**
+   * @defaultValue true
+   */
+  hasContainer?: boolean
 }
 
 export interface ContentSectionSlots {
