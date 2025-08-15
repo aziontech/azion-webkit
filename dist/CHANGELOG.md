@@ -1,3 +1,9 @@
+## [1.154.0](https://github.com/aziontech/azion-webkit/compare/v1.153.0...v1.154.0) (2025-08-15)
+
+### Features
+
+* add phone number formatting and validation to contact form ([6ebad1c](https://github.com/aziontech/azion-webkit/commit/6ebad1c7ff4ca0ab3f8054e5e21bc784ed6258db))
+
 ## [1.153.0](https://github.com/aziontech/azion-webkit/compare/v1.152.0...v1.153.0) (2025-08-05)
 
 ### Features
