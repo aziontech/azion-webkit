@@ -31,6 +31,8 @@ const props = {
     namePlaceholder: 'Enter your name',
     email: 'Corporate email',
     emailPlaceholder: 'Enter your corporate email',
+    phone: 'Phone',
+    phonePlaceholder: 'Enter your phone',
     segment: 'Business segment',
     segmentPlaceholder: 'Please select a business segment',
     segmentData: [
