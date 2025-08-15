@@ -46,6 +46,8 @@
                 id="phone"
                 v-model="phone"
                 :placeholder="t.phonePlaceholder"
+                @input="formatPhoneNumber"
+                @keydown="preventLetters"
               />
             </div>
           </template>
@@ -173,6 +175,35 @@
   const email = ref('')
   const message = ref('')
   const termsAcceptance = ref(true)
+
+  const preventLetters = (event) => {
+    // Allow: backspace, delete, tab, escape, enter, home, end, left, right, up, down
+    const allowedKeys = [8, 9, 27, 13, 46, 35, 36, 37, 39, 38, 40]
+
+    if (
+      allowedKeys.includes(event.keyCode) ||
+      // Allow Ctrl+A, Ctrl+C, Ctrl+V, Ctrl+X
+      (event.ctrlKey === true && [65, 67, 86, 88].includes(event.keyCode))
+    ) {
+      return
+    }
+
+    // Ensure that it is a number and stop the keypress
+    if (
+      (event.shiftKey || event.keyCode < 48 || event.keyCode > 57) &&
+      (event.keyCode < 96 || event.keyCode > 105)
+    ) {
+      event.preventDefault()
+    }
+  }
+
+  const formatPhoneNumber = (event) => {
+    let value = event.target.value.replace(/\D/g, '')
+    if (value.length >= 2) {
+      value = `+${value.substring(0, 2)} (${value.substring(2, 4)}) ${value.substring(4, 8)}-${value.substring(8, 12)}`
+    }
+    phone.value = value
+  }
 
   const onSubmit = async () => {
     const requestBody = {
