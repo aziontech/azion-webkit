@@ -14,6 +14,9 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
 export interface FormJobApplicationInHireProps {
   t: object
   jobId: string
+  referrerId?: string
+  isLinkedinRefferer?: boolean
+  lang?: string
 }
 
 /**
