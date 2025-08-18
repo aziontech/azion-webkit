@@ -9,8 +9,8 @@
       "url": "https://www.robsonjunior.dev/"
     },
     {
-      "name": "Luis Igreja",
-      "url": "https://github.com/lfsigreja"
+      "name": "Isaque Böck",
+      "url": "https://github.com/isaquebock"
     },
     {
       "name": "Eduardo de Cesaro Amarante",
@@ -47,7 +47,7 @@
     "@vee-validate/yup": "4.13.2",
     "algoliasearch": "^4.21.1",
     "autoprefixer": "^10.4.16",
-    "azion-theme": "^1.7.4",
+    "azion-theme": "^1.13.0",
     "country-state-city": "^3.2.1",
     "d3": "^7.9.0",
     "fs-extra": "^11.2.0",
