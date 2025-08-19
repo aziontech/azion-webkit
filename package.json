@@ -48,6 +48,7 @@
     "algoliasearch": "^4.21.1",
     "autoprefixer": "^10.4.16",
     "azion-theme": "^1.13.0",
+    "country-state-city": "^3.2.1",
     "d3": "^7.9.0",
     "fs-extra": "^11.2.0",
     "globe.gl": "^2.41.1",
