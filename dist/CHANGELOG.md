@@ -1,3 +1,9 @@
+## [1.155.0](https://github.com/aziontech/azion-webkit/compare/v1.154.0...v1.155.0) (2025-08-19)
+
+### Features
+
+* enhance FormJobApplicationInHire with dynamic location and phone input ([55ea991](https://github.com/aziontech/azion-webkit/commit/55ea99119be9537c5943cf49102c717f2b269ad6))
+
 ## [1.154.0](https://github.com/aziontech/azion-webkit/compare/v1.153.0...v1.154.0) (2025-08-15)
 
 ### Features
