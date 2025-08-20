@@ -42,13 +42,44 @@
                 for="phone"
                 >{{ t.phone }}</label
               >
-              <InputText
-                id="phone"
-                v-model="phone"
-                :placeholder="t.phonePlaceholder"
-                @input="formatPhoneNumber"
-                @keydown="preventLetters"
-              />
+              <div class="flex gap-2">
+                <Dropdown
+                  v-model="selectedPhoneCountry"
+                  :options="phoneCountries"
+                  optionLabel="name"
+                  optionValue="phonecode"
+                  placeholder="DDI"
+                  class="w-48"
+                  filter
+                  appendTo="self"
+                >
+                  <template #option="{ option }">
+                    <div class="flex align-items-center gap-2">
+                      <span>{{ option.flag }}</span>
+                      <span>{{ option.name }}</span>
+                      <span class="text-sm text-gray-500">+{{ option.phonecode }}</span>
+                    </div>
+                  </template>
+                  <template #value="{ value }">
+                    <div
+                      v-if="value"
+                      class="flex align-items-center gap-1"
+                    >
+                      <span>{{ getPhoneCountryFlag(value) }}</span>
+                      <span>+{{ value }}</span>
+                    </div>
+                  </template>
+                </Dropdown>
+                <InputText
+                  id="phone"
+                  type="tel"
+                  class="flex-1"
+                  v-model="phone"
+                  :placeholder="t.phonePlaceholder"
+                  @input="sanitizePhoneNumber"
+                  @keydown="preventLetters"
+                />
+              </div>
             </div>
           </template>
           <div class="flex flex-column gap-2">
@@ -134,12 +165,18 @@
   import InlineMessage from 'primevue/inlinemessage'
   import FormBlock from '../formblock/FormBlock.vue'
   import { hbspPostHandler } from '../src/services/hubspot-service'
-  import { ref } from 'vue'
+  import { ref, onMounted } from 'vue'
+  import { Country } from 'country-state-city'
 
   const props = defineProps({
     t: {
       type: Object,
       required: true
+    },
+    lang: {
+      type: String,
+      required: false,
+      default: 'en'
     },
     hubspot: {
       formId: String,
@@ -176,6 +213,34 @@
   const message = ref('')
   const termsAcceptance = ref(true)
 
+  const getDefaultPhoneCountry = () => {
+    if (props.lang === 'pt-br') return '55'
+    if (props.lang === 'es') return '52'
+    return '1' // US phone code
+  }
+  const selectedPhoneCountry = ref(getDefaultPhoneCountry())
+  const phoneCountries = ref([])
+
+  const fetchCountries = async () => {
+    try {
+      const allCountries = Country.getAllCountries()
+      phoneCountries.value = allCountries
+        .filter((country) => country.phonecode)
+        .map((country) => ({
+          name: country.name,
+          phonecode: country.phonecode,
+          flag: country.flag,
+          isoCode: country.isoCode
+        }))
+    } catch (error) {
+      phoneCountries.value = [
+        { name: 'United States', phonecode: '1', flag: '🇺🇸', isoCode: 'US' },
+        { name: 'Brazil', phonecode: '55', flag: '🇧🇷', isoCode: 'BR' },
+        { name: 'Mexico', phonecode: '52', flag: '🇲🇽', isoCode: 'MX' }
+      ]
+    }
+  }
+
   const preventLetters = (event) => {
     // Allow: backspace, delete, tab, escape, enter, home, end, left, right, up, down
     const allowedKeys = [8, 9, 27, 13, 46, 35, 36, 37, 39, 38, 40]
@@ -197,12 +262,18 @@
     }
   }
 
-  const formatPhoneNumber = (event) => {
-    let value = event.target.value.replace(/\D/g, '')
-    if (value.length >= 2) {
-      value = `+${value.substring(0, 2)} (${value.substring(2, 4)}) ${value.substring(4, 8)}-${value.substring(8, 12)}`
-    }
+  const sanitizePhoneNumber = (event) => {
+    const value = event.target.value.replace(/\D/g, '')
     phone.value = value
+  }
+
+  const getPhoneCountryFlag = (phoneCode) => {
+    if (phoneCode === '1') {
+      const usCountry = phoneCountries.value.find((c) => c.isoCode === 'US')
+      return usCountry?.flag ?? ''
+    }
+    const country = phoneCountries.value.find((c) => c.phonecode === phoneCode)
+    return country?.flag ?? ''
   }
 
   const onSubmit = async () => {
@@ -253,7 +324,7 @@
       requestBody.fields.push({
         objectTypeId: '0-1',
         name: 'phone',
-        value: phone.value
+        value: `+${selectedPhoneCountry.value}${phone.value}`
       })
     }
     const postURL = `https://api.hsforms.com/submissions/v3/integration/submit/${hubspot.companyId}/${hubspot.formId}`
@@ -268,4 +339,8 @@
 
     responseStatus.value = 'success'
   }
+
+  onMounted(() => {
+    fetchCountries()
+  })
 </script>
