@@ -7,11 +7,17 @@ export default {
   argTypes: {
     t: {
       description: 'Translations'
+    },
+    lang: {
+      description: 'Language for default phone country code',
+      control: { type: 'select' },
+      options: ['en', 'pt-br', 'es']
     }
   }
 }
 
 const props = {
+  lang: 'en',
   requester: 'https://www.azion.com',
   requesterName: 'Page Title',
   hubspot: {

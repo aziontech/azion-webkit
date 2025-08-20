@@ -13,6 +13,7 @@ import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
  */
 export interface FormContactUsProps {
   t: object
+  lang?: string
   hubspot: object
   requester: string
   requesterName: string
