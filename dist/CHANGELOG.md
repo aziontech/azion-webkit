@@ -1,3 +1,9 @@
+## [1.156.0](https://github.com/aziontech/azion-webkit/compare/v1.155.0...v1.156.0) (2025-08-25)
+
+### Features
+
+* add hasContainer prop to ContentSection and improve typography ([fb998fb](https://github.com/aziontech/azion-webkit/commit/fb998fbe583d3f4b06beec8a07f9ebbd16edff7b))
+
 ## [1.155.0](https://github.com/aziontech/azion-webkit/compare/v1.154.0...v1.155.0) (2025-08-19)
 
 ### Features
