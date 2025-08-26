@@ -216,7 +216,7 @@
   const getDefaultPhoneCountry = () => {
     if (props.lang === 'pt-br') return '55'
     if (props.lang === 'es') return '52'
-    return '1' // US phone code
+    return '1'
   }
   const selectedPhoneCountry = ref(getDefaultPhoneCountry())
   const phoneCountries = ref([])
