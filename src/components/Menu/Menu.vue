@@ -10,7 +10,7 @@
           v-if="!menuitem.subMenuColumns || !menuitem.subMenuColumns.length"
           :href="menuitem.href || ''"
           :title="menuitem.label || ''"
-          class="p-button p-0 p-button-text p-button-primary p-button-sm whitespace-nowrap text-white active:bg-header-button-hover hover:surface-hover"
+          class="p-button shadow-none p-0 p-button-text p-button-primary p-button-sm whitespace-nowrap text-white active:bg-header-button-hover hover:surface-hover"
           :class="getBreakpointClass(menuitem)"
         >
           <span class="text-black font-sora text-sm font-normal">
@@ -29,7 +29,7 @@
               }
             "
             tabindex="0"
-            class="p-button p-button-text static p-button-primary p-button-sm whitespace-nowrap transition delay-75 duration-300 active:bg-header-button-hover hover:surface-hover p-0 bottom-6"
+            class="p-button shadow-none p-button-text static p-button-primary p-button-sm whitespace-nowrap transition delay-75 duration-300 active:bg-header-button-hover hover:surface-hover p-0 bottom-6"
             :class="activeMenu == menuitem.ref && 'surface-hover bottom-0'"
           >
             <div class="flex flex-row gap-2 text-black items-center">
