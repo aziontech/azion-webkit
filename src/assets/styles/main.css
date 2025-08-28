@@ -92,3 +92,11 @@ body {
   font-weight: 400;
   font-display: swap;
 }
+
+.font-sora {
+  font-family: 'Sora', sans-serif;
+}
+
+.font-proto-mono {
+  font-family: 'Proto Mono', sans-serif;
+}

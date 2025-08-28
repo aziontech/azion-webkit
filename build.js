@@ -5,7 +5,7 @@ const outDir = './dist';
 
 
 function fileEndsValidator(f) {
-  return f === 'package.json' || f.endsWith('d.ts') || f.endsWith('vue') || f.endsWith('js') || f.endsWith('json')
+  return f === 'package.json' || f.endsWith('d.ts') || f.endsWith('vue') || f.endsWith('js') || f.endsWith('ts') || f.endsWith('json')
 };
 
 function copyDependencies(inFolder, outFolder) {
@@ -78,7 +78,12 @@ function addPackageJson() {
 }
 
 addPackageJson();
+
+console.log('Copying templates...');
 copyDependencies('./src/templates/', `${outDir}/`);
+copyDependencies('./src/components/', `${outDir}/components`);
+copyDependencies('./src/blocks/', `${outDir}/blocks`);
+
 fs.copySync(path.resolve(__dirname, './tailwind.config.js'), `${outDir}/tailwind.config.js`);
 fs.copySync(path.resolve(__dirname, './src/assets'), `${outDir}/src/assets`);
 fs.copySync(path.resolve(__dirname, './src/services'), `${outDir}/src/services`);
