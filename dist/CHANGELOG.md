@@ -1,3 +1,9 @@
+## [1.159.0](https://github.com/aziontech/azion-webkit/compare/v1.158.0...v1.159.0) (2025-08-28)
+
+### Features
+
+* add responsive layout to Footer component with mobile breakpoints ([f0b7114](https://github.com/aziontech/azion-webkit/commit/f0b711428a4ac49202c506fa9b18c21d1af49502))
+
 ## [1.158.0](https://github.com/aziontech/azion-webkit/compare/v1.157.0...v1.158.0) (2025-08-28)
 
 ### Features
