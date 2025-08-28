@@ -1,3 +1,9 @@
+## [1.157.0](https://github.com/aziontech/azion-webkit/compare/v1.156.0...v1.157.0) (2025-08-28)
+
+### Features
+
+* implement header and menu components with mobile support ([3a3f941](https://github.com/aziontech/azion-webkit/commit/3a3f94163fd3c3badd48f03ff452fca8d4256d54))
+
 ## [1.156.0](https://github.com/aziontech/azion-webkit/compare/v1.155.0...v1.156.0) (2025-08-25)
 
 ### Features
