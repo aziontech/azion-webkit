@@ -1,3 +1,9 @@
+## [1.158.0](https://github.com/aziontech/azion-webkit/compare/v1.157.0...v1.158.0) (2025-08-28)
+
+### Features
+
+* add footer component with language selector, system status, and social links ([83a39ab](https://github.com/aziontech/azion-webkit/commit/83a39abc9657c327466e60cad3da3c153c99d31d))
+
 ## [1.157.0](https://github.com/aziontech/azion-webkit/compare/v1.156.0...v1.157.0) (2025-08-28)
 
 ### Features
