@@ -235,6 +235,26 @@ export const menu = {
         },
         [
           {
+            label: 'test',
+            icon: '',
+            description: 'Application development and deployment',
+            href: '/pt-br/produtos/build/',
+            items: [
+              {
+                icon: 'ai ai-application-accelerator',
+                label: 'Welcome to Azion Docs',
+                description: 'Edge growth, scalability, performance, and security.',
+                href: '/pt-br/'
+              },
+              {
+                icon: 'ai ai-edge-functions',
+                label: 'Guides',
+                description: 'Guides description here',
+                href: '/pt-br/'
+              },
+            ]
+          },
+          {
             label: 'Community',
             communityComponent: true
           }
