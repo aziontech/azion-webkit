@@ -1,3 +1,9 @@
+## [1.160.0](https://github.com/aziontech/azion-webkit/compare/v1.159.1...v1.160.0) (2025-08-29)
+
+### Features
+
+* add community section to Developer menu with Discord link and styling updates ([9f5f52f](https://github.com/aziontech/azion-webkit/commit/9f5f52f75558963750f195979b6da81844f83bf1))
+
 ## [1.159.1](https://github.com/aziontech/azion-webkit/compare/v1.159.0...v1.159.1) (2025-08-29)
 
 ### Bug Fixes
