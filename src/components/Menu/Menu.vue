@@ -95,7 +95,7 @@
                       :key="index"
                       class="gap-3 min-w-72 first:pb-3"
                     >
-                      <template v-if="item.items && item.label">
+                      <template v-if="item.items && item.label && !item.communityComponent">
                         <span
                           class="font-proto-mono text-xs pb-3 pt-1 block border-b border-neutral-900"
                         >
@@ -117,23 +117,25 @@
                           <p class="text-sm block">{{ item.description }}</p>
                         </li>
                       </template>
+
+                      <template v-if="item.communityComponent">
+                        <span
+                          class="font-proto-mono text-xs pb-3 pt-1 block border-b border-neutral-900"
+                        >
+                          {{ item.label }}</span
+                        >
+                        <div class="flex items-center gap-2 mt-2 p-1 ">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="37" viewBox="0 0 35 37" fill="none">
+                            <path d="M31.128 30L20.112 22.224V15.312L31.128 7.536L34.368 13.152L24.936 17.256V20.28L34.368 24.384L31.128 30ZM19.968 0.911997L18.744 14.376L12.696 17.832L0.456 12.144L3.696 6.6L11.976 12.648L14.64 11.136L13.488 0.983996L19.968 0.911997ZM0.456 25.392L12.696 19.704L18.744 23.16L19.968 36.624L13.488 36.552L14.64 26.4L11.976 24.888L3.696 30.936L0.456 25.392Z" fill="#070707"/>
+                          </svg>
+                          <h3 class="font-sora text-sm ">{{ communityData.label }}</h3>
+                          <a :href="communityData.href" class="pi pi-external-link text-black cursor-pointer hover:text-neutral-700">
+                          </a>
+                        </div>
+                      </template>
                     </div>
                   </template>
-                  <template v-if="subItem.communityComponent">
-                    <span
-                      class="font-proto-mono text-xs pb-3 pt-1 block border-b border-neutral-900"
-                    >
-                      {{ subItem.label }}</span
-                    >
-                    <div class="flex items-center gap-2 mt-2 p-1 ">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="37" viewBox="0 0 35 37" fill="none">
-                        <path d="M31.128 30L20.112 22.224V15.312L31.128 7.536L34.368 13.152L24.936 17.256V20.28L34.368 24.384L31.128 30ZM19.968 0.911997L18.744 14.376L12.696 17.832L0.456 12.144L3.696 6.6L11.976 12.648L14.64 11.136L13.488 0.983996L19.968 0.911997ZM0.456 25.392L12.696 19.704L18.744 23.16L19.968 36.624L13.488 36.552L14.64 26.4L11.976 24.888L3.696 30.936L0.456 25.392Z" fill="#070707"/>
-                      </svg>
-                      <h3 class="font-sora text-sm ">{{ communityData.label }}</h3>
-                      <a :href="communityData.href" class="pi pi-external-link text-black cursor-pointer hover:text-neutral-700">
-                      </a>
-                    </div>
-                  </template>
+
                 </ul>
               </div>
             </div>
