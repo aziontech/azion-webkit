@@ -1,3 +1,9 @@
+## [1.162.0](https://github.com/aziontech/azion-webkit/compare/v1.161.0...v1.162.0) (2025-08-29)
+
+### Features
+
+* fix menu mobile ([e0a2907](https://github.com/aziontech/azion-webkit/commit/e0a29072587c4d8ba1380a48e1a047ae7be1cdf7))
+
 ## [1.161.0](https://github.com/aziontech/azion-webkit/compare/v1.160.0...v1.161.0) (2025-08-29)
 
 ### Features
