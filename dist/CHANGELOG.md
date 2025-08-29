@@ -1,3 +1,9 @@
+## [1.159.1](https://github.com/aziontech/azion-webkit/compare/v1.159.0...v1.159.1) (2025-08-29)
+
+### Bug Fixes
+
+* remove field ([08d42c2](https://github.com/aziontech/azion-webkit/commit/08d42c2eb8a3c0f508cbf92126f3a5d6cf5be747))
+
 ## [1.159.0](https://github.com/aziontech/azion-webkit/compare/v1.158.0...v1.159.0) (2025-08-28)
 
 ### Features
