@@ -27,7 +27,7 @@
       <ButtonPrime
         unstyled
         @click="visibleRight = false"
-        class="w-8 h-8 rounded-md flex justify-center items-center text-white border-1 mr-4 mt-2 border-neutral-700"
+        class="w-8 h-8 rounded-md flex justify-center items-center text-white border-1 mr-4 mt-6 border-neutral-700"
         icon="pi pi-times"
         size="large"
         :pt="{
@@ -100,11 +100,11 @@
     </PanelMenu>
     <template v-if="menuSecondary">
       <Menu
-        class="w-full border-none bg-transparent pb-14"
+        class="w-full border-none bg-transparent"
         :model="menuSecondary"
         :pt="{
           root: {
-            class: 'p-0 w-full border-none bg-transparent'
+            class: 'p-0 pb-14 w-full border-none bg-transparent'
           }
         }"
       >
@@ -136,7 +136,7 @@
 
     <template v-if="bottomButtons">
       <div
-        class="fixed justify-center bottom-3 flex gap-2 items-center self-end left-1/2 transform -translate-x-1/2"
+        class="w-full fixed justify-center bottom-3 flex gap-2 items-center self-end left-1/2 transform -translate-x-1/2"
       >
         <Button
           v-for="(button, index) in bottomButtons"
@@ -144,9 +144,10 @@
           :href="button.url"
           type="secondary"
           size="small"
-          class="max-h-11 whitespace-nowrap font-sm"
+          class="max-h-11 whitespace-nowrap font-sm h-[42px]"
           :title="button.urlTitle"
-          :label="button.label"
+          customPadding="px-2 py-1"
+          :label="button.label" 
           :icon="button.icon"
         />
       </div>
