@@ -1,3 +1,9 @@
+## [1.161.0](https://github.com/aziontech/azion-webkit/compare/v1.160.0...v1.161.0) (2025-08-29)
+
+### Features
+
+* add test section with Welcome and Guides items to header navigation ([4246243](https://github.com/aziontech/azion-webkit/commit/4246243d9b9669b46c38932f226073f9e8bf7c26))
+
 ## [1.160.0](https://github.com/aziontech/azion-webkit/compare/v1.159.1...v1.160.0) (2025-08-29)
 
 ### Features
