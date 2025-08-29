@@ -1,3 +1,9 @@
+## [1.162.1](https://github.com/aziontech/azion-webkit/compare/v1.162.0...v1.162.1) (2025-08-29)
+
+### Bug Fixes
+
+* adjust menu ([6af0142](https://github.com/aziontech/azion-webkit/commit/6af0142df1fca01193dd66b1de725c88fce37f62))
+
 ## [1.162.0](https://github.com/aziontech/azion-webkit/compare/v1.161.0...v1.162.0) (2025-08-29)
 
 ### Features
