@@ -199,6 +199,7 @@ export const menu = {
     {
       label: 'Developer',
       ref: 'developersPanel',
+      subMenuColor: 'bg-[#A09EBC]',
       subMenuColumns: [
         {
           label: 'Docs',
@@ -233,36 +234,8 @@ export const menu = {
           ]
         },
         {
-          label: 'Docs',
-          icon: '',
-          description: 'Application development and deployment',
-          href: '/pt-br/produtos/build/',
-          items: [
-            {
-              icon: 'ai ai-application-accelerator',
-              label: 'Welcome to Azion Docs',
-              description: 'Edge growth, scalability, performance, and security.',
-              href: '/pt-br/'
-            },
-            {
-              icon: 'ai ai-edge-functions',
-              label: 'Guides',
-              description: 'Guides description here',
-              href: '/pt-br/'
-            },
-            {
-              icon: 'ai ai-edge-cache',
-              label: 'Dev Tools',
-              description: 'Dev Tools description here',
-              href: '/pt-br/'
-            },
-            {
-              icon: 'ai ai-image-processor',
-              label: 'Release Notes',
-              description: 'Image Processor description here',
-              href: '/pt-br/'
-            }
-          ]
+          label: 'Community',
+          communityComponent: true
         }
       ]
     },
@@ -705,5 +678,10 @@ export const algoliaModel = [
   { label: 'Blog' },
   { label: 'Cases' }
 ]
+
+export const communityData = {
+  label: 'Join Our Community',
+  href: 'https://discord.com/invite/pM8ANzztuB'
+}
 
 export const algoliaInputPlaceholder = 'Digite sua busca'
