@@ -3,7 +3,7 @@
     :label="label"
     :size="size"
     :icon="icon"
-    :class="[buttonClasses, customPadding]"
+    :class="[buttonClasses, customClass]"
     :pt="{
       icon: { 
         class: iconClasses
@@ -32,7 +32,7 @@
       default: 'secondary'
     },
     icon: String,
-    customPadding: {
+    customClass: {
       type: String,
       default: 'px-6 py-4'
     }

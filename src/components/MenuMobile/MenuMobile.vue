@@ -23,7 +23,7 @@
       content: { class: 'px-4' }
     }"
   >
-    <div class="flex justify-end items-center">
+    <div class="flex justify-end items-center mt-3">
       <ButtonPrime
         unstyled
         @click="visibleRight = false"
@@ -136,7 +136,7 @@
 
     <template v-if="bottomButtons">
       <div
-        class="w-full fixed justify-center bottom-3 flex gap-2 items-center self-end left-1/2 transform -translate-x-1/2"
+        class="w-full fixed justify-center bottom-10 flex gap-2 items-center self-end left-1/2 transform -translate-x-1/2"
       >
         <Button
           v-for="(button, index) in bottomButtons"
@@ -144,9 +144,9 @@
           :href="button.url"
           type="secondary"
           size="small"
-          class="max-h-11 whitespace-nowrap font-sm h-[42px]"
+          class="max-h-11 whitespace-nowrap font-sm "
           :title="button.urlTitle"
-          customPadding="px-2 py-1"
+          customClass="px-2 py-1 !h-[42px]"
           :label="button.label" 
           :icon="button.icon"
         />
