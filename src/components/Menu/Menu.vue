@@ -65,7 +65,7 @@
                   v-for="(subItem, index) in menuitem.subMenuColumns"
                   :key="index"
                   :ref="`column-${menuitem.ref}-${index}`"
-                  class="gap-2 min-w-72 translate-y-2 transition-all duration-700 ease-out"
+                  class="gap-2 w-80 translate-y-2 transition-all duration-700 ease-out"
                 >
                   <template v-if="subItem.items && subItem.label">
                     <span

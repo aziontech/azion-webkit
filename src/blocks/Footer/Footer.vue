@@ -24,7 +24,7 @@
       <div class="flex flex-col box-border gap-1 lg:flex-row justify-between w-full pt-10">
         <div class="flex justify-start w-full lg:w-1/3 flex-col ">
           <span class="text-black font-proto-mono text-xs border-b border-black pb-2 mb-4">
-            About us
+            {{ content.title }}
           </span>
           <h3 class="text-3xl text-black leading-none font-sora tracking-tight">
             Our Mission is to <strong class="font-sora">Power</strong> the <br /> Hyper-Connected Economy
@@ -92,6 +92,7 @@
     cta: Object,
     copyright: String,
     securityInformation: Object,
-    socialButtons: Array
+    socialButtons: Array,
+    content: Object
   })
 </script>
