@@ -1,3 +1,8 @@
+export const content = {
+  title: 'About us',
+  description: 'Our Mission is to Power the Hyper-Connected Economy',
+}
+
 export const listData = [
   {
     title: 'Company',
