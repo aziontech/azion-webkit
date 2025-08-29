@@ -233,10 +233,12 @@ export const menu = {
             }
           ]
         },
-        {
-          label: 'Community',
-          communityComponent: true
-        }
+        [
+          {
+            label: 'Community',
+            communityComponent: true
+          }
+        ]
       ]
     },
     {
