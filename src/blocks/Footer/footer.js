@@ -77,6 +77,7 @@ export const listData = [
         link: '/en/contact-sales/'
       },
       {
+        icon: true,
         title: 'Professional Services',
         link: '/en/professional-services/'
       }

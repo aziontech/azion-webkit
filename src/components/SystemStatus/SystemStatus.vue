@@ -5,7 +5,7 @@
                 class="h-2 w-2 flex items-center justify-center rounded-full" 
                 :style="{ backgroundColor: color }"
             ></span>
-            <span class="font-proto-mono text-white leading-relaxed font-medium text-xs">{{ label }}</span>
+            <span class="font-proto-mono text-white leading-relaxed text-xs">{{ label }}</span>
         </div>
     </a>
   </template>
