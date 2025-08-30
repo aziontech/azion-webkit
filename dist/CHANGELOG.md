@@ -1,3 +1,9 @@
+## [1.167.0](https://github.com/aziontech/azion-webkit/compare/v1.166.0...v1.167.0) (2025-08-30)
+
+### Features
+
+* add new dialog ([c39ef82](https://github.com/aziontech/azion-webkit/commit/c39ef8264861f4d84376e25497cd8e2d804d30dd))
+
 ## [1.166.0](https://github.com/aziontech/azion-webkit/compare/v1.165.0...v1.166.0) (2025-08-30)
 
 ### Features
