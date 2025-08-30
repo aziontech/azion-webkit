@@ -1,3 +1,9 @@
+## [1.165.0](https://github.com/aziontech/azion-webkit/compare/v1.164.0...v1.165.0) (2025-08-30)
+
+### Features
+
+* add menu refine ([437d29c](https://github.com/aziontech/azion-webkit/commit/437d29cd494e17bc914912b7c7f83628a33de471))
+
 ## [1.164.0](https://github.com/aziontech/azion-webkit/compare/v1.163.0...v1.164.0) (2025-08-30)
 
 ### Features
