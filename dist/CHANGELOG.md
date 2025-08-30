@@ -1,3 +1,13 @@
+## [1.166.0](https://github.com/aziontech/azion-webkit/compare/v1.165.0...v1.166.0) (2025-08-30)
+
+### Features
+
+* add algolia dialog ([ccf5329](https://github.com/aziontech/azion-webkit/commit/ccf532941ebf20ce8f2b1d0ab39d7d4f4a31a7d1))
+
+### Bug Fixes
+
+* adjust import ([920259a](https://github.com/aziontech/azion-webkit/commit/920259acb85a0b3aa0298bb6220160f4a63a3af3))
+
 ## [1.165.0](https://github.com/aziontech/azion-webkit/compare/v1.164.0...v1.165.0) (2025-08-30)
 
 ### Features
