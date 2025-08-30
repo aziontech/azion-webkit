@@ -162,16 +162,26 @@
               for="salary"
               >{{ fields.deseriredSalaray }}</label
             >
-            <InputNumber
-              v-model="targetSalary"
-              id="salary"
-              class="w-full"
-              v-bind="targetSalaryAttrs"
-              mode="currency"
-              currency="BRL"
-              locale="pt-BR"
-              :class="{ 'p-invalid': errors.targetSalary }"
-            />
+            <div class="flex gap-2">
+              <Dropdown
+                v-model="selectedCurrency"
+                :options="currencies"
+                placeholder="Currency"
+                class="w-32"
+                appendTo="self"
+                filter
+              />
+              <InputNumber
+                v-model="targetSalary"
+                id="salary"
+                class="flex-1"
+                v-bind="targetSalaryAttrs"
+                mode="currency"
+                :currency="selectedCurrency"
+                locale="pt-br"
+                :class="{ 'p-invalid': errors.targetSalary }"
+              />
+            </div>
             <small
               id="username-help"
               class="p-error"
@@ -406,8 +416,16 @@
     return '1' // US phone code
   }
 
+  const getDefaultCurrency = () => {
+    if (props.lang === 'pt-br') return 'BRL'
+    if (props.lang === 'es') return 'MXN'
+    return 'USD'
+  }
+
   const selectedPhoneCountry = ref(getDefaultPhoneCountry())
+  const selectedCurrency = ref(getDefaultCurrency())
   const phoneCountries = ref([])
+  const currencies = ref([])
 
   const countries = ref([])
   const states = ref([])
@@ -430,6 +448,8 @@
           flag: country.flag,
           isoCode: country.isoCode
         }))
+
+      currencies.value = Array.from(new Set(countries.value.map((country) => country.currency)))
     } catch (error) {
       countries.value = [
         { name: 'United States', isoCode: 'US' },
@@ -442,6 +462,8 @@
         { name: 'Brazil', phonecode: '55', flag: '🇧🇷', isoCode: 'BR' },
         { name: 'Mexico', phonecode: '52', flag: '🇲🇽', isoCode: 'MX' }
       ]
+
+      currencies.value = [ USD, BRL, MXN ]
     } finally {
       loadingCountries.value = false
     }
@@ -541,7 +563,7 @@
       location,
       fileName: fileName.value,
       targetSalary: {
-        currency: 'BRL',
+        currency: selectedCurrency.value,
         type: 'CLT',
         value: values.targetSalary
       }
