@@ -12,12 +12,12 @@
   <Button
     icon="pi pi-search"
     aria-label="Search"
-    class="text-neutral-900 flex-none border-header p-2 bg-neutral-100"
+    class="text-neutral-900 flex-none border-header p-2 xl:bg-neutral-100 bg-transparent"
     @click="activeDialog"
     :pt="{
-      root: { class: 'p-6' },
+      root: { class: 'xl:p-6' },
       label: { class: 'text-neutral-900' },
-      icon: { class: 'text-neutral-900' }
+      icon: { class: 'xl:text-neutral-900' }
     }"
   />
 </template>
