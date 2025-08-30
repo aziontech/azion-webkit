@@ -1,52 +1,45 @@
 <template>
-  <Dialog
-    modal
-    v-model:visible="isDialogActive"
-    @hide="toggleDialog(false)"
-    :showHeader="false"
-    :blockScroll="true"
-    position="top"
-    class="w-[95vw] md:w-[85vw] lg:w-[75vw] xl:w-[65vw]"
-    dismissableMask
-    :pt="{
-      content: {
-        class: 'p-0'
-      }
-    }"
-  >
-    <KeyboardKey
-      v-if="!hasInputValue"
-      keyname="esc"
-      class="absolute z-50 right-2 top-2"
-      @clicked="toggleDialog(false)"
-    />
+  <AlgoliaDialog
+    :algoliaAppId="algoliaAppId"
+    :algoliaApiKey="algoliaApiKey"
+    :algoliaIndex="algoliaIndex"
+    :algoliaModel="algoliaModel"
+    :isDialogActive="isDialogActive"
+    @close="closeDialog"
+    :inputPlaceholder="inputPlaceholder"
+  />
 
-    <AlgoliaInstantSearch
-      :algoliaAppId="algoliaAppId"
-      :algoliaApiKey="algoliaApiKey"
-      :algoliaIndex="algoliaIndex"
-      :algoliaModel="algoliaModel"
-      :inputPlaceholder="inputPlaceholder"
-      @keyup="pressKeyboardKey"
-      @keydown="pressKeyboardKey"
-    />
-  </Dialog>
+  <Button
+    icon="pi pi-search"
+    aria-label="Search"
+    class="text-neutral-900 flex-none border-header p-2 bg-neutral-100"
+    @click="activeDialog"
+    :pt="{
+      root: { class: 'p-6' },
+      label: { class: 'text-neutral-900' },
+      icon: { class: 'text-neutral-900' }
+    }"
+  />
 </template>
 
 <script setup>
-  import { ref, onUpdated } from 'vue'
-  import Dialog from 'primevue/dialog'
-  import AlgoliaInstantSearch from '../ais/AlgoliaInstantSearch.vue'
-  import KeyboardKey from '../keyboardkey/KeyboardKey.vue'
+  import { ref } from 'vue'
+  import Button from 'primevue/button'
+  import AlgoliaDialog from '../aisdialog/AlgoliaDialog.vue'
 
-  const emit = defineEmits(['close'])
-  const hasInputValue = ref(false)
   const props = defineProps({
-    isDialogActive: Boolean,
-    algoliaAppId: String,
-    algoliaApiKey: String,
-    algoliaIndex: Array,
-    algoliaModel: Array,
+    algoliaAppId: {
+      type: String
+    },
+    algoliaApiKey: {
+      type: String
+    },
+    algoliaIndex: {
+      type: Array
+    },
+    algoliaModel: {
+      type: Array
+    },
     inputPlaceholder: {
       type: String,
       required: false,
@@ -55,27 +48,37 @@
   })
 
   const { algoliaAppId, algoliaApiKey, algoliaIndex, algoliaModel } = props
-  const isDialogActive = ref(props.isDialogActive)
 
-  onUpdated(() => {
-    isDialogActive.value =
-      isDialogActive.value === props.isDialogActive ? isDialogActive.value : props.isDialogActive
-  })
+  let isDialogActive = ref(false)
+  const HTML = document.querySelectorAll('html')[0]
 
-  function toggleDialog(action) {
-    if (!action) {
-      isDialogActive.value = false
-      emit('close')
+  function setHtmlOverflow(overflow) {
+    HTML.style.overflow = overflow
+  }
 
-      return
-    }
+  function focusSearchInput() {
+    setTimeout(function () {
+      document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0]?.focus()
+    }, 800)
+  }
 
+  function activeDialog() {
     isDialogActive.value = true
-    emit('open')
+
+    focusSearchInput()
+    setHtmlOverflow('hidden')
   }
 
-  function pressKeyboardKey() {
-    let algoliaSearchInput = document.querySelectorAll('.ais-SearchBox-form input[type=search]')[0]
-    algoliaSearchInput.value?.length ? (hasInputValue.value = true) : (hasInputValue.value = false)
+  function closeDialog() {
+    isDialogActive.value = false
+    setHtmlOverflow('auto')
   }
+
+  /////////////////////////////////
+  // CAPTURE cmd + k or ctrl + k //
+  /////////////////////////////////
+
+  window.addEventListener('keydown', (event) => {
+    if ((event.metaKey || event.ctrlKey) && event.key === 'k') activeDialog()
+  })
 </script>
