@@ -25,7 +25,7 @@
   <script setup>
     import { ref } from 'vue'
     import Button from 'primevue/button'
-    import AlgoliaDialog from '../../templates/aisdialog/AlgoliaDialog.vue'
+    import AlgoliaDialog from '../aisdialog/AlgoliaDialog.vue'
   
     const props = defineProps({
       algoliaAppId: {
