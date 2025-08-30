@@ -160,14 +160,15 @@
             <label
               class="text-sm"
               for="salary"
-              >{{ fields.deseriredSalaray }}</label
             >
+              {{ fields.deseriredSalaray }}
+            </label>
             <div class="flex gap-2">
               <Dropdown
                 v-model="selectedCurrency"
                 :options="currencies"
                 placeholder="Currency"
-                class="w-32"
+                class="w-48"
                 appendTo="self"
                 filter
               />
@@ -463,7 +464,7 @@
         { name: 'Mexico', phonecode: '52', flag: '🇲🇽', isoCode: 'MX' }
       ]
 
-      currencies.value = [ USD, BRL, MXN ]
+      currencies.value = [USD, BRL, MXN]
     } finally {
       loadingCountries.value = false
     }
@@ -563,7 +564,7 @@
       location,
       fileName: fileName.value,
       targetSalary: {
-        currency: selectedCurrency.value,
+        currency: selectedCurrency.value ?? 'BRL',
         type: 'CLT',
         value: values.targetSalary
       }
