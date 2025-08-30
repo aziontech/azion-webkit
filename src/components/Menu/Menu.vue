@@ -1,10 +1,10 @@
 <template>
   <nav class="hidden xl:flex relative">
-    <ul class="flex bg-neutral-200 p-2 rounded-md max-h-[3.5rem]">
+    <ul class="flex bg-neutral-200 p-1 rounded-md max-h-[3rem]">
       <li
         v-for="(menuitem, index) in menuData.menu"
         :key="index"
-        class="py-2 px-4 flex items-center hover:bg-neutral-100 transition duration-300 delay-75 rounded-md h-[40px]"
+        class="py-1 px-4 flex items-center hover:bg-neutral-100 transition duration-300 delay-75 rounded-md h-[2.5rem]"
       >
         <a
           v-if="!menuitem.subMenuColumns || !menuitem.subMenuColumns.length"
