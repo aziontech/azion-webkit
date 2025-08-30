@@ -44,7 +44,7 @@
               <li
                 v-for="({ link, title, icon }, i) in list"
                 :key="i"
-                class="text-sm "
+                class="text-sm w-fit"
               >
                 <a
                   :href="link"
