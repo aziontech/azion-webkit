@@ -1,3 +1,9 @@
+## [1.169.0](https://github.com/aziontech/azion-webkit/compare/v1.168.0...v1.169.0) (2025-08-30)
+
+### Features
+
+* add w-fit in footer list menu ([3c5d6ff](https://github.com/aziontech/azion-webkit/commit/3c5d6ffad42e00eab2b4d235cc35292a6cfa601e))
+
 ## [1.168.0](https://github.com/aziontech/azion-webkit/compare/v1.167.2...v1.168.0) (2025-08-30)
 
 ### Features
