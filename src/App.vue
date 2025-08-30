@@ -2,7 +2,7 @@
   <Container>
     <AzionLogo
       href="https://www.azion.com/"
-      hrefTitle="Azion"
+      hrefTitle="Azion Technologies"
       target="_self"
       version="min"
     />
