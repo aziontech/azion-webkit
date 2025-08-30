@@ -7,7 +7,7 @@
           </div>
 
           <div class="w-full lg:w-1/2 flex justify-between items-center flex-wrap">
-            <h3 class="text-white font-proto-mono text-xs font-medium">{{ securityInformation.title }}</h3>
+            <h3 class="text-white font-proto-mono text-xs">{{ securityInformation.title }}</h3>
             <div class="flex gap-3 mt-4 lg:mt-0">
               <Tag 
                 v-for="tag in securityInformation.tags" 
@@ -42,16 +42,18 @@
             }}</span>
             <ul class="list-none p-0 m-0 mt-4 flex flex-col gap-2">
               <li
-                v-for="({ link, title }, i) in list"
+                v-for="({ link, title, icon }, i) in list"
                 :key="i"
-                class="text-sm"
+                class="text-sm "
               >
                 <a
                   :href="link"
                   target="_self"
-                  class="font-sora relative inline-block transition-colors duration-300 hover:text-gray-700 after:content-[''] after:absolute after:w-0 after:h-[1px] after:bottom-0 after:left-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
+                  class="font-sora relative flex items-center gap-2 transition-colors duration-300 hover:text-gray-700 after:content-[''] after:absolute after:w-0 after:h-[1px] after:bottom-0 after:left-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {{ title }}
+
+                  <span v-if="icon" class="pi pi-external-link"></span>
                 </a>
               </li>
             </ul>
