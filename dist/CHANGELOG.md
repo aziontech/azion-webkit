@@ -1,3 +1,9 @@
+## [1.168.0](https://github.com/aziontech/azion-webkit/compare/v1.167.2...v1.168.0) (2025-08-30)
+
+### Features
+
+* bump version ([e09bc0c](https://github.com/aziontech/azion-webkit/commit/e09bc0c376e43394903c120392900be71be921ae))
+
 ## [1.167.2](https://github.com/aziontech/azion-webkit/compare/v1.167.1...v1.167.2) (2025-08-30)
 
 ### Bug Fixes
