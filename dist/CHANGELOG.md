@@ -1,3 +1,9 @@
+## [1.163.0](https://github.com/aziontech/azion-webkit/compare/v1.162.1...v1.163.0) (2025-08-30)
+
+### Features
+
+* update UI components with new tertiary button style and menu layout improvements ([69de19b](https://github.com/aziontech/azion-webkit/commit/69de19b8e8740a5845f15976e383e20a0ea2a5ab))
+
 ## [1.162.1](https://github.com/aziontech/azion-webkit/compare/v1.162.0...v1.162.1) (2025-08-29)
 
 ### Bug Fixes
