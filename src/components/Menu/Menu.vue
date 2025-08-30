@@ -74,19 +74,21 @@
                       {{ subItem.label }}</span
                     >
                     <li
-                      class="flex flex-col text-sm gap-1 text-black mt-2 hover:bg-neutral-100 transition duration-300 delay-75 p-1 rounded-md"
+                      class="flex flex-col text-sm gap-1 text-black mt-2 transition duration-300 delay-75"
                       v-for="(item, index) in subItem.items"
                       :key="index"
                     >
                       <a
                         :href="item.href"
                         :title="item.label"
+                        class="px-2 py-1 rounded-md hover:bg-white/50"
                       >
                         <span class="font-sora text-sm font-semibold">
                           {{ item.label }}
                         </span>
+
+                        <p class="text-sm block">{{ item.description }}</p>
                       </a>
-                      <p class="text-sm block">{{ item.description }}</p>
                     </li>
                   </template>
                   <template v-if="subItem.length">
@@ -102,20 +104,21 @@
                           {{ item.label }}</span
                         >
                         <li
-                          class="flex flex-col text-sm gap-1 text-black mt-2 hover:bg-neutral-100 transition duration-300 delay-75 p-1 rounded-md"
+                          class="flex flex-col text-sm gap-1 text-black mt-2"
                           v-for="(item, index) in item.items"
                           :key="index"
                         >
                           <a
                             :href="item.href"
                             :title="item.label"
+                            class="px-2 py-1 rounded-md hover:bg-white/50"
                           >
                             <span class="font-sora text-sm font-semibold">
                               {{ item.label }}
                             </span>
-                          </a>
-                          <p class="text-sm block">{{ item.description }}</p>
-                        </li>
+
+                            <p class="text-sm block">{{ item.description }}</p>
+                          </a>                        </li>
                       </template>
 
                       <template v-if="item.communityComponent">

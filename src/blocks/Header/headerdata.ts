@@ -617,7 +617,7 @@ export const menuMobile = {
 
 export const secondaryMenu = [
   {
-    text: 'Request an Expert',
+    text: 'Contact',
     title: 'Request an Expert',
     link: '/pt-br/lp/emergencia-ataque-cibernetico/',
     target: '_self'
@@ -627,6 +627,12 @@ export const secondaryMenu = [
     title: 'Sign In',
     link: 'https://console.azion.com/login',
     target: '_blank'
+  },
+  {
+    text: 'Free Acount',
+    backgroundColor: 'dark',
+    link: 'https://console.azion.com/signup/',
+    target: '_self'
   }
 ]
 
@@ -667,7 +673,8 @@ export const mobileBottomButtons = [
     url: '/pt-br/contate-vendas/',
     urlTitle: 'Contact Page',
     icon: 'pi pi-chevron-right text-xs'
-  }
+  },
+  
 ]
 
 export const algoliaIndex = [
