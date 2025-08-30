@@ -1,0 +1,7 @@
+{
+  "main": "./algoliadialog.js",
+  "types": "./AlgoliaDialog.d.ts",
+  "browser": {
+    "./sfc": "./AlgoliaDialog.vue"
+  }
+}
