@@ -1,3 +1,9 @@
+## [1.167.2](https://github.com/aziontech/azion-webkit/compare/v1.167.1...v1.167.2) (2025-08-30)
+
+### Bug Fixes
+
+* search mobile ([c4ff53c](https://github.com/aziontech/azion-webkit/commit/c4ff53caa5f0a284e6fb7ef8ab129245b4d68a5a))
+
 ## [1.167.1](https://github.com/aziontech/azion-webkit/compare/v1.167.0...v1.167.1) (2025-08-30)
 
 ### Bug Fixes
