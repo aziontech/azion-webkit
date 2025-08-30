@@ -1,3 +1,9 @@
+## [1.164.0](https://github.com/aziontech/azion-webkit/compare/v1.163.0...v1.164.0) (2025-08-30)
+
+### Features
+
+* make footer description content dynamic using v-html directive ([c16fa28](https://github.com/aziontech/azion-webkit/commit/c16fa28756e7d0f15613f0facf63532ec9b8bb49))
+
 ## [1.163.0](https://github.com/aziontech/azion-webkit/compare/v1.162.1...v1.163.0) (2025-08-30)
 
 ### Features
