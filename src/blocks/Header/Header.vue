@@ -1,6 +1,6 @@
 <template>
   <header
-    class="w-full max-w-[1600px] mx-auto flex items-center h-20 bg-transparent text-white py-3 sticky top-0 z-50 font-sora px-6"
+    class="bg-neutral-900 w-full max-w-[1600px] mx-auto flex items-center h-18 xl:h-20 text-white py-3 sticky top-0 z-50 font-sora px-6"
   >
     <div class="w-full h-8 flex justify-between items-center">
       <div class="flex gap-4 items-center">
@@ -24,10 +24,11 @@
               menu.minBreakpoint && menu.minBreakpoint === 'lg' && 'hidden lg:block',
               menu.minBreakpoint && menu.minBreakpoint === 'xl' && 'hidden xl:block',
               menu.minBreakpoint && menu.minBreakpoint === '2xl' && 'hidden 2xl:block',
-              'border-none py-2 px-4 hover:bg-neutral-100 rounded-md'
+              'border-none py-2 px-4  rounded-md',
+              menu.backgroundColor === 'dark' ? 'bg-neutral-800 text-neutral-200 hover:bg-neutral-900' : 'hover:bg-white/50 text-black'
             ]"
           >
-            <span :class="['text-sm', 'text-black', 'font-sora']">
+            <span :class="['text-sm', 'font-sora']">
               {{ menu.text }}
             </span>
           </a>

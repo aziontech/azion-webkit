@@ -19,7 +19,7 @@
           </div>
       </div>
     </div>
-    <div class="bg-[#A09EBC]">
+    <div class="bg-[#CEC9C9]">
       <div class="py-3 flex flex-col gap-9 px-6 max-w-[1600px] mx-auto">
       <div class="flex flex-col box-border gap-1 lg:flex-row justify-between w-full pt-10">
         <div class="flex justify-start w-full lg:w-1/3 flex-col ">
@@ -48,7 +48,7 @@
               >
                 <a
                   :href="link"
-                  target="_blank"
+                  target="_self"
                   class="font-sora relative inline-block transition-colors duration-300 hover:text-gray-700 after:content-[''] after:absolute after:w-0 after:h-[1px] after:bottom-0 after:left-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {{ title }}
@@ -69,7 +69,7 @@
         <div class="flex gap-2 items-center">
           <slot name="lang"></slot>
           <div class="flex gap-4">
-            <a v-for="social in socialButtons" :key="social.title" :href="social.link">
+            <a v-for="social in socialButtons" target="_blank" :key="social.title" :href="social.link">
               <span :class="social.icon" class="text-neutral-800"></span>
             </a>
           </div>
