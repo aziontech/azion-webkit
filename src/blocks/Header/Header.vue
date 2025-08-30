@@ -1,15 +1,15 @@
 <template>
   <header
-    class="bg-neutral-900 w-full max-w-[1600px] mx-auto flex items-center h-18 xl:h-20 text-white py-3 sticky top-0 z-50 font-sora px-6"
+    class="bg-neutral-900 w-full max-w-[1600px] mx-auto flex items-center h-18 xl:h-19 text-white py-6 sticky top-0 z-50 font-sora px-6"
   >
     <div class="w-full h-8 flex justify-between items-center">
       <div class="flex gap-4 items-center">
         <slot name="logo" />
       </div>
 
-      <div class="flex items-center gap-7">
+      <div class="flex items-center gap-3">
         <slot name="navigation" />
-        <div class="bg-neutral-200 rounded-md p-2 hidden xl:flex h-[3.5rem]">
+        <div class="bg-neutral-200 rounded-md p-1 hidden xl:flex h-[3rem]">
           <a
             v-for="(menu, index) in menuSecondary"
             :key="index"

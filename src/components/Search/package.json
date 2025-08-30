@@ -1,0 +1,7 @@
+{
+    "main": "./index.ts",
+    "browser": {
+      "./sfc": "./Search.vue"
+    }
+  }
+  
