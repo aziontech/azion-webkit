@@ -10,14 +10,14 @@
   />
 
   <Button
-    size="small"
     icon="pi pi-search"
     aria-label="Search"
-    class="text-white flex-none border-header w-8 h-8 bg-header hover:bg-header-button-hover"
+    class="text-neutral-900 flex-none border-header p-2 bg-neutral-100"
     @click="activeDialog"
     :pt="{
-      label: { class: 'tex`t-white hover:bg-header-button-hover' },
-      icon: { class: 'text-white' }
+      root: { class: 'p-6' },
+      label: { class: 'text-neutral-900' },
+      icon: { class: 'text-neutral-900' }
     }"
   />
 </template>
