@@ -26,8 +26,8 @@
           <span class="text-black font-proto-mono text-xs border-b border-black pb-2 mb-4">
             {{ content.title }}
           </span>
-          <h3 class="text-3xl text-black leading-none font-sora tracking-tight">
-            Our Mission is to <strong class="font-sora">Power</strong> the <br /> Hyper-Connected Economy
+          <h3 v-html="content.description" class="text-3xl text-black leading-none font-sora tracking-tight">
+
           </h3>
         </div>
         <div class="flex lg:gap-y-6 lg:gap-x-1 justify-between w-full lg:w-2/3 flex-wrap lg:flex-nowrap">
