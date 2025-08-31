@@ -1,18 +1,38 @@
 <template>
-  <Button
-    :label="label"
-    :size="size"
-    :icon="icon"
-    :class="[customClass, buttonClasses]"
-    :pt="{
-      icon: { 
-        class: iconClasses
-      },
-      label: {
-        class: labelClasses
-      }
-    }"
-  />
+  <template v-if="href">
+    <a :href="href">
+      <Button
+        :label="label"
+        :size="size"
+        :icon="icon"
+        :class="[customClass, buttonClasses]"
+        :pt="{
+          icon: { 
+            class: iconClasses
+          },
+          label: {
+            class: labelClasses
+          }
+        }"
+      />
+    </a>
+  </template>
+  <template v-else>
+    <Button
+        :label="label"
+        :size="size"
+        :icon="icon"
+        :class="[customClass, buttonClasses]"
+        :pt="{
+          icon: { 
+            class: iconClasses
+          },
+          label: {
+            class: labelClasses
+          }
+        }"
+      />
+  </template>
 </template>
 
 <script setup>
@@ -31,6 +51,7 @@
       options: ['primary', 'secondary', 'link'],
       default: 'secondary'
     },
+    href: String,
     icon: String,
     customClass: {
       type: String,
