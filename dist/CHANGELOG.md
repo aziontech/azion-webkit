@@ -1,3 +1,9 @@
+## [1.170.0](https://github.com/aziontech/azion-webkit/compare/v1.169.0...v1.170.0) (2025-08-31)
+
+### Features
+
+* add link in azion button ([cc20f53](https://github.com/aziontech/azion-webkit/commit/cc20f535baeee07d3ed6292f55e286c6633e2f5c))
+
 ## [1.169.0](https://github.com/aziontech/azion-webkit/compare/v1.168.0...v1.169.0) (2025-08-30)
 
 ### Features
