@@ -1,3 +1,9 @@
+## [1.171.0](https://github.com/aziontech/azion-webkit/compare/v1.170.0...v1.171.0) (2025-09-01)
+
+### Features
+
+* new currency dropdown for career page ([61b0f74](https://github.com/aziontech/azion-webkit/commit/61b0f74010af6433b2d7e1da8aee05845454f3c6))
+
 ## [1.170.0](https://github.com/aziontech/azion-webkit/compare/v1.169.0...v1.170.0) (2025-08-31)
 
 ### Features
