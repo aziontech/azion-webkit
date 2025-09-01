@@ -1,3 +1,13 @@
+## [1.172.0](https://github.com/aziontech/azion-webkit/compare/v1.171.0...v1.172.0) (2025-09-01)
+
+### Features
+
+* add ddi to contact us form ([9f3edcf](https://github.com/aziontech/azion-webkit/commit/9f3edcf15214ffe00e07e5ba70835720b56d1be1))
+
+### Bug Fixes
+
+* remove comments ([f4cea71](https://github.com/aziontech/azion-webkit/commit/f4cea7142d890927fa90e0119a5628f292cc3bc3))
+
 ## [1.171.0](https://github.com/aziontech/azion-webkit/compare/v1.170.0...v1.171.0) (2025-09-01)
 
 ### Features
