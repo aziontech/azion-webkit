@@ -1,3 +1,9 @@
+## [1.173.0](https://github.com/aziontech/azion-webkit/compare/v1.172.1...v1.173.0) (2025-09-01)
+
+### Features
+
+* add new import to hubsport form ([ea7ce45](https://github.com/aziontech/azion-webkit/commit/ea7ce45cf3abe3b41a31e527bc10f0804492f53c))
+
 ## [1.172.1](https://github.com/aziontech/azion-webkit/compare/v1.172.0...v1.172.1) (2025-09-01)
 
 ### Bug Fixes
