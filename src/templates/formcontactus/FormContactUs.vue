@@ -164,7 +164,7 @@
   import Dropdown from 'primevue/dropdown'
   import InlineMessage from 'primevue/inlinemessage'
   import FormBlock from '../formblock/FormBlock.vue'
-  import { hbspPostHandler } from '../../services/hubspot-service'
+  import { hbspPostHandler } from '../src/services/hubspot-service'
   import { ref, onMounted } from 'vue'
   import { Country } from 'country-state-city'
 
