@@ -1,3 +1,9 @@
+## [1.172.1](https://github.com/aziontech/azion-webkit/compare/v1.172.0...v1.172.1) (2025-09-01)
+
+### Bug Fixes
+
+* update incorrect import path for hubspot-service module ([0bea545](https://github.com/aziontech/azion-webkit/commit/0bea545bb5cd119f634dbca7f1d49ac34074aa4a))
+
 ## [1.172.0](https://github.com/aziontech/azion-webkit/compare/v1.171.0...v1.172.0) (2025-09-01)
 
 ### Features
