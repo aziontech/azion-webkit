@@ -86,7 +86,7 @@
                       <a
                         :href="item.href"
                         :title="item.label"
-                        class="px-2 py-1 rounded-md hover:surface-hover"
+                        class="px-2 py-1 rounded-md hover:bg-white/50"
                       >
                         <span class="font-sora text-sm font-semibold">
                           {{ item.label }}
@@ -116,7 +116,7 @@
                           <a
                             :href="item.href"
                             :title="item.label"
-                            class="px-2 py-1 rounded-md hover:surface-hover"
+                            class="px-2 py-1 rounded-md hover:bg-white/50"
                           >
                             <span class="font-sora text-sm font-semibold">
                               {{ item.label }}
