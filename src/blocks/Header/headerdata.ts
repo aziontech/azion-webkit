@@ -199,7 +199,7 @@ export const menu = {
     {
       label: 'Developer',
       ref: 'developersPanel',
-      subMenuColor: 'bg-[#A09EBC]',
+      lavanderBackground: true,
       subMenuColumns: [
         {
           label: 'Docs',

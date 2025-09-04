@@ -68,7 +68,7 @@
     </div>
     <div class="bg-neutral-100">
       <div class="py-6 px-6 max-w-[1600px] mx-auto flex justify-between flex-wrap">
-        <div class="flex gap-2 items-center">
+        <div class="flex gap-6 md:gap-2 items-center">
           <slot name="lang"></slot>
           <div class="flex gap-4">
             <a v-for="social in socialButtons" target="_blank" :key="social.title" :href="social.link">
@@ -76,7 +76,7 @@
             </a>
           </div>
         </div>
-        <span class="text-neutral-800 text-xs font-proto-mono tracking-tight leading-relaxed w-full  md:w-1/2 mt-4  md:mt-0 text-right">{{ copyright }}</span>
+        <span class="text-neutral-800 text-xs font-proto-mono tracking-tight leading-relaxed w-full text-left md:w-1/2 mt-4 md:mt-0 md:text-right">{{ copyright }}</span>
       </div>
     </div>
   </footer>
