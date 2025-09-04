@@ -1,3 +1,9 @@
+## [1.174.0](https://github.com/aziontech/azion-webkit/compare/v1.173.0...v1.174.0) (2025-09-04)
+
+### Features
+
+* implement new header and footer layout with updated menu hover styles ([9e5334f](https://github.com/aziontech/azion-webkit/commit/9e5334fff2528697f3fc3cac5ec6e18aa1152824))
+
 ## [1.173.0](https://github.com/aziontech/azion-webkit/compare/v1.172.1...v1.173.0) (2025-09-01)
 
 ### Features
