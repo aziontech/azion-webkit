@@ -59,7 +59,7 @@
 
     <template #content>
       <div
-        v-if="!showForm"
+        v-show="!showForm"
         class="md:aspect-video lg:h-[480px] md:h-[400px] h-[220px] rounded relative"
       >
         <iframe
@@ -150,7 +150,7 @@
   const formIsSubmitted = ref(false)
 
   const computedSrc = computed(() => {
-    return `https://www.youtube.com/embed/${props.video.id}?autoplay=1&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1`
+    return `https://www.youtube.com/embed/${props.video.id}?t=${transformMillisecondsToSeconds(formIsSubmitted) ? props.timerDuration : 0}&autoplay=1&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1`
   })
 
   let player = null
@@ -180,6 +180,9 @@
     }
   }
 
+  function transformMillisecondsToSeconds(milliseconds) {
+    return milliseconds / 1000
+  }
   function onPlayerStateChange(event) {
     if (event.data === 1 && !timerStarted.value) {
       timerStarted.value = true
@@ -211,14 +214,11 @@
   }
 
   function playVideo() {
+    if (!player && !player.playVideo) return;
+    player.playVideo()
+
     if (formSubmitted.value) {
-      if (player && player.playVideo) {
-        player.playVideo()
-      }
-      return
-    }
-    if (player && player.playVideo) {
-      player.playVideo()
+        player.seekTo(transformMillisecondsToSeconds(props.timerDuration), true)
     }
   }
 
