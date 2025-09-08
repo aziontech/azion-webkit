@@ -1,3 +1,9 @@
+## [1.175.0](https://github.com/aziontech/azion-webkit/compare/v1.174.0...v1.175.0) (2025-09-08)
+
+### Features
+
+* add new submenu component ([308f014](https://github.com/aziontech/azion-webkit/commit/308f0142d9650de7cb902d6f79e1aac1064baf60))
+
 ## [1.174.0](https://github.com/aziontech/azion-webkit/compare/v1.173.0...v1.174.0) (2025-09-04)
 
 ### Features
