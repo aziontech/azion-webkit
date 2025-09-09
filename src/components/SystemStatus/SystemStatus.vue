@@ -105,14 +105,16 @@
     }
   
     async function getStatus(checkStatusPage) {
-      let status
-  
-      if (checkStatusPage) {
-        const response = await fetch('https://status.azion.com/api/v2/status.json', {
+      const response = await fetch('https://status.azion.com/api/v2/status.json', {
           method: 'GET'
-        })
+      })
   
-        const normalizedResponse = await response.json()
+      const normalizedResponse = await response.json()
+      let status
+
+      console.log(normalizedResponse)
+  
+      if (checkStatusPage || normalizedResponse.status.indicator === 'minor') {
         status = normalizedResponse.status
       } else {
         status = OPERATIONAL_STATUS
