@@ -1,3 +1,9 @@
+## [1.176.0](https://github.com/aziontech/azion-webkit/compare/v1.175.0...v1.176.0) (2025-09-09)
+
+### Features
+
+* add new status flow ([86c9edc](https://github.com/aziontech/azion-webkit/commit/86c9edc8c513969220391ffe9a4918b626da7d46))
+
 ## [1.175.0](https://github.com/aziontech/azion-webkit/compare/v1.174.0...v1.175.0) (2025-09-08)
 
 ### Features
