@@ -187,6 +187,9 @@
     if (event.data === 1 && !timerStarted.value) {
       timerStarted.value = true
       timer.value = setTimeout(() => {
+        if (player && player.pauseVideo) {
+          player.pauseVideo()
+        }
         showForm.value = true
         loadHubSpotScript()
           .then(() => {
