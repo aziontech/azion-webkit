@@ -1,3 +1,13 @@
+## [1.178.0](https://github.com/aziontech/azion-webkit/compare/v1.177.0...v1.178.0) (2025-09-10)
+
+### Features
+
+* change minor service outage message ([a554bee](https://github.com/aziontech/azion-webkit/commit/a554bee695043b98ad97250ec6e1ba7e8513065f))
+
+### Bug Fixes
+
+* adjust select lang padding ([a5e02bc](https://github.com/aziontech/azion-webkit/commit/a5e02bc7468f6551d58e67bf0d10e3d1b60ec26e))
+
 ## [1.177.0](https://github.com/aziontech/azion-webkit/compare/v1.176.0...v1.177.0) (2025-09-10)
 
 ### Features
