@@ -37,7 +37,7 @@
       },
       'Minor Service Outage': {
         es: 'Interrupción Menor del Servicio',
-        'pt-br': 'Interrupção Menor do Serviço'
+        'pt-br': 'Pequena interrupção do Serviço'
       },
       'Partial System Outage': {
         es: 'Interrupción Parcial del Sistema',

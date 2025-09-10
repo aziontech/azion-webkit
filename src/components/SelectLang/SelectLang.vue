@@ -13,7 +13,7 @@
       optionLabel="lang"
       :pt="{
         root: {
-          class: 'flex flex-row justify-between items-center p-4 rounded-lg'
+          class: 'flex flex-row justify-between items-center rounded-lg'
         },
         panel: { class: 'bg-[#EDE8E8] rounded-lg p-2 w-full min-w-full' },
         trigger: { class: 'text-neutral-900' }
