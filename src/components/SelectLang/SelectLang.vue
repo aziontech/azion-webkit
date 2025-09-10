@@ -1,51 +1,103 @@
 <template>
+  <div
+    v-if="i18nPages"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
+    class="relative"
+  >
     <Dropdown
-      class="w-full"
-      v-if="i18nPages"
+      ref="dropdown"
       :options="i18nPages"
       :aria-label="activeLang.lang"
       :autoOptionFocus="false"
       optionLabel="lang"
-      :pt="{ item: { class: 'p-0' }, list: { class: 'bg-neutral-200 rounded-md' }, dropdown: { class: 'rounded-md' }, root: { class: 'bg-neutral-100' }, trigger: { class: 'text-neutral-900' } }"
+      :pt="{
+        root: {
+          class: 'flex flex-row justify-between items-center p-4 rounded-lg'
+        },
+        panel: { class: 'bg-[#EDE8E8] rounded-lg p-2 w-full min-w-full' },
+        trigger: { class: 'text-neutral-900' }
+      }"
+      :appendTo="'self'"
       :modelValue="activeLang.lang"
+      :unstyled="true"
+      @show="onDropdownShow"
+      @hide="onDropdownHide"
     >
       <template #value="slotProps">
-        <div v-if="slotProps.value" class="flex gap-2 items-center">
-            <span class="pi pi-globe text-neutral-800"></span>
-            <div class="text-sm text-neutral-900">{{ slotProps.value }}</div>
+        <div
+          v-if="slotProps.value"
+          class="flex items-center gap-4 pr-4"
+        >
+          <span class="pi pi-globe text-neutral-900 text-xs"></span>
+          <span class="text-xs font-medium text-neutral-900">
+            {{ slotProps.value }}
+          </span>
         </div>
       </template>
       <template #option="slotProps">
-        <div class="flex gap-2">
-            <a
+        <a
           :href="slotProps.option.slug"
           target="_self"
-          class="w-full px-2 py-3"
+          class="block w-max-fit w-full rounded-sm p-2 text-xs text-neutral-900 hover:bg-[#F5F5F5]"
         >
-          <div class="text-sm text-neutral-900">{{ slotProps.option.lang }}</div>
+          {{ slotProps.option.lang }}
         </a>
-        </div>
       </template>
     </Dropdown>
-  </template>
-  
-  <script setup>
-    import Dropdown from 'primevue/dropdown'
-  
-    const props = defineProps({
-      i18nPages: {
-        type: Array,
-        required: false
-      },
-      lang: {
-        type: String,
-        required: true,
-        default: 'en'
+  </div>
+</template>
+
+<script setup>
+  import { ref } from 'vue'
+  import Dropdown from 'primevue/dropdown'
+
+  const props = defineProps({
+    i18nPages: {
+      type: Array,
+      required: false
+    },
+    lang: {
+      type: String,
+      required: true,
+      default: 'en'
+    }
+  })
+
+  const dropdown = ref(null)
+  let hoverTimeout = null
+
+  const activeLang = props.i18nPages
+    ? props.i18nPages.find((p) => p.langPrefix === props.lang.toLowerCase())
+    : null
+
+  const onMouseEnter = () => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout)
+    }
+    hoverTimeout = setTimeout(() => {
+      if (dropdown.value && dropdown.value.show) {
+        dropdown.value.show()
       }
-    })
-  
-    const activeLang = props.i18nPages
-      ? props.i18nPages.find((p) => p.langPrefix === props.lang.toLowerCase())
-      : null
-  </script>
-  
+    }, 150)
+  }
+
+  const onMouseLeave = () => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout)
+    }
+
+    hoverTimeout = setTimeout(() => {
+      if (dropdown.value && dropdown.value.hide) {
+        dropdown.value.hide()
+      }
+    }, 200)
+  }
+</script>
+
+<style scoped>
+  :deep(.p-icon) {
+    width: 12px;
+    height: 12px;
+  }
+</style>
