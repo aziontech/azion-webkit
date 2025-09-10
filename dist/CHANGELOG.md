@@ -1,3 +1,9 @@
+## [1.177.0](https://github.com/aziontech/azion-webkit/compare/v1.176.0...v1.177.0) (2025-09-10)
+
+### Features
+
+* new select lang ([1498eaf](https://github.com/aziontech/azion-webkit/commit/1498eaf85d6ae8d56b8cdcd70cff6e3b2bf410dc))
+
 ## [1.176.0](https://github.com/aziontech/azion-webkit/compare/v1.175.0...v1.176.0) (2025-09-09)
 
 ### Features
