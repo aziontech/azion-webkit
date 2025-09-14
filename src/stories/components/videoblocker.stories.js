@@ -2,7 +2,7 @@ import VideoBlocker from '../../templates/videoblocker'
 
 const MOCK = {
   video: {
-    id: '6Pyn2T8EmC8',
+    id: 'CH50zuS8DD0',
     title: 'Move to the Edge with Azion',
     image: {
       alt: 'Video thumbnail showing Azion edge computing',
