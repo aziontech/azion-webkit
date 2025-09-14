@@ -3,7 +3,7 @@
     v-if="i18nPages"
     @mouseenter="onMouseEnter"
     @mouseleave="onMouseLeave"
-    class="relative"
+    class="relative group"
   >
     <Dropdown
       ref="dropdown"
@@ -16,7 +16,8 @@
           class: 'flex flex-row justify-between items-center rounded-lg'
         },
         panel: { class: 'bg-[#EDE8E8] rounded-lg p-2 w-full min-w-full' },
-        trigger: { class: 'text-neutral-900' }
+        trigger: { class: 'text-neutral-900' },
+        dropdownIcon: { class: 'hidden' }
       }"
       :appendTo="'self'"
       :modelValue="activeLang.lang"
@@ -27,19 +28,24 @@
       <template #value="slotProps">
         <div
           v-if="slotProps.value"
-          class="flex items-center gap-4 pr-4"
+          class="flex items-center gap-4 w-full justify-between min-w-24"
         >
-          <span class="pi pi-globe text-neutral-900 text-xs"></span>
-          <span class="text-xs font-medium text-neutral-900">
+          <span class="pi pi-globe text-neutral-900 group-hover:text-neutral-600 text-xs"></span>
+          <span
+            class="text-xs font-medium text-neutral-900 group-hover:text-neutral-600 transition-colors"
+          >
             {{ slotProps.value }}
           </span>
+          <i
+            class="pi pi-angle-down text-sm transition-transform duration-0 text-neutral-900 group-hover:text-neutral-600 group-hover:rotate-180"
+          />
         </div>
       </template>
       <template #option="slotProps">
         <a
           :href="slotProps.option.slug"
           target="_self"
-          class="block w-max-fit w-full rounded-sm p-2 text-xs text-neutral-900 hover:bg-[#F5F5F5]"
+          class="block w-max-fit w-full rounded-sm p-2 text-xs text-neutral-900 hover:bg-[#F5F5F5] hover:text-neutral-600"
         >
           {{ slotProps.option.lang }}
         </a>
@@ -66,6 +72,7 @@
 
   const dropdown = ref(null)
   let hoverTimeout = null
+  const isDropdownOpen = ref(false)
 
   const activeLang = props.i18nPages
     ? props.i18nPages.find((p) => p.langPrefix === props.lang.toLowerCase())
@@ -92,6 +99,14 @@
         dropdown.value.hide()
       }
     }, 200)
+  }
+
+  const onDropdownShow = () => {
+    isDropdownOpen.value = true
+  }
+
+  const onDropdownHide = () => {
+    isDropdownOpen.value = false
   }
 </script>
 

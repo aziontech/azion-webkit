@@ -1,7 +1,6 @@
 {
-    "main": "./index.ts",
-    "browser": {
-      "./sfc": "./Search.vue"
-    }
+  "main": "./index.ts",
+  "browser": {
+    "./sfc": "./Search.vue"
   }
-  
+}
