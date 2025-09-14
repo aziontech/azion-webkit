@@ -7,7 +7,7 @@
         :icon="icon"
         :class="[customClass, buttonClasses]"
         :pt="{
-          icon: { 
+          icon: {
             class: iconClasses
           },
           label: {
@@ -19,19 +19,19 @@
   </template>
   <template v-else>
     <Button
-        :label="label"
-        :size="size"
-        :icon="icon"
-        :class="[customClass, buttonClasses]"
-        :pt="{
-          icon: { 
-            class: iconClasses
-          },
-          label: {
-            class: labelClasses
-          }
-        }"
-      />
+      :label="label"
+      :size="size"
+      :icon="icon"
+      :class="[customClass, buttonClasses]"
+      :pt="{
+        icon: {
+          class: iconClasses
+        },
+        label: {
+          class: labelClasses
+        }
+      }"
+    />
   </template>
 </template>
 
@@ -77,7 +77,8 @@
         'h-fit group-hover:text-neutral-100 text-neutral-100 dark:text-neutral-900 text-[.625rem] duration-300 transition flex items-center hover:text-neutral-100 mr-2',
       secondary:
         'h-fit group-hover:text-neutral-900 text-neutral-900 dark:text-neutral-100 text-[.625rem] duration-300 transition flex items-center hover:text-neutral-900 dark:group-hover:text-neutral-100 mr-2',
-      tertiary: 'group-hover:text-neutral-900 text-neutral-900 dark:text-neutral-100 text-[.625rem] duration-300 transition flex items-center hover:text-neutral-900 dark:group-hover:text-neutral-100 mr-2',
+      tertiary:
+        'group-hover:text-neutral-900 text-neutral-900 dark:text-neutral-100 text-[.625rem] duration-300 transition flex items-center hover:text-neutral-900 dark:group-hover:text-neutral-100 mr-2',
       link: 'text-orange-600 text-[.625rem] duration-300 transition flex items-center hover:text-orange-600 leading-1 mr-2'
     }[props.type]
   })

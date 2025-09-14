@@ -251,7 +251,7 @@ export const menu = {
                 label: 'Guides',
                 description: 'Guides description here',
                 href: '/pt-br/'
-              },
+              }
             ]
           },
           {
@@ -673,8 +673,7 @@ export const mobileBottomButtons = [
     url: '/pt-br/contate-vendas/',
     urlTitle: 'Contact Page',
     icon: 'pi pi-chevron-right text-xs'
-  },
-  
+  }
 ]
 
 export const algoliaIndex = [
