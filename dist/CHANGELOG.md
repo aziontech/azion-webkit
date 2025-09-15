@@ -1,3 +1,10 @@
+## [1.179.0](https://github.com/aziontech/azion-webkit/compare/v1.178.0...v1.179.0) (2025-09-15)
+
+### Features
+
+* add new pricing components ([da59106](https://github.com/aziontech/azion-webkit/commit/da59106bbb38b1f342e2a194f28701347f799393))
+* adjust button component ([170a1e6](https://github.com/aziontech/azion-webkit/commit/170a1e60e59f62b51f3a2328642c6470a3c22124))
+
 ## [1.178.0](https://github.com/aziontech/azion-webkit/compare/v1.177.0...v1.178.0) (2025-09-10)
 
 ### Features
