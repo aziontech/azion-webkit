@@ -1,3 +1,9 @@
+## [1.180.0](https://github.com/aziontech/azion-webkit/compare/v1.179.0...v1.180.0) (2025-09-17)
+
+### Features
+
+* add position prop in submenu ([e8faa5f](https://github.com/aziontech/azion-webkit/commit/e8faa5f7fbaf9d5a221c2087af1d4fbfa79979c7))
+
 ## [1.179.0](https://github.com/aziontech/azion-webkit/compare/v1.178.0...v1.179.0) (2025-09-15)
 
 ### Features
