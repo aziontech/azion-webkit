@@ -10,7 +10,7 @@
       :class="[
         'flex flex-col opacity-0 py-4 px-3  transition-all duration-300 ease-in-out text-black rounded-md shadow-xl group-hover:opacity-100 group-hover:visible group-hover:top-[3.5rem] top-[3rem] group-hover:delay-100',
         menuitem.lavanderBackground ? 'bg-[#A09EBC]' : 'bg-neutral-200',
-        menuitem.subMenuColumns.length === 1 ? 'ml-[36.5rem]' : menuitem.subMenuColumns.length > 2 ? 'mx-auto' : 'ml-[28.25rem]',
+        menuitem.position === 'left' ? 'ml-[7rem]' : menuitem.subMenuColumns.length === 1 ? 'ml-[36.5rem]' : menuitem.subMenuColumns.length > 2 ? 'mx-auto' : 'ml-[28.25rem]',
       ]"
     >
       <div
