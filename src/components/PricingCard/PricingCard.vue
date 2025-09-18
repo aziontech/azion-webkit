@@ -15,9 +15,9 @@
       <div class="flex mb-8 justify-between items-center flex-wrap font-proto-mono">
         <span class="text-xs w-full mb-2 text-left font-proto-mono">start at</span>
         <div class="flex items-end text-sm font-proto-mono">
-            $
-            <h4 class="text-7xl leading-[3.5rem] font-proto-mono">{{ price }}</h4>
-            <span class="font-proto-mono">{{ priceLabel }}</span>
+            <span v-if="currentPrice.startsWith('$')">$</span>
+            <h4 class="text-7xl leading-[3.5rem] font-proto-mono">{{ currentPrice.replace('$', '') }}</h4>
+            <span class="font-proto-mono">{{ currentPeriod === 'monthly' ? '/mo' : '/yr' }}</span>
         </div>
       </div>
       <div>
@@ -28,14 +28,25 @@
 <script setup>
 import Button from '../Button/Button.vue'
 
-defineProps({
+import { computed } from 'vue'
+
+const props = defineProps({
     popular: Boolean,
     title: String,
     subtitle: String,
     features: Array,
-    price: String,
-    priceLabel: String,
+    monthlyPrice: String,
+    annualPrice: String,
+    currentPeriod: {
+        type: String,
+        default: 'monthly'
+    },
+    savings: String,
     buttonLabel: String,
+})
+
+const currentPrice = computed(() => {
+    return props.currentPeriod === 'monthly' ? props.monthlyPrice : props.annualPrice
 })
 </script>
     

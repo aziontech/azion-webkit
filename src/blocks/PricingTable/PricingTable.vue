@@ -1,5 +1,6 @@
+
 <template>
-  <div class="bg-neutral-900 text-white grid grid-cols-5">
+  <div class="w-full bg-neutral-900 text-white grid grid-cols-5">
     <slot />
   </div>
 </template>
