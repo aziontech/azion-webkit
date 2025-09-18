@@ -1,3 +1,9 @@
+## [1.181.0](https://github.com/aziontech/azion-webkit/compare/v1.180.0...v1.181.0) (2025-09-18)
+
+### Features
+
+* add new block ([68743e2](https://github.com/aziontech/azion-webkit/commit/68743e2f388a31df5f09d0d4b9c6546960fc3fc3))
+
 ## [1.180.0](https://github.com/aziontech/azion-webkit/compare/v1.179.0...v1.180.0) (2025-09-17)
 
 ### Features
