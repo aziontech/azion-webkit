@@ -1,3 +1,9 @@
+## [1.182.0](https://github.com/aziontech/azion-webkit/compare/v1.181.0...v1.182.0) (2025-09-18)
+
+### Features
+
+* add PricingTableContent component export ([f29f8c2](https://github.com/aziontech/azion-webkit/commit/f29f8c2685681d97c6e6a9903a65ca89bf05aaa4))
+
 ## [1.181.0](https://github.com/aziontech/azion-webkit/compare/v1.180.0...v1.181.0) (2025-09-18)
 
 ### Features
