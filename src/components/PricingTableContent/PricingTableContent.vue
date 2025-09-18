@@ -1,7 +1,7 @@
 <template>
   <template v-for="(content) in table" :key="content.title">
     <div class="p-5 py-12 col-span-5 border-x border-y border-neutral-700">
-      <div class="text-xs text-neutral-300 uppercase tracking-wide font-medium font-proto-mono">{{ content.overline }}</div>
+      <div class="text-xs text-neutral-300 uppercase tracking-wide font-proto-mono">{{ content.overline }}</div>
       <h3 class="text-xl font-medium font-sora mt-1">{{ content.title }}</h3>
       <p class="text-sm text-neutral-300 font-sora mt-1">{{ content.description }}</p>
     </div>
