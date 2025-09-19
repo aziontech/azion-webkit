@@ -1,7 +1,6 @@
 <template>
   <div class="flex items-center  rounded-md justify-center bg-[#13131A] w-fit p-2">
     <div class="flex items-center relative">
-      <!-- Animated background slider -->
       <div 
         :class="[
           'absolute top-1 bottom-1 rounded-sm transition-all duration-250 ease-out',
@@ -11,12 +10,10 @@
         ]"
         :style="{ width: 'calc(50%)' }"
       ></div>
-      
-      <!-- Monthly clickable area -->
       <div
         @click="selectOption('monthly')"
         :class="[
-          'relative z-10 px-3 py-1 rounded-md text-sm font-medium transition-all duration-300 ease-in-out',
+          'relative z-10 px-3 py-1 rounded-md text-xs transition-all duration-300 ease-in-out',
           'font-proto-mono tracking-wide uppercase flex-1 cursor-pointer text-center',
           selectedOption === 'monthly'
             ? 'text-neutral-900'
@@ -25,12 +22,10 @@
       >
         Monthly
       </div>
-      
-      <!-- Annual clickable area -->
       <div
         @click="selectOption('annual')"
         :class="[
-          'relative z-10 px-3 py-1 rounded-md text-sm font-medium transition-all duration-300 ease-in-out',
+          'relative z-10 px-3 py-1 rounded-md text-sm transition-all duration-300 ease-in-out',
           'font-proto-mono tracking-wide uppercase flex-1 cursor-pointer text-center',
           selectedOption === 'annual'
             ? 'text-neutral-900'
@@ -70,7 +65,6 @@ const selectOption = (option) => {
   emit('change', option)
 }
 
-// Watch for external changes to modelValue
 import { watch } from 'vue'
 watch(() => props.modelValue, (newValue) => {
   selectedOption.value = newValue
