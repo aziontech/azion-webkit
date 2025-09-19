@@ -1,3 +1,9 @@
+## [1.184.0](https://github.com/aziontech/azion-webkit/compare/v1.183.0...v1.184.0) (2025-09-19)
+
+### Features
+
+* add new hero ([c324fb8](https://github.com/aziontech/azion-webkit/commit/c324fb88d6c1452315f12cc47592f9b6ff0fa738))
+
 ## [1.183.0](https://github.com/aziontech/azion-webkit/compare/v1.182.0...v1.183.0) (2025-09-18)
 
 ### Features
