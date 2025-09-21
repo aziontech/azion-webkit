@@ -82,6 +82,14 @@
       options: ['compact', 'relaxed', 'base'],
       default: 'base'
     },
+    link: {
+      type: String,
+      required: false
+    },
+    linkText: {
+      type: String,
+      required: false
+    },
     grid: {
       type: Boolean,
       required: false

@@ -34,7 +34,9 @@ Default.args = {
   cards: [
     {
       title: 'Construir um modelo de segurança Zero Trust no edge',
-      description: 'Proteja sua aplicação contra ataques sofisticados, como BGP Hijacking e DDoS.'
+      description: 'Proteja sua aplicação contra ataques sofisticados, como BGP Hijacking e DDoS.',
+      link: 'https://azion.com.br',
+      linkText: 'Saiba mais'
     },
     {
       title: 'Entregar aplicações edge serverless',
