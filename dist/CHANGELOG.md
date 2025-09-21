@@ -1,3 +1,9 @@
+## [1.186.0](https://github.com/aziontech/azion-webkit/compare/v1.185.0...v1.186.0) (2025-09-21)
+
+### Features
+
+* add cards link ([b45759b](https://github.com/aziontech/azion-webkit/commit/b45759bd30a8d0071057fd1e00c0ab68a2d630b1))
+
 ## [1.185.0](https://github.com/aziontech/azion-webkit/compare/v1.184.0...v1.185.0) (2025-09-19)
 
 ### Features
