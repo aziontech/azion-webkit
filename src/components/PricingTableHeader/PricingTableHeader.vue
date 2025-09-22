@@ -1,25 +1,25 @@
 <template>
-  <div class="p-5 border-r border-x border-t border-neutral-700">
-    <h3 class="font-sora text-lg font-medium text-neutral-300">Features</h3>
-  </div>
+    <div class="p-5 sticky top-[4rem] border-r bg-neutral-900 border-x border-y border-neutral-700">
+      <h3 class="font-sora text-lg font-medium text-neutral-100">Features</h3>
+    </div>
 
-  <div 
+    <div 
     v-for="(plan, index) in plans" 
     :key="plan.name"
     :class="[
-      'p-5 text-left relative border-t border-neutral-700',
+      'p-5 sticky top-[4rem] text-left border-y bg-neutral-900 border-neutral-700',
       index < plans.length - 1 ? 'border-r border-neutral-700' : 'border-r border-neutral-700'
     ]"
-  >
+    >
     <div v-if="plan.popular" class="absolute inset-0 border-1 border-orange-500 rounded-sm"></div>
-    <h3 class="text-2xl font-medium mb-3 font-sora">{{ plan.name }}</h3>
-    <Button 
-      :label="plan.buttonLabel"
-      :type="plan.buttonType || 'secondary'"
-      :theme="plan.buttonTheme || 'dark'"
-      @click="$emit('plan-selected', plan, index)"
-    />
-  </div>
+      <h3 class="text-2xl font-medium mb-3 font-sora">{{ plan.name }}</h3>
+      <Button 
+        :label="plan.buttonLabel"
+        :type="plan.buttonType || 'secondary'"
+        :theme="plan.buttonTheme || 'dark'"
+        @click="$emit('plan-selected', plan, index)"
+      />
+    </div>
 </template>
 
 <script setup>
