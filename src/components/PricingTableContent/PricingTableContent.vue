@@ -1,5 +1,13 @@
 <template>
   <template v-for="(content) in table" :key="content.title">
+    <template v-if="content.link">
+        <div class="py-3 px-5 border border-neutral-700 col-span-5 flex gap-4 items-center">
+            <p :href="content.link" class="text-white text-xs font-sora">{{ content.description }}</p>
+            <Button :label="content.linkLabel" :href="content.link"/>
+        </div>
+    </template>
+
+    <template v-else> 
     <div class="p-5 py-12 col-span-5 border-x border-y border-neutral-700">
       <div class="text-xs text-neutral-300 uppercase tracking-wide font-proto-mono">{{ content.overline }}</div>
       <h3 class="text-xl font-medium font-sora mt-1">{{ content.title }}</h3>
@@ -7,34 +15,37 @@
     </div>
 
     <template v-for="(feature, featureIndex) in content.features" :key="feature.name">
-      <div :class="[
-        'p-5 border-l border-r border-neutral-700',
-        featureIndex === content.features.length - 1 ? 'border-b' : ''
-      ]">
-        <span :class="[
-          'font-medium font-sora',
-          feature.nested ? 'text-neutral-300 text-sm font-normal pl-4' : 'text-white'
-        ]">{{ feature.name }}</span>
-      </div>
+        <div :class="[
+              'p-5 border-l border-r border-neutral-700',
+              featureIndex === content.features.length - 1 ? 'border-b' : ''
+            ]">
+              <span :class="[
+                'font-medium font-sora',
+                feature.nested ? 'text-neutral-300 text-sm font-normal pl-4' : 'text-white'
+              ]">{{ feature.name }}</span>
+            </div>
 
-      <div 
-        v-for="(value, planIndex) in feature.values" 
-        :key="planIndex"
-        :class="[
-          'p-5 text-left flex items-center border-r border-neutral-700',
-          featureIndex === content.features.length - 1 ? 'border-b' : '',
-          planIndex === feature.values.length - 1 ? 'border-r' : ''
-        ]"
-      >
-        <span v-if="value === true" class="pi pi-check text-orange-500 text-sm"></span>
-        <span v-else-if="value === false" class="text-neutral-500 font-sora">—</span>
-        <span v-else class="text-white font-sora">{{ value }}</span>
-      </div>
+            <div 
+              v-for="(value, planIndex) in feature.values" 
+              :key="planIndex"
+              :class="[
+                'p-5 text-left flex items-center border-r border-neutral-700',
+                featureIndex === content.features.length - 1 ? 'border-b' : '',
+                planIndex === feature.values.length - 1 ? 'border-r' : ''
+              ]"
+            >
+              <span v-if="value === true" class="pi pi-check text-orange-500 text-sm"></span>
+              <span v-else-if="value === false" class="text-neutral-500 font-sora">—</span>
+              <span v-else class="text-white font-sora">{{ value }}</span>
+            </div>
+      </template>
     </template>
   </template>
 </template>
 
 <script setup>
+import Button from '../Button/Button.vue'
+
 defineProps({
   table: {
     type: Array,
@@ -82,8 +93,14 @@ defineProps({
             values: ['1 Workspace', '1 Workspace', '1 Workspace', '1 Workspace']
           }
         ]
-      }
+      },
+      {
+          link: '#',
+          description: 'Learn more',
+          linkLabel: 'GET A DEMO',
+      },
     ]
   }
 })
+
 </script>
