@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center  rounded-md justify-center bg-[#13131A] w-fit p-2">
+  <div class="flex items-center rounded-lg justify-center bg-[#13131A] w-fit p-2 px-3">
     <div class="flex items-center relative">
       <div 
         :class="[
@@ -13,7 +13,7 @@
       <div
         @click="selectOption('monthly')"
         :class="[
-          'relative z-10 px-3 py-1 rounded-md text-xs transition-all duration-300 ease-in-out',
+          'relative z-10 px-3 py-1 rounded-md text-sm transition-all duration-300 ease-in-out',
           'font-proto-mono tracking-wide uppercase flex-1 cursor-pointer text-center',
           selectedOption === 'monthly'
             ? 'text-neutral-900'
