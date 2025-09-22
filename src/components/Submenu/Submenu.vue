@@ -24,7 +24,7 @@
         >
           <template v-if="subItem.items && subItem.label && !subItem.communityComponent">
             <span
-              class="font-proto-mono text-xs mb-2 pb-2 pt-1 mx-3 block border-b border-neutral-500 text-neutral-700"
+              class="font-proto-mono text-xs mb-2 pb-1 pt-1 mx-3 block border-b border-neutral-500 text-neutral-700"
             >
               {{ subItem.label }}</span
             >
@@ -42,7 +42,7 @@
                   {{ item.label }}
                 </span>
 
-                <p class="text-sm block">{{ item.description }}</p>
+                <p class="text-sm block font-light text-slate-900">{{ item.description }}</p>
               </a>
             </li>
           </template>
@@ -54,7 +54,7 @@
             >
               <template v-if="item.items && item.label && !item.communityComponent">
                 <span
-                  class="font-proto-mono text-xs pb-2 mb-2 pt-1 mx-3 block border-b border-neutral-500 text-neutral-700"
+                  class="font-proto-mono text-xs pb-1 mb-2 pt-1 mx-3 block border-b border-neutral-500 text-neutral-700"
                 >
                   {{ item.label }}</span
                 >
@@ -72,13 +72,13 @@
                       {{ item.label }}
                     </span>
 
-                    <p class="text-sm block">{{ item.description }}</p>
+                    <p class="text-sm block font-light text-slate-900 ">{{ item.description }}</p>
                   </a>                        </li>
               </template>
 
               <template v-if="item.communityComponent">
                 <span
-                  class="font-proto-mono text-xs pb-2 mb-2 pt-1 mx-3  block border-b border-neutral-500 text-neutral-700"
+                  class="font-proto-mono text-xs pb-1 mb-2 pt-1 mx-3  block border-b border-neutral-500 text-neutral-700"
                 > 
                   {{ item.label }}</span
                 >
