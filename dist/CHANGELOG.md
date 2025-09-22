@@ -1,3 +1,9 @@
+## [1.188.0](https://github.com/aziontech/azion-webkit/compare/v1.187.0...v1.188.0) (2025-09-22)
+
+### Features
+
+* adjust submenu padding and add lighter font weight to descriptions ([0e11330](https://github.com/aziontech/azion-webkit/commit/0e1133039cf2a49d849750c78b41ee6eabc3f906))
+
 ## [1.187.0](https://github.com/aziontech/azion-webkit/compare/v1.186.0...v1.187.0) (2025-09-22)
 
 ### Features
