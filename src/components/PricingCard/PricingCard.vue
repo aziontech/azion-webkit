@@ -1,5 +1,5 @@
 <template>
-    <div :class="['p-6  min-w-[18.5rem] rounded-xl text-black', popular ? 'bg-orange-600' : 'bg-neutral-300']">
+    <div :class="['p-6 shadow-xl min-w-[18.5rem] rounded-xl text-black', popular ? 'bg-orange-600' : 'bg-neutral-300']">
       <div class="flex flex-col gap-2 mb-5 pt-4">
         <h3 class="text-xl font-medium">{{ title }}</h3>
         <p class="text-sm">{{ subtitle }}</p>
