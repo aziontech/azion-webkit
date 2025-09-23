@@ -1,3 +1,10 @@
+## [1.189.0](https://github.com/aziontech/azion-webkit/compare/v1.188.0...v1.189.0) (2025-09-23)
+
+### Features
+
+* pause video when the form is loaded ([599c0e2](https://github.com/aziontech/azion-webkit/commit/599c0e2aeab89fa2bb61821ad0423c98e78a2fec))
+* preserve video progress after form submission in VideoBlocker ([6ede8ba](https://github.com/aziontech/azion-webkit/commit/6ede8ba7d53c30967d4e36aee86a91ec3c727535))
+
 ## [1.188.0](https://github.com/aziontech/azion-webkit/compare/v1.187.0...v1.188.0) (2025-09-22)
 
 ### Features
