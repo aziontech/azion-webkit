@@ -7,7 +7,7 @@
         :icon="icon"
         :class="[customClass, buttonClasses[theme]]"
         :pt="{
-          icon: { 
+          icon: {
             class: iconClasses
           },
           label: {

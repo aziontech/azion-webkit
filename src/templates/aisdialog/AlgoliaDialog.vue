@@ -49,7 +49,7 @@
     algoliaModel: Array,
     inputPlaceholder: {
       type: String,
-      required: false,
+      required: false
     }
   })
 
