@@ -1,3 +1,9 @@
+## [1.190.0](https://github.com/aziontech/azion-webkit/compare/v1.189.0...v1.190.0) (2025-09-23)
+
+### Features
+
+* add pricing card carousel ([7da077b](https://github.com/aziontech/azion-webkit/commit/7da077b0dc5873b4a21fa279971cb22c021bb106))
+
 ## [1.189.0](https://github.com/aziontech/azion-webkit/compare/v1.188.0...v1.189.0) (2025-09-23)
 
 ### Features
