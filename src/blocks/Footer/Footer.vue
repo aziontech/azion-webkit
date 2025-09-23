@@ -68,7 +68,7 @@
     </div>
     <div class="bg-neutral-100">
       <div class="py-6 px-6 max-w-[1600px] mx-auto flex justify-between flex-wrap">
-        <div class="flex gap-6 md:gap-2 items-center">
+        <div class="flex gap-6 md:gap-4 items-center">
           <slot name="lang"></slot>
           <div class="flex gap-4">
             <a v-for="social in socialButtons" target="_blank" :key="social.title" :href="social.link">
