@@ -16,12 +16,18 @@ export default {
     buttons: {
       control: { type: 'object' },
       description: 'Array of button objects to display below the subtitle'
+    },
+    spacing: {
+      control: { type: 'select' },
+      options: ['none', 'small', 'default', 'large'],
+      description: 'Controls the vertical padding/spacing of the hero section'
     }
   },
   parameters: {
     docs: {
       description: {
-        component: 'A simple hero component with a title and subtitle. Perfect for landing pages and section headers.'
+        component:
+          'A simple hero component with a title and subtitle. Perfect for landing pages and section headers.'
       }
     }
   }
@@ -70,14 +76,76 @@ WithTwoButtons.args = {
       href: '#',
       type: 'primary',
       size: 'small',
-      icon: 'pi pi-angle-right',
+      icon: 'pi pi-angle-right'
     },
     {
       label: 'Start now',
       href: '#',
       type: 'primary',
       size: 'small',
-      icon: 'pi pi-angle-right',
+      icon: 'pi pi-angle-right'
+    }
+  ]
+}
+
+export const NoSpacing = Template.bind({})
+NoSpacing.args = {
+  title: 'Compact Hero',
+  subtitle: 'This hero has no vertical padding.',
+  spacing: 'none'
+}
+
+export const SmallSpacing = Template.bind({})
+SmallSpacing.args = {
+  title: 'Small Spacing Hero',
+  subtitle: 'This hero has small vertical padding.',
+  spacing: 'small',
+  buttons: [
+    {
+      label: 'Get Started',
+      href: '#',
+      type: 'primary',
+      size: 'small',
+      icon: 'pi pi-angle-right'
+    }
+  ]
+}
+
+export const DefaultSpacing = Template.bind({})
+DefaultSpacing.args = {
+  title: 'Default Spacing Hero',
+  subtitle: 'This hero has the default vertical padding.',
+  spacing: 'default',
+  buttons: [
+    {
+      label: 'Learn More',
+      href: '#',
+      type: 'secondary',
+      size: 'small',
+      icon: 'pi pi-angle-right'
+    }
+  ]
+}
+
+export const LargeSpacing = Template.bind({})
+LargeSpacing.args = {
+  title: 'Large Spacing Hero',
+  subtitle: 'This hero has large vertical padding for maximum impact.',
+  spacing: 'large',
+  buttons: [
+    {
+      label: 'View Demo',
+      href: '#',
+      type: 'primary',
+      size: 'small',
+      icon: 'pi pi-angle-right'
+    },
+    {
+      label: 'Contact Sales',
+      href: '#',
+      type: 'secondary',
+      size: 'small',
+      icon: 'pi pi-angle-right'
     }
   ]
 }

@@ -1,6 +1,6 @@
 <template>
-  <section class="text-white py-5 px-6">
-    <div class="mx-auto flex flex-col text-center gap-5">
+  <section class="text-white" :class="padding[spacing ?? 'default']">
+    <div class="mx-auto flex flex-col text-center gap-2 md:gap-5">
       <h1 class="text-4xl md:text-5xl lg:text-7xl font-sora leading-tight">
         {{ title }}
       </h1>
@@ -8,7 +8,7 @@
         {{ subtitle }}
       </p>
       <template v-if="limitedButtons.length > 0">
-        <div class="flex justify-center gap-5">
+        <div class="flex justify-center gap-2 md:gap-5">
           <Button
             v-for="button in limitedButtons"
             :size="button.size ?? 'small'"
@@ -40,6 +40,7 @@ interface HeroProps {
   title?: string
   subtitle?: string
   buttons?: HeroButtonProps[]
+  spacing?: 'none' | 'small' | 'default' | 'large'
 }
 
 const props = withDefaults(defineProps<HeroProps>(), {
@@ -51,4 +52,11 @@ const props = withDefaults(defineProps<HeroProps>(), {
 const limitedButtons = computed(() => {
   return props.buttons?.slice(0, 2) || []
 })
+
+const padding = {
+  none: 'py-0',
+  small: 'py-5 lg:py-10 xl:py-16 2xl:py-20',
+  default: 'py-10 lg:py-20 xl:py-30 2xl:py-40',
+  large: 'py-14 lg:py-30 xl:py-40 2xl:py-48'
+}
 </script>
