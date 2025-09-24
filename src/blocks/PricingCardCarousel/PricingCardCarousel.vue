@@ -27,26 +27,52 @@
           :savings="card.savings"
           :button-label="card.buttonLabel"
           @button-click="handleCardClick(card, index)"
+          :button-hidden="true"
         />
       </swiper-slide>
     </swiper>
   </div>
+
+  <!-- Sentinela para detectar quando o sticky gruda -->
+  <div ref="stickyObserver" class="h-0 md:hidden"></div>
   
-  <div class="mt-6 mx-4 mb-6 sticky top-[64px] z-10 bg-neutral-300 rounded-lg md:hidden">
-    <div class="border p-2 flex items-center rounded-lg gap-4">
-      <Button 
-        :label="buttonLabel"
-        icon="pi pi-chevron-right" 
-        type="secondary" 
-        class="flex-shrink-0"
-      />
-      <div class="flex-1">
-        <h3 class="text-2xl text-neutral-800 transition-all duration-300">
-          {{ activeCardTitle }}
-        </h3>
-      </div>
-    </div>
-  </div>
+  <swiper
+      :modules="modules"
+      :slides-per-view="1.15"
+      :space-between="16"
+      :centered-slides="false"
+      :grab-cursor="true"
+      :breakpoints="breakpoints"
+      class="w-full mb-11 pl-4 pr-4 sm:pl-4 sm:pr-2 sticky top-[0px]"
+      @slide-change="onSlideChange"
+      @swiper="onSwiper2"
+    >
+      <swiper-slide
+        v-for="(card, index) in cards"
+        :key="index"
+        class="h-auto"
+      >
+      <div :class="[' z-1 0 shadow-xl bg-neutral-300 rounded-b-lg md:hidden', card.popular ? 'bg-orange-600' : 'bg-neutral-300']">
+          <div class="p-4 flex items-center rounded-xl gap-4">
+            <Button 
+              :label="buttonLabel"
+              icon="pi pi-chevron-right" 
+              type="secondary" 
+              class="flex-shrink-0"
+            />
+            <div class="flex-1">
+              <Transition name="fade">
+                <h3 v-if="isStickyActive" class="text-2xl text-neutral-800">
+                  {{ activeCardTitle }}
+                </h3>
+              </Transition>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+  </swiper>
+  
+
 
   <div class="grid px-5 md:hidden">
     <PricingTableContent :mobileTable="true" :table="filteredTable" />
@@ -55,6 +81,7 @@
 
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Controller } from 'swiper/modules'
 import PricingCard from '../../components/PricingCard/PricingCard.vue'
 import PricingTableContent from '../../components/PricingTableContent/PricingTableContent.vue'
 import Button from '../../components/Button/Button.vue'
@@ -216,7 +243,10 @@ const props = defineProps({
 const emit = defineEmits(['card-click', 'slide-change'])
 
 const swiperInstance = ref(null)
+const swiperInstance2 = ref(null)
 const activeCardIndex = ref(0)
+const isStickyActive = ref(false)
+const stickyObserver = ref(null)
 
 const activeCardTitle = computed(() => {
   if (props.cards.length > 0 && activeCardIndex.value < props.cards.length) {
@@ -258,7 +288,7 @@ const filteredTable = computed(() => {
   }))
 })
 
-const modules = []
+const modules = [Controller]
 
 const breakpoints = {
   320: {
@@ -281,6 +311,20 @@ const breakpoints = {
 
 const onSwiper = (swiper) => {
   swiperInstance.value = swiper
+  // Configurar o controller após ambos os swipers estarem prontos
+  if (swiperInstance2.value) {
+    swiperInstance.value.controller.control = swiperInstance2.value
+    swiperInstance2.value.controller.control = swiperInstance.value
+  }
+}
+
+const onSwiper2 = (swiper) => {
+  swiperInstance2.value = swiper
+  // Configurar o controller após ambos os swipers estarem prontos
+  if (swiperInstance.value) {
+    swiperInstance.value.controller.control = swiperInstance2.value
+    swiperInstance2.value.controller.control = swiperInstance.value
+  }
 }
 
 const onSlideChange = (swiper) => {
@@ -293,18 +337,59 @@ const handleCardClick = (card, index) => {
   emit('card-click', { card, index })
 }
 
+// Função para verificar se o sticky está grudado
+const checkStickyStatus = () => {
+  if (stickyObserver.value) {
+    const rect = stickyObserver.value.getBoundingClientRect()
+    // Se o sentinela está acima da viewport, o sticky grudou
+    isStickyActive.value = rect.top < 0
+    console.log('Sticky status:', isStickyActive.value, 'Sentinela top:', rect.top)
+  }
+}
+
 onMounted(() => {
   if (props.cards.length > 0) {
     activeCardIndex.value = 0
   }
+  
+  // Adicionar listener de scroll para detectar quando o sticky gruda
+  window.addEventListener('scroll', checkStickyStatus)
+  
+  // Verificar status inicial
+  checkStickyStatus()
   
   document.addEventListener('touchstart', handleTouchStart)
   document.addEventListener('touchend', handleTouchEnd)
 })
 
 onUnmounted(() => {
+  window.removeEventListener('scroll', checkStickyStatus)
   document.removeEventListener('touchstart', handleTouchStart)
   document.removeEventListener('touchend', handleTouchEnd)
 })
 </script>
+
+<style scoped>
+/* Transição fade para o título aparecer suavemente */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fade-enter-from {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.fade-leave-to {
+  opacity: 0;
+  transform: translateX(10px);
+}
+
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+  transform: translateX(0);
+}
+</style>
 
