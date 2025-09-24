@@ -33,7 +33,6 @@
     </swiper>
   </div>
 
-  <!-- Sentinela para detectar quando o sticky gruda -->
   <div ref="stickyObserver" class="h-0 md:hidden"></div>
   
   <swiper
@@ -311,7 +310,6 @@ const breakpoints = {
 
 const onSwiper = (swiper) => {
   swiperInstance.value = swiper
-  // Configurar o controller após ambos os swipers estarem prontos
   if (swiperInstance2.value) {
     swiperInstance.value.controller.control = swiperInstance2.value
     swiperInstance2.value.controller.control = swiperInstance.value
@@ -320,7 +318,6 @@ const onSwiper = (swiper) => {
 
 const onSwiper2 = (swiper) => {
   swiperInstance2.value = swiper
-  // Configurar o controller após ambos os swipers estarem prontos
   if (swiperInstance.value) {
     swiperInstance.value.controller.control = swiperInstance2.value
     swiperInstance2.value.controller.control = swiperInstance.value
@@ -337,13 +334,10 @@ const handleCardClick = (card, index) => {
   emit('card-click', { card, index })
 }
 
-// Função para verificar se o sticky está grudado
 const checkStickyStatus = () => {
   if (stickyObserver.value) {
     const rect = stickyObserver.value.getBoundingClientRect()
-    // Se o sentinela está acima da viewport, o sticky grudou
     isStickyActive.value = rect.top < 0
-    console.log('Sticky status:', isStickyActive.value, 'Sentinela top:', rect.top)
   }
 }
 
@@ -352,10 +346,8 @@ onMounted(() => {
     activeCardIndex.value = 0
   }
   
-  // Adicionar listener de scroll para detectar quando o sticky gruda
   window.addEventListener('scroll', checkStickyStatus)
   
-  // Verificar status inicial
   checkStickyStatus()
   
   document.addEventListener('touchstart', handleTouchStart)
@@ -370,7 +362,6 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* Transição fade para o título aparecer suavemente */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s ease, transform 0.3s ease;
