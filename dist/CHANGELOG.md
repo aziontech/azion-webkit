@@ -1,3 +1,9 @@
+## [1.193.0](https://github.com/aziontech/azion-webkit/compare/v1.192.0...v1.193.0) (2025-09-25)
+
+### Features
+
+* adjust details ([0d07fb3](https://github.com/aziontech/azion-webkit/commit/0d07fb3a03d9f450902f95ac7541553dd28e2661))
+
 ## [1.192.0](https://github.com/aziontech/azion-webkit/compare/v1.191.0...v1.192.0) (2025-09-25)
 
 ### Features
