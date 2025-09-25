@@ -1,5 +1,5 @@
 <template>
-    <div :class="['p-6 min-w-[18.5rem] text-black', popular ? 'bg-orange-600' : 'bg-neutral-300', !buttonHidden ? 'rounded-t-xl pb-2' : 'rounded-xl']">
+    <div :class="['p-6 flex flex-col justify-between h-full min-w-[18.5rem] text-black', popular ? 'bg-orange-600' : 'bg-neutral-300', !buttonHidden ? 'rounded-t-xl md:rounded-xl pb-2' : 'rounded-xl']">
       <div class="flex flex-col gap-2 mb-5 pt-4">
         <h3 class="text-xl font-medium">{{ title }}</h3>
         <p class="text-sm">{{ subtitle }}</p>
@@ -12,7 +12,7 @@
             </li>
         </ul>
       </div>
-      <div :class="['flex mb-8 justify-between items-center flex-wrap font-proto-mono', !buttonHidden ? 'pb-2' : 'pb-0']">
+      <div :class="['flex mb-2 justify-between items-center flex-wrap font-proto-mono', !buttonHidden ? 'pb-2' : 'pb-0']">
         <span class="text-xs w-full mb-2 text-left font-proto-mono">start at</span>
         <div class="flex items-end text-sm font-proto-mono">
             <span v-if="currentPrice.startsWith('$')">$</span>
