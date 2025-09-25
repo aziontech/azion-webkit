@@ -1,5 +1,5 @@
 <template>
-  <div class="p-5 border-r border-x border-t border-neutral-700">
+  <div class="sticky top-0 z-10 bg-neutral-900 p-5 border border-neutral-700">
     <h3 class="font-sora text-lg font-medium text-neutral-300">Features</h3>
   </div>
 
@@ -7,7 +7,7 @@
     v-for="(plan, index) in plans" 
     :key="plan.name"
     :class="[
-      'p-5 text-left relative border-t border-neutral-700',
+      'sticky top-0 z-10 bg-neutral-900 p-5 text-left border   border-neutral-700',
       index < plans.length - 1 ? 'border-r border-neutral-700' : 'border-r border-neutral-700'
     ]"
   >
