@@ -1,0 +1,8 @@
+{
+  "name": "@azion/toggle",
+  "version": "0.0.1",
+  "main": "./index.ts",
+  "browser": {
+    "./sfc": "./Toggle.vue"
+  }
+}
