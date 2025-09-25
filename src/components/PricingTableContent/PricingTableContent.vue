@@ -29,9 +29,9 @@
           planIndex === feature.values.length - 1 ? 'border-r' : ''
         ]"
       >
-        <span v-if="value === true" class="pi pi-check text-orange-500 text-sm"></span>
-        <span v-else-if="value === false" class="text-neutral-500 font-sora">—</span>
-        <span v-else class="text-white font-sora">{{ value }}</span>
+          <span v-if="value === true" class="pi pi-check text-orange-500 text-sm"></span>
+          <span v-else-if="value === false" class="text-neutral-500 font-sora">—</span>
+          <span v-else class="text-white font-sora">{{ value }}</span>
       </div>
     </template>
   </template>
