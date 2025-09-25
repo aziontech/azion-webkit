@@ -1,5 +1,8 @@
 <template>
-  <section class="text-white" :class="padding[spacing ?? 'default']">
+  <section
+    class="text-white"
+    :class="padding[spacing ?? 'default']"
+  >
     <div class="mx-auto flex flex-col text-center gap-2 md:gap-5">
       <h1 class="text-4xl md:text-5xl lg:text-7xl font-sora leading-tight">
         {{ title }}
@@ -23,40 +26,40 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import Button from '../../components/Button/Button.vue'
+  import { computed } from 'vue'
+  import Button from '../../components/Button/Button.vue'
 
-export interface HeroButtonProps {
-  label: string
-  size?: 'small' | 'large'
-  type?: 'primary' | 'secondary' | 'link'
-  href: string
-  icon?: string
-  theme?: string
-  customClass?: string
-}
+  export interface HeroButtonProps {
+    label: string
+    size?: 'small' | 'large'
+    type?: 'primary' | 'secondary' | 'link'
+    href: string
+    icon?: string
+    theme?: string
+    customClass?: string
+  }
 
-interface HeroProps {
-  title?: string
-  subtitle?: string
-  buttons?: HeroButtonProps[]
-  spacing?: 'none' | 'small' | 'default' | 'large'
-}
+  interface HeroProps {
+    title?: string
+    subtitle?: string
+    buttons?: HeroButtonProps[]
+    spacing?: 'none' | 'small' | 'default' | 'large'
+  }
 
-const props = withDefaults(defineProps<HeroProps>(), {
-  title: 'Designed to Scale your business.',
-  subtitle: 'From vibing to enterprise, pay as your business grow.',
-  buttons: () => []
-})
+  const props = withDefaults(defineProps<HeroProps>(), {
+    title: 'Designed to Scale your business.',
+    subtitle: 'From vibing to enterprise, pay as your business grow.',
+    buttons: () => []
+  })
 
-const limitedButtons = computed(() => {
-  return props.buttons?.slice(0, 2) || []
-})
+  const limitedButtons = computed(() => {
+    return props.buttons?.slice(0, 2) || []
+  })
 
-const padding = {
-  none: 'py-0',
-  small: 'py-5 lg:py-10 xl:py-16 2xl:py-20',
-  default: 'py-10 lg:py-20 xl:py-30 2xl:py-40',
-  large: 'py-14 lg:py-30 xl:py-40 2xl:py-48'
-}
+  const padding = {
+    none: 'py-0',
+    small: 'py-5 lg:py-10 xl:py-16 2xl:py-20',
+    default: 'py-10 lg:py-20 xl:py-30 2xl:py-40',
+    large: 'py-14 lg:py-30 xl:py-40 2xl:py-48'
+  }
 </script>
