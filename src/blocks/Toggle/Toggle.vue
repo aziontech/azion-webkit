@@ -36,7 +36,7 @@
         </div>
       </div>
     </div>
-    <p v-if="description" class="text-xs font-sora text-neutral-100 text-center mt-3">
+    <p v-if="description" class="text-xs font-sora text-neutral-100 text-center mt-3 mb-[3.75rem]">
       {{ description }}
     </p>
   </div>
