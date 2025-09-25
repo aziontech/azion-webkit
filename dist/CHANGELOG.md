@@ -1,3 +1,10 @@
+## [1.192.0](https://github.com/aziontech/azion-webkit/compare/v1.191.0...v1.192.0) (2025-09-25)
+
+### Features
+
+* adjust pricing table ([fad395a](https://github.com/aziontech/azion-webkit/commit/fad395a1b425547dd653680a19511cda3aac1a46))
+* rename toggle component and adjust details ([75ca4b4](https://github.com/aziontech/azion-webkit/commit/75ca4b4520b0aa65e2616b04192f97cdaffd8972))
+
 ## [1.191.0](https://github.com/aziontech/azion-webkit/compare/v1.190.0...v1.191.0) (2025-09-25)
 
 ### Features
