@@ -7,14 +7,14 @@
       :centered-slides="false"
       :grab-cursor="true"
       :breakpoints="breakpoints"
-      class="w-full pl-4 pr-4 sm:pl-4 sm:pr-2"
+      class="w-full  pl-4 pr-4 sm:pl-4 sm:pr-2"
       @slide-change="onSlideChange"
       @swiper="onSwiper"
     >
       <swiper-slide
         v-for="(card, index) in cards"
         :key="index"
-        class="h-auto"
+        class="h-auto "
       >
         <PricingCard
           :popular="card.popular"
@@ -42,22 +42,27 @@
       :centered-slides="false"
       :grab-cursor="true"
       :breakpoints="breakpoints"
-      class="w-full mb-11 pl-4 pr-4 sm:pl-4 sm:pr-2 sticky top-[0px]"
+      class="w-full mb-11 pl-4 pr-4 sm:pl-4 sm:pr-2 sticky top-[64px]"
       @slide-change="onSlideChange"
       @swiper="onSwiper2"
     >
       <swiper-slide
         v-for="(card, index) in cards"
         :key="index"
-        class="h-auto"
+        class="h-auto shadow-xl"
       >
-      <div :class="[' z-1 0 shadow-xl bg-neutral-300 rounded-b-lg md:hidden', card.popular ? 'bg-orange-600' : 'bg-neutral-300']">
+      <div :class="[
+        'z-10 bg-neutral-300 rounded-b-lg md:hidden transition-[margin, border-radius] duration-300 ease-in-out',
+        card.popular ? 'bg-orange-600' : 'bg-neutral-300',
+        isStickyActive ? 'mt-2 rounded-lg' : ''
+      ]">
           <div class="p-4 flex items-center rounded-xl gap-4">
             <Button 
               :label="buttonLabel"
               icon="pi pi-chevron-right" 
               type="secondary" 
               class="flex-shrink-0"
+              :size="!isStickyActive ? 'large' : 'small'"
             />
             <div class="flex-1">
               <Transition name="fade">
@@ -291,8 +296,8 @@ const modules = [Controller]
 
 const breakpoints = {
   320: {
-    slidesPerView: 1.15,
-    spaceBetween: -8
+    slidesPerView: 1.10,
+    spaceBetween: 16
   },
   640: {
     slidesPerView: 1.5,
