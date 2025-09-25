@@ -1,5 +1,5 @@
 <template>
-    <div :class="['p-6 shadow-xl min-w-[18.5rem] rounded-xl text-black', popular ? 'bg-orange-600' : 'bg-neutral-300']">
+    <div :class="['p-6 shadow-xl min-w-[18.5rem] text-black', popular ? 'bg-orange-600' : 'bg-neutral-300', !buttonHidden ? 'rounded-t-xl pb-2' : 'rounded-xl']">
       <div class="flex flex-col gap-2 mb-5 pt-4">
         <h3 class="text-xl font-medium">{{ title }}</h3>
         <p class="text-sm">{{ subtitle }}</p>
@@ -12,15 +12,15 @@
             </li>
         </ul>
       </div>
-      <div class="flex mb-8 justify-between items-center flex-wrap font-proto-mono">
+      <div :class="['flex mb-8 justify-between items-center flex-wrap font-proto-mono', !buttonHidden ? 'pb-2' : 'pb-0']">
         <span class="text-xs w-full mb-2 text-left font-proto-mono">start at</span>
         <div class="flex items-end text-sm font-proto-mono">
             <span v-if="currentPrice.startsWith('$')">$</span>
             <h4 class="text-7xl leading-[3.5rem] font-proto-mono">{{ currentPrice.replace('$', '') }}</h4>
-            <span class="font-proto-mono">{{ currentPeriod === 'monthly' ? '/mo' : '/yr' }}</span>
+            <span class="font-proto-mono">{{ currentPeriod === 'monthly' ? '/mo' : '/year' }}</span>
         </div>
       </div>
-      <div>
+      <div v-if="buttonHidden">
         <Button :icon="'pi pi-chevron-right'" :label="buttonLabel" type="secondary" size="large" />      </div>
     </div>
 </template>
