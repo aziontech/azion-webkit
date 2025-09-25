@@ -5,6 +5,7 @@
       <Card
         v-for="card in cards"
         v-bind="card"
+        class="h-full"
       />
     </div>
   </section>

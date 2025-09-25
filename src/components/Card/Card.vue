@@ -10,8 +10,8 @@
         :pt="ptWithHover[theme]"
       >
         <template #content>
-          <div class="flex flex-col p-3 md:p-6 gap-3">
-            <div class="flex flex-col gap-2 font-sora">
+          <div class="flex flex-col p-3 md:p-6 gap-3 h-full">
+            <div class="flex flex-col gap-2 font-sora flex-grow">
               <p :class="innerStyleWithHover[theme].title">{{ title }}</p>
               <p :class="innerStyleWithHover[theme].description">{{ description }}</p>
             </div>
@@ -34,8 +34,8 @@
       :pt="pt[theme]"
     >
       <template #content>
-        <div class="flex flex-col p-3 md:p-6 gap-3">
-          <div class="flex flex-col gap-2 font-sora">
+        <div class="flex flex-col p-3 md:p-6 gap-3 h-full">
+          <div class="flex flex-col gap-2 font-sora flex-grow">
             <p :class="innerStyle[theme].title">{{ title }}</p>
             <p :class="innerStyle[theme].description">{{ description }}</p>
           </div>
@@ -96,7 +96,7 @@
   const pt = {
     default: {
       root: {
-        class: 'w-full bg-[#171717] rounded-md'
+        class: 'w-full h-full bg-[#171717] rounded-md flex flex-col'
       }
     }
   }
@@ -104,7 +104,7 @@
   const ptWithHover = {
     default: {
       root: {
-        class: 'w-full bg-[#171717] rounded-md group-hover:bg-[#13131a] transition-colors'
+        class: 'w-full h-full bg-[#171717] rounded-md group-hover:bg-[#13131a] transition-colors flex flex-col'
       }
     }
   }
