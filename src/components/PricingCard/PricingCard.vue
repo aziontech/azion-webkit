@@ -1,10 +1,10 @@
 <template>
     <div :class="['p-6 flex flex-col justify-between h-full min-w-[18.5rem] text-black', popular ? 'bg-orange-600' : 'bg-neutral-300', !buttonHidden ? 'rounded-t-xl md:rounded-xl pb-2' : 'rounded-xl']">
-        <div>
+        <div class="pb-5">
             <div class="flex gap-4 "> 
-                <h3 class="text-xl font-bold font-proto-mono">{{ title }}</h3>
+                <h3 class="text-xl font-bold pb-4">{{ title }}</h3>
                 <template v-if="popular">
-                    <span class="text-xs text-neutral-100 bg-neutral-900 px-2 py-1 rounded">Popular</span>
+                    <span class="text-xs flex justify-center items-center text-neutral-100 bg-neutral-900 px-2 py-1 rounded">Popular</span>
                 </template>
             </div>
             <p class="text-sm">{{ subtitle }}</p>
@@ -22,16 +22,17 @@
             <div class="flex items-end text-sm font-proto-mono">
                 <span v-if="currentPrice.startsWith('$')">$</span>
                 <h4 class="text-7xl leading-[3.5rem] font-proto-mono">{{ currentPrice.replace('$', '') }}</h4>
-                <span class="font-proto-mono">{{ currentPeriod === 'monthly' ? '/mo' : '/year' }}</span>
+                <span class="font-proto-mono">{{ currentPeriod === 'monthly' ? '/mo' : '/mo' }}</span>
             </div>
         </div>
-      <Button :icon="'pi pi-chevron-right'" :label="buttonLabel" type="secondary" size="large" class="hidden md:block" />
+      <div class="py-8">
+        <Button :icon="'pi pi-chevron-right'" :label="buttonLabel" type="secondary" size="large" class="hidden md:block" />
+      </div>
     </div>
 </template>
 
 <script setup>
 import Button from '../Button/Button.vue'
-
 import { computed } from 'vue'
 
 const props = defineProps({
@@ -45,7 +46,6 @@ const props = defineProps({
         type: String,
         default: 'monthly'
     },
-    savings: String,
     buttonLabel: String,
 })
 
