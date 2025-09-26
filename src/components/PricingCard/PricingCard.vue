@@ -12,7 +12,7 @@
         <div class="h-[13rem]">
             <ul class="mb-10">
                 <li class="flex items-center gap-2 mb-2" v-for="feature in features" :key="feature">
-                    <span :class="['pi', feature.icon, popular ? 'text-neutral-100' : 'text-orange-500']"></span>
+                    <span v-if="feature.icon" :class="['pi', feature.icon, popular ? 'text-neutral-100' : 'text-orange-500']"></span>
                     <p class="font-sora text-sm">{{ feature.label }}</p>
                 </li>
             </ul>
@@ -21,7 +21,7 @@
             <span class="text-xs w-full mb-2 text-left font-proto-mono">{{ priceLabel }}</span>
             <div class="flex items-end text-sm font-proto-mono">
                 <span v-if="currentPrice.startsWith('$')">$</span>
-                <h4 class="text-7xl leading-[3.5rem] font-proto-mono">{{ currentPrice.replace('$', '') }}</h4>
+                <h4 class="text-7xl leading-[3.5rem] tracking-tighter font-proto-mono">{{ currentPrice.replace('$', '') }}</h4>
                 <span class="font-proto-mono">{{ currentPeriod === 'monthly' ? '/mo' : '/mo' }}</span>
             </div>
         </div>
@@ -48,7 +48,7 @@ const props = defineProps({
     },
     priceLabel: {
         type: String,
-        default: 'started at'
+        default: 'start at'
     },
     buttonLabel: String,
 })

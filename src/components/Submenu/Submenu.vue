@@ -42,7 +42,7 @@
                   {{ item.label }}
                 </span>
 
-                <p class="text-sm block font-light text-slate-900">{{ item.description }}</p>
+                <p class="text-xs block font-light text-slate-900">{{ item.description }}</p>
               </a>
             </li>
           </template>
@@ -72,7 +72,7 @@
                       {{ item.label }}
                     </span>
 
-                    <p class="text-sm block font-light text-slate-900 ">{{ item.description }}</p>
+                    <p class="text-xs block font-light text-slate-900 ">{{ item.description }}</p>
                   </a>                        </li>
               </template>
 
