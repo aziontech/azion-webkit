@@ -1,3 +1,9 @@
+## [1.195.0](https://github.com/aziontech/azion-webkit/compare/v1.194.0...v1.195.0) (2025-09-26)
+
+### Features
+
+* adjust card ([723f04c](https://github.com/aziontech/azion-webkit/commit/723f04c42723d4a8e5b347532b1d2b214f2af1d6))
+
 ## [1.194.0](https://github.com/aziontech/azion-webkit/compare/v1.193.0...v1.194.0) (2025-09-26)
 
 ### Features
