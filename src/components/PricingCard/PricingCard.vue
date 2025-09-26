@@ -18,7 +18,7 @@
             </ul>
         </div>
         <div :class="['flex mb-2 justify-between items-center flex-wrap font-proto-mono', !buttonHidden ? 'pb-2' : 'pb-0']">
-            <span class="text-xs w-full mb-2 text-left font-proto-mono">start at</span>
+            <span class="text-xs w-full mb-2 text-left font-proto-mono">{{ priceLabel }}</span>
             <div class="flex items-end text-sm font-proto-mono">
                 <span v-if="currentPrice.startsWith('$')">$</span>
                 <h4 class="text-7xl leading-[3.5rem] font-proto-mono">{{ currentPrice.replace('$', '') }}</h4>
@@ -46,6 +46,10 @@ const props = defineProps({
         type: String,
         default: 'monthly'
     },
+    priceLabel: {
+        type: String,
+        default: 'started at'
+    },
     buttonLabel: String,
 })
 
@@ -53,4 +57,3 @@ const currentPrice = computed(() => {
     return props.currentPeriod === 'monthly' ? props.monthlyPrice : props.annualPrice
 })
 </script>
-    
