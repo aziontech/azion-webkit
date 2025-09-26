@@ -1,5 +1,16 @@
 <template>
-  <div class="w-full overflow-hidden md:hidden">
+  <div class="w-full md:hidden">
+    <div class="mb-6">
+      <Toggle 
+        v-model="toggleValue"
+        main-label="monthly"
+        alternative-label="yearly"
+        description="Save up to 20% with yearly billing"
+        @change="handlePeriodChange"
+      />
+    </div>
+    
+    <div class="w-full overflow-hidden">
     <swiper
       :modules="modules"
       :slides-per-view="1.15"
@@ -23,7 +34,7 @@
           :features="card.features"
           :monthly-price="card.monthlyPrice"
           :annual-price="card.annualPrice"
-          :current-period="card.currentPeriod || 'monthly'"
+          :current-period="currentPeriod"
           :savings="card.savings"
           :button-label="card.buttonLabel"
           @button-click="handleCardClick(card, index)"
@@ -31,6 +42,7 @@
         />
       </swiper-slide>
     </swiper>
+    </div>
   </div>
 
   <div ref="stickyObserver" class="h-0 md:hidden"></div>
@@ -89,6 +101,7 @@ import { Controller } from 'swiper/modules'
 import PricingCard from '../../components/PricingCard/PricingCard.vue'
 import PricingTableContent from '../../components/PricingTableContent/PricingTableContent.vue'
 import Button from '../../components/Button/Button.vue'
+import Toggle from '../Toggle/Toggle.vue'
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import 'swiper/css'
 
@@ -244,13 +257,24 @@ const props = defineProps({
   }
 })
 
-const emit = defineEmits(['card-click', 'slide-change'])
+const emit = defineEmits(['card-click', 'slide-change', 'period-change'])
 
 const swiperInstance = ref(null)
 const swiperInstance2 = ref(null)
 const activeCardIndex = ref(0)
 const isStickyActive = ref(false)
 const stickyObserver = ref(null)
+const currentPeriod = ref('monthly') // 'monthly' or 'yearly' for pricing display
+
+// Computed property to convert between Toggle values and pricing periods
+const toggleValue = computed({
+  get() {
+    return currentPeriod.value === 'monthly' ? 'main' : 'alternative'
+  },
+  set(value) {
+    currentPeriod.value = value === 'main' ? 'monthly' : 'yearly'
+  }
+})
 
 const activeCardTitle = computed(() => {
   if (props.cards.length > 0 && activeCardIndex.value < props.cards.length) {
@@ -337,6 +361,12 @@ const onSlideChange = (swiper) => {
 
 const handleCardClick = (card, index) => {
   emit('card-click', { card, index })
+}
+
+const handlePeriodChange = (period) => {
+  // The toggleValue computed property already handles the conversion
+  // Just emit the current pricing period
+  emit('period-change', currentPeriod.value)
 }
 
 const checkStickyStatus = () => {

@@ -1,7 +1,7 @@
 <template>
   <template v-for="(content) in table" :key="content.title">
     <div :class="[
-      'p-5 pt-32 pb-12 border-x border-y border-neutral-700',
+      'p-5 first:pt-12 pt-32 pb-12 border-x border-y border-neutral-700',
       mobileTable ? 'col-span-2' : 'col-span-5'
     ]">
       <div class="text-xs text-neutral-300 uppercase tracking-wide font-proto-mono">{{ content.overline }}</div>
