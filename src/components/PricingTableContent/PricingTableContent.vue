@@ -1,7 +1,7 @@
 <template>
   <template v-for="(content) in table" :key="content.title">
     <div :class="[
-      'p-5 py-12 border-x border-y border-neutral-700',
+      'p-5 pt-24 pb-12 border-x border-y border-neutral-700',
       mobileTable ? 'col-span-2' : 'col-span-5'
     ]">
       <div class="text-xs text-neutral-300 uppercase tracking-wide font-proto-mono">{{ content.overline }}</div>
@@ -12,7 +12,7 @@
     <template v-for="(feature, featureIndex) in content.features" :key="feature.name">
       <div :class="[
         'border-l border-r border-neutral-700',
-        featureIndex === content.features.length - 1 ? 'border-b' : '', feature.nested ? 'pl-7' : 'p-5'
+        featureIndex === content.features.length - 1 ? 'border-b' : '', feature.nested ? 'p-5 pl-7' : 'p-5'
       ]">
         <span :class="[
           'font-medium font-sora',
@@ -29,7 +29,8 @@
           planIndex === feature.values.length - 1 ? 'border-r' : ''
         ]"
       >
-          <span v-if="value === true" class="pi pi-check text-orange-500 text-sm"></span>
+          <span v-if="feature.nested" class="text-white font-sora font-sm">{{ value }}</span>
+          <span v-else-if="value === true" class="pi pi-check text-orange-500 text-sm"></span>
           <span v-else-if="value === false" class="text-neutral-500 font-sora">—</span>
           <span v-else class="text-white font-sora">{{ value }}</span>
       </div>
