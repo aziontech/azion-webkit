@@ -1,3 +1,9 @@
+## [1.198.0](https://github.com/aziontech/azion-webkit/compare/v1.197.0...v1.198.0) (2025-09-26)
+
+### Features
+
+* pricing components adjusts ([b61086e](https://github.com/aziontech/azion-webkit/commit/b61086eae6f9c33997df395ea40f4d8acd31de23))
+
 ## [1.197.0](https://github.com/aziontech/azion-webkit/compare/v1.196.0...v1.197.0) (2025-09-26)
 
 ### Features
