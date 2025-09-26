@@ -1,3 +1,10 @@
+## [1.197.0](https://github.com/aziontech/azion-webkit/compare/v1.196.0...v1.197.0) (2025-09-26)
+
+### Features
+
+* add pricelabel ([1a41c69](https://github.com/aziontech/azion-webkit/commit/1a41c69f4fd87e32eb9b3e5ae31a6d1e689abd21))
+* adjust pricing page ([d255990](https://github.com/aziontech/azion-webkit/commit/d25599035d395bb08761e747d9030f7b3d20694a))
+
 ## [1.196.0](https://github.com/aziontech/azion-webkit/compare/v1.195.0...v1.196.0) (2025-09-26)
 
 ### Features
