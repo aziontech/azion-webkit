@@ -11,12 +11,12 @@
 
     <template v-for="(feature, featureIndex) in content.features" :key="feature.name">
       <div :class="[
-        'p-5 border-l border-r border-neutral-700',
-        featureIndex === content.features.length - 1 ? 'border-b' : ''
+        'border-l border-r border-neutral-700',
+        featureIndex === content.features.length - 1 ? 'border-b' : '', feature.nested ? 'pl-7' : 'p-5'
       ]">
         <span :class="[
           'font-medium font-sora',
-          feature.nested ? 'text-neutral-300 text-sm font-normal pl-4' : 'text-white'
+          feature.nested ? 'text-neutral-300 text-sm font-normal' : 'text-white'
         ]">{{ feature.name }}</span>
       </div>
 
