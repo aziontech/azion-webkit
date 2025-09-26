@@ -1,6 +1,6 @@
 
 <template>
-  <div class="w-full mb-8 bg-neutral-900 text-white grid grid-cols-5 max-w-[1600px] mx-auto px-5">
+  <div class="w-full mb-24 bg-neutral-900 text-white grid grid-cols-5 max-w-[1292px] mx-auto px-5">
     <slot />
   </div>
 </template>

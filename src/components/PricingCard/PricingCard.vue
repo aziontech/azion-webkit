@@ -1,10 +1,10 @@
 <template>
-    <div :class="['p-6 flex flex-col justify-between h-full min-w-[18.5rem] text-black', popular ? 'bg-orange-600' : 'bg-neutral-300', !buttonHidden ? 'rounded-t-xl md:rounded-xl pb-2' : 'rounded-xl']">
+    <div :class="['p-6 flex flex-col justify-between h-full w-[20rem] text-black', popular ? 'bg-orange-600' : 'bg-neutral-300', !buttonHidden ? 'rounded-t-xl md:rounded-xl pb-2' : 'rounded-xl']">
         <div class="pb-5">
             <div class="flex gap-4 "> 
                 <h3 class="text-xl font-sora font-bold pb-4">{{ title }}</h3>
                 <template v-if="popular">
-                    <span class="h-fit text-xs flex justify-center items-center text-neutral-100 bg-neutral-900 px-2 py-1 rounded">Popular</span>
+                    <span class="h-fit text-xs flex font-proto-mono justify-center items-center text-neutral-100 bg-neutral-900 px-2 py-1 rounded">Popular</span>
                 </template>
             </div>
             <p class="text-sm">{{ subtitle }}</p>
@@ -25,8 +25,8 @@
                 <span class="font-proto-mono">{{ currentPeriod === 'monthly' ? '/mo' : '/mo' }}</span>
             </div>
         </div>
-      <div class="py-8">
-        <Button :icon="'pi pi-chevron-right'" :label="buttonLabel" type="secondary" size="large" class="hidden md:flex" />
+      <div class="pb-4 hidden md:flex">
+        <Button :icon="'pi pi-chevron-right'" :label="buttonLabel" type="secondary" size="small"/>
       </div>
     </div>
 </template>

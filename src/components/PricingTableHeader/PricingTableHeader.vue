@@ -12,11 +12,12 @@
     ]"
   >
     <div v-if="plan.popular" class="absolute inset-0 border-1 border-orange-500 rounded-sm"></div>
-    <h3 class="text-2xl font-medium mb-3 font-sora">{{ plan.name }}</h3>
+    <h3 class="text-2xl font-medium mb-5 font-sora">{{ plan.name }}</h3>
     <Button 
       :label="plan.buttonLabel"
       :type="plan.buttonType || 'secondary'"
       :theme="plan.buttonTheme || 'dark'"
+      size="small"
       @click="$emit('plan-selected', plan, index)"
     />
   </div>
