@@ -1,3 +1,9 @@
+## [1.200.0](https://github.com/aziontech/azion-webkit/compare/v1.199.0...v1.200.0) (2025-09-26)
+
+### Features
+
+* adjust pricing carousel ([5e4ad9d](https://github.com/aziontech/azion-webkit/commit/5e4ad9db0fa16b8f434ff703cebb448f4acdc6d6))
+
 ## [1.199.0](https://github.com/aziontech/azion-webkit/compare/v1.198.0...v1.199.0) (2025-09-26)
 
 ### Features
