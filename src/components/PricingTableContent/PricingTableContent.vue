@@ -11,7 +11,7 @@
 
     <template v-for="(feature, featureIndex) in content.features" :key="feature.name">
       <div :class="[
-        'border-l border-r border-neutral-700',
+        'border-l border-r flex items-center border-neutral-700',
         featureIndex === content.features.length - 1 ? 'border-b' : '', feature.nested ? 'p-5 pl-7' : 'p-5'
       ]">
         <span :class="[
@@ -31,7 +31,7 @@
       >
           <span v-if="value === true" class="pi pi-check text-orange-500 text-sm"></span>
           <span v-else-if="value === false" class="text-neutral-500 font-sora">—</span>
-          <span v-else-if="feature.nested" class="text-white font-sora font-sm">{{ value }}</span>
+          <span v-else-if="feature.nested" class="text-white font-sora text-sm">{{ value }}</span>
           <span v-else class="text-white font-sora">{{ value }}</span>
       </div>
     </template>
