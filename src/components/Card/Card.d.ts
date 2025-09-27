@@ -1,6 +1,6 @@
 export interface CardProps {
   /**
-   * Optional label for the card (legacy prop)
+   * Button label text displayed at the bottom of the card
    */
   label?: string
   /**
@@ -25,10 +25,6 @@ export interface CardProps {
    * @defaultValue '_self'
    */
   target?: '_blank' | '_self'
-  /**
-   * Call-to-action text displayed below the description with a button
-   */
-  cta?: string
 }
 
 export { default } from './Card.vue'

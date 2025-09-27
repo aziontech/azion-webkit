@@ -13,9 +13,9 @@ export default {
       control: { type: 'text' },
       description: 'Card description text'
     },
-    cta: {
+    label: {
       control: { type: 'text' },
-      description: 'Call-to-action text displayed below the description'
+      description: 'Button label text displayed at the bottom of the card'
     },
     href: {
       control: { type: 'text' },
@@ -61,7 +61,7 @@ export const Default = Template.bind({})
 Default.args = {
   title: 'Edge-ready infrastructure',
   description: 'Build, secure, and scale globally with our developer-first platform.',
-  cta: '',
+  label: '',
   href: ''
 }
 
@@ -69,7 +69,7 @@ export const WithLink = Template.bind({})
 WithLink.args = {
   title: 'Explore Documentation',
   description: 'Start shipping faster with guides, examples, and API references.',
-  cta: 'View docs',
+  label: 'View docs',
   href: '#',
   target: '_self'
 }

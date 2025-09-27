@@ -1,5 +1,6 @@
 <template>
   <section
+    :id="id"
     class="text-white"
     :class="padding[spacing ?? 'default']"
   >
@@ -44,11 +45,12 @@
     subtitle?: string
     buttons?: HeroButtonProps[]
     spacing?: 'none' | 'small' | 'default' | 'large'
+    id?: string
   }
 
   const props = withDefaults(defineProps<HeroProps>(), {
-    title: 'Designed to Scale your business.',
-    subtitle: 'From vibing to enterprise, pay as your business grow.',
+    title: '',
+    subtitle: '',
     buttons: () => []
   })
 

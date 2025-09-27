@@ -9,4 +9,8 @@ export interface GridCardContainerProps {
    * Title text displayed above the grid
    */
   title: string
+  /**
+   * Optional ID for the section element
+   */
+  id?: string
 }

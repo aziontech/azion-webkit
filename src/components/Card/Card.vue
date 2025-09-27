@@ -16,8 +16,8 @@
               <p :class="innerStyleWithHover[theme].description">{{ description }}</p>
             </div>
             <Button
-              v-if="cta"
-              :label="cta"
+              v-if="label"
+              :label="label"
               size="small"
               type="inline"
               customClass="px-0"
@@ -50,7 +50,10 @@
   import Button from '../Button/Button.vue'
 
   const props = defineProps({
-    label: String,
+    label: {
+      type: String,
+      default: ''
+    },
     title: {
       type: String,
       default: ''
@@ -72,10 +75,6 @@
       type: String,
       options: ['_blank', '_self'],
       default: '_self'
-    },
-    cta: {
-      type: String,
-      default: ''
     }
   })
 
@@ -104,7 +103,8 @@
   const ptWithHover = {
     default: {
       root: {
-        class: 'w-full h-full bg-[#171717] rounded-md group-hover:bg-[#13131a] transition-colors flex flex-col'
+        class:
+          'w-full h-full bg-[#171717] rounded-md group-hover:bg-[#13131a] transition-colors flex flex-col'
       }
     }
   }

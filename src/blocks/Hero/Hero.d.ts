@@ -22,6 +22,14 @@ export interface HeroProps {
    * Note: Maximum of 2 buttons will be displayed (first 2 buttons in the array)
    */
   buttons?: HeroButtonProps[]
+  /**
+   * Controls the vertical padding/spacing of the hero section
+   */
+  spacing?: 'none' | 'small' | 'default' | 'large'
+  /**
+   * Optional ID for the section element
+   */
+  id?: string
 }
 
 export { default } from './Hero.vue'
