@@ -1,3 +1,9 @@
+## [1.203.0](https://github.com/aziontech/azion-webkit/compare/v1.202.0...v1.203.0) (2025-09-29)
+
+### Features
+
+* add tooltips and typography classes to pricing table components ([4393d97](https://github.com/aziontech/azion-webkit/commit/4393d975023d032770ad08f712cb7618755c27c6))
+
 ## [1.202.0](https://github.com/aziontech/azion-webkit/compare/v1.201.0...v1.202.0) (2025-09-29)
 
 ### Features
