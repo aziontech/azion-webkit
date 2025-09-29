@@ -32,6 +32,32 @@ module.exports = {
       };
       addUtilities(newUtilities, ["responsive", "hover"]);
     },
+    function ({ addComponents }) {
+      const components = {
+        '.display-1': {
+          fontSize: '4.5rem',
+          lineHeight: '4.5rem',
+          fontFamily: 'Sora',
+        },
+        '.display-2': {
+          fontSize: '1.75rem',
+          lineHeight: '2rem',
+          fontFamily: 'Sora',
+        },
+        '.display-3': {
+          fontSize: '1.25rem',
+          lineHeight: '1.625rem',
+          fontFamily: 'Sora',
+        },
+        '.body-1': {
+          fontSize: '1rem',
+          lineHeight: '1.25rem',
+          fontFamily: 'Sora',
+        },
+      };
+      
+      addComponents(components);
+    },
   ],
   important: true,
   darkMode: 'class',

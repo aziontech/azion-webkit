@@ -11,27 +11,32 @@
 
     <template v-for="(feature, featureIndex) in content.features" :key="feature.name">
       <div :class="[
-        'border-l border-r flex items-center border-neutral-700',
+        'border-l border-r flex items-center gap-2 border-neutral-700',
         featureIndex === content.features.length - 1 ? 'border-b' : '', feature.nested ? 'p-5 pl-7' : 'p-5'
       ]">
         <span :class="[
           'font-medium font-sora',
           feature.nested ? 'text-neutral-300 text-sm font-normal' : 'text-white'
         ]">{{ feature.name }}</span>
+        <span 
+          v-if="feature.info"
+          v-tooltip.top="feature.info"
+          class="pi pi-info-circle text-neutral-400 text-xs cursor-help hover:text-neutral-300 transition-colors"
+        ></span>
       </div>
 
       <div 
         v-for="(value, planIndex) in feature.values" 
         :key="planIndex"
         :class="[
-          'p-5 text-left flex items-center border-r border-neutral-700',
+          'p-5 text-left flex items-center gap-2 border-r border-neutral-700',
           featureIndex === content.features.length - 1 ? 'border-b' : '',
           planIndex === feature.values.length - 1 ? 'border-r' : ''
         ]"
       >
           <span v-if="value === true" class="pi pi-check text-orange-500 text-sm"></span>
           <span v-else-if="value === false" class="text-neutral-500 font-sora">—</span>
-          <span v-else-if="feature.nested" class="text-white font-sora text-sm">{{ value }}</span>
+          <span v-else-if="feature.nested" class="text-neutral-300 font-sora text-sm">{{ value }}</span>
           <span v-else class="text-white font-sora">{{ value }}</span>
       </div>
     </template>
@@ -55,6 +60,7 @@ defineProps({
           {
             name: 'Workspaces',
             nested: true,
+            info: 'Alguma informacao relevante para colocar no tooltip',
             values: ['1 Workspace', '1 Workspace', '1 Workspace', 'Custom']
           },
           {
