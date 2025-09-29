@@ -1,3 +1,17 @@
+## [1.202.0](https://github.com/aziontech/azion-webkit/compare/v1.201.0...v1.202.0) (2025-09-29)
+
+### Features
+
+* cards grow inside a grid ([9afaf79](https://github.com/aziontech/azion-webkit/commit/9afaf79dcc1f7aa2f58cb36e0d540294fad768c0))
+* dynamical padding ([024bac5](https://github.com/aziontech/azion-webkit/commit/024bac5d412a76d75092b36f0c16202e8bb3caf9))
+* grid card container storie ([6566dae](https://github.com/aziontech/azion-webkit/commit/6566daec50cd898c3c3e4ee03b95f9ce4155a2b6))
+* include buttons in new hero ([18746ec](https://github.com/aziontech/azion-webkit/commit/18746ecd64bfa29d01f9c2ff6c5259573fac4ba5))
+* new card and card grid container ([b56f355](https://github.com/aziontech/azion-webkit/commit/b56f3554cb9d7c7a8bd13d60e9b5d07fe16f8efc))
+
+### Bug Fixes
+
+* footer spacing ([2559de4](https://github.com/aziontech/azion-webkit/commit/2559de4e0ca246eca40410dcf3ff3b03f40d344a))
+
 ## [1.201.0](https://github.com/aziontech/azion-webkit/compare/v1.200.0...v1.201.0) (2025-09-26)
 
 ### Features
