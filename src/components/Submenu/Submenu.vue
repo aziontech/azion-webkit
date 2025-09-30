@@ -73,7 +73,8 @@
                     </span>
 
                     <p class="text-xs block font-light text-slate-900 ">{{ item.description }}</p>
-                  </a>                        </li>
+                  </a>                        
+                </li>
               </template>
 
               <template v-if="item.communityComponent">
@@ -83,13 +84,24 @@
                   {{ item.label }}</span
                 >
                 <div class=" ">
-                  <a :href="communityData.href" class="flex items-center gap-3 mt-2 px-3 py-2 hover:bg-white/60 rounded-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="37" viewBox="0 0 35 37" fill="none">
-                      <path d="M31.128 30L20.112 22.224V15.312L31.128 7.536L34.368 13.152L24.936 17.256V20.28L34.368 24.384L31.128 30ZM19.968 0.911997L18.744 14.376L12.696 17.832L0.456 12.144L3.696 6.6L11.976 12.648L14.64 11.136L13.488 0.983996L19.968 0.911997ZM0.456 25.392L12.696 19.704L18.744 23.16L19.968 36.624L13.488 36.552L14.64 26.4L11.976 24.888L3.696 30.936L0.456 25.392Z" fill="#070707"/>
+                  <a
+                    :href="communityData.href"
+                    class="flex items-center gap-3 mt-2 px-3 py-2 hover:bg-white/60 rounded-md"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="35"
+                      height="37"
+                      viewBox="0 0 35 37"
+                      fill="none"
+                    >
+                      <path
+                        d="M31.128 30L20.112 22.224V15.312L31.128 7.536L34.368 13.152L24.936 17.256V20.28L34.368 24.384L31.128 30ZM19.968 0.911997L18.744 14.376L12.696 17.832L0.456 12.144L3.696 6.6L11.976 12.648L14.64 11.136L13.488 0.983996L19.968 0.911997ZM0.456 25.392L12.696 19.704L18.744 23.16L19.968 36.624L13.488 36.552L14.64 26.4L11.976 24.888L3.696 30.936L0.456 25.392Z"
+                        fill="#070707"
+                      />
                     </svg>
-                    <h3 class="font-sora text-sm ">{{ communityData.label }}</h3>
-                    <span class="pi pi-external-link text-black cursor-pointer">
-                    </span>
+                    <h3 class="font-sora text-sm">{{ communityData.label }}</h3>
+                    <span class="pi pi-external-link text-black cursor-pointer"> </span>
                   </a>
                 </div>
               </template>
@@ -102,18 +114,17 @@
 </template>
 
 <script setup>
-const props = defineProps({
-  menuitem: {
-    type: Object,
-    required: true
-  },
-  communityData: {
-    type: Object
-  }
-})
+  const props = defineProps({
+    menuitem: {
+      type: Object,
+      required: true
+    },
+    communityData: {
+      type: Object
+    }
+  })
 
-const { menuitem, communityData } = props 
+  const { menuitem, communityData } = props
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
