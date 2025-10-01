@@ -4,17 +4,6 @@
       <div class="flex flex-col lg:flex-row justify-between w-full gap-9 lg:gap-12">
         <div class="w-full flex flex-col justify-between gap-4">
           <div class="flex flex-col gap-4">
-            <!-- <a
-              :href="`/${lang}/`"
-              title="Azion Technologies"
-              class="mb-4 block"
-              aria-label="Azion logo"
-            >
-              <span class="flex flex-row gap-2 items-end">
-                <AzionIconLogo class="h-[26px]" />
-                <span class="leading-none"> <i class="text-xs">Move to the Edge</i> &trade; </span>
-              </span>
-            </a> -->
 
             <AzionLogo
               :href="`/${lang}/`"
