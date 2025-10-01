@@ -1,6 +1,9 @@
 <template>
-  <template v-if="href">
-    <a :href="href">
+  <template v-if="type === 'link' || type === 'linkExternal'">
+    <a :href="href" :class="[
+      'flex gap-3 w-fit relative cursor-pointer group',
+      'after:content-[\'\'] after:absolute after:-bottom-[.1rem] after:left-0 after:w-0 after:h-[1px] after:bg-violet-300 after:transition-all after:duration-150 hover:after:w-full'
+    ]">
       <Button
         :label="label"
         :size="size"
@@ -15,6 +18,10 @@
           }
         }"
       />
+
+      <svg v-if="type === 'linkExternal'" width="10" height="10" class="group-hover:translate-x-1 group-hover:rotate-0 group-hover:translate-y-0 -translate-x-1 translate-y-[.1rem]  transition-transform relative top-[.1rem]" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.32201 8.20812L7.31425 4.45914C7.31425 4.39704 7.29873 4.35047 7.26768 4.31943C7.22111 4.27285 7.15642 4.29096 7.07363 4.37376L3.40226 8.04512C3.20046 8.24693 2.96243 8.35043 2.68817 8.3556C2.41392 8.35043 2.17071 8.24176 1.95856 8.0296C1.76192 7.83297 1.6636 7.59494 1.6636 7.31551C1.6636 7.03608 1.76192 6.79805 1.95856 6.60142L5.58335 2.97662C5.66614 2.89383 5.68684 2.83173 5.64545 2.79034C5.6144 2.75929 5.56783 2.74376 5.50573 2.74376L1.78003 2.74376C1.51095 2.74376 1.2781 2.64545 1.08146 2.44881C0.88483 2.25218 0.7891 2.00639 0.794275 1.71144C0.804624 1.41131 0.910703 1.16034 1.11251 0.958533C1.30397 0.767074 1.53941 0.671344 1.81884 0.671344L8.16806 0.671344C8.49923 0.619598 8.79677 0.725677 9.06067 0.989581C9.27283 1.20174 9.37891 1.44753 9.37891 1.72696L9.38667 8.20812C9.38667 8.4772 9.278 8.72041 9.06067 8.93774C8.84851 9.1499 8.6079 9.25598 8.33882 9.25598C8.06974 9.24563 7.82912 9.13437 7.61696 8.92222C7.42033 8.72558 7.32201 8.48755 7.32201 8.20812Z" fill="#FE601F"/>
+      </svg>
     </a>
   </template>
   <template v-else>
@@ -48,7 +55,7 @@
     },
     type: {
       type: String,
-      options: ['primary', 'secondary', 'link', 'inline'],
+      options: ['primary', 'secondary', 'link', 'linkExternal', 'tertiary'],
       default: 'secondary'
     },
     href: String,
@@ -71,42 +78,56 @@
           'h-fit group border-none active:bg-orange-700 active:bg-orange-600 bg-neutral-100 text-neutral-900 duration-300 transition px-6 py-4 rounded-md hover:bg-orange-600 hover:bg-orange-600 hover:text-white hover:text-white'
       },
       secondary: {
-        dark: 'h-fit group bg-neutral-800 text-neutral-100 duration-300 transition rounded-md active:bg-neutral-900 border-1 border-[#353040] hover:bg-neutral-900 hover:text-neutral-100',
+        dark: 'h-fit group bg-neutral-800 text-neutral-100 duration-300 transition rounded-md active:bg-neutral-900 border-1 border-[#353040] hover:bg-neutral-900 hover:text-orange-500',
         light:
-          'h-fit group bg-neutral-300 text-neutral-100 duration-300 transition rounded-md active:bg-neutral-700 border-1 border-[#353040] hover:bg-neutral-600 hover:text-neutral-100'
+          'h-fit group bg-neutral-200 text-neutral-900 duration-300 transition rounded-md active:bg-neutral-700 border-1 border-neutral-300 hover:bg-neutral-100 hover:text-orange-500'
       },
-      tertiary:
-        'group bg-neutral-200 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 duration-300 transition rounded-md hover:bg-neutral-300 active:bg-neutral-400 dark:active:bg-neutral-700 border-1 border-neutral-200 dark:border-neutral-400 dark:hover:bg-neutral-600 hover:text-neutral-900 dark:hover:text-neutral-100',
-      link: 'w-fit bg-orange-900/10 text-orange-600 px-0 py-0',
-      inline: {
-        dark: 'text-sm text-[#FE601F] group-hover:text-[#D94A03] border-none bg-transparent w-fit',
-        light: 'text-sm text-[#FE601F] group-hover:text-[#D94A03] border-none bg-transparent w-fit'
-      }
+      tertiary: {
+        dark: 'h-fit group font-proto-mono bg-orange-900/10 text-orange-500 duration-300 transition rounded-none border-none bg-orange-900/20 ',
+        light: 'h-fit group font-proto-mono bg-orange-900/10 text-orange-500 duration-300 transition rounded-none border-none bg-orange-900/20 '
+      },
+      link: {
+        dark: 'w-fit !leading-[.75rem] bg-transparent border-none text-violet-300 px-0 py-0',
+        light: 'w-fit !leading-[.75rem] bg-transparent border-none text-violet-300 px-0 py-0',
+      },
+      linkExternal: {
+        dark: 'w-fit !leading-[.75rem] bg-transparent border-none text-violet-300 px-0 py-0',
+        light: 'w-fit !leading-[.75rem] bg-transparent border-none text-violet-300 px-0 py-0',
+      },
     }[props.type]
   })
 
   const iconClasses = computed(() => {
+    const baseClasses = 'text-[.625rem] duration-300 transition flex items-center mr-2'
+    
     return {
-      primary:
-        'h-fit group-hover:text-neutral-100 text-neutral-100 text-[.625rem] duration-300 transition flex items-center hover:text-neutral-900 mr-2',
-      secondary:
-        'h-fit group-hover:text-neutral-900 text-neutral-900 dark:text-neutral-100 text-[.625rem] duration-300 transition flex items-center hover:text-neutral-900 dark:group-hover:text-neutral-100 mr-2',
-      tertiary:
-        'group-hover:text-neutral-100 text-neutral-100 dark:text-neutral-100 text-[.625rem] duration-300 transition flex items-center hover:text-neutral-100 dark:group-hover:text-neutral-100 mr-2',
-      link: 'text-orange-600 text-[.625rem] duration-300 transition flex items-center hover:text-orange-600 leading-1 mr-2',
-      inline: 'text-[#FE601F] text-[.625rem] group-hover:text-[#D94A03]'
+      primary: {
+        dark: `h-fit ${baseClasses} text-neutral-100 group-hover:text-white`,
+        light: `h-fit ${baseClasses} text-neutral-900 group-hover:text-white`
+      },
+      secondary: {
+        dark: `h-fit ${baseClasses} text-neutral-100 group-hover:text-neutral-100`,
+        light: `h-fit ${baseClasses} text-neutral-900 group-hover:text-neutral-100`
+      },
+      tertiary: {
+        dark: `h-min ${baseClasses} dark:text-neutral-100 group-hover:text-neutral-100 dark:group-hover:text-neutral-100`,
+        dark: `h-min ${baseClasses} dark:text-neutral-100 group-hover:text-neutral-100 dark:group-hover:text-neutral-100`,
+      },
+      link: `${baseClasses} text-orange-600 hover:text-orange-600 leading-1`,
+      linkExternal: `${baseClasses} text-orange-600 hover:text-orange-600 leading-1`,
     }[props.type]
   })
 
   const labelClasses = computed(() => {
     const textSize =
-      props.size === 'large' ? 'text-sm leading-[1.5rem]' : 'text-xs leading-[.625rem]'
+      props.size === 'large' ? 'text-sm leading-[1.5rem]' : 'leading-[1rem]'
 
     return {
       primary: `font-proto-mono ${textSize}`,
       secondary: `font-proto-mono ${textSize}`,
+      tertiary: `font-proto-mono ${textSize}`,
       link: `font-proto-mono ${textSize}`,
-      inline: `font-proto-mono ${textSize} uppercase tracking-widest`
+      linkExternal: `font-proto-mono ${textSize}`,
     }[props.type]
   })
 </script>
