@@ -19,7 +19,8 @@
               v-if="label"
               :label="label"
               size="small"
-              type="inline"
+              type="primary"
+              theme="dark"  
               customClass="px-0"
               icon="pi pi-angle-right"
             />
