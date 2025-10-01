@@ -1,3 +1,5 @@
+import { primitiveColors } from 'azion-theme/src/tokens/colors-primitive';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -76,7 +78,8 @@ module.exports = {
         'header-button-enabled': '#ffffff32',
         'header-button-hover': 'rgba(244, 244, 244, 0.04)',
         'header-avatar': '#363636',
-        footer: '#1e1e1e'
+        footer: '#1e1e1e',
+        ...primitiveColors
       },
       textColor: {
         header: '#b5b5b5',
