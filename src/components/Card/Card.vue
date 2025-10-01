@@ -12,18 +12,20 @@
         <template #content>
           <div class="flex flex-col p-3 md:p-6 gap-3 h-full">
             <div class="flex flex-col gap-2 font-sora flex-grow">
-              <p :class="innerStyleWithHover[theme].title">{{ title }}</p>
+              <h5 :class="innerStyleWithHover[theme].title">{{ title }}</h5>
               <p :class="innerStyleWithHover[theme].description">{{ description }}</p>
             </div>
-            <Button
+            <div>
+              <Button
               v-if="label"
               :label="label"
               size="small"
-              type="primary"
+              type="tertiary"
               theme="dark"  
-              customClass="px-0"
+              customClass="px-0 bg-transparent"
               icon="pi pi-angle-right"
             />
+            </div>
           </div>
         </template>
       </Card>
@@ -81,22 +83,22 @@
 
   const innerStyle = {
     default: {
-      title: 'text-md text-[#FAFAFA]',
-      description: 'text-sm text-[#A3A3A3]'
+      title: 'display-3 text-neutral-100',
+      description: 'text-xs text-neutral-400'
     }
   }
 
   const innerStyleWithHover = {
     default: {
-      title: 'text-md text-[#FAFAFA] group-hover:text-[#B5B1F4]',
-      description: 'text-sm text-[#A3A3A3]'
+      title: 'display-3 text-neutral-100 group-hover:text-violet-300',
+      description: 'text-xs text-neutral-400'
     }
   }
 
   const pt = {
     default: {
       root: {
-        class: 'w-full h-full bg-[#171717] rounded-md flex flex-col'
+        class: 'w-full h-full bg-neutral-900 rounded-md flex flex-col'
       }
     }
   }
@@ -105,7 +107,7 @@
     default: {
       root: {
         class:
-          'w-full h-full bg-[#171717] rounded-md group-hover:bg-[#13131a] transition-colors flex flex-col'
+          'w-full h-full bg-neutral-900 rounded-md group-hover:bg-neutral-800 transition-colors flex flex-col'
       }
     }
   }
