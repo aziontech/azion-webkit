@@ -2,7 +2,7 @@
     <div :class="['p-6 flex flex-col justify-between h-full w-full md:w-[20rem] text-black', popular ? 'bg-orange-600' : 'bg-neutral-300', !buttonHidden ? 'rounded-t-xl md:rounded-xl pb-2' : 'rounded-xl']">
         <div class="pb-5">
             <div class="flex gap-4 "> 
-                <h3 class="text-xl font-sora font-bold pb-4">{{ title }}</h3>
+                <h3 class="display-2 font-sora font-bold pb-4">{{ title }}</h3>
                 <template v-if="popular">
                     <span class="h-fit text-xs flex font-proto-mono justify-center items-center text-neutral-100 bg-neutral-900 px-2 py-1 rounded">Popular</span>
                 </template>
