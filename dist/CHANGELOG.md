@@ -1,3 +1,9 @@
+## [1.204.1](https://github.com/aziontech/azion-webkit/compare/v1.204.0...v1.204.1) (2025-10-01)
+
+### Bug Fixes
+
+* remove comments ([0473beb](https://github.com/aziontech/azion-webkit/commit/0473beb1eaff4058cf0199a862bdb4db24a8af30))
+
 ## [1.204.0](https://github.com/aziontech/azion-webkit/compare/v1.203.0...v1.204.0) (2025-10-01)
 
 ### Features
