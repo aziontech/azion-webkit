@@ -18,6 +18,7 @@
             :size="button.size ?? 'small'"
             :icon="button.icon ?? 'pi pi-angle-right'"
             :type="button.type ?? 'primary'"
+            :theme="button.theme ?? 'dark'"
             v-bind="button"
           />
         </div>

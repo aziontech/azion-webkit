@@ -35,6 +35,7 @@
           :monthly-price="card.monthlyPrice"
           :annual-price="card.annualPrice"
           :current-period="currentPeriod"
+          :price-label="card.priceLabel"
           :savings="card.savings"
           :button-label="card.buttonLabel"
           @button-click="handleCardClick(card, index)"
