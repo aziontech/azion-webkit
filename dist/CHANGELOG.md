@@ -1,3 +1,9 @@
+## [1.204.0](https://github.com/aziontech/azion-webkit/compare/v1.203.0...v1.204.0) (2025-10-01)
+
+### Features
+
+* add external link variant and update button styles with new theme version ([377e64c](https://github.com/aziontech/azion-webkit/commit/377e64cc11bf438f19ece9f663d31f288fed932c))
+
 ## [1.203.0](https://github.com/aziontech/azion-webkit/compare/v1.202.0...v1.203.0) (2025-09-29)
 
 ### Features
