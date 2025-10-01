@@ -1,3 +1,9 @@
+## [1.207.0](https://github.com/aziontech/azion-webkit/compare/v1.206.0...v1.207.0) (2025-10-01)
+
+### Features
+
+* update Card component styling with semantic tokens and improved markup ([1a30fb1](https://github.com/aziontech/azion-webkit/commit/1a30fb1532df2ac44f2719bc3e43c03fc642ebb9))
+
 ## [1.206.0](https://github.com/aziontech/azion-webkit/compare/v1.205.0...v1.206.0) (2025-10-01)
 
 ### Features
