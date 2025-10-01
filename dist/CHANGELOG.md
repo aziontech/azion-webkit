@@ -1,3 +1,9 @@
+## [1.206.0](https://github.com/aziontech/azion-webkit/compare/v1.205.0...v1.206.0) (2025-10-01)
+
+### Features
+
+* update label styling with dark primary theme in Card component ([5827cfc](https://github.com/aziontech/azion-webkit/commit/5827cfcfde04bbc0d870bdd471694110f99b0b11))
+
 ## [1.205.0](https://github.com/aziontech/azion-webkit/compare/v1.204.1...v1.205.0) (2025-10-01)
 
 ### Features
