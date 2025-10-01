@@ -1,3 +1,9 @@
+## [1.205.0](https://github.com/aziontech/azion-webkit/compare/v1.204.1...v1.205.0) (2025-10-01)
+
+### Features
+
+* add theme prop to Hero buttons and price label to PricingCardCarousel ([fb890d0](https://github.com/aziontech/azion-webkit/commit/fb890d0cb6c550581a03b6631be681dfd8d687ed))
+
 ## [1.204.1](https://github.com/aziontech/azion-webkit/compare/v1.204.0...v1.204.1) (2025-10-01)
 
 ### Bug Fixes
