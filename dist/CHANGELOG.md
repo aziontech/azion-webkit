@@ -1,3 +1,9 @@
+## [1.208.0](https://github.com/aziontech/azion-webkit/compare/v1.207.0...v1.208.0) (2025-10-02)
+
+### Features
+
+* update pricing table UI with dark theme and improved card layouts ([864eec6](https://github.com/aziontech/azion-webkit/commit/864eec602408cbd6ca6d5c0342829a376fd4f3c2))
+
 ## [1.207.0](https://github.com/aziontech/azion-webkit/compare/v1.206.0...v1.207.0) (2025-10-01)
 
 ### Features
