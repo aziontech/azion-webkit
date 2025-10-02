@@ -1,13 +1,13 @@
 <template>
-  <div class="sticky top-16 z-10 bg-neutral-900 p-5 border border-neutral-700">
-    <h3 class="font-sora text-lg font-medium text-neutral-300">Features</h3>
+  <div class="sticky top-16 z-10 bg-neutral-950 p-5 border border-neutral-700">
+    <h3 class="font-sora display-3 font-medium text-neutral-300">Features</h3>
   </div>
 
   <div 
     v-for="(plan, index) in plans" 
     :key="plan.name"
     :class="[
-      'sticky top-16 z-10 bg-neutral-900 p-5 text-left border   border-neutral-700',
+      'sticky top-16 z-10 p-5 text-left border bg-neutral-950 border-neutral-700',
       index < plans.length - 1 ? 'border-r border-neutral-700' : 'border-r border-neutral-700'
     ]"
   >
@@ -32,7 +32,7 @@ defineProps({
     default: () => [
       { name: 'Free', buttonLabel: 'GET A DEMO', buttonType: 'primary', buttonTheme: 'light' },
       { name: 'Pro', buttonLabel: 'GET A DEMO', buttonType: 'primary', buttonTheme: 'light' },
-      { name: 'Business', buttonLabel: 'START NOW', buttonType: 'secondary', popular: true },
+      { name: 'Business', buttonLabel: 'START NOW', buttonType: 'secondary', popular: true, buttonTheme: 'light' },
       { name: 'Enterprise', buttonLabel: 'CONTACT US', buttonType: 'primary', buttonTheme: 'light' }
     ]
   },
