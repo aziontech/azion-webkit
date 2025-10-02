@@ -5,8 +5,8 @@
       mobileTable ? 'col-span-2' : 'col-span-5'
     ]">
       <div class="text-xs text-neutral-300 uppercase tracking-wide font-proto-mono">{{ content.overline }}</div>
-      <h3 class="display-2 font-medium font-sora mt-1">{{ content.title }}</h3>
-      <p class="text-sm text-neutral-300 font-sora mt-1">{{ content.description }}</p>
+      <h3 class="display-2 font-medium font-sora mt-3">{{ content.title }}</h3>
+      <p class="text-neutral-300 font-sora mt-1">{{ content.description }}</p>
     </div>
 
     <template v-for="(feature, featureIndex) in content.features" :key="feature.name">
