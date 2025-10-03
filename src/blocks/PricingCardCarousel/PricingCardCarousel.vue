@@ -65,8 +65,7 @@
         class="h-auto shadow-xl"
       >
       <div :class="[
-        'z-10 bg-neutral-300 rounded-b-lg md:hidden transition-[margin, border-radius] duration-300 ease-in-out',
-        card.popular ? 'bg-orange-600' : 'bg-neutral-300',
+        'z-10 rounded-b-lg bg-neutral-900 md:hidden transition-[margin, border-radius] duration-300 ease-in-out',
         isStickyActive ? 'mt-2 rounded-lg' : ''
       ]">
           <div class="p-4 flex items-center rounded-xl gap-4">
@@ -104,8 +103,7 @@ import PricingTableContent from '../../components/PricingTableContent/PricingTab
 import Button from '../../components/Button/Button.vue'
 import Toggle from '../Toggle/Toggle.vue'
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-import 'swiper/css'
-
+import 'swiper/css
 const props = defineProps({
   table: {
     type: Array,

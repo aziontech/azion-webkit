@@ -9,7 +9,7 @@
       @mouseleave="hideSubmenu"
       :class="[
         'flex flex-col opacity-0 py-4 px-3  transition-all duration-300 ease-in-out text-black rounded-md shadow-xl group-hover:opacity-100 group-hover:visible group-hover:top-[3.5rem] top-[3rem] group-hover:delay-100',
-        menuitem.lavanderBackground ? 'bg-[#A09EBC]' : 'bg-neutral-200',
+        menuitem.lavanderBackground ? 'bg-violet-300' : 'bg-neutral-200',
         menuitem.position === 'left' ? 'ml-[7rem]' : menuitem.subMenuColumns.length === 1 ? 'ml-[36.5rem]' : menuitem.subMenuColumns.length > 2 ? 'mx-auto' : 'ml-[28.25rem]',
       ]"
     >
@@ -20,7 +20,7 @@
         <ul
           v-for="(subItem, index) in menuitem.subMenuColumns"
           :key="index"
-          class="gap-1 w-72"
+          class="gap-1 mt-1 w-72"
         >
           <template v-if="subItem.items && subItem.label && !subItem.communityComponent">
             <span
@@ -97,11 +97,16 @@
           </template>
         </ul>
       </div>
+      <div v-if="menuitem.footerButton" class="flex m-3 mb-2 pt-3 border-t border-neutral-500">
+        <Button :label="menuitem.footerButton.label" :href="menuitem.footerButton.href" type="link" theme="light" size="small" customClass="p-0"/>   
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import Button from '../Button/Button.vue'
+
 const props = defineProps({
   menuitem: {
     type: Object,
