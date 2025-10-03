@@ -1,3 +1,9 @@
+## [1.209.2](https://github.com/aziontech/azion-webkit/compare/v1.209.1...v1.209.2) (2025-10-03)
+
+### Bug Fixes
+
+* add missing quote in swiper CSS import statement ([f09a6fb](https://github.com/aziontech/azion-webkit/commit/f09a6fbcfc93dc292cf6d1c798e4a8fffe03e68c))
+
 ## [1.209.1](https://github.com/aziontech/azion-webkit/compare/v1.209.0...v1.209.1) (2025-10-03)
 
 ### Bug Fixes
