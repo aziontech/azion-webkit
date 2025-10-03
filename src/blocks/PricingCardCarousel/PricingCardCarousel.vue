@@ -103,7 +103,7 @@ import PricingTableContent from '../../components/PricingTableContent/PricingTab
 import Button from '../../components/Button/Button.vue'
 import Toggle from '../Toggle/Toggle.vue'
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-import 'swiper/css  
+import 'swiper/css'
 const props = defineProps({
   table: {
     type: Array,

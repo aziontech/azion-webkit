@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="bg-neutral-900 ">
+    <div class="bg-neutral-950 ">
       <div class="py-8 max-w-[1600px] gap-14 flex items-center px-6 mx-auto justify-between lg:flex-nowrap flex-wrap">
         <div class="w-full lg:w-1/2">
             <slot name="status" ></slot>
