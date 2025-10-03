@@ -1,0 +1,7 @@
+{
+  "main": "./bigNumbers.ts",
+  "types": "./BigNumbers.d.ts",
+  "browser": {
+    "./sfc": "./BigNumbers.vue"
+  }
+}
