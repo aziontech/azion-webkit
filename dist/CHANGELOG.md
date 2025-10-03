@@ -1,3 +1,9 @@
+## [1.209.0](https://github.com/aziontech/azion-webkit/compare/v1.208.0...v1.209.0) (2025-10-03)
+
+### Features
+
+* update button styling and color scheme for improved visual consistency ([a294d72](https://github.com/aziontech/azion-webkit/commit/a294d7203d8170847f818d5865cf5949ec779300))
+
 ## [1.208.0](https://github.com/aziontech/azion-webkit/compare/v1.207.0...v1.208.0) (2025-10-02)
 
 ### Features
