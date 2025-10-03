@@ -5,10 +5,10 @@
     :class="padding[spacing ?? 'default']"
   >
     <div class="mx-auto flex flex-col text-center gap-2 md:gap-5">
-      <h1 class="text-4xl md:text-5xl lg:text-7xl font-sora leading-tight">
+      <h1 class="text-5xl lg:text-7xl font-sora leading-tight text-pretty">
         {{ title }}
       </h1>
-      <p class="text-md md:text-md text-neutral-300 font-sora max-w-2xl mx-auto">
+      <p class="text-xs lg:text-sm text-neutral-300 font-sora max-w-2xl mx-auto">
         {{ subtitle }}
       </p>
       <template v-if="limitedButtons.length > 0">
