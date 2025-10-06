@@ -1,3 +1,9 @@
+## [1.210.2](https://github.com/aziontech/azion-webkit/compare/v1.210.1...v1.210.2) (2025-10-06)
+
+### Bug Fixes
+
+* change background color ([a935281](https://github.com/aziontech/azion-webkit/commit/a935281634c9158ea71114283990e2fae54305a2))
+
 ## [1.210.1](https://github.com/aziontech/azion-webkit/compare/v1.210.0...v1.210.1) (2025-10-06)
 
 ### Bug Fixes
