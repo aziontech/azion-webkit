@@ -12,7 +12,7 @@
         <div class="h-[13rem]">
             <ul class="mb-10">
                 <li class="flex items-center gap-2 mb-2" v-for="feature in features" :key="feature">
-                    <span v-if="feature.icon" :class="['pi', 'text-orange-500']"></span>
+                    <span v-if="feature.icon" :class="['pi', feature.icon, 'text-orange-500']"></span>
                     <p class="font-sora text-sm">{{ feature.label }}</p>
                 </li>
             </ul>
