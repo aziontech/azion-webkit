@@ -2,8 +2,6 @@
   <div class="flex flex-col gap-8 max-w-[1600px] mx-auto">
     <!-- Title and Toggle -->
     <div class="flex flex-col items-center gap-6">
-      <p v-if="mainTitle" class="uppercase tracking-widest text-[#B5B1F4] font-proto-mono">{{ mainTitle }}</p>
-      
       <Toggle
         v-model="selectedView"
         :mainLabel="mainLabel"
@@ -23,7 +21,7 @@
           class="flex flex-col gap-4"
         >
           <p class="uppercase tracking-widest text-[#B5B1F4] font-proto-mono">{{ section.title }}</p>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
             <Card
               v-for="card in section.cards"
               :key="card.title || card.label"
@@ -62,7 +60,6 @@
   const props = withDefaults(defineProps<GridCardContainerWithToggleProps>(), {
     mainSections: () => [],
     alternativeSections: () => [],
-    mainTitle: '',
     mainLabel: 'Option 1',
     alternativeLabel: 'Option 2',
     toggleDescription: '',
