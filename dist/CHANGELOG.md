@@ -1,3 +1,9 @@
+## [1.211.0](https://github.com/aziontech/azion-webkit/compare/v1.210.2...v1.211.0) (2025-10-06)
+
+### Features
+
+* add GridCardContainerWithToggle component with toggle functionality and responsive grid layout ([0cacfcc](https://github.com/aziontech/azion-webkit/commit/0cacfcc6684ef1af40f4ab6b341a48c06521f747))
+
 ## [1.210.2](https://github.com/aziontech/azion-webkit/compare/v1.210.1...v1.210.2) (2025-10-06)
 
 ### Bug Fixes
