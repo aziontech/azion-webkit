@@ -1,3 +1,9 @@
+## [1.211.1](https://github.com/aziontech/azion-webkit/compare/v1.211.0...v1.211.1) (2025-10-06)
+
+### Bug Fixes
+
+* adjust cards grid ([17e956b](https://github.com/aziontech/azion-webkit/commit/17e956ba4a0ed2c6cce328d87514ad61bbf65c22))
+
 ## [1.211.0](https://github.com/aziontech/azion-webkit/compare/v1.210.2...v1.211.0) (2025-10-06)
 
 ### Features
