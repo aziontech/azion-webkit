@@ -1,3 +1,9 @@
+## [1.210.1](https://github.com/aziontech/azion-webkit/compare/v1.210.0...v1.210.1) (2025-10-06)
+
+### Bug Fixes
+
+* display feature icons correctly in pricing card by adding icon class name ([1d1288d](https://github.com/aziontech/azion-webkit/commit/1d1288d2f6eeb436afc64c4e68fdbccddf3da52d))
+
 ## [1.210.0](https://github.com/aziontech/azion-webkit/compare/v1.209.2...v1.210.0) (2025-10-06)
 
 ### Features
