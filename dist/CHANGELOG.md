@@ -1,3 +1,9 @@
+## [1.212.0](https://github.com/aziontech/azion-webkit/compare/v1.211.1...v1.212.0) (2025-10-06)
+
+### Features
+
+* remove default icon and add tertiary/linkExternal button types to Hero component ([b134c04](https://github.com/aziontech/azion-webkit/commit/b134c04efe3bd269e48ce722da7123cc1c127147))
+
 ## [1.211.1](https://github.com/aziontech/azion-webkit/compare/v1.211.0...v1.211.1) (2025-10-06)
 
 ### Bug Fixes
