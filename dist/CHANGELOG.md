@@ -1,3 +1,9 @@
+## [1.213.1](https://github.com/aziontech/azion-webkit/compare/v1.213.0...v1.213.1) (2025-10-06)
+
+### Bug Fixes
+
+* update submenu footer button type from link to linkSecondary ([dbe35d6](https://github.com/aziontech/azion-webkit/commit/dbe35d6615d51e76d53ae2bd24016561a1554e90))
+
 ## [1.213.0](https://github.com/aziontech/azion-webkit/compare/v1.212.0...v1.213.0) (2025-10-06)
 
 ### Features
