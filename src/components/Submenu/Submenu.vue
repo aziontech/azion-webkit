@@ -98,7 +98,7 @@
         </ul>
       </div>
       <div v-if="menuitem.footerButton" class="flex m-3 mb-2 pt-3 border-t border-neutral-500">
-        <Button :label="menuitem.footerButton.label" :href="menuitem.footerButton.href" type="link" theme="light" size="small" customClass="p-0"/>   
+        <Button :label="menuitem.footerButton.label" :href="menuitem.footerButton.href" type="linkSecondary" theme="light" size="small" customClass="p-0"/>   
       </div>
     </div>
   </div>
