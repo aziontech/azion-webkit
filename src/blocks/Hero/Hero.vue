@@ -12,7 +12,7 @@
         {{ subtitle }}
       </p>
       <template v-if="limitedButtons.length > 0">
-        <div class="flex justify-center gap-2 md:gap-5">
+        <div class="flex justify-center gap-2 md:gap-5 flex-col md:flex-row">
           <Button
             v-for="button in limitedButtons"
             :size="button.size ?? 'small'"
