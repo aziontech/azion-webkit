@@ -1,3 +1,9 @@
+## [1.210.0](https://github.com/aziontech/azion-webkit/compare/v1.209.2...v1.210.0) (2025-10-06)
+
+### Features
+
+* update pricing card text styles and icon classes ([4517036](https://github.com/aziontech/azion-webkit/commit/45170363336ccfc3566bbcba048f64cf5f408f07))
+
 ## [1.209.2](https://github.com/aziontech/azion-webkit/compare/v1.209.1...v1.209.2) (2025-10-03)
 
 ### Bug Fixes
