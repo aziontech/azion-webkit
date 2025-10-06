@@ -1,3 +1,9 @@
+## [1.213.0](https://github.com/aziontech/azion-webkit/compare/v1.212.0...v1.213.0) (2025-10-06)
+
+### Features
+
+* add linkSecondary button type with neutral color styling ([24326aa](https://github.com/aziontech/azion-webkit/commit/24326aac2ae62b75a15cfebc084dad7a1fd16354))
+
 ## [1.212.0](https://github.com/aziontech/azion-webkit/compare/v1.211.1...v1.212.0) (2025-10-06)
 
 ### Features
