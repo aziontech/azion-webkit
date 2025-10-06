@@ -1,9 +1,9 @@
 <template>
-  <template v-if="type === 'link' || type === 'linkExternal'">
+  <template v-if="type === 'link' || type === 'linkExternal' || type === 'linkSecondary'">
     <a :href="href" :class="[
       'flex gap-3 w-fit relative cursor-pointer group/button',
       'after:content-[\'\'] after:absolute after:-bottom-[.1rem] after:left-0 after:w-0 after:h-[1px] after:transition-all after:duration-150 hover:after:w-full',
-      type === 'linkExternal' ? 'after:bg-violet-300' : 'after:bg-violet-600'
+      type === 'linkExternal' ? 'after:bg-violet-300' : type === 'linkSecondary' ? 'after:bg-neutral-300' : 'after:bg-violet-600'
     ]">
       <Button
         :label="label"
@@ -56,7 +56,7 @@
     },
     type: {
       type: String,
-      options: ['primary', 'secondary', 'link', 'linkExternal', 'tertiary'],
+      options: ['primary', 'secondary', 'link', 'linkExternal', 'tertiary', 'linkSecondary'],
       default: 'secondary'
     },
     href: String,
@@ -90,7 +90,11 @@
       link: {
         dark: 'w-fit !leading-[.75rem] bg-transparent border-none text-violet-300 px-0 py-0',
         light: 'w-fit !leading-[.75rem] bg-transparent border-none text-violet-600 px-0 py-0',
-      },
+      },  
+      linkSecondary: {
+        dark: 'w-fit !leading-[.75rem] bg-transparent border-none text-neutral-100 px-0 py-0',
+        light: 'w-fit !leading-[.75rem] bg-transparent border-none text-neutral-950 px-0 py-0',
+      },  
       linkExternal: {
         dark: 'w-fit !leading-[.75rem] bg-transparent border-none text-violet-300 px-0 py-0',
         light: 'w-fit !leading-[.75rem] bg-transparent border-none text-violet-300 px-0 py-0',
@@ -112,9 +116,10 @@
       },
       tertiary: {
         dark: `h-min ${baseClasses} dark:text-neutral-100 group-hover:text-neutral-100 dark:group-hover:text-neutral-100`,
-        dark: `h-min ${baseClasses} dark:text-neutral-100 group-hover:text-neutral-100 dark:group-hover:text-neutral-100`,
+        light: `h-min ${baseClasses} text-neutral-900 group-hover:text-neutral-900`
       },
       link: `${baseClasses} text-orange-600 hover:text-orange-600 leading-1`,
+      linkSecondary: `${baseClasses} text-orange-600 hover:text-orange-600 leading-1`,
       linkExternal: `${baseClasses} text-orange-600 hover:text-orange-600 leading-1`,
     }[props.type]
   })
@@ -131,6 +136,7 @@
       secondary: `font-proto-mono ${leading}`,
       tertiary: `font-proto-mono ${leading}`,
       link: `font-proto-mono ${leading} ${fontSize}`,
+      linkSecondary: `font-proto-mono ${leading} ${fontSize}`,
       linkExternal: `font-proto-mono ${leading} ${fontSize}`,
     }[props.type]
   })
