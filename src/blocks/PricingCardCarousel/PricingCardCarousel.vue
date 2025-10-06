@@ -60,7 +60,7 @@
       @swiper="onSwiper2"
     >
       <swiper-slide
-        v-for="(card, index) in cards"
+        v-for="(card,  index) in cards"
         :key="index"
         class="h-auto shadow-xl"
       >
@@ -78,7 +78,7 @@
             />
             <div class="flex-1">
               <Transition name="fade">
-                <h3 v-if="isStickyActive" class="text-2xl text-neutral-800">
+                <h3 v-if="isStickyActive" class="display-2 text-neutral-100">
                   {{ activeCardTitle }}
                 </h3>
               </Transition>
