@@ -13,8 +13,8 @@
         <div
           @click="selectOption('main')"
           :class="[
-            'relative z-10 px-3 py-1 rounded-md transition-all duration-300 ease-in-out',
-            'font-proto-mono tracking-wide uppercase flex-1 cursor-pointer text-center',
+            'whitespace-nowrap relative z-10 px-3 py-1 rounded-md transition-all duration-300 ease-in-out',
+            'font-proto-mono tracking-tight uppercase flex-1 cursor-pointer text-center',
             selectedOption === 'main'
               ? 'text-neutral-900'
               : 'text-neutral-400 hover:text-neutral-200'
@@ -25,8 +25,8 @@
         <div
           @click="selectOption('alternative')"
           :class="[
-            'relative z-10 px-3 py-1 rounded-md transition-all duration-300 ease-in-out',
-            'font-proto-mono tracking-wide uppercase flex-1 cursor-pointer text-center',
+            'whitespace-nowrap relative z-10 px-3 py-1 rounded-md transition-all duration-300 ease-in-out',
+            'font-proto-mono tracking-tight uppercase flex-1 cursor-pointer text-center',
             selectedOption === 'alternative'
               ? 'text-neutral-900'
               : 'text-neutral-400 hover:text-neutral-200'
