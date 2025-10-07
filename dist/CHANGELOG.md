@@ -1,3 +1,9 @@
+## [1.214.0](https://github.com/aziontech/azion-webkit/compare/v1.213.1...v1.214.0) (2025-10-07)
+
+### Features
+
+* add horizontal padding to grid card container layout ([4340319](https://github.com/aziontech/azion-webkit/commit/434031914e14064b2ae59b735ae14db6d5809022))
+
 ## [1.213.1](https://github.com/aziontech/azion-webkit/compare/v1.213.0...v1.213.1) (2025-10-06)
 
 ### Bug Fixes
