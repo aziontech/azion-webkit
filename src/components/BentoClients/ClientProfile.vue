@@ -1,7 +1,10 @@
 <template>
-    <div class="px-8 py-4 rounded bg-cover bg-center bg-no-repeat h-full flex items-end" :style="{ backgroundImage: backgroundImage }">
-        <p class="text-xl font-sora"> {{ title }}</p>
-    </div>
+  <div
+    class="px-8 py-4 rounded bg-cover bg-center bg-no-repeat h-full flex items-end"
+    :style="{ backgroundImage: backgroundImage }"
+  >
+    <p class="text-xl font-sora">{{ title }}</p>
+  </div>
 </template>
 
 <script setup>
@@ -12,8 +15,8 @@
       default: ''
     },
     backgroundImage: {
-        type: String,
-        default: ''
+      type: String,
+      default: ''
     }
   })
 

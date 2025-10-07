@@ -1,13 +1,17 @@
 <template>
-    <div class="rounded flex items-center justify-center" :class="cardBackgroundColor[type]">
-        <div class="h-12 flex items-center justify-center">
-          <div
-                v-html="logo.src"
-                :alt="logo.alt"
-               class="max-h-full" :class="cardTextColor[type]"
-              />   
-        </div>
+  <div
+    class="rounded flex items-center justify-center"
+    :class="cardBackgroundColor[type]"
+  >
+    <div class="h-12 flex items-center justify-center">
+      <div
+        v-html="logo.src"
+        :alt="logo.alt"
+        class="max-h-full"
+        :class="cardTextColor[type]"
+      />
     </div>
+  </div>
 </template>
 
 <script setup>
@@ -47,7 +51,7 @@
 
   const cardTextColor = {
     default: 'text-white',
-    orange: 'text-white', 
+    orange: 'text-white',
     lavander: 'text-gray-950',
     white: 'text-black'
   }
