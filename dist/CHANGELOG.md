@@ -1,3 +1,9 @@
+## [1.215.0](https://github.com/aziontech/azion-webkit/compare/v1.214.0...v1.215.0) (2025-10-07)
+
+### Features
+
+* add whitespace-nowrap and adjust tracking for toggle options ([5e73331](https://github.com/aziontech/azion-webkit/commit/5e73331bf1ff62ff5c332dbb52bf1a5c2faaf8e9))
+
 ## [1.214.0](https://github.com/aziontech/azion-webkit/compare/v1.213.1...v1.214.0) (2025-10-07)
 
 ### Features
