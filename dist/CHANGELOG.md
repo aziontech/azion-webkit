@@ -1,3 +1,9 @@
+## [1.218.0](https://github.com/aziontech/azion-webkit/compare/v1.217.2...v1.218.0) (2025-10-08)
+
+### Features
+
+* allow button component to render as link when href prop is provided ([a5ec8fa](https://github.com/aziontech/azion-webkit/commit/a5ec8fac16e6c6be47b44598b589e71f8c2716ca))
+
 ## [1.217.2](https://github.com/aziontech/azion-webkit/compare/v1.217.1...v1.217.2) (2025-10-08)
 
 ### Bug Fixes
