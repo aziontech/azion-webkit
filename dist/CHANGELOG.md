@@ -1,3 +1,9 @@
+## [1.217.2](https://github.com/aziontech/azion-webkit/compare/v1.217.1...v1.217.2) (2025-10-08)
+
+### Bug Fixes
+
+* adjust spacing and typography in Hero and GridCard components ([b9d6131](https://github.com/aziontech/azion-webkit/commit/b9d6131d332cb28d869cdd7e350df01818547784))
+
 ## [1.217.1](https://github.com/aziontech/azion-webkit/compare/v1.217.0...v1.217.1) (2025-10-08)
 
 ### Bug Fixes
