@@ -67,19 +67,19 @@
     },
     customClass: {
       type: String,
-      default: 'px-6 py-4'
+      default: 'px-3 py-3'
     }
   })
 
   const buttonClasses = computed(() => {
     return {
       primary: {
-        dark: 'h-fit group border-none active:bg-orange-700 dark:active:bg-orange-600 bg-neutral-800 text-neutral-100 dark:text-neutral-900 duration-300 transition px-6 py-4 rounded-md hover:bg-orange-600 dark:hover:bg-orange-600 hover:text-white dark:hover:text-white',
+        dark: 'h-fit group border-none active:bg-orange-700 dark:active:bg-orange-600 bg-neutral-900 text-neutral-100 dark:text-neutral-900 duration-300 transition px-6 py-4 rounded-md hover:bg-orange-600 dark:hover:bg-orange-600 hover:text-white dark:hover:text-white',
         light:
           'h-fit group border-none active:bg-orange-700 active:bg-orange-600 bg-neutral-100 text-neutral-900 duration-300 transition px-6 py-4 rounded-md hover:bg-orange-600 hover:bg-orange-600 hover:text-white hover:text-white'
       },
       secondary: {
-        dark: 'h-fit group bg-neutral-800 text-neutral-100 duration-300 transition rounded-md active:bg-neutral-900 border-1 border-[#353040] hover:bg-neutral-900 hover:text-orange-500',
+        dark: 'h-fit group bg-neutral-900 text-neutral-100 duration-300 transition rounded-md active:bg-neutral-900 border-1 border-[#353040] hover:bg-neutral-900 hover:text-orange-500',
         light:
           'h-fit group bg-neutral-200 text-neutral-900 duration-300 transition rounded-md active:bg-neutral-700 border-1 border-neutral-300 hover:bg-neutral-100 hover:text-orange-500'
       },
