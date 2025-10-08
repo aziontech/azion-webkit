@@ -1,3 +1,9 @@
+## [1.218.1](https://github.com/aziontech/azion-webkit/compare/v1.218.0...v1.218.1) (2025-10-08)
+
+### Bug Fixes
+
+* update button styles with darker background and smaller default padding ([f93eec4](https://github.com/aziontech/azion-webkit/commit/f93eec49d3242081efd2404111c32f6f87908e07))
+
 ## [1.218.0](https://github.com/aziontech/azion-webkit/compare/v1.217.2...v1.218.0) (2025-10-08)
 
 ### Features
