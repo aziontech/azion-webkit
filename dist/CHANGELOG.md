@@ -1,3 +1,9 @@
+## [1.216.0](https://github.com/aziontech/azion-webkit/compare/v1.215.0...v1.216.0) (2025-10-08)
+
+### Features
+
+* new big numbers ([0b312be](https://github.com/aziontech/azion-webkit/commit/0b312be5f2744f32e857c599a960e8f810270d6c))
+
 ## [1.215.0](https://github.com/aziontech/azion-webkit/compare/v1.214.0...v1.215.0) (2025-10-07)
 
 ### Features
