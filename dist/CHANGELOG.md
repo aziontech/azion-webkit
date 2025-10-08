@@ -1,3 +1,9 @@
+## [1.217.0](https://github.com/aziontech/azion-webkit/compare/v1.216.0...v1.217.0) (2025-10-08)
+
+### Features
+
+* improve toggle component with dynamic background positioning ([9d5fd84](https://github.com/aziontech/azion-webkit/commit/9d5fd84c261902cb8a29ac1558ac19de2c883528))
+
 ## [1.216.0](https://github.com/aziontech/azion-webkit/compare/v1.215.0...v1.216.0) (2025-10-08)
 
 ### Features
