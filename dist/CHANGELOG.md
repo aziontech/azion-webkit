@@ -1,3 +1,9 @@
+## [1.217.1](https://github.com/aziontech/azion-webkit/compare/v1.217.0...v1.217.1) (2025-10-08)
+
+### Bug Fixes
+
+* decrease display-1 font and line height from 4.5rem to 3rem ([a72d65c](https://github.com/aziontech/azion-webkit/commit/a72d65c0bb1f4f7f211d1ffbeea71cbdf50b4489))
+
 ## [1.217.0](https://github.com/aziontech/azion-webkit/compare/v1.216.0...v1.217.0) (2025-10-08)
 
 ### Features
