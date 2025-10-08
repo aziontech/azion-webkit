@@ -36,7 +36,7 @@ module.exports = {
     },
     function ({ addComponents }) {
       const components = {
-        '.display-1': {
+        '.display-1':  {
           fontSize: '3rem',
           lineHeight: '3rem',
           fontFamily: 'Sora',

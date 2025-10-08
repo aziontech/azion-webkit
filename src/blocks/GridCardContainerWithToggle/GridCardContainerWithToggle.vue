@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-8 max-w-[1600px] px-6 mx-auto">
+  <div class="flex flex-col gap-8 max-w-[1600px] px-6 mx-auto mb-40">
     <!-- Title and Toggle -->
     <div class="flex flex-col items-center gap-6">
       <Toggle
