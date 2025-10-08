@@ -5,7 +5,7 @@
     :class="padding[spacing ?? 'default']"
   >
     <div class="mx-auto flex flex-col text-center gap-2 md:gap-5">
-      <h1 class="text-4xl md:text-5xl lg:text-7xl font-sora leading-tight">
+      <h1 class="display-1 md:text-5xl lg:text-7xl font-sora leading-tight">
         {{ title }}
       </h1>
       <p class="text-md md:text-md text-neutral-300 font-sora max-w-2xl mx-auto">
