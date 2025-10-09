@@ -1,3 +1,9 @@
+## [1.219.0](https://github.com/aziontech/azion-webkit/compare/v1.218.1...v1.219.0) (2025-10-09)
+
+### Features
+
+* bento clients grid ([d0edc64](https://github.com/aziontech/azion-webkit/commit/d0edc6419d23502dbd76a81616630481d6cbe27e))
+
 ## [1.218.1](https://github.com/aziontech/azion-webkit/compare/v1.218.0...v1.218.1) (2025-10-08)
 
 ### Bug Fixes
