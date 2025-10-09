@@ -1,3 +1,13 @@
+## [1.220.0](https://github.com/aziontech/azion-webkit/compare/v1.219.0...v1.220.0) (2025-10-09)
+
+### Features
+
+* replace BentoClients folder and adjust ClientsCard component ([bbe0464](https://github.com/aziontech/azion-webkit/commit/bbe04644d1933a159ab6895d8adb335eb4359273))
+
+### Bug Fixes
+
+* update card backgrounds to use neutral-950 color scheme ([9091504](https://github.com/aziontech/azion-webkit/commit/9091504fa0d866f7d11c79bdffedd258b02d460c))
+
 ## [1.219.0](https://github.com/aziontech/azion-webkit/compare/v1.218.1...v1.219.0) (2025-10-09)
 
 ### Features
