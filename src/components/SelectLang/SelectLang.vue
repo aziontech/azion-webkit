@@ -3,7 +3,7 @@
     v-if="i18nPages"
     @mouseenter="onMouseEnter"
     @mouseleave="onMouseLeave"
-    class="relative"
+    class="relative mr-5"
   >
     <Dropdown
       ref="dropdown"
@@ -27,7 +27,7 @@
       <template #value="slotProps">
         <div
           v-if="slotProps.value"
-          class="flex items-center gap-4 pr-4"
+          class="flex items-center gap-2 pr-2"
         >
           <span class="pi pi-globe text-neutral-900 text-xs"></span>
           <span class="text-xs font-medium text-neutral-900">

@@ -1,3 +1,165 @@
+## [1.219.0](https://github.com/aziontech/azion-webkit/compare/v1.218.1...v1.219.0) (2025-10-09)
+
+### Features
+
+* bento clients grid ([d0edc64](https://github.com/aziontech/azion-webkit/commit/d0edc6419d23502dbd76a81616630481d6cbe27e))
+
+## [1.218.1](https://github.com/aziontech/azion-webkit/compare/v1.218.0...v1.218.1) (2025-10-08)
+
+### Bug Fixes
+
+* update button styles with darker background and smaller default padding ([f93eec4](https://github.com/aziontech/azion-webkit/commit/f93eec49d3242081efd2404111c32f6f87908e07))
+
+## [1.218.0](https://github.com/aziontech/azion-webkit/compare/v1.217.2...v1.218.0) (2025-10-08)
+
+### Features
+
+* allow button component to render as link when href prop is provided ([a5ec8fa](https://github.com/aziontech/azion-webkit/commit/a5ec8fac16e6c6be47b44598b589e71f8c2716ca))
+
+## [1.217.2](https://github.com/aziontech/azion-webkit/compare/v1.217.1...v1.217.2) (2025-10-08)
+
+### Bug Fixes
+
+* adjust spacing and typography in Hero and GridCard components ([b9d6131](https://github.com/aziontech/azion-webkit/commit/b9d6131d332cb28d869cdd7e350df01818547784))
+
+## [1.217.1](https://github.com/aziontech/azion-webkit/compare/v1.217.0...v1.217.1) (2025-10-08)
+
+### Bug Fixes
+
+* decrease display-1 font and line height from 4.5rem to 3rem ([a72d65c](https://github.com/aziontech/azion-webkit/commit/a72d65c0bb1f4f7f211d1ffbeea71cbdf50b4489))
+
+## [1.217.0](https://github.com/aziontech/azion-webkit/compare/v1.216.0...v1.217.0) (2025-10-08)
+
+### Features
+
+* improve toggle component with dynamic background positioning ([9d5fd84](https://github.com/aziontech/azion-webkit/commit/9d5fd84c261902cb8a29ac1558ac19de2c883528))
+
+## [1.216.0](https://github.com/aziontech/azion-webkit/compare/v1.215.0...v1.216.0) (2025-10-08)
+
+### Features
+
+* new big numbers ([0b312be](https://github.com/aziontech/azion-webkit/commit/0b312be5f2744f32e857c599a960e8f810270d6c))
+
+## [1.215.0](https://github.com/aziontech/azion-webkit/compare/v1.214.0...v1.215.0) (2025-10-07)
+
+### Features
+
+* add whitespace-nowrap and adjust tracking for toggle options ([5e73331](https://github.com/aziontech/azion-webkit/commit/5e73331bf1ff62ff5c332dbb52bf1a5c2faaf8e9))
+
+## [1.214.0](https://github.com/aziontech/azion-webkit/compare/v1.213.1...v1.214.0) (2025-10-07)
+
+### Features
+
+* add horizontal padding to grid card container layout ([4340319](https://github.com/aziontech/azion-webkit/commit/434031914e14064b2ae59b735ae14db6d5809022))
+
+## [1.213.1](https://github.com/aziontech/azion-webkit/compare/v1.213.0...v1.213.1) (2025-10-06)
+
+### Bug Fixes
+
+* update submenu footer button type from link to linkSecondary ([dbe35d6](https://github.com/aziontech/azion-webkit/commit/dbe35d6615d51e76d53ae2bd24016561a1554e90))
+
+## [1.213.0](https://github.com/aziontech/azion-webkit/compare/v1.212.0...v1.213.0) (2025-10-06)
+
+### Features
+
+* add linkSecondary button type with neutral color styling ([24326aa](https://github.com/aziontech/azion-webkit/commit/24326aac2ae62b75a15cfebc084dad7a1fd16354))
+
+## [1.212.0](https://github.com/aziontech/azion-webkit/compare/v1.211.1...v1.212.0) (2025-10-06)
+
+### Features
+
+* remove default icon and add tertiary/linkExternal button types to Hero component ([b134c04](https://github.com/aziontech/azion-webkit/commit/b134c04efe3bd269e48ce722da7123cc1c127147))
+
+## [1.211.1](https://github.com/aziontech/azion-webkit/compare/v1.211.0...v1.211.1) (2025-10-06)
+
+### Bug Fixes
+
+* adjust cards grid ([17e956b](https://github.com/aziontech/azion-webkit/commit/17e956ba4a0ed2c6cce328d87514ad61bbf65c22))
+
+## [1.211.0](https://github.com/aziontech/azion-webkit/compare/v1.210.2...v1.211.0) (2025-10-06)
+
+### Features
+
+* add GridCardContainerWithToggle component with toggle functionality and responsive grid layout ([0cacfcc](https://github.com/aziontech/azion-webkit/commit/0cacfcc6684ef1af40f4ab6b341a48c06521f747))
+
+## [1.210.2](https://github.com/aziontech/azion-webkit/compare/v1.210.1...v1.210.2) (2025-10-06)
+
+### Bug Fixes
+
+* change background color ([a935281](https://github.com/aziontech/azion-webkit/commit/a935281634c9158ea71114283990e2fae54305a2))
+
+## [1.210.1](https://github.com/aziontech/azion-webkit/compare/v1.210.0...v1.210.1) (2025-10-06)
+
+### Bug Fixes
+
+* display feature icons correctly in pricing card by adding icon class name ([1d1288d](https://github.com/aziontech/azion-webkit/commit/1d1288d2f6eeb436afc64c4e68fdbccddf3da52d))
+
+## [1.210.0](https://github.com/aziontech/azion-webkit/compare/v1.209.2...v1.210.0) (2025-10-06)
+
+### Features
+
+* update pricing card text styles and icon classes ([4517036](https://github.com/aziontech/azion-webkit/commit/45170363336ccfc3566bbcba048f64cf5f408f07))
+
+## [1.209.2](https://github.com/aziontech/azion-webkit/compare/v1.209.1...v1.209.2) (2025-10-03)
+
+### Bug Fixes
+
+* add missing quote in swiper CSS import statement ([f09a6fb](https://github.com/aziontech/azion-webkit/commit/f09a6fbcfc93dc292cf6d1c798e4a8fffe03e68c))
+
+## [1.209.1](https://github.com/aziontech/azion-webkit/compare/v1.209.0...v1.209.1) (2025-10-03)
+
+### Bug Fixes
+
+* adjust import ([713cf3f](https://github.com/aziontech/azion-webkit/commit/713cf3fca3ab3ede6c2431a138bc47e81ad3c00f))
+
+## [1.209.0](https://github.com/aziontech/azion-webkit/compare/v1.208.0...v1.209.0) (2025-10-03)
+
+### Features
+
+* update button styling and color scheme for improved visual consistency ([a294d72](https://github.com/aziontech/azion-webkit/commit/a294d7203d8170847f818d5865cf5949ec779300))
+
+## [1.208.0](https://github.com/aziontech/azion-webkit/compare/v1.207.0...v1.208.0) (2025-10-02)
+
+### Features
+
+* update pricing table UI with dark theme and improved card layouts ([864eec6](https://github.com/aziontech/azion-webkit/commit/864eec602408cbd6ca6d5c0342829a376fd4f3c2))
+
+## [1.207.0](https://github.com/aziontech/azion-webkit/compare/v1.206.0...v1.207.0) (2025-10-01)
+
+### Features
+
+* update Card component styling with semantic tokens and improved markup ([1a30fb1](https://github.com/aziontech/azion-webkit/commit/1a30fb1532df2ac44f2719bc3e43c03fc642ebb9))
+
+## [1.206.0](https://github.com/aziontech/azion-webkit/compare/v1.205.0...v1.206.0) (2025-10-01)
+
+### Features
+
+* update label styling with dark primary theme in Card component ([5827cfc](https://github.com/aziontech/azion-webkit/commit/5827cfcfde04bbc0d870bdd471694110f99b0b11))
+
+## [1.205.0](https://github.com/aziontech/azion-webkit/compare/v1.204.1...v1.205.0) (2025-10-01)
+
+### Features
+
+* add theme prop to Hero buttons and price label to PricingCardCarousel ([fb890d0](https://github.com/aziontech/azion-webkit/commit/fb890d0cb6c550581a03b6631be681dfd8d687ed))
+
+## [1.204.1](https://github.com/aziontech/azion-webkit/compare/v1.204.0...v1.204.1) (2025-10-01)
+
+### Bug Fixes
+
+* remove comments ([0473beb](https://github.com/aziontech/azion-webkit/commit/0473beb1eaff4058cf0199a862bdb4db24a8af30))
+
+## [1.204.0](https://github.com/aziontech/azion-webkit/compare/v1.203.0...v1.204.0) (2025-10-01)
+
+### Features
+
+* add external link variant and update button styles with new theme version ([377e64c](https://github.com/aziontech/azion-webkit/commit/377e64cc11bf438f19ece9f663d31f288fed932c))
+
+## [1.203.0](https://github.com/aziontech/azion-webkit/compare/v1.202.0...v1.203.0) (2025-09-29)
+
+### Features
+
+* add tooltips and typography classes to pricing table components ([4393d97](https://github.com/aziontech/azion-webkit/commit/4393d975023d032770ad08f712cb7618755c27c6))
+
 ## [1.202.0](https://github.com/aziontech/azion-webkit/compare/v1.201.0...v1.202.0) (2025-09-29)
 
 ### Features

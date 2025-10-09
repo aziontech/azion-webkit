@@ -3,18 +3,19 @@
     <div class="flex items-center rounded-lg justify-center bg-[#13131A] w-fit p-2 px-3">
       <div class="flex items-center relative">
         <div 
+          ref="backgroundElement"
           :class="[
-            'absolute top-1 bottom-1 left-1 rounded-sm transition-transform duration-300 ease-out',
-            'bg-[#B5B1F4]',
-            selectedOption === 'main' ? 'translate-x-0' : 'translate-x-full'
+            'absolute top-1 bottom-1 rounded-sm transition-all duration-300 ease-out',
+            'bg-[#B5B1F4]'
           ]"
-          :style="{ width: 'calc(50% - 4px)' }"
+          :style="backgroundStyle"
         ></div>
         <div
+          ref="mainButton"
           @click="selectOption('main')"
           :class="[
-            'relative z-10 px-3 py-1 rounded-md transition-all duration-300 ease-in-out',
-            'font-proto-mono tracking-wide uppercase flex-1 cursor-pointer text-center',
+            'whitespace-nowrap relative z-10 px-3 py-1 rounded-md transition-all duration-300 ease-in-out',
+            'font-proto-mono tracking-tight uppercase cursor-pointer text-center',
             selectedOption === 'main'
               ? 'text-neutral-900'
               : 'text-neutral-400 hover:text-neutral-200'
@@ -23,10 +24,11 @@
           {{ mainLabel }}
         </div>
         <div
+          ref="alternativeButton"
           @click="selectOption('alternative')"
           :class="[
-            'relative z-10 px-3 py-1 rounded-md transition-all duration-300 ease-in-out',
-            'font-proto-mono tracking-wide uppercase flex-1 cursor-pointer text-center',
+            'whitespace-nowrap relative z-10 px-3 py-1 rounded-md transition-all duration-300 ease-in-out',
+            'font-proto-mono tracking-tight uppercase cursor-pointer text-center',
             selectedOption === 'alternative'
               ? 'text-neutral-900'
               : 'text-neutral-400 hover:text-neutral-200'
@@ -43,7 +45,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, computed, onMounted, nextTick } from 'vue'
 
 const props = defineProps({
   modelValue: {
@@ -67,6 +69,26 @@ const props = defineProps({
 const emit = defineEmits(['update:modelValue', 'change'])
 
 const selectedOption = ref(props.modelValue)
+const mainButton = ref(null)
+const alternativeButton = ref(null)
+const backgroundElement = ref(null)
+
+const backgroundStyle = computed(() => {
+  if (!mainButton.value || !alternativeButton.value) {
+    return {}
+  }
+
+  const activeButton = selectedOption.value === 'main' ? mainButton.value : alternativeButton.value
+  const width = activeButton.offsetWidth
+  const left = selectedOption.value === 'main' 
+    ? mainButton.value.offsetLeft
+    : alternativeButton.value.offsetLeft
+
+  return {
+    width: `${width}px`,
+    left: `${left}px`
+  }
+})
 
 const selectOption = (option) => {
   selectedOption.value = option
@@ -76,5 +98,15 @@ const selectOption = (option) => {
 
 watch(() => props.modelValue, (newValue) => {
   selectedOption.value = newValue
+})
+
+onMounted(() => {
+  nextTick(() => {
+    if (backgroundElement.value) {
+      backgroundElement.value.style.transition = 'none'
+      void backgroundElement.value.offsetWidth
+      backgroundElement.value.style.transition = ''
+    }
+  })
 })
 </script>

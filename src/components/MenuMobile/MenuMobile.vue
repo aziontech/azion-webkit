@@ -1,5 +1,4 @@
 <template>
-  <!-- open sidebar button -->
   <ButtonPrime
     unstyled
     @click="visibleRight = true"

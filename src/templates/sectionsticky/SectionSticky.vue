@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col gap-20 lg:gap-40">
-    <div class="lg:sticky lg:top-12 surface-ground lg:pt-10 lg:-mt-10 z-10">
+    <div class="lg:sticky lg:top-12 bg-neutral-950 lg:pt-10 lg:-mt-10 z-10">
       <ContentSection
         :overline="overline"
         :titleTag="titleTag"

@@ -5,19 +5,20 @@
     :class="padding[spacing ?? 'default']"
   >
     <div class="mx-auto flex flex-col text-center gap-2 md:gap-5">
-      <h1 class="text-5xl lg:text-7xl font-sora leading-tight text-pretty">
+      <h1 class="text-4xl lg:text-6xl md:display-1 font-sora leading-tight text-pretty">
         {{ title }}
       </h1>
       <p class="text-xs lg:text-sm text-neutral-300 font-sora max-w-2xl mx-auto">
         {{ subtitle }}
       </p>
       <template v-if="limitedButtons.length > 0">
-        <div class="flex justify-center gap-2 md:gap-5">
+        <div class="flex justify-center gap-2 md:gap-5 flex-col md:flex-row">
           <Button
             v-for="button in limitedButtons"
             :size="button.size ?? 'small'"
-            :icon="button.icon ?? 'pi pi-angle-right'"
+            :icon="button.icon"
             :type="button.type ?? 'primary'"
+            :theme="button.theme ?? 'dark'"
             v-bind="button"
           />
         </div>
@@ -33,7 +34,7 @@
   export interface HeroButtonProps {
     label: string
     size?: 'small' | 'large'
-    type?: 'primary' | 'secondary' | 'link'
+    type?: 'primary' | 'secondary' | 'link' | 'tertiary' | 'linkExternal'
     href: string
     icon?: string
     theme?: string

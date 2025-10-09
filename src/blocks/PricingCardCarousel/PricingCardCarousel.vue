@@ -35,6 +35,7 @@
           :monthly-price="card.monthlyPrice"
           :annual-price="card.annualPrice"
           :current-period="currentPeriod"
+          :price-label="card.priceLabel"
           :savings="card.savings"
           :button-label="card.buttonLabel"
           @button-click="handleCardClick(card, index)"
@@ -59,13 +60,12 @@
       @swiper="onSwiper2"
     >
       <swiper-slide
-        v-for="(card, index) in cards"
+        v-for="(card,  index) in cards"
         :key="index"
         class="h-auto shadow-xl"
       >
       <div :class="[
-        'z-10 bg-neutral-300 rounded-b-lg md:hidden transition-[margin, border-radius] duration-300 ease-in-out',
-        card.popular ? 'bg-orange-600' : 'bg-neutral-300',
+        'z-10 rounded-b-lg bg-neutral-900 md:hidden transition-[margin, border-radius] duration-300 ease-in-out',
         isStickyActive ? 'mt-2 rounded-lg' : ''
       ]">
           <div class="p-4 flex items-center rounded-xl gap-4">
@@ -78,7 +78,7 @@
             />
             <div class="flex-1">
               <Transition name="fade">
-                <h3 v-if="isStickyActive" class="text-2xl text-neutral-800">
+                <h3 v-if="isStickyActive" class="display-2 text-neutral-100">
                   {{ activeCardTitle }}
                 </h3>
               </Transition>
@@ -104,7 +104,6 @@ import Button from '../../components/Button/Button.vue'
 import Toggle from '../Toggle/Toggle.vue'
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import 'swiper/css'
-
 const props = defineProps({
   table: {
     type: Array,

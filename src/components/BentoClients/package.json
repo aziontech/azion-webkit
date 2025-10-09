@@ -1,0 +1,7 @@
+{
+  "main": "./index.ts",
+  "types": "./BentoClients.d.ts",
+  "browser": {
+    "./sfc": "./BentoClients.vue"
+  }
+}

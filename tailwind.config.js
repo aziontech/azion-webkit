@@ -1,3 +1,5 @@
+import { primitiveColors } from 'azion-theme/src/tokens/colors-primitive';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -32,6 +34,32 @@ module.exports = {
       };
       addUtilities(newUtilities, ["responsive", "hover"]);
     },
+    function ({ addComponents }) {
+      const components = {
+        '.display-1':  {
+          fontSize: '3rem',
+          lineHeight: '3rem',
+          fontFamily: 'Sora',
+        },
+        '.display-2': {
+          fontSize: '1.75rem',
+          lineHeight: '2rem',
+          fontFamily: 'Sora',
+        },
+        '.display-3': {
+          fontSize: '1.25rem',
+          lineHeight: '1.625rem',
+          fontFamily: 'Sora',
+        },
+        '.body-1': {
+          fontSize: '1rem',
+          lineHeight: '1.25rem',
+          fontFamily: 'Sora',
+        },
+      };
+      
+      addComponents(components);
+    },
   ],
   important: true,
   darkMode: 'class',
@@ -50,7 +78,8 @@ module.exports = {
         'header-button-enabled': '#ffffff32',
         'header-button-hover': 'rgba(244, 244, 244, 0.04)',
         'header-avatar': '#363636',
-        footer: '#1e1e1e'
+        footer: '#1e1e1e',
+        ...primitiveColors
       },
       textColor: {
         header: '#b5b5b5',

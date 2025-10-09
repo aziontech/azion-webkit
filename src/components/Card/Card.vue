@@ -5,48 +5,40 @@
       :target="target"
       class="group transition-colors cursor-pointer"
     >
-      <Card
-        unstyled
-        :pt="ptWithHover[theme]"
-      >
-        <template #content>
-          <div class="flex flex-col p-3 md:p-6 gap-3 h-full">
-            <div class="flex flex-col gap-2 font-sora flex-grow">
-              <p :class="innerStyleWithHover[theme].title">{{ title }}</p>
-              <p :class="innerStyleWithHover[theme].description">{{ description }}</p>
-            </div>
+      <div :class="cardClassesWithHover[theme]">
+        <div class="flex flex-col p-3 md:p-6 gap-3 h-full">
+          <div class="flex flex-col gap-2 font-sora flex-grow">
+            <h5 :class="innerStyleWithHover[theme].title">{{ title }}</h5>
+            <p :class="innerStyleWithHover[theme].description">{{ description }}</p>
+          </div>
+          <div>
             <Button
               v-if="label"
               :label="label"
               size="small"
-              type="inline"
-              customClass="px-0"
+              type="tertiary"
+              theme="dark"  
+              customClass="px-0 bg-transparent"
               icon="pi pi-angle-right"
             />
           </div>
-        </template>
-      </Card>
+        </div>
+      </div>
     </a>
   </template>
   <template v-else>
-    <Card
-      unstyled
-      :pt="pt[theme]"
-    >
-      <template #content>
-        <div class="flex flex-col p-3 md:p-6 gap-3 h-full">
-          <div class="flex flex-col gap-2 font-sora flex-grow">
-            <p :class="innerStyle[theme].title">{{ title }}</p>
-            <p :class="innerStyle[theme].description">{{ description }}</p>
-          </div>
+    <div :class="cardClasses[theme]">
+      <div class="flex flex-col p-3 md:p-6 gap-3 h-full">
+        <div class="flex flex-col gap-2 font-sora flex-grow">
+          <p :class="innerStyle[theme].title">{{ title }}</p>
+          <p :class="innerStyle[theme].description">{{ description }}</p>
         </div>
-      </template>
-    </Card>
+      </div>
+    </div>
   </template>
 </template>
 
 <script setup>
-  import Card from 'primevue/card'
   import Button from '../Button/Button.vue'
 
   const props = defineProps({
@@ -80,32 +72,23 @@
 
   const innerStyle = {
     default: {
-      title: 'text-md text-[#FAFAFA]',
-      description: 'text-sm text-[#A3A3A3]'
+      title: 'display-3 text-neutral-100',
+      description: 'text-xs text-neutral-400'
     }
   }
 
   const innerStyleWithHover = {
     default: {
-      title: 'text-md text-[#FAFAFA] group-hover:text-[#B5B1F4]',
-      description: 'text-sm text-[#A3A3A3]'
+      title: 'display-3 text-neutral-100 group-hover:text-violet-300',
+      description: 'text-xs text-neutral-400'
     }
   }
 
-  const pt = {
-    default: {
-      root: {
-        class: 'w-full h-full bg-[#171717] rounded-md flex flex-col'
-      }
-    }
+  const cardClasses = {
+    default: 'w-full h-full bg-neutral-900 rounded-md flex flex-col'
   }
 
-  const ptWithHover = {
-    default: {
-      root: {
-        class:
-          'w-full h-full bg-[#171717] rounded-md group-hover:bg-[#13131a] transition-colors flex flex-col'
-      }
-    }
+  const cardClassesWithHover = {
+    default: 'w-full h-full bg-neutral-900 rounded-md group-hover:bg-neutral-800 transition-colors flex flex-col'
   }
 </script>
