@@ -9,7 +9,7 @@
         :href="card.link"
         class="no-underline flex border-radius cursor-pointer h-full"
       >
-        <Card class="p-0 mt-0 shadow-none overflow-hidden">
+        <Card class="p-0 mt-0 shadow-none overflow-hidden" :pt="{ root: { class: 'bg-neutral-950' } }">
           <template #header>
             <div class="relative h-[412px] overflow-hidden rounded-md">
               <img
@@ -67,7 +67,7 @@
         :href="slotProps.data.link"
         class="no-underline flex border-radius cursor-pointer h-full"
       >
-        <Card class="p-0 mt-0 shadow-none overflow-hidden">
+        <Card class="p-0 mt-0 shadow-none overflow-hidden" :pt="{ root: { class: 'bg-transparent' } }">
           <template #header>
             <div class="relative h-[412px] overflow-hidden rounded-md">
               <img

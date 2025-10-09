@@ -10,7 +10,7 @@
   >
     <template #content>
       <div
-        class="transition-all surface-ground grid m-0 p-0 justify-between gap-6 lg:gap-16 md:grid-cols-2 lg:grid-cols-3"
+        class="transition-all bg-neutral-950 grid m-0 p-0 justify-between gap-6 lg:gap-16 md:grid-cols-2 lg:grid-cols-3"
       >
         <CardBase v-for="{ title, description, links } in cards">
           <template #content>
