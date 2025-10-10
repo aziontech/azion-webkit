@@ -1,3 +1,9 @@
+## [1.221.1](https://github.com/aziontech/azion-webkit/compare/v1.221.0...v1.221.1) (2025-10-10)
+
+### Bug Fixes
+
+* correct syntax error in annualPrice prop from = to : ([a80d80e](https://github.com/aziontech/azion-webkit/commit/a80d80ea93903486317e7e2342ba1885ad6904a6))
+
 ## [1.221.0](https://github.com/aziontech/azion-webkit/compare/v1.220.0...v1.221.0) (2025-10-10)
 
 ### Features
