@@ -1,7 +1,7 @@
 import BentoClients from '../../blocks/BentoClients/BentoClients.vue'
 
 export default {
-  title: 'BlocksV2/BentoClients',
+  title: 'RebrandingBlocks/BentoClients',
   component: BentoClients,
   tags: ['autodocs'],
   argTypes: {

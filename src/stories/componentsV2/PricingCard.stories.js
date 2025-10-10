@@ -1,7 +1,7 @@
 import PricingCard from '../../components/PricingCard/PricingCard.vue'
 
 export default {
-  title: 'ComponentsV2/PricingCard',
+  title: 'RebrandingComponents/PricingCard',
   component: PricingCard,
   tags: ['autodocs'],
   argTypes: {
@@ -430,7 +430,7 @@ WithDifferentIcons.args = {
     { icon: 'pi-users', label: 'Team collaboration' }
   ],
   monthlyPrice: '$99',
-  annualPrice="$79",
+  annualPrice: '$79',
   currentPeriod: 'monthly',
   buttonLabel: 'Go Premium'
 }

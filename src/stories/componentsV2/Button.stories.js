@@ -1,7 +1,7 @@
 import Button from '../../components/Button/Button.vue'
 
 export default {
-  title: 'ComponentsV2/Button',
+  title: 'RebrandingComponents/Button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {

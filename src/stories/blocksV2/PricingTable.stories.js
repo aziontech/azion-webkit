@@ -1,7 +1,7 @@
 import PricingTable from '../../blocks/PricingTable/PricingTable.vue'
 
 export default {
-  title: 'BlocksV2/PricingTable',
+  title: 'RebrandingBlocks/PricingTable',
   component: PricingTable,
   tags: ['autodocs'],
   parameters: {

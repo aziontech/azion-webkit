@@ -1,7 +1,7 @@
 import Footer from '../../blocks/Footer/Footer.vue'
 
 export default {
-  title: 'BlocksV2/Footer',
+  title: 'RebrandingBlocks/Footer',
   component: Footer,
   tags: ['autodocs'],
   argTypes: {
