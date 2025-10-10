@@ -1,3 +1,9 @@
+## [1.221.0](https://github.com/aziontech/azion-webkit/compare/v1.220.0...v1.221.0) (2025-10-10)
+
+### Features
+
+* add rebranding blocks and components stories ([0af3f2f](https://github.com/aziontech/azion-webkit/commit/0af3f2f2adf8ee7f2b0e8fffdca94036cb292a5e))
+
 ## [1.220.0](https://github.com/aziontech/azion-webkit/compare/v1.219.0...v1.220.0) (2025-10-09)
 
 ### Features
