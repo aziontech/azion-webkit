@@ -1,3 +1,9 @@
+## [1.222.0](https://github.com/aziontech/azion-webkit/compare/v1.221.1...v1.222.0) (2025-10-10)
+
+### Features
+
+* implement reusable Image component with width and cover options ([0db5e7b](https://github.com/aziontech/azion-webkit/commit/0db5e7b779fbe6832b65b228e323e336b86111ce))
+
 ## [1.221.1](https://github.com/aziontech/azion-webkit/compare/v1.221.0...v1.221.1) (2025-10-10)
 
 ### Bug Fixes
