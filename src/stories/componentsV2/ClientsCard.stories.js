@@ -1,7 +1,7 @@
 import ClientsCard from '../../components/ClientsCard/ClientsCard.vue'
 
 export default {
-  title: 'ComponentsV2/ClientsCard',
+  title: 'RebrandingComponents/ClientsCard',
   component: ClientsCard,
   tags: ['autodocs'],
   argTypes: {

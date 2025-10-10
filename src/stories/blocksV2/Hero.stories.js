@@ -1,7 +1,7 @@
 import Hero from '../../blocks/Hero/Hero.vue'
 
 export default {
-  title: 'BlocksV2/Hero',
+  title: 'RebrandingBlocks/Hero',
   component: Hero,
   tags: ['autodocs'],
   argTypes: {

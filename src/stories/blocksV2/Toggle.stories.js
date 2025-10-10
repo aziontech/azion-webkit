@@ -1,7 +1,7 @@
 import Toggle from '../../blocks/Toggle/Toggle.vue'
 
 export default {
-  title: 'BlocksV2/Toggle',
+  title: 'RebrandingBlocks/Toggle',
   component: Toggle,
   tags: ['autodocs'],
   argTypes: {

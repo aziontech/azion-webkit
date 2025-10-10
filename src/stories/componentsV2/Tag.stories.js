@@ -1,7 +1,7 @@
 import Tag from '../../components/Tag/Tag.vue'
 
 export default {
-  title: 'ComponentsV2/Tag',
+  title: 'RebrandingComponents/Tag',
   component: Tag,
   tags: ['autodocs'],
   argTypes: {

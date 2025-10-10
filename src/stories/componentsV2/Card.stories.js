@@ -1,7 +1,7 @@
 import Card from '../../components/Card/Card.vue'
 
 export default {
-  title: 'ComponentsV2/Card',
+  title: 'RebrandingComponents/Card',
   component: Card,
   tags: ['autodocs'],
   argTypes: {
