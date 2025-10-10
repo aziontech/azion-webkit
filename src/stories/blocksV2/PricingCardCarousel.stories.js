@@ -1,7 +1,7 @@
 import PricingCardCarousel from '../../blocks/PricingCardCarousel/PricingCardCarousel.vue'
 
 export default {
-  title: 'RebrandingBlocks/PricingCardCarousel',
+  title: 'Blocks/Rebranding/PricingCardCarousel',
   component: PricingCardCarousel,
   tags: ['autodocs'],
   argTypes: {

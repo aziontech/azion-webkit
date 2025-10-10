@@ -1,7 +1,7 @@
 import PricingCard from '../../components/PricingCard/PricingCard.vue'
 
 export default {
-  title: 'RebrandingComponents/PricingCard',
+  title: 'Components/Rebranding/PricingCard',
   component: PricingCard,
   tags: ['autodocs'],
   argTypes: {

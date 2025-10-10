@@ -1,7 +1,7 @@
 import GridCardContainer from '../../blocks/GridCardContainer/GridCardContainer.vue'
 
 export default {
-  title: 'RebrandingBlocks/GridCardContainer',
+  title: 'Blocks/Rebranding/GridCardContainer',
   component: GridCardContainer,
   tags: ['autodocs'],
   argTypes: {

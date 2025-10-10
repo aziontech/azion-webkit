@@ -1,7 +1,7 @@
 import Tagline from '../../components/Tagline/Tagline.vue'
 
 export default {
-  title: 'RebrandingComponents/Tagline',
+  title: 'Components/Rebranding/Tagline',
   component: Tagline,
   tags: ['autodocs'],
   parameters: {
