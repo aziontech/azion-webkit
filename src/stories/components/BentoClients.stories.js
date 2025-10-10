@@ -1,4 +1,4 @@
-import BentoClients from '../../components/BentoClients/BentoClients.vue'
+import BentoClients from '../../blocks/BentoClients/BentoClients.vue'
 
 export default {
   title: 'Components/BentoClients',
