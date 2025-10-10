@@ -1,7 +1,7 @@
 import SystemStatus from '../../components/SystemStatus/SystemStatus.vue'
 
 export default {
-  title: 'RebrandingComponents/SystemStatus',
+  title: 'Components/Rebranding/SystemStatus',
   component: SystemStatus,
   tags: ['autodocs'],
   argTypes: {

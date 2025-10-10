@@ -1,7 +1,7 @@
 import Header from '../../blocks/Header/Header.vue'
 
 export default {
-  title: 'RebrandingBlocks/Header',
+  title: 'Blocks/Rebranding/Header',
   component: Header,
   tags: ['autodocs'],
   argTypes: {

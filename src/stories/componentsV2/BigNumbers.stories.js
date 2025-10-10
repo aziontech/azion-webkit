@@ -1,7 +1,7 @@
 import BigNumbers from '../../components/bignumbers/BigNumbers.vue'
 
 export default {
-  title: 'RebrandingComponents/BigNumbers',
+  title: 'Components/Rebranding/BigNumbers',
   component: BigNumbers,
   tags: ['autodocs'],
   argTypes: {

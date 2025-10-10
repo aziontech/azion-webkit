@@ -1,7 +1,7 @@
 import Image from '../../components/Image/Image.vue'
 
 export default {
-  title: 'RebrandingComponents/Image',
+  title: 'Components/Rebranding/Image',
   component: Image,
   tags: ['autodocs'],
   argTypes: {
