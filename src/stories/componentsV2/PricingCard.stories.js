@@ -430,7 +430,7 @@ WithDifferentIcons.args = {
     { icon: 'pi-users', label: 'Team collaboration' }
   ],
   monthlyPrice: '$99',
-  annualPrice="$79",
+  annualPrice: '$79',
   currentPeriod: 'monthly',
   buttonLabel: 'Go Premium'
 }
