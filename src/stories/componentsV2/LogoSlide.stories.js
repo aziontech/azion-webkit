@@ -1,7 +1,7 @@
 import LogoSlide from '../../components/LogoSlide/LogoSlide.vue'
 
 export default {
-  title: 'Components/LogoSlide',
+  title: 'Components/Rebranding/LogoSlide',
   component: LogoSlide,
   tags: ['autodocs'],
   argTypes: {
