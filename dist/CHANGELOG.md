@@ -1,3 +1,10 @@
+## [1.222.2](https://github.com/aziontech/azion-webkit/compare/v1.222.1...v1.222.2) (2025-10-13)
+
+### Bug Fixes
+
+* move logo slider to rebranding dir and fix bento clients storie ([a766041](https://github.com/aziontech/azion-webkit/commit/a7660418c23cf42bb6f416263636bffe0b317630))
+* remove unused css ([a368214](https://github.com/aziontech/azion-webkit/commit/a368214f41877851b87a582716d288836674ed8b))
+
 ## [1.222.1](https://github.com/aziontech/azion-webkit/compare/v1.222.0...v1.222.1) (2025-10-13)
 
 ### Bug Fixes
