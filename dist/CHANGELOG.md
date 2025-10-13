@@ -1,3 +1,9 @@
+## [1.222.1](https://github.com/aziontech/azion-webkit/compare/v1.222.0...v1.222.1) (2025-10-13)
+
+### Bug Fixes
+
+* simplify button styling and update partner link URL ([54c1b3d](https://github.com/aziontech/azion-webkit/commit/54c1b3dd281c0f6d81c5c19968569b6084ecbee0))
+
 ## [1.222.0](https://github.com/aziontech/azion-webkit/compare/v1.221.1...v1.222.0) (2025-10-10)
 
 ### Features
