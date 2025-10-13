@@ -149,7 +149,7 @@
         ],
         action: {
           label: 'Conviértete en socio',
-          link: '/es/marketplace/ser-socio/',
+          link: '/es/socios/',
           severity: 'secondary'
         }
       }
