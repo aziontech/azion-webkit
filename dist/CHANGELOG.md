@@ -1,3 +1,9 @@
+## [1.222.3](https://github.com/aziontech/azion-webkit/compare/v1.222.2...v1.222.3) (2025-10-13)
+
+### Bug Fixes
+
+* text size and wrapping style ([e59adef](https://github.com/aziontech/azion-webkit/commit/e59adefe71fb6b2254225d14e982d81e31016838))
+
 ## [1.222.2](https://github.com/aziontech/azion-webkit/compare/v1.222.1...v1.222.2) (2025-10-13)
 
 ### Bug Fixes
