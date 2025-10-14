@@ -22,7 +22,7 @@
             <template v-if="!customPrice">
                 <div class="flex items-end text-sm font-proto-mono">
                     <span v-if="currentPrice.startsWith('$')">$</span>
-                    <h4 class="display-1 leading-[3.5rem] tracking-tighter font-proto-mono">{{ currentPrice.replace('$', '') }}</h4>
+                    <h4 class="text-7xl leading-[3.5rem] tracking-tighter font-proto-mono">{{ currentPrice.replace('$', '') }}</h4>
                     <span class="font-proto-mono">{{ currentPeriod === 'monthly' ? '/mo' : '/mo' }}</span>
                 </div>
             </template>
