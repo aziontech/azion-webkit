@@ -1,3 +1,9 @@
+## [1.223.0](https://github.com/aziontech/azion-webkit/compare/v1.222.3...v1.223.0) (2025-10-14)
+
+### Features
+
+* add AccordionGallery component with auto-play and responsive layout ([f033e1f](https://github.com/aziontech/azion-webkit/commit/f033e1fbcd38b08fea06642793d5114d8f2a2bbd))
+
 ## [1.222.3](https://github.com/aziontech/azion-webkit/compare/v1.222.2...v1.222.3) (2025-10-13)
 
 ### Bug Fixes
