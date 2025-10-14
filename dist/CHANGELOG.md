@@ -1,3 +1,9 @@
+## [1.224.0](https://github.com/aziontech/azion-webkit/compare/v1.223.0...v1.224.0) (2025-10-14)
+
+### Features
+
+* add buttonHidden prop to PricingCard component ([a24b87c](https://github.com/aziontech/azion-webkit/commit/a24b87c21b6795aba2114cb02461e0a1e8fed643))
+
 ## [1.223.0](https://github.com/aziontech/azion-webkit/compare/v1.222.3...v1.223.0) (2025-10-14)
 
 ### Features
