@@ -1,223 +1,268 @@
 import Header from '../../blocks/Header/Header.vue'
+import HeaderLogoAzion from '../../templates/azionlogo'
+import Menu from '../../components/Menu/Menu.vue'
+import MenuMobile from '../../components/MenuMobile/MenuMobile.vue'
+import Search from '../../templates/headersearchdialog'
 
 export default {
   title: 'Blocks/Rebranding/Header',
   component: Header,
-  tags: ['autodocs'],
-  argTypes: {
-    menuSecondary: {
-      control: { type: 'object' },
-      description: 'Array of secondary menu items displayed on the right',
-      table: {
-        type: { summary: 'Array<{text: string, link: string, target: string, title: string, backgroundColor: string}>' }
-      }
+  tags: ['autodocs']
+}
+
+const simpleMenuData = {
+  menu: [
+    {
+      label: 'Products',
+      href: '/products'
+    },
+    {
+      label: 'Solutions',
+      href: '/solutions'
+    },
+    {
+      label: 'Pricing',
+      href: '/pricing'
+    },
+    {
+      label: 'Docs',
+      href: '/documentation'
     }
-  },
-  parameters: {
-    docs: {
-      description: {
-        component: `
-# Header Block
+  ]
+}
 
-A sticky header component with slot-based content for maximum flexibility.
+const menuDataWithSubmenu = {
+  menu: [
+    {
+      label: 'Products',
+      subMenuColumns: [
+        {
+          title: 'Build',
+          items: [
+            { label: 'Edge Application', href: '/products/edge-application' },
+            { label: 'Edge Functions', href: '/products/edge-functions' }
+          ]
+        },
+        {
+          title: 'Secure',
+          items: [
+            { label: 'Edge Firewall', href: '/products/edge-firewall' }
+          ]
+        }
+      ]
+    },
+    {
+      label: 'Solutions',
+      subMenuColumns: [
+        {
+          items: [
+            { label: 'E-commerce', href: '/solutions/ecommerce' },
+            { label: 'Media', href: '/solutions/media' }
+          ]
+        }
+      ]
+    },
+    {
+      label: 'Pricing',
+      href: '/pricing'
+    },
+    {
+      label: 'Docs',
+      href: '/documentation'
+    }
+  ]
+}
 
-## Features
-- **Sticky Positioning**: Stays at top with z-50
-- **Responsive Height**: h-18 on mobile, h-19 on xl screens
-- **Slot-based**: Logo, navigation, dialog, and mobile menu via slots
-- **Secondary Menu**: Configurable menu items on the right
-- **Max Width**: 1600px with auto margins
-- **Dark Theme**: Neutral-950 background with white text
+const menuSecondary = [
+  { label: 'Console', href: 'https://console.azion.com', icon: 'pi pi-sign-in' },
+  { label: 'Sign Up', href: '/signup', variant: 'primary' }
+]
 
-## Slots
+const menuSecondaryMobile = [
+  { label: 'Console', href: 'https://console.azion.com' },
+  { label: 'Sign Up', href: '/signup' }
+]
 
-### logo
-Left-side logo/brand area.
+const bottomButtonsMobile = [
+  { label: 'Get Started', url: '/get-started', icon: 'pi pi-arrow-right' }
+]
 
-### navigation
-Main navigation menu (desktop).
+const communityData = {
+  title: 'Community',
+  items: [
+    { label: 'Discord', href: 'https://discord.gg/azion', icon: 'pi pi-discord' },
+    { label: 'GitHub', href: 'https://github.com/aziontech', icon: 'pi pi-github' }
+  ]
+}
 
-### dialog
-Optional dialog/modal trigger (e.g., search).
+const simpleMobileMenuData = {
+  menu: [
+    {
+      label: 'Products',
+      href: '/products'
+    },
+    {
+      label: 'Solutions',
+      href: '/solutions'
+    },
+    {
+      label: 'Pricing',
+      href: '/pricing'
+    },
+    {
+      label: 'Docs',
+      href: '/documentation'
+    }
+  ]
+}
 
-### menu-mobile
-Mobile menu toggle button.
+const menuMobileDataWithSubmenu = {
+  menu: [
+    {
+      label: 'Products',
+      subMenuColumns: [
+        {
+          label: 'Edge Application',
+          href: '/products/edge-application'
+        },
+        {
+          label: 'Edge Functions',
+          href: '/products/edge-functions'
+        },
+        {
+          label: 'Edge Firewall',
+          href: '/products/edge-firewall'
+        }
+      ]
+    },
+    {
+      label: 'Solutions',
+      subMenuColumns: [
+        {
+          label: 'E-commerce',
+          href: '/solutions/ecommerce'
+        },
+        {
+          label: 'Media',
+          href: '/solutions/media'
+        }
+      ]
+    },
+    {
+      label: 'Pricing',
+      href: '/pricing'
+    },
+    {
+      label: 'Docs',
+      href: '/documentation'
+    }
+  ]
+}
 
-## Secondary Menu
-Array of menu items with:
-- \`text\`: Display text
-- \`link\`: URL
-- \`target\`: Link target (_self, _blank)
-- \`title\`: Title attribute
-- \`backgroundColor\`: 'dark' for filled button, other for text-only
-
-## Usage
-
-\`\`\`vue
-<Header :menuSecondary="[
-  { text: 'Login', link: '/login', target: '_self', backgroundColor: '' },
-  { text: 'Sign Up', link: '/signup', target: '_self', backgroundColor: 'dark' }
-]">
-  <template #logo>
-    <Logo />
-  </template>
-  <template #navigation>
-    <Menu />
-  </template>
-</Header>
-\`\`\`
-
-## Design Notes
-- Sora font family
-- Padding: py-4, px-6
-- Flexbox layout with justify-between
-- Secondary menu hidden below xl breakpoint
-- Dark button: neutral-200 bg with neutral-900 text
-- Text button: white text with hover to neutral-300
-        `
+export const Default = {
+  render: (args) => ({
+    components: { Header, HeaderLogoAzion, Menu, MenuMobile, Search },
+    setup() {
+      return { 
+        args, 
+        menuData: simpleMenuData, 
+        menuSecondary, 
+        menuSecondaryMobile, 
+        bottomButtonsMobile, 
+        communityData, 
+        menuMobileData: simpleMobileMenuData 
       }
     },
-    backgrounds: {
-      default: 'dark',
-      values: [
-        { name: 'dark', value: '#000000' }
-      ]
-    }
-  }
-}
-
-const Template = (args) => ({
-  components: { Header },
-  setup() {
-    return { args }
-  },
-  template: `
-    <div class="bg-black min-h-screen">
-      <Header v-bind="args">
+    template: `
+      <Header :menuSecondary="menuSecondary">
         <template #logo>
-          <div class="text-white font-bold text-xl">Azion</div>
+          <HeaderLogoAzion
+            href="/"
+            hrefTitle="Home | Azion Technologies"
+            target="_self"
+            version="default"
+          />
         </template>
-        <template #navigation>
-          <nav class="hidden xl:flex gap-6 text-white text-sm">
-            <a href="#" class="hover:text-neutral-300">Products</a>
-            <a href="#" class="hover:text-neutral-300">Solutions</a>
-            <a href="#" class="hover:text-neutral-300">Developers</a>
-            <a href="#" class="hover:text-neutral-300">Pricing</a>
-          </nav>
-        </template>
-        <template #menu-mobile>
-          <button class="xl:hidden text-white">
-            <i class="pi pi-bars text-xl"></i>
-          </button>
-        </template>
-      </Header>
-      <div class="p-8 text-white">
-        <p>Page content here...</p>
-      </div>
-    </div>
-  `
-})
-
-export const Default = Template.bind({})
-Default.args = {
-  menuSecondary: [
-    { text: 'Login', link: '#', target: '_self', title: 'Login', backgroundColor: '' },
-    { text: 'Sign Up', link: '#', target: '_self', title: 'Sign Up', backgroundColor: 'dark' }
-  ]
-}
-Default.parameters = {
-  docs: {
-    description: {
-      story: 'Default header with logo, navigation, and secondary menu.'
-    }
-  }
-}
-
-export const WithoutSecondaryMenu = Template.bind({})
-WithoutSecondaryMenu.args = {
-  menuSecondary: []
-}
-WithoutSecondaryMenu.parameters = {
-  docs: {
-    description: {
-      story: 'Header without secondary menu items.'
-    }
-  }
-}
-
-export const SingleSecondaryButton = Template.bind({})
-SingleSecondaryButton.args = {
-  menuSecondary: [
-    { text: 'Get Started', link: '#', target: '_self', title: 'Get Started', backgroundColor: 'dark' }
-  ]
-}
-SingleSecondaryButton.parameters = {
-  docs: {
-    description: {
-      story: 'Header with single CTA button in secondary menu.'
-    }
-  }
-}
-
-export const MultipleSecondaryItems = Template.bind({})
-MultipleSecondaryItems.args = {
-  menuSecondary: [
-    { text: 'Docs', link: '#', target: '_self', title: 'Documentation', backgroundColor: '' },
-    { text: 'Support', link: '#', target: '_self', title: 'Support', backgroundColor: '' },
-    { text: 'Console', link: '#', target: '_blank', title: 'Console', backgroundColor: 'dark' }
-  ]
-}
-MultipleSecondaryItems.parameters = {
-  docs: {
-    description: {
-      story: 'Header with multiple secondary menu items.'
-    }
-  }
-}
-
-// With Search Dialog
-const WithDialogTemplate = (args) => ({
-  components: { Header },
-  setup() {
-    return { args }
-  },
-  template: `
-    <div class="bg-black min-h-screen">
-      <Header v-bind="args">
-        <template #logo>
-          <div class="text-white font-bold text-xl">Azion</div>
-        </template>
-        <template #navigation>
-          <nav class="hidden xl:flex gap-6 text-white text-sm">
-            <a href="#" class="hover:text-neutral-300">Products</a>
-            <a href="#" class="hover:text-neutral-300">Docs</a>
-          </nav>
-        </template>
+        
         <template #dialog>
-          <button class="text-white hover:text-neutral-300">
-            <i class="pi pi-search"></i>
-          </button>
+          <Search
+            algoliaAppId="PYJUZH6VNQ"
+            algoliaApiKey="7c1795c333053265edd2aeb199745797"
+            algoliaIndex="azion_en"
+            algoliaModel="search"
+            inputPlaceholder="Search documentation..."
+          />
         </template>
+
+        <template #navigation>
+          <Menu
+            :communityData="communityData"
+            :menuData="menuData"
+          />
+        </template>
+
         <template #menu-mobile>
-          <button class="xl:hidden text-white">
-            <i class="pi pi-bars text-xl"></i>
-          </button>
+          <MenuMobile
+            :menuSecondary="menuSecondaryMobile"
+            :bottomButtons="bottomButtonsMobile"
+            :menuMobile="menuMobileData"
+          />
         </template>
       </Header>
-    </div>
-  `
-})
-
-export const WithSearchDialog = WithDialogTemplate.bind({})
-WithSearchDialog.args = {
-  menuSecondary: [
-    { text: 'Login', link: '#', target: '_self', title: 'Login', backgroundColor: '' }
-  ]
+    `
+  })
 }
-WithSearchDialog.parameters = {
-  docs: {
-    description: {
-      story: 'Header with search dialog slot filled.'
-    }
-  }
+
+export const WithSubmenu = {
+  render: (args) => ({
+    components: { Header, HeaderLogoAzion, Menu, MenuMobile, Search },
+    setup() {
+      return { 
+        args, 
+        menuData: menuDataWithSubmenu, 
+        menuSecondary, 
+        menuSecondaryMobile, 
+        bottomButtonsMobile, 
+        communityData, 
+        menuMobileData: menuMobileDataWithSubmenu 
+      }
+    },
+    template: `
+      <Header :menuSecondary="menuSecondary">
+        <template #logo>
+          <HeaderLogoAzion
+            href="/"
+            hrefTitle="Home | Azion Technologies"
+            target="_self"
+            version="default"
+          />
+        </template>
+        
+        <template #dialog>
+          <Search
+            algoliaAppId="PYJUZH6VNQ"
+            algoliaApiKey="7c1795c333053265edd2aeb199745797"
+            algoliaIndex="azion_en"
+            algoliaModel="search"
+            inputPlaceholder="Search documentation..."
+          />
+        </template>
+
+        <template #navigation>
+          <Menu
+            :communityData="communityData"
+            :menuData="menuData"
+          />
+        </template>
+
+        <template #menu-mobile>
+          <MenuMobile
+            :menuSecondary="menuSecondaryMobile"
+            :bottomButtons="bottomButtonsMobile"
+            :menuMobile="menuMobileData"
+          />
+        </template>
+      </Header>
+    `
+  })
 }

@@ -1,218 +1,184 @@
 import PricingTable from '../../blocks/PricingTable/PricingTable.vue'
+import PricingTableHeader from '../../components/PricingTableHeader/PricingTableHeader.vue'
+import PricingTableContent from '../../components/PricingTableContent/PricingTableContent.vue'
 
 export default {
   title: 'Blocks/Rebranding/PricingTable',
   component: PricingTable,
   tags: ['autodocs'],
   parameters: {
-    docs: {
-      description: {
-        component: `
-# PricingTable Block
-
-A simple grid wrapper component for pricing table layouts.
-
-## Features
-- **Grid Structure**: 5-column grid layout
-- **Slot-based**: Content provided via default slot
-- **Max Width**: 1292px with auto margins
-- **Responsive**: Adapts grid on smaller screens
-- **White Text**: Designed for dark backgrounds
-
-## Purpose
-This component provides the structural grid for pricing comparison tables. It's meant to be used with PricingTableHeader and PricingTableContent components as children.
-
-## Usage
-
-\`\`\`vue
-<PricingTable>
-  <PricingTableHeader :plans="plans" />
-  <PricingTableContent :table="tableData" />
-</PricingTable>
-\`\`\`
-
-## Design Notes
-- Grid: grid-cols-5
-- Max width: 1292px
-- Padding: px-5
-- Text color: white
-- Bottom margin: mb-[25rem] (large spacing)
-- Uses default slot for flexible content
-
-## Typical Structure
-1. First column: Feature names
-2. Columns 2-5: Plan comparison data
-
-## Related Components
-- **PricingTableHeader**: Header row with plan names
-- **PricingTableContent**: Feature comparison rows
-- **PricingCard**: Individual pricing cards
-        `
-      }
-    },
+    layout: 'fullscreen',
     backgrounds: {
       default: 'dark',
       values: [
-        { name: 'dark', value: '#000000' }
+        { name: 'dark', value: '#0a0a0a' },
+        { name: 'light', value: '#ffffff' }
       ]
     }
-  }
+  },
+  decorators: [
+    (story) => ({
+      components: { story },
+      template: '<div class="bg-neutral-950"><story /></div>'
+    })
+  ]
 }
 
-const Template = () => ({
-  components: { PricingTable },
-  template: `
-    <div class="bg-black p-8">
-      <PricingTable>
-        <div class="col-span-1 text-white font-bold p-4">Features</div>
-        <div class="col-span-1 text-white font-bold p-4 text-center">Free</div>
-        <div class="col-span-1 text-white font-bold p-4 text-center">Pro</div>
-        <div class="col-span-1 text-white font-bold p-4 text-center">Business</div>
-        <div class="col-span-1 text-white font-bold p-4 text-center">Enterprise</div>
-        
-        <div class="col-span-1 text-neutral-400 p-4">Storage</div>
-        <div class="col-span-1 text-white p-4 text-center">10 GB</div>
-        <div class="col-span-1 text-white p-4 text-center">100 GB</div>
-        <div class="col-span-1 text-white p-4 text-center">1 TB</div>
-        <div class="col-span-1 text-white p-4 text-center">Unlimited</div>
-        
-        <div class="col-span-1 text-neutral-400 p-4">Users</div>
-        <div class="col-span-1 text-white p-4 text-center">1</div>
-        <div class="col-span-1 text-white p-4 text-center">5</div>
-        <div class="col-span-1 text-white p-4 text-center">25</div>
-        <div class="col-span-1 text-white p-4 text-center">Unlimited</div>
-        
-        <div class="col-span-1 text-neutral-400 p-4">Support</div>
-        <div class="col-span-1 text-white p-4 text-center">Email</div>
-        <div class="col-span-1 text-white p-4 text-center">Priority</div>
-        <div class="col-span-1 text-white p-4 text-center">24/7</div>
-        <div class="col-span-1 text-white p-4 text-center">Dedicated</div>
-      </PricingTable>
-    </div>
-  `
-})
-
-export const Default = Template.bind({})
-Default.parameters = {
-  docs: {
-    description: {
-      story: 'Basic pricing table with 5 columns showing feature comparison.'
-    }
+const pricingTableHeader = [
+  {
+    title: "Free",
+    subtitle: "Start free with personal projects",
+    monthlyPrice: "$0",
+    annualPrice: "$0",
+    buttonLabel: "Free forever"
+  },
+  {
+    title: "Pro",
+    subtitle: "Scale as independent professional",
+    monthlyPrice: "$25",
+    annualPrice: "$20",
+    savings: "Save 20%",
+    buttonLabel: "Contact Us"
+  },
+  {
+    title: "Business",
+    subtitle: "Power small businesses",
+    monthlyPrice: "$250",
+    annualPrice: "$200",
+    savings: "Save 20%",
+    buttonLabel: "Contact Us",
+    popular: true
+  },
+  {
+    title: "Enterprise",
+    subtitle: "Mission-critical applications",
+    monthlyPrice: "Custom",
+    annualPrice: "Custom",
+    buttonLabel: "Contact Us"
   }
-}
+]
 
-const SimpleTemplate = () => ({
-  components: { PricingTable },
-  template: `
-    <div class="bg-black p-8">
-      <PricingTable>
-        <div class="text-white p-4 font-bold">Feature</div>
-        <div class="text-white p-4 text-center font-bold">Plan A</div>
-        <div class="text-white p-4 text-center font-bold">Plan B</div>
-        <div class="text-white p-4 text-center font-bold">Plan C</div>
-        <div class="text-white p-4 text-center font-bold">Plan D</div>
-      </PricingTable>
-    </div>
-  `
-})
-
-export const HeaderOnly = SimpleTemplate.bind({})
-HeaderOnly.parameters = {
-  docs: {
-    description: {
-      story: 'Pricing table showing just the header row structure.'
-    }
+const pricingTableContent = [
+  {
+    overline: "Managed Infrastructure",
+    title: "Azion Platform",
+    description: "Powering modern workloads on global infrastructure.",
+    features: [
+      {
+        name: "Global Infrastructure",
+        info: "Worldwide edge network",
+        icon: "pi-check",
+        values: [null, null, null, null]
+      },
+      {
+        name: "100+ data centers",
+        info: "Edge locations worldwide",
+        nested: true,
+        values: [true, true, true, true]
+      },
+      {
+        name: "Automatic Routing",
+        nested: true,
+        values: [true, true, true, true]
+      },
+      {
+        name: "Traffic Load Balancing",
+        nested: true,
+        values: [true, true, true, true]
+      },
+      {
+        name: "Workloads",
+        values: [null, null, null, null]
+      },
+      {
+        name: "Workloads",
+        nested: true,
+        values: [
+          "10 included",
+          "20 included, then $0.10 per workload per month",
+          "100 included, then $0.10 per workload per month",
+          "Custom"
+        ]
+      },
+      {
+        name: "Data Transfer",
+        nested: true,
+        values: [
+          "1 TB / month included",
+          "2 TB / month included, then starting at $0.02 per GB",
+          "10 TB / month included, then starting at $0.02 per GB",
+          "Custom"
+        ]
+      },
+      {
+        name: "TLS Encryption",
+        nested: true,
+        values: [true, true, true, true]
+      }
+    ]
+  },
+  {
+    overline: "Build",
+    title: "Azion Applications",
+    description: "Empowering developers to build, run, and scale globally.",
+    features: [
+      {
+        name: "Applications",
+        values: [null, null, null, null]
+      },
+      {
+        name: "Requests",
+        nested: true,
+        values: [
+          "10M / month included",
+          "20M / month included, then starting at $0.90 per 1M",
+          "100M / month included, then starting at $0.90 per 1M",
+          "Custom"
+        ]
+      },
+      {
+        name: "Functions",
+        values: [null, null, null, null]
+      },
+      {
+        name: "Compute Time",
+        nested: true,
+        values: [
+          "5 hours / month included",
+          "10 hours / month included, then $0.18 per hour",
+          "50 hours / month included, then $0.18 per hour",
+          "Custom"
+        ]
+      },
+      {
+        name: "Cache",
+        values: [null, null, null, null]
+      },
+      {
+        name: "Purges",
+        nested: true,
+        values: [
+          "1,000 / month included",
+          "2,000 / month included, then $5 per 1,000 purges",
+          "10,000 / month included, then $5 per 1,000 purges",
+          "Custom"
+        ]
+      }
+    ]
   }
-}
+]
 
-const WithIconsTemplate = () => ({
-  components: { PricingTable },
-  template: `
-    <div class="bg-black p-8">
+export const Default = {
+  render: (args) => ({
+    components: { PricingTable, PricingTableHeader, PricingTableContent },
+    setup() {
+      return { pricingTableHeader, pricingTableContent }
+    },
+    template: `
       <PricingTable>
-        <div class="col-span-1 text-white font-bold p-4">Features</div>
-        <div class="col-span-1 text-white font-bold p-4 text-center">Starter</div>
-        <div class="col-span-1 text-white font-bold p-4 text-center">Pro</div>
-        <div class="col-span-1 text-white font-bold p-4 text-center">Business</div>
-        <div class="col-span-1 text-white font-bold p-4 text-center">Enterprise</div>
-        
-        <div class="col-span-1 text-neutral-400 p-4">API Access</div>
-        <div class="col-span-1 text-white p-4 text-center">✓</div>
-        <div class="col-span-1 text-white p-4 text-center">✓</div>
-        <div class="col-span-1 text-white p-4 text-center">✓</div>
-        <div class="col-span-1 text-white p-4 text-center">✓</div>
-        
-        <div class="col-span-1 text-neutral-400 p-4">Advanced Analytics</div>
-        <div class="col-span-1 text-neutral-600 p-4 text-center">✗</div>
-        <div class="col-span-1 text-white p-4 text-center">✓</div>
-        <div class="col-span-1 text-white p-4 text-center">✓</div>
-        <div class="col-span-1 text-white p-4 text-center">✓</div>
-        
-        <div class="col-span-1 text-neutral-400 p-4">Custom Integrations</div>
-        <div class="col-span-1 text-neutral-600 p-4 text-center">✗</div>
-        <div class="col-span-1 text-neutral-600 p-4 text-center">✗</div>
-        <div class="col-span-1 text-white p-4 text-center">✓</div>
-        <div class="col-span-1 text-white p-4 text-center">✓</div>
+        <PricingTableHeader :plans="pricingTableHeader" />
+        <PricingTableContent :table="pricingTableContent" />
       </PricingTable>
-    </div>
-  `
-})
-
-export const WithCheckmarks = WithIconsTemplate.bind({})
-WithCheckmarks.parameters = {
-  docs: {
-    description: {
-      story: 'Pricing table using checkmarks and crosses for feature availability.'
-    }
-  }
-}
-
-const DetailedTemplate = () => ({
-  components: { PricingTable },
-  template: `
-    <div class="bg-black p-8">
-      <div class="text-center mb-8">
-        <h2 class="text-white text-3xl font-bold mb-2">Compare Plans</h2>
-        <p class="text-neutral-400">Choose the right plan for your needs</p>
-      </div>
-      <PricingTable>
-        <div class="col-span-1 text-white font-bold p-4 border-b border-neutral-800">Features</div>
-        <div class="col-span-1 text-white font-bold p-4 text-center border-b border-neutral-800">Free</div>
-        <div class="col-span-1 text-white font-bold p-4 text-center border-b border-neutral-800 bg-neutral-900">Pro</div>
-        <div class="col-span-1 text-white font-bold p-4 text-center border-b border-neutral-800">Business</div>
-        <div class="col-span-1 text-white font-bold p-4 text-center border-b border-neutral-800">Enterprise</div>
-        
-        <div class="col-span-5 text-orange-500 font-bold p-4 pt-6 text-sm uppercase tracking-wider">Core Features</div>
-        
-        <div class="col-span-1 text-neutral-300 p-4">Bandwidth</div>
-        <div class="col-span-1 text-white p-4 text-center">100 GB</div>
-        <div class="col-span-1 text-white p-4 text-center bg-neutral-900">1 TB</div>
-        <div class="col-span-1 text-white p-4 text-center">10 TB</div>
-        <div class="col-span-1 text-white p-4 text-center">Unlimited</div>
-        
-        <div class="col-span-1 text-neutral-300 p-4">Edge Locations</div>
-        <div class="col-span-1 text-white p-4 text-center">50+</div>
-        <div class="col-span-1 text-white p-4 text-center bg-neutral-900">150+</div>
-        <div class="col-span-1 text-white p-4 text-center">150+</div>
-        <div class="col-span-1 text-white p-4 text-center">150+</div>
-        
-        <div class="col-span-5 text-orange-500 font-bold p-4 pt-6 text-sm uppercase tracking-wider">Support</div>
-        
-        <div class="col-span-1 text-neutral-300 p-4">Response Time</div>
-        <div class="col-span-1 text-white p-4 text-center">48h</div>
-        <div class="col-span-1 text-white p-4 text-center bg-neutral-900">24h</div>
-        <div class="col-span-1 text-white p-4 text-center">4h</div>
-        <div class="col-span-1 text-white p-4 text-center">1h</div>
-      </PricingTable>
-    </div>
-  `
-})
-
-export const DetailedComparison = DetailedTemplate.bind({})
-DetailedComparison.parameters = {
-  docs: {
-    description: {
-      story: 'Detailed pricing comparison with section headers and highlighted column.'
-    }
-  }
+    `
+  })
 }

@@ -57,6 +57,10 @@ const props = defineProps({
     },
     buttonLabel: String,
     customPrice: String,
+    buttonHidden: {
+        type: Boolean,
+        default: false
+    }
 })
 
 const currentPrice = computed(() => {
