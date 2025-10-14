@@ -1,3 +1,13 @@
+## [1.225.0](https://github.com/aziontech/azion-webkit/compare/v1.224.0...v1.225.0) (2025-10-14)
+
+### Features
+
+* testimonial slide component ([f9b5d45](https://github.com/aziontech/azion-webkit/commit/f9b5d451cdbd186babc11343114ef403da2a8458))
+
+### Bug Fixes
+
+* replace display-1 class with text-7xl for consistent pricing card font size ([2cc2c94](https://github.com/aziontech/azion-webkit/commit/2cc2c94406326ea42b1ab19f0289cc45de3c4384))
+
 ## [1.224.0](https://github.com/aziontech/azion-webkit/compare/v1.223.0...v1.224.0) (2025-10-14)
 
 ### Features
