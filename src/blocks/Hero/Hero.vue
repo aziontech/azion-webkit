@@ -11,10 +11,10 @@
     />
 
     <div class="mx-auto flex flex-col text-center gap-2 md:gap-3 relative z-10">
-      <h1 class="mx-auto max-w-7xl md:display-2 display-1 font-sora leading-tight text-pretty">
+      <h1 class="mx-auto max-w-sm md:max-w-7xl md:display-1 display-2 font-sora leading-tight text-pretty">
         {{ title }}
       </h1>
-      <p class="text-xs lg:text-base mb-3 text-neutral-200 font-sora mx-auto">
+      <p class="text-xs lg:text-base max-w-sm md:max-w-7xl mb-3 text-neutral-200 font-sora mx-auto">
         {{ subtitle }}
       </p>
       <template v-if="limitedButtons.length > 0">
