@@ -1,7 +1,7 @@
 <template>
   <section
     :id="id"
-    class="text-white relative overflow-hidden max-w-[1600px] mx-auto"
+    class="text-white relative overflow-hidden max-w-xxxl mx-auto"
     :class="padding[spacing ?? 'default']"
   >
     <canvas

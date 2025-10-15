@@ -64,6 +64,16 @@ module.exports = {
   important: true,
   darkMode: 'class',
   theme: {
+    screens: {
+      'xxs': '0px',
+      'xs': '360px',
+      'sm': '480px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1200px',
+      'xxl': '1366px',
+      'xxxl': '1600px',
+    },
     extend: {
       fontFamily: {
         'mono': 'Roboto Mono',
@@ -102,6 +112,16 @@ module.exports = {
       },
       width: {
         slide: '300px'
+      },
+      maxWidth: {
+        'xxs': '0px',
+        'xs': '360px',
+        'sm': '480px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1200px',
+        'xxl': '1366px',
+        'xxxl': '1600px',
       },
       animation: {
         fadeIn: 'fadeIn 220ms ease-in-out',
