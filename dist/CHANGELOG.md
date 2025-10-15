@@ -1,3 +1,9 @@
+## [1.226.0](https://github.com/aziontech/azion-webkit/compare/v1.225.0...v1.226.0) (2025-10-15)
+
+### Features
+
+* add animated background with grid dots and lines to Hero component ([083e39e](https://github.com/aziontech/azion-webkit/commit/083e39e09943de310f11919dbb7b38b7a4dbe15a))
+
 ## [1.225.0](https://github.com/aziontech/azion-webkit/compare/v1.224.0...v1.225.0) (2025-10-14)
 
 ### Features
