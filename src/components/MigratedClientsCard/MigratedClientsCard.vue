@@ -1,6 +1,6 @@
 <template>
   <a :href="link" class="flex cursor-pointer">
-    <div class="p-1 border group relative hover:bg-neutral-900 duration-150 transition-colors border-neutral-900 flex before:content-[''] before:bg-white before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-white after:w-1 after:h-1 after:absolute after:bottom-0 after:left-0">
+    <div class="p-1 border group relative w-full hover:bg-neutral-900 duration-150 transition-colors border-neutral-900 flex before:content-[''] before:bg-white before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-white after:w-1 after:h-1 after:absolute after:bottom-0 after:left-0">
       <div class="internal w-full before:content-[''] before:bg-white before:w-1 before:h-1 before:absolute before:bottom-0 before:right-0 after:content-[''] after:bg-white after:w-1 after:h-1 after:absolute after:top-0 after:right-0">
         <div class="flex justify-between w-full">
           <span class="label py-1 absolute left-1 top-1 px-3 bg-neutral-900 font-proto-mono duration-150  group-hover:bg-neutral-100 group-hover:text-neutral-900 text-neutral-100">{{ text }}</span>
