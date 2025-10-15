@@ -26,7 +26,37 @@ export const Default = {
   args: {
     title: 'Build at the Edge',
     subtitle: 'Deploy your applications globally with edge computing',
-    ctaText: 'Get Started',
-    ctaLink: '/signup'
+    buttons: [
+      {
+        label: 'Get Started',
+        href: '/signup',
+        type: 'primary'
+      },
+      {
+        label: 'Learn More',
+        href: '/docs',
+        type: 'secondary'
+      }
+    ]
+  }
+}
+
+export const WithAnimatedBackground = {
+  args: {
+    title: 'Build at the Edge',
+    subtitle: 'Deploy your applications globally with edge computing',
+    animatedBackground: true,
+    buttons: [
+      {
+        label: 'Get Started',
+        href: '/signup',
+        type: 'primary'
+      },
+      {
+        label: 'Learn More',
+        href: '/docs',
+        type: 'secondary'
+      }
+    ]
   }
 }

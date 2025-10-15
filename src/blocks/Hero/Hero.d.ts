@@ -30,6 +30,10 @@ export interface HeroProps {
    * Optional ID for the section element
    */
   id?: string
+  /**
+   * Enable animated background with grid dots and animated lines
+   */
+  animatedBackground?: boolean
 }
 
 export { default } from './Hero.vue'
