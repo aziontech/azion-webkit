@@ -1,7 +1,7 @@
 <template>
   <section
     :id="id"
-    class="text-white relative overflow-hidden"
+    class="text-white relative overflow-hidden max-w-[1600px] mx-auto"
     :class="padding[spacing ?? 'default']"
   >
     <canvas
@@ -21,10 +21,10 @@
         <div class="flex justify-center gap-2 md:gap-5 mt-4 md:mt-0 flex-col items-center md:flex-row">
           <Button
             v-for="button in limitedButtons"
-            :size="'small'"
+            :size="button.size || 'small'"
             :icon="button.icon"
-            :type="'primary'"
-            :theme="'light'"
+            :type="button.type || 'primary'"
+            :theme="button.theme || 'light'"
             v-bind="button"
           />
         </div>
