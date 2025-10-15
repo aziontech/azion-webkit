@@ -1,19 +1,11 @@
 <template>
-  <section class="w-full">
-    <div class="flex w-full gap-4">
+  <section class="w-full max-w-xxl p-2 md:mx-auto">
+    <div class="flex w-full gap-2 flex-col md:flex-row">
       <div class="w-full">
-        <MigratedClientsCard
-          v-bind="firstCard"
-        >
-          <slot name="first-card-content" />
-        </MigratedClientsCard>
+        <MigratedClientsCard v-bind="firstCard" />
       </div>
       <div class="w-full">
-        <MigratedClientsCard
-          v-bind="secondCard"
-        >
-          <slot name="second-card-content" />
-        </MigratedClientsCard>
+        <MigratedClientsCard v-bind="secondCard" />
       </div>
     </div>
   </section>

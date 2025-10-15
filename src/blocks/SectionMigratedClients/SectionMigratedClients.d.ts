@@ -1,8 +1,14 @@
 import { DefineComponent } from 'vue'
 
+export interface Logo {
+  imageSrc: string
+  alt?: string
+  title?: string
+}
+
 export interface ClientCardData {
   text: string
-  logos: Array<any>
+  logos: Logo[]
   link?: string
 }
 

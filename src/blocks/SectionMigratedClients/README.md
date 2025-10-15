@@ -9,17 +9,7 @@ A rebranding section component that displays two `MigratedClientsCard` component
   <SectionMigratedClients
     :first-card="firstCardData"
     :second-card="secondCardData"
-  >
-    <template #first-card-content>
-      <img src="logo1.png" alt="Client 1" />
-      <img src="logo2.png" alt="Client 2" />
-    </template>
-    
-    <template #second-card-content>
-      <img src="logo3.png" alt="Client 3" />
-      <img src="logo4.png" alt="Client 4" />
-    </template>
-  </SectionMigratedClients>
+  />
 </template>
 
 <script setup>
@@ -27,13 +17,19 @@ import SectionMigratedClients from '@/blocks/SectionMigratedClients'
 
 const firstCardData = {
   text: 'Before Migration',
-  logos: [],
+  logos: [
+    { imageSrc: '<svg>...</svg>', alt: 'Logo 1', title: 'Company 1' },
+    { imageSrc: '<svg>...</svg>', alt: 'Logo 2', title: 'Company 2' }
+  ],
   link: '/before'
 }
 
 const secondCardData = {
   text: 'After Migration',
-  logos: [],
+  logos: [
+    { imageSrc: '<svg>...</svg>', alt: 'Logo 3', title: 'Company 3' },
+    { imageSrc: '<svg>...</svg>', alt: 'Logo 4', title: 'Company 4' }
+  ],
   link: '/after'
 }
 </script>
@@ -59,19 +55,11 @@ const secondCardData = {
   - `logos` (Array): Array of logo data
   - `link` (String, optional): URL for the card link
 
-## Slots
-
-### `first-card-content`
-Custom content to be displayed inside the first MigratedClientsCard component.
-
-### `second-card-content`
-Custom content to be displayed inside the second MigratedClientsCard component.
-
 ## Features
 
-- **Responsive Layout:** Uses CSS Grid to display cards side by side on desktop (md breakpoint and above) and stacked on mobile
+- **Responsive Layout:** Uses Flexbox to display cards side by side on desktop (md breakpoint and above) and stacked on mobile
 - **50/50 Split:** Each card occupies exactly 50% of the container width on desktop
-- **Flexible Content:** Supports custom content via slots for each card
+- **Logo Rendering:** Automatically renders logos from the `logos` array using `v-html` for SVG support
 - **Full MigratedClientsCard Features:** Inherits all features from the MigratedClientsCard component including hover effects and styling
 
 ## Styling
