@@ -1,3 +1,9 @@
+## [1.226.1](https://github.com/aziontech/azion-webkit/compare/v1.226.0...v1.226.1) (2025-10-15)
+
+### Bug Fixes
+
+* adjust hero text width and font size for mobile responsiveness ([0c4ad54](https://github.com/aziontech/azion-webkit/commit/0c4ad54fb7c7a9e6baa571952c5e0a9903ba2c33))
+
 ## [1.226.0](https://github.com/aziontech/azion-webkit/compare/v1.225.0...v1.226.0) (2025-10-15)
 
 ### Features
