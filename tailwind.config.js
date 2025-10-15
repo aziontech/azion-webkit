@@ -78,22 +78,8 @@ module.exports = {
       fontFamily: {
         'mono': 'Roboto Mono',
       },
-      borderColor: {
-        header: '#3e3e3e',
-        'header-hover': '#F3652B'
-      },
       colors: {
-        header: '#171717',
-        'header-input': '#292929',
-        'header-button-enabled': '#ffffff32',
-        'header-button-hover': 'rgba(244, 244, 244, 0.04)',
-        'header-avatar': '#363636',
-        footer: '#1e1e1e',
         ...primitiveColors
-      },
-      textColor: {
-        header: '#b5b5b5',
-        footer: '#CCCCCC'
       },
       container: {
         padding: {
