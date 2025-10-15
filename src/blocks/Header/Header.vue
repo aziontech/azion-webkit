@@ -1,6 +1,6 @@
 <template>
   <header
-    class="bg-neutral-950 w-full max-w-[1600px] mx-auto flex items-center h-18 xl:h-19 text-white py-4 sticky top-0 z-50 font-sora px-6"
+    class="bg-neutral-950 w-full max-w-xxxl mx-auto flex items-center h-18 xl:h-19 text-white py-4 sticky top-0 z-50 font-sora px-6"
   >
     <div class="w-full h-8 flex justify-between items-center relative">
       <div class="flex gap-4 items-center">

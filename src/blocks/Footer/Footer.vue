@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="bg-neutral-950 ">
-      <div class="py-8 max-w-[1600px] gap-14 flex items-center px-6 mx-auto justify-between lg:flex-nowrap flex-wrap">
+      <div class="py-8 max-w-xxxl gap-14 flex items-center px-6 mx-auto justify-between lg:flex-nowrap flex-wrap">
         <div class="w-full lg:w-1/2">
             <slot name="status" ></slot>
           </div>
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="bg-[#CEC9C9]">
-      <div class="py-3 flex flex-col gap-9 px-6 max-w-[1600px] mx-auto">
+      <div class="py-3 flex flex-col gap-9 px-6 max-w-xxxl mx-auto">
       <div class="flex flex-col box-border gap-1 lg:flex-row justify-between w-full pt-10">
         <div class="flex justify-start w-full lg:w-1/3 flex-col ">
           <span class="text-black font-proto-mono text-xs border-b border-black pb-2 mb-4">
@@ -62,12 +62,12 @@
         </div>
       </div>
     </div>
-    <div class="pt-20 pb-8 px-6 max-w-[1600px] mx-auto">
+    <div class="pt-20 pb-8 px-6 max-w-xxxl mx-auto">
       <slot name="tagline"></slot>
     </div>
     </div>
     <div class="bg-neutral-100">
-      <div class="py-6 px-6 max-w-[1600px] mx-auto flex justify-between flex-wrap">
+      <div class="py-6 px-6 max-w-xxxl mx-auto flex justify-between flex-wrap">
         <div class="flex gap-6 md:gap-4 items-center">
           <slot name="lang"></slot>
           <div class="flex gap-4">

@@ -1,8 +1,8 @@
-import ClientsCard from '../../components/ClientsCard/ClientsCard.vue'
+import MigratedClientsCard from '../../components/MigratedClientsCard/MigratedClientsCard.vue'
 
 export default {
-  title: 'Components/Rebranding/ClientsCard',
-  component: ClientsCard,
+  title: 'Components/Rebranding/MigratedClientsCard',
+  component: MigratedClientsCard,
   tags: ['autodocs']
 }
 

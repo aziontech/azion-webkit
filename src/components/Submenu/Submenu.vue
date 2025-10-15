@@ -2,7 +2,7 @@
   <div
     :id="menuitem.ref"
     :class="[
-      'top-[4rem] group-hover:top-[3.5rem] transition-all duration-350 ease-in-out invisible opacity-1 left-0 fixed w-full flex-row rounded-md right-0 justify-start max-w-[1600px] mx-auto 3xl:max-w-[1600px] group-hover:delay-100 3xl:left-1/2 transform 3xl:-translate-x-1/2 z-50 lg:flex'
+      'top-[4rem] group-hover:top-[3.5rem] transition-all duration-350 ease-in-out invisible opacity-1 left-0 fixed w-full flex-row rounded-md right-0 justify-start max-w-xxxl mx-auto 3xl:max-w-xxxl group-hover:delay-100 3xl:left-1/2 transform 3xl:-translate-x-1/2 z-50 lg:flex'
     ]"
   >
     <div
