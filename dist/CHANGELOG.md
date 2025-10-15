@@ -1,3 +1,15 @@
+## [1.227.0](https://github.com/aziontech/azion-webkit/compare/v1.226.1...v1.227.0) (2025-10-15)
+
+### Features
+
+* add new max-width pattern ([0537fc8](https://github.com/aziontech/azion-webkit/commit/0537fc8dc5c1b3da3f6d7062221eba5bd05c180d))
+* add new section MigratedClients ([354213d](https://github.com/aziontech/azion-webkit/commit/354213d2c01d7e3de5d563da7a9641331b70bd1d))
+* add new tokens ([1349013](https://github.com/aziontech/azion-webkit/commit/1349013f8553ddbe72986ce87592e1ff3f843ddc))
+
+### Bug Fixes
+
+* adjust hero max width ([d291cc2](https://github.com/aziontech/azion-webkit/commit/d291cc2b2308fbf8de5ba069fc2293be04a690e3))
+
 ## [1.226.1](https://github.com/aziontech/azion-webkit/compare/v1.226.0...v1.226.1) (2025-10-15)
 
 ### Bug Fixes
