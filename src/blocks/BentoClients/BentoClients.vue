@@ -45,7 +45,7 @@
   const layoutTypes = [
     { type: 'showcase', class: '' },
     { type: 'profile', class: 'hidden lg:flex' },
-    { type: 'logo', class: 'hidden lg:flex' },
+    { type: 'logo', class: 'hidden md:flex' },
     { type: 'profile', class: '' },
     { type: 'showcase', class: '' },
     { type: 'empty', class: 'hidden lg:flex' },
