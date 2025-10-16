@@ -64,26 +64,22 @@ module.exports = {
   important: true,
   darkMode: 'class',
   theme: {
+    screens: {
+      'xxs': '0px',
+      'xs': '360px',
+      'sm': '480px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1200px',
+      'xxl': '1366px',
+      'xxxl': '1600px',
+    },
     extend: {
       fontFamily: {
         'mono': 'Roboto Mono',
       },
-      borderColor: {
-        header: '#3e3e3e',
-        'header-hover': '#F3652B'
-      },
       colors: {
-        header: '#171717',
-        'header-input': '#292929',
-        'header-button-enabled': '#ffffff32',
-        'header-button-hover': 'rgba(244, 244, 244, 0.04)',
-        'header-avatar': '#363636',
-        footer: '#1e1e1e',
         ...primitiveColors
-      },
-      textColor: {
-        header: '#b5b5b5',
-        footer: '#CCCCCC'
       },
       container: {
         padding: {
@@ -102,6 +98,16 @@ module.exports = {
       },
       width: {
         slide: '300px'
+      },
+      maxWidth: {
+        'xxs': '0px',
+        'xs': '360px',
+        'sm': '480px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1200px',
+        'xxl': '1366px',
+        'xxxl': '1600px',
       },
       animation: {
         fadeIn: 'fadeIn 220ms ease-in-out',

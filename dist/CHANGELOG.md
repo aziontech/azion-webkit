@@ -1,3 +1,57 @@
+## [1.230.3](https://github.com/aziontech/azion-webkit/compare/v1.230.2...v1.230.3) (2025-10-16)
+
+### Bug Fixes
+
+* adjust components semantics ([d60c6f5](https://github.com/aziontech/azion-webkit/commit/d60c6f5067c1dcd0a9bf3b4c95819d42c9fe5410))
+
+## [1.230.2](https://github.com/aziontech/azion-webkit/compare/v1.230.1...v1.230.2) (2025-10-16)
+
+### Bug Fixes
+
+* remove unsused function ([f148944](https://github.com/aziontech/azion-webkit/commit/f1489442c9edbde88ecc363d99e3071118640e61))
+
+## [1.230.1](https://github.com/aziontech/azion-webkit/compare/v1.230.0...v1.230.1) (2025-10-16)
+
+### Bug Fixes
+
+* replace inline SVG logos with optimized image elements and lazy loading ([aeb0748](https://github.com/aziontech/azion-webkit/commit/aeb0748b14293f8233d70f44f16152724f262913))
+
+## [1.230.0](https://github.com/aziontech/azion-webkit/compare/v1.229.1...v1.230.0) (2025-10-16)
+
+### Features
+
+* extract Quote component from TestimonialSlide and rename to SectionQuoteCarousel ([10a6d9e](https://github.com/aziontech/azion-webkit/commit/10a6d9e82dccdb809e157fc9941909aea0374243))
+
+## [1.229.1](https://github.com/aziontech/azion-webkit/compare/v1.229.0...v1.229.1) (2025-10-16)
+
+### Bug Fixes
+
+* update MigratedClientsCard import path to use relative path ([2902d14](https://github.com/aziontech/azion-webkit/commit/2902d148f6e07ef3c58c0efe2659d2929f1f95d9))
+
+## [1.229.0](https://github.com/aziontech/azion-webkit/compare/v1.228.0...v1.229.0) (2025-10-16)
+
+### Features
+
+* add package.json for MigratedClientsCard component ([caf827d](https://github.com/aziontech/azion-webkit/commit/caf827deda0f3de30492f8588b01d96ca675d0dc))
+
+## [1.228.0](https://github.com/aziontech/azion-webkit/compare/v1.227.0...v1.228.0) (2025-10-16)
+
+### Features
+
+* add dark background and mock data to migrated clients stories ([d064910](https://github.com/aziontech/azion-webkit/commit/d0649101c03cbcba92f872bc5fc1903e93efaa28))
+
+## [1.227.0](https://github.com/aziontech/azion-webkit/compare/v1.226.1...v1.227.0) (2025-10-15)
+
+### Features
+
+* add new max-width pattern ([0537fc8](https://github.com/aziontech/azion-webkit/commit/0537fc8dc5c1b3da3f6d7062221eba5bd05c180d))
+* add new section MigratedClients ([354213d](https://github.com/aziontech/azion-webkit/commit/354213d2c01d7e3de5d563da7a9641331b70bd1d))
+* add new tokens ([1349013](https://github.com/aziontech/azion-webkit/commit/1349013f8553ddbe72986ce87592e1ff3f843ddc))
+
+### Bug Fixes
+
+* adjust hero max width ([d291cc2](https://github.com/aziontech/azion-webkit/commit/d291cc2b2308fbf8de5ba069fc2293be04a690e3))
+
 ## [1.226.1](https://github.com/aziontech/azion-webkit/compare/v1.226.0...v1.226.1) (2025-10-15)
 
 ### Bug Fixes

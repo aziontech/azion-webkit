@@ -1,7 +1,7 @@
 <template>
   <section
     :id="id"
-    class="text-white relative overflow-hidden"
+    class="text-white relative overflow-hidden max-w-xxxl mx-auto"
     :class="padding[spacing ?? 'default']"
   >
     <canvas
@@ -11,6 +11,12 @@
     />
 
     <div class="mx-auto flex flex-col text-center gap-2 md:gap-3 relative z-10">
+      <p
+        v-if="overline"
+        class="text-orange-500 font-proto-mono text-base tracking-tight uppercase mb-1"
+      >
+        {{ overline }}
+      </p>
       <h1 class="mx-auto max-w-sm md:max-w-7xl md:display-1 display-2 font-sora leading-tight text-pretty">
         {{ title }}
       </h1>
@@ -21,10 +27,10 @@
         <div class="flex justify-center gap-2 md:gap-5 mt-4 md:mt-0 flex-col items-center md:flex-row">
           <Button
             v-for="button in limitedButtons"
-            :size="'small'"
+            :size="button.size || 'small'"
             :icon="button.icon"
-            :type="'primary'"
-            :theme="'light'"
+            :type="button.type || 'primary'"
+            :theme="button.theme || 'light'"
             v-bind="button"
           />
         </div>
@@ -48,6 +54,7 @@
   }
 
   interface HeroProps {
+    overline?: string
     title?: string
     subtitle?: string
     buttons?: HeroButtonProps[]

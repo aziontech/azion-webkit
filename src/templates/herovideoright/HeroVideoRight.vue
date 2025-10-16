@@ -10,6 +10,14 @@
     :id="id"
     :margin="margin"
   >
+    <template #actions>
+      <LinkButton
+        v-for="(button, index) in buttons"
+        :key="index"
+        v-bind="button"
+      />
+    </template>
+
     <template #main>
       <BaseModal
         backgroundColor="outlined"
@@ -125,6 +133,7 @@
 <script setup>
   import HeroBlockBase from '../herobase'
   import BaseModal from '../basemodal'
+  import LinkButton from '../linkbutton'
   import CardBaseClickable from '../cardbaseclickable'
   import CardTitle from '../cardtitle'
   import CardDescription from '../carddescription'
@@ -155,6 +164,10 @@
     descriptionRawHtml: {
       type: String,
       default: () => ''
+    },
+    buttons: {
+      type: Array,
+      default: () => []
     },
     video: {
       type: Object,

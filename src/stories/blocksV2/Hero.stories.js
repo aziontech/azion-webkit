@@ -24,8 +24,30 @@ export default {
 
 export const Default = {
   args: {
+    overline: 'functions',
+    title: 'Build Smarter, Faster, and Closer to Your Users',
+    subtitle: 'Empower your applications with Azion Functions: serverless computing at the edge for unmatched performance, scalability, and innovation.',
+    buttons: [
+      {
+        label: '> Start Now',
+        href: '/signup',
+        type: 'primary'
+      },
+      {
+        label: '> Learn More',
+        href: '/docs',
+        type: 'secondary'
+      }
+    ]
+  }
+}
+
+export const WithAnimatedBackground = {
+  args: {
+    overline: 'edge computing',
     title: 'Build at the Edge',
     subtitle: 'Deploy your applications globally with edge computing',
+    animatedBackground: true,
     buttons: [
       {
         label: 'Get Started',
@@ -41,21 +63,15 @@ export const Default = {
   }
 }
 
-export const WithAnimatedBackground = {
+export const WithoutOverline = {
   args: {
-    title: 'Build at the Edge',
-    subtitle: 'Deploy your applications globally with edge computing',
-    animatedBackground: true,
+    title: 'Simple Hero Without Overline',
+    subtitle: 'This example shows the hero without the overline text',
     buttons: [
       {
         label: 'Get Started',
         href: '/signup',
         type: 'primary'
-      },
-      {
-        label: 'Learn More',
-        href: '/docs',
-        type: 'secondary'
       }
     ]
   }
