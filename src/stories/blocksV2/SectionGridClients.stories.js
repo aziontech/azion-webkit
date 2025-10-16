@@ -1,8 +1,8 @@
-import BentoClients from '../../blocks/BentoClients/BentoClients.vue'
+import SectionGridClients from '../../blocks/SectionGridClients/SectionGridClients.vue'
 
 export default {
-  title: 'Blocks/Rebranding/BentoClients',
-  component: BentoClients,
+  title: 'Blocks/Rebranding/SectionGridClients',
+  component: SectionGridClients,
   tags: ['autodocs'],
   argTypes: {
     showcaseCards: {
@@ -41,13 +41,13 @@ export default {
 }
 
 const Template = (args) => ({
-  components: { BentoClients },
+  components: { SectionGridClients },
   setup() {
     return { args }
   },
   template: `
   <div class="bg-black p-6">
-    <BentoClients v-bind="args" />
+    <SectionGridClients v-bind="args" />
   </div>
   `
 })

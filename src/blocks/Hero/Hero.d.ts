@@ -10,6 +10,10 @@ export interface HeroButtonProps {
 
 export interface HeroProps {
   /**
+   * Small text displayed above the title in orange (Proto Mono font)
+   */
+  overline?: string
+  /**
    * The main heading text for the hero section
    */
   title?: string
