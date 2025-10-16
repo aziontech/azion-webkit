@@ -1,3 +1,9 @@
+## [1.229.0](https://github.com/aziontech/azion-webkit/compare/v1.228.0...v1.229.0) (2025-10-16)
+
+### Features
+
+* add package.json for MigratedClientsCard component ([caf827d](https://github.com/aziontech/azion-webkit/commit/caf827deda0f3de30492f8588b01d96ca675d0dc))
+
 ## [1.228.0](https://github.com/aziontech/azion-webkit/compare/v1.227.0...v1.228.0) (2025-10-16)
 
 ### Features
