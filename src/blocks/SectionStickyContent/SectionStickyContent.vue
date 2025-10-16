@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-12 items-start px-12 relative w-full max-w-xxl mx-auto">
+  <section class="flex gap-12 items-start px-12 relative w-full max-w-xxl mx-auto">
     <div
       v-if="title || bullets.length > 0"
       class="flex flex-col gap-5 sticky top-0 shrink-0"
@@ -113,7 +113,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -138,12 +138,12 @@
     },
     height: {
       type: String,
-      default: 'default', // 'default' or 'large'
+      default: 'default',
       validator: (value) => ['default', 'large'].includes(value)
     },
     variant: {
       type: String,
-      default: 'titleBulletsImage', // 'titleBulletsImage', 'titleImage', 'imageOnly'
+      default: 'titleBulletsImage',
       validator: (value) => ['titleBulletsImage', 'titleImage', 'imageOnly'].includes(value)
     }
   })
