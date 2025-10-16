@@ -1,6 +1,6 @@
 <template>
-  <div
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-xxl mx-auto"
   >
     <template
       v-for="(item, index) in layoutTypes"
@@ -13,7 +13,7 @@
         class="min-h-52"
       />
     </template>
-  </div>
+  </section>
 </template>
 
 <script setup>
