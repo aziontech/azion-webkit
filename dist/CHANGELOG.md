@@ -1,3 +1,9 @@
+## [1.229.1](https://github.com/aziontech/azion-webkit/compare/v1.229.0...v1.229.1) (2025-10-16)
+
+### Bug Fixes
+
+* update MigratedClientsCard import path to use relative path ([2902d14](https://github.com/aziontech/azion-webkit/commit/2902d148f6e07ef3c58c0efe2659d2929f1f95d9))
+
 ## [1.229.0](https://github.com/aziontech/azion-webkit/compare/v1.228.0...v1.229.0) (2025-10-16)
 
 ### Features
