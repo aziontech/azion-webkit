@@ -16,4 +16,4 @@ export interface NetworkListItem {
     overlines?: string[]
   }
   
-  export { default } from './NetworkList.vue'
+  export { default } from './SectionNetwork.vue'
