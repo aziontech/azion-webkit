@@ -3,7 +3,7 @@
     class="px-8 py-4 rounded bg-cover bg-center bg-no-repeat h-full flex items-end"
     :style="{ backgroundImage: backgroundImage }"
   >
-    <p class="text-xl font-sora">{{ title }}</p>
+    <p class="text-xl font-sora text-white">{{ title }}</p>
   </div>
 </template>
 
@@ -21,6 +21,7 @@
   })
 
   const backgroundImage = computed(() => {
-    return `url(${props.backgroundImage})`
+    const overlay = 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45))'
+    return `${overlay}, url(${props.backgroundImage})`
   })
 </script>
