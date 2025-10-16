@@ -1,3 +1,9 @@
+## [1.230.3](https://github.com/aziontech/azion-webkit/compare/v1.230.2...v1.230.3) (2025-10-16)
+
+### Bug Fixes
+
+* adjust components semantics ([d60c6f5](https://github.com/aziontech/azion-webkit/commit/d60c6f5067c1dcd0a9bf3b4c95819d42c9fe5410))
+
 ## [1.230.2](https://github.com/aziontech/azion-webkit/compare/v1.230.1...v1.230.2) (2025-10-16)
 
 ### Bug Fixes
