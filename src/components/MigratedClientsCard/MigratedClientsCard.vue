@@ -12,11 +12,15 @@
             :key="index"
             class="flex items-center justify-center"
           >
-            <span
+            <img
               v-if="logo.imageSrc"
-              class="*:h-4 md:*:h-12 max-h-12 flex justify-center"
-              v-html="logo.imageSrc"
-            ></span>
+              :src="`${logo.imageSrc}?ims=x60`"
+              loading="lazy"
+              class="h-4 md:h-16 max-h-12"
+              width="auto"
+              height="auto"
+              :alt="logo.alt || text"
+            />
           </div>
         </div>
       </div>
