@@ -1,3 +1,9 @@
+## [1.228.0](https://github.com/aziontech/azion-webkit/compare/v1.227.0...v1.228.0) (2025-10-16)
+
+### Features
+
+* add dark background and mock data to migrated clients stories ([d064910](https://github.com/aziontech/azion-webkit/commit/d0649101c03cbcba92f872bc5fc1903e93efaa28))
+
 ## [1.227.0](https://github.com/aziontech/azion-webkit/compare/v1.226.1...v1.227.0) (2025-10-15)
 
 ### Features
