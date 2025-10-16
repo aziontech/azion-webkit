@@ -1,3 +1,9 @@
+## [1.230.0](https://github.com/aziontech/azion-webkit/compare/v1.229.1...v1.230.0) (2025-10-16)
+
+### Features
+
+* extract Quote component from TestimonialSlide and rename to SectionQuoteCarousel ([10a6d9e](https://github.com/aziontech/azion-webkit/commit/10a6d9e82dccdb809e157fc9941909aea0374243))
+
 ## [1.229.1](https://github.com/aziontech/azion-webkit/compare/v1.229.0...v1.229.1) (2025-10-16)
 
 ### Bug Fixes
