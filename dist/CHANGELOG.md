@@ -1,3 +1,9 @@
+## [1.230.1](https://github.com/aziontech/azion-webkit/compare/v1.230.0...v1.230.1) (2025-10-16)
+
+### Bug Fixes
+
+* replace inline SVG logos with optimized image elements and lazy loading ([aeb0748](https://github.com/aziontech/azion-webkit/commit/aeb0748b14293f8233d70f44f16152724f262913))
+
 ## [1.230.0](https://github.com/aziontech/azion-webkit/compare/v1.229.1...v1.230.0) (2025-10-16)
 
 ### Features
