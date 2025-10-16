@@ -147,8 +147,4 @@
       validator: (value) => ['titleBulletsImage', 'titleImage', 'imageOnly'].includes(value)
     }
   })
-
-  const fullWidthImage = computed(() => {
-    return props.variant === 'imageOnly'
-  })
 </script>
