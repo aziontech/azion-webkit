@@ -11,6 +11,12 @@
     />
 
     <div class="mx-auto flex flex-col text-center gap-2 md:gap-3 relative z-10">
+      <p
+        v-if="overline"
+        class="text-orange-500 font-proto-mono text-base tracking-tight uppercase mb-1"
+      >
+        {{ overline }}
+      </p>
       <h1 class="mx-auto max-w-sm md:max-w-7xl md:display-1 display-2 font-sora leading-tight text-pretty">
         {{ title }}
       </h1>
@@ -48,6 +54,7 @@
   }
 
   interface HeroProps {
+    overline?: string
     title?: string
     subtitle?: string
     buttons?: HeroButtonProps[]
