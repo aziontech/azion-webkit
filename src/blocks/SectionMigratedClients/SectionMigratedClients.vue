@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import MigratedClientsCard from '@/components/MigratedClientsCard'
+import MigratedClientsCard from '../../components/MigratedClientsCard'
 
 const props = defineProps({
   firstCard: {
