@@ -1,18 +1,18 @@
 <template>
   <section
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-xxl mx-auto"
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto max-w-xxl lg:grid-rows-4 gap-3"
   >
     <template
       v-for="(item, index) in layoutTypes"
       :key="index"
     >
-      <component
-        :is="componentsMapping[item.type]"
-        v-bind="resolvedCards[index] || {}"
-        :class="item.class"
-        class="min-h-52"
-      />
-    </template>
+        <component
+          :is="componentsMapping[item.type]"
+          v-bind="resolvedCards[index] || {}"
+          :class="item.class"
+          class="min-h-52"
+        />
+      </template>
   </section>
 </template>
 
@@ -40,9 +40,7 @@
   const layoutTypes = [
     { type: 'showcase', class: '' },
     { type: 'profile', class: 'hidden lg:flex' },
-    { type: 'logo', class: 'hidden lg:flex' },
     { type: 'logo', class: 'hidden md:flex' },
-    { type: 'showcase', class: 'hidden lg:flex' },
     { type: 'profile', class: '' },
     { type: 'showcase', class: '' },
     { type: 'logo', class: '' },
