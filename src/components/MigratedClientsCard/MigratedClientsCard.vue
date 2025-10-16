@@ -6,7 +6,7 @@
           <span class="md:text-base text-sm label py-1 absolute left-1 top-1 px-3 bg-neutral-900 font-proto-mono duration-150  group-hover:bg-neutral-100 group-hover:text-neutral-900 text-neutral-100">{{ text }}</span>
           <span class="label py-1 absolute right-1 top-1 px-3 bg-neutral-900 transition duration-150 font-proto-mono group-hover:bg-neutral-100 group-hover:text-neutral-900 opacity-0 group-hover:opacity-100">+</span>
         </div>
-        <div class="flex md:justify-center justify-between gap-3 md:gap-24 p-4 md:p-8 pt-12 md:pt-16 h-full w-full flex-wrap items-center">
+        <div class="flex md:justify-center justify-between gap-3 md:gap-24 p-4 md:p-8 pt-12 md:pt-16 h-full w-full items-center">
           <div
             v-for="(logo, index) in logos"
             :key="index"
