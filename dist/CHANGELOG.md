@@ -1,3 +1,9 @@
+## [1.230.2](https://github.com/aziontech/azion-webkit/compare/v1.230.1...v1.230.2) (2025-10-16)
+
+### Bug Fixes
+
+* remove unsused function ([f148944](https://github.com/aziontech/azion-webkit/commit/f1489442c9edbde88ecc363d99e3071118640e61))
+
 ## [1.230.1](https://github.com/aziontech/azion-webkit/compare/v1.230.0...v1.230.1) (2025-10-16)
 
 ### Bug Fixes
