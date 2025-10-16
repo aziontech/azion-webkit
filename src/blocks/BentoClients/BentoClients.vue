@@ -1,6 +1,6 @@
   <template>
   <div
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-3 xl:grid-cols-4 xl:grid-rows-4 gap-3"
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-4 gap-3"
   >
     <template
       v-for="(item, index) in layoutTypes"
@@ -45,14 +45,11 @@
   const layoutTypes = [
     { type: 'showcase', class: '' },
     { type: 'profile', class: 'hidden lg:flex' },
-    { type: 'logo', class: 'hidden xl:flex' },
-    { type: 'logo', class: 'hidden lg:flex' },
-    { type: 'showcase', class: 'hidden xl:flex' },
+    { type: 'logo', class: 'hidden md:flex' },
     { type: 'profile', class: '' },
     { type: 'showcase', class: '' },
-    { type: 'empty', class: 'hidden xl:flex' },
+    { type: 'empty', class: 'hidden lg:flex' },
     { type: 'logo', class: '' },
-    { type: 'logo', class: 'hidden md:flex' },
     { type: 'logo', class: 'hidden md:flex' }
   ]
 

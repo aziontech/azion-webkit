@@ -76,15 +76,6 @@ const showcaseCards = [
     size: 'small',
     type: 'image',
     backgroundImage: 'https://allprodad.com/wp-content/uploads/2021/03/05-12-21-happy-people.jpg'
-  },
-  {
-    title:
-      "Explore how Dafiti boosts e-commerce speed with Azion's Edge technology, surpassing legacy solutions and enhancing user experience across South America.",
-    action: 'learn more',
-    href: '#',
-    logo: { src: logoSvg, alt: 'Dafiti Logo' },
-    size: 'small',
-    type: 'white'
   }
 ]
 
@@ -100,10 +91,8 @@ const personaCards = [
 ]
 
 const logoCards = [
-  { logo: { src: logoSvg, alt: 'Magalu Logo' } },
   { type: 'white', logo: { src: logoSvg, alt: 'telefonica Logo' } },
   { logo: { src: logoSvg, alt: 'Prime Video Logo' } },
-  { logo: { src: logoSvg, alt: 'Crefisa Logo' } },
   { type: 'orange', logo: { src: logoSvg, alt: 'AFG Global Fashion Group Logo' } }
 ]
 

@@ -1,12 +1,12 @@
 <template>
   <div
-    class="p-6 rounded"
+    class="p-6 rounded group"
     :class="[
       cardBackgroundColor[type],
       size == 'small' ? 'md:row-span-2' : 'col-span-1 md:col-span-2 lg:row-span-2',
       backgroundImage ? 'bg-cover bg-center bg-no-repeat' : ''
     ]"
-    :style="backgroundImage ?? ''"
+    :style="backgroundImage ? computedBackgroundImage : ''"
   >
     <a
       :href="href"
@@ -26,7 +26,7 @@
         >
           {{ title }}
         </p>
-        <p class="font-proto-mono uppercase text-xs leading-1 flex items-center gap-2">
+        <p class="font-proto-mono uppercase text-xs leading-1 flex items-center gap-2" :class="actionTextColor[type]">
           <i class="pi pi-angle-right text-xs"></i> {{ action }}
         </p>
       </div>
@@ -74,7 +74,7 @@
   })
 
   const cardBackgroundColor = {
-    default: 'bg-violet-500',
+    default: 'bg-violet-500 hover:bg-violet-400 transition-colors',
     white: 'bg-white',
     image: 'bg-transparent'
   }
@@ -85,7 +85,14 @@
     image: 'text-white'
   }
 
-  const backgroundImage = computed(() => {
-    return `background-image: url(${props.backgroundImage})`
+  const actionTextColor = {
+    default: 'group-hover:text-violet-900',
+    white: 'group-hover:text-gray-950',
+    image: 'group-hover:text-gray-200'
+  }
+
+  const computedBackgroundImage = computed(() => {
+    const overlay = 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45))'
+    return `background-image: ${overlay}, url(${props.backgroundImage})`
   })
 </script>
