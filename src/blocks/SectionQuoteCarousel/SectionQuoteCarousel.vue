@@ -17,14 +17,11 @@
       v-for="(item, index) in items"
       :key="index"
     >
-      <div class="flex flex-col gap-5">
-        <div
-          class="text-white"
-          v-html="item.logo"
-        />
-        <h3 class="text-xl font-sora text-gray-200">{{ item.testimonial }}</h3>
-        <p class="text-sm font-sora text-gray-500">{{ item.source }}</p>
-      </div>
+      <Quote
+        :logo="item.logo"
+        :testimonial="item.testimonial"
+        :source="item.source"
+      />
     </swiper-slide>
     <div class="swiper-prev flex flex-row gap-2 mt-16 w-full">
       <div
@@ -45,6 +42,7 @@
   import { Swiper, SwiperSlide } from 'swiper/vue'
   import { Controller, Navigation } from 'swiper/modules'
   import { ref } from 'vue'
+  import Quote from '../../components/Quote/Quote.vue'
   import 'swiper/css'
 
   const modules = [Controller, Navigation]
