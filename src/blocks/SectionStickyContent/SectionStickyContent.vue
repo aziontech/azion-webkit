@@ -1,25 +1,22 @@
 <template>
-  <div class="flex gap-12 items-start px-12 relative w-full">
-    <!-- Left Side: Sticky Title and Bullets -->
+  <div class="flex gap-12 items-start px-12 relative w-full max-w-xxl mx-auto">
     <div
       v-if="title || bullets.length > 0"
       class="flex flex-col gap-5 sticky top-0 shrink-0"
       :class="[
-        hasLeftContent ? 'w-[335px] pt-[180px] pb-0' : 'w-[509px] pt-[180px] pb-0',
-        bullets.length > 0 ? 'h-auto' : 'h-[305px]'
+        variant === 'titleBulletsImage' ? 'w-[335px] pb-0' : 'w-[509px] pb-0',
+        bullets.length > 0 && variant === 'titleBulletsImage' ? 'h-auto' : 'h-[305px]'
       ]"
     >
-      <!-- Title -->
       <h2
         v-if="title"
-        class="text-[28px] font-sora font-normal leading-[1.24] tracking-tight text-gray-200 w-full"
+        class="display-2 font-normal tracking-tight text-gray-200 w-full"
       >
         {{ title }}
       </h2>
 
-      <!-- Bullets (only shown in layout with left content) -->
       <div
-        v-if="bullets.length > 0 && hasLeftContent"
+        v-if="bullets.length > 0 && variant === 'titleBulletsImage'"
         class="flex flex-col gap-3 w-full max-w-[392px] py-3 pr-3"
       >
         <template
@@ -27,7 +24,7 @@
           :key="index"
         >
           <p
-            class="text-xl font-sora font-normal leading-[1.4] tracking-tight text-neutral-400"
+            class="display-3 font-sora font-normal leading-[1.4] tracking-tight text-neutral-400"
             v-html="bullet"
           />
           <div
@@ -38,17 +35,15 @@
       </div>
     </div>
 
-    <!-- Right Side: Content -->
     <div
       class="flex flex-col gap-6 shrink-0 relative"
       :class="[
-        fullWidthImage ? 'w-full pt-[170px]' : 'flex-1 pt-[170px] pl-12',
-        bullets.length > 0 && !hasLeftContent ? 'gap-16' : 'gap-6'
+        fullWidthImage ? 'w-full' : 'flex-1 pl-12',
+        bullets.length > 0 && variant === 'titleImage' ? 'gap-16' : 'gap-6'
       ]"
     >
-      <!-- Bullets in right side (when no left content) -->
       <div
-        v-if="bullets.length > 0 && !hasLeftContent"
+        v-if="bullets.length > 0 && variant === 'titleImage'"
         class="flex flex-col gap-3 w-full"
       >
         <template
@@ -56,7 +51,7 @@
           :key="index"
         >
           <p
-            class="text-xl font-sora font-normal leading-[1.4] tracking-tight text-neutral-400"
+            class="display-3 font-sora font-normal leading-[1.4] tracking-tight text-neutral-400"
             v-html="bullet"
           />
           <div
@@ -66,32 +61,26 @@
         </template>
       </div>
 
-      <!-- Image Box -->
       <div
         class="border-2 border-neutral-900 relative w-full"
         :class="height === 'large' ? 'h-[726px]' : 'h-[378px]'"
       >
         <div class="overflow-hidden relative w-full h-full">
-          <!-- Corner dots (bottom) -->
           <div class="absolute bottom-0 left-0 w-full flex justify-between h-1 z-10">
             <div class="w-1 h-1 bg-neutral-300" />
             <div class="w-1 h-1 bg-neutral-300" />
           </div>
 
-          <!-- Image content -->
           <div class="absolute inset-0 flex items-start justify-center overflow-hidden">
             <div class="flex-1 relative h-full min-h-0 min-w-0">
-              <!-- Grid texture background -->
               <div class="absolute -left-0.5 -top-0.5 w-full overflow-hidden flex flex-col items-center">
                 <div class="h-[2000px] w-full relative bg-black">
-                  <!-- Horizontal lines -->
                   <div
                     v-for="i in 53"
                     :key="`h-${i}`"
                     class="absolute left-0 w-[1976px] h-0.5 bg-neutral-900"
                     :style="{ top: `${(i - 1) * 38}px` }"
                   />
-                  <!-- Vertical lines -->
                   <div
                     v-for="i in 53"
                     :key="`v-${i}`"
@@ -101,9 +90,7 @@
                 </div>
               </div>
 
-              <!-- Main image with gradient -->
-              <div
-                v-if="image"
+              <div v-if="image"
                 class="absolute left-1/2 -translate-x-1/2 -top-1 border border-neutral-800 rounded-lg overflow-hidden"
                 :class="height === 'large' ? 'h-[379px] w-[641px]' : 'h-[379px] w-[641px]'"
                 :style="{
@@ -119,7 +106,6 @@
             </div>
           </div>
 
-          <!-- Corner dots (top) -->
           <div class="absolute top-0 left-0 w-full flex justify-between h-1 z-10">
             <div class="w-1 h-1 bg-neutral-300" />
             <div class="w-1 h-1 bg-neutral-300" />
@@ -160,10 +146,6 @@
       default: 'titleBulletsImage', // 'titleBulletsImage', 'titleImage', 'imageOnly'
       validator: (value) => ['titleBulletsImage', 'titleImage', 'imageOnly'].includes(value)
     }
-  })
-
-  const hasLeftContent = computed(() => {
-    return props.variant === 'titleBulletsImage' || props.variant === 'titleImage'
   })
 
   const fullWidthImage = computed(() => {
