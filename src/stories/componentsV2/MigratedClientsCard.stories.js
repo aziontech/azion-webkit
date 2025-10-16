@@ -1,18 +1,20 @@
 import MigratedClientsCard from '../../components/MigratedClientsCard/MigratedClientsCard.vue'
+import { migratedClientsData } from '../../mock/migratedClients'
 
 export default {
   title: 'Components/Rebranding/MigratedClientsCard',
   component: MigratedClientsCard,
-  tags: ['autodocs']
+  tags: ['autodocs'],
+  parameters: {
+    backgrounds: {
+      default: 'dark',
+      values: [
+        { name: 'dark', value: '#0a0a0a' }
+      ]
+    }
+  }
 }
 
 export const Default = {
-  args: {
-    text: 'Trusted by leading companies',
-    logos: [
-      { src: '/logo1.svg', alt: 'Company 1' },
-      { src: '/logo2.svg', alt: 'Company 2' },
-      { src: '/logo3.svg', alt: 'Company 3' }
-    ]
-  }
+  args: migratedClientsData.firstCard
 }
