@@ -16,7 +16,7 @@
               v-if="logo.imageSrc"
               :src="`${logo.imageSrc}?ims=x60`"
               loading="lazy"
-              class="h-4 md:h-16 max-h-12"
+              class="h-4 md:h-16 max-h-12 brightness-0 invert"
               width="auto"
               height="auto"
               :alt="logo.alt || text"
