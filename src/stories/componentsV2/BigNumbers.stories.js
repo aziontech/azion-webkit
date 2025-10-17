@@ -24,71 +24,20 @@ export default {
     }
   },
   parameters: {
-    docs: {
-      description: {
-        component: `
-# BigNumbers Component
-
-A carousel component for displaying impressive statistics and metrics with large numbers.
-
-## Features
-- **Swiper Integration**: Smooth horizontal scrolling carousel
-- **Responsive Breakpoints**: Adapts slides per view based on screen size
-- **Icon Support**: PrimeVue icons in circular badges
-- **Large Typography**: 80px numbers for maximum impact
-- **Scrollbar**: Draggable scrollbar for navigation
-- **Grab Cursor**: Interactive cursor feedback
-- **Border Design**: Top border on desktop (md+)
-
-## Responsive Behavior
-- **Mobile**: 1 slide per view
-- **Tablet (768px+)**: 1.5 slides per view
-- **Desktop (1280px+)**: 2.5 slides per view
-- **Large (1440px+)**: 3.15 slides per view
-
-## Item Structure
-Each item requires:
-- \`title\`: Large number or stat (e.g., "99%", "1M+")
-- \`description\`: Explanatory text (uppercase, tracking-widest)
-- \`icon\`: PrimeVue icon class (e.g., "pi pi-bolt")
-
-## Usage
-
-\`\`\`vue
-<BigNumbers 
-  :items="[
-    {
-      title: '99.9%',
-      description: 'Uptime Guarantee',
-      icon: 'pi pi-check-circle'
-    },
-    {
-      title: '150+',
-      description: 'Edge Locations',
-      icon: 'pi pi-globe'
-    }
-  ]"
-  justify="center"
-/>
-\`\`\`
-
-## Design Notes
-- Proto Mono font for numbers and descriptions
-- Light text (#EDE8E8) on dark background
-- Orange border (#F3652B) on icon circles
-- Scrollbar: #2B2B2B background, #EDE8E8 drag handle
-- Top border: 2px #2B2B2B on desktop
-- Icon circle: 56px mobile, 64px desktop
-        `
-      }
-    },
+    layout: 'fullscreen',
     backgrounds: {
       default: 'dark',
       values: [
-        { name: 'dark', value: '#000000' }
+        { name: 'dark', value: '#0a0a0a' }
       ]
     }
-  }
+  },
+  decorators: [
+    (story) => ({
+      components: { story },
+      template: '<div class="bg-neutral-950"><story /></div>'
+    })
+  ]
 }
 
 export const Default = {
