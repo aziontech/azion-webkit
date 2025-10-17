@@ -1,3 +1,9 @@
+## [1.230.4](https://github.com/aziontech/azion-webkit/compare/v1.230.3...v1.230.4) (2025-10-17)
+
+### Bug Fixes
+
+* update quote component with inverted logo and neutral color scheme ([758365e](https://github.com/aziontech/azion-webkit/commit/758365e7bb75d905c2196cc2d3965b017c20c319))
+
 ## [1.230.3](https://github.com/aziontech/azion-webkit/compare/v1.230.2...v1.230.3) (2025-10-16)
 
 ### Bug Fixes
