@@ -1,3 +1,9 @@
+## [1.230.5](https://github.com/aziontech/azion-webkit/compare/v1.230.4...v1.230.5) (2025-10-17)
+
+### Bug Fixes
+
+* standardize logo height to max-h-8 across components ([6962baa](https://github.com/aziontech/azion-webkit/commit/6962baa8183a4dab915467289fef2f24a08491ec))
+
 ## [1.230.4](https://github.com/aziontech/azion-webkit/compare/v1.230.3...v1.230.4) (2025-10-17)
 
 ### Bug Fixes
