@@ -1,3 +1,9 @@
+## [1.231.1](https://github.com/aziontech/azion-webkit/compare/v1.231.0...v1.231.1) (2025-10-17)
+
+### Bug Fixes
+
+* adjust spacing and logo dimensions in client cards and carousel sections ([27ba0c1](https://github.com/aziontech/azion-webkit/commit/27ba0c1bd6654fdb1c47d55dcf144504f2264dc3))
+
 ## [1.231.0](https://github.com/aziontech/azion-webkit/compare/v1.230.6...v1.231.0) (2025-10-17)
 
 ### Features
