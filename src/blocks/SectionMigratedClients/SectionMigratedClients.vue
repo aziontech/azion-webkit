@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full max-w-xxl p-2 md:mx-auto">
+  <section class="w-full max-w-xl xxxl:max-w-xxl p-2 mx-auto">
     <div class="flex w-full gap-2 flex-col md:flex-row">
       <div class="w-full">
         <MigratedClientsCard v-bind="firstCard" />

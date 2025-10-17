@@ -3,7 +3,7 @@
     <img
       :src="`${logo}?ims=x60`"
       loading="lazy"
-      class="max-h-8 brightness-0 invert"
+      class="max-h-8 w-fit brightness-0 invert"
       width="auto"
       height="60"
       :alt="source"
