@@ -1,3 +1,9 @@
+## [1.230.6](https://github.com/aziontech/azion-webkit/compare/v1.230.5...v1.230.6) (2025-10-17)
+
+### Bug Fixes
+
+* adjust max-width breakpoints and add responsive width classes across multiple components ([5f1c139](https://github.com/aziontech/azion-webkit/commit/5f1c139cb44570edad84134a582daf2f516e6926))
+
 ## [1.230.5](https://github.com/aziontech/azion-webkit/compare/v1.230.4...v1.230.5) (2025-10-17)
 
 ### Bug Fixes
