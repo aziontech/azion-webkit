@@ -1,3 +1,9 @@
+## [1.231.2](https://github.com/aziontech/azion-webkit/compare/v1.231.1...v1.231.2) (2025-10-17)
+
+### Bug Fixes
+
+* standardize section padding and update dark background color to neutral-950 ([efd0659](https://github.com/aziontech/azion-webkit/commit/efd06595c7308c4da7dee4997177ff16eefa69b5))
+
 ## [1.231.1](https://github.com/aziontech/azion-webkit/compare/v1.231.0...v1.231.1) (2025-10-17)
 
 ### Bug Fixes
