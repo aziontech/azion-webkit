@@ -1,3 +1,13 @@
+## [1.231.0](https://github.com/aziontech/azion-webkit/compare/v1.230.6...v1.231.0) (2025-10-17)
+
+### Features
+
+* section network ([54af289](https://github.com/aziontech/azion-webkit/commit/54af28907ff49fba5c4d0f772a0a739d120b1da2))
+
+### Bug Fixes
+
+* update component name import ([03e1abc](https://github.com/aziontech/azion-webkit/commit/03e1abc16143ec385a45816d4c3dc38ec988be6d))
+
 ## [1.230.6](https://github.com/aziontech/azion-webkit/compare/v1.230.5...v1.230.6) (2025-10-17)
 
 ### Bug Fixes
