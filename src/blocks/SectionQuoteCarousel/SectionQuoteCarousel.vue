@@ -1,5 +1,5 @@
 <template>
-    <section class="max-w-xl xxxl:max-w-xxl mx-auto">
+    <section class="max-w-xl xxxl:max-w-xxl mx-auto mt-40">
         <swiper
             :modules="modules"
             :loop="true"
