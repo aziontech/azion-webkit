@@ -101,7 +101,7 @@
   })
 
   const iconClasses = computed(() => {
-    const baseClasses = 'text-[.5rem] duration-300 transition flex items-center mr-2'
+    const baseClasses = '!text-[.75rem] duration-300 transition flex items-center mr-2'
     
     return {
       primary: {

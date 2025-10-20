@@ -11,17 +11,17 @@
       <div class="flex items-center gap-3">
         <button
           ref="prevButton"
-          class="swiper-button-prev-custom cursor-pointer flex items-center justify-center rounded-full border border-neutral-700 hover:border-orange-500 text-neutral-400 hover:text-orange-500 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          class="swiper-button-prev-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800 hover:border-orange-500 text-neutral-400 hover:text-orange-500 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
           aria-label="Previous slide"
         >
-          <i class="pi pi-chevron-left text-sm" />
+          <i class="pi pi-chevron-left text-[.5rem] " />
         </button>
         <button
           ref="nextButton"
-          class="swiper-button-next-custom cursor-pointer flex items-center justify-center rounded-full border border-neutral-700 hover:border-orange-500 text-neutral-400 hover:text-orange-500 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          class="swiper-button-next-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800 hover:border-orange-500 text-neutral-400 hover:text-orange-500 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
           aria-label="Next slide"
         >
-          <i class="pi pi-chevron-right text-sm" />
+          <i class="pi pi-chevron-right text-[.5rem] " />
         </button>
       </div>
     </div>
@@ -46,12 +46,12 @@
         class="h-auto"
       >
         <div
-          class="p-1 border border-neutral-900 relative h-full before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:left-0"
+          class="p-1 border border-neutral-900 relative h-full"
         >
-          <div class="h-full w-full p-6 flex flex-col gap-4 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:right-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0">
-            <div v-if="card.tag" class="flex items-center gap-2 bg-neutral-800 font-proto-mono text-neutral-100 px-3 py-1 rounded w-fit">
+          <div class="h-full w-full p-6 flex flex-col gap-4">
+            <div v-if="card.tag" class="flex items-center gap-2 bg-slate-950 text-neutral-100 px-3 py-1 rounded w-fit">
               <i v-if="card.tagIcon" :class="card.tagIcon" class="text-sm"></i>
-              <span class="text-xs font-medium uppercase tracking-wider font-sora">
+              <span class="text-xs uppercase font-proto-mono">
                 {{ card.tag }}
               </span>
             </div>
@@ -60,7 +60,7 @@
               {{ card.title }}
             </h3>
             
-            <p class="text-xs text-neutral-400 leading-relaxed font-sora flex-grow">
+            <p class="text-sm mb-12 text-neutral-400 leading-relaxed font-sora flex-grow">
               {{ card.description }}
             </p>
             
@@ -73,11 +73,6 @@
               theme="dark"
               icon="pi pi-chevron-right"
               customClass="px-0 py-0"
-              :pt="{
-                icon: {
-                  class: '!text-[.4rem]'
-                }
-              }"
             />
           </div>
         </div>
