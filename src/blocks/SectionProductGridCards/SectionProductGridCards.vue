@@ -13,7 +13,7 @@
         class="flex flex-col gap-4"
       >
         <div class="flex items-center gap-3">
-          <i :class="card.icon" class="text-2xl text-orange-500"></i>
+          <span class="w-2 h-2 rounded-full bg-orange-500 flex-shrink-0"></span>
           <h3 class="text-lg font-medium text-white">{{ card.title }}</h3>
         </div>
         <p class="text-sm text-neutral-400 leading-relaxed">
@@ -26,7 +26,6 @@
 
 <script setup lang="ts">
   export interface ProductCard {
-    icon: string
     title: string
     description: string
   }
