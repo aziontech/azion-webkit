@@ -1,0 +1,152 @@
+<template>
+  <section
+    :id="id"
+    class="text-white relative max-w-xl xxxl:max-w-xxl mx-auto py-12 px-6 md:px-0"
+  >
+    <!-- Header com Título e Paginação -->
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 md:mb-12 gap-4">
+      <h2 v-if="title" class="display-2 font-normal tracking-tight text-gray-200 font-sora">
+        {{ title }}
+      </h2>
+      
+      <!-- Paginação -->
+      <div class="flex items-center gap-3">
+        <button
+          ref="prevButton"
+          class="swiper-button-prev-custom cursor-pointer flex items-center justify-center rounded-full border border-neutral-700 hover:border-orange-500 text-neutral-400 hover:text-orange-500 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          aria-label="Previous slide"
+        >
+          <i class="pi pi-chevron-left text-sm" />
+        </button>
+        <button
+          ref="nextButton"
+          class="swiper-button-next-custom cursor-pointer flex items-center justify-center rounded-full border border-neutral-700 hover:border-orange-500 text-neutral-400 hover:text-orange-500 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          aria-label="Next slide"
+        >
+          <i class="pi pi-chevron-right text-sm" />
+        </button>
+      </div>
+    </div>
+
+    <!-- Swiper Carousel -->
+    <swiper
+      :modules="modules"
+      :slides-per-view="1.15"
+      :space-between="16"
+      :grab-cursor="true"
+      :breakpoints="breakpoints"
+      :navigation="{
+        prevEl: prevButton,
+        nextEl: nextButton
+      }"
+      @swiper="onSwiper"
+      @slide-change="onSlideChange"
+      class="w-full"
+    >
+      <swiper-slide
+        v-for="(card, index) in cards"
+        :key="index"
+        class="h-auto"
+      >
+        <div
+          class="p-1 border border-neutral-900 relative h-full before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:left-0"
+        >
+          <div class="h-full w-full p-6 flex flex-col gap-4 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:right-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0">
+            <!-- Icon e Título -->
+            <div class="flex items-center gap-3">
+              <span :class="card.icon" class="text-orange-500 text-2xl flex-shrink-0"></span>
+              <h3 class="text-lg font-medium text-white font-sora">{{ card.title }}</h3>
+            </div>
+            
+            <!-- Descrição -->
+            <p class="text-sm text-neutral-400 leading-relaxed font-sora flex-grow">
+              {{ card.description }}
+            </p>
+            
+            <!-- Link opcional -->
+            <a
+              v-if="card.link"
+              :href="card.link"
+              class="text-orange-500 hover:text-orange-400 text-sm font-medium inline-flex items-center gap-2 transition-colors duration-300"
+            >
+              {{ card.linkLabel || 'Learn more' }}
+              <i class="pi pi-arrow-right text-xs" />
+            </a>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper>
+  </section>
+</template>
+
+<script setup lang="ts">
+  import { Swiper, SwiperSlide } from 'swiper/vue'
+  import { Navigation } from 'swiper/modules'
+  import { ref } from 'vue'
+  import 'swiper/css'
+  import 'swiper/css/navigation'
+
+  export interface CarouselCard {
+    icon: string
+    title: string
+    description: string
+    link?: string
+    linkLabel?: string
+  }
+
+  interface SectionCardCarouselProps {
+    title?: string
+    cards?: CarouselCard[]
+    id?: string
+  }
+
+  const props = withDefaults(defineProps<SectionCardCarouselProps>(), {
+    cards: () => []
+  })
+
+  const emit = defineEmits(['slide-change'])
+
+  const modules = [Navigation]
+  const swiperInstance = ref(null)
+  const prevButton = ref(null)
+  const nextButton = ref(null)
+
+  const breakpoints = {
+    320: {
+      slidesPerView: 1.1,
+      spaceBetween: 16
+    },
+    640: {
+      slidesPerView: 1.5,
+      spaceBetween: 20
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 24
+    },
+    1024: {
+      slidesPerView: 2.5,
+      spaceBetween: 24
+    },
+    1280: {
+      slidesPerView: 3,
+      spaceBetween: 24
+    }
+  }
+
+  const onSwiper = (swiper: any) => {
+    swiperInstance.value = swiper
+  }
+
+  const onSlideChange = (swiper: any) => {
+    emit('slide-change', { index: swiper.activeIndex })
+  }
+</script>
+
+<style scoped>
+  .swiper-button-prev-custom:disabled,
+  .swiper-button-next-custom:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+</style>
