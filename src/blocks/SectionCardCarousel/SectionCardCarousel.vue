@@ -53,9 +53,12 @@
         >
           <div class="h-full w-full p-6 flex flex-col gap-4 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:right-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0">
             <!-- Tag -->
-            <span v-if="card.tag" class="text-xs font-medium text-orange-500 uppercase tracking-wider font-sora">
-              {{ card.tag }}
-            </span>
+            <div v-if="card.tag" class="flex items-center gap-2">
+              <i v-if="card.tagIcon" :class="card.tagIcon" class="text-orange-500 text-sm"></i>
+              <span class="text-xs font-medium text-orange-500 uppercase tracking-wider font-sora">
+                {{ card.tag }}
+              </span>
+            </div>
             
             <!-- Título -->
             <h3 class="display-3 text-white font-sora">
@@ -95,6 +98,7 @@
 
   export interface CarouselCard {
     tag?: string
+    tagIcon?: string
     title: string
     description: string
     link?: string

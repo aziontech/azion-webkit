@@ -14,6 +14,7 @@
       :cards="[
         {
           tag: 'Product',
+          tagIcon: 'pi pi-box',
           title: 'Edge Application',
           description: 'Build and deploy modern applications at the edge with serverless functions and real-time data processing.',
           link: '/products/edge-application',
@@ -21,6 +22,7 @@
         },
         {
           tag: 'Product',
+          tagIcon: 'pi pi-box',
           title: 'Edge Firewall',
           description: 'Protect your applications with advanced security features including DDoS protection and WAF.',
           link: '/products/edge-firewall',
@@ -28,6 +30,7 @@
         },
         {
           tag: 'Product',
+          tagIcon: 'pi pi-box',
           title: 'Edge Functions',
           description: 'Run serverless code at the edge to customize and enhance your application behavior.',
           link: '/products/edge-functions',
@@ -35,6 +38,7 @@
         },
         {
           tag: 'Product',
+          tagIcon: 'pi pi-box',
           title: 'Edge Storage',
           description: 'Store and retrieve data at the edge with low latency and high availability.',
           link: '/products/edge-storage',

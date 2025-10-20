@@ -1,5 +1,6 @@
 export interface CarouselCard {
   tag?: string
+  tagIcon?: string
   title: string
   description: string
   link?: string
