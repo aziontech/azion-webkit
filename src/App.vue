@@ -12,14 +12,17 @@
     <SectionProductGridCards
       :cards="[
         {
+          icon: 'pi pi-folder',
           title: 'Bullet benefit',
           description: 'Melhore a performance, segurança e escalabilidade dos seus sites e aplicações web'
         },
         {
+          icon: 'pi pi-folder',
           title: 'Bullet benefit',
           description: 'Melhore a performance, segurança e escalabilidade dos seus sites e aplicações web'
         },
         {
+          icon: 'pi pi-folder',
           title: 'Bullet benefit',
           description: 'Melhore a performance, segurança e escalabilidade dos seus sites e aplicações web'
         }

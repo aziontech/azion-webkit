@@ -5,20 +5,22 @@
   >
     <div
       v-if="cards && cards.length > 0"
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
     >
       <div
         v-for="(card, index) in cards.slice(0, 3)"
         :key="index"
-        class="flex flex-col gap-4"
+        class="p-1 border border-neutral-900 relative before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:left-0"
       >
-        <div class="flex items-center gap-3">
-          <span class="w-2 h-2 rounded-full bg-orange-500 flex-shrink-0"></span>
-          <h3 class="text-lg font-medium text-white">{{ card.title }}</h3>
+        <div class="h-full w-full p-8 flex flex-col gap-4 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:right-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0">
+          <div class="flex items-start gap-3">
+            <span :class="card.icon" class="text-orange-500 text-xl flex-shrink-0"></span>
+            <h3 class="text-lg font-medium text-white">{{ card.title }}</h3>
+          </div>
+          <p class="text-sm text-neutral-400 leading-relaxed">
+            {{ card.description }}
+          </p>
         </div>
-        <p class="text-sm text-neutral-400 leading-relaxed">
-          {{ card.description }}
-        </p>
       </div>
     </div>
   </section>
@@ -26,6 +28,7 @@
 
 <script setup lang="ts">
   export interface ProductCard {
+    icon: string
     title: string
     description: string
   }

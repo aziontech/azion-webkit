@@ -1,4 +1,5 @@
 export interface ProductCard {
+  icon: string
   title: string
   description: string
 }
