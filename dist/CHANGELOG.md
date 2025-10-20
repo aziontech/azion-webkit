@@ -1,3 +1,17 @@
+## [1.233.0](https://github.com/aziontech/azion-webkit/compare/v1.232.0...v1.233.0) (2025-10-20)
+
+### Features
+
+* adiciona bordas e square bullets nos cantos dos cards do SectionProductGridCards ([9d7dbdb](https://github.com/aziontech/azion-webkit/commit/9d7dbdb0af9dfabc0b2b9daef5d0f2fc964b8227))
+* adiciona componente SectionProductGridCards com grid responsivo de cards ([9c04333](https://github.com/aziontech/azion-webkit/commit/9c043332eaacd5432cd79de93eeff7729a35be86))
+* implementa lógica responsiva de square bullets (mobile: topo, desktop: esquerda) ([a8a3293](https://github.com/aziontech/azion-webkit/commit/a8a3293a361a54cd0c03be65988918765ab13898))
+
+### Bug Fixes
+
+* garante que o último card tenha bullet no topo esquerdo ([0eb98f9](https://github.com/aziontech/azion-webkit/commit/0eb98f9d31268b6ad6655a14add1f71e54223f57))
+* todos os cards têm square bullets nos dois lados do topo no mobile ([7b21dc3](https://github.com/aziontech/azion-webkit/commit/7b21dc38a650436f97f42bb7a1e0dc8ee85ae63d))
+* unused product grid cards section and component import ([566b19c](https://github.com/aziontech/azion-webkit/commit/566b19c76017c5003be7f45e0f6cd1a477779652))
+
 ## [1.232.0](https://github.com/aziontech/azion-webkit/compare/v1.231.2...v1.232.0) (2025-10-20)
 
 ### Features
