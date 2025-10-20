@@ -28,9 +28,9 @@
         >
           <div class="flex items-start gap-3">
             <span :class="card.icon" class="text-orange-500 text-xl flex-shrink-0"></span>
-            <h3 class="text-lg font-medium text-white">{{ card.title }}</h3>
+            <h3 class="text-lg font-medium text-white font-sora">{{ card.title }}</h3>
           </div>
-          <p class="text-sm text-neutral-400 leading-relaxed">
+          <p class="text-sm text-neutral-400 leading-relaxed font-sora">
             {{ card.description }}
           </p>
         </div>
