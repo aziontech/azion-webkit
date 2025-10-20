@@ -26,42 +26,42 @@ export const Default = {
     title: 'Explore Our Solutions',
     cards: [
       {
-        icon: 'pi pi-bolt',
+        tag: 'Product',
         title: 'Edge Application',
         description: 'Build and deploy modern applications at the edge with serverless functions and real-time data processing for optimal performance.',
         link: '/products/edge-application',
         linkLabel: 'Learn more'
       },
       {
-        icon: 'pi pi-shield',
+        tag: 'Product',
         title: 'Edge Firewall',
         description: 'Protect your applications with advanced security features including DDoS protection, WAF, and real-time threat detection.',
         link: '/products/edge-firewall',
         linkLabel: 'Learn more'
       },
       {
-        icon: 'pi pi-code',
+        tag: 'Product',
         title: 'Edge Functions',
         description: 'Run serverless code at the edge to customize and enhance your application behavior with low latency execution.',
         link: '/products/edge-functions',
         linkLabel: 'Learn more'
       },
       {
-        icon: 'pi pi-database',
+        tag: 'Product',
         title: 'Edge Storage',
         description: 'Store and retrieve data at the edge with low latency, high availability, and automatic replication across regions.',
         link: '/products/edge-storage',
         linkLabel: 'Learn more'
       },
       {
-        icon: 'pi pi-chart-line',
+        tag: 'Product',
         title: 'Data Stream',
         description: 'Collect, process, and analyze real-time data from your edge applications with powerful streaming capabilities.',
         link: '/products/data-stream',
         linkLabel: 'Learn more'
       },
       {
-        icon: 'pi pi-globe',
+        tag: 'Product',
         title: 'Edge DNS',
         description: 'Manage your DNS with high performance and reliability at the edge, ensuring fast resolution times globally.',
         link: '/products/edge-dns',
@@ -76,22 +76,22 @@ export const WithoutLinks = {
     title: 'Key Features',
     cards: [
       {
-        icon: 'pi pi-clock',
+        tag: 'Feature',
         title: 'Real-time Performance',
         description: 'Experience ultra-low latency with our globally distributed edge network that brings content closer to your users.'
       },
       {
-        icon: 'pi pi-lock',
+        tag: 'Feature',
         title: 'Enterprise Security',
         description: 'Built-in security features protect your applications from threats while maintaining optimal performance.'
       },
       {
-        icon: 'pi pi-users',
+        tag: 'Feature',
         title: 'Developer Experience',
         description: 'Powerful tools and APIs designed to streamline your development workflow and boost productivity.'
       },
       {
-        icon: 'pi pi-chart-bar',
+        tag: 'Feature',
         title: 'Advanced Analytics',
         description: 'Comprehensive insights into your application performance with real-time monitoring and detailed reports.'
       }
@@ -99,24 +99,24 @@ export const WithoutLinks = {
   }
 }
 
-export const MinimalCards = {
+export const WithDifferentTags = {
   args: {
-    title: 'Why Choose Us',
+    title: 'Solutions',
     cards: [
       {
-        icon: 'pi pi-check-circle',
-        title: 'Reliability',
-        description: '99.99% uptime SLA with automatic failover and redundancy across multiple regions.'
+        tag: 'E-commerce',
+        title: 'Fast Checkout',
+        description: 'Optimize your checkout process with edge computing for lightning-fast transactions and reduced cart abandonment.'
       },
       {
-        icon: 'pi pi-star',
-        title: 'Performance',
-        description: 'Lightning-fast content delivery with intelligent caching and optimization.'
+        tag: 'Media',
+        title: 'Video Streaming',
+        description: 'Deliver high-quality video content with minimal buffering and adaptive bitrate streaming at the edge.'
       },
       {
-        icon: 'pi pi-heart',
-        title: 'Support',
-        description: '24/7 expert support team ready to help you succeed with dedicated assistance.'
+        tag: 'Gaming',
+        title: 'Low Latency',
+        description: 'Provide seamless gaming experiences with ultra-low latency and real-time multiplayer capabilities.'
       }
     ]
   }
