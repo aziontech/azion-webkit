@@ -1,3 +1,14 @@
+## [1.234.0](https://github.com/aziontech/azion-webkit/compare/v1.233.0...v1.234.0) (2025-10-20)
+
+### Features
+
+* adiciona SectionCardCarousel com Swiper, título e paginação customizada ([448f72a](https://github.com/aziontech/azion-webkit/commit/448f72a3c7a285c0c06281f9bdc615f3e7cacef7))
+* adiciona suporte para ícone na tag dos cards do carrossel ([ae4326c](https://github.com/aziontech/azion-webkit/commit/ae4326c299ffc815184ce9ee793580f271c6a60d))
+
+### Bug Fixes
+
+* product carousel section and unused component import ([a169ad8](https://github.com/aziontech/azion-webkit/commit/a169ad8c739820304243f6e59251780d058280a4))
+
 ## [1.233.0](https://github.com/aziontech/azion-webkit/compare/v1.232.0...v1.233.0) (2025-10-20)
 
 ### Features
