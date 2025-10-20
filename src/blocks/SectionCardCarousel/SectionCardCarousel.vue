@@ -64,14 +64,16 @@
             </p>
             
             <!-- Link opcional -->
-            <a
+            <Button
               v-if="card.link"
               :href="card.link"
-              class="text-orange-500 hover:text-orange-400 text-sm font-medium inline-flex items-center gap-2 transition-colors duration-300"
-            >
-              {{ card.linkLabel || 'Learn more' }}
-              <i class="pi pi-arrow-right text-xs" />
-            </a>
+              :label="card.linkLabel || 'Learn more'"
+              type="tertiary"
+              size="small"
+              theme="dark"
+              icon="pi pi-arrow-right"
+              customClass="px-0 py-0"
+            />
           </div>
         </div>
       </swiper-slide>
@@ -83,6 +85,7 @@
   import { Swiper, SwiperSlide } from 'swiper/vue'
   import { Navigation } from 'swiper/modules'
   import { ref } from 'vue'
+  import Button from '../../components/Button/Button.vue'
   import 'swiper/css'
   import 'swiper/css/navigation'
 
