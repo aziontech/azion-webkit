@@ -12,10 +12,9 @@
         :key="index"
         :class="[
           'p-1 border border-neutral-900 relative',
-          `before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0`,
+          `before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 before:block`,
           `after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0`,
-          index === cards.slice(0, 3).length - 1 ? 'md:after:block after:hidden' : 'after:hidden',
-          index === cards.slice(0, 3).length - 1 ? 'md:before:hidden' : 'md:before:block'
+          index === cards.slice(0, 3).length - 1 ? 'md:after:block after:hidden' : 'after:hidden'
         ]"
       >
         <div 
@@ -28,9 +27,9 @@
         >
           <div class="flex items-start gap-3">
             <span :class="card.icon" class="text-orange-500 text-xl flex-shrink-0"></span>
-            <h3 class="text-lg font-medium text-white font-sora">{{ card.title }}</h3>
+            <h3 class="display-3 text-white font-sora">{{ card.title }}</h3>
           </div>
-          <p class="text-sm text-neutral-400 leading-relaxed font-sora">
+          <p class="text-xs text-neutral-400 leading-relaxed font-sora">
             {{ card.description }}
           </p>
         </div>
