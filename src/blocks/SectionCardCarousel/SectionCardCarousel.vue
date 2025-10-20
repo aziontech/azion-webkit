@@ -3,13 +3,11 @@
     :id="id"
     class="text-white relative max-w-xl xxxl:max-w-xxl mx-auto py-12 px-6 md:px-0"
   >
-    <!-- Header com Título e Paginação -->
     <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 md:mb-12 gap-4">
       <h2 v-if="title" class="display-2 font-normal tracking-tight text-gray-200 font-sora">
         {{ title }}
       </h2>
       
-      <!-- Paginação -->
       <div class="flex items-center gap-3">
         <button
           ref="prevButton"
@@ -28,7 +26,6 @@
       </div>
     </div>
 
-    <!-- Swiper Carousel -->
     <swiper
       :modules="modules"
       :slides-per-view="1.15"
@@ -52,7 +49,6 @@
           class="p-1 border border-neutral-900 relative h-full before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:left-0"
         >
           <div class="h-full w-full p-6 flex flex-col gap-4 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:right-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0">
-            <!-- Tag -->
             <div v-if="card.tag" class="flex items-center gap-2 bg-neutral-800 text-neutral-100 px-3 py-1 rounded w-fit">
               <i v-if="card.tagIcon" :class="card.tagIcon" class="text-sm"></i>
               <span class="text-xs font-medium uppercase tracking-wider font-sora">
@@ -60,17 +56,14 @@
               </span>
             </div>
             
-            <!-- Título -->
             <h3 class="display-3 text-white font-sora">
               {{ card.title }}
             </h3>
             
-            <!-- Descrição -->
             <p class="text-xs text-neutral-400 leading-relaxed font-sora flex-grow">
               {{ card.description }}
             </p>
             
-            <!-- Link opcional -->
             <Button
               v-if="card.link"
               :href="card.link"
