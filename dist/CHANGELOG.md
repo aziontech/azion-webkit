@@ -1,3 +1,13 @@
+## [1.232.0](https://github.com/aziontech/azion-webkit/compare/v1.231.2...v1.232.0) (2025-10-20)
+
+### Features
+
+* adiciona TypeScript definitions, index e stories do SectionGetStarted ([76cf3a6](https://github.com/aziontech/azion-webkit/commit/76cf3a6c98d9bfa3739337cba54dc8894dd25c63))
+
+### Bug Fixes
+
+* corrige estrutura do SectionGetStarted e remove exemplo do App.vue ([994b1b2](https://github.com/aziontech/azion-webkit/commit/994b1b2d1010e57254f9f81319cba7352fdc7d58))
+
 ## [1.231.2](https://github.com/aziontech/azion-webkit/compare/v1.231.1...v1.231.2) (2025-10-17)
 
 ### Bug Fixes
