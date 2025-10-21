@@ -1,3 +1,13 @@
+## [1.235.0](https://github.com/aziontech/azion-webkit/compare/v1.234.2...v1.235.0) (2025-10-21)
+
+### Features
+
+* adiciona SectionStickyContent mockado no App.vue ([54db97b](https://github.com/aziontech/azion-webkit/commit/54db97b382c7ba0c12775d2843167f4668bc9636))
+
+### Bug Fixes
+
+* adjust sticky section layout with updated spacing, width and color values ([886fd46](https://github.com/aziontech/azion-webkit/commit/886fd46cb92bac129c8a7b82eb19ca529edcd18a))
+
 ## [1.234.2](https://github.com/aziontech/azion-webkit/compare/v1.234.1...v1.234.2) (2025-10-21)
 
 ### Bug Fixes
