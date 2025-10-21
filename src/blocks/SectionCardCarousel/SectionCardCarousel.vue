@@ -1,7 +1,7 @@
 <template>
   <section
     :id="id"
-    class="text-white relative max-w-xl xxxl:max-w-xxl mx-auto py-12 px-6 md:px-0"
+    class="text-white relative max-w-xl xxxl:max-w-xxl mx-auto py-12 px-6 md:px-0 mb-40"
   >
     <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 md:mb-12 gap-4">
       <h2 v-if="title" class="display-2 font-normal tracking-tight text-gray-200 font-sora">

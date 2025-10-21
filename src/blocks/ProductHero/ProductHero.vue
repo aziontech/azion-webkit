@@ -1,10 +1,10 @@
 <template>
   <section
     :id="id"
-    class="text-white relative overflow-hidden max-w-xl xxxl:max-w-xxl mx-auto bg-hidden md:bg-[url('@/assets/svg/asset-bg-texture.svg')] bg-center bg-cover"
+    class="text-white relative overflow-hidden max-w-xl xxxl:max-w-xxl mx-auto bg-hidden md:bg-[url('@/assets/svg/asset-bg-texture.svg')] bg-center bg-cover md:p-24"
   >
     <div
-      class="mx-auto grid gap-6  xl:gap-6 items-center lg:grid-cols-2 relative z-10 p-6"
+      class="mx-auto grid gap-6 xl:gap-6 items-center lg:grid-cols-2 relative z-10 p-6 md:p-0"
     >
       <div
         class="flex flex-col gap-3 md:gap-4 lg:gap-5 text-center lg:text-left"
@@ -26,7 +26,7 @@
 
         <div
           v-if="buttons && buttons.length > 0"
-          class="flex gap-2 md:gap-5 mt-4 md:mt-0 items-center justify-center  lg:justify-start"
+          class="flex flex-col md:flex-row gap-4 md:gap-5 mt-4 md:mt-0 items-center justify-center  lg:justify-start"
         >
           <Button
             v-for="(button, index) in limitedButtons"

@@ -1,7 +1,7 @@
 <template>
   <section
     :id="id"
-    class="text-white relative max-w-xl xxxl:max-w-xxl mx-auto py-12 px-6 md:px-0"
+    class="text-white relative max-w-xl xxxl:max-w-xxl mx-auto py-12 px-6 md:px-0 mb-40"
   >
     <div
       v-if="cards && cards.length > 0"
