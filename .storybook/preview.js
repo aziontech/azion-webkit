@@ -39,16 +39,17 @@ export const parameters = {
     },
   },
   backgrounds: {
-    options: {
-      'azion-dark': {
+    default: 'azion-dark',
+    values: [
+      {
         name: 'azion-dark',
         value: '#171717',
       },
-      'azion-light': {
+      {
         name: 'azion-light',
         value: '#ffffff',
       }
-    }
+    ]
   },
   controls: {
     matchers: {
