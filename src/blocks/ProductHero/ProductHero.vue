@@ -1,7 +1,7 @@
 <template>
   <section
     :id="id"
-    class="text-white relative overflow-hidden max-w-xl xxxl:max-w-xxl mx-auto bg-hidden md:bg-[url('@/assets/svg/asset-bg-texture.svg')] bg-center bg-cover md:p-24"
+    class="text-white relative overflow-hidden max-w-xl xxxl:max-w-xxl mx-auto bg-hidden md:bg-[url('@/assets/svg/asset-bg-texture.svg')] bg-center bg-cover md:py-24"
   >
     <div
       class="mx-auto grid gap-6 xl:gap-6 items-center lg:grid-cols-2 relative z-10 p-6 md:p-0"
