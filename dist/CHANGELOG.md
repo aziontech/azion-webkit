@@ -1,3 +1,9 @@
+## [1.234.2](https://github.com/aziontech/azion-webkit/compare/v1.234.1...v1.234.2) (2025-10-21)
+
+### Bug Fixes
+
+* adjust padding to vertical only on md breakpoint in ProductHero section ([f9e73e2](https://github.com/aziontech/azion-webkit/commit/f9e73e245d1a672953b8c7c5912b7c6a64e0e2d9))
+
 ## [1.234.1](https://github.com/aziontech/azion-webkit/compare/v1.234.0...v1.234.1) (2025-10-21)
 
 ### Bug Fixes
