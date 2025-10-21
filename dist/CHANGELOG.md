@@ -1,3 +1,10 @@
+## [1.234.1](https://github.com/aziontech/azion-webkit/compare/v1.234.0...v1.234.1) (2025-10-21)
+
+### Bug Fixes
+
+* adjust imports ([1ef6df8](https://github.com/aziontech/azion-webkit/commit/1ef6df8b6d5361db98e78f18d3adbd3717eada63))
+* adjust section spacing and button layout for improved responsive design ([6ba8b16](https://github.com/aziontech/azion-webkit/commit/6ba8b16a712e93d650e43fb76dba8a6f2b8c509a))
+
 ## [1.234.0](https://github.com/aziontech/azion-webkit/compare/v1.233.0...v1.234.0) (2025-10-20)
 
 ### Features
