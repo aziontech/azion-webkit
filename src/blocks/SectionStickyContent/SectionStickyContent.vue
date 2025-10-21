@@ -1,5 +1,5 @@
 <template>
-  <section class="flex gap-12 items-start px-12 relative w-full max-w-xxl mx-auto">
+  <section class="flex gap-12 items-start px-12 relative w-full max-w-xxl mx-auto mb-40">
     <div
       v-if="title || bullets.length > 0"
       class="flex flex-col gap-5 sticky top-0 shrink-0"
