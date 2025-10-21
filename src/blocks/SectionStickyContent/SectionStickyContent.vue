@@ -1,8 +1,8 @@
 <template>
-  <section class="flex gap-12 items-start px-12 relative w-full max-w-xxl mx-auto mb-40">
+  <section class="flex gap-12 items-start relative w-full max-w-xl xxxl:max-w-xxl mx-auto mb-40">
     <div
       v-if="title || bullets.length > 0"
-      class="flex flex-col gap-5 sticky top-0 shrink-0"
+      class="flex flex-col gap-5 sticky top-20 shrink-0"
       :class="[
         variant === 'titleBulletsImage' ? 'w-[335px] pb-0' : 'w-[509px] pb-0',
         bullets.length > 0 && variant === 'titleBulletsImage' ? 'h-auto' : 'h-[305px]'
@@ -29,7 +29,7 @@
           />
           <div
             v-if="index < bullets.length - 1"
-            class="h-px w-full bg-neutral-700"
+            class="h-px w-full bg-neutral-900"
           />
         </template>
       </div>
@@ -56,7 +56,7 @@
           />
           <div
             v-if="index < bullets.length - 1"
-            class="h-px w-full bg-neutral-700"
+            class="h-px w-full bg-neutral-900"
           />
         </template>
       </div>
