@@ -1,3 +1,9 @@
+## [1.235.1](https://github.com/aziontech/azion-webkit/compare/v1.235.0...v1.235.1) (2025-10-21)
+
+### Bug Fixes
+
+* define background padrão dark no Storybook ([cd390f6](https://github.com/aziontech/azion-webkit/commit/cd390f6334e60d4ca42273474147252b2a121369))
+
 ## [1.235.0](https://github.com/aziontech/azion-webkit/compare/v1.234.2...v1.235.0) (2025-10-21)
 
 ### Features
