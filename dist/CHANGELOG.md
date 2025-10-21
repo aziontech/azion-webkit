@@ -1,3 +1,9 @@
+## [1.235.2](https://github.com/aziontech/azion-webkit/compare/v1.235.1...v1.235.2) (2025-10-21)
+
+### Bug Fixes
+
+* força fundo escuro no Storybook com CSS direto ([92bd08e](https://github.com/aziontech/azion-webkit/commit/92bd08e84db0384abc4ab47fc9247b02f0ba8d21))
+
 ## [1.235.1](https://github.com/aziontech/azion-webkit/compare/v1.235.0...v1.235.1) (2025-10-21)
 
 ### Bug Fixes
