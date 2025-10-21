@@ -71,6 +71,6 @@ export const decorators = [
       light: 'azion azion-light',
       dark: 'azion azion-dark',
     },
-    defaultTheme: 'light',
+    defaultTheme: 'dark',
   })
 ];

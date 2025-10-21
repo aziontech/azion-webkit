@@ -24,10 +24,6 @@
     --color-orange-500: #F3652B;
   }
   
-  /* Sidebar styling */
-  .sidebar-container {
-    background: #171717 !important;
-  }
   
   /* Sidebar text color */
   .sidebar-item,
@@ -35,8 +31,18 @@
   .sidebar-subheading,
   [data-nodetype="story"],
   [data-nodetype="component"],
-  [data-nodetype="group"] {
+  [data-nodetype="group"],
+  [data-nodetype="root"],
+  .sidebar-item a,
+  .sidebar-item button,
+  [class*="TreeNode"] span,
+  [class*="LeafNode"] span {
     color: #e5e5e5 !important;
+  }
+  
+  /* Sidebar container */
+  [class*="Container"] {
+    background: #0a0a0a !important;
   }
   
   /* Active/selected items */
