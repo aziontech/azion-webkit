@@ -1,13 +1,17 @@
-import Overline from '../../templates/overline'
+import Overline from '../../components/overline/Overline.vue'
 
 export default {
-  title: 'Components/Overline',
+  title: 'Components/Rebranding/Overline',
   component: Overline,
-  tags: ['autodocs']
+  tags: ['autodocs'],
+  argTypes: {
+    // No argTypes needed since component uses slots
+  }
 }
 
 export const Default = {
-  args: {
-    label: 'Sign up'
-  }
+  render: () => ({
+    components: { Overline },
+    template: '<Overline>Sign up</Overline>'
+  })
 }
