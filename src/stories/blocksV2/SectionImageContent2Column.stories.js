@@ -102,3 +102,26 @@ WithEscapedContent.args = {
   height: 'default',
   variant: 'titleBulletsImage'
 }
+
+export const ComplexFormatting = Template.bind({})
+ComplexFormatting.args = {
+  title: 'Teste de formatação complexa',
+  descriptionRawMarkdown: `## Formatação Mista
+
+*This text will be bold
+You can combine them*
+
+**This is bold** and *this is italic* and ***this is both***.
+
+_This is italic_ and __this is bold__ and ___this is both___.
+
+Texto normal com **negrito no meio** e *itálico também*.
+
+### Links e Combinações
+
+[Link simples](https://example.com) e **[link em negrito](https://example.com)** e *[link em itálico](https://example.com)*.`,
+  image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+  alt: 'Complex formatting test',
+  height: 'default',
+  variant: 'titleImage'
+}
