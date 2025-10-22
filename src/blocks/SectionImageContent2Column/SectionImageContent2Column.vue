@@ -1,11 +1,11 @@
 <template>
   <section class="flex gap-12 items-start relative w-full max-w-xl xxxl:max-w-xxl mx-auto mb-40">
     <div
-      v-if="title || bullets.length > 0"
+      v-if="title || bulletsHtml.length > 0"
       class="flex flex-col gap-5 sticky top-20 shrink-0"
       :class="[
         variant === 'titleBulletsImage' ? 'w-[335px] pb-0' : 'w-[509px] pb-0',
-        bullets.length > 0 && variant === 'titleBulletsImage' ? 'h-auto' : 'h-[305px]'
+        bulletsHtml.length > 0 && variant === 'titleBulletsImage' ? 'h-auto' : 'h-[305px]'
       ]"
     >
       <h2
@@ -16,11 +16,11 @@
       </h2>
 
       <div
-        v-if="bullets.length > 0 && variant === 'titleBulletsImage'"
+        v-if="bulletsHtml.length > 0 && variant === 'titleBulletsImage'"
         class="flex flex-col gap-3 w-full max-w-[392px] py-3 pr-3"
       >
         <template
-          v-for="(bullet, index) in bullets"
+          v-for="(bullet, index) in bulletsHtml"
           :key="index"
         >
           <p
@@ -28,7 +28,7 @@
             v-html="bullet"
           />
           <div
-            v-if="index < bullets.length - 1"
+            v-if="index < bulletsHtml.length - 1"
             class="h-px w-full bg-neutral-900"
           />
         </template>
@@ -39,15 +39,15 @@
       class="flex flex-col gap-6 shrink-0 relative"
       :class="[
         fullWidthImage ? 'w-full' : 'flex-1 pl-12',
-        bullets.length > 0 && variant === 'titleImage' ? 'gap-16' : 'gap-6'
+        bulletsHtml.length > 0 && variant === 'titleImage' ? 'gap-16' : 'gap-6'
       ]"
     >
       <div
-        v-if="bullets.length > 0 && variant === 'titleImage'"
+        v-if="bulletsHtml.length > 0 && variant === 'titleImage'"
         class="flex flex-col gap-3 w-full"
       >
         <template
-          v-for="(bullet, index) in bullets"
+          v-for="(bullet, index) in bulletsHtml"
           :key="index"
         >
           <p
@@ -55,7 +55,7 @@
             v-html="bullet"
           />
           <div
-            v-if="index < bullets.length - 1"
+            v-if="index < bulletsHtml.length - 1"
             class="h-px w-full bg-neutral-900"
           />
         </template>
@@ -124,7 +124,7 @@
       type: String,
       default: ''
     },
-    bullets: {
+    bulletsHtml: {
       type: Array,
       default: () => []
     },
