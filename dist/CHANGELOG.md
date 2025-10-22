@@ -1,3 +1,9 @@
+## [1.238.0](https://github.com/aziontech/azion-webkit/compare/v1.237.3...v1.238.0) (2025-10-22)
+
+### Features
+
+* enhance markdown parser with escaped characters and HTML entity support ([05af8ae](https://github.com/aziontech/azion-webkit/commit/05af8aeee826de21cd16bd389020b23ee1983738))
+
 ## [1.237.3](https://github.com/aziontech/azion-webkit/compare/v1.237.2...v1.237.3) (2025-10-22)
 
 ### Bug Fixes
