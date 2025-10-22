@@ -1,3 +1,9 @@
+## [1.237.2](https://github.com/aziontech/azion-webkit/compare/v1.237.1...v1.237.2) (2025-10-22)
+
+### Bug Fixes
+
+* rename component files and update HTML references from raw to markdown ([1b88d9a](https://github.com/aziontech/azion-webkit/commit/1b88d9af48007aa08225823fb40bf0177045574a))
+
 ## [1.237.1](https://github.com/aziontech/azion-webkit/compare/v1.237.0...v1.237.1) (2025-10-22)
 
 ### Bug Fixes
