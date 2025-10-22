@@ -1,8 +1,8 @@
-import SectionClientsWithQuote from '../../blocks/SectionClientsWithQuote/SectionClientsWithQuote.vue'
+import SectionLogosQuote2Column from '../../blocks/SectionLogosQuote2Column/SectionLogosQuote2Column.vue'
 
 export default {
-  title: 'Blocks/Rebranding/SectionClientsWithQuote',
-  component: SectionClientsWithQuote,
+  title: 'Blocks/Rebranding/SectionLogosQuote2Column',
+  component: SectionLogosQuote2Column,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',

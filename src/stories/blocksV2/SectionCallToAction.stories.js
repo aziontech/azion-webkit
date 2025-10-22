@@ -1,8 +1,8 @@
-import SectionGetStarted from '../../blocks/SectionGetStarted/SectionGetStarted.vue'
+import SectionCallToAction from '../../blocks/SectionCallToAction/SectionCallToAction.vue'
 
 export default {
-  title: 'Blocks/Rebranding/SectionGetStarted',
-  component: SectionGetStarted,
+  title: 'Blocks/Rebranding/SectionCallToAction',
+  component: SectionCallToAction,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',

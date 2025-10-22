@@ -1,8 +1,8 @@
-import SectionProductGridCards from '../../blocks/SectionProductGridCards/SectionProductGridCards.vue'
+import SectionCards3Column from '../../blocks/SectionCards3Column/SectionCards3Column.vue'
 
 export default {
-  title: 'Blocks/Rebranding/SectionProductGridCards',
-  component: SectionProductGridCards,
+  title: 'Blocks/Rebranding/SectionCards3Column',
+  component: SectionCards3Column,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',

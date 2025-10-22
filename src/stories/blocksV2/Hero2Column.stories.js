@@ -1,8 +1,8 @@
-import ProductHero from '../../blocks/ProductHero/ProductHero.vue'
+import Hero2Column from '../../blocks/Hero2Column/Hero2Column.vue'
 
 export default {
-  title: 'Blocks/Rebranding/ProductHero',
-  component: ProductHero,
+  title: 'Blocks/Rebranding/Hero2Column',
+  component: Hero2Column,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
