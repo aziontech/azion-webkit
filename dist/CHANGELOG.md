@@ -1,3 +1,9 @@
+## [1.237.3](https://github.com/aziontech/azion-webkit/compare/v1.237.2...v1.237.3) (2025-10-22)
+
+### Bug Fixes
+
+* add markdown parser to SectionImageContent2Column component ([46f7d3b](https://github.com/aziontech/azion-webkit/commit/46f7d3b4553efe62c878836a4efd3a75e4ffedc9))
+
 ## [1.237.2](https://github.com/aziontech/azion-webkit/compare/v1.237.1...v1.237.2) (2025-10-22)
 
 ### Bug Fixes
