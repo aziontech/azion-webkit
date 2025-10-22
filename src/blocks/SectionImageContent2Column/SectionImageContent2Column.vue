@@ -172,12 +172,12 @@
       })
     
     text = text
-      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-      .replace(/__([^_]+)__/g, '<strong>$1</strong>')
-    
-    text = text
-      .replace(/\*([^*]+)\*/g, '<em>$1</em>')
-      .replace(/_([^_]+)_/g, '<em>$1</em>')
+      .replace(/\*\*\*([^*\n]+(?:\n[^*\n]*)*?)\*\*\*/gs, '<strong><em>$1</em></strong>')
+      .replace(/___([^_\n]+(?:\n[^_\n]*)*?)___/gs, '<strong><em>$1</em></strong>')
+      .replace(/\*\*([^*\n]+(?:\n[^*\n]*)*?)\*\*/gs, '<strong>$1</strong>')
+      .replace(/__([^_\n]+(?:\n[^_\n]*)*?)__/gs, '<strong>$1</strong>')
+      .replace(/\*([^*\n]+(?:\n[^*\n]*)*?)\*/gs, '<em>$1</em>')
+      .replace(/_([^_\n]+(?:\n[^_\n]*)*?)_/gs, '<em>$1</em>')
     
     text = text
       .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
