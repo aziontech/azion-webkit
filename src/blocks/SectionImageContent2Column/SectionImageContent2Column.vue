@@ -130,34 +130,77 @@
     }
   })
 
-  // Função para converter markdown para HTML
   const parseMarkdown = (markdown) => {
     if (!markdown) return ''
     
-    return markdown
-      // Headers
-      .replace(/^### (.*$)/gim, '<h3>$1</h3>')
-      .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-      .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-      // Bold
-      .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
-      .replace(/__(.*?)__/gim, '<strong>$1</strong>')
-      // Italic
-      .replace(/\*(.*?)\*/gim, '<em>$1</em>')
-      .replace(/_(.*?)_/gim, '<em>$1</em>')
-      // Links
-      .replace(/\[([^\]]+)\]\(([^\)]+)\)/gim, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
-      // Line breaks
-      .replace(/\n\n/gim, '</p><p>')
-      .replace(/\n/gim, '<br>')
-      // Wrap in paragraph tags if content exists
-      .replace(/^(.+)$/gim, '<p>$1</p>')
-      // Clean up multiple paragraph tags
-      .replace(/<p><\/p>/gim, '')
-      .replace(/<p>(<h[1-6]>.*?<\/h[1-6]>)<\/p>/gim, '$1')
+    let text = markdown
+    
+    text = text
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'")
+    
+    text = text
+      .replace(/\\#/g, '#')
+      .replace(/\\\*/g, '*')
+      .replace(/\\_/g, '_')
+      .replace(/\\\[/g, '[')
+      .replace(/\\\]/g, ']')
+      .replace(/\\\(/g, '(')
+      .replace(/\\\)/g, ')')
+    
+    text = text
+      .replace(/^######\s+(.*$)/gim, '<h6>$1</h6>')
+      .replace(/^#####\s+(.*$)/gim, '<h5>$1</h5>')
+      .replace(/^####\s+(.*$)/gim, '<h4>$1</h4>')
+      .replace(/^###\s+(.*$)/gim, '<h3>$1</h3>')
+      .replace(/^##\s+(.*$)/gim, '<h2>$1</h2>')
+      .replace(/^#\s+(.*$)/gim, '<h1>$1</h1>')
+    
+    text = text
+      .replace(/^\s*[-*+]\s+(.+$)/gim, '<li>$1</li>')
+    
+    text = text
+      .replace(/^\s*\d+\.\s+(.+$)/gim, '<li>$1</li>')
+    
+    text = text
+      .replace(/(<li>.*<\/li>)/gs, (match) => {
+        return '<ul>' + match + '</ul>'
+      })
+    
+    text = text
+      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/__([^_]+)__/g, '<strong>$1</strong>')
+    
+    text = text
+      .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+      .replace(/_([^_]+)_/g, '<em>$1</em>')
+    
+    text = text
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+    
+    const blocks = text.split(/\n\s*\n/)
+    
+    const processedBlocks = blocks.map(block => {
+      if (!block.trim()) return ''
+      
+      if (block.match(/^<(h[1-6]|ul|ol|li)/)) {
+        return block.replace(/\n/g, ' ').trim()
+      }
+      
+      return '<p>' + block.replace(/\n/g, '<br>').trim() + '</p>'
+    })
+    
+    return processedBlocks
+      .filter(block => block.trim())
+      .join('\n')
+      .replace(/\s+/g, ' ')
+      .replace(/>\s+</g, '><')
+      .trim()
   }
-
-  // Computed property para o markdown parseado
   const parsedMarkdown = computed(() => {
     return parseMarkdown(props.descriptionRawMarkdown)
   })

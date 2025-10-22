@@ -92,3 +92,13 @@ Conecte-se facilmente com suas ferramentas favoritas e comece a desenvolver em m
   height: 'large',
   variant: 'titleImage'
 }
+
+export const WithEscapedContent = Template.bind({})
+WithEscapedContent.args = {
+  title: 'Teste com conteúdo escapado',
+  descriptionRawMarkdown: "&nbsp;\n\n\\## Headers\n\n&nbsp;\n\n\\# This is a Heading h1\n\n\\## This is a Heading h2\n\n\\###### This is a Heading h6\n\n&nbsp;\n\n\\## Emphasis\n\n&nbsp;\n\n*\\*This text will be italic\\**\n\n*\\_This will also be italic\\_*\n\n&nbsp;\n\n**\\*\\*This text will be bold\\*\\***\n\n**\\_\\_This will also be bold\\_\\_**\n\n*\\_You \\*\\*can\\*\\* combine them\\_*\n\n\\## Lists",
+  image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop',
+  alt: 'Test content',
+  height: 'default',
+  variant: 'titleBulletsImage'
+}
