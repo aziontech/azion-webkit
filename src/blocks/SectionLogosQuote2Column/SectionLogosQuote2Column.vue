@@ -56,13 +56,13 @@
   import ProductQuote from '../../components/ProductQuote/ProductQuote.vue'
   import Button from '../../components/Button/Button.vue'
 
-  export interface ClientLogo {
+  export interface LogoQuote2Column {
     logo: string
     alt?: string
   }
 
-  interface SectionClientsWithQuoteProps {
-    clients?: ClientLogo[]
+  interface SectionLogosQuote2ColumnProps {
+    clients?: LogoQuote2Column[]
     quote?: string
     author?: string
     role?: string
@@ -74,7 +74,7 @@
     linkLabel?: string,
   }
 
-  const props = withDefaults(defineProps<SectionClientsWithQuoteProps>(), {
+  const props = withDefaults(defineProps<SectionLogosQuote2ColumnProps>(), {
     clients: () => []
   })
 </script>
