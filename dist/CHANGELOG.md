@@ -1,3 +1,9 @@
+## [1.236.0](https://github.com/aziontech/azion-webkit/compare/v1.235.2...v1.236.0) (2025-10-22)
+
+### Features
+
+* bump version for component renaming ([76fdac8](https://github.com/aziontech/azion-webkit/commit/76fdac8ac167cabc389ab795e28f1ae5af046a0b))
+
 ## [1.235.2](https://github.com/aziontech/azion-webkit/compare/v1.235.1...v1.235.2) (2025-10-21)
 
 ### Bug Fixes
