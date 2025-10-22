@@ -1,7 +1,7 @@
 export interface SectionImageContent2ColumnProps {
   title?: string
-  /** Bullet points list (supports HTML via v-html) */
-  bulletsHtml?: string[]
+  /** Content block (supports HTML via v-html) */
+  contentHtml?: string
   image: string
   alt?: string
   height?: 'default' | 'large'

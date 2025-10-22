@@ -1,11 +1,11 @@
 <template>
   <section class="flex gap-12 items-start relative w-full max-w-xl xxxl:max-w-xxl mx-auto mb-40">
     <div
-      v-if="title || bulletsHtml.length > 0"
+      v-if="title || contentHtml"
       class="flex flex-col gap-5 sticky top-20 shrink-0"
       :class="[
         variant === 'titleBulletsImage' ? 'w-[335px] pb-0' : 'w-[509px] pb-0',
-        bulletsHtml.length > 0 && variant === 'titleBulletsImage' ? 'h-auto' : 'h-[305px]'
+        contentHtml && variant === 'titleBulletsImage' ? 'h-auto' : 'h-[305px]'
       ]"
     >
       <h2
@@ -16,22 +16,13 @@
       </h2>
 
       <div
-        v-if="bulletsHtml.length > 0 && variant === 'titleBulletsImage'"
+        v-if="contentHtml && variant === 'titleBulletsImage'"
         class="flex flex-col gap-3 w-full max-w-[392px] py-3 pr-3"
       >
-        <template
-          v-for="(bullet, index) in bulletsHtml"
-          :key="index"
-        >
-          <p
-            class="display-3 font-sora font-normal leading-[1.4] tracking-tight text-neutral-400"
-            v-html="bullet"
-          />
-          <div
-            v-if="index < bulletsHtml.length - 1"
-            class="h-px w-full bg-neutral-900"
-          />
-        </template>
+        <div
+          class="display-3 font-sora font-normal leading-[1.4] tracking-tight text-neutral-400"
+          v-html="contentHtml"
+        />
       </div>
     </div>
 
@@ -39,26 +30,17 @@
       class="flex flex-col gap-6 shrink-0 relative"
       :class="[
         fullWidthImage ? 'w-full' : 'flex-1 pl-12',
-        bulletsHtml.length > 0 && variant === 'titleImage' ? 'gap-16' : 'gap-6'
+        contentHtml && variant === 'titleImage' ? 'gap-16' : 'gap-6'
       ]"
     >
       <div
-        v-if="bulletsHtml.length > 0 && variant === 'titleImage'"
+        v-if="contentHtml && variant === 'titleImage'"
         class="flex flex-col gap-3 w-full"
       >
-        <template
-          v-for="(bullet, index) in bulletsHtml"
-          :key="index"
-        >
-          <p
-            class="display-3 font-sora font-normal leading-[1.4] tracking-tight text-neutral-400"
-            v-html="bullet"
-          />
-          <div
-            v-if="index < bulletsHtml.length - 1"
-            class="h-px w-full bg-neutral-900"
-          />
-        </template>
+        <div
+          class="display-3 font-sora font-normal leading-[1.4] tracking-tight text-neutral-400"
+          v-html="contentHtml"
+        />
       </div>
 
       <div
@@ -124,9 +106,9 @@
       type: String,
       default: ''
     },
-    bulletsHtml: {
-      type: Array,
-      default: () => []
+    contentHtml: {
+      type: String,
+      default: ''
     },
     image: {
       type: String,
