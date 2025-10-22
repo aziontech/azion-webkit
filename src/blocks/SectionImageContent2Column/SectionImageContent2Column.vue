@@ -106,7 +106,7 @@
       type: String,
       default: ''
     },
-    descriptionRawHtml: {
+    descriptionRawMarkdown: {
       type: String,
       default: ''
     },
