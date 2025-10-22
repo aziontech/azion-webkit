@@ -1,3 +1,13 @@
+## [1.237.0](https://github.com/aziontech/azion-webkit/compare/v1.236.0...v1.237.0) (2025-10-22)
+
+### Features
+
+* adiciona suporte a HTML/markdown nos bullets do SectionImageContent2Column ([dc0e971](https://github.com/aziontech/azion-webkit/commit/dc0e971edf31c2829a25b8ed4d3f9340841f1233))
+
+### Bug Fixes
+
+* rename contentHtml prop to descriptionRawHtml for clarity ([1fee073](https://github.com/aziontech/azion-webkit/commit/1fee073770bdb992242792b3eb62ad943cc00199))
+
 ## [1.236.0](https://github.com/aziontech/azion-webkit/compare/v1.235.2...v1.236.0) (2025-10-22)
 
 ### Features
