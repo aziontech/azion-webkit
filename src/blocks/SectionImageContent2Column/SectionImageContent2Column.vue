@@ -1,11 +1,11 @@
 <template>
   <section class="flex gap-12 items-start relative w-full max-w-xl xxxl:max-w-xxl mx-auto mb-40">
     <div
-      v-if="title || contentHtml"
+      v-if="title || descriptionRawHtml"
       class="flex flex-col gap-5 sticky top-20 shrink-0"
       :class="[
         variant === 'titleBulletsImage' ? 'w-[335px] pb-0' : 'w-[509px] pb-0',
-        contentHtml && variant === 'titleBulletsImage' ? 'h-auto' : 'h-[305px]'
+        descriptionRawHtml && variant === 'titleBulletsImage' ? 'h-auto' : 'h-[305px]'
       ]"
     >
       <h2
@@ -16,12 +16,12 @@
       </h2>
 
       <div
-        v-if="contentHtml && variant === 'titleBulletsImage'"
+        v-if="descriptionRawHtml && variant === 'titleBulletsImage'"
         class="flex flex-col gap-3 w-full max-w-[392px] py-3 pr-3"
       >
         <div
           class="display-3 font-sora font-normal leading-[1.4] tracking-tight text-neutral-400"
-          v-html="contentHtml"
+          v-html="descriptionRawHtml"
         />
       </div>
     </div>
@@ -30,16 +30,16 @@
       class="flex flex-col gap-6 shrink-0 relative"
       :class="[
         fullWidthImage ? 'w-full' : 'flex-1 pl-12',
-        contentHtml && variant === 'titleImage' ? 'gap-16' : 'gap-6'
+        descriptionRawHtml && variant === 'titleImage' ? 'gap-16' : 'gap-6'
       ]"
     >
       <div
-        v-if="contentHtml && variant === 'titleImage'"
+        v-if="descriptionRawHtml && variant === 'titleImage'"
         class="flex flex-col gap-3 w-full"
       >
         <div
           class="display-3 font-sora font-normal leading-[1.4] tracking-tight text-neutral-400"
-          v-html="contentHtml"
+          v-html="descriptionRawHtml"
         />
       </div>
 
@@ -106,7 +106,7 @@
       type: String,
       default: ''
     },
-    contentHtml: {
+    descriptionRawHtml: {
       type: String,
       default: ''
     },
