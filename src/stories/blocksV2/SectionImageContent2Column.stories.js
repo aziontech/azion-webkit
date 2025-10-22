@@ -9,9 +9,9 @@ export default {
       control: { type: 'text' },
       description: 'Title text displayed on the left side (sticky)'
     },
-    bullets: {
-      control: { type: 'object' },
-      description: 'Array of bullet point texts (can include HTML for bold text)'
+    descriptionRawMarkdown: {
+      control: { type: 'text' },
+      description: 'Markdown content that will be converted to HTML (supports headers, bold, italic, links, line breaks)'
     },
     image: {
       control: { type: 'text' },
@@ -58,13 +58,37 @@ const Template = (args) => ({
 export const Default = Template.bind({})
 Default.args = {
   title: 'Framework compatibility and development environment',
-  bullets: [
-    'The platform provides support for modern frameworks including Next.js, Vue, React, Angular, Gatsby, and Astro.',
-    'Functions provides comprehensive observability with execution traces and performance metrics for optimization.',
-    'The system supports WebAssembly execution, Node.js APIs, and WinterTC compatibility for flexible development.'
-  ],
+  descriptionRawMarkdown: `A plataforma oferece suporte para **frameworks modernos** incluindo Next.js, Vue, React, Angular, Gatsby e Astro.
+
+Functions fornece observabilidade abrangente com *traces de execução* e métricas de performance para otimização.
+
+O sistema suporta execução WebAssembly, APIs Node.js e compatibilidade WinterTC para desenvolvimento flexível.
+
+[Saiba mais sobre nossa documentação](https://docs.azion.com)`,
   image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop',
   alt: 'Development environment',
   height: 'default',
   variant: 'titleBulletsImage'
+}
+
+export const TitleImage = Template.bind({})
+TitleImage.args = {
+  title: 'Tecnologia de ponta para desenvolvedores',
+  descriptionRawMarkdown: `## Recursos avançados
+
+Nossa plataforma oferece **performance excepcional** com:
+
+- Edge computing distribuído globalmente
+- *Latência ultra-baixa* em todas as regiões
+- Escalabilidade automática e inteligente
+
+### Integração simples
+
+Conecte-se facilmente com suas ferramentas favoritas e comece a desenvolver em minutos.
+
+[Documentação completa](https://docs.azion.com) | [Tutoriais](https://learn.azion.com)`,
+  image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+  alt: 'Technology dashboard',
+  height: 'large',
+  variant: 'titleImage'
 }
