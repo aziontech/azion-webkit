@@ -1,4 +1,4 @@
-export interface ProductHeroButtonProps {
+export interface Hero2ColumnButtonProps {
   label: string
   size?: 'small' | 'large'
   type?: 'primary' | 'secondary' | 'link' | 'tertiary' | 'linkExternal'
@@ -8,13 +8,13 @@ export interface ProductHeroButtonProps {
   customClass?: string
 }
 
-export interface ProductHeroProps {
+export interface Hero2ColumnProps {
   overline?: string
   title: string
   subtitle?: string
-  buttons?: ProductHeroButtonProps[]
+  buttons?: Hero2ColumnButtonProps[]
   image?: string
   id?: string
 }
 
-export { default } from './ProductHero.vue'
+export { default } from './Hero2Column.vue'

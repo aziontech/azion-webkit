@@ -28,20 +28,20 @@
 <script setup lang="ts">
   import Button from '../../components/Button/Button.vue'
 
-  export interface GetStartedButton {
+  export interface CallToActionButton {
     label: string
     href: string
     type?: 'primary' | 'secondary' | 'link' | 'tertiary' | 'linkExternal' | 'linkSecondary'
     theme?: 'dark' | 'light'
   }
 
-  interface SectionGetStartedProps {
+  interface SectionCallToActionProps {
     title?: string
-    buttons?: GetStartedButton[]
+    buttons?: CallToActionButton[]
     id?: string
   }
 
-  const props = withDefaults(defineProps<SectionGetStartedProps>(), {
+  const props = withDefaults(defineProps<SectionCallToActionProps>(), {
     buttons: () => []
   })
 </script>

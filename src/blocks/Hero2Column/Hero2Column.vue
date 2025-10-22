@@ -69,7 +69,7 @@
   import { computed } from 'vue'
   import Button from '../../components/Button/Button.vue'
 
-  export interface ProductHeroButtonProps {
+  export interface Hero2ColumnButtonProps {
     label: string
     size?: 'small' | 'large'
     type?: 'primary' | 'secondary' | 'link' | 'tertiary' | 'linkExternal'
@@ -79,16 +79,16 @@
     customClass?: string
   }
 
-  interface ProductHeroProps {
+  interface Hero2ColumnProps {
     overline?: string
     title: string
     subtitle?: string
-    buttons?: ProductHeroButtonProps[]
+    buttons?: Hero2ColumnButtonProps[]
     image?: string
     id?: string
   }
 
-  const props = withDefaults(defineProps<ProductHeroProps>(), {
+  const props = withDefaults(defineProps<Hero2ColumnProps>(), {
     buttons: () => []
   })
 

@@ -39,18 +39,18 @@
 </template>
 
 <script setup lang="ts">
-  export interface ProductCard {
+  export interface Card3Column {
     icon: string
     title: string
     description: string
   }
 
-  interface SectionProductGridCardsProps {
-    cards?: ProductCard[]
+  interface SectionCards3ColumnProps {
+    cards?: Card3Column[]
     id?: string
   }
 
-  const props = withDefaults(defineProps<SectionProductGridCardsProps>(), {
+  const props = withDefaults(defineProps<SectionCards3ColumnProps>(), {
     cards: () => []
   })
 </script>
