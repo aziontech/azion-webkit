@@ -1,6 +1,6 @@
 {
   "main": "./index.ts",
   "browser": {
-    "./sfc": "./SectionGetStarted.vue"
+    "./sfc": "./SectionCallToAction.vue"
   }
 }

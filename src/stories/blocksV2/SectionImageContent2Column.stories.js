@@ -1,8 +1,8 @@
-import SectionStickyContent from '../../blocks/SectionStickyContent/SectionStickyContent.vue'
+import SectionImageContent2Column from '../../blocks/SectionImageContent2Column/SectionImageContent2Column.vue'
 
 export default {
-  title: 'Blocks/Rebranding/SectionStickyContent',
-  component: SectionStickyContent,
+  title: 'Blocks/Rebranding/SectionImageContent2Column',
+  component: SectionImageContent2Column,
   tags: ['autodocs'],
   argTypes: {
     title: {
@@ -48,11 +48,11 @@ export default {
 }
 
 const Template = (args) => ({
-  components: { SectionStickyContent },
+  components: { SectionImageContent2Column },
   setup() {
     return { args }
   },
-  template: `<SectionStickyContent v-bind="args" />`
+  template: `<SectionImageContent2Column v-bind="args" />`
 })
 
 export const Default = Template.bind({})

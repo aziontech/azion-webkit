@@ -1,16 +1,14 @@
-import ProductHero from '../../blocks/ProductHero/ProductHero.vue'
+import Hero2Column from '../../blocks/Hero2Column/Hero2Column.vue'
 
 export default {
-  title: 'Blocks/Rebranding/ProductHero',
-  component: ProductHero,
+  title: 'Blocks/Rebranding/Hero2Column',
+  component: Hero2Column,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
     backgrounds: {
       default: 'dark',
-      values: [
-        { name: 'dark', value: '#0a0a0a' }
-      ]
+      values: [{ name: 'dark', value: '#0a0a0a' }]
     }
   },
   decorators: [
@@ -25,7 +23,8 @@ export const Default = {
   args: {
     overline: 'Edge Computing',
     title: 'Build Faster with Azion Edge Platform',
-    subtitle: 'Deploy your applications at the edge with unmatched performance, security, and scalability. Join thousands of developers building the future of the web.',
+    subtitle:
+      'Deploy your applications at the edge with unmatched performance, security, and scalability. Join thousands of developers building the future of the web.',
     image: 'https://placehold.co/600x600/1a1a1a/f3652b?text=Product+Image',
     buttons: [
       {
