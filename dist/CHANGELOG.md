@@ -1,3 +1,9 @@
+## [1.238.1](https://github.com/aziontech/azion-webkit/compare/v1.238.0...v1.238.1) (2025-10-22)
+
+### Bug Fixes
+
+* improve markdown parsing to support multiline bold and italic formatting ([0ac272d](https://github.com/aziontech/azion-webkit/commit/0ac272d12faad1de95957b28c7409acb97f4cb03))
+
 ## [1.238.0](https://github.com/aziontech/azion-webkit/compare/v1.237.3...v1.238.0) (2025-10-22)
 
 ### Features
