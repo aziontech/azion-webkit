@@ -1,6 +1,6 @@
 {
   "main": "./index.ts",
   "browser": {
-    "./sfc": "./SectionClientsWithQuote.vue"
+    "./sfc": "./SectionLogosQuote2Column.vue"
   }
 }
