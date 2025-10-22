@@ -1,3 +1,9 @@
+## [1.237.1](https://github.com/aziontech/azion-webkit/compare/v1.237.0...v1.237.1) (2025-10-22)
+
+### Bug Fixes
+
+* rename descriptionRawHtml prop to descriptionRawMarkdown ([fb65e37](https://github.com/aziontech/azion-webkit/commit/fb65e37faf3e7795ee1ab7b471b75cf462f1e39a))
+
 ## [1.237.0](https://github.com/aziontech/azion-webkit/compare/v1.236.0...v1.237.0) (2025-10-22)
 
 ### Features
