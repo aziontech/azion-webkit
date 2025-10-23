@@ -25,7 +25,7 @@ export const Default = {
   args: {
     overline: 'Edge Computing',
     title: 'Build Faster with Azion Edge Platform',
-    subtitle: 'Deploy your applications at the edge with unmatched performance, security, and scalability. Join thousands of developers building the future of the web.',
+    subtitleMarkdown: 'Deploy your applications at the edge with **unmatched performance**, *security*, and scalability. Join thousands of developers building the future of the web with [our platform](https://azion.com).',
     image: 'https://placehold.co/600x600/1a1a1a/f3652b?text=Product+Image',
     buttons: [
       {
