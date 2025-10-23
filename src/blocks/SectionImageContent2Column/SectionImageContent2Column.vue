@@ -153,12 +153,12 @@
       .replace(/\\\)/g, ')')
     
     text = text
-      .replace(/^######\s+(.*$)/gim, '<h6 class="font-sora display-6">$1</h6>')
-      .replace(/^#####\s+(.*$)/gim, '<h5 class="font-sora display-5">$1</h5>')
-      .replace(/^####\s+(.*$)/gim, '<h4 class="font-sora display-4">$1</h4>')
-      .replace(/^###\s+(.*$)/gim, '<h3 class="font-sora display-3">$1</h3>')
-      .replace(/^##\s+(.*$)/gim, '<h2 class="font-sora display-2">$1</h2>')
-      .replace(/^#\s+(.*$)/gim, '<h1 class="font-sora display-1">$1</h1>')
+      .replace(/^######\s+(.*$)/gim, '<h6 class="font-sora display-6 mb-2">$1</h6>')
+      .replace(/^#####\s+(.*$)/gim, '<h5 class="font-sora display-5 mb-3">$1</h5>')
+      .replace(/^####\s+(.*$)/gim, '<h4 class="font-sora display-4 mb-4">$1</h4>')
+      .replace(/^###\s+(.*$)/gim, '<h3 class="font-sora display-3 mb-5">$1</h3>')
+      .replace(/^##\s+(.*$)/gim, '<h2 class="font-sora display-2 mb-6">$1</h2>')
+      .replace(/^#\s+(.*$)/gim, '<h1 class="font-sora display-1 mb-8">$1</h1>')
     
     text = text
       .replace(/^\s*[-*+]\s+(.+$)/gim, '<li class="font-sora">$1</li>')
@@ -168,7 +168,7 @@
     
     text = text
       .replace(/(<li.*?<\/li>)/gs, (match) => {
-        return '<ul class="font-sora">' + match + '</ul>'
+        return '<ul class="font-sora mb-4">' + match + '</ul>'
       })
     
     text = text
@@ -191,7 +191,7 @@
         return block.replace(/\n/g, ' ').trim()
       }
       
-      return '<p class="font-sora">' + block.replace(/\n/g, '<br>').trim() + '</p>'
+      return '<p class="font-sora mb-4">' + block.replace(/\n/g, '<br>').trim() + '</p>'
     })
     
     return processedBlocks
