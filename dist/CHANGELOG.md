@@ -1,3 +1,9 @@
+## [1.239.1](https://github.com/aziontech/azion-webkit/compare/v1.239.0...v1.239.1) (2025-10-23)
+
+### Bug Fixes
+
+* add margin bottom classes to markdown-generated HTML elements ([b41df87](https://github.com/aziontech/azion-webkit/commit/b41df87eef0b4b3d4192e6c892bc61cc6830c1ee))
+
 ## [1.239.0](https://github.com/aziontech/azion-webkit/compare/v1.238.1...v1.239.0) (2025-10-23)
 
 ### Features
