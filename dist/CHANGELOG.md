@@ -1,3 +1,9 @@
+## [1.239.0](https://github.com/aziontech/azion-webkit/compare/v1.238.1...v1.239.0) (2025-10-23)
+
+### Features
+
+* add font-sora class to all markdown-generated HTML elements ([41d845b](https://github.com/aziontech/azion-webkit/commit/41d845b85c0a8c4a13266813b6be89367a21538a))
+
 ## [1.238.1](https://github.com/aziontech/azion-webkit/compare/v1.238.0...v1.238.1) (2025-10-22)
 
 ### Bug Fixes
