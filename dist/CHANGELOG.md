@@ -1,3 +1,9 @@
+## [1.240.0](https://github.com/aziontech/azion-webkit/compare/v1.239.1...v1.240.0) (2025-10-23)
+
+### Features
+
+* add markdown parsing utility function ([4ed8215](https://github.com/aziontech/azion-webkit/commit/4ed8215627a2b7a1c7733d0c8c6b56f07b42a699))
+
 ## [1.239.1](https://github.com/aziontech/azion-webkit/compare/v1.239.0...v1.239.1) (2025-10-23)
 
 ### Bug Fixes
