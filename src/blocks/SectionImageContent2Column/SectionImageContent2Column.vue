@@ -153,34 +153,34 @@
       .replace(/\\\)/g, ')')
     
     text = text
-      .replace(/^######\s+(.*$)/gim, '<h6>$1</h6>')
-      .replace(/^#####\s+(.*$)/gim, '<h5>$1</h5>')
-      .replace(/^####\s+(.*$)/gim, '<h4>$1</h4>')
-      .replace(/^###\s+(.*$)/gim, '<h3>$1</h3>')
-      .replace(/^##\s+(.*$)/gim, '<h2>$1</h2>')
-      .replace(/^#\s+(.*$)/gim, '<h1>$1</h1>')
+      .replace(/^######\s+(.*$)/gim, '<h6 class="font-sora display-6">$1</h6>')
+      .replace(/^#####\s+(.*$)/gim, '<h5 class="font-sora display-5">$1</h5>')
+      .replace(/^####\s+(.*$)/gim, '<h4 class="font-sora display-4">$1</h4>')
+      .replace(/^###\s+(.*$)/gim, '<h3 class="font-sora display-3">$1</h3>')
+      .replace(/^##\s+(.*$)/gim, '<h2 class="font-sora display-2">$1</h2>')
+      .replace(/^#\s+(.*$)/gim, '<h1 class="font-sora display-1">$1</h1>')
     
     text = text
-      .replace(/^\s*[-*+]\s+(.+$)/gim, '<li>$1</li>')
+      .replace(/^\s*[-*+]\s+(.+$)/gim, '<li class="font-sora">$1</li>')
     
     text = text
-      .replace(/^\s*\d+\.\s+(.+$)/gim, '<li>$1</li>')
+      .replace(/^\s*\d+\.\s+(.+$)/gim, '<li class="font-sora">$1</li>')
     
     text = text
-      .replace(/(<li>.*<\/li>)/gs, (match) => {
-        return '<ul>' + match + '</ul>'
+      .replace(/(<li.*?<\/li>)/gs, (match) => {
+        return '<ul class="font-sora">' + match + '</ul>'
       })
     
     text = text
-      .replace(/\*\*\*([^*\n]+(?:\n[^*\n]*)*?)\*\*\*/gs, '<strong><em>$1</em></strong>')
-      .replace(/___([^_\n]+(?:\n[^_\n]*)*?)___/gs, '<strong><em>$1</em></strong>')
-      .replace(/\*\*([^*\n]+(?:\n[^*\n]*)*?)\*\*/gs, '<strong>$1</strong>')
-      .replace(/__([^_\n]+(?:\n[^_\n]*)*?)__/gs, '<strong>$1</strong>')
-      .replace(/\*([^*\n]+(?:\n[^*\n]*)*?)\*/gs, '<em>$1</em>')
-      .replace(/_([^_\n]+(?:\n[^_\n]*)*?)_/gs, '<em>$1</em>')
+      .replace(/\*\*\*([^*\n]+(?:\n[^*\n]*)*?)\*\*\*/gs, '<strong class="font-sora"><em class="font-sora">$1</em></strong>')
+      .replace(/___([^_\n]+(?:\n[^_\n]*)*?)___/gs, '<strong class="font-sora"><em class="font-sora">$1</em></strong>')
+      .replace(/\*\*([^*\n]+(?:\n[^*\n]*)*?)\*\*/gs, '<strong class="font-sora">$1</strong>')
+      .replace(/__([^_\n]+(?:\n[^_\n]*)*?)__/gs, '<strong class="font-sora">$1</strong>')
+      .replace(/\*([^*\n]+(?:\n[^*\n]*)*?)\*/gs, '<em class="font-sora">$1</em>')
+      .replace(/_([^_\n]+(?:\n[^_\n]*)*?)_/gs, '<em class="font-sora">$1</em>')
     
     text = text
-      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a class="font-sora" href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
     
     const blocks = text.split(/\n\s*\n/)
     
@@ -191,7 +191,7 @@
         return block.replace(/\n/g, ' ').trim()
       }
       
-      return '<p>' + block.replace(/\n/g, '<br>').trim() + '</p>'
+      return '<p class="font-sora">' + block.replace(/\n/g, '<br>').trim() + '</p>'
     })
     
     return processedBlocks
