@@ -27,17 +27,17 @@ export const Default = {
       {
         icon: 'pi pi-folder',
         title: 'Bullet benefit',
-        description: 'Melhore a performance, segurança e escalabilidade dos seus sites e aplicações web'
+        description: 'Melhore a **performance**, segurança e escalabilidade dos seus sites e aplicações web com *edge computing*.'
       },
       {
         icon: 'pi pi-folder',
         title: 'Bullet benefit',
-        description: 'Melhore a performance, segurança e escalabilidade dos seus sites e aplicações web'
+        description: 'Deploy aplicações com **latência ultra-baixa** e [documentação completa](https://docs.azion.com) disponível.'
       },
       {
         icon: 'pi pi-folder',
         title: 'Bullet benefit',
-        description: 'Melhore a performance, segurança e escalabilidade dos seus sites e aplicações web'
+        description: 'Escale automaticamente com *infraestrutura global* e **monitoramento em tempo real**.'
       }
     ]
   }
@@ -49,17 +49,17 @@ export const WithDifferentIcons = {
       {
         icon: 'pi pi-bolt',
         title: 'High Performance',
-        description: 'Deliver lightning-fast experiences with our global edge network and optimized infrastructure'
+        description: 'Deliver **lightning-fast experiences** with our global edge network and *optimized infrastructure*. [Learn more](https://azion.com/performance)'
       },
       {
         icon: 'pi pi-shield',
         title: 'Enterprise Security',
-        description: 'Protect your applications with advanced DDoS protection, WAF, and security features'
+        description: 'Protect your applications with:\n\n- **Advanced DDoS protection**\n- *WAF security rules*\n- Real-time monitoring'
       },
       {
         icon: 'pi pi-chart-line',
         title: 'Real-time Analytics',
-        description: 'Monitor and analyze your application performance with detailed insights and metrics'
+        description: 'Monitor and analyze your application performance with **detailed insights** and *comprehensive metrics*.'
       }
     ]
   }
