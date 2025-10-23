@@ -60,9 +60,8 @@
               {{ card.title }}
             </h3>
             
-            <p class="text-sm mb-12 text-neutral-400 leading-relaxed font-sora flex-grow">
-              {{ card.description }}
-            </p>
+            <div class="text-sm mb-12 text-neutral-400 leading-relaxed font-sora flex-grow" v-html="parseMarkdown(card.descriptionRawMarkdown)">
+            </div>
             
             <Button
               v-if="card.link"
@@ -84,16 +83,17 @@
 <script setup lang="ts">
   import { Swiper, SwiperSlide } from 'swiper/vue'
   import { Navigation } from 'swiper/modules'
-  import { ref } from 'vue'
+  import { ref, computed } from 'vue'
   import Button from '../../components/Button/Button.vue'
   import 'swiper/css'
   import 'swiper/css/navigation'
+  import { parseMarkdown } from '../../utils/markdown'
 
   export interface CarouselCard {
     tag?: string
     tagIcon?: string
     title: string
-    description: string
+    descriptionRawMarkdown: string
     link?: string
     linkLabel?: string
   }
