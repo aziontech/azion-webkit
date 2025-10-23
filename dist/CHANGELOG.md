@@ -1,3 +1,45 @@
+## [1.240.0](https://github.com/aziontech/azion-webkit/compare/v1.239.1...v1.240.0) (2025-10-23)
+
+### Features
+
+* add markdown parsing utility function ([4ed8215](https://github.com/aziontech/azion-webkit/commit/4ed8215627a2b7a1c7733d0c8c6b56f07b42a699))
+
+## [1.239.1](https://github.com/aziontech/azion-webkit/compare/v1.239.0...v1.239.1) (2025-10-23)
+
+### Bug Fixes
+
+* add margin bottom classes to markdown-generated HTML elements ([b41df87](https://github.com/aziontech/azion-webkit/commit/b41df87eef0b4b3d4192e6c892bc61cc6830c1ee))
+
+## [1.239.0](https://github.com/aziontech/azion-webkit/compare/v1.238.1...v1.239.0) (2025-10-23)
+
+### Features
+
+* add font-sora class to all markdown-generated HTML elements ([41d845b](https://github.com/aziontech/azion-webkit/commit/41d845b85c0a8c4a13266813b6be89367a21538a))
+
+## [1.238.1](https://github.com/aziontech/azion-webkit/compare/v1.238.0...v1.238.1) (2025-10-22)
+
+### Bug Fixes
+
+* improve markdown parsing to support multiline bold and italic formatting ([0ac272d](https://github.com/aziontech/azion-webkit/commit/0ac272d12faad1de95957b28c7409acb97f4cb03))
+
+## [1.238.0](https://github.com/aziontech/azion-webkit/compare/v1.237.3...v1.238.0) (2025-10-22)
+
+### Features
+
+* enhance markdown parser with escaped characters and HTML entity support ([05af8ae](https://github.com/aziontech/azion-webkit/commit/05af8aeee826de21cd16bd389020b23ee1983738))
+
+## [1.237.3](https://github.com/aziontech/azion-webkit/compare/v1.237.2...v1.237.3) (2025-10-22)
+
+### Bug Fixes
+
+* add markdown parser to SectionImageContent2Column component ([46f7d3b](https://github.com/aziontech/azion-webkit/commit/46f7d3b4553efe62c878836a4efd3a75e4ffedc9))
+
+## [1.237.2](https://github.com/aziontech/azion-webkit/compare/v1.237.1...v1.237.2) (2025-10-22)
+
+### Bug Fixes
+
+* rename component files and update HTML references from raw to markdown ([1b88d9a](https://github.com/aziontech/azion-webkit/commit/1b88d9af48007aa08225823fb40bf0177045574a))
+
 ## [1.237.1](https://github.com/aziontech/azion-webkit/compare/v1.237.0...v1.237.1) (2025-10-22)
 
 ### Bug Fixes

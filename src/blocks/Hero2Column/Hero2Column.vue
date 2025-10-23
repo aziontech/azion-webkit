@@ -19,9 +19,11 @@
           <h1 class="font-sora leading-tight text-pretty display-2 md:display-1">
             {{ title }}
           </h1>
-          <p class="text-xs lg:text-base max-w-sm md:max-w-7xl text-neutral-200 font-sora mx-auto lg:mx-0">
-            {{ subtitle }}
-          </p>
+          <div 
+            v-if="descriptionRawMarkdown"
+            class="text-xs lg:text-base max-w-sm md:max-w-7xl text-neutral-200 font-sora mx-auto lg:mx-0"
+            v-html="parsedSubtitle"
+          />
         </div>
 
         <div
@@ -68,6 +70,7 @@
 <script setup lang="ts">
   import { computed } from 'vue'
   import Button from '../../components/Button/Button.vue'
+  import { parseMarkdown } from '../../utils/markdown'
 
   export interface Hero2ColumnButtonProps {
     label: string
@@ -82,7 +85,7 @@
   interface Hero2ColumnProps {
     overline?: string
     title: string
-    subtitle?: string
+    descriptionRawMarkdown?: string
     buttons?: Hero2ColumnButtonProps[]
     image?: string
     id?: string
@@ -94,5 +97,9 @@
 
   const limitedButtons = computed(() => {
     return props.buttons?.slice(0, 3) || []
+  })
+
+  const parsedSubtitle = computed(() => {
+    return parseMarkdown(props.descriptionRawMarkdown || '')
   })
 </script>

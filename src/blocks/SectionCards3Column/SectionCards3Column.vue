@@ -29,9 +29,10 @@
             <span :class="card.icon" class="text-orange-500 text-xl flex-shrink-0"></span>
             <h3 class="display-3 text-white font-sora">{{ card.title }}</h3>
           </div>
-          <p class="text-xs text-neutral-400 leading-relaxed font-sora">
-            {{ card.description }}
-          </p>
+          <div 
+            class="text-xs text-neutral-400 leading-relaxed font-sora"
+            v-html="parseMarkdown(card.descriptionRawMarkdown)"
+          />
         </div>
       </div>
     </div>
@@ -39,10 +40,12 @@
 </template>
 
 <script setup lang="ts">
+  import { parseMarkdown } from '../../utils/markdown'
+
   export interface Card3Column {
     icon: string
     title: string
-    description: string
+    descriptionRawMarkdown: string
   }
 
   interface SectionCards3ColumnProps {

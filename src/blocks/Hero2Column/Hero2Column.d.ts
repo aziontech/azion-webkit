@@ -11,7 +11,8 @@ export interface Hero2ColumnButtonProps {
 export interface Hero2ColumnProps {
   overline?: string
   title: string
-  subtitle?: string
+  /** Markdown content that will be converted to HTML (supports headers, bold, italic, links, line breaks) */
+  subtitleMarkdown?: string
   buttons?: Hero2ColumnButtonProps[]
   image?: string
   id?: string

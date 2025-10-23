@@ -1,7 +1,7 @@
 export interface SectionImageContent2ColumnProps {
   title?: string
-  /** Content block (supports HTML via v-html) */
-  contentHtml?: string
+  /** Markdown content that will be converted to HTML (supports headers, bold, italic, links, line breaks) */
+  descriptionRawMarkdown?: string
   image: string
   alt?: string
   height?: 'default' | 'large'
