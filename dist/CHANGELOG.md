@@ -1,3 +1,9 @@
+## [1.240.2](https://github.com/aziontech/azion-webkit/compare/v1.240.1...v1.240.2) (2025-10-24)
+
+### Bug Fixes
+
+* correct markdown-service import paths in components ([03ae98f](https://github.com/aziontech/azion-webkit/commit/03ae98f5df9a504e5c43c12a6920d5d4bd56d099))
+
 ## [1.240.1](https://github.com/aziontech/azion-webkit/compare/v1.240.0...v1.240.1) (2025-10-24)
 
 ### Bug Fixes
