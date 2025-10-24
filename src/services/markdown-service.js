@@ -48,7 +48,7 @@ export const parseMarkdown = (markdown) => {
     .replace(/_([^_\n]+(?:\n[^_\n]*)*?)_/gs, '<em class="font-sora">$1</em>')
   
   text = text
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a class="font-sora text-violet-500 underline hover:text-violet-400 transition-colors" href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a class="font-sora underline transition-colors" style="color: #8B5CF6; text-decoration-color: #8B5CF6;" onmouseover="this.style.color=\'#7C3AED\'; this.style.textDecorationColor=\'#7C3AED\';" onmouseout="this.style.color=\'#8B5CF6\'; this.style.textDecorationColor=\'#8B5CF6\';" href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
   
   const blocks = text.split(/\n\s*\n/)
   
