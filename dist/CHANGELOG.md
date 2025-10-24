@@ -1,3 +1,9 @@
+## [1.240.3](https://github.com/aziontech/azion-webkit/compare/v1.240.2...v1.240.3) (2025-10-24)
+
+### Bug Fixes
+
+* update markdown service import paths ([2589441](https://github.com/aziontech/azion-webkit/commit/258944178df029c9d4bfbb4cda18f0a60024f604))
+
 ## [1.240.2](https://github.com/aziontech/azion-webkit/compare/v1.240.1...v1.240.2) (2025-10-24)
 
 ### Bug Fixes
