@@ -1,3 +1,9 @@
+## [1.240.4](https://github.com/aziontech/azion-webkit/compare/v1.240.3...v1.240.4) (2025-10-24)
+
+### Bug Fixes
+
+* enhance link styling in markdown parser ([7ddd7fb](https://github.com/aziontech/azion-webkit/commit/7ddd7fb56828d3b8a66ddc9b992fe0f5edaf02ce)), closes [#8B5CF6](https://github.com/aziontech/azion-webkit/issues/8B5CF6) [#7C3AED](https://github.com/aziontech/azion-webkit/issues/7C3AED)
+
 ## [1.240.3](https://github.com/aziontech/azion-webkit/compare/v1.240.2...v1.240.3) (2025-10-24)
 
 ### Bug Fixes
