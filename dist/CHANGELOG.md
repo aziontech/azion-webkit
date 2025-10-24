@@ -1,3 +1,9 @@
+## [1.240.1](https://github.com/aziontech/azion-webkit/compare/v1.240.0...v1.240.1) (2025-10-24)
+
+### Bug Fixes
+
+* empty commit ([410dd13](https://github.com/aziontech/azion-webkit/commit/410dd136eb5c2c905ced65cfc994165fc10ba799))
+
 ## [1.240.0](https://github.com/aziontech/azion-webkit/compare/v1.239.1...v1.240.0) (2025-10-23)
 
 ### Features
