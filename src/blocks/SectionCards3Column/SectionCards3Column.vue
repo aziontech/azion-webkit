@@ -5,16 +5,15 @@
   >
     <div
       v-if="cards && cards.length > 0"
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+      class="grid grid-cols-1 lg:grid-cols-3 p-4 md:p-12"
     >
       <div
-        v-for="(card, index) in cards.slice(0, 3)"
+        v-for="(card, index) in cards"
         :key="index"
         :class="[
           'p-1 border border-neutral-900 relative',
           `before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 before:block`,
-          `after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 after:block`,
-          index === cards.slice(0, 3).length - 1 ? '' : 'md:after:hidden'
+          (index + 1) % 3 === 0 ? `after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 after:block` : '',
         ]"
       >
         <div 
@@ -22,7 +21,7 @@
             'h-full w-full p-6 flex flex-col gap-2',
             `before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:left-0`,
             `after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:right-0`,
-            index === cards.slice(0, 3).length - 1 ? 'before:block after:block' : 'before:hidden md:before:block after:hidden'
+            (index + 1) % 3 === 0 ? 'before:block after:block' : 'before:hidden md:before:block after:hidden'
           ]"
         >
           <div class="flex items-center gap-2">

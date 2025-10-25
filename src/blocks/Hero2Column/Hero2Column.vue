@@ -1,13 +1,14 @@
 <template>
   <section
     :id="id"
-    class="text-white relative overflow-hidden max-w-xl xxxl:max-w-xxl mx-auto bg-hidden md:bg-[url('@/assets/svg/asset-bg-texture.svg')] bg-center bg-cover md:py-24"
+    class="text-white relative overflow-hidden w-full mx-auto md:py-24"
+    style="background-image: radial-gradient(circle, #CEC9C940 1.5px, #0000 0); background-size: 3rem 3rem; background-position: 0 0;"
   >
     <div
-      class="mx-auto grid gap-6 xl:gap-6 items-center lg:grid-cols-2 relative z-10 p-6 md:p-0"
+      class="flex items-center max-w-xl xxxl:max-w-xxl mx-auto relative z-10 p-6 md:p-0"
     >
       <div
-        class="flex flex-col gap-3 md:gap-4 lg:gap-5 text-center lg:text-left"
+        class="flex w-1/2 p-12 flex-col gap-3 md:gap-4 lg:gap-5 text-center lg:text-left"
       >
         <div class="flex flex-col gap-2 md:gap-3">
           <p
@@ -21,7 +22,7 @@
           </h1>
           <div 
             v-if="descriptionRawMarkdown"
-            class="text-xs lg:text-base max-w-sm md:max-w-7xl text-neutral-200 font-sora mx-auto lg:mx-0"
+            class="text-xs text-balance lg:text-base max-w-sm md:max-w-7xl text-neutral-200 font-sora mx-auto lg:mx-0"
             v-html="parsedSubtitle"
           />
         </div>
@@ -42,7 +43,7 @@
         </div>
       </div>
       <div
-        class="relative flex items-center justify-center"
+        class="relative flex w-1/2 border border-neutral-900 p-12 items-center justify-center"
       >
         <div
           v-if="image"
@@ -69,7 +70,7 @@
 
 <script setup lang="ts">
   import { computed } from 'vue'
-  import Button from '../../components/Button/Button.vue'
+  import Button from '../../components/Button'
   import { parseMarkdown } from '../../src/services/markdown-service'
 
   export interface Hero2ColumnButtonProps {
@@ -103,3 +104,4 @@
     return parseMarkdown(props.descriptionRawMarkdown || '')
   })
 </script>
+

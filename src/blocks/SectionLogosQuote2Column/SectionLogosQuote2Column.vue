@@ -1,7 +1,7 @@
 <template>
   <section
     :id="id"
-    class="text-white relative max-w-xl xxxl:max-w-xxl mx-auto py-12 px-6 md:px-0 mb-40 "
+    class="text-white relative max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12 mb-40 "
   >
     <div class="flex flex-col md:flex-row justify-between mb-6 md:mb-8">
       <h2 v-if="title" class="display-2 font-normal tracking-tight text-gray-200 w-full">
@@ -54,7 +54,7 @@
 
 <script setup lang="ts">
   import ProductQuote from '../../components/ProductQuote/ProductQuote.vue'
-  import Button from '../../components/Button/Button.vue'
+  import Button from '../../components/Button'
 
   export interface LogoQuote2Column {
     logo: string
