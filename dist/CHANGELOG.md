@@ -1,3 +1,9 @@
+## [1.241.0](https://github.com/aziontech/azion-webkit/compare/v1.240.4...v1.241.0) (2025-10-25)
+
+### Features
+
+* redesign layout and styling of hero and section components ([4bd3ec9](https://github.com/aziontech/azion-webkit/commit/4bd3ec9127dd473abd1d83a0791b454749b4f252))
+
 ## [1.240.4](https://github.com/aziontech/azion-webkit/compare/v1.240.3...v1.240.4) (2025-10-24)
 
 ### Bug Fixes
