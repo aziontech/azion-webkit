@@ -8,9 +8,7 @@ export default {
     layout: 'fullscreen',
     backgrounds: {
       default: 'dark',
-      values: [
-        { name: 'dark', value: '#0a0a0a' }
-      ]
+      values: [{ name: 'dark', value: '#0a0a0a' }]
     }
   },
   decorators: [
@@ -71,7 +69,8 @@ export const TwoCards = {
       {
         icon: 'pi pi-code',
         title: 'Developer Friendly',
-        description: 'Build and deploy with powerful APIs, CLI tools, and comprehensive documentation'
+        description:
+          'Build and deploy with powerful APIs, CLI tools, and comprehensive documentation'
       },
       {
         icon: 'pi pi-globe',
