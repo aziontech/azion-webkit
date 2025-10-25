@@ -1,96 +1,69 @@
 <template>
-  <section class="flex gap-12 items-start relative w-full max-w-xl xxxl:max-w-xxl mx-auto mb-40">
-    <div
-      v-if="title || descriptionRawMarkdown"
-      class="flex flex-col gap-5 sticky top-20 shrink-0"
-      :class="[
-        variant === 'titleBulletsImage' ? 'w-[335px] pb-0' : 'w-[509px] pb-0',
-        descriptionRawMarkdown && variant === 'titleBulletsImage' ? 'h-auto' : 'h-[305px]'
-      ]"
-    >
-      <h2
-        v-if="title"
-        class="display-2 font-normal tracking-tight text-gray-200 w-full"
-      >
-        {{ title }}
-      </h2>
-
+  <section  class="p-4 md:p-12 max-w-xl xxxl:max-w-xxl mx-auto ">
+    <div class="flex flex-col md:flex-row border-neutral-900 border items-start relative w-full mb-40 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:left-0">
       <div
-        v-if="descriptionRawMarkdown && variant === 'titleBulletsImage'"
-        class="flex flex-col gap-3 w-full max-w-[392px] py-3 pr-3"
+        v-if="title || descriptionRawMarkdown"
+        class="flex flex-col md:sticky top-20 gap-5 shrink-0 w-full md:w-1/2 p-12"
       >
-        <div
-          class="display-3 font-sora font-normal leading-[1.4] tracking-tight text-neutral-400"
-          v-html="parsedMarkdown"
-        />
-      </div>
-    </div>
+          <h2
+            v-if="title"
+            class="display-2 font-normal tracking-tight text-gray-200 w-full"
+          >
+            {{ title }}
+          </h2>
 
-    <div
-      class="flex flex-col gap-6 shrink-0 relative"
-      :class="[
-        fullWidthImage ? 'w-full' : 'flex-1 pl-12',
-        descriptionRawMarkdown && variant === 'titleImage' ? 'gap-16' : 'gap-6'
-      ]"
-    >
-      <div
-        v-if="descriptionRawMarkdown && variant === 'titleImage'"
-        class="flex flex-col gap-3 w-full"
-      >
-        <div
-          class="display-3 font-sora font-normal leading-[1.4] tracking-tight text-neutral-400"
-          v-html="parsedMarkdown"
-        />
-      </div>
-
-      <div
-        class="border-2 border-neutral-900 relative w-full"
-        :class="height === 'large' ? 'h-[726px]' : 'h-[378px]'"
-      >
-        <div class="overflow-hidden relative w-full h-full">
-          <div class="absolute bottom-0 left-0 w-full flex justify-between h-1 z-10">
-            <div class="w-1 h-1 bg-neutral-300" />
-            <div class="w-1 h-1 bg-neutral-300" />
+          <div
+            v-if="descriptionRawMarkdown"
+            class="flex flex-col gap-3 w-full py-3 pr-3 "
+          >
+            <div
+              class="text-base font-sora font-normal leading-[1.4] tracking-tight text-neutral-400"
+              v-html="parsedMarkdown"
+            />
           </div>
+      </div>
 
-          <div class="absolute inset-0 flex items-start justify-center overflow-hidden">
-            <div class="flex-1 relative h-full min-h-0 min-w-0">
-              <div class="absolute -left-0.5 -top-0.5 w-full overflow-hidden flex flex-col items-center">
-                <div class="h-[2000px] w-full relative bg-black">
-                  <div
-                    v-for="i in 53"
-                    :key="`h-${i}`"
-                    class="absolute left-0 w-[1976px] h-0.5 bg-neutral-900"
-                    :style="{ top: `${(i - 1) * 38}px` }"
-                  />
-                  <div
-                    v-for="i in 53"
-                    :key="`v-${i}`"
-                    class="absolute top-0 w-0.5 h-[1976px] bg-neutral-900"
-                    :style="{ left: `${(i - 1) * 38}px` }"
-                  />
-                </div>
-              </div>
+      <div
+        class="flex flex-col gap-6 shrink-0 relative w-full md:w-1/2"
+      >
+        <div
+          class="border-2 border-neutral-900 relative w-full"
+          :class="height === 'large' ? 'h-[726px]' : 'h-[378px]'"
+        >
+          <div class="overflow-hidden relative w-full h-full">
+            <div class="absolute bottom-0 left-0 w-full flex justify-between h-1 z-10">
+              <div class="w-1 h-1 bg-neutral-300" />
+              <div class="w-1 h-1 bg-neutral-300" />
+            </div>
 
-              <div v-if="image"
-                class="absolute left-1/2 -translate-x-1/2 -top-1 border border-neutral-800 rounded-lg overflow-hidden"
-                :class="height === 'large' ? 'h-[379px] w-[641px]' : 'h-[379px] w-[641px]'"
-                :style="{
-                  backgroundImage: 'linear-gradient(90deg, rgba(243, 101, 43, 0.16) 6.82%, rgba(241, 141, 85, 0.6) 47.72%, rgba(66, 74, 82, 1) 81.19%), linear-gradient(90deg, rgba(17, 17, 17, 1) 0%, rgba(17, 17, 17, 1) 100%)'
-                }"
-              >
-                <img
-                  :src="image"
-                  :alt="alt"
-                  class="w-full h-full object-cover"
-                />
+            <div class="absolute inset-0 flex items-start justify-center overflow-hidden">
+              <div class="flex-1 relative h-full min-h-0 min-w-0">
+                <div class="absolute h-full -left-0.5 -bottom-0.5 w-full overflow-hidden flex flex-col items-center">
+                  <div 
+                    class="h-1/2 w-full relative"
+                    :style="backgroundImageStyle"
+                  />
+                  </div>  
+                  <div v-if="image"
+                    class="absolute left-1/2 -translate-x-1/2 -bottom-1 border border-neutral-800 rounded-lg overflow-hidden"
+                    :class="height === 'large' ? 'h-4/5 w-11/12' : 'h-[379px] w-[641px]'"
+                    :style="{
+                      backgroundImage: 'linear-gradient(90deg, rgba(243, 101, 43, 0.16) 6.82%, rgba(241, 141, 85, 0.6) 47.72%, rgba(66, 74, 82, 1) 81.19%), linear-gradient(90deg, rgba(17, 17, 17, 1) 0%, rgba(17, 17, 17, 1) 100%)'
+                    }"
+                  >
+                    <img
+                      :src="image"
+                      :alt="alt"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
               </div>
             </div>
-          </div>
 
-          <div class="absolute top-0 left-0 w-full flex justify-between h-1 z-10">
-            <div class="w-1 h-1 bg-neutral-300" />
-            <div class="w-1 h-1 bg-neutral-300" />
+            <div class="absolute top-0 left-0 w-full flex justify-between h-1 z-10">
+              <div class="w-1 h-1 bg-neutral-300" />
+              <div class="w-1 h-1 bg-neutral-300" />
+            </div>
           </div>
         </div>
       </div>
@@ -128,10 +101,46 @@
       type: String,
       default: 'titleBulletsImage',
       validator: (value) => ['titleBulletsImage', 'titleImage', 'imageOnly'].includes(value)
+    },
+    backgroundStyle: {
+      type: String,
+      default: 'grid',
+      validator: (value) => ['grid', 'dots'].includes(value)
     }
   })
 
   const parsedMarkdown = computed(() => {
     return parseMarkdown(props.descriptionRawMarkdown)
   })
+
+  const backgroundImageStyle = computed(() => {
+    if (props.backgroundStyle === 'dots') {
+      return `
+        background-color: #000000;
+        background-image: 
+          linear-gradient(to top, #000 0%, rgba(23,23,23,0) 100%),
+          radial-gradient(circle, #CEC9C9 1.5px, #0000 0);
+        background-size: 100% 100%, 3rem 3rem;
+        background-repeat: no-repeat, repeat;
+        background-position: 0 0, 0 0;
+      `
+    } else {
+      return `
+        background-color: #000000;
+        background-image: 
+          linear-gradient(to top, #000 0%, rgba(23,23,23,0) 100%),
+          linear-gradient(90deg, transparent 47px, #404040 47px, #404040 48px, transparent 48px),
+          linear-gradient(180deg, transparent 47px, #404040 47px, #404040 48px, transparent 48px);
+        background-size: 100% 100%, 48px 48px, 48px 48px;
+        background-repeat: no-repeat, repeat, repeat;
+      `
+    }
+  })
 </script>
+
+<style scoped>
+:root {
+  --ds-background-200: #171717;
+  --ds-gray-300: #404040;
+}
+</style>
