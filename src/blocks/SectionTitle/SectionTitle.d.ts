@@ -1,29 +1,26 @@
 export interface SectionTitleProps {
   /**
-   * Button label text displayed at the bottom of the card
+   * Small label text displayed above the title
    */
-  label?: string
+  overline?: string
   /**
-   * The main title text displayed at the top of the card
+   * Main title text displayed prominently
    */
   title: string
   /**
-   * The description text displayed below the title with hover animation
+   * Description text displayed next to or below the title
    */
-  description: string
+  description?: string
   /**
-   * Optional URL to make the card clickable. When provided, the card becomes a link with hover effects
+   * Alignment of the section content
+   * @defaultValue 'default'
    */
-  href?: string
+  align?: 'default' | 'center'
   /**
-   * Icon class name to display at the top of the card (e.g., 'pi pi-cloud', 'pi pi-shield')
+   * HTML tag for the title element
+   * @defaultValue 'h2'
    */
-  icon?: string
-  /**
-   * Link target attribute (only applies when href is provided)
-   * @defaultValue '_self'
-   */
-  target?: '_blank' | '_self'
+  titleTag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
 
 export { default } from './SectionTitle.vue'
