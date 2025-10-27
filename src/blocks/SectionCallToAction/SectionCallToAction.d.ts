@@ -6,10 +6,19 @@ export interface CallToActionButton {
 }
 
 export interface SectionCallToActionProps {
-  title?: string
-  subtitle?: string
-  buttons?: CallToActionButton[]
   id?: string
+  cta?: {
+    overline?: string
+    title?: string
+    descriptionRawMarkdown?: string
+    linkLabel?: string
+    link?: string
+  }
+  content?: {
+    overline?: string
+    descriptionRawMarkdown?: string
+    title?: string
+  }
 }
 
 export { default } from './SectionCallToAction.vue'
