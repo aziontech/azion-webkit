@@ -1,3 +1,17 @@
+## [1.246.0](https://github.com/aziontech/azion-webkit/compare/v1.245.1...v1.246.0) (2025-10-27)
+
+### Features
+
+* grid pattern ([5b79a5a](https://github.com/aziontech/azion-webkit/commit/5b79a5a21322312515ff96b8d2cb6cff6fd86b1b))
+* Section Content 3 columns ([14457c6](https://github.com/aziontech/azion-webkit/commit/14457c6ae74befb990b6bf2ad8f1e70252a25682))
+* section title ([c2c43b7](https://github.com/aziontech/azion-webkit/commit/c2c43b74ac5c62eccc65afa71896f66963dafafd))
+* use grid pattern inside Section Content Images 2 Columns ([6a6023f](https://github.com/aziontech/azion-webkit/commit/6a6023f657383bb80087993e372ec189e502c8ee))
+
+### Bug Fixes
+
+* Section Title types ([7f60598](https://github.com/aziontech/azion-webkit/commit/7f605985d6385e73ee71d300bfb419fb46c698c0))
+* storybook names ([68601e3](https://github.com/aziontech/azion-webkit/commit/68601e302163cda09bd46387e74c79b6efa3648d))
+
 ## [1.245.1](https://github.com/aziontech/azion-webkit/compare/v1.245.0...v1.245.1) (2025-10-27)
 
 ### Bug Fixes
