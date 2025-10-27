@@ -1,3 +1,16 @@
+## [1.244.0](https://github.com/aziontech/azion-webkit/compare/v1.243.1...v1.244.0) (2025-10-27)
+
+### Features
+
+* add comprehensive SectionCallToAction stories ([933e580](https://github.com/aziontech/azion-webkit/commit/933e580e8e948533f954b1ee80298de3cc314895))
+* improve Hero2Column responsive layout ([2ade5b5](https://github.com/aziontech/azion-webkit/commit/2ade5b5eddd353499fad4b619675455d961a0c96))
+* update SectionCallToAction interface structure ([f3168ee](https://github.com/aziontech/azion-webkit/commit/f3168eea0b179d70f9851886a958243d84ebe818))
+
+### Bug Fixes
+
+* correct import path for markdown service in Hero2Column ([e52f2ad](https://github.com/aziontech/azion-webkit/commit/e52f2ad7f7d0f143766e8c6fbcc289023f3150f1))
+* correct markdown service import path ([1ff6823](https://github.com/aziontech/azion-webkit/commit/1ff6823c6d615fe06e113298c9cabce884908a88))
+
 ## [1.243.1](https://github.com/aziontech/azion-webkit/compare/v1.243.0...v1.243.1) (2025-10-27)
 
 ### Bug Fixes
