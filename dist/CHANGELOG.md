@@ -1,3 +1,9 @@
+## [1.245.1](https://github.com/aziontech/azion-webkit/compare/v1.245.0...v1.245.1) (2025-10-27)
+
+### Bug Fixes
+
+* remove BigNumbers component and fix import path ([0333336](https://github.com/aziontech/azion-webkit/commit/033333670fbf451af32df6fd02e298fa6c557074))
+
 ## [1.245.0](https://github.com/aziontech/azion-webkit/compare/v1.244.0...v1.245.0) (2025-10-27)
 
 ### Features
