@@ -4,7 +4,6 @@ export interface SectionImageContent2ColumnProps {
   descriptionRawMarkdown?: string
   image: string
   alt?: string
-  height?: 'default' | 'large'
   backgroundStyle?: 'grid' | 'dots'
   /** Controls layout distribution: true = 50/50 split, false = 1/3 text + 2/3 image */
   fiftyFifty?: boolean

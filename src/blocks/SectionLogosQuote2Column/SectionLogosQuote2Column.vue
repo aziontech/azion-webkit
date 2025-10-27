@@ -20,13 +20,14 @@
         v-if="clients && clients.length > 0"
         class="p-1 border relative w-full md:w-1/2 border-neutral-900 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:left-0 md:after:block after:hidden"
       >
-        <div class="h-full w-full p-12 flex gap-y-4 md:gap-y-0 flex-wrap items-center justify-items-center before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:right-0 before:hidden after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 md:after:hidden">
+        <div class="h-full w-full p-12 grid grid-cols-4 grid-rows-3 gap-4 place-items-center before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:right-0 before:hidden after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 md:after:hidden">
           <div
             v-for="(client, index) in clients"
             :key="index"
-            class="flex items-center justify-center h-12 md:h-16 w-1/4"
+            class="flex items-center justify-center h-12 md:h-16"
           >
             <img
+              v-if="client.logo"
               :src="client.logo"
               :alt="client.alt || 'Client logo'"
               class="max-h-full w-auto object-contain brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300"

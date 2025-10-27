@@ -29,8 +29,7 @@
         :class="imageBlockClasses"
       >
         <div
-          class="border-2 border-neutral-900 relative w-full"
-          :class="height === 'large' ? 'h-[726px]' : 'h-[378px]'"
+          class="border-2 border-neutral-900 relative w-full h-[600px]"
         >
           <div class="overflow-hidden relative w-full h-full">
             <div class="absolute bottom-0 left-0 w-full flex justify-between h-1 z-10">
@@ -47,8 +46,7 @@
                   />
                   </div>  
                   <div v-if="image"
-                    class="absolute left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 border border-neutral-800 rounded-lg overflow-hidden"
-                    :class="height === 'large' ? 'h-4/5 w-11/12' : 'h-[379px] w-[641px]'"
+                    class="absolute left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 border border-neutral-800 rounded-lg overflow-hidden h-4/5 w-11/12"
                     :style="{
                       backgroundImage: 'linear-gradient(90deg, rgba(243, 101, 43, 0.16) 6.82%, rgba(241, 141, 85, 0.6) 47.72%, rgba(66, 74, 82, 1) 81.19%), linear-gradient(90deg, rgba(17, 17, 17, 1) 0%, rgba(17, 17, 17, 1) 100%)'
                     }"
@@ -93,11 +91,6 @@
     alt: {
       type: String,
       default: ''
-    },
-    height: {
-      type: String,
-      default: 'default',
-      validator: (value) => ['default', 'large'].includes(value)
     },
     backgroundStyle: {
       type: String,

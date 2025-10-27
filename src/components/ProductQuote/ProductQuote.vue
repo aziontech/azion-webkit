@@ -12,7 +12,7 @@
         <img
           :src="logo"
           :alt="logoAlt || 'Company logo'"
-          class="h-8 md:h-10 w-auto object-contain"
+          class="h-5 md:h-6 w-auto object-contain"
           :class="logoClass"
         />
       </div>
@@ -25,17 +25,17 @@
 
       <div
         v-if="author || role"
-        class="flex gap-1 w-full justify-between text-neutral-300"
+        class="flex gap-8 w-full justify-end text-neutral-300"
       >
         <p
           v-if="author"
-          class="font-proto-mono text-base"
+          class="font-proto-mono text-sm text-orange-500"
         >
           {{ author }}
         </p>
         <p
           v-if="role"
-          class="font-proto-mono text-base"
+          class="font-proto-mono text-sm text-orange-500"
         >
           {{ role }}
         </p>
