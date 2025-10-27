@@ -1,3 +1,9 @@
+## [1.247.0](https://github.com/aziontech/azion-webkit/compare/v1.246.0...v1.247.0) (2025-10-27)
+
+### Features
+
+* enhance visual components and layout styling ([df33d0e](https://github.com/aziontech/azion-webkit/commit/df33d0ef07fa2f6e67344a39c6cac62934782ede))
+
 ## [1.246.0](https://github.com/aziontech/azion-webkit/compare/v1.245.1...v1.246.0) (2025-10-27)
 
 ### Features
