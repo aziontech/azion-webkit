@@ -1,3 +1,9 @@
+## [1.242.0](https://github.com/aziontech/azion-webkit/compare/v1.241.0...v1.242.0) (2025-10-27)
+
+### Features
+
+* card link component ([6015d51](https://github.com/aziontech/azion-webkit/commit/6015d512410bd3f733acaf5d13581fabdd240dc0))
+
 ## [1.241.0](https://github.com/aziontech/azion-webkit/compare/v1.240.4...v1.241.0) (2025-10-25)
 
 ### Features
