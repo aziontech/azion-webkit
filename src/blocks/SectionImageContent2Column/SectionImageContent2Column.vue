@@ -1,9 +1,11 @@
 <template>
   <section  class="p-4 md:p-12 max-w-xl xxxl:max-w-xxl mx-auto ">
-    <div class="flex flex-col md:flex-row border-neutral-900 border items-start relative w-full mb-40 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:left-0">
+    <div class="flex flex-col border-neutral-900 border items-start relative w-full mb-40 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0  after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0"
+         :class="containerClasses">
       <div
         v-if="title || descriptionRawMarkdown"
-        class="flex flex-col md:sticky top-20 gap-5 shrink-0 w-full md:w-1/2 p-12"
+        class="flex flex-col md:sticky top-20 gap-5 shrink-0 w-full p-12"
+        :class="textBlockClasses"
       >
           <h2
             v-if="title"
@@ -22,9 +24,9 @@
             />
           </div>
       </div>
-
       <div
-        class="flex flex-col gap-6 shrink-0 relative w-full md:w-1/2"
+        class="flex flex-col gap-6 shrink-0 relative w-full"
+        :class="imageBlockClasses"
       >
         <div
           class="border-2 border-neutral-900 relative w-full"
@@ -45,7 +47,7 @@
                   />
                   </div>  
                   <div v-if="image"
-                    class="absolute left-1/2 -translate-x-1/2 -bottom-1 border border-neutral-800 rounded-lg overflow-hidden"
+                    class="absolute left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 border border-neutral-800 rounded-lg overflow-hidden"
                     :class="height === 'large' ? 'h-4/5 w-11/12' : 'h-[379px] w-[641px]'"
                     :style="{
                       backgroundImage: 'linear-gradient(90deg, rgba(243, 101, 43, 0.16) 6.82%, rgba(241, 141, 85, 0.6) 47.72%, rgba(66, 74, 82, 1) 81.19%), linear-gradient(90deg, rgba(17, 17, 17, 1) 0%, rgba(17, 17, 17, 1) 100%)'
@@ -73,7 +75,7 @@
 
 <script setup>
   import { computed } from 'vue'
-  import { parseMarkdown } from '../../src/services/markdown-service'
+  import { parseMarkdown } from '../../services/markdown-service'
 
   const props = defineProps({
     title: {
@@ -97,20 +99,36 @@
       default: 'default',
       validator: (value) => ['default', 'large'].includes(value)
     },
-    variant: {
-      type: String,
-      default: 'titleBulletsImage',
-      validator: (value) => ['titleBulletsImage', 'titleImage', 'imageOnly'].includes(value)
-    },
     backgroundStyle: {
       type: String,
       default: 'grid',
       validator: (value) => ['grid', 'dots'].includes(value)
+    },
+    fiftyFifty: {
+      type: Boolean,
+      default: true
+    },
+    inverted: {
+      type: Boolean,
+      default: false
     }
   })
 
   const parsedMarkdown = computed(() => {
     return parseMarkdown(props.descriptionRawMarkdown)
+  })
+
+  const textBlockClasses = computed(() => {
+    return props.fiftyFifty ? 'md:w-1/2' : 'md:w-1/3'
+  })
+
+  const imageBlockClasses = computed(() => {
+    return props.fiftyFifty ? 'md:w-1/2' : 'md:w-2/3'
+  })
+
+  const containerClasses = computed(() => {
+    const baseClasses = 'md:flex-row'
+    return props.inverted ? `${baseClasses} md:flex-row-reverse before:right-0 after:right-0` : `${baseClasses} before:left-0 after:left-0`
   })
 
   const backgroundImageStyle = computed(() => {
