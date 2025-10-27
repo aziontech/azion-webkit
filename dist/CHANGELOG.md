@@ -1,3 +1,9 @@
+## [1.243.0](https://github.com/aziontech/azion-webkit/compare/v1.242.0...v1.243.0) (2025-10-27)
+
+### Features
+
+* redesign call-to-action section with split layout ([a7518bc](https://github.com/aziontech/azion-webkit/commit/a7518bc22a7bfe588e11ae750846ebd944cb4629))
+
 ## [1.242.0](https://github.com/aziontech/azion-webkit/compare/v1.241.0...v1.242.0) (2025-10-27)
 
 ### Features
