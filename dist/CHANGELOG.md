@@ -1,3 +1,9 @@
+## [1.245.0](https://github.com/aziontech/azion-webkit/compare/v1.244.0...v1.245.0) (2025-10-27)
+
+### Features
+
+* enhance image content section with flexible layout options ([e97c6b3](https://github.com/aziontech/azion-webkit/commit/e97c6b33b2cae95ff5b613fba3da23569a8016c3))
+
 ## [1.244.0](https://github.com/aziontech/azion-webkit/compare/v1.243.1...v1.244.0) (2025-10-27)
 
 ### Features
