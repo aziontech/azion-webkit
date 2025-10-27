@@ -1,3 +1,9 @@
+## [1.243.1](https://github.com/aziontech/azion-webkit/compare/v1.243.0...v1.243.1) (2025-10-27)
+
+### Bug Fixes
+
+* add markdown parsing to call-to-action section ([b13f954](https://github.com/aziontech/azion-webkit/commit/b13f954755b97399992dbc3ffbbc407bed20a2d0))
+
 ## [1.243.0](https://github.com/aziontech/azion-webkit/compare/v1.242.0...v1.243.0) (2025-10-27)
 
 ### Features
