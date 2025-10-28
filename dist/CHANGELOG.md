@@ -1,3 +1,9 @@
+## [1.249.2](https://github.com/aziontech/azion-webkit/compare/v1.249.1...v1.249.2) (2025-10-28)
+
+### Bug Fixes
+
+* adjust import errors ([d5af80b](https://github.com/aziontech/azion-webkit/commit/d5af80be54c5fc4094e3e72611ad6542488c5f96))
+
 ## [1.249.1](https://github.com/aziontech/azion-webkit/compare/v1.249.0...v1.249.1) (2025-10-28)
 
 ### Bug Fixes
