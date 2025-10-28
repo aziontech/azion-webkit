@@ -1,2 +1,2 @@
-import SectionContentImage2Column from './SectionContentImage2Column.vue'
-export default SectionContentImage2Column
+import SectionContent2Column from './SectionContent2Column.vue'
+export default SectionContent2Column

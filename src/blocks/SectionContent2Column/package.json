@@ -1,6 +1,6 @@
 {
   "main": "./index.ts",
   "browser": {
-    "./sfc": "./SectionContentImage2Column.vue"
+    "./sfc": "./SectionContent2Column.vue"
   }
 }

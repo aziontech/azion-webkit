@@ -7,10 +7,10 @@ export interface ContentCard {
   }
 }
 
-export interface SectionContentImage2ColumnProps {
+export interface SectionContent2ColumnProps {
   cards: ContentCard[]
   id?: string
   gridPattern: 'square' | 'dots'
 }
 
-export { default } from './SectionContentImage2Column.vue'
+export { default } from './SectionContent2Column.vue'

@@ -66,13 +66,13 @@
     }
   }
 
-  interface SectionContentImage2ColumnProps {
+  interface SectionContent2ColumnProps {
     cards: ContentCard[]
     id?: string
     gridPattern: 'square' | 'dots'
   }
 
-  withDefaults(defineProps<SectionContentImage2ColumnProps>(), {
+  withDefaults(defineProps<SectionContent2ColumnProps>(), {
     cards: () => [],
     id: '',
     gridPattern: 'dots'
