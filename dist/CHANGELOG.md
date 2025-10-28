@@ -1,3 +1,14 @@
+## [1.249.1](https://github.com/aziontech/azion-webkit/compare/v1.249.0...v1.249.1) (2025-10-28)
+
+### Bug Fixes
+
+* add bottom margin to logo in Quote component ([a5a4e1e](https://github.com/aziontech/azion-webkit/commit/a5a4e1ec476d261522e612031a82ab7bacedc882))
+* add escaped hyphen support in markdown service for bullet points ([3bab54b](https://github.com/aziontech/azion-webkit/commit/3bab54be5feb2b9fd3cdacd68241ab49488afcf7))
+* change bullet points from dashes to disc bullets in markdown service ([c697d23](https://github.com/aziontech/azion-webkit/commit/c697d23c8299554139126e56fd8443988627faf8))
+* improve responsive layout and typography in Hero2Column ([236c63f](https://github.com/aziontech/azion-webkit/commit/236c63fe031dd2c99ea96a80dd318236e220feee))
+* improve responsive spacing in SectionLogosQuote2Column header ([2a9332d](https://github.com/aziontech/azion-webkit/commit/2a9332d068ae8056c7ec8130455f3cb7feae89df))
+* remove redundant flex-col class in SectionCardCarousel header ([f39b864](https://github.com/aziontech/azion-webkit/commit/f39b864953e9eacbf34ef6dedc84f32a22255365))
+
 ## [1.249.0](https://github.com/aziontech/azion-webkit/compare/v1.248.2...v1.249.0) (2025-10-28)
 
 ### Features
