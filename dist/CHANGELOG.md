@@ -1,3 +1,9 @@
+## [1.248.0](https://github.com/aziontech/azion-webkit/compare/v1.247.0...v1.248.0) (2025-10-28)
+
+### Features
+
+* add markdown parsing service and update UI components with hover effects ([9430310](https://github.com/aziontech/azion-webkit/commit/9430310620aed774e6839d8372c199db20a5910a))
+
 ## [1.247.0](https://github.com/aziontech/azion-webkit/compare/v1.246.0...v1.247.0) (2025-10-27)
 
 ### Features
