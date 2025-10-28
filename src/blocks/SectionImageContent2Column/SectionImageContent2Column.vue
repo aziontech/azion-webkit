@@ -46,7 +46,7 @@
                   />
                   </div>  
                   <div v-if="image"
-                    class="absolute left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1 rounded-lg overflow-hidden h-4/5 w-11/12"
+                    class="absolute left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 rounded-lg overflow-hidden h-4/5 w-11/12"
                   >
                     <img
                       :src="image"
