@@ -46,9 +46,9 @@
         class="h-auto"
       >
         <div
-          class="p-1 border border-neutral-900 relative h-full"
+          class="p-1 border hover:bg-neutral-900 border-neutral-900 relative h-full before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0"
         >
-          <div class="h-full w-full p-6 flex flex-col gap-4">
+          <div class="h-full w-full p-6 flex flex-col gap-4 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:right-0">
             <div v-if="card.tag" class="flex items-center gap-2 bg-slate-950 text-neutral-100 px-3 py-1 rounded w-fit">
               <i v-if="card.tagIcon" :class="card.tagIcon" class="text-sm"></i>
               <span class="text-xs uppercase font-proto-mono">
@@ -83,7 +83,7 @@
 <script setup lang="ts">
   import { Swiper, SwiperSlide } from 'swiper/vue'
   import { Navigation } from 'swiper/modules'
-  import { ref, computed } from 'vue'
+  import { ref } from 'vue'
   import Button from '../../components/Button'
   import 'swiper/css'
   import 'swiper/css/navigation'

@@ -46,15 +46,12 @@
                   />
                   </div>  
                   <div v-if="image"
-                    class="absolute left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 border border-neutral-800 rounded-lg overflow-hidden h-4/5 w-11/12"
-                    :style="{
-                      backgroundImage: 'linear-gradient(90deg, rgba(243, 101, 43, 0.16) 6.82%, rgba(241, 141, 85, 0.6) 47.72%, rgba(66, 74, 82, 1) 81.19%), linear-gradient(90deg, rgba(17, 17, 17, 1) 0%, rgba(17, 17, 17, 1) 100%)'
-                    }"
+                    class="absolute left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1 rounded-lg overflow-hidden h-4/5 w-11/12"
                   >
                     <img
                       :src="image"
                       :alt="alt"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-contain"
                     />
                   </div>
               </div>

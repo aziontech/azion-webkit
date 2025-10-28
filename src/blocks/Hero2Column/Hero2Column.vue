@@ -53,7 +53,7 @@
             <img
               :src="image"
               :alt="title"
-              class="w-full h-auto object-cover"
+              class="w-full h-auto"
             />
           </div>
         </div>
