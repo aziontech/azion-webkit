@@ -1,3 +1,9 @@
+## [1.248.1](https://github.com/aziontech/azion-webkit/compare/v1.248.0...v1.248.1) (2025-10-28)
+
+### Bug Fixes
+
+* correct image vertical positioning in 2-column section ([4321689](https://github.com/aziontech/azion-webkit/commit/43216895045bdfe710f8629627ce277bea544820))
+
 ## [1.248.0](https://github.com/aziontech/azion-webkit/compare/v1.247.0...v1.248.0) (2025-10-28)
 
 ### Features
