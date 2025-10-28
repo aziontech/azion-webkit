@@ -1,3 +1,10 @@
+## [1.249.0](https://github.com/aziontech/azion-webkit/compare/v1.248.2...v1.249.0) (2025-10-28)
+
+### Features
+
+* clean up blocksV2 stories to keep only Default and Documentation ([76703e6](https://github.com/aziontech/azion-webkit/commit/76703e677a0b3b9accda95ee705057cea8353955))
+* rename SectionContentImage2Column to SectionContent2Column ([abe6840](https://github.com/aziontech/azion-webkit/commit/abe6840d706673b104fd057300d93f0ce9532837))
+
 ## [1.248.2](https://github.com/aziontech/azion-webkit/compare/v1.248.1...v1.248.2) (2025-10-28)
 
 ### Bug Fixes
