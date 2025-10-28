@@ -32,6 +32,17 @@ export interface OverlineEmits {
   // No emits - component is purely presentational
 }
 
+export interface OverlineColor {
+  primary: 'text-neutral-200'
+  orange: 'text-orange'
+}
+
+export interface OverlineProps {
+  /**
+   * Text color of the overline
+   */
+  color: OverlineColor
+}
 /**
  * @group Component
  */

@@ -1,69 +1,68 @@
 <template>
   <section
     :id="id"
-    class="flex flex-wrap md:flex-nowrap relative max-w-xl xxxl:max-w-xxl mx-auto gap-2 md:p-12 p-6 mb-40"
+    class="p-6 md:p-12 grid gap-2"
+    :class="cardType[type]"
   >
-    <div class="flex w-full md:w-1/3 md:flex-wrap items-start flex-col bg-neutral-900 rounded-md justify-between text-left">
-      <div class="p-12 ">
-        <div class="flex flex-col">
-          <span v-if="cta.overline" class="text-xs font-proto-mono uppercase text-balance text-orange-500 w-full pb-3">{{ cta.overline }}</span>
-          <h2 v-if="cta.title" class="display-3 font-normal tracking-tight text-neutral-100">
-            {{ cta.title }}
-          </h2>
-          <div v-html="parseMarkdown(cta.descriptionRawMarkdown)" class="text-balance text-neutral-400 text-base mt-3 font-sora"></div>
-        </div>
-
-        <div v-if="cta.link && cta.linkLabel" class="flex flex-row gap-4 mt-44">
-          <Button
-            :href="cta.link"
-            :label="cta.linkLabel"
-            :type="'linkSecondary'"
-            size="small"
-            theme="dark"
-            customClass="px-0 py-0"
-          />
-        </div>
+    <div v-if="content && type === '2-col-70-30'" class="lg:col-span-3 w-full flex flex-col justify-between gap-6 bg-neutral-900 rounded-md p-6 md:p-12">
+      <div class="flex flex-col gap-3">
+        <Overline color="orange"> {{ content.overline }} </Overline>
+        <h2 class="text-2xl font-sora">{{ content.title }}</h2>
+        <p class="text-neutral-400 font-sora" v-html="parseMarkdown(content.descriptionRawMarkdown)"></p>
       </div>
+      <Button v-bind="content.button" type="linkSecondary" />
     </div>
-    <div class="flex w-full md:w-2/3 p-12 flex-col justify-between bg-orange-500 md:bg-neutral-800 hover:bg-orange-500 transition-colors duration-150 rounded-md flex-wrap">
-      <div class="w-full flex-col gap-3 flex">
-        <span v-if="content.overline" class="text-xs font-proto-mono uppercase text-balance text-neutral-950 w-full">{{ content.overline }}</span>
-        <div v-html="parseMarkdown(content.descriptionRawMarkdown)" class="text-balance text-neutral-950 font-sora mb-12 md:mb-0"></div>
+    <div class="flex flex-col justify-between rounded-md p-6 md:p-12" 
+         :class="[ctaColor[type]]">
+      <div class="flex gap-3" :class="type.includes('short') ? 'flex justify-between' : 'flex-col'">
+        <Overline color="black"> {{ cta.overline }} </Overline>
+        <p class="max-w-sm text-balance font-sora text-xl text-neutral-900" v-html="parseMarkdown(cta.descriptionRawMarkdown)"></p>
       </div>
-      <h3 v-if="content.title" class="text-neutral-950 font-bold font-sora display-1">{{ content.title }}</h3>
+      <div class="flex justify-between items-end">
+        <h2 class="max-w-sm font-sora font-bold text-5xl text-neutral-900">{{ cta.title }}</h2>
+        <Button v-bind="cta.button" icon="pi pi-angle-right" type="primary" />
+      </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-  import Button from '../../components/Button'
-  import { parseMarkdown } from '../../src/services/markdown-service'
+  import Button from '../../components/Button/Button.vue'
+  import Overline from '../../components/Overline/Overline.vue'
+  import { parseMarkdown } from '../../services/markdown-service'
 
-  export interface CallToActionButton {
+  interface CardProps {
+    overline: string
+    title: string
+    descriptionRawMarkdown: string,
+    button: ButtonProps
+  }
+  interface ButtonProps {
     label: string
     href: string
-    type?: 'primary' | 'secondary' | 'link' | 'tertiary' | 'linkExternal' | 'linkSecondary'
-    theme?: 'dark' | 'light'
   }
-
   interface SectionCallToActionProps {
-    id?: string,
-    cta?: {
-      overline?: string,
-      title?: string,
-      descriptionRawMarkdown?: string,
-      linkLabel?: string,
-      link?: string
-    },
-    content?: {
-      overline?: string,
-      descriptionRawMarkdown?: string,
-      title?: string
-    }
+    type: '2-col-70-30' | '1-col' | '1-col-short' | '1-col-short-orange'
+    id?: string
+    cta: CardProps
+    content: CardProps
   }
 
-  const props = withDefaults(defineProps<SectionCallToActionProps>(), {
-    cta: () => ({}),
-    content: () => ({})
+  withDefaults(defineProps<SectionCallToActionProps>(), {
+    type: '2-col-70-30'
   })
+
+  const cardType = {
+    "2-col-70-30": 'lg:grid-cols-10 grid-cols-1',
+    "1-col": 'grid-cols-1',
+    "1-col-short": 'grid-cols-1',
+    "1-col-short-orange": 'grid-cols-1'
+  }
+
+  const ctaColor = {
+    "2-col-70-30": 'bg-neutral-600 gap-60 lg:col-span-7 ',
+    "1-col": 'bg-neutral-600 gap-60',
+    "1-col-short": 'bg-neutral-600 gap-16',
+    "1-col-short-orange": 'bg-orange-500 gap-16'
+  }
 </script>

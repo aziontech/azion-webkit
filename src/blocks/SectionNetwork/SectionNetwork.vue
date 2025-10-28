@@ -28,7 +28,7 @@
                 <p
                   v-for="(item, index) in overlines"
                   key="index"
-                  class="bg-white font-proto-mono px-3 py-1 text-xs md:text-base"
+                  class="bg-white font-proto-mono px-3 py-1 text-xs md:text-base text-neutral-900"
                 >
                   {{ item }}
                 </p>
