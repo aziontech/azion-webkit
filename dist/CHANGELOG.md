@@ -1,3 +1,9 @@
+## [1.248.2](https://github.com/aziontech/azion-webkit/compare/v1.248.1...v1.248.2) (2025-10-28)
+
+### Bug Fixes
+
+* remove border and dots from hero image and update background colors to [#0](https://github.com/aziontech/azion-webkit/issues/0)A0A0A ([dea0d14](https://github.com/aziontech/azion-webkit/commit/dea0d14aba3b5c3c9913305f1cc9770887667bf7)), closes [#0A0A0A](https://github.com/aziontech/azion-webkit/issues/0A0A0A)
+
 ## [1.248.1](https://github.com/aziontech/azion-webkit/compare/v1.248.0...v1.248.1) (2025-10-28)
 
 ### Bug Fixes
