@@ -15,6 +15,7 @@ export const parseMarkdown = (markdown) => {
     .replace(/\\#/g, '#')
     .replace(/\\\*/g, '*')
     .replace(/\\_/g, '_')
+    .replace(/\\-/g, '-')
     .replace(/\\\[/g, '[')
     .replace(/\\\]/g, ']')
     .replace(/\\\(/g, '(')
