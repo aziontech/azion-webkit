@@ -124,9 +124,9 @@
   const backgroundImageStyle = computed(() => {
     if (props.backgroundStyle === 'dots') {
       return `
-        background-color: #000000;
+        background-color: #0A0A0A;
         background-image: 
-          linear-gradient(to top, #000 0%, rgba(23,23,23,0) 100%),
+          linear-gradient(to top, #0A0A0A 0%, rgba(23,23,23,0) 100%),
           radial-gradient(circle, #CEC9C9 1.5px, #0000 0);
         background-size: 100% 100%, 3rem 3rem;
         background-repeat: no-repeat, repeat;
@@ -134,9 +134,9 @@
       `
     } else {
       return `
-        background-color: #000000;
+        background-color: #0A0A0A;
         background-image: 
-          linear-gradient(to top, #000 0%, rgba(23,23,23,0) 100%),
+          linear-gradient(to top, #0A0A0A 0%, rgba(23,23,23,0) 100%),
           linear-gradient(90deg, transparent 47px, #404040 47px, #404040 48px, transparent 48px),
           linear-gradient(180deg, transparent 47px, #404040 47px, #404040 48px, transparent 48px);
         background-size: 100% 100%, 48px 48px, 48px 48px;

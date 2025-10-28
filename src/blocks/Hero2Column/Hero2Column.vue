@@ -43,13 +43,13 @@
         </div>
       </div>
       <div
-        class="relative flex w-full md:w-1/2 border border-neutral-900 p-12 items-center justify-center"
+        class="relative flex w-full md:w-1/2 p-12 items-center justify-center"
       >
         <div
           v-if="image"
-          class="p-1 w-full max-w-md mx-auto before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:left-0"
+          class="p-1 w-full max-w-md mx-auto"
         >
-          <div class="w-full before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:right-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0">
+          <div class="w-full">
             <img
               :src="image"
               :alt="title"
