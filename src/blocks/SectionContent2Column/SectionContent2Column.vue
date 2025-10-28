@@ -55,7 +55,7 @@
 
 <script setup lang="ts">
   import Overline from '../../components/overline/Overline.vue'
-  import Grid from '../../components/GridPattern'
+  import Grid from '../../components/GridPattern/GridPattern.vue'
 
   export interface ContentCard {
     overline?: string
