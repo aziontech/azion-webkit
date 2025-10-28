@@ -55,24 +55,3 @@ export const Default = {
   }
 }
 
-
-export const SquarePattern = {
-  args: {
-    cards: [
-        {
-            title: 'Small Title with benefit',
-            description: 'This ensures efficient processing for enterprise needs.'
-          },
-          {
-            title: 'Small Title with benefit',
-            description: 'This ensures efficient processing for enterprise needs.'
-          },
-          {
-            title: 'Small Title with benefit',
-            description: 'This ensures efficient processing for enterprise needs. '
-          }
-    ],
-    id: 'section-content-three',
-    gridPattern: 'square'
-  }
-}

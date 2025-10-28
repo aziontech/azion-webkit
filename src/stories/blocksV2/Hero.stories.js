@@ -42,37 +42,3 @@ export const Default = {
   }
 }
 
-export const WithAnimatedBackground = {
-  args: {
-    overline: 'edge computing',
-    title: 'Build at the Edge',
-    subtitle: 'Deploy your applications globally with edge computing',
-    animatedBackground: true,
-    buttons: [
-      {
-        label: 'Get Started',
-        href: '/signup',
-        type: 'primary'
-      },
-      {
-        label: 'Learn More',
-        href: '/docs',
-        type: 'secondary'
-      }
-    ]
-  }
-}
-
-export const WithoutOverline = {
-  args: {
-    title: 'Simple Hero Without Overline',
-    subtitle: 'This example shows the hero without the overline text',
-    buttons: [
-      {
-        label: 'Get Started',
-        href: '/signup',
-        type: 'primary'
-      }
-    ]
-  }
-}
