@@ -37,7 +37,7 @@ export const parseMarkdown = (markdown) => {
   
   text = text
     .replace(/(<li.*?<\/li>)/gs, (match) => {
-      return '<ul class="font-sora mb-4">' + match + '</ul>'
+      return '<ul class="font-sora mb-4 list-disc pl-6">' + match + '</ul>'
     })
   
   text = text
