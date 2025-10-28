@@ -8,7 +8,7 @@
       class="flex flex-col md:flex-row items-center max-w-xl xxxl:max-w-xxl mx-auto relative z-10 p-6 md:p-0"
     >
       <div
-        class="flex w-full md:w-1/2 p-12 flex-col gap-3 md:gap-4 lg:gap-5 text-center lg:text-left"
+        class="flex w-full md:w-1/2 pb-6 md:p-12 flex-col gap-3 md:gap-4 lg:gap-5 text-center lg:text-left"
       >
         <div class="flex flex-col gap-2 md:gap-3">
           <p
@@ -17,12 +17,12 @@
           >
             {{ overline }}
           </p>
-          <h1 class="font-sora leading-tight text-pretty display-2 md:display-1">
+          <h1 class="font-sora  md:leading-tight text-pretty display-1">
             {{ title }}
           </h1>
           <div 
             v-if="descriptionRawMarkdown"
-            class="text-xs text-balance lg:text-base max-w-sm md:max-w-7xl text-neutral-200 font-sora mx-auto lg:mx-0"
+            class="text-sm text-pretty md:text-balance lg:text-base max-w-sm md:max-w-7xl text-neutral-200 font-sora mx-auto lg:mx-0"
             v-html="parsedSubtitle"
           />
         </div>
@@ -43,7 +43,7 @@
         </div>
       </div>
       <div
-        class="relative flex w-full md:w-1/2 p-12 items-center justify-center"
+        class="relative flex w-full md:w-1/2 md:p-12 items-center justify-center"
       >
         <div
           v-if="image"
