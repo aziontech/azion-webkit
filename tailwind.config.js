@@ -103,7 +103,7 @@ module.exports = {
           letterSpacing: '-.05rem',
         },
         '.body-2': {
-          fontSize: '.75rem',
+          fontSize: '.875rem',
           lineHeight: '1.4rem',
           fontFamily: 'Sora',
           letterSpacing: '-.05rem',

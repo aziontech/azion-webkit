@@ -26,7 +26,7 @@
         >
           <div class="flex items-center gap-2">
             <span :class="card.icon" class="text-orange-500 text-xl flex-shrink-0"></span>
-            <h3 class="display-3-mobile md:display-3 text-white font-sora">{{ card.title }}</h3>
+            <h3 class="display-5-mobile md:display-5 text-white font-sora">{{ card.title }}</h3>
           </div>
           <div 
             class="body-2 text-neutral-400 leading-relaxed font-sora"

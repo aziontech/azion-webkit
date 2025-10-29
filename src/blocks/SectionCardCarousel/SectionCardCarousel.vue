@@ -56,7 +56,7 @@
               </span>
             </div>
             
-            <h3 class="display-3-mobile md:display-3 text-white font-sora">
+            <h3 class="display-5-mobile md:display-5 text-white font-sora">
               {{ card.title }}
             </h3>
             
