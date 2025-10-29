@@ -26,6 +26,11 @@ export default {
       control: 'text',
       description: 'Optional ID for the section element'
     },
+    backgroundStyle: {
+      control: 'select',
+      options: ['dots', 'square'],
+      description: 'Background pattern style for the CTA card'
+    },
     cta: {
       control: 'object',
       description: 'CTA card configuration (right/main card)'
@@ -144,6 +149,50 @@ export const WithMarkdownDescription = {
         'Deploy applications with **ultra-low latency** and *global scalability*. Perfect for modern applications.',
       linkLabel: 'Learn More',
       link: 'https://www.azion.com/features'
+    }
+  }
+}
+
+export const DotsBackground = {
+  args: {
+    type: '1-col',
+    id: 'section-cta-dots',
+    backgroundStyle: 'dots',
+    content: {
+      overline: 'Pattern Demo',
+      title: 'Dots Background',
+      descriptionRawMarkdown: 'This example shows the dots background pattern.',
+      linkLabel: 'Try Dots',
+      link: 'https://www.azion.com'
+    },
+    cta: {
+      overline: 'Pattern Demo',
+      title: 'Dots Background',
+      descriptionRawMarkdown: 'This example shows the dots background pattern.',
+      linkLabel: 'Try Dots',
+      link: 'https://www.azion.com'
+    }
+  }
+}
+
+export const SquareBackground = {
+  args: {
+    type: '1-col',
+    id: 'section-cta-square',
+    backgroundStyle: 'square',
+    content: {
+      overline: 'Pattern Demo',
+      title: 'Square Background',
+      descriptionRawMarkdown: 'This example shows the square grid background pattern.',
+      linkLabel: 'Try Square',
+      link: 'https://www.azion.com'
+    },
+    cta: {
+      overline: 'Pattern Demo',
+      title: 'Square Background',
+      descriptionRawMarkdown: 'This example shows the square grid background pattern.',
+      linkLabel: 'Try Square',
+      link: 'https://www.azion.com'
     }
   }
 }

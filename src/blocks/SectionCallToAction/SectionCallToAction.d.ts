@@ -32,6 +32,11 @@ export interface SectionCallToActionProps {
    */
   id?: string
   /**
+   * Background pattern style for the CTA card
+   * @defaultValue 'dots'
+   */
+  backgroundStyle?: 'dots' | 'square'
+  /**
    * CTA card configuration (right/main card)
    */
   cta: CardProps
