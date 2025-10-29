@@ -29,7 +29,7 @@
             <h3 class="display-3-mobile md:display-3 text-white font-sora">{{ card.title }}</h3>
           </div>
           <div 
-            class="text-sm text-neutral-400 leading-relaxed font-sora"
+            class="body-2 text-neutral-400 leading-relaxed font-sora"
             v-html="parseMarkdown(card.descriptionRawMarkdown)"
           />
         </div>
