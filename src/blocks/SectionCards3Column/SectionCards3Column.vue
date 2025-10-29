@@ -1,11 +1,11 @@
 <template>
   <section
     :id="id"
-    class="text-white relative max-w-xl xxxl:max-w-xxl mx-auto py-12 px-6 md:px-0 mb-40"
+    :class="`text-white relative max-w-xl xxxl:max-w-xxl mx-auto py-12 px-6 md:px-0 ${bottomSpacing}`"
   >
     <div
       v-if="cards && cards.length > 0"
-      class="grid grid-cols-1 lg:grid-cols-3 p-4 md:p-12"
+      class="grid grid-cols-1 lg:grid-cols-3 p-6 md:p-12"
     >
       <div
         v-for="(card, index) in cards"
@@ -26,7 +26,7 @@
         >
           <div class="flex items-center gap-2">
             <span :class="card.icon" class="text-orange-500 text-xl flex-shrink-0"></span>
-            <h3 class="display-3 text-white font-sora">{{ card.title }}</h3>
+            <h3 class="display-3-mobile md:display-3 text-white font-sora">{{ card.title }}</h3>
           </div>
           <div 
             class="text-sm text-neutral-400 leading-relaxed font-sora"
@@ -50,9 +50,11 @@
   interface SectionCards3ColumnProps {
     cards?: Card3Column[]
     id?: string
+    bottomSpacing?: 'mb-0' | 'mb-6' | 'mb-12' | 'mb-24' | 'mb-48'
   }
 
   const props = withDefaults(defineProps<SectionCards3ColumnProps>(), {
-    cards: () => []
+    cards: () => [],
+    bottomSpacing: 'mb-24'
   })
 </script>

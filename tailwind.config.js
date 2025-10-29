@@ -38,17 +38,52 @@ module.exports = {
       const components = {
         '.display-1':  {
           fontSize: '3rem',
-          lineHeight: '3rem',
+          lineHeight: '1.1',
           fontFamily: 'Sora',
         },
         '.display-2': {
-          fontSize: '1.75rem',
-          lineHeight: '2rem',
+          fontSize: '2rem',
+          lineHeight: '1.2',
           fontFamily: 'Sora',
         },
         '.display-3': {
+          fontSize: '1.75rem',
+          lineHeight: '1.24',
+          fontFamily: 'Sora',
+        },
+        '.display-4': {
+          fontSize: '1.5rem',
+          lineHeight: '1.3',
+          fontFamily: 'Sora',
+        },
+        '.display-5': {
           fontSize: '1.25rem',
-          lineHeight: '1.625rem',
+          lineHeight: '1.4',
+          fontFamily: 'Sora',
+        },
+        '.display-1-mobile': {
+          fontSize: '2.5rem',
+          lineHeight: '1.3',
+          fontFamily: 'Sora',
+        },
+        '.display-2-mobile': {
+          fontSize: '1.875rem',
+          lineHeight: '1.3',
+          fontFamily: 'Sora',
+        },
+        '.display-3-mobile': {
+          fontSize: '1.375rem',
+          lineHeight: '1.4',
+          fontFamily: 'Sora',
+        },
+        '.display-4-mobile': {
+          fontSize: '1.25rem',
+          lineHeight: '1.4',
+          fontFamily: 'Sora',
+        },
+        '.display-5-mobile': {
+          fontSize: '1.125rem',
+          lineHeight: '1.4',
           fontFamily: 'Sora',
         },
         '.body-1': {

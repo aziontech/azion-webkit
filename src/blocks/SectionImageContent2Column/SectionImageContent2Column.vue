@@ -1,15 +1,15 @@
 <template>
-  <section  class="p-4 md:p-12 max-w-xl xxxl:max-w-xxl mx-auto ">
-    <div class="flex flex-col border-neutral-900 border items-start relative w-full mb-40 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0  after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0"
+  <section  :class="`p-6 md:p-12 max-w-xl xxxl:max-w-xxl mx-auto ${bottomSpacing}`">
+    <div class="flex flex-col border-neutral-900 border items-start relative w-full before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0  after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0"
          :class="containerClasses">
       <div
         v-if="title || descriptionRawMarkdown"
-        class="flex flex-col md:sticky top-20 gap-5 shrink-0 w-full p-12"
+        class="flex flex-col md:sticky top-20 gap-5 shrink-0 w-full p-6 md:p-12"
         :class="textBlockClasses"
       >
           <h2
             v-if="title"
-            class="display-2 font-normal tracking-tight text-gray-200 w-full"
+            class="display-2-mobile md:display-2 font-normal tracking-tight text-gray-200 w-full"
           >
             {{ title }}
           </h2>
@@ -29,7 +29,7 @@
         :class="imageBlockClasses"
       >
         <div
-          class="border-2 border-neutral-900 relative w-full h-[600px]"
+          class="border-2 border-neutral-900 relative w-full h-auto"
         >
           <div class="overflow-hidden relative w-full h-full">
             <div class="absolute bottom-0 left-0 w-full flex justify-between h-1 z-10">
@@ -37,7 +37,7 @@
               <div class="w-1 h-1 bg-neutral-300" />
             </div>
 
-            <div class="absolute inset-0 flex items-start justify-center overflow-hidden">
+            <div class="relative inset-0 flex items-start justify-center overflow-hidden">
               <div class="flex-1 relative h-full min-h-0 min-w-0">
                 <div class="absolute h-full -left-0.5 -bottom-0.5 w-full overflow-hidden flex flex-col items-center">
                   <div 
@@ -46,7 +46,7 @@
                   />
                   </div>  
                   <div v-if="image"
-                    class="absolute left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 rounded-lg overflow-hidden h-4/5 w-11/12"
+                    class="relative rounded-lg overflow-hidden h-full w-full p-6 md:p-12"
                   >
                     <img
                       :src="image"
@@ -94,13 +94,19 @@
       default: 'grid',
       validator: (value) => ['grid', 'dots'].includes(value)
     },
-    fiftyFifty: {
-      type: Boolean,
-      default: true
+    layout: {
+      type: String,
+      default: '50/50',
+      validator: (value) => ['50/50', '30/70'].includes(value)
     },
     inverted: {
       type: Boolean,
       default: false
+    },
+    bottomSpacing: {
+      type: String,
+      options: ['mb-0', 'mb-6', 'mb-12', 'mb-24', 'mb-48'],
+      default: 'mb-24'
     }
   })
 
@@ -109,11 +115,11 @@
   })
 
   const textBlockClasses = computed(() => {
-    return props.fiftyFifty ? 'md:w-1/2' : 'md:w-1/3'
+    return props.layout === '50/50' ? 'md:w-1/2' : 'md:w-1/3'
   })
 
   const imageBlockClasses = computed(() => {
-    return props.fiftyFifty ? 'md:w-1/2' : 'md:w-2/3'
+    return props.layout === '50/50' ? 'md:w-1/2' : 'md:w-2/3'
   })
 
   const containerClasses = computed(() => {

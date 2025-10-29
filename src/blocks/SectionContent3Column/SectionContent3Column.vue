@@ -1,7 +1,7 @@
 <template>
   <section
     :id="id"
-    class="text-white relative max-w-xl xxxl:max-w-xxl mx-auto py-12 px-6 md:px-0 mb-40"
+    :class="`text-white relative max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12 ${bottomSpacing}`"
   >
     <div class="mx-auto grid grid-cols-1 md:grid-cols-3">
       <div
@@ -14,10 +14,10 @@
         ]"
       >
         <div class="flex flex-col h-full">
-          <div class="border-b border-neutral-900 p-12 flex flex-col gap-5 h-full">
+          <div class="border-b border-neutral-900 p-6 md:p-12 flex flex-col gap-5 h-full">
             <h4 class="text-sora text-2xl text-neutral-200">{{ item.title }}</h4>
             <p
-              class="text-neutral-400 font-sora text-sm md:text-2xl"
+              class="text-neutral-400 font-sora text-sm"
               v-html="item.description"
             ></p>
           </div>
@@ -49,11 +49,13 @@
     cards: ContentCard[]
     id?: string
     gridPattern: 'square' | 'dots'
+    bottomSpacing?: 'mb-0' | 'mb-6' | 'mb-12' | 'mb-24' | 'mb-48'
   }
 
   withDefaults(defineProps<SectionContentImage2ColumnProps>(), {
     cards: () => [],
     id: '',
-    gridPattern: 'dots'
+    gridPattern: 'dots',
+    bottomSpacing: 'mb-24'
   })
 </script>
