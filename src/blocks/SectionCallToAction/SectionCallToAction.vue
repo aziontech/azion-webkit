@@ -4,23 +4,47 @@
     class="p-6 md:p-12 grid gap-2"
     :class="cardType[type]"
   >
-    <div v-if="content && type === '2-col-70-30'" class="lg:col-span-3 w-full flex flex-col justify-between gap-6 bg-neutral-900 rounded-md p-6 md:p-12">
+    <div
+      v-if="content && type === '2-col-70-30'"
+      class="lg:col-span-3 w-full flex flex-col justify-between gap-6 bg-neutral-900 rounded-md p-6 md:p-12"
+    >
       <div class="flex flex-col gap-3">
         <Overline color="orange"> {{ content.overline }} </Overline>
         <h2 class="text-2xl text-neutral-200 font-sora">{{ content.title }}</h2>
-        <p class="text-neutral-400 font-sora" v-html="parseMarkdown(content.descriptionRawMarkdown)"></p>
+        <p
+          class="text-neutral-400 font-sora"
+          v-html="parseMarkdown(content.descriptionRawMarkdown)"
+        ></p>
       </div>
-      <Button v-bind="content.button" type="linkSecondary" />
+      <Button
+        v-bind="content.button"
+        type="linkSecondary"
+      />
     </div>
-    <div class="flex flex-col justify-between rounded-md p-6 md:p-12" 
-         :class="[ctaColor[type]]">
-      <div class="flex gap-3" :class="type.includes('short') ? 'flex flex-col md:flex-row justify-between' : 'flex-col'">
+    <div
+      class="relative flex flex-col justify-between rounded-md p-6 md:p-12 overflow-hidden"
+      :class="[ctaColor[type]]"
+      :style="backgroundImage"
+    >
+      <div
+        class="flex gap-3"
+        :class="type.includes('short') ? 'flex flex-col md:flex-row justify-between' : 'flex-col'"
+      >
         <Overline color="black"> {{ cta.overline }} </Overline>
-        <p class="max-w-sm text-balance font-sora text-xl text-neutral-900" v-html="parseMarkdown(cta.descriptionRawMarkdown)"></p>
+        <p
+          class="max-w-sm text-balance font-sora text-xl text-neutral-900"
+          v-html="parseMarkdown(cta.descriptionRawMarkdown)"
+        ></p>
       </div>
-      <div class="flex justify-between items-end">
-        <h2 class="max-w-sm font-sora font-bold gap-2 text-4xl md:text-5xl text-neutral-900">{{ cta.title }}</h2>
-        <Button v-bind="cta.button" icon="pi pi-angle-right" type="primary" />
+      <div class="flex flex-col gap-3 md:flex-row justify-between md:items-end">
+        <h2 class="max-w-sm font-sora font-bold gap-2 text-4xl md:text-5xl text-neutral-900">
+          {{ cta.title }}
+        </h2>
+        <Button
+          v-bind="cta.button"
+          icon="pi pi-angle-right"
+          type="primary"
+        />
       </div>
     </div>
   </section>
@@ -30,11 +54,13 @@
   import Button from '../../components/Button/Button.vue'
   import Overline from '../../components/Overline/Overline.vue'
   import { parseMarkdown } from '../../src/services/markdown-service'
+  import gridSmall from './asset-bg-texture.svg'
+  import { computed } from 'vue'
 
   interface CardProps {
     overline: string
     title: string
-    descriptionRawMarkdown: string,
+    descriptionRawMarkdown: string
     button: ButtonProps
   }
   interface ButtonProps {
@@ -53,16 +79,20 @@
   })
 
   const cardType = {
-    "2-col-70-30": 'lg:grid-cols-10 grid-cols-1',
-    "1-col": 'grid-cols-1',
-    "1-col-short": 'grid-cols-1',
-    "1-col-short-orange": 'grid-cols-1'
+    '2-col-70-30': 'lg:grid-cols-10 grid-cols-1',
+    '1-col': 'grid-cols-1',
+    '1-col-short': 'grid-cols-1',
+    '1-col-short-orange': 'grid-cols-1'
   }
 
   const ctaColor = {
-    "2-col-70-30": 'bg-neutral-600 gap-60 lg:col-span-7 ',
-    "1-col": 'bg-neutral-600 gap-60',
-    "1-col-short": 'bg-neutral-600 gap-16',
-    "1-col-short-orange": 'bg-orange-500 gap-16'
+    '2-col-70-30': 'bg-neutral-600 gap-60 lg:col-span-7 ',
+    '1-col': 'bg-neutral-600 gap-60',
+    '1-col-short': 'bg-neutral-600 gap-16',
+    '1-col-short-orange': 'bg-orange-500 gap-16'
   }
+
+  const backgroundImage = computed(() => {
+    return `background-image: url(${gridSmall}); background-size: cover;`
+  })
 </script>
