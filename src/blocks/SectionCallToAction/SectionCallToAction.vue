@@ -58,7 +58,7 @@
 
 <script setup lang="ts">
   import Button from '../../components/Button/Button.vue'
-  import Overline from '../../components/Overline/Overline.vue'
+  import Overline from '../../components/overline/Overline.vue'
   import { parseMarkdown } from '../../src/services/markdown-service'
   import { computed } from 'vue'
 
