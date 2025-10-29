@@ -1,3 +1,9 @@
+## [1.251.2](https://github.com/aziontech/azion-webkit/compare/v1.251.1...v1.251.2) (2025-10-29)
+
+### Bug Fixes
+
+* update Overline component import paths ([e522a0d](https://github.com/aziontech/azion-webkit/commit/e522a0d996339d08e7a49c0bd02a6ec2c3d0e14f))
+
 ## [1.251.1](https://github.com/aziontech/azion-webkit/compare/v1.251.0...v1.251.1) (2025-10-29)
 
 ### Bug Fixes
