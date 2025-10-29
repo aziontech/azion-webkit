@@ -1,10 +1,10 @@
 <template>
   <section
     :id="id"
-    class="text-white relative max-w-xl xxxl:max-w-xxl mx-auto p-4 md:p-12 mb-40"
+    :class="`text-white relative max-w-xl xxxl:max-w-xxl mx-auto p-4 md:p-12 ${bottomSpacing}`"
   >
     <div class="flex md:flex-row justify-between items-start md:items-center mb-8 md:mb-12 gap-4">
-      <h2 v-if="title" class="display-2 font-normal tracking-tight text-gray-200 font-sora">
+      <h2 v-if="title" class="display-2-mobile md:display-2 font-normal tracking-tight text-gray-200 font-sora">
         {{ title }}
       </h2>
       
@@ -56,7 +56,7 @@
               </span>
             </div>
             
-            <h3 class="display-3 text-white font-sora">
+            <h3 class="display-3-mobile md:display-3 text-white font-sora">
               {{ card.title }}
             </h3>
             
@@ -102,10 +102,12 @@
     title?: string
     cards?: CarouselCard[]
     id?: string
+    bottomSpacing?: 'mb-0' | 'mb-6' | 'mb-12' | 'mb-24' | 'mb-48'
   }
 
   const props = withDefaults(defineProps<SectionCardCarouselProps>(), {
-    cards: () => []
+    cards: () => [],
+    bottomSpacing: 'mb-24'
   })
 
   const emit = defineEmits(['slide-change'])

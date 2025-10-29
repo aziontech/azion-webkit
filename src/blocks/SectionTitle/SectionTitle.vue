@@ -1,7 +1,6 @@
 <template>
   <div
-    class="flex flex-col gap-3 p-6 md:p-12"
-    :class="align === 'default' ? 'text-left' : 'text-center'"
+    :class="`flex flex-col gap-3 p-6 md:p-12 ${bottomSpacing} ${align === 'default' ? 'text-left' : 'text-center'}`"
   >
     <Overline v-if="overline"> {{ overline }} </Overline>
     <div
@@ -47,6 +46,11 @@
       type: String,
       options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
       default: 'h2'
+    },
+    bottomSpacing: {
+      type: String,
+      options: ['mb-0', 'mb-6', 'mb-12', 'mb-24', 'mb-48'],
+      default: 'mb-24'
     }
   })
 </script>

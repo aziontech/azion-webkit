@@ -1,7 +1,7 @@
 <template>
   <section
     :id="id"
-    class="text-white relative max-w-xl xxxl:max-w-xxl mx-auto py-12 px-6 md:px-0 mb-40"
+    :class="`text-white relative max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12 ${bottomSpacing}`"
   >
     <div class="mx-auto grid grid-cols-1 md:grid-cols-2">
       <div
@@ -13,7 +13,7 @@
           index === 1 ? 'after:hidden md:after:block' : 'after:hidden'
         ]"
       >
-        <div class="border-b border-neutral-900 p-12 flex flex-col gap-5 h-full">
+        <div class="border-b border-neutral-900 p-6 md:p-12 flex flex-col gap-5 h-full">
           <Overline v-if="item.overline">{{ item.overline }}</Overline>
           <p
             class="text-neutral-400 font-sora text-sm md:text-2xl"
@@ -40,7 +40,7 @@
               :pattern="gridPattern"
             />
           </div>
-          <div class="p-12 flex items-center justify-center">
+          <div class="p-6 md:p-12 flex items-center justify-center">
             <img
               class="relative z-10"
               :src="item.image.src"
@@ -70,11 +70,13 @@
     cards: ContentCard[]
     id?: string
     gridPattern: 'square' | 'dots'
+    bottomSpacing?: 'mb-0' | 'mb-6' | 'mb-12' | 'mb-24' | 'mb-48'
   }
 
   withDefaults(defineProps<SectionContent2ColumnProps>(), {
     cards: () => [],
     id: '',
-    gridPattern: 'dots'
+    gridPattern: 'dots',
+    bottomSpacing: 'mb-24'
   })
 </script>

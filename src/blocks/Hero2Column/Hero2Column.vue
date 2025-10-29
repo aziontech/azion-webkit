@@ -1,14 +1,14 @@
 <template>
   <section
     :id="id"
-    class="text-white relative overflow-hidden w-full mx-auto md:py-24"
+    :class="`text-white relative overflow-hidden w-full mx-auto md:py-24 ${bottomSpacing}`"
     style="background-image: radial-gradient(circle, #CEC9C940 1.5px, #0000 0); background-size: 3rem 3rem; background-position: 0 0;"
   >
     <div
       class="flex flex-col md:flex-row items-center max-w-xl xxxl:max-w-xxl mx-auto relative z-10 p-6 md:p-0"
     >
       <div
-        class="flex w-full md:w-1/2 pb-6 md:p-12 flex-col gap-3 md:gap-4 lg:gap-5 text-center lg:text-left"
+        class="flex w-full md:w-1/2 pb-6 p-6 md:p-12 flex-col gap-3 md:gap-4 lg:gap-5 text-center lg:text-left"
       >
         <div class="flex flex-col gap-2 md:gap-3">
           <p
@@ -17,7 +17,7 @@
           >
             {{ overline }}
           </p>
-          <h1 class="font-sora  md:leading-tight text-pretty display-1">
+          <h1 class="font-sora  md:leading-tight text-pretty display-1-mobile md:display-1">
             {{ title }}
           </h1>
           <div 
@@ -43,7 +43,7 @@
         </div>
       </div>
       <div
-        class="relative flex w-full md:w-1/2 md:p-12 items-center justify-center"
+        class="relative flex w-full md:w-1/2 p-6 md:p-12 items-center justify-center"
       >
         <div
           v-if="image"
@@ -90,10 +90,12 @@
     buttons?: Hero2ColumnButtonProps[]
     image?: string
     id?: string
+    bottomSpacing?: 'mb-0' | 'mb-6' | 'mb-12' | 'mb-24' | 'mb-48'
   }
 
   const props = withDefaults(defineProps<Hero2ColumnProps>(), {
-    buttons: () => []
+    buttons: () => [],
+    bottomSpacing: 'mb-24'
   })
 
   const limitedButtons = computed(() => {

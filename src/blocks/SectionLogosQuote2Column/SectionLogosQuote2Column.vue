@@ -1,10 +1,10 @@
 <template>
   <section
     :id="id"
-    class="text-white relative max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12 mb-40 "
+    :class="`text-white relative max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12 ${bottomSpacing}`"
   >
     <div class="flex flex-col md:flex-row gap-4 md:gap-0 justify-between mb-6 md:mb-8">
-      <h2 v-if="title" class="display-2 font-normal tracking-tight text-gray-200 w-full">
+      <h2 v-if="title" class="display-2-mobile md:display-2 font-normal tracking-tight text-gray-200 w-full">
         {{ title }}
       </h2>
       <Button v-if="link" :href="link"
@@ -20,7 +20,7 @@
         v-if="clients && clients.length > 0"
         class="p-1 border relative w-full md:w-1/2 border-neutral-900 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:left-0 md:after:block after:hidden"
       >
-        <div class="h-full w-full p-12 grid grid-cols-4 grid-rows-3 gap-4 place-items-center before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:right-0 before:hidden after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 md:after:hidden">
+        <div class="h-full w-full p-6 md:p-12 grid grid-cols-4 grid-rows-3 gap-4 place-items-center before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:right-0 before:hidden after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 md:after:hidden">
           <div
             v-for="(client, index) in clients"
             :key="index"
@@ -37,7 +37,7 @@
       </div>
 
       <div class="p-1 border relative w-full md:w-1/2 border-neutral-900 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:left-0">
-        <div class="h-full w-full p-12 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:right-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0">
+        <div class="h-full w-full p-6 md:p-12 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:right-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0">
         <ProductQuote
           v-if="quote"
           :quote="quote"
@@ -73,9 +73,11 @@
     title?: string,
     link?: string,
     linkLabel?: string,
+    bottomSpacing?: 'mb-0' | 'mb-6' | 'mb-12' | 'mb-24' | 'mb-48'
   }
 
   const props = withDefaults(defineProps<SectionLogosQuote2ColumnProps>(), {
-    clients: () => []
+    clients: () => [],
+    bottomSpacing: 'mb-24'
   })
 </script>
