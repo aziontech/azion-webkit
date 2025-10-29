@@ -1,3 +1,9 @@
+## [1.251.3](https://github.com/aziontech/azion-webkit/compare/v1.251.2...v1.251.3) (2025-10-29)
+
+### Bug Fixes
+
+* refine typography system with improved spacing and readability ([977851a](https://github.com/aziontech/azion-webkit/commit/977851ad48a4df952e730b93401a7e4ba7d5a522))
+
 ## [1.251.2](https://github.com/aziontech/azion-webkit/compare/v1.251.1...v1.251.2) (2025-10-29)
 
 ### Bug Fixes
