@@ -1,3 +1,14 @@
+## [1.250.0](https://github.com/aziontech/azion-webkit/compare/v1.249.2...v1.250.0) (2025-10-29)
+
+### Features
+
+* temporary grid pattern ([f7c3309](https://github.com/aziontech/azion-webkit/commit/f7c33098ecf04c4386e1114c909e0e462dcd0838))
+
+### Bug Fixes
+
+* backgroundStyle ([d763d83](https://github.com/aziontech/azion-webkit/commit/d763d83087509aa9090fc2f931a6e89725d647d2))
+* responsivity and import ([79671c4](https://github.com/aziontech/azion-webkit/commit/79671c4ea3f49811d3dc7e3915f0091850866cc7))
+
 ## [1.249.2](https://github.com/aziontech/azion-webkit/compare/v1.249.1...v1.249.2) (2025-10-28)
 
 ### Bug Fixes
