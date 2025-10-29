@@ -1,3 +1,9 @@
+## [1.251.1](https://github.com/aziontech/azion-webkit/compare/v1.251.0...v1.251.1) (2025-10-29)
+
+### Bug Fixes
+
+* standardize Overline component directory casing ([b3eca05](https://github.com/aziontech/azion-webkit/commit/b3eca05795c68b8e52136fb2781b3d89e3520e15))
+
 ## [1.251.0](https://github.com/aziontech/azion-webkit/compare/v1.250.0...v1.251.0) (2025-10-29)
 
 ### Features
