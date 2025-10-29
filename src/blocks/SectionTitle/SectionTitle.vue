@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-  import Overline from '../../components/overline/Overline.vue'
+  import Overline from '../../components/Overline/Overline.vue'
 
   const props = defineProps({
     overline: {
