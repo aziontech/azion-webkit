@@ -1,3 +1,9 @@
+## [1.251.4](https://github.com/aziontech/azion-webkit/compare/v1.251.3...v1.251.4) (2025-10-29)
+
+### Bug Fixes
+
+* improve responsive typography and spacing ([1aa6380](https://github.com/aziontech/azion-webkit/commit/1aa6380d66031cc9805fa941daca197fe063a5c2))
+
 ## [1.251.3](https://github.com/aziontech/azion-webkit/compare/v1.251.2...v1.251.3) (2025-10-29)
 
 ### Bug Fixes
