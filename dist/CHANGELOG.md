@@ -1,3 +1,9 @@
+## [1.251.0](https://github.com/aziontech/azion-webkit/compare/v1.250.0...v1.251.0) (2025-10-29)
+
+### Features
+
+* add responsive typography classes to tailwind config ([a3dc74d](https://github.com/aziontech/azion-webkit/commit/a3dc74de8e7c45161da36997fcfdb90c866f523a))
+
 ## [1.250.0](https://github.com/aziontech/azion-webkit/compare/v1.249.2...v1.250.0) (2025-10-29)
 
 ### Features
