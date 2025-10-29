@@ -46,20 +46,16 @@ export const TwoColumnLayout = {
       title: 'Not sure which plan is right for you?',
       descriptionRawMarkdown:
         'Select from a range of plans, from free to enterprise, tailored to your requirements.',
-      button: {
-        label: 'Explore our plans',
-        href: 'https://www.azion.com'
-      }
+      linkLabel: 'Explore our plans',
+      link: 'https://www.azion.com'
     },
     cta: {
       overline: 'Developer',
       title: 'Begin your deployment today',
       descriptionRawMarkdown:
         'Explore our **free plan**, test our products and start to elevate the quality of your projects!',
-      button: {
-        label: 'View Docs',
-        href: 'https://docs.azion.com'
-      }
+      linkLabel: 'View Docs',
+      link: 'https://docs.azion.com'
     }
   }
 }
@@ -73,20 +69,16 @@ export const SingleColumn = {
       title: 'Scale Your Infrastructure',
       descriptionRawMarkdown:
         'Transform your digital infrastructure with our cutting-edge edge computing platform.',
-      button: {
-        label: 'Contact Sales',
-        href: 'https://www.azion.com/contact'
-      }
+      linkLabel: 'Contact Sales',
+      link: 'https://www.azion.com/contact'
     },
     cta: {
       overline: 'Enterprise Solutions',
       title: 'Scale Your Infrastructure',
       descriptionRawMarkdown:
         'Transform your digital infrastructure with our cutting-edge edge computing platform.',
-      button: {
-        label: 'Contact Sales',
-        href: 'https://www.azion.com/contact'
-      }
+      linkLabel: 'Contact Sales',
+      link: 'https://www.azion.com/contact'
     }
   }
 }
@@ -99,19 +91,15 @@ export const SingleColumnShort = {
       overline: 'Quick Start',
       title: 'Ready to Begin?',
       descriptionRawMarkdown: 'Get started in minutes with our edge computing platform.',
-      button: {
-        label: 'Get Started',
-        href: 'https://www.azion.com'
-      }
+      linkLabel: 'Get Started',
+      link: 'https://www.azion.com'
     },
     cta: {
       overline: 'Quick Start',
       title: 'Ready to Begin?',
       descriptionRawMarkdown: 'Get started in minutes with our edge computing platform.',
-      button: {
-        label: 'Get Started',
-        href: 'https://www.azion.com'
-      }
+      linkLabel: 'Get Started',
+      link: 'https://www.azion.com'
     }
   }
 }
@@ -124,19 +112,15 @@ export const SingleColumnShortOrange = {
       overline: 'Special Offer',
       title: 'Limited Time Deal',
       descriptionRawMarkdown: 'Get 50% off your first month with our edge computing platform.',
-      button: {
-        label: 'Claim Offer',
-        href: 'https://www.azion.com/promo'
-      }
+      linkLabel: 'Claim Offer',
+      link: 'https://www.azion.com/promo'
     },
     cta: {
       overline: 'Special Offer',
       title: 'Limited Time Deal',
       descriptionRawMarkdown: 'Get 50% off your first month with our edge computing platform.',
-      button: {
-        label: 'Claim Offer',
-        href: 'https://www.azion.com/promo'
-      }
+      linkLabel: 'Claim Offer',
+      link: 'https://www.azion.com/promo'
     }
   }
 }
@@ -150,20 +134,16 @@ export const WithMarkdownDescription = {
       title: 'Edge Computing Solutions',
       descriptionRawMarkdown:
         'Deploy applications with **ultra-low latency** and *global scalability*. Perfect for modern applications.',
-      button: {
-        label: 'Learn More',
-        href: 'https://www.azion.com/features'
-      }
+      linkLabel: 'Learn More',
+      link: 'https://www.azion.com/features'
     },
     cta: {
       overline: 'Advanced Features',
       title: 'Edge Computing Solutions',
       descriptionRawMarkdown:
         'Deploy applications with **ultra-low latency** and *global scalability*. Perfect for modern applications.',
-      button: {
-        label: 'Learn More',
-        href: 'https://www.azion.com/features'
-      }
+      linkLabel: 'Learn More',
+      link: 'https://www.azion.com/features'
     }
   }
 }
@@ -196,55 +176,43 @@ export const MultipleVariants = {
           overline: 'Platform',
           title: 'Edge Computing',
           descriptionRawMarkdown: 'Global edge network for optimal performance.',
-          button: {
-            label: 'Get Started',
-            href: '#'
-          }
+          linkLabel: 'Get Started',
+          link: '#'
         },
         twoColumnCta: {
           overline: 'Support',
           title: '24/7 Support',
           descriptionRawMarkdown: 'Expert assistance whenever you need it.',
-          button: {
-            label: 'Contact Us',
-            href: '#'
-          }
+          linkLabel: 'Contact Us',
+          link: '#'
         },
         singleColumnContent: {
           overline: 'Enterprise',
           title: 'Enterprise Solutions',
           descriptionRawMarkdown: 'Scalable infrastructure for large organizations.',
-          button: {
-            label: 'Learn More',
-            href: '#'
-          }
+          linkLabel: 'Learn More',
+          link: '#'
         },
         singleColumnCta: {
           overline: 'Enterprise',
           title: 'Enterprise Solutions',
           descriptionRawMarkdown: 'Scalable infrastructure for large organizations.',
-          button: {
-            label: 'Learn More',
-            href: '#'
-          }
+          linkLabel: 'Learn More',
+          link: '#'
         },
         orangeContent: {
           overline: 'Promo',
           title: 'Special Offer',
           descriptionRawMarkdown: 'Limited time discount on our platform.',
-          button: {
-            label: 'Claim Now',
-            href: '#'
-          }
+          linkLabel: 'Claim Now',
+          link: '#'
         },
         orangeCta: {
           overline: 'Promo',
           title: 'Special Offer',
           descriptionRawMarkdown: 'Limited time discount on our platform.',
-          button: {
-            label: 'Claim Now',
-            href: '#'
-          }
+          linkLabel: 'Claim Now',
+          link: '#'
         }
       }
     }

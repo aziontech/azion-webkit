@@ -1,7 +1,7 @@
 <template>
   <section
     :id="id"
-    class="p-6 md:p-12 grid gap-2"
+    class="grid gap-2 relative max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12 mb-40"
     :class="cardType[type]"
   >
     <div
@@ -17,14 +17,17 @@
         ></p>
       </div>
       <Button
-        v-bind="content.button"
+        v-if="content.linkLabel"
+        :label="content.linkLabel"
+        :href="content.link"
         type="linkSecondary"
+        size="small"
       />
     </div>
     <div
       class="relative flex flex-col justify-between rounded-md p-6 md:p-12 overflow-hidden"
       :class="[ctaColor[type]]"
-      :style="backgroundImage"
+      :style="backgroundImageStyle"
     >
       <div
         class="flex gap-3"
@@ -41,9 +44,12 @@
           {{ cta.title }}
         </h2>
         <Button
-          v-bind="cta.button"
+          v-if="cta.linkLabel"
+          :label="cta.linkLabel"
+          :href="cta.link"
           icon="pi pi-angle-right"
           type="primary"
+          size="small"
         />
       </div>
     </div>
@@ -54,28 +60,26 @@
   import Button from '../../components/Button/Button.vue'
   import Overline from '../../components/Overline/Overline.vue'
   import { parseMarkdown } from '../../src/services/markdown-service'
-  import gridSmall from './asset-bg-texture.svg'
   import { computed } from 'vue'
 
   interface CardProps {
     overline: string
     title: string
     descriptionRawMarkdown: string
-    button: ButtonProps
-  }
-  interface ButtonProps {
-    label: string
-    href: string
+    linkLabel: string
+    link: string
   }
   interface SectionCallToActionProps {
     type: '2-col-70-30' | '1-col' | '1-col-short' | '1-col-short-orange'
     id?: string
+    backgroundStyle: 'dots' | 'square'
     cta: CardProps
     content: CardProps
   }
 
-  withDefaults(defineProps<SectionCallToActionProps>(), {
-    type: '2-col-70-30'
+  const props = withDefaults(defineProps<SectionCallToActionProps>(), {
+    type: '2-col-70-30',
+    backgroundStyle: 'dots'
   })
 
   const cardType = {
@@ -92,7 +96,25 @@
     '1-col-short-orange': 'bg-orange-500 gap-16'
   }
 
-  const backgroundImage = computed(() => {
-    return `background-image: url(${gridSmall}); background-size: cover;`
+  const backgroundImageStyle = computed(() => {
+    if (props.backgroundStyle === 'dots') {
+      return `
+        background-image: 
+          linear-gradient(to top, transparent 0%, transparent 100%),
+          radial-gradient(circle, rgba(206, 201, 201, 0.2) 1px, #0000 0);
+        background-size: 100% 100%, 12px 12px;
+        background-repeat: no-repeat, repeat;
+        background-position: 0 0, 0 0;
+      `
+    } else {
+      return `
+        background-image: 
+          linear-gradient(to top, #0A0A0A 0%, rgba(23,23,23,0) 100%),
+          linear-gradient(90deg, transparent 47px, rgba(64, 64, 64, 0.3) 47px, rgba(64, 64, 64, 0.3) 48px, transparent 48px),
+          linear-gradient(180deg, transparent 47px, rgba(64, 64, 64, 0.3) 47px, rgba(64, 64, 64, 0.3) 48px, transparent 48px);
+        background-size: 100% 100%, 48px 48px, 48px 48px;
+        background-repeat: no-repeat, repeat, repeat;
+      `
+    }
   })
 </script>

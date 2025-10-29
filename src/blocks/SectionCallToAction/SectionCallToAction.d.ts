@@ -1,14 +1,3 @@
-export interface ButtonProps {
-  /**
-   * Button label text
-   */
-  label: string
-  /**
-   * Button link URL
-   */
-  href: string
-}
-
 export interface CardProps {
   /**
    * Small label text displayed above the title
@@ -23,9 +12,13 @@ export interface CardProps {
    */
   descriptionRawMarkdown: string
   /**
-   * Button configuration
+   * Link label text for the button
    */
-  button: ButtonProps
+  linkLabel: string
+  /**
+   * Link URL for the button
+   */
+  link: string
 }
 
 export interface SectionCallToActionProps {
