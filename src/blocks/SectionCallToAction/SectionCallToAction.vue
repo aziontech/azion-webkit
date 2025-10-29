@@ -1,69 +1,120 @@
 <template>
   <section
     :id="id"
-    class="flex flex-wrap md:flex-nowrap relative max-w-xl xxxl:max-w-xxl mx-auto gap-2 md:p-12 p-6 mb-40"
+    class="grid gap-2 relative max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12 mb-40"
+    :class="cardType[type]"
   >
-    <div class="flex w-full md:w-1/3 md:flex-wrap items-start flex-col bg-neutral-900 rounded-md justify-between text-left">
-      <div class="p-12 ">
-        <div class="flex flex-col">
-          <span v-if="cta.overline" class="text-xs font-proto-mono uppercase text-balance text-orange-500 w-full pb-3">{{ cta.overline }}</span>
-          <h2 v-if="cta.title" class="display-3 font-normal tracking-tight text-neutral-100">
-            {{ cta.title }}
-          </h2>
-          <div v-html="parseMarkdown(cta.descriptionRawMarkdown)" class="text-balance text-neutral-400 text-base mt-3 font-sora"></div>
-        </div>
-
-        <div v-if="cta.link && cta.linkLabel" class="flex flex-row gap-4 mt-44">
-          <Button
-            :href="cta.link"
-            :label="cta.linkLabel"
-            :type="'linkSecondary'"
-            size="small"
-            theme="dark"
-            customClass="px-0 py-0"
-          />
-        </div>
+    <div
+      v-if="content && type === '2-col-70-30'"
+      class="lg:col-span-3 w-full flex flex-col justify-between gap-6 bg-neutral-900 rounded-md p-6 md:p-12"
+    >
+      <div class="flex flex-col gap-3">
+        <Overline color="orange"> {{ content.overline }} </Overline>
+        <h2 class="text-2xl text-neutral-200 font-sora">{{ content.title }}</h2>
+        <p
+          class="text-neutral-400 font-sora"
+          v-html="parseMarkdown(content.descriptionRawMarkdown)"
+        ></p>
       </div>
+      <Button
+        v-if="content.linkLabel"
+        :label="content.linkLabel"
+        :href="content.link"
+        type="linkSecondary"
+        size="small"
+      />
     </div>
-    <div class="flex w-full md:w-2/3 p-12 flex-col justify-between bg-orange-500 md:bg-neutral-800 hover:bg-orange-500 transition-colors duration-150 rounded-md flex-wrap">
-      <div class="w-full flex-col gap-3 flex">
-        <span v-if="content.overline" class="text-xs font-proto-mono uppercase text-balance text-neutral-950 w-full">{{ content.overline }}</span>
-        <div v-html="parseMarkdown(content.descriptionRawMarkdown)" class="text-balance text-neutral-950 font-sora mb-12 md:mb-0"></div>
+    <div
+      class="relative flex flex-col justify-between rounded-md p-6 md:p-12 overflow-hidden"
+      :class="[ctaColor[type]]"
+      :style="backgroundImageStyle"
+    >
+      <div
+        class="flex gap-3"
+        :class="type.includes('short') ? 'flex flex-col md:flex-row justify-between' : 'flex-col'"
+      >
+        <Overline color="black"> {{ cta.overline }} </Overline>
+        <p
+          class="max-w-sm text-balance font-sora text-xl text-neutral-900"
+          v-html="parseMarkdown(cta.descriptionRawMarkdown)"
+        ></p>
       </div>
-      <h3 v-if="content.title" class="text-neutral-950 font-bold font-sora display-1">{{ content.title }}</h3>
+      <div class="flex flex-col gap-3 md:flex-row justify-between md:items-end">
+        <h2 class="max-w-sm font-sora font-bold gap-2 text-4xl md:text-5xl text-neutral-900">
+          {{ cta.title }}
+        </h2>
+        <Button
+          v-if="cta.linkLabel"
+          :label="cta.linkLabel"
+          :href="cta.link"
+          icon="pi pi-angle-right"
+          type="primary"
+          size="small"
+        />
+      </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-  import Button from '../../components/Button'
+  import Button from '../../components/Button/Button.vue'
+  import Overline from '../../components/Overline/Overline.vue'
   import { parseMarkdown } from '../../src/services/markdown-service'
+  import { computed } from 'vue'
 
-  export interface CallToActionButton {
-    label: string
-    href: string
-    type?: 'primary' | 'secondary' | 'link' | 'tertiary' | 'linkExternal' | 'linkSecondary'
-    theme?: 'dark' | 'light'
+  interface CardProps {
+    overline: string
+    title: string
+    descriptionRawMarkdown: string
+    linkLabel: string
+    link: string
   }
-
   interface SectionCallToActionProps {
-    id?: string,
-    cta?: {
-      overline?: string,
-      title?: string,
-      descriptionRawMarkdown?: string,
-      linkLabel?: string,
-      link?: string
-    },
-    content?: {
-      overline?: string,
-      descriptionRawMarkdown?: string,
-      title?: string
-    }
+    type: '2-col-70-30' | '1-col' | '1-col-short' | '1-col-short-orange'
+    id?: string
+    backgroundStyle: 'dots' | 'square'
+    cta: CardProps
+    content: CardProps
   }
 
   const props = withDefaults(defineProps<SectionCallToActionProps>(), {
-    cta: () => ({}),
-    content: () => ({})
+    type: '2-col-70-30',
+    backgroundStyle: 'dots'
+  })
+
+  const cardType = {
+    '2-col-70-30': 'lg:grid-cols-10 grid-cols-1',
+    '1-col': 'grid-cols-1',
+    '1-col-short': 'grid-cols-1',
+    '1-col-short-orange': 'grid-cols-1'
+  }
+
+  const ctaColor = {
+    '2-col-70-30': 'bg-neutral-600 gap-60 lg:col-span-7 ',
+    '1-col': 'bg-neutral-600 gap-60',
+    '1-col-short': 'bg-neutral-600 gap-16',
+    '1-col-short-orange': 'bg-orange-500 gap-16'
+  }
+
+  const backgroundImageStyle = computed(() => {
+    if (props.backgroundStyle === 'dots') {
+      return `
+        background-image: 
+          linear-gradient(to top, transparent 0%, transparent 100%),
+          radial-gradient(circle, rgba(206, 201, 201, 0.2) 1px, #0000 0);
+        background-size: 100% 100%, 12px 12px;
+        background-repeat: no-repeat, repeat;
+        background-position: 0 0, 0 0;
+      `
+    } else {
+      return `
+        background-image: 
+          linear-gradient(to top, #0A0A0A 0%, rgba(23,23,23,0) 100%),
+          linear-gradient(90deg, transparent 47px, rgba(64, 64, 64, 0.3) 47px, rgba(64, 64, 64, 0.3) 48px, transparent 48px),
+          linear-gradient(180deg, transparent 47px, rgba(64, 64, 64, 0.3) 47px, rgba(64, 64, 64, 0.3) 48px, transparent 48px);
+        background-size: 100% 100%, 48px 48px, 48px 48px;
+        background-repeat: no-repeat, repeat, repeat;
+      `
+    }
   })
 </script>
