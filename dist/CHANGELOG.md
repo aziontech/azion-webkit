@@ -1,3 +1,9 @@
+## [1.252.0](https://github.com/aziontech/azion-webkit/compare/v1.251.4...v1.252.0) (2025-10-30)
+
+### Features
+
+* enhance markdown link styling with custom button component ([52245eb](https://github.com/aziontech/azion-webkit/commit/52245eb36f639a315d47a4e3a1070433a026f816))
+
 ## [1.251.4](https://github.com/aziontech/azion-webkit/compare/v1.251.3...v1.251.4) (2025-10-29)
 
 ### Bug Fixes
