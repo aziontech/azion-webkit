@@ -1,3 +1,9 @@
+## [1.253.0](https://github.com/aziontech/azion-webkit/compare/v1.252.0...v1.253.0) (2025-10-31)
+
+### Features
+
+* add support for primary buttons and dividers in markdown ([dee6c64](https://github.com/aziontech/azion-webkit/commit/dee6c648da24051a41e5377ccbf2cc3186987092))
+
 ## [1.252.0](https://github.com/aziontech/azion-webkit/compare/v1.251.4...v1.252.0) (2025-10-30)
 
 ### Features
