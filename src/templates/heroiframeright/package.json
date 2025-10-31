@@ -1,7 +1,0 @@
-{
-  "main": "./heroiframeright.js",
-  "types": "./HeroIframeRight.d.ts",
-  "browser": {
-    "./sfc": "./HeroIframeRight.vue"
-  }
-}
