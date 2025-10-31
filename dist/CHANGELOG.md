@@ -1,3 +1,10 @@
+## [1.254.0](https://github.com/aziontech/azion-webkit/compare/v1.253.0...v1.254.0) (2025-10-31)
+
+### Features
+
+* hero iframe right ([5d0452d](https://github.com/aziontech/azion-webkit/commit/5d0452d5b5b767172c0edeaaedabd4f2837c5830))
+* iframe resize function ([6dea589](https://github.com/aziontech/azion-webkit/commit/6dea589ba8efe5897d3b2c80b8b506393027da9e))
+
 ## [1.253.0](https://github.com/aziontech/azion-webkit/compare/v1.252.0...v1.253.0) (2025-10-31)
 
 ### Features
