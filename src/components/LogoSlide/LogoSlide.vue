@@ -38,7 +38,7 @@
         >
           <div class="flex justify-center items-center h-24 w-24 rounded-lg bg-neutral-900">
             <img
-              :src="item.src"
+              :src="`${item.src}?ims=24x24`"
               :alt="item.alt"
               class="max-w-12 max-h-12 w-full h-full"
             />
