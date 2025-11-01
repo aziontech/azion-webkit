@@ -83,6 +83,7 @@ console.log('Copying templates...');
 copyDependencies('./src/templates/', `${outDir}/`);
 copyDependencies('./src/components/', `${outDir}/components`);
 copyDependencies('./src/blocks/', `${outDir}/blocks`);
+copyDependencies('./src/services/', `${outDir}/services`)
 
 fs.copySync(path.resolve(__dirname, './tailwind.config.js'), `${outDir}/tailwind.config.js`);
 fs.copySync(path.resolve(__dirname, './src/assets'), `${outDir}/src/assets`);

@@ -56,7 +56,7 @@ Component NewsletterWide
 - ../overline
 - ../cardtitle
 - ../carddescription
-- ../src/services/newsletter/newsletterSubmitHandler
+- ../services/newsletter/newsletterSubmitHandler
 
 ## Usage Example
 

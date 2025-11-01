@@ -101,7 +101,7 @@
   import Button from '../../components/Button'
   import 'swiper/css'
   import 'swiper/css/navigation'
-  import { parseMarkdown } from '../../src/services/markdown-service'
+  import { parseMarkdown } from '../../services/markdown-service'
 
   export interface CarouselCard {
     tag?: string

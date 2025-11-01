@@ -71,7 +71,7 @@
   import CardDescription from '../carddescription'
   import * as yup from 'yup'
   import { useForm } from 'vee-validate'
-  import { newsletterSubrscribeHandler } from '../src/services/newsletter/newsletterSubmitHandler'
+  import { newsletterSubrscribeHandler } from '../services/newsletter/newsletterSubmitHandler'
   import { ref } from 'vue'
 
   const isSuccess = ref(false)

@@ -64,7 +64,7 @@
   import Button from 'primevue/button'
   import * as yup from 'yup'
   import { useForm } from 'vee-validate'
-  import { newsletterSubrscribeHandler } from '../src/services/newsletter/newsletterSubmitHandler'
+  import { newsletterSubrscribeHandler } from '../services/newsletter/newsletterSubmitHandler'
   import { ref } from 'vue'
   import InlineMessage from 'primevue/inlinemessage'
 
