@@ -1,62 +1,76 @@
-import BigNumbers from '../../components/bignumbers/BigNumbers.vue'
+import BigNumbers from '../../blocks/SectionBigNumbersCarousel/BigNumbers.vue'
 
 export default {
-  title: 'Components/Rebranding/BigNumbers',
+  title: 'Blocks/Rebranding/SectionBigNumbersCarousel',
   component: BigNumbers,
   tags: ['autodocs'],
   argTypes: {
-    items: {
-      control: { type: 'object' },
-      description: 'Array of stat objects with title, description, and icon',
-      table: {
-        type: { summary: 'Array<{title: string, description: string, icon: string}>' },
-        required: true
-      }
-    },
     justify: {
       control: { type: 'select' },
       options: ['center', 'start'],
-      description: 'Content justification',
-      table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: 'center' }
-      }
+      description: 'Defines the alignment of the big numbers'
+    },
+    items: {
+      control: { type: 'object' },
+      description: 'Array of items to display as big numbers'
     }
   },
   parameters: {
-    layout: 'fullscreen',
-    backgrounds: {
-      default: 'dark',
-      values: [{ name: 'dark', value: '#0a0a0a' }]
+    docs: {
+      description: {
+        component: `
+The BigNumbers component displays a collection of metrics or statistics in a carousel format using Swiper. Each item includes an icon, a main number/title, and a description.
+
+### Features
+- Swiper carousel layout for smooth navigation
+- Icon support for visual representation
+- Responsive design with proper spacing
+- Scrollbar navigation for better UX
+        `
+      }
     }
   },
   decorators: [
     (story) => ({
       components: { story },
-      template: '<div class="bg-neutral-950"><story /></div>'
+      template: '<div class="bg-neutral-950 p-6"><story /></div>'
     })
   ]
 }
 
-export const Default = {
-  args: {
-    items: [
-      {
-        title: '99.9%',
-        description: 'Uptime Guarantee',
-        icon: 'pi pi-check-circle'
-      },
-      {
-        title: '150+',
-        description: 'Edge Locations Worldwide',
-        icon: 'pi pi-globe'
-      },
-      {
-        title: '< 20ms',
-        description: 'Average Latency',
-        icon: 'pi pi-bolt'
-      }
-    ],
-    justify: 'center'
+const Template = (args) => ({
+  components: { BigNumbers },
+  setup() {
+    return { args }
+  },
+  template: `<BigNumbers v-bind="args" />`
+})
+
+const mockItems = [
+  {
+    icon: 'pi pi-check',
+    title: '80%',
+    description: 'Better TCO'
+  },
+  {
+    icon: 'pi pi-shield',
+    title: '80%',
+    description: 'Faster Applications'
+  },
+  {
+    icon: 'pi pi-code',
+    title: '100%',
+    description: 'Availability, backed by an SLA'
+  },
+  {
+    icon: 'pi pi-stopwatch',
+    title: '80k+',
+    description: 'Processed requests per second at peak load'
   }
+]
+
+export const Default = Template.bind({})
+Default.args = {
+  items: mockItems,
+  justify: 'center'
 }

@@ -1,8 +1,8 @@
-import SectionContentImage2Column from '../../blocks/SectionContentImage2Column/SectionContentImage2Column.vue'
+import SectionContent2Column from '../../blocks/SectionContent2Column/SectionContent2Column.vue'
 
 export default {
-  title: 'Blocks/Rebranding/SectionContentImage2Column',
-  component: SectionContentImage2Column,
+  title: 'Blocks/Rebranding/SectionContent2Column',
+  component: SectionContent2Column,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
