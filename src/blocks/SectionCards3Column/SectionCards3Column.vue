@@ -46,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-  import { parseMarkdown } from '@services'
+  import { parseMarkdown } from '../../services/markdown/markdown-service'
 
   export interface Card3Column {
     icon: string

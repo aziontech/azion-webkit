@@ -101,7 +101,7 @@
   import Button from '../../components/Button/Button.vue'
   import 'swiper/css'
   import 'swiper/css/navigation'
-  import { parseMarkdown } from '@services'
+  import { parseMarkdown } from '../../services/markdown/markdown-service'
 
   export interface CarouselCard {
     tag?: string
