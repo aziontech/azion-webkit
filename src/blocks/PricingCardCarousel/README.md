@@ -12,9 +12,9 @@ A mobile-first carousel block component for displaying pricing cards using Swipe
 
 ## Props
 
-| Prop | Type | Required | Default | Description |
-|------|------|----------|---------|-------------|
-| `cards` | `Array<PricingCardData>` | Yes | `[]` | Array of pricing card data objects |
+| Prop    | Type                     | Required | Default | Description                        |
+| ------- | ------------------------ | -------- | ------- | ---------------------------------- |
+| `cards` | `Array<PricingCardData>` | Yes      | `[]`    | Array of pricing card data objects |
 
 ### PricingCardData Interface
 
@@ -37,8 +37,8 @@ interface PricingCardData {
 
 ## Events
 
-| Event | Payload | Description |
-|-------|---------|-------------|
+| Event        | Payload                                    | Description                                   |
+| ------------ | ------------------------------------------ | --------------------------------------------- |
 | `card-click` | `{ card: PricingCardData, index: number }` | Emitted when a pricing card button is clicked |
 
 ## Responsive Behavior
@@ -52,50 +52,51 @@ interface PricingCardData {
 
 ```vue
 <template>
-  <PricingCardCarousel 
-    :cards="pricingCards" 
+  <PricingCardCarousel
+    :cards="pricingCards"
     @card-click="handleCardSelection"
   />
 </template>
 
 <script setup>
-import PricingCardCarousel from '@/blocks/PricingCardCarousel'
+  import PricingCardCarousel from '@/blocks/PricingCardCarousel'
 
-const pricingCards = [
-  {
-    title: 'Free',
-    subtitle: 'Test, learn and vibe code',
-    features: [
-      { icon: 'pi-check', label: '1 Workspace' },
-      { icon: 'pi-check', label: 'Community Support' }
-    ],
-    monthlyPrice: '$0',
-    buttonLabel: 'Get Started'
-  },
-  {
-    popular: true,
-    title: 'Pro',
-    subtitle: 'For growing businesses',
-    features: [
-      { icon: 'pi-check', label: '10 Workspaces' },
-      { icon: 'pi-check', label: 'Priority Support' }
-    ],
-    monthlyPrice: '$29',
-    annualPrice: '$290',
-    savings: 'Save 17%',
-    buttonLabel: 'Start Free Trial'
+  const pricingCards = [
+    {
+      title: 'Free',
+      subtitle: 'Test, learn and vibe code',
+      features: [
+        { icon: 'pi-check', label: '1 Workspace' },
+        { icon: 'pi-check', label: 'Community Support' }
+      ],
+      monthlyPrice: '$0',
+      buttonLabel: 'Get Started'
+    },
+    {
+      popular: true,
+      title: 'Pro',
+      subtitle: 'For growing businesses',
+      features: [
+        { icon: 'pi-check', label: '10 Workspaces' },
+        { icon: 'pi-check', label: 'Priority Support' }
+      ],
+      monthlyPrice: '$29',
+      annualPrice: '$290',
+      savings: 'Save 17%',
+      buttonLabel: 'Start Free Trial'
+    }
+  ]
+
+  const handleCardSelection = ({ card, index }) => {
+    console.log('Selected plan:', card.title, 'at index:', index)
   }
-]
-
-const handleCardSelection = ({ card, index }) => {
-  console.log('Selected plan:', card.title, 'at index:', index)
-}
 </script>
 ```
 
 ## Styling
 
 The component uses Tailwind CSS classes and includes:
+
 - Responsive padding and spacing
 - Mobile-optimized swiper configuration
 - Smooth transitions and interactions
@@ -110,9 +111,10 @@ The component uses Tailwind CSS classes and includes:
 ## Storybook
 
 View the component in Storybook at `Blocks/PricingCardCarousel` with multiple examples:
+
 - Default (4 cards)
 - Three Cards
-- Two Cards  
+- Two Cards
 - Mobile Preview
 
 ## Technical Notes

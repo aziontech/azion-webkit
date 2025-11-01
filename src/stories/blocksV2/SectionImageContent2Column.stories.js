@@ -11,7 +11,8 @@ export default {
     },
     descriptionRawMarkdown: {
       control: { type: 'text' },
-      description: 'Markdown content that will be converted to HTML (supports headers, bold, italic, links, line breaks)'
+      description:
+        'Markdown content that will be converted to HTML (supports headers, bold, italic, links, line breaks)'
     },
     image: {
       control: { type: 'text' },

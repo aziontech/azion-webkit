@@ -50,24 +50,8 @@ const logoMock = `<svg xmlns="http://www.w3.org/2000/svg" width="161" height="40
 
 export const Default = Template.bind({})
 Default.args = {
-  logo: logoMock,
+  logo: 'https://www.azion.com/assets/images/logos/light/gartner-logo.svg',
   testimonial:
     'Gartner clients note that Azion excels at providing a consultative approach to orchestration and serverless edge application environments.',
   source: 'Gartner Competitive Landscape for CDN and Edge Services.'
-}
-
-export const GigaOm = Template.bind({})
-GigaOm.args = {
-  logo: logoMock,
-  testimonial:
-    'Azion was named a Leader and identified as the only purpose-built edge platform whose capabilities meet all of the key criteria outlined in the report.',
-  source: 'GigaOms Radar for Edge Platforms.'
-}
-
-export const Forrester = Template.bind({})
-Forrester.args = {
-  logo: logoMock,
-  testimonial:
-    'Azion was named a Strong Performer and a good fir for large enterprises seeking to accelerate innovation at the edge with serverless full-stack applications.',
-  source: 'Edge Development Platforms, Q4 2021.'
 }

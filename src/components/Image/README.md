@@ -12,40 +12,33 @@ A flexible image component with responsive and cover options.
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `src` | `string` | *required* | Image source URL |
-| `alt` | `string` | `''` | Alternative text for accessibility |
-| `fullWidth` | `boolean` | `false` | If true, applies `w-full` class |
-| `cover` | `boolean` | `false` | If true, applies `object-cover` and `h-full` |
-| `loading` | `'lazy' \| 'eager'` | `'lazy'` | Native loading strategy |
+| Prop        | Type                | Default    | Description                                  |
+| ----------- | ------------------- | ---------- | -------------------------------------------- |
+| `src`       | `string`            | _required_ | Image source URL                             |
+| `alt`       | `string`            | `''`       | Alternative text for accessibility           |
+| `fullWidth` | `boolean`           | `false`    | If true, applies `w-full` class              |
+| `cover`     | `boolean`           | `false`    | If true, applies `object-cover` and `h-full` |
+| `loading`   | `'lazy' \| 'eager'` | `'lazy'`   | Native loading strategy                      |
 
 ## Events
 
-| Event | Payload | Description |
-|-------|---------|-------------|
-| `load` | `Event` | Emitted when image loads successfully |
-| `error` | `Event` | Emitted when image fails to load |
+| Event   | Payload | Description                           |
+| ------- | ------- | ------------------------------------- |
+| `load`  | `Event` | Emitted when image loads successfully |
+| `error` | `Event` | Emitted when image fails to load      |
 
 ## Usage
 
 ### Basic Usage
 
 ```vue
-<Image 
-  src="https://example.com/image.jpg"
-  alt="Example image"
-/>
+<Image src="https://example.com/image.jpg" alt="Example image" />
 ```
 
 ### Full Width
 
 ```vue
-<Image 
-  src="https://example.com/image.jpg"
-  alt="Full width image"
-  :fullWidth="true"
-/>
+<Image src="https://example.com/image.jpg" alt="Full width image" :fullWidth="true" />
 ```
 
 ### Cover Mode
@@ -64,17 +57,17 @@ A flexible image component with responsive and cover options.
 
 ```vue
 <script setup>
-const handleLoad = (event) => {
-  console.log('Image loaded:', event)
-}
+  const handleLoad = (event) => {
+    console.log('Image loaded:', event)
+  }
 
-const handleError = (event) => {
-  console.error('Image failed to load:', event)
-}
+  const handleError = (event) => {
+    console.error('Image failed to load:', event)
+  }
 </script>
 
 <template>
-  <Image 
+  <Image
     src="https://example.com/image.jpg"
     alt="Image with handlers"
     @load="handleLoad"
@@ -86,12 +79,7 @@ const handleError = (event) => {
 ### Eager Loading
 
 ```vue
-<Image 
-  src="https://example.com/hero.jpg"
-  alt="Hero image"
-  loading="eager"
-  :fullWidth="true"
-/>
+<Image src="https://example.com/hero.jpg" alt="Hero image" loading="eager" :fullWidth="true" />
 ```
 
 ## Behavior
@@ -109,6 +97,7 @@ const handleError = (event) => {
 ### Container
 
 The image is wrapped in a container with:
+
 - `relative` positioning
 - `overflow-hidden` to prevent overflow
 - Width controlled by `fullWidth` prop

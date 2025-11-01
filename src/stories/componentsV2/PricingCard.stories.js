@@ -11,12 +11,7 @@ export const Default = {
     title: 'Pro Plan',
     price: '$29',
     period: '/month',
-    features: [
-      'Unlimited projects',
-      '100GB storage',
-      'Priority support',
-      'Advanced analytics'
-    ],
+    features: ['Unlimited projects', '100GB storage', 'Priority support', 'Advanced analytics'],
     buttonLabel: 'Get Started'
   }
 }

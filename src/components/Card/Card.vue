@@ -17,7 +17,7 @@
               :label="label"
               size="small"
               type="tertiary"
-              theme="dark"  
+              theme="dark"
               customClass="px-0 bg-transparent"
               icon="pi pi-angle-right"
             />
@@ -89,6 +89,7 @@
   }
 
   const cardClassesWithHover = {
-    default: 'w-full h-full bg-neutral-900 rounded-md group-hover:bg-neutral-800 transition-colors flex flex-col'
+    default:
+      'w-full h-full bg-neutral-900 rounded-md group-hover:bg-neutral-800 transition-colors flex flex-col'
   }
 </script>

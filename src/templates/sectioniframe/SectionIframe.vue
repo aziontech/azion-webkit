@@ -46,7 +46,6 @@
       window.azion = {}
       window.azion.sectionIframeSetHeight = sectionIframeSetHeight
     }
-
   })
 
   onBeforeUnmount(() => {
@@ -59,8 +58,7 @@
     try {
       let iframe
       if (typeof iframeId === 'string') {
-        iframe =
-          document.getElementById(iframeId) || document.querySelector(iframeId)
+        iframe = document.getElementById(iframeId) || document.querySelector(iframeId)
       } else {
         console.warn('[azion.sectionIframeSetHeight] Invalid iframe reference provided')
         return false

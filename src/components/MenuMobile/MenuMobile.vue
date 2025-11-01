@@ -146,7 +146,7 @@
           class="whitespace-nowrap font-sm"
           :title="button.urlTitle"
           customClass="px-2 py-1 !h-[42px]"
-          :label="button.label" 
+          :label="button.label"
           :icon="button.icon"
         />
       </div>

@@ -17,14 +17,18 @@
       >
         {{ overline }}
       </p>
-      <h1 class="mx-auto max-w-sm md:max-w-7xl md:display-1 display-2 font-sora leading-tight text-pretty">
+      <h1
+        class="mx-auto max-w-sm md:max-w-7xl md:display-1 display-2 font-sora leading-tight text-pretty"
+      >
         {{ title }}
       </h1>
       <p class="text-xs lg:text-base max-w-sm md:max-w-7xl mb-3 text-neutral-200 font-sora mx-auto">
         {{ subtitle }}
       </p>
       <template v-if="limitedButtons.length > 0">
-        <div class="flex justify-center gap-2 md:gap-5 mt-4 md:mt-0 flex-col items-center md:flex-row">
+        <div
+          class="flex justify-center gap-2 md:gap-5 mt-4 md:mt-0 flex-col items-center md:flex-row"
+        >
           <Button
             v-for="button in limitedButtons"
             :size="button.size || 'small'"
@@ -186,8 +190,7 @@
         }
 
         const totalLength = Math.sqrt(
-          Math.pow(line.endX - line.startX, 2) +
-          Math.pow(line.endY - line.startY, 2)
+          Math.pow(line.endX - line.startX, 2) + Math.pow(line.endY - line.startY, 2)
         )
 
         const currentLength = totalLength * Math.min(line.progress, 1)

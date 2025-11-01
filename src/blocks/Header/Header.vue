@@ -9,8 +9,9 @@
       </div>
 
       <div class="flex items-center gap-3">
-
-        <div class="bg-transparent items-center rounded-md p-1 hidden xl:flex xl:gap-1 h-[2.625rem]">
+        <div
+          class="bg-transparent items-center rounded-md p-1 hidden xl:flex xl:gap-1 h-[2.625rem]"
+        >
           <a
             v-for="(menu, index) in menuSecondary"
             :key="index"
@@ -19,7 +20,9 @@
             :title="menu.title"
             :class="[
               'border-none py-1 px-4  rounded-md',
-              menu.backgroundColor === 'dark' ? 'bg-neutral-200 text-neutral-900 hover:bg-neutral-300' : 'text-white hover:text-neutral-300'
+              menu.backgroundColor === 'dark'
+                ? 'bg-neutral-200 text-neutral-900 hover:bg-neutral-300'
+                : 'text-white hover:text-neutral-300'
             ]"
           >
             <span :class="['text-sm', 'font-sora']">
@@ -29,7 +32,8 @@
         </div>
         <div
           v-if="$slots.dialog"
-          class="min-w-8"n
+          class="min-w-8"
+          n
         >
           <slot name="dialog" />
         </div>

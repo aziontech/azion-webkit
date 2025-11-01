@@ -43,7 +43,7 @@ Component NewsletterSingleLine
 
 ### Internal
 
-- ../src/services/newsletter/newsletterSubmitHandler
+- ../services/newsletter/newsletterSubmitHandler
 
 ## Usage Example
 

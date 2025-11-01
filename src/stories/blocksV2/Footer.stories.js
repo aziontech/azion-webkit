@@ -200,37 +200,39 @@ const i18nPages = [
   { lang: 'es', url: '/es/' }
 ]
 
-export const Default = {
-  render: (args) => ({
-    components: { Footer, SelectLang },
-    setup() {
-      return { 
-        securityInformation,
-        listData,
-        cta,
-        socialButtons,
-        copyright,
-        footerContent,
-        i18nPages
-      }
-    },
-    template: `
-      <Footer
-        :securityInformation="securityInformation"
-        :listData="listData"
-        lang="en"
-        :copyright="copyright"
-        :cta="cta"
-        :socialButtons="socialButtons"
-        :content="footerContent"
+const Template = (args) => ({
+  components: { Footer, SelectLang },
+  setup() {
+    return { args }
+  },
+  template: `
+        <Footer
+        :securityInformation="args.securityInformation"
+        :listData="args.listData"
+        :lang="args.lang || 'en'"
+        :copyright="args.copyright"
+        :cta="args.cta"
+        :socialButtons="args.socialButtons"
+        :content="args.footerContent"
       >
-        <template #lang>
+        <template #action>
           <SelectLang
-            lang="en"
-            :i18nPages="i18nPages"
+            :lang="args.lang || 'en'"
+            :i18nPages="args.i18nPages"
           />
         </template>
       </Footer>
-    `
-  })
+  `
+})
+
+export const Default = Template.bind({})
+Default.args = {
+  lang: 'en',
+  securityInformation,
+  listData,
+  cta,
+  socialButtons,
+  copyright,
+  footerContent,
+  i18nPages
 }

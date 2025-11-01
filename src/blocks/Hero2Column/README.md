@@ -15,21 +15,21 @@ A flexible two-column hero section component designed for product pages. Feature
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `title` | `string` | **required** | Main heading text |
-| `subtitle` | `string` | `undefined` | Description/subtitle text |
-| `overline` | `string` | `undefined` | Small text above title |
-| `features` | `ProductHeroFeature[]` | `[]` | Array of feature items |
-| `buttons` | `ProductHeroButtonProps[]` | `[]` | Array of button configs (max 3) |
-| `image` | `string` | `undefined` | Image URL |
-| `imageAlt` | `string` | `undefined` | Image alt text |
-| `imageClass` | `string` | `undefined` | Additional CSS classes for image |
-| `layout` | `'image-right' \| 'image-left'` | `'image-right'` | Image position |
-| `spacing` | `'none' \| 'small' \| 'default' \| 'large'` | `'default'` | Vertical padding |
-| `titleSize` | `'default' \| 'large'` | `'default'` | Title size variant |
-| `additionalInfo` | `string` | `undefined` | Text below buttons |
-| `id` | `string` | `undefined` | HTML id attribute |
+| Prop             | Type                                        | Default         | Description                      |
+| ---------------- | ------------------------------------------- | --------------- | -------------------------------- |
+| `title`          | `string`                                    | **required**    | Main heading text                |
+| `subtitle`       | `string`                                    | `undefined`     | Description/subtitle text        |
+| `overline`       | `string`                                    | `undefined`     | Small text above title           |
+| `features`       | `ProductHeroFeature[]`                      | `[]`            | Array of feature items           |
+| `buttons`        | `ProductHeroButtonProps[]`                  | `[]`            | Array of button configs (max 3)  |
+| `image`          | `string`                                    | `undefined`     | Image URL                        |
+| `imageAlt`       | `string`                                    | `undefined`     | Image alt text                   |
+| `imageClass`     | `string`                                    | `undefined`     | Additional CSS classes for image |
+| `layout`         | `'image-right' \| 'image-left'`             | `'image-right'` | Image position                   |
+| `spacing`        | `'none' \| 'small' \| 'default' \| 'large'` | `'default'`     | Vertical padding                 |
+| `titleSize`      | `'default' \| 'large'`                      | `'default'`     | Title size variant               |
+| `additionalInfo` | `string`                                    | `undefined`     | Text below buttons               |
+| `id`             | `string`                                    | `undefined`     | HTML id attribute                |
 
 ## Types
 
@@ -68,7 +68,7 @@ interface ProductHeroButtonProps {
 </template>
 
 <script setup>
-import ProductHero from '@/blocks/ProductHero'
+  import ProductHero from '@/blocks/ProductHero'
 </script>
 ```
 
@@ -86,9 +86,7 @@ import ProductHero from '@/blocks/ProductHero'
       { text: 'Automatic SSL certificates' },
       { text: '99.99% uptime SLA' }
     ]"
-    :buttons="[
-      { label: 'Start Free Trial', type: 'primary', href: '/trial' }
-    ]"
+    :buttons="[{ label: 'Start Free Trial', type: 'primary', href: '/trial' }]"
     image="/images/edge-network.png"
     layout="image-left"
   />
@@ -111,7 +109,6 @@ import ProductHero from '@/blocks/ProductHero'
 </template>
 ```
 
-
 ### Custom Visual Slot
 
 ```vue
@@ -121,8 +118,16 @@ import ProductHero from '@/blocks/ProductHero'
     subtitle="See it in action"
   >
     <template #visual>
-      <video autoplay loop muted class="w-full rounded-lg">
-        <source src="/videos/demo.mp4" type="video/mp4">
+      <video
+        autoplay
+        loop
+        muted
+        class="w-full rounded-lg"
+      >
+        <source
+          src="/videos/demo.mp4"
+          type="video/mp4"
+        />
       </video>
     </template>
   </ProductHero>
@@ -136,9 +141,7 @@ import ProductHero from '@/blocks/ProductHero'
   <ProductHero
     title="Start your free trial"
     subtitle="No credit card required"
-    :buttons="[
-      { label: 'Sign Up Free', type: 'primary', href: '/signup' }
-    ]"
+    :buttons="[{ label: 'Sign Up Free', type: 'primary', href: '/signup' }]"
     additionalInfo="14-day free trial • Cancel anytime"
     image="/images/trial.png"
   />
@@ -148,6 +151,7 @@ import ProductHero from '@/blocks/ProductHero'
 ## Layout Options
 
 ### Image Right (Default)
+
 Content on the left, image on the right.
 
 ```vue
@@ -155,6 +159,7 @@ Content on the left, image on the right.
 ```
 
 ### Image Left
+
 Image on the left, content on the right.
 
 ```vue
@@ -171,6 +176,7 @@ Image on the left, content on the right.
 ## Styling
 
 The component uses:
+
 - **Tailwind CSS** for responsive layout and spacing
 - **PrimeVue icons** for feature checkmarks
 - **Azion orange** (#F3652B) for accent colors

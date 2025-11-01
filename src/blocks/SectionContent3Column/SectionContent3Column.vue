@@ -9,7 +9,9 @@
         :key="index"
         class="h-full relative w-full border-neutral-900 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:left-0 after:z-10 after:hidden md:after:block before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 before:z-10 before:hidden md:before:block"
         :class="[
-          gridPattern === 'square' ? 'border-x border-t border-neutral-900' : 'border-y border-l border-r md:border-r-0 border-neutral-900',
+          gridPattern === 'square'
+            ? 'border-x border-t border-neutral-900'
+            : 'border-y border-l border-r md:border-r-0 border-neutral-900',
           index == cards.length - 1 ? 'md:border-r' : ''
         ]"
       >
@@ -29,8 +31,10 @@
             />
           </div>
         </div>
-        <div aria-hidden="true" v-if="index === 2" 
-          class="before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:right-[-4px] before:z-10 before:hidden md:before:block after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-[-4px] after:z-10 after:hidden md:after:block" 
+        <div
+          aria-hidden="true"
+          v-if="index === 2"
+          class="before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:right-[-4px] before:z-10 before:hidden md:before:block after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-[-4px] after:z-10 after:hidden md:after:block"
         />
       </div>
     </div>

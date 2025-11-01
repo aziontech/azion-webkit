@@ -25,19 +25,21 @@ export const Default = {
       {
         icon: 'pi pi-folder',
         title: 'Bullet benefit',
-        description: 'Melhore a **performance**, segurança e escalabilidade dos seus sites e aplicações web com *edge computing*.'
+        description:
+          'Melhore a **performance**, segurança e escalabilidade dos seus sites e aplicações web com *edge computing*.'
       },
       {
         icon: 'pi pi-folder',
         title: 'Bullet benefit',
-        description: 'Deploy aplicações com **latência ultra-baixa** e [documentação completa](https://docs.azion.com) disponível.'
+        description:
+          'Deploy aplicações com **latência ultra-baixa** e [documentação completa](https://docs.azion.com) disponível.'
       },
       {
         icon: 'pi pi-folder',
         title: 'Bullet benefit',
-        description: 'Escale automaticamente com *infraestrutura global* e **monitoramento em tempo real**.'
+        description:
+          'Escale automaticamente com *infraestrutura global* e **monitoramento em tempo real**.'
       }
     ]
   }
 }
-

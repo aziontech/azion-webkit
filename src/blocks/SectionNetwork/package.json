@@ -1,6 +1,6 @@
 {
-    "main": "./index.ts",
-    "browser": {
-      "./sfc": "./SectionNetwork.vue"
-    }
+  "main": "./index.ts",
+  "browser": {
+    "./sfc": "./SectionNetwork.vue"
   }
+}

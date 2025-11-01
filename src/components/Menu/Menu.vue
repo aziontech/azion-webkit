@@ -4,13 +4,13 @@
       <li
         v-for="(menuitem, index) in menuData.menu"
         :key="index"
-        class="py-1 px-0 flex items-center transition duration-300 delay-75 rounded-md h-[2.5rem] "
+        class="py-1 px-0 flex items-center transition duration-300 delay-75 rounded-md h-[2.5rem]"
       >
         <a
           v-if="!menuitem.subMenuColumns || !menuitem.subMenuColumns.length"
           :href="menuitem.href || ''"
           :title="menuitem.label || ''"
-          class="shadow-none  p-1 px-4 p-button-text p-button-primary p-button-sm whitespace-nowrap text-white"
+          class="shadow-none p-1 px-4 p-button-text p-button-primary p-button-sm whitespace-nowrap text-white"
           :class="getBreakpointClass(menuitem)"
         >
           <span class="text-white hover:text-neutral-300 font-sora text-sm font-normal">
@@ -35,8 +35,8 @@
               />
             </div>
           </button>
-          <Submenu 
-            :menuitem="menuitem" 
+          <Submenu
+            :menuitem="menuitem"
             :communityData="communityData"
           />
         </div>
@@ -44,7 +44,6 @@
     </ul>
   </nav>
 </template>
-
 
 <script setup>
   import Submenu from '../Submenu'

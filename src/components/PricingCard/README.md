@@ -29,19 +29,19 @@ A flexible and modern pricing card component for displaying pricing plans with f
 </template>
 
 <script>
-import PricingCard from '@/components/PricingCard'
+  import PricingCard from '@/components/PricingCard'
 
-export default {
-  components: {
-    PricingCard
-  },
-  methods: {
-    handlePlanSelection(planData) {
-      console.log('Selected plan:', planData)
-      // Handle plan selection logic
+  export default {
+    components: {
+      PricingCard
+    },
+    methods: {
+      handlePlanSelection(planData) {
+        console.log('Selected plan:', planData)
+        // Handle plan selection logic
+      }
     }
   }
-}
 </script>
 ```
 
@@ -73,24 +73,24 @@ export default {
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `title` | `string` | - | **Required.** Title of the pricing card |
-| `subtitle` | `string` | `''` | Subtitle text displayed below the title |
-| `description` | `string` | `''` | Description text displayed below the subtitle |
-| `features` | `string[]` | `[]` | Array of feature strings to display with checkmarks |
-| `price` | `string \| number` | - | **Required.** Price value |
-| `priceLabel` | `string` | `'START AT'` | Label displayed above the price |
-| `pricePeriod` | `string` | `'/MO'` | Period text displayed after the price |
-| `buttonLabel` | `string` | `'START NOW'` | Text for the call-to-action button |
-| `buttonVariant` | `'primary' \| 'secondary'` | `'secondary'` | Button variant style |
-| `additionalInfo` | `string` | `''` | Additional information text displayed below the button |
-| `highlighted` | `boolean` | `false` | Whether the card should be highlighted with primary color border |
+| Prop             | Type                       | Default       | Description                                                      |
+| ---------------- | -------------------------- | ------------- | ---------------------------------------------------------------- |
+| `title`          | `string`                   | -             | **Required.** Title of the pricing card                          |
+| `subtitle`       | `string`                   | `''`          | Subtitle text displayed below the title                          |
+| `description`    | `string`                   | `''`          | Description text displayed below the subtitle                    |
+| `features`       | `string[]`                 | `[]`          | Array of feature strings to display with checkmarks              |
+| `price`          | `string \| number`         | -             | **Required.** Price value                                        |
+| `priceLabel`     | `string`                   | `'START AT'`  | Label displayed above the price                                  |
+| `pricePeriod`    | `string`                   | `'/MO'`       | Period text displayed after the price                            |
+| `buttonLabel`    | `string`                   | `'START NOW'` | Text for the call-to-action button                               |
+| `buttonVariant`  | `'primary' \| 'secondary'` | `'secondary'` | Button variant style                                             |
+| `additionalInfo` | `string`                   | `''`          | Additional information text displayed below the button           |
+| `highlighted`    | `boolean`                  | `false`       | Whether the card should be highlighted with primary color border |
 
 ## Events
 
-| Event | Payload | Description |
-|-------|---------|-------------|
+| Event          | Payload                                      | Description                            |
+| -------------- | -------------------------------------------- | -------------------------------------- |
 | `button-click` | `{ title: string, price: string \| number }` | Emitted when the CTA button is clicked |
 
 ## Styling
@@ -117,6 +117,7 @@ The component uses PrimeVue's theme system and includes:
 ## Examples
 
 ### Free Plan Card
+
 ```vue
 <PricingCard
   title="Free"
@@ -128,17 +129,13 @@ The component uses PrimeVue's theme system and includes:
 ```
 
 ### Premium Plan Card
+
 ```vue
 <PricingCard
   title="Enterprise"
   subtitle="For large organizations"
   description="Custom solutions at scale"
-  :features="[
-    'Unlimited Everything',
-    'Dedicated Support',
-    'Custom Integrations',
-    'SLA Guarantee'
-  ]"
+  :features="['Unlimited Everything', 'Dedicated Support', 'Custom Integrations', 'SLA Guarantee']"
   price="Contact Us"
   price-label="PRICING"
   price-period=""

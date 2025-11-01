@@ -59,11 +59,7 @@ export interface LogoSlideEmits {
 /**
  * @group Component
  */
-declare class LogoSlide extends ClassComponent<
-  LogoSlideProps,
-  LogoSlideSlots,
-  LogoSlideEmits
-> {}
+declare class LogoSlide extends ClassComponent<LogoSlideProps, LogoSlideSlots, LogoSlideEmits> {}
 
 declare module 'vue' {
   export interface GlobalComponents {

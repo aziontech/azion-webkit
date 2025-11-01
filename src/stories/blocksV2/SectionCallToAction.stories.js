@@ -42,7 +42,7 @@ export default {
   }
 }
 
-export const TwoColumnLayout = {
+export const TwoCol7030 = {
   args: {
     type: '2-col-70-30',
     id: 'section-cta-2col',
@@ -65,7 +65,7 @@ export const TwoColumnLayout = {
   }
 }
 
-export const SingleColumn = {
+export const OneCol = {
   args: {
     type: '1-col',
     id: 'section-cta-1col',
@@ -88,7 +88,7 @@ export const SingleColumn = {
   }
 }
 
-export const SingleColumnShort = {
+export const OneColShort = {
   args: {
     type: '1-col-short',
     id: 'section-cta-short',
@@ -109,7 +109,7 @@ export const SingleColumnShort = {
   }
 }
 
-export const SingleColumnShortOrange = {
+export const OneColShortOrange = {
   args: {
     type: '1-col-short-orange',
     id: 'section-cta-orange',
@@ -130,140 +130,23 @@ export const SingleColumnShortOrange = {
   }
 }
 
-export const WithMarkdownDescription = {
+export const OneColShortBlack = {
   args: {
-    type: '1-col',
-    id: 'section-cta-markdown',
+    type: '1-col-short-black',
+    id: 'section-cta-black',
     content: {
-      overline: 'Advanced Features',
-      title: 'Edge Computing Solutions',
-      descriptionRawMarkdown:
-        'Deploy applications with **ultra-low latency** and *global scalability*. Perfect for modern applications.',
-      linkLabel: 'Learn More',
-      link: 'https://www.azion.com/features'
+      overline: 'Special Offer',
+      title: 'Limited Time Deal',
+      descriptionRawMarkdown: 'Get 50% off your first month with our edge computing platform.',
+      linkLabel: 'Claim Offer',
+      link: 'https://www.azion.com/promo'
     },
     cta: {
-      overline: 'Advanced Features',
-      title: 'Edge Computing Solutions',
-      descriptionRawMarkdown:
-        'Deploy applications with **ultra-low latency** and *global scalability*. Perfect for modern applications.',
-      linkLabel: 'Learn More',
-      link: 'https://www.azion.com/features'
+      overline: 'Special Offer',
+      title: 'Limited Time Deal',
+      descriptionRawMarkdown: 'Get 50% off your first month with our edge computing platform.',
+      linkLabel: 'Claim Offer',
+      link: 'https://www.azion.com/promo'
     }
   }
-}
-
-export const DotsBackground = {
-  args: {
-    type: '1-col',
-    id: 'section-cta-dots',
-    backgroundStyle: 'dots',
-    content: {
-      overline: 'Pattern Demo',
-      title: 'Dots Background',
-      descriptionRawMarkdown: 'This example shows the dots background pattern.',
-      linkLabel: 'Try Dots',
-      link: 'https://www.azion.com'
-    },
-    cta: {
-      overline: 'Pattern Demo',
-      title: 'Dots Background',
-      descriptionRawMarkdown: 'This example shows the dots background pattern.',
-      linkLabel: 'Try Dots',
-      link: 'https://www.azion.com'
-    }
-  }
-}
-
-export const SquareBackground = {
-  args: {
-    type: '1-col',
-    id: 'section-cta-square',
-    backgroundStyle: 'square',
-    content: {
-      overline: 'Pattern Demo',
-      title: 'Square Background',
-      descriptionRawMarkdown: 'This example shows the square grid background pattern.',
-      linkLabel: 'Try Square',
-      link: 'https://www.azion.com'
-    },
-    cta: {
-      overline: 'Pattern Demo',
-      title: 'Square Background',
-      descriptionRawMarkdown: 'This example shows the square grid background pattern.',
-      linkLabel: 'Try Square',
-      link: 'https://www.azion.com'
-    }
-  }
-}
-
-export const MultipleVariants = {
-  render: () => ({
-    template: `
-      <div class="space-y-8">
-        <SectionCallToAction 
-          type="2-col-70-30"
-          :content="twoColumnContent"
-          :cta="twoColumnCta"
-        />
-        <SectionCallToAction 
-          type="1-col"
-          :content="singleColumnContent"
-          :cta="singleColumnCta"
-        />
-        <SectionCallToAction 
-          type="1-col-short-orange"
-          :content="orangeContent"
-          :cta="orangeCta"
-        />
-      </div>
-    `,
-    components: { SectionCallToAction },
-    data() {
-      return {
-        twoColumnContent: {
-          overline: 'Platform',
-          title: 'Edge Computing',
-          descriptionRawMarkdown: 'Global edge network for optimal performance.',
-          linkLabel: 'Get Started',
-          link: '#'
-        },
-        twoColumnCta: {
-          overline: 'Support',
-          title: '24/7 Support',
-          descriptionRawMarkdown: 'Expert assistance whenever you need it.',
-          linkLabel: 'Contact Us',
-          link: '#'
-        },
-        singleColumnContent: {
-          overline: 'Enterprise',
-          title: 'Enterprise Solutions',
-          descriptionRawMarkdown: 'Scalable infrastructure for large organizations.',
-          linkLabel: 'Learn More',
-          link: '#'
-        },
-        singleColumnCta: {
-          overline: 'Enterprise',
-          title: 'Enterprise Solutions',
-          descriptionRawMarkdown: 'Scalable infrastructure for large organizations.',
-          linkLabel: 'Learn More',
-          link: '#'
-        },
-        orangeContent: {
-          overline: 'Promo',
-          title: 'Special Offer',
-          descriptionRawMarkdown: 'Limited time discount on our platform.',
-          linkLabel: 'Claim Now',
-          link: '#'
-        },
-        orangeCta: {
-          overline: 'Promo',
-          title: 'Special Offer',
-          descriptionRawMarkdown: 'Limited time discount on our platform.',
-          linkLabel: 'Claim Now',
-          link: '#'
-        }
-      }
-    }
-  })
 }

@@ -40,7 +40,7 @@ export interface PricingTableHeaderSlots {
   /**
    * Custom content for plan columns
    */
-  plan(scope: { plan: PricingPlan, index: number }): VNode[]
+  plan(scope: { plan: PricingPlan; index: number }): VNode[]
 }
 
 export interface PricingTableHeaderEmits {
@@ -52,7 +52,11 @@ export interface PricingTableHeaderEmits {
   'plan-selected': [plan: PricingPlan, index: number]
 }
 
-declare class PricingTableHeader extends ClassComponent<PricingTableHeaderProps, PricingTableHeaderSlots, PricingTableHeaderEmits> {}
+declare class PricingTableHeader extends ClassComponent<
+  PricingTableHeaderProps,
+  PricingTableHeaderSlots,
+  PricingTableHeaderEmits
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {

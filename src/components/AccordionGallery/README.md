@@ -14,18 +14,18 @@ A modern, interactive gallery component with step-by-step navigation, auto-play 
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `accentTitle` | String | `'Tightest feedback loop'` | Accent title text (colored) |
-| `mainTitle` | String | `'Steer agents to go from prompt to shippable feature'` | Main title text |
-| `accentColor` | String | `'rgb(121, 156, 146)'` | Color for accent title |
-| `mainTitleColor` | String | `'rgba(250, 249, 246, 0.9)'` | Color for main title |
-| `items` | Array | **Required** | Array of gallery items (see structure below) |
-| `padding` | String | `'64px 30px'` | Component padding |
-| `galleryHeight` | String | `'600px'` | Height of the gallery area |
-| `autoPlay` | Boolean | `true` | Enable auto-play functionality |
-| `autoPlayInterval` | Number | `5000` | Auto-play interval in milliseconds |
-| `showProgress` | Boolean | `true` | Show progress bar on active step |
+| Prop               | Type    | Default                                                 | Description                                  |
+| ------------------ | ------- | ------------------------------------------------------- | -------------------------------------------- |
+| `accentTitle`      | String  | `'Tightest feedback loop'`                              | Accent title text (colored)                  |
+| `mainTitle`        | String  | `'Steer agents to go from prompt to shippable feature'` | Main title text                              |
+| `accentColor`      | String  | `'rgb(121, 156, 146)'`                                  | Color for accent title                       |
+| `mainTitleColor`   | String  | `'rgba(250, 249, 246, 0.9)'`                            | Color for main title                         |
+| `items`            | Array   | **Required**                                            | Array of gallery items (see structure below) |
+| `padding`          | String  | `'64px 30px'`                                           | Component padding                            |
+| `galleryHeight`    | String  | `'600px'`                                               | Height of the gallery area                   |
+| `autoPlay`         | Boolean | `true`                                                  | Enable auto-play functionality               |
+| `autoPlayInterval` | Number  | `5000`                                                  | Auto-play interval in milliseconds           |
+| `showProgress`     | Boolean | `true`                                                  | Show progress bar on active step             |
 
 ## Item Structure
 
@@ -61,27 +61,27 @@ Each item in the `items` array should have the following structure:
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import SwitcherGallery from '@/components/SwitcherGallery'
+  import { ref } from 'vue'
+  import SwitcherGallery from '@/components/SwitcherGallery'
 
-const galleryItems = ref([
-  {
-    title: 'Start with a prompt',
-    description: 'Tell the agent what you want: build a feature, fix a bug, or debug a crash.',
-    backgroundImage: '/images/bg-1.jpg',
-    videoSrc: '/videos/demo-1.mp4',
-    videoPoster: '/images/poster-1.jpg',
-    overlayClass: 'top-8 left-8 w-[400px] h-[300px]'
-  },
-  {
-    title: 'Agent writes code',
-    description: 'The agent generates code tailored to your codebase.',
-    backgroundImage: '/images/bg-2.jpg',
-    videoSrc: '/videos/demo-2.mp4',
-    videoPoster: '/images/poster-2.jpg',
-    overlayClass: 'top-8 right-8 w-[450px] h-[320px]'
-  }
-])
+  const galleryItems = ref([
+    {
+      title: 'Start with a prompt',
+      description: 'Tell the agent what you want: build a feature, fix a bug, or debug a crash.',
+      backgroundImage: '/images/bg-1.jpg',
+      videoSrc: '/videos/demo-1.mp4',
+      videoPoster: '/images/poster-1.jpg',
+      overlayClass: 'top-8 left-8 w-[400px] h-[300px]'
+    },
+    {
+      title: 'Agent writes code',
+      description: 'The agent generates code tailored to your codebase.',
+      backgroundImage: '/images/bg-2.jpg',
+      videoSrc: '/videos/demo-2.mp4',
+      videoPoster: '/images/poster-2.jpg',
+      overlayClass: 'top-8 right-8 w-[450px] h-[320px]'
+    }
+  ])
 </script>
 ```
 
@@ -109,16 +109,19 @@ overlayClass: 'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[4
 ## Behavior
 
 ### Auto-play Mode
+
 - When `autoPlay` is `true`, the gallery automatically cycles through items
 - Progress bar shows the current progress within each interval
 - Clicking a step resets the auto-play timer
 
 ### Manual Mode
+
 - When `autoPlay` is `false`, users must click steps to navigate
 - Hovering over steps does not change the active item
 - No progress bar is shown
 
 ### Transitions
+
 - Background images fade in/out with 500ms duration
 - Overlay content scales slightly (0.95) when inactive
 - All transitions use smooth easing
@@ -126,6 +129,7 @@ overlayClass: 'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[4
 ## Styling
 
 The component uses:
+
 - **TailwindCSS** for utility classes
 - **Custom transitions** for smooth animations
 - **Scoped styles** for component-specific styling

@@ -16,7 +16,12 @@
         class="text-3xl text-balance font-sora text-neutral-50"
         >{{ title }}</component
       >
-      <p v-if="description" class="font-sora text-neutral-200 text-balance">{{ description }}</p>
+      <p
+        v-if="description"
+        class="font-sora text-neutral-200 text-balance"
+      >
+        {{ description }}
+      </p>
     </div>
   </div>
 </template>

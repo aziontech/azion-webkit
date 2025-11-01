@@ -41,7 +41,7 @@ Component NewsletterCard
 
 ### Internal
 
-- ../src/services/newsletter/newsletterSubmitHandler
+- ../services/newsletter/newsletterSubmitHandler
 
 ## Usage Example
 
