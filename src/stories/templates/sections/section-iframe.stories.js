@@ -14,7 +14,7 @@ const HeroDisplay = `
 `
 
 export default {
-  title: 'Blocks/section/section-iframe',
+  title: 'Blocks/Sections/section-iframe',
   tags: ['autodocs'],
   argTypes: {
     id: {

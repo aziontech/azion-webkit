@@ -48,7 +48,8 @@ export const attributeViewerMock = {
     {
       name: 'behavior',
       type: 'Object',
-      description: 'Set the behaviors the rule should perform if the conditions defined in the criteria are met.',
+      description:
+        'Set the behaviors the rule should perform if the conditions defined in the criteria are met.',
       children: [
         {
           name: 'type',

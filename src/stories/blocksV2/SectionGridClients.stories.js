@@ -33,9 +33,7 @@ export default {
   parameters: {
     backgrounds: {
       default: 'dark',
-      values: [
-        { name: 'dark', value: '#000000' }
-      ]
+      values: [{ name: 'dark', value: '#000000' }]
     }
   }
 }

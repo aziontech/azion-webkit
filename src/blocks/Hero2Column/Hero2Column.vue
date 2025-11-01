@@ -2,7 +2,11 @@
   <section
     :id="id"
     :class="`text-white relative overflow-hidden w-full mx-auto md:py-24 ${bottomSpacing}`"
-    style="background-image: radial-gradient(circle, #CEC9C940 1.5px, #0000 0); background-size: 3rem 3rem; background-position: 0 0;"
+    style="
+      background-image: radial-gradient(circle, #cec9c940 1.5px, #0000 0);
+      background-size: 3rem 3rem;
+      background-position: 0 0;
+    "
   >
     <div
       class="flex flex-col md:flex-row items-center max-w-xl xxxl:max-w-xxl mx-auto relative z-10 p-6 md:p-0"
@@ -17,10 +21,10 @@
           >
             {{ overline }}
           </p>
-          <h1 class="font-sora  md:leading-tight text-pretty display-1-mobile md:display-1">
+          <h1 class="font-sora md:leading-tight text-pretty display-1-mobile md:display-1">
             {{ title }}
           </h1>
-          <div 
+          <div
             v-if="descriptionRawMarkdown"
             class="text-sm text-pretty md:text-balance lg:text-base max-w-sm md:max-w-7xl text-neutral-200 font-sora mx-auto lg:mx-0"
             v-html="parsedSubtitle"
@@ -29,7 +33,7 @@
 
         <div
           v-if="buttons && buttons.length > 0"
-          class="flex flex-col md:flex-row gap-4 md:gap-5 mt-4 md:mt-0 items-center justify-center  lg:justify-start"
+          class="flex flex-col md:flex-row gap-4 md:gap-5 mt-4 md:mt-0 items-center justify-center lg:justify-start"
         >
           <Button
             v-for="(button, index) in limitedButtons"
@@ -42,9 +46,7 @@
           />
         </div>
       </div>
-      <div
-        class="relative flex w-full md:w-1/2 md:p-12 items-center justify-center"
-      >
+      <div class="relative flex w-full md:w-1/2 md:p-12 items-center justify-center">
         <div
           v-if="image"
           class="p-1 w-full max-w-md mx-auto"
@@ -106,4 +108,3 @@
     return parseMarkdown(props.descriptionRawMarkdown || '')
   })
 </script>
-

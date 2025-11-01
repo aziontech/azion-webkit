@@ -13,22 +13,29 @@
         :class="[
           'p-1 border hover:bg-neutral-900 transition-colors duration-150 border-neutral-900 relative',
           `before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 before:block`,
-          (index + 1) % 3 === 0 ? `after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 after:block` : '',
+          (index + 1) % 3 === 0
+            ? `after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 after:block`
+            : ''
         ]"
       >
-        <div 
+        <div
           :class="[
             'h-full w-full p-6 flex flex-col gap-2',
             `before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:left-0`,
             `after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:right-0`,
-            (index + 1) % 3 === 0 ? 'before:block after:block' : 'before:hidden md:before:block after:hidden'
+            (index + 1) % 3 === 0
+              ? 'before:block after:block'
+              : 'before:hidden md:before:block after:hidden'
           ]"
         >
           <div class="flex items-center gap-2">
-            <span :class="card.icon" class="text-orange-500 text-xl flex-shrink-0"></span>
+            <span
+              :class="card.icon"
+              class="text-orange-500 text-xl flex-shrink-0"
+            ></span>
             <h3 class="display-5-mobile md:display-5 text-white font-sora">{{ card.title }}</h3>
           </div>
-          <div 
+          <div
             class="body-2 text-neutral-400 leading-relaxed font-sora"
             v-html="parseMarkdown(card.descriptionRawMarkdown)"
           />

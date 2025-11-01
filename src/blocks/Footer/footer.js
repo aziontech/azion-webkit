@@ -1,5 +1,5 @@
 export const content = {
-  title: 'About us',
+  title: 'About us'
 }
 
 export const listData = [

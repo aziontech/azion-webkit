@@ -8,14 +8,14 @@ A simple iframe container component that automatically manages iframe height on 
 
 ### Required
 
-| Prop       | Type     | Description                     |
-| ---------- | -------- | ------------------------------- |
-| `iframeUrl` | `String` | URL rendered inside the iframe  |
+| Prop        | Type     | Description                    |
+| ----------- | -------- | ------------------------------ |
+| `iframeUrl` | `String` | URL rendered inside the iframe |
 
 ### Optional
 
-| Prop | Type     | Default | Description                                                                                    |
-| ---- | -------- | ------- | ---------------------------------------------------------------------------------------------- |
+| Prop | Type     | Default | Description                                                                                                       |
+| ---- | -------- | ------- | ----------------------------------------------------------------------------------------------------------------- |
 | `id` | `String` | `''`    | Optional ID for the iframe element. **This ID will be sent to the iframe URL as a query parameter (`?id=value`)** |
 
 ## ID Query Parameter
@@ -23,13 +23,18 @@ A simple iframe container component that automatically manages iframe height on 
 The component automatically appends the `id` prop value to the iframe URL as a query parameter. This allows the iframe content to know its container ID.
 
 **Example:**
+
 ```vue
-<SectionIframe id="assessment-iframe" iframeUrl="https://web-assessment.azion.app/?id=assessment-iframe" />
+<SectionIframe
+  id="assessment-iframe"
+  iframeUrl="https://web-assessment.azion.app/?id=assessment-iframe"
+/>
 ```
 
 The iframe will load: `https://web-assessment.azion.app/?id=assessment-iframe`
 
 The iframe content can access this ID using:
+
 ```javascript
 const urlParams = new URLSearchParams(window.location.search)
 const containerId = urlParams.get('id') // Returns "assessment-iframe"
@@ -44,13 +49,16 @@ The component exposes a global function on `window.azion.sectionIframeSetHeight`
 Sets the iframe height and removes the automatic resize listener for the specified iframe.
 
 **Parameters:**
+
 - `iframeId` (required): `string` - The ID of the iframe element to target
 - `height` (required): `number | string` - Height value in pixels (number) or CSS string (e.g., `'500px'`, `'80vh'`)
 
 **Returns:**
+
 - `boolean` - Returns `true` if height was set successfully, `false` otherwise
 
 **Behavior:**
+
 - When called, it automatically removes the window resize listener for that specific iframe
 - This prevents conflicts between manual height control and automatic resizing
 - The iframe will use the specified height and won't adjust on window resize
@@ -75,6 +83,7 @@ window.azion.sectionIframeSetHeight('demo-iframe', '90vh')
 ```
 
 **Notes:**
+
 - This function is automatically available after any SectionIframe component is mounted
 - The function requires the iframe ID to target a specific iframe on the page
 - Works with multiple iframe components - pass different IDs to control each one
@@ -84,6 +93,7 @@ window.azion.sectionIframeSetHeight('demo-iframe', '90vh')
 ## Automatic Height Management
 
 By default, the component automatically sets the iframe height based on its scroll width when:
+
 - The component is mounted
 - The window is resized
 
@@ -110,7 +120,7 @@ This automatic behavior is disabled when `window.azion.sectionIframeSetHeight(if
 </template>
 
 <script setup>
-import SectionIframe from './templates/SectionIframe/SectionIframe.vue'
+  import SectionIframe from './templates/SectionIframe/SectionIframe.vue'
 </script>
 ```
 
