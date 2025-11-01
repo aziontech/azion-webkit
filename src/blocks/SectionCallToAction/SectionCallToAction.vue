@@ -62,7 +62,8 @@
 
 <script setup lang="ts">
   import Button from '../../components/Button/Button.vue'
-  import { parseMarkdown } from '@services'
+  import Overline from '../../components/overline/Overline.vue'
+  import { parseMarkdown } from '../../services/markdown/markdown-service'
   import { computed } from 'vue'
 
   interface CardProps {
