@@ -109,7 +109,7 @@
     '1-col-short-orange': 'bg-orange-500 hover:bg-orange-400 transition-colors gap-16',
     '1-col-short-black': 'bg-neutral-900 hover:bg-neutral-800 transition-colors gap-16'
   }
-  
+
   const overlay = {
     '2-col-70-30': 'linear-gradient(to top, rgba(82,82,82, 0.5) 0%, rgba(82,82,82, 0.5) 100%)',
     '1-col': 'linear-gradient(to top, rgba(82,82,82, 0.5) 0%, rgba(82,82,82, 0.5) 100%)',
