@@ -1,3 +1,9 @@
+## [1.255.3](https://github.com/aziontech/azion-webkit/compare/v1.255.2...v1.255.3) (2025-11-03)
+
+### Bug Fixes
+
+* correct divider spacing in markdown parser ([79ac6d6](https://github.com/aziontech/azion-webkit/commit/79ac6d68a0157c476b6f0fd7f19ccf38242f10d3))
+
 ## [1.255.2](https://github.com/aziontech/azion-webkit/compare/v1.255.1...v1.255.2) (2025-11-03)
 
 ### Bug Fixes
