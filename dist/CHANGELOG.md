@@ -1,3 +1,9 @@
+## [1.255.2](https://github.com/aziontech/azion-webkit/compare/v1.255.1...v1.255.2) (2025-11-03)
+
+### Bug Fixes
+
+* adjust divider height to use exact pixel value ([f4223a1](https://github.com/aziontech/azion-webkit/commit/f4223a1025fdacc33c47a807e558918015e13ef8))
+
 ## [1.255.1](https://github.com/aziontech/azion-webkit/compare/v1.255.0...v1.255.1) (2025-11-03)
 
 ### Bug Fixes
