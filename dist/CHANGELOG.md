@@ -1,3 +1,9 @@
+## [1.255.1](https://github.com/aziontech/azion-webkit/compare/v1.255.0...v1.255.1) (2025-11-03)
+
+### Bug Fixes
+
+* replace Overline component with direct styling ([f7e0e6f](https://github.com/aziontech/azion-webkit/commit/f7e0e6fe8286746981ee92c4276acfe1bc464aa6))
+
 ## [1.255.0](https://github.com/aziontech/azion-webkit/compare/v1.254.0...v1.255.0) (2025-11-03)
 
 ### Features
