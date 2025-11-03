@@ -65,7 +65,7 @@ export const parseMarkdown = (markdown) => {
 
   // Processar tag Divider - divisor full-width
   text = text
-    .replace(/<Divider\s*\/?>/gi, '<div class="w-full h-[1px] bg-neutral-900 py-6"></div>')
+    .replace(/<Divider\s*\/?>/gi, '<div class="w-full h-[1px] bg-neutral-900 my-6"></div>')
   
   const blocks = text.split(/\n\s*\n/)
   
