@@ -1,3 +1,9 @@
+## [1.255.0](https://github.com/aziontech/azion-webkit/compare/v1.254.0...v1.255.0) (2025-11-03)
+
+### Features
+
+* add new component ([dc74478](https://github.com/aziontech/azion-webkit/commit/dc744787e435d3e629e0aa739f8590ab3fbc5c35))
+
 ## [1.254.0](https://github.com/aziontech/azion-webkit/compare/v1.253.0...v1.254.0) (2025-10-31)
 
 ### Features
