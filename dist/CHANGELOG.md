@@ -1,3 +1,33 @@
+## [1.256.0](https://github.com/aziontech/azion-webkit/compare/v1.255.3...v1.256.0) (2025-11-03)
+
+### Features
+
+* adjust divider styling for better visual hierarchy ([995066b](https://github.com/aziontech/azion-webkit/commit/995066bc332144d65f6fad18613ec56ce2b81c90))
+
+## [1.255.3](https://github.com/aziontech/azion-webkit/compare/v1.255.2...v1.255.3) (2025-11-03)
+
+### Bug Fixes
+
+* correct divider spacing in markdown parser ([79ac6d6](https://github.com/aziontech/azion-webkit/commit/79ac6d68a0157c476b6f0fd7f19ccf38242f10d3))
+
+## [1.255.2](https://github.com/aziontech/azion-webkit/compare/v1.255.1...v1.255.2) (2025-11-03)
+
+### Bug Fixes
+
+* adjust divider height to use exact pixel value ([f4223a1](https://github.com/aziontech/azion-webkit/commit/f4223a1025fdacc33c47a807e558918015e13ef8))
+
+## [1.255.1](https://github.com/aziontech/azion-webkit/compare/v1.255.0...v1.255.1) (2025-11-03)
+
+### Bug Fixes
+
+* replace Overline component with direct styling ([f7e0e6f](https://github.com/aziontech/azion-webkit/commit/f7e0e6fe8286746981ee92c4276acfe1bc464aa6))
+
+## [1.255.0](https://github.com/aziontech/azion-webkit/compare/v1.254.0...v1.255.0) (2025-11-03)
+
+### Features
+
+* add new component ([dc74478](https://github.com/aziontech/azion-webkit/commit/dc744787e435d3e629e0aa739f8590ab3fbc5c35))
+
 ## [1.254.0](https://github.com/aziontech/azion-webkit/compare/v1.253.0...v1.254.0) (2025-10-31)
 
 ### Features

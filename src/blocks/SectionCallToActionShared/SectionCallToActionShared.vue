@@ -9,7 +9,7 @@
       class="lg:col-span-3 w-full flex flex-col justify-between gap-6 bg-neutral-900 rounded-md p-6 md:p-12"
     >
       <div class="flex flex-col gap-3">
-        <p class="text-orange-500 text-xs font-proto-mono uppercase tracking-wide">{{ content.overline }}</p>
+        <Overline color="orange"> {{ content.overline }} </Overline>
         <h2 class="text-2xl text-neutral-200 font-sora">{{ content.title }}</h2>
         <p
           class="text-neutral-400 font-sora"
@@ -24,11 +24,8 @@
         size="small"
       />
     </div>
-    <a
-      :href="cta.link"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="group/cta relative flex flex-col justify-between rounded-md p-6 md:p-12 overflow-hidden"
+    <div
+      class="relative flex flex-col justify-between rounded-md p-6 md:p-12 overflow-hidden"
       :class="[ctaColor[type]]"
       :style="backgroundImageStyle"
     >
@@ -36,33 +33,26 @@
         class="flex gap-3"
         :class="type.includes('short') ? 'flex flex-col md:flex-row justify-between' : 'flex-col'"
       >
-        <Overline :color="type.includes('short-black') ? 'primary' : 'black'">
-          {{ cta.overline }}
-        </Overline>
+        <Overline color="black"> {{ cta.overline }} </Overline>
         <p
-          class="max-w-sm text-balance font-sora text-xl"
-          :class="type.includes('short-black') ? 'text-neutral-200' : 'text-neutral-900'"
+          class="max-w-sm text-balance font-sora text-xl text-neutral-900"
           v-html="parseMarkdown(cta.descriptionRawMarkdown)"
         ></p>
       </div>
       <div class="flex flex-col gap-3 md:flex-row justify-between md:items-end">
-        <h2
-          class="max-w-sm font-sora font-bold gap-2 text-4xl md:text-5xl"
-          :class="type.includes('short-black') ? 'text-orange-500' : 'text-neutral-900'"
-        >
+        <h2 class="max-w-sm font-sora font-bold gap-2 text-4xl md:text-5xl text-neutral-900">
           {{ cta.title }}
         </h2>
         <Button
           v-if="cta.linkLabel"
           :label="cta.linkLabel"
-          :theme="type.includes('short-black') ? 'light' : 'dark'"
+          :href="cta.link"
           icon="pi pi-angle-right"
           type="primary"
           size="small"
-          custom-class="group-hover/cta:!bg-orange-600 group-hover/cta:!text-white"
         />
       </div>
-    </a>
+    </div>
   </section>
 </template>
 
@@ -79,7 +69,7 @@
     linkLabel: string
     link: string
   }
-  interface SectionCallToActionProps {
+  interface SectionCallToActionSharedProps {
     type: '2-col-70-30' | '1-col' | '1-col-short' | '1-col-short-orange'
     id?: string
     backgroundStyle: 'dots' | 'square'
@@ -87,7 +77,7 @@
     content: CardProps
   }
 
-  const props = withDefaults(defineProps<SectionCallToActionProps>(), {
+  const props = withDefaults(defineProps<SectionCallToActionSharedProps>(), {
     type: '2-col-70-30',
     backgroundStyle: 'dots'
   })
@@ -96,33 +86,21 @@
     '2-col-70-30': 'lg:grid-cols-10 grid-cols-1',
     '1-col': 'grid-cols-1',
     '1-col-short': 'grid-cols-1',
-    '1-col-short-orange': 'grid-cols-1',
-    '1-col-short-black': 'grid-cols-1'
+    '1-col-short-orange': 'grid-cols-1'
   }
 
   const ctaColor = {
-    '2-col-70-30': 'bg-neutral-600 hover:bg-neutral-500 transition-colors gap-60 lg:col-span-7 ',
-    '1-col': 'bg-neutral-600 hover:bg-neutral-500 transition-colors gap-60',
-    '1-col-short': 'bg-neutral-600 hover:bg-neutral-500 transition-colors gap-16',
-    '1-col-short-orange': 'bg-orange-500 hover:bg-orange-400 transition-colors gap-16',
-    '1-col-short-black': 'bg-neutral-900 hover:bg-neutral-800 transition-colors gap-16'
-  }
-
-  const overlay = {
-    '2-col-70-30': 'linear-gradient(to top, rgba(82,82,82, 0.5) 0%, rgba(82,82,82, 0.5) 100%)',
-    '1-col': 'linear-gradient(to top, rgba(82,82,82, 0.5) 0%, rgba(82,82,82, 0.5) 100%)',
-    '1-col-short': 'linear-gradient(to top, rgba(82,82,82, 0.5) 0%, rgba(82,82,82, 0.5) 100%)',
-    '1-col-short-orange': 'linear-gradient(to top, transparent 0%, transparent 100%)',
-    '1-col-short-black': 'linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%)'
+    '2-col-70-30': 'bg-neutral-600 gap-60 lg:col-span-7 ',
+    '1-col': 'bg-neutral-600 gap-60',
+    '1-col-short': 'bg-neutral-600 gap-16',
+    '1-col-short-orange': 'bg-orange-500 gap-16'
   }
 
   const backgroundImageStyle = computed(() => {
-    const opacityOverlay = overlay[props.type]
-
     if (props.backgroundStyle === 'dots') {
       return `
         background-image: 
-          ${opacityOverlay},
+          linear-gradient(to top, transparent 0%, transparent 100%),
           radial-gradient(circle, rgba(206, 201, 201, 0.2) 1px, #0000 0);
         background-size: 100% 100%, 12px 12px;
         background-repeat: no-repeat, repeat;
@@ -131,7 +109,7 @@
     } else {
       return `
         background-image: 
-          ${opacityOverlay},
+          linear-gradient(to top, #0A0A0A 0%, rgba(23,23,23,0) 100%),
           linear-gradient(90deg, transparent 47px, rgba(64, 64, 64, 0.3) 47px, rgba(64, 64, 64, 0.3) 48px, transparent 48px),
           linear-gradient(180deg, transparent 47px, rgba(64, 64, 64, 0.3) 47px, rgba(64, 64, 64, 0.3) 48px, transparent 48px);
         background-size: 100% 100%, 48px 48px, 48px 48px;
