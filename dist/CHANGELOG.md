@@ -1,3 +1,9 @@
+## [1.256.0](https://github.com/aziontech/azion-webkit/compare/v1.255.3...v1.256.0) (2025-11-03)
+
+### Features
+
+* adjust divider styling for better visual hierarchy ([995066b](https://github.com/aziontech/azion-webkit/commit/995066bc332144d65f6fad18613ec56ce2b81c90))
+
 ## [1.255.3](https://github.com/aziontech/azion-webkit/compare/v1.255.2...v1.255.3) (2025-11-03)
 
 ### Bug Fixes
