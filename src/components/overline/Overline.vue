@@ -1,6 +1,6 @@
 <template>
   <span
-    class="text-balance font-proto-mono text-xs"
+    class="text-balance font-proto-mono text-xs uppercase tracking-wide"
     :class="colorClass[color]"
   >
     <slot />
@@ -14,7 +14,7 @@
     color: {
       type: String,
       default: 'primary',
-      options: ['primary', 'orange']
+      options: ['primary', 'orange', 'black']
     }
   })
 
@@ -22,7 +22,7 @@
     return {
       primary: 'text-neutral-200',
       orange: 'text-orange-500',
-      black: 'text-black'
+      black: 'text-neutral-900'
     }
   })
 </script>

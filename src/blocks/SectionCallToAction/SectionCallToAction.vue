@@ -9,9 +9,7 @@
       class="lg:col-span-3 w-full flex flex-col justify-between gap-6 bg-neutral-900 rounded-md p-6 md:p-12"
     >
       <div class="flex flex-col gap-3">
-        <p class="text-orange-500 text-xs font-proto-mono uppercase tracking-wide">
-          {{ content.overline }}
-        </p>
+        <Overline color="orange">{{ content.overline }}</Overline>
         <h2 class="text-2xl text-neutral-200 font-sora">{{ content.title }}</h2>
         <p
           class="text-neutral-400 font-sora"
