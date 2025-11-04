@@ -1,3 +1,9 @@
+## [1.256.1](https://github.com/aziontech/azion-webkit/compare/v1.256.0...v1.256.1) (2025-11-04)
+
+### Bug Fixes
+
+* adjust sections ([b5bb0e8](https://github.com/aziontech/azion-webkit/commit/b5bb0e8331581619c34db5bceaf4aac408358b7e))
+
 ## [1.256.0](https://github.com/aziontech/azion-webkit/compare/v1.255.3...v1.256.0) (2025-11-03)
 
 ### Features
