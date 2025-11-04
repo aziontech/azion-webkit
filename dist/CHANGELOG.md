@@ -1,3 +1,9 @@
+## [1.257.0](https://github.com/aziontech/azion-webkit/compare/v1.256.4...v1.257.0) (2025-11-04)
+
+### Features
+
+* enhance SectionCallToAction stories with improved examples and docs ([95c790f](https://github.com/aziontech/azion-webkit/commit/95c790f3b96ebd81cdaebf8170fd895ba95bb09c))
+
 ## [1.256.4](https://github.com/aziontech/azion-webkit/compare/v1.256.3...v1.256.4) (2025-11-04)
 
 ### Bug Fixes
