@@ -43,7 +43,7 @@
           class="max-w-sm text-balance font-sora text-xl"
           :class="[
             type.includes('short-black') ? 'text-neutral-200' : 'text-neutral-900',
-            type.includes('2-col') ? 'text-start' : 'text-end'
+            type == '2-col-70-30' || type == '1-col' ? 'text-start' : 'text-end'
           ]"
           v-html="parseMarkdown(cta.descriptionRawMarkdown)"
         ></p>
