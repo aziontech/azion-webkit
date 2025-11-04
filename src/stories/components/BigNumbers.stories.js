@@ -1,4 +1,4 @@
-import BigNumbers from '../../components/bignumbers/BigNumbers.vue'
+import BigNumbers from '../../templates/bignumbers/BigNumbers.vue'
 
 export default {
   title: 'Components/BigNumbers',
