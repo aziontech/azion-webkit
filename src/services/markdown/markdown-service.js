@@ -52,16 +52,14 @@ export const parseMarkdown = (markdown) => {
     '<a class="font-sora underline transition-colors text-orange-500 hover:text-orange-600" href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
   )
 
-  text = text
-    .replace(/(<li.*?<\/li>)/gs, (match) => {
-      return '<ul class="font-sora mb-4 list-disc pl-6">' + match + '</ul>'
-    })
+  text = text.replace(/(<li.*?<\/li>)/gs, (match) => {
+    return '<ul class="font-sora mb-4 list-disc pl-6">' + match + '</ul>'
+  })
 
   text = text.replace(
     /<Button\s+href="([^"]+)"[^>]*type="primary"[^>]*>([^<]+)<\/Button>/gi,
     '<a href="$1" class="group flex w-fit items-center font-proto-mono uppercase border-none active:bg-orange-600 bg-neutral-100 text-neutral-900 duration-300 transition px-5 md:px-6  rounded-md hover:bg-orange-600 hover:text-white h-[42px] min-h-[42px] py-3 font-proto-mono text-sm leading-[2rem] whitespace-nowrap  cursor-pointer">$2</a>'
   )
-
 
   text = text.replace(
     /<Button\s+href="([^"]+)"[^>]*type="link"[^>]*>([^<]+)<\/Button>/gi,
