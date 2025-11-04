@@ -18,6 +18,8 @@
       "paths": {
         "@assets/*": ["src/assets/*"],
         "@templates/*": ["src/templates/*"],
+        "@services": ["src/services"],
+        "@services/*": ["src/services/*"]
       }
   },
   "include": ["**/*.ts"],

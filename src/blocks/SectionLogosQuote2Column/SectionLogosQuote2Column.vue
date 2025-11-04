@@ -66,7 +66,7 @@
 
 <script setup lang="ts">
   import ProductQuote from '../../components/ProductQuote/ProductQuote.vue'
-  import Button from '../../components/Button'
+  import Button from '../../components/Button/Button.vue'
 
   export interface LogoQuote2Column {
     logo: string

@@ -1,3 +1,33 @@
+## [1.257.0](https://github.com/aziontech/azion-webkit/compare/v1.256.4...v1.257.0) (2025-11-04)
+
+### Features
+
+* enhance SectionCallToAction stories with improved examples and docs ([95c790f](https://github.com/aziontech/azion-webkit/commit/95c790f3b96ebd81cdaebf8170fd895ba95bb09c))
+
+## [1.256.4](https://github.com/aziontech/azion-webkit/compare/v1.256.3...v1.256.4) (2025-11-04)
+
+### Bug Fixes
+
+* improve button styling and remove redundant list markup ([d7291d4](https://github.com/aziontech/azion-webkit/commit/d7291d42e8392f8f213e96fea39c5856e3e6f9a8))
+
+## [1.256.3](https://github.com/aziontech/azion-webkit/compare/v1.256.2...v1.256.3) (2025-11-04)
+
+### Bug Fixes
+
+* correct markdown service import path ([f5bcf17](https://github.com/aziontech/azion-webkit/commit/f5bcf17b89c6f6682489a48a2d379d5acd36cb29))
+
+## [1.256.2](https://github.com/aziontech/azion-webkit/compare/v1.256.1...v1.256.2) (2025-11-04)
+
+### Bug Fixes
+
+* improve button styling and layout in two-column section ([4489709](https://github.com/aziontech/azion-webkit/commit/44897099a03c5f353e010569553355893a0a3a88))
+
+## [1.256.1](https://github.com/aziontech/azion-webkit/compare/v1.256.0...v1.256.1) (2025-11-04)
+
+### Bug Fixes
+
+* adjust sections ([b5bb0e8](https://github.com/aziontech/azion-webkit/commit/b5bb0e8331581619c34db5bceaf4aac408358b7e))
+
 ## [1.256.0](https://github.com/aziontech/azion-webkit/compare/v1.255.3...v1.256.0) (2025-11-03)
 
 ### Features

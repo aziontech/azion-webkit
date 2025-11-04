@@ -8,59 +8,83 @@ export default {
     backgrounds: {
       default: 'dark',
       values: [{ name: 'dark', value: '#0a0a0a' }]
+    },
+    docs: {
+      description: {
+        component:
+          'SectionCallToAction é um componente versátil para criar seções de call-to-action com diferentes layouts e estilos. Suporte completo a Markdown nas descrições e múltiplas variações visuais.'
+      }
     }
   },
   decorators: [
     (story) => ({
       components: { story },
-      template: '<div class="bg-neutral-950 p-12"><story /></div>'
+      template: '<div class="bg-neutral-950 min-h-screen py-12"><story /></div>'
     })
   ],
   argTypes: {
     type: {
       control: 'select',
       options: ['2-col-70-30', '1-col', '1-col-short', '1-col-short-orange'],
-      description: 'Banner layout type'
+      description:
+        'Layout do banner: 2-col-70-30 (duas colunas), 1-col (uma coluna alta), 1-col-short (uma coluna compacta), 1-col-short-orange (uma coluna compacta laranja)',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: '2-col-70-30' }
+      }
     },
     id: {
       control: 'text',
-      description: 'Optional ID for the section element'
+      description: 'ID opcional para o elemento section'
     },
     backgroundStyle: {
       control: 'select',
       options: ['dots', 'square'],
-      description: 'Background pattern style for the CTA card'
+      description: 'Estilo do padrão de fundo: dots (pontos) ou square (grade quadriculada)',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'dots' }
+      }
     },
     cta: {
       control: 'object',
-      description: 'CTA card configuration (right/main card)'
+      description: 'Configuração do card principal de CTA (lado direito no layout 2-col)',
+      table: {
+        type: { summary: 'CardProps' }
+      }
     },
     content: {
       control: 'object',
-      description: 'Content card configuration (left/secondary card)'
+      description: 'Configuração do card de conteúdo secundário (lado esquerdo no layout 2-col)',
+      table: {
+        type: { summary: 'CardProps' }
+      }
     }
   }
 }
 
-export const TwoCol7030 = {
+// Layout de duas colunas - mais comum para landing pages
+export const Default = {
+  name: 'Two Column Layout',
   args: {
     type: '2-col-70-30',
-    id: 'section-cta-2col',
+    id: 'section-cta-default',
+    backgroundStyle: 'dots',
     content: {
       overline: 'Need enterprise solutions?',
       title: 'Not sure which plan is right for you?',
       descriptionRawMarkdown:
-        'Select from a range of plans, from free to enterprise, tailored to your requirements.',
-      linkLabel: 'Explore our plans',
-      link: 'https://www.azion.com'
+        'Select from a range of plans, from **free to enterprise**, tailored to your specific requirements and scale.',
+      linkLabel: 'Explore Plans',
+      link: 'https://www.azion.com/pricing'
     },
     cta: {
-      overline: 'Developer',
-      title: 'Begin your deployment today',
+      overline: 'Get Started',
+      title: 'Deploy in minutes',
       descriptionRawMarkdown:
-        'Explore our **free plan**, test our products and start to elevate the quality of your projects!',
-      linkLabel: 'View Docs',
-      link: 'https://docs.azion.com'
+        'Experience the power of **edge computing** with our global infrastructure.',
+      linkLabel: 'Start Free Trial',
+      link: 'https://console.azion.com/signup'
     }
   }
 }
@@ -68,20 +92,13 @@ export const TwoCol7030 = {
 export const OneCol = {
   args: {
     type: '1-col',
-    id: 'section-cta-1col',
-    content: {
-      overline: 'Enterprise Solutions',
-      title: 'Scale Your Infrastructure',
-      descriptionRawMarkdown:
-        'Transform your digital infrastructure with our cutting-edge edge computing platform.',
-      linkLabel: 'Contact Sales',
-      link: 'https://www.azion.com/contact'
-    },
+    id: 'section-cta-single',
+    backgroundStyle: 'square',
     cta: {
       overline: 'Enterprise Solutions',
       title: 'Scale Your Infrastructure',
       descriptionRawMarkdown:
-        'Transform your digital infrastructure with our cutting-edge edge computing platform.',
+        'Transform your digital infrastructure with our **cutting-edge edge computing** platform. Reduce latency by up to *90%* and improve user experience globally.',
       linkLabel: 'Contact Sales',
       link: 'https://www.azion.com/contact'
     }
@@ -91,20 +108,15 @@ export const OneCol = {
 export const OneColShort = {
   args: {
     type: '1-col-short',
-    id: 'section-cta-short',
-    content: {
-      overline: 'Quick Start',
-      title: 'Ready to Begin?',
-      descriptionRawMarkdown: 'Get started in minutes with our edge computing platform.',
-      linkLabel: 'Get Started',
-      link: 'https://www.azion.com'
-    },
+    id: 'section-cta-compact',
+    backgroundStyle: 'dots',
     cta: {
       overline: 'Quick Start',
       title: 'Ready to Begin?',
-      descriptionRawMarkdown: 'Get started in minutes with our edge computing platform.',
+      descriptionRawMarkdown:
+        'Deploy your first application in **under 5 minutes** with our intuitive platform.',
       linkLabel: 'Get Started',
-      link: 'https://www.azion.com'
+      link: 'https://console.azion.com'
     }
   }
 }
@@ -112,20 +124,15 @@ export const OneColShort = {
 export const OneColShortOrange = {
   args: {
     type: '1-col-short-orange',
-    id: 'section-cta-orange',
-    content: {
-      overline: 'Special Offer',
-      title: 'Limited Time Deal',
-      descriptionRawMarkdown: 'Get 50% off your first month with our edge computing platform.',
-      linkLabel: 'Claim Offer',
-      link: 'https://www.azion.com/promo'
-    },
+    id: 'section-cta-promo',
+    backgroundStyle: 'dots',
     cta: {
-      overline: 'Special Offer',
-      title: 'Limited Time Deal',
-      descriptionRawMarkdown: 'Get 50% off your first month with our edge computing platform.',
-      linkLabel: 'Claim Offer',
-      link: 'https://www.azion.com/promo'
+      overline: 'Limited Time Offer',
+      title: 'Free for 30 days',
+      descriptionRawMarkdown:
+        'Try our **Enterprise plan** free for 30 days. No credit card required.',
+      linkLabel: 'Start Free Trial',
+      link: 'https://console.azion.com/signup?promo=30days'
     }
   }
 }

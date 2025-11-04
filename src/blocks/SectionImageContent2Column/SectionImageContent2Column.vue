@@ -1,12 +1,12 @@
 <template>
   <section :class="`p-6 md:p-12 max-w-xl xxxl:max-w-xxl mx-auto ${bottomSpacing}`">
     <div
-      class="flex flex-col border-neutral-900 border items-start relative w-full before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0"
+      class="flex flex-col border-neutral-900 border items-start relative w-full before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute md:after:bottom-0 after:right-0 md:items-stretch"
       :class="containerClasses"
     >
       <div
         v-if="title || descriptionRawMarkdown"
-        class="flex flex-col md:sticky top-20 gap-5 shrink-0 w-full p-6 md:p-12"
+        class="flex flex-col md:sticky top-20 gap-5 shrink-0 w-full p-6 md:p-12 md:min-h-full"
         :class="textBlockClasses"
       >
         <h2
@@ -27,10 +27,17 @@
         </div>
       </div>
       <div
-        class="flex flex-col gap-6 shrink-0 relative w-full"
+        class="flex flex-col gap-6 shrink-0 relative w-full md:min-h-full"
         :class="imageBlockClasses"
       >
-        <div class="border-2 border-neutral-900 relative w-full h-auto">
+        <div
+          :class="
+            inverted
+              ? 'border-t md:border-r border-neutral-900'
+              : 'border-t md:border-l border-neutral-900'
+          "
+          class="relative w-full h-full flex-1"
+        >
           <div class="overflow-hidden relative w-full h-full">
             <div class="absolute bottom-0 left-0 w-full flex justify-between h-1 z-10">
               <div class="w-1 h-1 bg-neutral-300" />
@@ -73,7 +80,7 @@
 
 <script setup>
   import { computed } from 'vue'
-  import { parseMarkdown } from '../../services/markdown-service'
+  import { parseMarkdown } from '../../services/markdown/markdown-service'
 
   const props = defineProps({
     title: {
@@ -129,7 +136,7 @@
     const baseClasses = 'md:flex-row'
     return props.inverted
       ? `${baseClasses} md:flex-row-reverse before:right-0 after:right-0`
-      : `${baseClasses} before:left-0 after:left-0`
+      : `${baseClasses} before:left-0 after-right-0 md:after:left-0`
   })
 
   const backgroundImageStyle = computed(() => {
