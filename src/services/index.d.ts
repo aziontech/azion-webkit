@@ -1,1 +1,1 @@
-export { parseMarkdown } from './markdown-service'
+export { parseMarkdown } from './markdown'
