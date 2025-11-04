@@ -1,5 +1,5 @@
-import Container from '../../../templates/container/Container'
-import SectionIframe from '../../../templates/sectioniframe/SectionIframe'
+import Container from '../../../templates/container'
+import SectionIframe from '../../../templates/sectioniframe'
 import Rules from '../../rules'
 
 const MOCK = {
