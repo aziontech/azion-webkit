@@ -12,15 +12,23 @@
     </div>
 
     <!-- Card Grid Sections with transition -->
-    <Transition name="fade" mode="out-in">
-      <div :key="selectedView" class="flex flex-col gap-20">
-        <section 
-          v-for="(section, index) in currentSections" 
+    <Transition
+      name="fade"
+      mode="out-in"
+    >
+      <div
+        :key="selectedView"
+        class="flex flex-col gap-20"
+      >
+        <section
+          v-for="(section, index) in currentSections"
           :key="index"
           :id="section.id"
           class="flex flex-col gap-4"
         >
-          <p class="uppercase tracking-widest text-[#B5B1F4] font-proto-mono">{{ section.title }}</p>
+          <p class="uppercase tracking-widest text-[#B5B1F4] font-proto-mono">
+            {{ section.title }}
+          </p>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
             <Card
               v-for="card in section.cards"
@@ -80,13 +88,13 @@
 </script>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.150s ease;
-}
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.15s ease;
+  }
 
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
 </style>

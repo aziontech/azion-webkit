@@ -10,10 +10,15 @@
       "require": "./index.js",
       "types": "./index.d.ts"
     },
+    "./markdown": {
+      "import": "./markdown/index.js",
+      "require": "./markdown/index.js",
+      "types": "./markdown/index.d.ts"
+    },
     "./markdown-service": {
-      "import": "./markdown-service.js",
-      "require": "./markdown-service.js",
-      "types": "./markdown-service.d.ts"
+      "import": "./markdown/markdown-service.js",
+      "require": "./markdown/markdown-service.js",
+      "types": "./markdown/markdown-service.d.ts"
     }
   }
 }
