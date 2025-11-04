@@ -58,7 +58,7 @@
 
 <script setup lang="ts">
   import Button from '../../components/Button/Button.vue'
-  import { parseMarkdown } from '../../src/services/markdown-service'
+  import { parseMarkdown } from '../../services/markdown-service'
   import { computed } from 'vue'
 
   interface CardProps {

@@ -71,7 +71,7 @@
 
 <script setup>
   import { computed } from 'vue'
-  import { parseMarkdown } from '../../src/services/markdown-service'
+  import { parseMarkdown } from '../../services/markdown-service'
 
   const props = defineProps({
     title: {

@@ -70,8 +70,8 @@
 
 <script setup lang="ts">
   import { computed } from 'vue'
-  import Button from '../../components/Button'
-  import { parseMarkdown } from '../../src/services/markdown-service'
+  import Button from '../../components/Button/Button.vue'
+  import { parseMarkdown } from '../../services/markdown-service'
 
   export interface Hero2ColumnButtonProps {
     label: string

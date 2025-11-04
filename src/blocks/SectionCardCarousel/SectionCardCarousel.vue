@@ -84,10 +84,10 @@
   import { Swiper, SwiperSlide } from 'swiper/vue'
   import { Navigation } from 'swiper/modules'
   import { ref } from 'vue'
-  import Button from '../../components/Button'
+  import Button from '../../components/Button/Button.vue'
   import 'swiper/css'
   import 'swiper/css/navigation'
-  import { parseMarkdown } from '../../src/services/markdown-service'
+  import { parseMarkdown } from '../../services/markdown-service'
 
   export interface CarouselCard {
     tag?: string
