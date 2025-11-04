@@ -11,7 +11,8 @@ export default {
     },
     docs: {
       description: {
-        component: 'SectionCallToAction é um componente versátil para criar seções de call-to-action com diferentes layouts e estilos. Suporte completo a Markdown nas descrições e múltiplas variações visuais.'
+        component:
+          'SectionCallToAction é um componente versátil para criar seções de call-to-action com diferentes layouts e estilos. Suporte completo a Markdown nas descrições e múltiplas variações visuais.'
       }
     }
   },
@@ -25,7 +26,8 @@ export default {
     type: {
       control: 'select',
       options: ['2-col-70-30', '1-col', '1-col-short', '1-col-short-orange'],
-      description: 'Layout do banner: 2-col-70-30 (duas colunas), 1-col (uma coluna alta), 1-col-short (uma coluna compacta), 1-col-short-orange (uma coluna compacta laranja)',
+      description:
+        'Layout do banner: 2-col-70-30 (duas colunas), 1-col (uma coluna alta), 1-col-short (uma coluna compacta), 1-col-short-orange (uma coluna compacta laranja)',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: '2-col-70-30' }
@@ -71,14 +73,16 @@ export const Default = {
     content: {
       overline: 'Need enterprise solutions?',
       title: 'Not sure which plan is right for you?',
-      descriptionRawMarkdown: 'Select from a range of plans, from **free to enterprise**, tailored to your specific requirements and scale.',
+      descriptionRawMarkdown:
+        'Select from a range of plans, from **free to enterprise**, tailored to your specific requirements and scale.',
       linkLabel: 'Explore Plans',
       link: 'https://www.azion.com/pricing'
     },
     cta: {
       overline: 'Get Started',
       title: 'Deploy in minutes',
-      descriptionRawMarkdown: 'Experience the power of **edge computing** with our global infrastructure.',
+      descriptionRawMarkdown:
+        'Experience the power of **edge computing** with our global infrastructure.',
       linkLabel: 'Start Free Trial',
       link: 'https://console.azion.com/signup'
     }
@@ -94,7 +98,8 @@ export const SingleColumn = {
     cta: {
       overline: 'Enterprise Solutions',
       title: 'Scale Your Infrastructure',
-      descriptionRawMarkdown: 'Transform your digital infrastructure with our **cutting-edge edge computing** platform. Reduce latency by up to *90%* and improve user experience globally.',
+      descriptionRawMarkdown:
+        'Transform your digital infrastructure with our **cutting-edge edge computing** platform. Reduce latency by up to *90%* and improve user experience globally.',
       linkLabel: 'Contact Sales',
       link: 'https://www.azion.com/contact'
     }
@@ -110,7 +115,8 @@ export const CompactLayout = {
     cta: {
       overline: 'Quick Start',
       title: 'Ready to Begin?',
-      descriptionRawMarkdown: 'Deploy your first application in **under 5 minutes** with our intuitive platform.',
+      descriptionRawMarkdown:
+        'Deploy your first application in **under 5 minutes** with our intuitive platform.',
       linkLabel: 'Get Started',
       link: 'https://console.azion.com'
     }
@@ -126,7 +132,8 @@ export const PromotionalLayout = {
     cta: {
       overline: 'Limited Time Offer',
       title: 'Free for 30 days',
-      descriptionRawMarkdown: 'Try our **Enterprise plan** free for 30 days. No credit card required.',
+      descriptionRawMarkdown:
+        'Try our **Enterprise plan** free for 30 days. No credit card required.',
       linkLabel: 'Start Free Trial',
       link: 'https://console.azion.com/signup?promo=30days'
     }
@@ -142,14 +149,16 @@ export const WithAdvancedMarkdown = {
     content: {
       overline: 'Documentation',
       title: 'Learn Edge Computing',
-      descriptionRawMarkdown: 'Access our comprehensive **documentation**, *tutorials*, and guides to master edge computing concepts.',
+      descriptionRawMarkdown:
+        'Access our comprehensive **documentation**, *tutorials*, and guides to master edge computing concepts.',
       linkLabel: 'View Documentation',
       link: 'https://docs.azion.com'
     },
     cta: {
       overline: 'Performance',
       title: 'Ultra-fast delivery',
-      descriptionRawMarkdown: 'Achieve **sub-50ms latency** globally with our edge network. Perfect for *gaming*, *streaming*, and **real-time applications**.',
+      descriptionRawMarkdown:
+        'Achieve **sub-50ms latency** globally with our edge network. Perfect for *gaming*, *streaming*, and **real-time applications**.',
       linkLabel: 'See Performance',
       link: 'https://www.azion.com/performance'
     }
@@ -165,7 +174,8 @@ export const DotsBackground = {
     cta: {
       overline: 'Global Network',
       title: 'Edge Locations Worldwide',
-      descriptionRawMarkdown: 'Deploy your applications across **100+ edge locations** in 6 continents for optimal performance.',
+      descriptionRawMarkdown:
+        'Deploy your applications across **100+ edge locations** in 6 continents for optimal performance.',
       linkLabel: 'View Network Map',
       link: 'https://www.azion.com/network'
     }
@@ -181,7 +191,8 @@ export const SquareBackground = {
     cta: {
       overline: 'Security',
       title: 'Enterprise-grade Security',
-      descriptionRawMarkdown: 'Protect your applications with **DDoS protection**, *WAF*, and advanced security features.',
+      descriptionRawMarkdown:
+        'Protect your applications with **DDoS protection**, *WAF*, and advanced security features.',
       linkLabel: 'Learn Security',
       link: 'https://www.azion.com/security'
     }
@@ -197,14 +208,16 @@ export const DeveloperFocused = {
     content: {
       overline: 'For Developers',
       title: 'Build with Modern Tools',
-      descriptionRawMarkdown: 'Use our **REST APIs**, *SDKs*, and CLI tools to integrate edge computing into your workflow.',
+      descriptionRawMarkdown:
+        'Use our **REST APIs**, *SDKs*, and CLI tools to integrate edge computing into your workflow.',
       linkLabel: 'View API Docs',
       link: 'https://api.azion.com'
     },
     cta: {
       overline: 'Get Started',
       title: 'Deploy your first app',
-      descriptionRawMarkdown: 'From **zero to production** in minutes with our developer-friendly platform.',
+      descriptionRawMarkdown:
+        'From **zero to production** in minutes with our developer-friendly platform.',
       linkLabel: 'Start Building',
       link: 'https://console.azion.com'
     }
@@ -220,7 +233,8 @@ export const EnterpriseFocused = {
     cta: {
       overline: 'Enterprise Solutions',
       title: 'Scale without limits',
-      descriptionRawMarkdown: 'Handle **millions of requests** per second with our enterprise-grade infrastructure. *99.99% uptime* guaranteed.',
+      descriptionRawMarkdown:
+        'Handle **millions of requests** per second with our enterprise-grade infrastructure. *99.99% uptime* guaranteed.',
       linkLabel: 'Contact Sales',
       link: 'https://www.azion.com/enterprise'
     }
@@ -261,21 +275,24 @@ export const AllLayouts = {
         twoColumnContent: {
           overline: 'Solutions',
           title: 'Edge Computing Platform',
-          descriptionRawMarkdown: 'Comprehensive **edge computing** solutions for modern applications.',
+          descriptionRawMarkdown:
+            'Comprehensive **edge computing** solutions for modern applications.',
           linkLabel: 'Learn More',
           link: '#'
         },
         twoColumnCta: {
           overline: 'Get Started',
           title: 'Try it free',
-          descriptionRawMarkdown: 'Start your **free trial** today and experience the power of edge computing.',
+          descriptionRawMarkdown:
+            'Start your **free trial** today and experience the power of edge computing.',
           linkLabel: 'Start Free',
           link: '#'
         },
         singleColumnCta: {
           overline: 'Enterprise',
           title: 'Scale Your Business',
-          descriptionRawMarkdown: 'Enterprise-grade **infrastructure** with *24/7 support* and guaranteed SLA.',
+          descriptionRawMarkdown:
+            'Enterprise-grade **infrastructure** with *24/7 support* and guaranteed SLA.',
           linkLabel: 'Contact Sales',
           link: '#'
         },

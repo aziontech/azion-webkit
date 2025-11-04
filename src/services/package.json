@@ -1,0 +1,19 @@
+{
+  "name": "@azion/webkit-services",
+  "version": "1.0.0",
+  "description": "Azion WebKit Services",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.js",
+      "types": "./index.d.ts"
+    },
+    "./markdown-service": {
+      "import": "./markdown-service.js",
+      "require": "./markdown-service.js",
+      "types": "./markdown-service.d.ts"
+    }
+  }
+}

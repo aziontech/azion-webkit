@@ -9,7 +9,9 @@
       class="lg:col-span-3 w-full flex flex-col justify-between gap-6 bg-neutral-900 rounded-md p-6 md:p-12"
     >
       <div class="flex flex-col gap-3">
-        <p class="text-orange-500 text-xs font-proto-mono uppercase tracking-wide">{{ content.overline }}</p>
+        <p class="text-orange-500 text-xs font-proto-mono uppercase tracking-wide">
+          {{ content.overline }}
+        </p>
         <h2 class="text-2xl text-neutral-200 font-sora">{{ content.title }}</h2>
         <p
           class="text-neutral-400 font-sora"
@@ -33,7 +35,9 @@
         class="flex gap-3"
         :class="type.includes('short') ? 'flex flex-col md:flex-row justify-between' : 'flex-col'"
       >
-        <p class="text-neutral-900 text-xs font-proto-mono uppercase tracking-wide">{{ cta.overline }}</p>
+        <p class="text-neutral-900 text-xs font-proto-mono uppercase tracking-wide">
+          {{ cta.overline }}
+        </p>
         <p
           class="max-w-sm text-balance font-sora text-xl text-neutral-900"
           v-html="parseMarkdown(cta.descriptionRawMarkdown)"
@@ -58,7 +62,7 @@
 
 <script setup lang="ts">
   import Button from '../../components/Button/Button.vue'
-  import { parseMarkdown } from '../../services/markdown-service'
+  import { parseMarkdown } from '@services'
   import { computed } from 'vue'
 
   interface CardProps {

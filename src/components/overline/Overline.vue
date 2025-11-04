@@ -1,5 +1,8 @@
 <template>
-  <span class="text-balance font-proto-mono text-xs" :class="colorClass[color]">
+  <span
+    class="text-balance font-proto-mono text-xs"
+    :class="colorClass[color]"
+  >
     <slot />
   </span>
 </template>
@@ -18,8 +21,8 @@
   const colorClass = computed(() => {
     return {
       primary: 'text-neutral-200',
-      orange:'text-orange-500',
-      black:'text-black'
+      orange: 'text-orange-500',
+      black: 'text-black'
     }
   })
 </script>

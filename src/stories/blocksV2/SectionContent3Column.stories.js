@@ -54,4 +54,3 @@ export const Default = {
     gridPattern: 'dots'
   }
 }
-

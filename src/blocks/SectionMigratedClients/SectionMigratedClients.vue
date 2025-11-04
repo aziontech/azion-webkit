@@ -12,23 +12,22 @@
 </template>
 
 <script setup>
-import MigratedClientsCard from '../../components/MigratedClientsCard'
+  import MigratedClientsCard from '../../components/MigratedClientsCard'
 
-const props = defineProps({
-  firstCard: {
-    type: Object,
-    required: true,
-    validator: (value) => {
-      return value.hasOwnProperty('text') && value.hasOwnProperty('logos')
+  const props = defineProps({
+    firstCard: {
+      type: Object,
+      required: true,
+      validator: (value) => {
+        return value.hasOwnProperty('text') && value.hasOwnProperty('logos')
+      }
+    },
+    secondCard: {
+      type: Object,
+      required: true,
+      validator: (value) => {
+        return value.hasOwnProperty('text') && value.hasOwnProperty('logos')
+      }
     }
-  },
-  secondCard: {
-    type: Object,
-    required: true,
-    validator: (value) => {
-      return value.hasOwnProperty('text') && value.hasOwnProperty('logos')
-    }
-  }
-})
+  })
 </script>
-

@@ -204,7 +204,7 @@ export const Default = {
   render: (args) => ({
     components: { Footer, SelectLang },
     setup() {
-      return { 
+      return {
         securityInformation,
         listData,
         cta,

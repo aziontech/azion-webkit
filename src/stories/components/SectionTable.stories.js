@@ -63,7 +63,8 @@ export const SimpleTest = {
     title: 'Test Simple',
     table: {
       title: 'Simple Table',
-      htmlTable: '<table><thead><tr><th>Col1</th><th>Col2</th></tr></thead><tbody><tr><td>Row1</td><td>Data1</td></tr></tbody></table>'
+      htmlTable:
+        '<table><thead><tr><th>Col1</th><th>Col2</th></tr></thead><tbody><tr><td>Row1</td><td>Data1</td></tr></tbody></table>'
     }
   }
 }

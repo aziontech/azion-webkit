@@ -1,4 +1,4 @@
-<template >
+<template>
   <div class="attribute-viewer">
     <div
       v-for="(attribute, index) in attributes"
@@ -17,31 +17,29 @@
         <p class="text-color-secondary text-sm">{{ attribute.description }}</p>
       </div>
 
-      <div
-        v-if="attribute.children && attribute.children.length > 0"
-      >
+      <div v-if="attribute.children && attribute.children.length > 0">
         <Accordion
-            :header="attribute.name"
-            toggleable
-            class=""
-            :pt="{
+          :header="attribute.name"
+          toggleable
+          class=""
+          :pt="{
             content: 'p-3 pt-0',
             togglerIcon: 'text-sm'
-            }"
+          }"
         >
-            <AccordionTab>
-                <template #header>
-                <span class="text-xs text-color-secondary">{{ toggleText }}</span>
-                </template>
-    
-                <AttributePanel
-                    v-for="(child, childIndex) in attribute.children"
-                    :key="childIndex"
-                    :attribute="child"
-                    :toggle-text="toggleText"
-                    :isLast="attribute.children.length && childIndex === attribute.children.length - 1"
-                />
-            </AccordionTab>
+          <AccordionTab>
+            <template #header>
+              <span class="text-xs text-color-secondary">{{ toggleText }}</span>
+            </template>
+
+            <AttributePanel
+              v-for="(child, childIndex) in attribute.children"
+              :key="childIndex"
+              :attribute="child"
+              :toggle-text="toggleText"
+              :isLast="attribute.children.length && childIndex === attribute.children.length - 1"
+            />
+          </AccordionTab>
         </Accordion>
       </div>
     </div>
@@ -54,7 +52,7 @@
   import Accordion from 'primevue/accordion'
   import AccordionTab from 'primevue/accordiontab'
   import AttributePanel from './AttributePanel.vue'
-  
+
   defineProps({
     attributes: {
       type: Array,
