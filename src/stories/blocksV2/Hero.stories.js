@@ -26,7 +26,8 @@ export const Default = {
   args: {
     overline: 'functions',
     title: 'Build Smarter, Faster, and Closer to Your Users',
-    subtitle: 'Empower your applications with Azion Functions: serverless computing at the edge for unmatched performance, scalability, and innovation.',
+    subtitle:
+      'Empower your applications with Azion Functions: serverless computing at the edge for unmatched performance, scalability, and innovation.',
     buttons: [
       {
         label: '> Start Now',
@@ -41,4 +42,3 @@ export const Default = {
     ]
   }
 }
-

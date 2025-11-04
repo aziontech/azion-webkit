@@ -10,30 +10,30 @@ A flexible two-column section component that displays content (text) alongside a
 
 ### Required
 
-| Prop    | Type     | Default | Values | Description                    |
-| ------- | -------- | ------- | ------ | ------------------------------ |
+| Prop    | Type     | Default | Values | Description                      |
+| ------- | -------- | ------- | ------ | -------------------------------- |
 | `image` | `String` | -       | -      | URL of the image to be displayed |
 
 ### Optional
 
-| Prop                     | Type      | Default   | Values           | Description                                                                    |
-| ------------------------ | --------- | --------- | ---------------- | ------------------------------------------------------------------------------ |
-| `title`                  | `String`  | `''`      | -                | Section title displayed above the content                                      |
-| `descriptionRawMarkdown` | `String`  | `''`      | -                | Markdown content converted to HTML (supports headers, bold, italic, links)    |
-| `alt`                    | `String`  | `''`      | -                | Alternative text for the image (accessibility)                                |
-| `height`                 | `String`  | `'default'` | `default\|large` | Controls the height of the image container                                     |
-| `backgroundStyle`        | `String`  | `'grid'`  | `grid\|dots`     | Background pattern style for the image container                               |
-| `fiftyFifty`             | `Boolean` | `true`    | -                | Layout distribution: true = 50/50 split, false = 1/3 text + 2/3 image        |
-| `inverted`               | `Boolean` | `false`   | -                | Block order: true = image first, false = text first (default)                 |
+| Prop                     | Type      | Default     | Values           | Description                                                                |
+| ------------------------ | --------- | ----------- | ---------------- | -------------------------------------------------------------------------- |
+| `title`                  | `String`  | `''`        | -                | Section title displayed above the content                                  |
+| `descriptionRawMarkdown` | `String`  | `''`        | -                | Markdown content converted to HTML (supports headers, bold, italic, links) |
+| `alt`                    | `String`  | `''`        | -                | Alternative text for the image (accessibility)                             |
+| `height`                 | `String`  | `'default'` | `default\|large` | Controls the height of the image container                                 |
+| `backgroundStyle`        | `String`  | `'grid'`    | `grid\|dots`     | Background pattern style for the image container                           |
+| `fiftyFifty`             | `Boolean` | `true`      | -                | Layout distribution: true = 50/50 split, false = 1/3 text + 2/3 image      |
+| `inverted`               | `Boolean` | `false`     | -                | Block order: true = image first, false = text first (default)              |
 
 ## Layout Combinations
 
-| fiftyFifty | inverted | Result                                    |
-| ---------- | -------- | ----------------------------------------- |
-| `true`     | `false`  | Text first, 50/50 split (default)        |
-| `true`     | `true`   | Image first, 50/50 split                 |
-| `false`    | `false`  | Text first, 1/3 text + 2/3 image         |
-| `false`    | `true`   | Image first, 1/3 text + 2/3 image        |
+| fiftyFifty | inverted | Result                            |
+| ---------- | -------- | --------------------------------- |
+| `true`     | `false`  | Text first, 50/50 split (default) |
+| `true`     | `true`   | Image first, 50/50 split          |
+| `false`    | `false`  | Text first, 1/3 text + 2/3 image  |
+| `false`    | `true`   | Image first, 1/3 text + 2/3 image |
 
 ## Markdown Support
 
@@ -105,6 +105,7 @@ The `descriptionRawMarkdown` prop supports:
 ## Styling
 
 The component uses:
+
 - **Tailwind CSS** for responsive layout and styling
 - **Custom CSS** for decorative elements (corner dots)
 - **Dynamic classes** based on props for layout control

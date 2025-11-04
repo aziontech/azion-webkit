@@ -45,9 +45,7 @@ const menuDataWithSubmenu = {
         },
         {
           title: 'Secure',
-          items: [
-            { label: 'Edge Firewall', href: '/products/edge-firewall' }
-          ]
+          items: [{ label: 'Edge Firewall', href: '/products/edge-firewall' }]
         }
       ]
     },
@@ -163,14 +161,14 @@ export const Default = {
   render: (args) => ({
     components: { Header, HeaderLogoAzion, Menu, MenuMobile, Search },
     setup() {
-      return { 
-        args, 
-        menuData: simpleMenuData, 
-        menuSecondary, 
-        menuSecondaryMobile, 
-        bottomButtonsMobile, 
-        communityData, 
-        menuMobileData: simpleMobileMenuData 
+      return {
+        args,
+        menuData: simpleMenuData,
+        menuSecondary,
+        menuSecondaryMobile,
+        bottomButtonsMobile,
+        communityData,
+        menuMobileData: simpleMobileMenuData
       }
     },
     template: `
@@ -212,4 +210,3 @@ export const Default = {
     `
   })
 }
-

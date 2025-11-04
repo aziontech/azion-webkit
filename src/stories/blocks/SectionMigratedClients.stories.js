@@ -8,9 +8,7 @@ export default {
   parameters: {
     backgrounds: {
       default: 'dark',
-      values: [
-        { name: 'dark', value: '#0a0a0a' }
-      ]
+      values: [{ name: 'dark', value: '#0a0a0a' }]
     }
   },
   argTypes: {

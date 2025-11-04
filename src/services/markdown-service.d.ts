@@ -3,4 +3,4 @@
  * @param markdown - The markdown string to parse
  * @returns HTML string with parsed markdown content
  */
-export declare const parseMarkdown: (markdown: string) => string;
+export declare const parseMarkdown: (markdown: string) => string

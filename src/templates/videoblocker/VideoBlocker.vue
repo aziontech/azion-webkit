@@ -217,11 +217,11 @@
   }
 
   function playVideo() {
-    if (!player && !player.playVideo) return;
+    if (!player && !player.playVideo) return
     player.playVideo()
 
     if (formSubmitted.value) {
-        player.seekTo(transformMillisecondsToSeconds(props.timerDuration), true)
+      player.seekTo(transformMillisecondsToSeconds(props.timerDuration), true)
     }
   }
 
