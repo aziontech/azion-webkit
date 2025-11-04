@@ -1,3 +1,30 @@
+## [1.258.0](https://github.com/aziontech/azion-webkit/compare/v1.257.1...v1.258.0) (2025-11-04)
+
+### Features
+
+* overline text improvements ([836b5db](https://github.com/aziontech/azion-webkit/commit/836b5db6b24170e7fe06e801713f4ce04e615efe))
+* overline text improvements ([a00dfa8](https://github.com/aziontech/azion-webkit/commit/a00dfa8905a8d2ceadd8e4a69edd15162e645a0a))
+* section call to action black version and hover ([eed72e9](https://github.com/aziontech/azion-webkit/commit/eed72e97ba87da0fc5d4bee5e3622ec13c7d78b3))
+* section call to action black version and hover ([c3c6a7d](https://github.com/aziontech/azion-webkit/commit/c3c6a7d0e3c0d00b0d93d5f92550db1e9ba5622f))
+
+### Bug Fixes
+
+* lint ([625abee](https://github.com/aziontech/azion-webkit/commit/625abee3fb62f4415da0b1be0cdee4ed82072a41))
+* lint ([76a778a](https://github.com/aziontech/azion-webkit/commit/76a778a47be43da24fd2813d1cf4085d14f0fd88))
+* lint ([9838c29](https://github.com/aziontech/azion-webkit/commit/9838c29a3cc1fa72138b93874b7120f8894a6820))
+* remove package change ([567644a](https://github.com/aziontech/azion-webkit/commit/567644acfa086beaa16e88cff951bbe788f45723))
+* remove package change ([cfb12b3](https://github.com/aziontech/azion-webkit/commit/cfb12b3ce488a38cf9f7f1b5c972f16049f47fe0))
+* remove package change ([41cf78e](https://github.com/aziontech/azion-webkit/commit/41cf78eb899b54f55f66fc91d21a6b2dc14dbb59))
+* remove services from src inside dist ([12b32d4](https://github.com/aziontech/azion-webkit/commit/12b32d4f01cdba2638f9923704f572ccbfd33b63))
+* remove services from src inside dist ([81f73dc](https://github.com/aziontech/azion-webkit/commit/81f73dc47af6b93416b97e982ebda56f64c99a9d))
+* same path for service imports ([8b4194f](https://github.com/aziontech/azion-webkit/commit/8b4194ff1f98191ab1b32980faa2c4f023946f24))
+* same path for service imports ([e104968](https://github.com/aziontech/azion-webkit/commit/e104968ccc4b20fbca012682040f58a6a81da37d))
+* text aligment ([5ab961a](https://github.com/aziontech/azion-webkit/commit/5ab961a1614efab30133ae63afd012d9ae93251b))
+* text position ([fd7e499](https://github.com/aziontech/azion-webkit/commit/fd7e499f45ff199463fa8c68abca74616722ff28))
+* text position ([86b8822](https://github.com/aziontech/azion-webkit/commit/86b88221f7453a5388a8e2e9a765d80485da70b3))
+* V2 stories view ([62b882a](https://github.com/aziontech/azion-webkit/commit/62b882a01131b6c2e16cffda3094c4e2f64caad9))
+* V2 stories view ([ce89c92](https://github.com/aziontech/azion-webkit/commit/ce89c92381fc93c2d79bab483718bc7c307dc74f))
+
 ## [1.257.1](https://github.com/aziontech/azion-webkit/compare/v1.257.0...v1.257.1) (2025-11-04)
 
 ### Bug Fixes
