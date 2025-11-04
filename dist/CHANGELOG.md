@@ -1,3 +1,9 @@
+## [1.256.4](https://github.com/aziontech/azion-webkit/compare/v1.256.3...v1.256.4) (2025-11-04)
+
+### Bug Fixes
+
+* improve button styling and remove redundant list markup ([d7291d4](https://github.com/aziontech/azion-webkit/commit/d7291d42e8392f8f213e96fea39c5856e3e6f9a8))
+
 ## [1.256.3](https://github.com/aziontech/azion-webkit/compare/v1.256.2...v1.256.3) (2025-11-04)
 
 ### Bug Fixes
