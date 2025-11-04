@@ -1,3 +1,10 @@
+## [1.257.1](https://github.com/aziontech/azion-webkit/compare/v1.257.0...v1.257.1) (2025-11-04)
+
+### Bug Fixes
+
+* clean up markdown parsing and remove unused component ([b23e0bb](https://github.com/aziontech/azion-webkit/commit/b23e0bb2d429edaca53729dab4c010b3933cdf62))
+* format code and remove whitespace ([2d6f6e4](https://github.com/aziontech/azion-webkit/commit/2d6f6e45f5d24c21672629d3cd5be780046bf995))
+
 ## [1.257.0](https://github.com/aziontech/azion-webkit/compare/v1.256.4...v1.257.0) (2025-11-04)
 
 ### Features
