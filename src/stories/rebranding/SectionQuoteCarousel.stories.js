@@ -44,36 +44,21 @@ const Template = (args) => ({
   template: `<SectionQuoteCarousel v-bind="args" class="p-6" />`
 })
 
-const gartnerLogo = `<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" fill="none">
-  <text x="0" y="24" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="currentColor">Gartner</text>
-</svg>
-`
-
-const gigaomLogo = `<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" fill="none">
-  <text x="0" y="24" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="currentColor">GigaOm</text>
-</svg>
-`
-
-const forresterLogo = `<svg xmlns="http://www.w3.org/2000/svg" width="140" height="32" viewBox="0 0 140 32" fill="none">
-  <text x="0" y="24" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="currentColor">Forrester</text>
-</svg>
-`
-
 const mockQuotes = [
   {
-    logo: gartnerLogo,
+    logo: 'https://www.azion.com/assets/images/logos/light/gartner-logo.svg',
     testimonial:
       'Gartner clients note that Azion excels at providing a consultative approach to orchestration and serverless edge application environments.',
     source: 'Gartner Competitive Landscape for CDN and Edge Services.'
   },
   {
-    logo: gigaomLogo,
+    logo: 'https://www.azion.com/assets/images/logos/light/gigaom-logo.svg',
     testimonial:
       'Azion was named a Leader and identified as the only purpose-built edge platform whose capabilities meet all of the key criteria outlined in the report.',
     source: 'GigaOms Radar for Edge Platforms.'
   },
   {
-    logo: forresterLogo,
+    logo: 'https://www.azion.com/assets/images/logos/light/forrester-logo.svg',
     testimonial:
       'Azion was named a Strong Performer and a good fit for large enterprises seeking to accelerate innovation at the edge with serverless full-stack applications.',
     source: 'Edge Development Platforms, Q4 2021.'

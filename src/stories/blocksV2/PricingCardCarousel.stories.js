@@ -12,8 +12,17 @@ export default {
         { name: 'dark', value: '#0a0a0a' },
         { name: 'light', value: '#ffffff' }
       ]
+    },
+    docs: {
+      description: {
+        component: `
+**IMPORTANT:** A mobile-first carousel block component for displaying pricing cards using Swiper. Designed specifically for mobile visualization showing 1.25 cards with smooth scrolling. To see the component properly, use the responsive viewport controls in Storybook 
+
+        `
+      }
     }
   },
+
   decorators: [
     (story) => ({
       components: { story },
@@ -198,10 +207,22 @@ const pricingTableData = [
   }
 ]
 
-export const Default = {
-  args: {
-    cards: pricingCards,
-    table: pricingTableData,
-    buttonLabel: 'START NOW'
-  }
+const Template = (args) => ({
+  components: { PricingCardCarousel },
+  setup() {
+    return { args }
+  },
+  template: `
+    <PricingCardCarousel
+      :cards="args.cards"
+      :table="args.table"
+      :buttonLabel="args.buttonLabel"
+    />
+  `
+})
+
+export const Default = Template.bind({})
+Default.args = {
+  cards: pricingCards,
+  buttonLabel: 'START NOW'
 }

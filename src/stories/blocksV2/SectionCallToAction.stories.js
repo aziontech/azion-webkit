@@ -89,8 +89,7 @@ export const Default = {
   }
 }
 
-// Layout de uma coluna - ideal para CTAs focados
-export const SingleColumn = {
+export const OneCol = {
   args: {
     type: '1-col',
     id: 'section-cta-single',
@@ -106,8 +105,7 @@ export const SingleColumn = {
   }
 }
 
-// Layout compacto - ideal para seções intermediárias
-export const CompactLayout = {
+export const OneColShort = {
   args: {
     type: '1-col-short',
     id: 'section-cta-compact',
@@ -123,8 +121,7 @@ export const CompactLayout = {
   }
 }
 
-// Layout laranja - ideal para promoções e ofertas especiais
-export const PromotionalLayout = {
+export const OneColShortOrange = {
   args: {
     type: '1-col-short-orange',
     id: 'section-cta-promo',
@@ -140,177 +137,23 @@ export const PromotionalLayout = {
   }
 }
 
-// Demonstração de Markdown avançado
-export const WithAdvancedMarkdown = {
+export const OneColShortBlack = {
   args: {
-    type: '2-col-70-30',
-    id: 'section-cta-markdown',
-    backgroundStyle: 'square',
+    type: '1-col-short-black',
+    id: 'section-cta-black',
     content: {
-      overline: 'Documentation',
-      title: 'Learn Edge Computing',
-      descriptionRawMarkdown:
-        'Access our comprehensive **documentation**, *tutorials*, and guides to master edge computing concepts.',
-      linkLabel: 'View Documentation',
-      link: 'https://docs.azion.com'
+      overline: 'Special Offer',
+      title: 'Limited Time Deal',
+      descriptionRawMarkdown: 'Get 50% off your first month with our edge computing platform.',
+      linkLabel: 'Claim Offer',
+      link: 'https://www.azion.com/promo'
     },
     cta: {
-      overline: 'Performance',
-      title: 'Ultra-fast delivery',
-      descriptionRawMarkdown:
-        'Achieve **sub-50ms latency** globally with our edge network. Perfect for *gaming*, *streaming*, and **real-time applications**.',
-      linkLabel: 'See Performance',
-      link: 'https://www.azion.com/performance'
+      overline: 'Special Offer',
+      title: 'Limited Time Deal',
+      descriptionRawMarkdown: 'Get 50% off your first month with our edge computing platform.',
+      linkLabel: 'Claim Offer',
+      link: 'https://www.azion.com/promo'
     }
   }
-}
-
-// Exemplo com background de pontos
-export const DotsBackground = {
-  args: {
-    type: '1-col',
-    id: 'section-cta-dots',
-    backgroundStyle: 'dots',
-    cta: {
-      overline: 'Global Network',
-      title: 'Edge Locations Worldwide',
-      descriptionRawMarkdown:
-        'Deploy your applications across **100+ edge locations** in 6 continents for optimal performance.',
-      linkLabel: 'View Network Map',
-      link: 'https://www.azion.com/network'
-    }
-  }
-}
-
-// Exemplo com background quadriculado
-export const SquareBackground = {
-  args: {
-    type: '1-col-short',
-    id: 'section-cta-square',
-    backgroundStyle: 'square',
-    cta: {
-      overline: 'Security',
-      title: 'Enterprise-grade Security',
-      descriptionRawMarkdown:
-        'Protect your applications with **DDoS protection**, *WAF*, and advanced security features.',
-      linkLabel: 'Learn Security',
-      link: 'https://www.azion.com/security'
-    }
-  }
-}
-
-// Exemplo para desenvolvedores
-export const DeveloperFocused = {
-  args: {
-    type: '2-col-70-30',
-    id: 'section-cta-developer',
-    backgroundStyle: 'dots',
-    content: {
-      overline: 'For Developers',
-      title: 'Build with Modern Tools',
-      descriptionRawMarkdown:
-        'Use our **REST APIs**, *SDKs*, and CLI tools to integrate edge computing into your workflow.',
-      linkLabel: 'View API Docs',
-      link: 'https://api.azion.com'
-    },
-    cta: {
-      overline: 'Get Started',
-      title: 'Deploy your first app',
-      descriptionRawMarkdown:
-        'From **zero to production** in minutes with our developer-friendly platform.',
-      linkLabel: 'Start Building',
-      link: 'https://console.azion.com'
-    }
-  }
-}
-
-// Exemplo para empresas
-export const EnterpriseFocused = {
-  args: {
-    type: '1-col',
-    id: 'section-cta-enterprise',
-    backgroundStyle: 'square',
-    cta: {
-      overline: 'Enterprise Solutions',
-      title: 'Scale without limits',
-      descriptionRawMarkdown:
-        'Handle **millions of requests** per second with our enterprise-grade infrastructure. *99.99% uptime* guaranteed.',
-      linkLabel: 'Contact Sales',
-      link: 'https://www.azion.com/enterprise'
-    }
-  }
-}
-
-// Showcase de todos os layouts
-export const AllLayouts = {
-  render: () => ({
-    template: `
-      <div class="space-y-16">
-        <SectionCallToAction 
-          type="2-col-70-30"
-          background-style="dots"
-          :content="twoColumnContent"
-          :cta="twoColumnCta"
-        />
-        <SectionCallToAction 
-          type="1-col"
-          background-style="square"
-          :cta="singleColumnCta"
-        />
-        <SectionCallToAction 
-          type="1-col-short"
-          background-style="dots"
-          :cta="compactCta"
-        />
-        <SectionCallToAction 
-          type="1-col-short-orange"
-          background-style="dots"
-          :cta="promoCta"
-        />
-      </div>
-    `,
-    components: { SectionCallToAction },
-    data() {
-      return {
-        twoColumnContent: {
-          overline: 'Solutions',
-          title: 'Edge Computing Platform',
-          descriptionRawMarkdown:
-            'Comprehensive **edge computing** solutions for modern applications.',
-          linkLabel: 'Learn More',
-          link: '#'
-        },
-        twoColumnCta: {
-          overline: 'Get Started',
-          title: 'Try it free',
-          descriptionRawMarkdown:
-            'Start your **free trial** today and experience the power of edge computing.',
-          linkLabel: 'Start Free',
-          link: '#'
-        },
-        singleColumnCta: {
-          overline: 'Enterprise',
-          title: 'Scale Your Business',
-          descriptionRawMarkdown:
-            'Enterprise-grade **infrastructure** with *24/7 support* and guaranteed SLA.',
-          linkLabel: 'Contact Sales',
-          link: '#'
-        },
-        compactCta: {
-          overline: 'Quick Start',
-          title: 'Deploy in Minutes',
-          descriptionRawMarkdown: 'Get your application **live** in under 5 minutes.',
-          linkLabel: 'Deploy Now',
-          link: '#'
-        },
-        promoCta: {
-          overline: 'Special Offer',
-          title: '50% Off First Month',
-          descriptionRawMarkdown: 'Limited time offer for **new customers**. No setup fees.',
-          linkLabel: 'Claim Offer',
-          link: '#'
-        }
-      }
-    }
-  })
 }

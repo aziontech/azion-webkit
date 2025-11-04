@@ -168,7 +168,7 @@
   import Checkbox from 'primevue/checkbox'
   import InlineMessage from 'primevue/inlinemessage'
   import FormBlock from '../formblock/FormBlock.vue'
-  import { hbspPostHandler } from '../src/services/hubspot-service'
+  import { hbspPostHandler } from '../services/hubspot-service'
   import { ref } from 'vue'
 
   const props = defineProps({

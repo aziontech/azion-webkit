@@ -1,7 +1,7 @@
-import BigNumbers from '../../templates/bignumbers/BigNumbers.vue'
+import BigNumbers from '../../blocks/SectionBigNumbersCarousel/BigNumbers.vue'
 
 export default {
-  title: 'Components/BigNumbers',
+  title: 'Blocks/Rebranding/SectionBigNumbersCarousel',
   component: BigNumbers,
   tags: ['autodocs'],
   argTypes: {
@@ -29,7 +29,13 @@ The BigNumbers component displays a collection of metrics or statistics in a car
         `
       }
     }
-  }
+  },
+  decorators: [
+    (story) => ({
+      components: { story },
+      template: '<div class="bg-neutral-950 p-6"><story /></div>'
+    })
+  ]
 }
 
 const Template = (args) => ({
