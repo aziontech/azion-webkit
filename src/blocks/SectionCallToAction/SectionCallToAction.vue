@@ -41,7 +41,10 @@
         </Overline>
         <p
           class="max-w-sm text-balance font-sora text-xl"
-          :class="[type.includes('short-black') ? 'text-neutral-200' : 'text-neutral-900', type.includes('2-col') ? 'text-start' : 'text-end']"
+          :class="[
+            type.includes('short-black') ? 'text-neutral-200' : 'text-neutral-900',
+            type.includes('2-col') ? 'text-start' : 'text-end'
+          ]"
           v-html="parseMarkdown(cta.descriptionRawMarkdown)"
         ></p>
       </div>
