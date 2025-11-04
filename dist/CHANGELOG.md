@@ -1,3 +1,9 @@
+## [1.256.2](https://github.com/aziontech/azion-webkit/compare/v1.256.1...v1.256.2) (2025-11-04)
+
+### Bug Fixes
+
+* improve button styling and layout in two-column section ([4489709](https://github.com/aziontech/azion-webkit/commit/44897099a03c5f353e010569553355893a0a3a88))
+
 ## [1.256.1](https://github.com/aziontech/azion-webkit/compare/v1.256.0...v1.256.1) (2025-11-04)
 
 ### Bug Fixes
