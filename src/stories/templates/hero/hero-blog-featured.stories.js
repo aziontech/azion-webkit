@@ -315,7 +315,7 @@ const MOCK = {
     ]
   },
   featuredPost: {
-    title: 'Azion Edge SQL: enabling access and analysis of structured data at the edge',
+    title: 'Azion Edge SQL: enabling access and analysis of structured data',
     description:
       'Explore how Azion Edge SQL enhances database operations with edge computing for high scalability, low latency, and cost-effectiveness.',
     link: '/en/blog/azion-edge-sql/',
