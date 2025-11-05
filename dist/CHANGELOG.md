@@ -1,3 +1,14 @@
+## [1.260.0](https://github.com/aziontech/azion-webkit/compare/v1.259.0...v1.260.0) (2025-11-05)
+
+### Features
+
+* section form ([7fcc5a9](https://github.com/aziontech/azion-webkit/commit/7fcc5a9663d3d288c839e65851cddc3066e6e796))
+
+### Bug Fixes
+
+* button hover color, section cta hover and spacing ([b80b491](https://github.com/aziontech/azion-webkit/commit/b80b49126222a2098c2501009cdb2ca16cec0398))
+* call to action shared ([b3cfafd](https://github.com/aziontech/azion-webkit/commit/b3cfafdc764f96d192ea62e1cfb0de892fd26367))
+
 ## [1.259.0](https://github.com/aziontech/azion-webkit/compare/v1.258.1...v1.259.0) (2025-11-05)
 
 ### Features
