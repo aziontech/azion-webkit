@@ -19,7 +19,7 @@ export default {
   decorators: [
     (story) => ({
       components: { story },
-      template: '<div class="bg-neutral-950 min-h-screen py-12"><story /></div>'
+      template: '<div class="bg-[#0a0a0a] min-h-screen py-12"><story /></div>'
     })
   ],
   argTypes: {
@@ -93,7 +93,7 @@ export const OneCol = {
   args: {
     type: '1-col',
     id: 'section-cta-single',
-    backgroundStyle: 'square',
+    backgroundStyle: 'dots',
     cta: {
       overline: 'Enterprise Solutions',
       title: 'Scale Your Infrastructure',
@@ -105,22 +105,6 @@ export const OneCol = {
   }
 }
 
-export const OneColShort = {
-  args: {
-    type: '1-col-short',
-    id: 'section-cta-compact',
-    backgroundStyle: 'dots',
-    cta: {
-      overline: 'Quick Start',
-      title: 'Ready to Begin?',
-      descriptionRawMarkdown:
-        'Deploy your first application in **under 5 minutes** with our intuitive platform.',
-      linkLabel: 'Get Started',
-      link: 'https://console.azion.com'
-    }
-  }
-}
-
 export const OneColShortOrange = {
   args: {
     type: '1-col-short-orange',
@@ -128,10 +112,10 @@ export const OneColShortOrange = {
     backgroundStyle: 'dots',
     cta: {
       overline: 'Limited Time Offer',
-      title: 'Free for 30 days',
+      title: 'Construa suas aplicacoes de forma inteligente',
       descriptionRawMarkdown:
         'Try our **Enterprise plan** free for 30 days. No credit card required.',
-      linkLabel: 'Start Free Trial',
+      linkLabel: 'Free Account',
       link: 'https://console.azion.com/signup?promo=30days'
     }
   }
