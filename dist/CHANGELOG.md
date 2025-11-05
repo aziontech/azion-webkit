@@ -1,3 +1,9 @@
+## [1.259.0](https://github.com/aziontech/azion-webkit/compare/v1.258.1...v1.259.0) (2025-11-05)
+
+### Features
+
+* improve logos section layout when title is absent ([0d9fbf9](https://github.com/aziontech/azion-webkit/commit/0d9fbf9c2ff71d475caf2b2771210aa34b35c216))
+
 ## [1.258.1](https://github.com/aziontech/azion-webkit/compare/v1.258.0...v1.258.1) (2025-11-05)
 
 ### Bug Fixes
