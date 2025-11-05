@@ -1,3 +1,9 @@
+## [1.258.1](https://github.com/aziontech/azion-webkit/compare/v1.258.0...v1.258.1) (2025-11-05)
+
+### Bug Fixes
+
+* adjust font ([1bc3d06](https://github.com/aziontech/azion-webkit/commit/1bc3d06a060642c2d4630638525b1731afe3f87e))
+
 ## [1.258.0](https://github.com/aziontech/azion-webkit/compare/v1.257.1...v1.258.0) (2025-11-04)
 
 ### Features
