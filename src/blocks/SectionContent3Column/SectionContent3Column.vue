@@ -17,7 +17,7 @@
       >
         <div class="flex flex-col h-full">
           <div class="border-b border-neutral-900 p-6 md:p-12 flex flex-col gap-5 h-full">
-            <h4 class="text-sora text-2xl text-neutral-200">{{ item.title }}</h4>
+            <h4 class="font-sora text-2xl text-neutral-200">{{ item.title }}</h4>
             <p
               class="text-neutral-400 font-sora text-sm"
               v-html="item.description"
