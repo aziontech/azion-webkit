@@ -1,3 +1,9 @@
+## [1.260.1](https://github.com/aziontech/azion-webkit/compare/v1.260.0...v1.260.1) (2025-11-05)
+
+### Bug Fixes
+
+* adjust docs header ([d87c83e](https://github.com/aziontech/azion-webkit/commit/d87c83ecef0d990467e4375e92114b32df17eb93))
+
 ## [1.260.0](https://github.com/aziontech/azion-webkit/compare/v1.259.0...v1.260.0) (2025-11-05)
 
 ### Features
