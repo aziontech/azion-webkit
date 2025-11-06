@@ -13,7 +13,7 @@
         <h2 class="text-2xl text-neutral-200 font-sora">{{ content.title }}</h2>
         <p
           class="text-neutral-400 font-sora"
-          v-html="parseMarkdown(content.descriptionRawMarkdown)"
+          v-html="parsedContentMarkdown"
         ></p>
       </div>
       <Button
@@ -45,7 +45,7 @@
             :class="[
               type.includes('short-orange') ? 'text-neutral-900' : 'text-neutral-200',
             ]"
-            v-html="parseMarkdown(cta.descriptionRawMarkdown)"
+            v-html="parsedCtaMarkdown"
           ></p>
         </div>
       </div>
@@ -156,5 +156,13 @@
         background-repeat: no-repeat, repeat, repeat;
       `
     }
+  })
+
+  const parsedContentMarkdown = computed(() => {
+    return props.content?.descriptionRawMarkdown ? parseMarkdown(props.content.descriptionRawMarkdown) : ''
+  })
+
+  const parsedCtaMarkdown = computed(() => {
+    return props.cta?.descriptionRawMarkdown ? parseMarkdown(props.cta.descriptionRawMarkdown) : ''
   })
 </script>
