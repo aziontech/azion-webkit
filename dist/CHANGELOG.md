@@ -1,3 +1,9 @@
+## [1.260.2](https://github.com/aziontech/azion-webkit/compare/v1.260.1...v1.260.2) (2025-11-06)
+
+### Bug Fixes
+
+* hotfix to optimize markdown parsing with computed properties ([2d048cc](https://github.com/aziontech/azion-webkit/commit/2d048ccc73cbf72e54740f06012a3309cacb1ac7))
+
 ## [1.260.1](https://github.com/aziontech/azion-webkit/compare/v1.260.0...v1.260.1) (2025-11-05)
 
 ### Bug Fixes
