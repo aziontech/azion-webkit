@@ -145,7 +145,7 @@
           size="small"
           class="whitespace-nowrap"
           :title="button.urlTitle"
-          customClass="px-2 py-3 text-xs"
+          customClass="px-2 py-3 pb-6 text-xs"
           :label="button.label"
           :icon="button.icon"
         />
