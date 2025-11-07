@@ -90,9 +90,9 @@
   const buttonClasses = computed(() => {
     return {
       primary: {
-        dark: 'h-fit group border-none active:bg-orange-700 bg-neutral-900 text-neutral-100 dark:text-neutral-900 duration-300 transition px-5 py-2 md:px-6 md:py-4 rounded-md hover:bg-orange-500 dark:hover:bg-orange-500 hover:text-white dark:hover:text-white hover:text-neutral-900',
+        dark: 'h-fit group border-none active:bg-orange-700 bg-neutral-900 text-neutral-100 dark:text-neutral-900 duration-300 transition px-5 py-4 md:px-6 md:py-4 rounded-md hover:bg-orange-500 dark:hover:bg-orange-500 hover:text-white dark:hover:text-white hover:text-neutral-900',
         light:
-          'h-fit group border-none active:bg-orange-700 active:bg-orange-600 bg-neutral-100 text-neutral-900 duration-300 transition px-5 py-2 md:px-6 md:py-4 rounded-md hover:bg-orange-500 hover:bg-orange-500 hover:text-white hover:text-white'
+          'h-fit group border-none active:bg-orange-700 active:bg-orange-600 bg-neutral-100 text-neutral-900 duration-300 transition px-5 py-4 md:px-6 md:py-4 rounded-md hover:bg-orange-500 hover:bg-orange-500 hover:text-neutral-900'
       },
       secondary: {
         dark: 'h-fit group bg-neutral-950 text-neutral-100 duration-300 transition rounded-md active:bg-neutral-900 border-1 border-[#353040] hover:bg-neutral-900 hover:text-orange-500',
