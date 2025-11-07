@@ -1,3 +1,14 @@
+## [1.262.0](https://github.com/aziontech/azion-webkit/compare/v1.261.1...v1.262.0) (2025-11-07)
+
+### Features
+
+* improve SectionCallToAction click behavior and typography ([9b64213](https://github.com/aziontech/azion-webkit/commit/9b642134a4903773d0abb7e2d3a78c064684c1fa))
+
+### Bug Fixes
+
+* improve component layouts and visual consistency ([fd42ec6](https://github.com/aziontech/azion-webkit/commit/fd42ec6b64e53b7553153cb31792cfb1285f3f09))
+* update button hover styles and add pt-10 spacing ([33a5031](https://github.com/aziontech/azion-webkit/commit/33a5031ad8a08617f4f6469d933cf7e92271db75))
+
 ## [1.261.1](https://github.com/aziontech/azion-webkit/compare/v1.261.0...v1.261.1) (2025-11-07)
 
 ### Bug Fixes
