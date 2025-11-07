@@ -1,3 +1,9 @@
+## [1.263.4](https://github.com/aziontech/azion-webkit/compare/v1.263.3...v1.263.4) (2025-11-07)
+
+### Bug Fixes
+
+* increase bottom padding for mobile menu buttons ([f16fae3](https://github.com/aziontech/azion-webkit/commit/f16fae37ba13256897bb0a0f543b4061637a2bf3))
+
 ## [1.263.3](https://github.com/aziontech/azion-webkit/compare/v1.263.2...v1.263.3) (2025-11-07)
 
 ### Bug Fixes
