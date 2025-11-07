@@ -1,3 +1,9 @@
+## [1.263.0](https://github.com/aziontech/azion-webkit/compare/v1.262.0...v1.263.0) (2025-11-07)
+
+### Features
+
+* adjust spacing and alignment in quote and carousel components ([cbec439](https://github.com/aziontech/azion-webkit/commit/cbec43956ca7c2dce7a550838b4fc5084def0684))
+
 ## [1.262.0](https://github.com/aziontech/azion-webkit/compare/v1.261.1...v1.262.0) (2025-11-07)
 
 ### Features
