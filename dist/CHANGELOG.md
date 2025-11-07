@@ -1,3 +1,9 @@
+## [1.261.0](https://github.com/aziontech/azion-webkit/compare/v1.260.4...v1.261.0) (2025-11-07)
+
+### Features
+
+* standardize heading sizes across section components ([c4877bb](https://github.com/aziontech/azion-webkit/commit/c4877bbb9d477ff8d319cc5a4f549e61a130485a))
+
 ## [1.260.4](https://github.com/aziontech/azion-webkit/compare/v1.260.3...v1.260.4) (2025-11-07)
 
 ### Bug Fixes
