@@ -1,3 +1,12 @@
+## [1.263.3](https://github.com/aziontech/azion-webkit/compare/v1.263.2...v1.263.3) (2025-11-07)
+
+### Bug Fixes
+
+* bold link titles ([239821a](https://github.com/aziontech/azion-webkit/commit/239821a79e0dd00929d17c29301f45efb450969a))
+* markdown parser buttons margins, link hover and justify center section image content 2 column ([d916e09](https://github.com/aziontech/azion-webkit/commit/d916e09aec2b08bedb2c8e535e0089c3c344649a))
+* section title limited to 1024px ([8fe5a61](https://github.com/aziontech/azion-webkit/commit/8fe5a6116859b9f0a227efdae41c70e1b26ebdd2))
+* section title margins and max-w ([3dbf607](https://github.com/aziontech/azion-webkit/commit/3dbf607b9b6af99c6fb45001611736ffc79976ef))
+
 ## [1.263.2](https://github.com/aziontech/azion-webkit/compare/v1.263.1...v1.263.2) (2025-11-07)
 
 ### Bug Fixes
