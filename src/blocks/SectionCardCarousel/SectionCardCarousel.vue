@@ -16,6 +16,7 @@
           ref="prevButton"
           class="swiper-button-prev-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800 hover:border-orange-500 text-neutral-400 hover:text-orange-500 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
           aria-label="Previous slide"
+          :disabled="disabledNavigation"
         >
           <i class="pi pi-chevron-left text-[.5rem]" />
         </button>
@@ -23,6 +24,7 @@
           ref="nextButton"
           class="swiper-button-next-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800 hover:border-orange-500 text-neutral-400 hover:text-orange-500 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
           aria-label="Next slide"
+          :disabled="disabledNavigation"
         >
           <i class="pi pi-chevron-right text-[.5rem]" />
         </button>
@@ -41,6 +43,7 @@
       }"
       @swiper="onSwiper"
       @slide-change="onSlideChange"
+      @breakpoint="onBreakpoint"
       class="w-full"
     >
       <swiper-slide
@@ -48,6 +51,11 @@
         :key="index"
         class="h-auto"
       >
+        <a
+          :href="card.link"
+          target="_blank"
+          class="group cursor-pointer"
+        >
         <div
           class="p-1 border hover:bg-neutral-900 border-neutral-900 relative h-full before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0"
         >
@@ -79,16 +87,15 @@
 
             <Button
               v-if="card.link"
-              :href="card.link"
               :label="card.linkLabel || 'Learn more'"
-              type="tertiary"
+              type="linkSecondary"
               size="small"
               theme="dark"
-              icon="pi pi-chevron-right"
-              customClass="px-0 py-0"
+              customClass="w-fit"
             />
           </div>
         </div>
+        </a>
       </swiper-slide>
     </swiper>
   </section>
@@ -97,7 +104,7 @@
 <script setup lang="ts">
   import { Swiper, SwiperSlide } from 'swiper/vue'
   import { Navigation } from 'swiper/modules'
-  import { ref } from 'vue'
+  import { ref, computed } from 'vue'
   import Button from '../../components/Button/Button.vue'
   import 'swiper/css'
   import 'swiper/css/navigation'
@@ -130,6 +137,7 @@
   const swiperInstance = ref(null)
   const prevButton = ref(null)
   const nextButton = ref(null)
+  const slidesPerView = ref(0)
 
   const breakpoints = {
     320: {
@@ -157,6 +165,14 @@
   const onSwiper = (swiper: any) => {
     swiperInstance.value = swiper
   }
+
+  const onBreakpoint = (_: any, breakpointParams: any) => {
+    slidesPerView.value = breakpointParams.slidesPerView
+  }
+
+  const disabledNavigation = computed(() => {
+    return props.cards.length <= slidesPerView.value
+  })
 
   const onSlideChange = (swiper: any) => {
     emit('slide-change', { index: swiper.activeIndex })

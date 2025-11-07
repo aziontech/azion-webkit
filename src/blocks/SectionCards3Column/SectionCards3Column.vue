@@ -20,7 +20,7 @@
       >
         <div
           :class="[
-            'h-full w-full p-6 md:p-12 flex flex-col gap-2',
+            'h-full w-full p-6 flex flex-col gap-2',
             `before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:left-0`,
             `after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:right-0`,
             (index + 1) % 3 === 0
@@ -28,18 +28,21 @@
               : 'before:hidden md:before:block after:hidden'
           ]"
         >
-          <div class="flex items-center gap-2">
+          <div class="flex gap-2">
             <span
               v-if="card.icon"
               :class="card.icon"
-              class="text-orange-500 text-xl flex-shrink-0"
+              class="text-orange-500 text-lg md:text-xl flex-shrink-0"
             ></span>
-            <h3 class="display-5-mobile md:display-5 text-white font-sora">{{ card.title }}</h3>
+            <div class="flex flex-col gap-2">
+              <h3 class="display-5-mobile md:display-5 text-white font-sora">{{ card.title }}</h3>
+              <div
+                class="body-2 text-neutral-400 leading-relaxed font-sora"
+                v-html="parseMarkdown(card.descriptionRawMarkdown)"
+              />
+            </div>
           </div>
-          <div
-            class="body-2 text-neutral-400 leading-relaxed font-sora"
-            v-html="parseMarkdown(card.descriptionRawMarkdown)"
-          />
+
         </div>
       </div>
     </div>

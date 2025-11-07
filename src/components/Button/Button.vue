@@ -3,6 +3,7 @@
     <a
       :href="href"
       class="flex gap-3 w-fit cursor-pointer group"
+      :class="underlineHover[type][theme]"
     >
       <Button
         :label="label"
@@ -87,6 +88,22 @@
     }
   })
 
+  const underlineHover = computed(() => {
+    const underlineBase =
+      "relative after:duration-150 hover:after:w-full group-hover:after:w-full after:left-0 after:w-0 after:h-[1px] after:transition-all after:content-[\'\'] after:absolute after:-bottom-[.1rem]"
+
+    return {
+      link: {
+        dark: `${underlineBase} after:bg-violet-300`,
+        light: `${underlineBase} after:bg-violet-600`
+      },
+      linkSecondary: {
+        dark: `${underlineBase} after:bg-neutral-200`,
+        light: `${underlineBase} after:bg-neutral-200`
+      }
+    }
+  })
+
   const buttonClasses = computed(() => {
     return {
       primary: {
@@ -146,16 +163,13 @@
 
     const fontSize = props.size === 'small' ? 'text-xs' : ''
 
-    const underlineBase =
-      "relative after:content-[''] after:absolute after:-bottom-[.1rem] after:left-0 after:w-0 after:h-[1px] after:transition-all after:duration-150 group-hover:after:w-full"
-
     return {
       primary: `font-proto-mono ${leading} whitespace-nowrap`,
       secondary: `font-proto-mono ${leading} whitespace-nowrap`,
       tertiary: `font-proto-mono ${leading} whitespace-nowrap`,
-      link: `font-proto-mono ${leading} ${fontSize} ${underlineBase} after:bg-violet-600 whitespace-nowrap`,
-      linkSecondary: `font-proto-mono ${leading} ${fontSize} ${underlineBase} after:bg-neutral-900 whitespace-nowrap`,
-      linkExternal: `font-proto-mono ${leading} ${fontSize} ${underlineBase} after:bg-violet-300 whitespace-nowrap`
+      link: `font-proto-mono ${leading} ${fontSize} after:bg-violet-600 whitespace-nowrap`,
+      linkSecondary: `font-proto-mono ${leading} ${fontSize} after:bg-neutral-900 whitespace-nowrap`,
+      linkExternal: `font-proto-mono ${leading} ${fontSize} after:bg-violet-300 whitespace-nowrap`
     }[props.type]
   })
 </script>
