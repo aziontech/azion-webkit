@@ -1,3 +1,9 @@
+## [1.260.4](https://github.com/aziontech/azion-webkit/compare/v1.260.3...v1.260.4) (2025-11-07)
+
+### Bug Fixes
+
+* correct hover text color for primary dark button ([f45cdb0](https://github.com/aziontech/azion-webkit/commit/f45cdb069e1347c03b33beedf03753eaa7cde9e6))
+
 ## [1.260.3](https://github.com/aziontech/azion-webkit/compare/v1.260.2...v1.260.3) (2025-11-07)
 
 ### Bug Fixes
