@@ -1,3 +1,9 @@
+## [1.263.1](https://github.com/aziontech/azion-webkit/compare/v1.263.0...v1.263.1) (2025-11-07)
+
+### Bug Fixes
+
+* improve mobile menu bottom buttons styling ([4e3a24d](https://github.com/aziontech/azion-webkit/commit/4e3a24db30a5cb3b8b8d04d59c13e5250b87117a))
+
 ## [1.263.0](https://github.com/aziontech/azion-webkit/compare/v1.262.0...v1.263.0) (2025-11-07)
 
 ### Features
