@@ -12,7 +12,7 @@
         <img
           :src="logo"
           :alt="logoAlt || 'Company logo'"
-          class="h-5 md:h-6 w-auto object-contain"
+          class="h-7 md:h-10 w-auto object-contain"
           :class="logoClass"
         />
       </div>
@@ -33,7 +33,7 @@
         </p>
         <p
           v-if="role"
-          class="font-proto-mono text-sm text-orange-500"
+          class="font-proto-mono text-sm text-white"
         >
           {{ role }}
         </p>

@@ -5,7 +5,7 @@
   >
     <div
       v-if="cards && cards.length > 0"
-      class="grid grid-cols-1 lg:grid-cols-3 p-6 md:p-12"
+      class="grid grid-cols-1 lg:grid-cols-3 p-0 md:p-12"
     >
       <div
         v-for="(card, index) in cards"
@@ -20,7 +20,7 @@
       >
         <div
           :class="[
-            'h-full w-full p-6 flex flex-col gap-2',
+            'h-full w-full p-6 md:p-12 flex flex-col gap-2',
             `before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:left-0`,
             `after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:right-0`,
             (index + 1) % 3 === 0
@@ -30,6 +30,7 @@
         >
           <div class="flex items-center gap-2">
             <span
+              v-if="card.icon"
               :class="card.icon"
               class="text-orange-500 text-xl flex-shrink-0"
             ></span>
