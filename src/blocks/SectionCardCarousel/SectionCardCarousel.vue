@@ -14,7 +14,8 @@
       <div class="flex items-center gap-3">
         <button
           ref="prevButton"
-          class="swiper-button-prev-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800 hover:border-orange-500 text-neutral-400 hover:text-orange-500 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          class="swiper-button-prev-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800  text-neutral-400 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          :class="disabledNavigation ? '' : 'hover:border-orange-500 hover:text-orange-500'"
           aria-label="Previous slide"
           :disabled="disabledNavigation"
         >
@@ -22,7 +23,8 @@
         </button>
         <button
           ref="nextButton"
-          class="swiper-button-next-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800 hover:border-orange-500 text-neutral-400 hover:text-orange-500 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          class="swiper-button-next-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800 text-neutral-400 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          :class="disabledNavigation ? '' : 'hover:border-orange-500 hover:text-orange-500'"
           aria-label="Next slide"
           :disabled="disabledNavigation"
         >

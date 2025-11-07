@@ -13,7 +13,7 @@
         <h2 class="text-2xl text-neutral-200 font-sora">{{ content.title }}</h2>
         <p
           class="text-neutral-400 font-sora"
-          v-html="parseMarkdown(content.descriptionRawMarkdown)"
+          v-html="parsedContentMarkdown"
         ></p>
       </div>
       <Button
@@ -24,11 +24,8 @@
         size="small"
       />
     </div>
-    <a
-      :href="cta.link"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="group/cta relative flex flex-col justify-between rounded-md p-6 md:p-12 overflow-hidden"
+    <div
+      class="relative flex flex-col justify-between rounded-md p-6 md:p-12 overflow-hidden"
       :class="[ctaColor[type]]"
       :style="backgroundImageStyle"
     >
@@ -45,14 +42,14 @@
             :class="[
               type.includes('short-orange') ? 'text-neutral-900' : 'text-neutral-200',
             ]"
-            v-html="parseMarkdown(cta.descriptionRawMarkdown)"
+            v-html="parsedCtaMarkdown"
           ></p>
         </div>
       </div>
       <div class="flex flex-col gap-3 lg:flex-row justify-between lg:items-end">
         <div class="lg:max-w-[60%] w-full">
           <h2
-            class="font-sora font-bold gap-4 text-4xl md:text-5xl display-1"
+            class="font-sora font-bold gap-4 display-2-mobile md:display-2"
             :class="type.includes('short-orange') ? 'text-neutral-900' : 'text-orange-500'"
           >
             {{ cta.title }}
@@ -62,6 +59,7 @@
           <Button
             v-if="cta.linkLabel"
             :label="cta.linkLabel"
+            :href="cta.link"
             :theme="type.includes('short-orange') ? 'dark' : 'light'"
             icon="pi pi-angle-right"
             type="primary"
@@ -73,7 +71,7 @@
           />
         </div>
       </div>
-    </a>
+    </div>
   </section>
 </template>
 
@@ -156,5 +154,13 @@
         background-repeat: no-repeat, repeat, repeat;
       `
     }
+  })
+
+  const parsedContentMarkdown = computed(() => {
+    return props.content?.descriptionRawMarkdown ? parseMarkdown(props.content.descriptionRawMarkdown) : ''
+  })
+
+  const parsedCtaMarkdown = computed(() => {
+    return props.cta?.descriptionRawMarkdown ? parseMarkdown(props.cta.descriptionRawMarkdown) : ''
   })
 </script>

@@ -49,7 +49,7 @@
       <div class="flex flex-col gap-3 lg:flex-row justify-between lg:items-end">
         <div class="lg:max-w-[60%] w-full">
           <h2
-            class="font-sora font-bold gap-4 md:text-5xl display-2-mobile md:display-2"
+            class="font-sora font-bold gap-4 display-2-mobile md:display-2"
             :class="type.includes('short-orange') ? 'text-neutral-900' : 'text-orange-500'"
           >
             {{ cta.title }}
