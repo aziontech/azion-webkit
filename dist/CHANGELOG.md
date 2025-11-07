@@ -1,3 +1,9 @@
+## [1.260.3](https://github.com/aziontech/azion-webkit/compare/v1.260.2...v1.260.3) (2025-11-07)
+
+### Bug Fixes
+
+* correct button hover and active state colors ([621957d](https://github.com/aziontech/azion-webkit/commit/621957d899aa95e91f528167a2d7994b8ac2a1ae))
+
 ## [1.260.2](https://github.com/aziontech/azion-webkit/compare/v1.260.1...v1.260.2) (2025-11-06)
 
 ### Bug Fixes
