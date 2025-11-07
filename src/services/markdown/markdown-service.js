@@ -58,7 +58,7 @@ export const parseMarkdown = (markdown) => {
 
   text = text.replace(
     /<Button\s+href="([^"]+)"[^>]*type="primary"[^>]*>([^<]+)<\/Button>/gi,
-    '<a href="$1" class="group flex w-fit items-center font-proto-mono uppercase border-none active:bg-orange-600 bg-neutral-100 text-neutral-900 duration-300 transition px-5 md:px-6  rounded-md hover:bg-orange-600 hover:text-white h-[42px] min-h-[42px] py-3 font-proto-mono text-sm leading-[2rem] whitespace-nowrap  cursor-pointer">$2</a>'
+    '<a href="$1" class="group flex w-fit items-center font-proto-mono uppercase border-none active:bg-orange-700 bg-neutral-100 text-neutral-900 duration-300 transition px-5 md:px-6  rounded-md hover:bg-orange-500 hover:text-neutral-900 h-[42px] min-h-[42px] py-3 font-proto-mono text-sm leading-[2rem] whitespace-nowrap  cursor-pointer">$2</a>'
   )
 
   text = text.replace(
