@@ -1,3 +1,10 @@
+## [1.263.7](https://github.com/aziontech/azion-webkit/compare/v1.263.6...v1.263.7) (2025-11-07)
+
+### Bug Fixes
+
+* section 3 cards content diagram ([9f2a4ae](https://github.com/aziontech/azion-webkit/commit/9f2a4aef81c3f473b8c5d7606a5b1975c0b7b609))
+* section card carousel ([943a212](https://github.com/aziontech/azion-webkit/commit/943a2121e9a7f042af79cf83dd626e113260af6a))
+
 ## [1.263.6](https://github.com/aziontech/azion-webkit/compare/v1.263.5...v1.263.6) (2025-11-07)
 
 ### Bug Fixes
