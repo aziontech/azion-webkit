@@ -1,3 +1,9 @@
+## [1.261.1](https://github.com/aziontech/azion-webkit/compare/v1.261.0...v1.261.1) (2025-11-07)
+
+### Bug Fixes
+
+* update title typography from display-2 to display-3 ([a4ee2f3](https://github.com/aziontech/azion-webkit/commit/a4ee2f36989d901eb7ede6521f05b4128a169ab3))
+
 ## [1.261.0](https://github.com/aziontech/azion-webkit/compare/v1.260.4...v1.261.0) (2025-11-07)
 
 ### Features
