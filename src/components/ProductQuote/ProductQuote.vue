@@ -23,7 +23,7 @@
 
       <div
         v-if="author || role"
-        class="flex gap-8 w-full justify-end text-neutral-300"
+        class="flex gap-8 w-full justify-start text-neutral-300"
       >
         <p
           v-if="author"
