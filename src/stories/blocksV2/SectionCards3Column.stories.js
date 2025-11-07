@@ -24,20 +24,20 @@ export const Default = {
     cards: [
       {
         icon: 'pi pi-folder',
-        title: 'Bullet benefit',
-        description:
+        title: 'Bullet benefit Bullet benefit Bullet benefit',
+        descriptionRawMarkdown:
           'Melhore a **performance**, segurança e escalabilidade dos seus sites e aplicações web com *edge computing*.'
       },
       {
         icon: 'pi pi-folder',
         title: 'Bullet benefit',
-        description:
+        descriptionRawMarkdown:
           'Deploy aplicações com **latência ultra-baixa** e [documentação completa](https://docs.azion.com) disponível.'
       },
       {
         icon: 'pi pi-folder',
         title: 'Bullet benefit',
-        description:
+        descriptionRawMarkdown:
           'Escale automaticamente com *infraestrutura global* e **monitoramento em tempo real**.'
       }
     ]
