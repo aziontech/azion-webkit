@@ -1,3 +1,9 @@
+## [1.263.6](https://github.com/aziontech/azion-webkit/compare/v1.263.5...v1.263.6) (2025-11-07)
+
+### Bug Fixes
+
+* update quote typography from display-3 to display-4 ([88cf239](https://github.com/aziontech/azion-webkit/commit/88cf23964f832179e076c3a4a2966e26662f6a3a))
+
 ## [1.263.5](https://github.com/aziontech/azion-webkit/compare/v1.263.4...v1.263.5) (2025-11-07)
 
 ### Bug Fixes
