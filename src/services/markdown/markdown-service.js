@@ -49,7 +49,7 @@ export const parseMarkdown = (markdown) => {
 
   text = text.replace(
     /\[([^\]]+)\]\(([^)]+)\)/g,
-    '<a class="font-sora underline transition-colors text-orange-500 hover:text-orange-600" href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+    '<a class="font-sora underline transition-colors text-neutral-200 hover:text-orange-600 cursor-pointer font-bold" href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
   )
 
   text = text.replace(/(<li.*?<\/li>)/gs, (match) => {
