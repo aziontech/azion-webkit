@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="`flex flex-col gap-3 p-6 md:p-12 ${bottomSpacing} ${align === 'default' ? 'text-left' : 'text-center'}`"
+    :class="`flex flex-col gap-3 p-6 md:p-12 max-w-xl xxxl:max-w-xxl mx-auto ${bottomSpacing} ${align === 'default' ? 'text-left' : 'text-center'}`"
   >
     <Overline v-if="overline"> {{ overline }} </Overline>
     <div
@@ -13,7 +13,7 @@
     >
       <component
         :is="titleTag"
-        class="display-2-mobile md:display-2 text-balance font-sora text-neutral-50 max-w-5xl"
+        class="display-2-mobile md:display-2 text-balance font-sora text-neutral-50"
         >{{ title }}</component
       >
       <p
