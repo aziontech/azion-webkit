@@ -1,3 +1,9 @@
+## [1.263.8](https://github.com/aziontech/azion-webkit/compare/v1.263.7...v1.263.8) (2025-11-07)
+
+### Bug Fixes
+
+* button type underline safety ([9d55a27](https://github.com/aziontech/azion-webkit/commit/9d55a2751f35e70b9f2a201a7a57cd01df9f9f65))
+
 ## [1.263.7](https://github.com/aziontech/azion-webkit/compare/v1.263.6...v1.263.7) (2025-11-07)
 
 ### Bug Fixes
