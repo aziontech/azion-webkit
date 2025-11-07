@@ -6,7 +6,7 @@
     >
       <div
         v-if="title || descriptionRawMarkdown"
-        class="flex flex-col md:sticky top-20 gap-5 shrink-0 w-full p-6 md:p-12 md:min-h-full"
+        class="flex flex-col justify-center md:sticky top-20 gap-5 shrink-0 w-full p-6 md:p-12 md:min-h-full"
         :class="textBlockClasses"
       >
         <h2

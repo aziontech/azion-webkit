@@ -59,13 +59,8 @@ const Template = (args) => ({
 export const Default = Template.bind({})
 Default.args = {
   title: 'Framework compatibility and development environment',
-  descriptionRawMarkdown: `A plataforma oferece suporte para **frameworks modernos** incluindo Next.js, Vue, React, Angular, Gatsby e Astro.
-
-Functions fornece observabilidade abrangente com *traces de execução* e métricas de performance para otimização.
-
-O sistema suporta execução WebAssembly, APIs Node.js e compatibilidade WinterTC para desenvolvimento flexível.
-
-[Saiba mais sobre nossa documentação](https://docs.azion.com)`,
+  descriptionRawMarkdown:
+    'Construa seu código em Typescript ou Javascript usando os frameworks mais comuns de mercado \\*\\*Next.js, Vue, React, Angular, Gatsby e Astro\\*\\*.\n\nCrie funções pequenas e independentes e comece a migrar das aplicações legadas.\n\n<Button href="https://www.azion.com/pt-br/documentacao/produtos/guias/build/aplicacao-browserless-functions/" type="link">Veja na prática</Button> <Button href="https://www.azion.com/pt-br/documentacao/produtos/guias/build/aplicacao-browserless-functions/" type="primary">Veja na prática</Button> <Button href="https://www.azion.com/pt-br/documentacao/produtos/guias/build/aplicacao-browserless-functions/" type="secondary">Veja na prática</Button>',
   image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop',
   alt: 'Development environment',
   height: 'default',
