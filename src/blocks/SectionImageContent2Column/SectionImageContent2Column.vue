@@ -11,7 +11,7 @@
       >
         <h2
           v-if="title"
-          class="display-2-mobile md:display-2 font-normal tracking-tight text-gray-200 w-full"
+          class="display-3-mobile md:display-3 font-normal tracking-tight text-gray-200 w-full"
         >
           {{ title }}
         </h2>

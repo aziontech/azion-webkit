@@ -13,7 +13,7 @@
     >
       <component
         :is="titleTag"
-        class="text-3xl text-balance font-sora text-neutral-50"
+        class="display-2-mobile md:display-2 text-balance font-sora text-neutral-50"
         >{{ title }}</component
       >
       <p
