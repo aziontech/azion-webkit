@@ -1,3 +1,17 @@
+## [1.264.0](https://github.com/aziontech/azion-webkit/compare/v1.263.8...v1.264.0) (2025-11-10)
+
+### Features
+
+* new section cta diagram ([cd41f4b](https://github.com/aziontech/azion-webkit/commit/cd41f4bcfcf96c1b246fce5e6fe1d350b29e2e75))
+
+### Bug Fixes
+
+* carousel disable hover, CallToAction text size ([11a10d3](https://github.com/aziontech/azion-webkit/commit/11a10d33cbe6f7ac95a1fb62b0ca1e74b22cbbae))
+* section card carousel margin bottom ([f3f3308](https://github.com/aziontech/azion-webkit/commit/f3f33082695b22e82971d41268eb44e7ac7f13ef))
+* section cards grid margin ([97694e7](https://github.com/aziontech/azion-webkit/commit/97694e72ea99e3a09dbd023a06fb60e83a343cff))
+* section logos title/btn alignment ([6c12258](https://github.com/aziontech/azion-webkit/commit/6c12258648a32e228a7705c71ca9d414dd8f0535))
+* update sectionCallToActionShared ([3f9f99c](https://github.com/aziontech/azion-webkit/commit/3f9f99c02e0e209267c5dfc6b3d5fd60c27a0c00))
+
 ## [1.263.8](https://github.com/aziontech/azion-webkit/compare/v1.263.7...v1.263.8) (2025-11-07)
 
 ### Bug Fixes
