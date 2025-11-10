@@ -16,7 +16,26 @@ export default {
       components: { story },
       template: '<div class="bg-neutral-950"><story /></div>'
     })
-  ]
+  ],
+  argTypes: {
+    title: {
+      control: { type: 'text' },
+      description: 'Section title displayed above the carousel'
+    },
+    cards: {
+      control: { type: 'object' },
+      description: 'Array of card objects to display in the carousel'
+    },
+    id: {
+      control: { type: 'text' },
+      description: 'Optional ID attribute for the section element'
+    },
+    bottomSpacing: {
+      control: { type: 'select' },
+      options: ['mb-0', 'mb-6', 'mb-12', 'mb-24', 'mb-48'],
+      description: 'Bottom margin spacing for the section'
+    }
+  }
 }
 
 export const Default = {

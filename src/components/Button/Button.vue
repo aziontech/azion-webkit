@@ -4,6 +4,7 @@
       :href="href"
       class="flex gap-3 w-fit cursor-pointer group"
       :class="type.includes('link') ? underlineHover[type][theme] : ''"
+      :target="target"
     >
       <Button
         :label="label"
@@ -25,10 +26,10 @@
           width="10"
           height="10"
           :class="[
-            'group-hover:translate-x-[.1rem] -translate-x-[.1rem]  transition-transform relative top-1/2 -translate-y-1/2',
-            type === 'linkExternal'
-              ? 'rotate-0 group-hover:translate-y-0 translate-y-[.1rem]'
-              : 'rotate-45'
+            'group-hover:translate-x-[.1rem] -translate-x-[.1rem]  transition-transform relative ',
+            type === 'linkExternal' || target === '_blank'
+              ? 'group-hover:translate-y-0 translate-y-[50%] top-[30%]'
+              : 'rotate-45 -translate-y-1/2 top-1/2'
           ]"
           viewBox="0 0 10 10"
           fill="none"
@@ -85,6 +86,11 @@
     customClass: {
       type: String,
       default: 'px-3 py-3'
+    },
+    target: {
+      type: String,
+      default: '_self',
+      options: ['_blank', '_self']
     }
   })
 
@@ -100,6 +106,10 @@
       linkSecondary: {
         dark: `${underlineBase} after:bg-neutral-200`,
         light: `${underlineBase} after:bg-neutral-200`
+      },
+      linkExternal: {
+        dark: `${underlineBase} after:bg-violet-300`,
+        light: `${underlineBase} after:bg-violet-600`
       }
     }
   })

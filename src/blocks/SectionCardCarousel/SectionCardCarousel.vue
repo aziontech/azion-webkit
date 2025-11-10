@@ -55,7 +55,7 @@
       >
         <a
           :href="card.link"
-          target="_blank"
+          :target="card.target ?? '_blank'"
           class="group cursor-pointer"
         >
         <div
@@ -90,6 +90,7 @@
             <Button
               v-if="card.link"
               :label="card.linkLabel || 'Learn more'"
+              :target="card.target ?? '_blank'"
               type="linkSecondary"
               size="small"
               theme="dark"
@@ -119,6 +120,7 @@
     descriptionRawMarkdown: string
     link?: string
     linkLabel?: string
+    target?: '_blank' | '_self'
   }
 
   interface SectionCardCarouselProps {
