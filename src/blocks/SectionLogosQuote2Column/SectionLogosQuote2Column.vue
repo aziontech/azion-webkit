@@ -3,7 +3,7 @@
     :id="id"
     :class="`text-white relative max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12 ${bottomSpacing}`"
   >
-    <div :class="`flex flex-col md:flex-row gap-4 md:gap-0 ${title ? 'justify-between' : 'justify-end'} mb-6 md:mb-8`">
+    <div :class="`flex gap-4 md:gap-0 ${title ? 'justify-between flex-col md:flex-row' : 'justify-end flex-row'} mb-6 md:mb-8`">
       <h2
         v-if="title"
         class="display-3-mobile md:display-3 font-normal tracking-tight text-gray-200 w-full"

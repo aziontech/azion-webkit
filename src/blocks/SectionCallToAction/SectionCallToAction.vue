@@ -25,36 +25,33 @@
       />
     </div>
     <div
-      class="relative flex flex-col justify-between rounded-md p-6 md:p-12 overflow-hidden"
-      :class="[ctaColor[type]]"
+      class="relative flex flex-col md:flex-row justify-between rounded-md p-6 md:p-12 overflow-hidden gap-2 md:gap-12"
+      :class="[ctaColor[type], type.includes('short') ? 'pb-2 md:pb-8' : '']"
       :style="backgroundImageStyle"
     >
       <div
-        class="flex gap-3"
-        :class="type.includes('short') ? 'flex flex-col lg:flex-row justify-between' : 'flex-col'"
+        class="flex"
+        :class="type.includes('short') ? 'flex flex-col-reverse justify-between gap-20' : 'flex-col gap-60'"
       >
-        <Overline :color="type.includes('short-orange') ? 'black' : 'primary'">
-          {{ cta.overline }}
-        </Overline>
-        <div class="lg:max-w-[40%] w-full" :class="!type.includes('short') ? 'text-start' : 'lg:text-end'">
+        <div class="flex flex-col gap-3">
+          <Overline v-if="cta.overline && !type.includes('short')" :color="type.includes('short-orange') ? 'black' : 'primary'">
+            {{ cta.overline }}
+          </Overline>
           <p
-            class="text-balance font-sora text-xl"
-            :class="[
-              type.includes('short-orange') ? 'text-neutral-900' : 'text-neutral-200',
-            ]"
-            v-html="parsedCtaMarkdown"
-          ></p>
+              class="font-sora text-xl"
+              :class="[type.includes('short-orange') ? 'text-white' : 'text-neutral-200']"
+              v-html="parsedCtaMarkdown"
+            >
+          </p>
         </div>
+        <h2
+          class="font-sora font-bold gap-4 display-2-mobile md:display-2"
+          :class="type.includes('short-orange') ? 'text-neutral-900' : 'text-orange-500'"
+        >
+          {{ cta.title }}
+        </h2>
       </div>
-      <div class="flex flex-col gap-3 lg:flex-row justify-between lg:items-end">
-        <div class="lg:max-w-[60%] w-full">
-          <h2
-            class="font-sora font-bold gap-4 md:text-5xl display-2-mobile md:display-2"
-            :class="type.includes('short-orange') ? 'text-neutral-900' : 'text-orange-500'"
-          >
-            {{ cta.title }}
-          </h2>
-        </div>
+      <div class="flex mb-4 items-end" :class="type.includes('short') ? 'mb-4' : 'mb-0'">
         <div class="md:w-fit w-full">
           <Button
             v-if="cta.linkLabel"
@@ -62,12 +59,9 @@
             :href="cta.link"
             :theme="type.includes('short-orange') ? 'dark' : 'light'"
             icon="pi pi-angle-right"
-            type="primary"
+            :type="type.includes('short-orange') ? 'secondary' : 'primary'"
             size="small"
             class="w-full"
-            :custom-class="
-              type.includes('orange') ? buttonHoverColor.secondary : buttonHoverColor.primary
-            "
           />
         </div>
       </div>
@@ -101,10 +95,6 @@
     backgroundStyle: 'dots'
   })
 
-  const buttonHoverColor = {
-    primary: 'group-hover/cta:!bg-orange-500',
-    secondary: 'group-hover/cta:!bg-neutral-900 group-hover/cta:!text-orange-600'
-  }
   const cardType = {
     '2-col-70-30': 'lg:grid-cols-10 grid-cols-1',
     '1-col': 'grid-cols-1',
@@ -113,10 +103,10 @@
   }
 
   const ctaColor = {
-    '2-col-70-30': 'bg-neutral-900 transition-colors gap-60 lg:col-span-7 ',
-    '1-col': 'bg-neutral-900 transition-colors gap-60',
-    '1-col-short-orange': 'bg-orange-500 transition-colors gap-16',
-    '1-col-short-black': 'bg-neutral-900 transition-colors gap-16'
+    '2-col-70-30': 'bg-neutral-900 transition-colors lg:col-span-7 ',
+    '1-col': 'bg-neutral-900 transition-colors',
+    '1-col-short-orange': 'bg-orange-500 transition-colors',
+    '1-col-short-black': 'bg-neutral-900 transition-colors'
   }
 
   const overlay = {
@@ -128,7 +118,7 @@
 
   const dotsStyle = {
     darkGray: `radial-gradient(circle, rgba(23, 23, 23, 0.3) 1px, #0000 0);`,
-    lightGray: `radial-gradient(circle, rgba(206, 201, 201, 0.1) 1px, #0000 0);`,
+    lightGray: `radial-gradient(circle, rgba(206, 201, 201, 0.1) 1px, #0000 0);`
   }
 
   const backgroundImageStyle = computed(() => {
@@ -157,7 +147,9 @@
   })
 
   const parsedContentMarkdown = computed(() => {
-    return props.content?.descriptionRawMarkdown ? parseMarkdown(props.content.descriptionRawMarkdown) : ''
+    return props.content?.descriptionRawMarkdown
+      ? parseMarkdown(props.content.descriptionRawMarkdown)
+      : ''
   })
 
   const parsedCtaMarkdown = computed(() => {

@@ -3,7 +3,7 @@
     :id="id"
     :class="`text-white relative max-w-xl xxxl:max-w-xxl mx-auto p-4 md:p-12 ${bottomSpacing}`"
   >
-    <div class="flex md:flex-row justify-between items-start md:items-center mb-6  md:mb-12 gap-4">
+    <div class="flex md:flex-row justify-between items-start md:items-center mb-6 gap-4">
       <h2
         v-if="title"
         class="display-3-mobile md:display-3 font-normal tracking-tight text-gray-200 font-sora"
@@ -14,7 +14,8 @@
       <div class="flex items-center gap-3">
         <button
           ref="prevButton"
-          class="swiper-button-prev-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800 hover:border-orange-500 text-neutral-400 hover:text-orange-500 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          class="swiper-button-prev-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800  text-neutral-400 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          :class="disabledNavigation ? '' : 'hover:border-orange-500 hover:text-orange-500'"
           aria-label="Previous slide"
           :disabled="disabledNavigation"
         >
@@ -22,7 +23,8 @@
         </button>
         <button
           ref="nextButton"
-          class="swiper-button-next-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800 hover:border-orange-500 text-neutral-400 hover:text-orange-500 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          class="swiper-button-next-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800 text-neutral-400 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          :class="disabledNavigation ? '' : 'hover:border-orange-500 hover:text-orange-500'"
           aria-label="Next slide"
           :disabled="disabledNavigation"
         >
