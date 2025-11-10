@@ -36,14 +36,17 @@ export const parseMarkdown = (markdown) => {
   text = text
     .replace(
       /\*\*\*([^*\n]+(?:\n[^*\n]*)*?)\*\*\*/gs,
-      '<strong class="font-sora"><em class="font-sora">$1</em></strong>'
+      '<strong class="font-sora text-white"><em class="font-sora text-white">$1</em></strong>'
     )
     .replace(
       /___([^_\n]+(?:\n[^_\n]*)*?)___/gs,
-      '<strong class="font-sora"><em class="font-sora">$1</em></strong>'
+      '<strong class="font-sora text-white"><em class="font-sora text-white">$1</em></strong>'
     )
-    .replace(/\*\*([^*\n]+(?:\n[^*\n]*)*?)\*\*/gs, '<strong class="font-sora">$1</strong>')
-    .replace(/__([^_\n]+(?:\n[^_\n]*)*?)__/gs, '<strong class="font-sora">$1</strong>')
+    .replace(
+      /\*\*([^*\n]+(?:\n[^*\n]*)*?)\*\*/gs,
+      '<strong class="font-sora text-white">$1</strong>'
+    )
+    .replace(/__([^_\n]+(?:\n[^_\n]*)*?)__/gs, '<strong class="font-sora text-white">$1</strong>')
     .replace(/\*([^*\n]+(?:\n[^*\n]*)*?)\*/gs, '<em class="font-sora">$1</em>')
     .replace(/_([^_\n]+(?:\n[^_\n]*)*?)_/gs, '<em class="font-sora">$1</em>')
 
