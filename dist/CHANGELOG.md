@@ -1,3 +1,9 @@
+## [1.266.3](https://github.com/aziontech/azion-webkit/compare/v1.266.2...v1.266.3) (2025-11-11)
+
+### Bug Fixes
+
+* button style ([36c6829](https://github.com/aziontech/azion-webkit/commit/36c68292c134ebbb7ee05bf1fd88f010b932993c))
+
 ## [1.266.2](https://github.com/aziontech/azion-webkit/compare/v1.266.1...v1.266.2) (2025-11-11)
 
 ### Bug Fixes
