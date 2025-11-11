@@ -1,3 +1,10 @@
+## [1.266.1](https://github.com/aziontech/azion-webkit/compare/v1.266.0...v1.266.1) (2025-11-11)
+
+### Bug Fixes
+
+* button and carousel now support different targets types ([e9e6b14](https://github.com/aziontech/azion-webkit/commit/e9e6b14cdcd1f2637e380056fdaef21b3c820aeb))
+* edge network map degrade color ([b8e41e2](https://github.com/aziontech/azion-webkit/commit/b8e41e2b19f2341e7235dd73a4337894366b3930))
+
 ## [1.266.0](https://github.com/aziontech/azion-webkit/compare/v1.265.0...v1.266.0) (2025-11-11)
 
 ### Features
