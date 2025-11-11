@@ -43,7 +43,7 @@
 
 <script setup>
   import HeroBase from '../herobase'
-  import Button from '../../components/Button/Button.vue'
+  import Button from '../components/Button/Button.vue'
   import ContentLogo from '../contentlogo'
 
   defineProps({
