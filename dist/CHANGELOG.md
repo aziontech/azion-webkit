@@ -1,3 +1,13 @@
+## [1.266.0](https://github.com/aziontech/azion-webkit/compare/v1.265.0...v1.266.0) (2025-11-11)
+
+### Features
+
+* bold markdown text now are white ([8f62afe](https://github.com/aziontech/azion-webkit/commit/8f62afee5d92763e5f030e7435dcf65d06262da4))
+
+### Bug Fixes
+
+* fix Button component import path in HeroHome ([0d712bd](https://github.com/aziontech/azion-webkit/commit/0d712bd4dde752341c0aee96f3e9a9fddb7e42ec))
+
 ## [1.265.0](https://github.com/aziontech/azion-webkit/compare/v1.264.1...v1.265.0) (2025-11-11)
 
 ### Features
