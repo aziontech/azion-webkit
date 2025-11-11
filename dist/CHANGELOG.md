@@ -1,3 +1,9 @@
+## [1.264.1](https://github.com/aziontech/azion-webkit/compare/v1.264.0...v1.264.1) (2025-11-11)
+
+### Bug Fixes
+
+* select lang ([d9eff52](https://github.com/aziontech/azion-webkit/commit/d9eff52520b01de5295573667e84626f2577cb11))
+
 ## [1.264.0](https://github.com/aziontech/azion-webkit/compare/v1.263.8...v1.264.0) (2025-11-10)
 
 ### Features
