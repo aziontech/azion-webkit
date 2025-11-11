@@ -69,12 +69,27 @@ const MOCK = {
     {
       label: 'Start Now',
       link: 'https://console.azion.com/signup/',
-      outlined: false
+      type: 'primary',
+      theme: 'dark'
     },
     {
       label: 'Get a Demo',
       link: '/en/contact-sales/',
-      outlined: true
+      type: 'secondary',
+      theme: 'dark'
+    },
+    {
+      label: 'View Docs',
+      link: 'https://docs.azion.com/',
+      type: 'link',
+      theme: 'dark'
+    },
+    {
+      label: 'GitHub',
+      link: 'https://github.com/aziontech/azion-webkit',
+      type: 'linkSecondary',
+      theme: 'dark',
+      icon: 'pi pi-github'
     }
   ]
 }
@@ -97,4 +112,60 @@ Default.args = MOCK
 
 Default.parameters = {
   docs: { source: { code: HeroDisplay } }
+}
+
+// Story com diferentes tipos de buttons
+export const ButtonVariations = Template.bind({})
+ButtonVariations.args = {
+  ...MOCK,
+  title: "Button <span class='animate-pretty bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-500'>Variations</span><br class='hidden lg:block' /> Showcase",
+  description: 'Demonstrating different button types and themes available in the Button component.',
+  buttons: [
+    {
+      label: 'Primary Dark',
+      link: '#',
+      type: 'primary',
+      theme: 'dark'
+    },
+    {
+      label: 'Primary Light',
+      link: '#',
+      type: 'primary',
+      theme: 'light'
+    },
+    {
+      label: 'Secondary Dark',
+      link: '#',
+      type: 'secondary',
+      theme: 'dark'
+    },
+    {
+      label: 'Secondary Light',
+      link: '#',
+      type: 'secondary',
+      theme: 'light'
+    },
+    {
+      label: 'Link',
+      link: '#',
+      type: 'link',
+      theme: 'dark'
+    },
+    {
+      label: 'Link Secondary',
+      link: '#',
+      type: 'linkSecondary',
+      theme: 'dark',
+      icon: 'pi pi-arrow-right'
+    }
+  ]
+}
+
+ButtonVariations.parameters = {
+  docs: { 
+    source: { code: HeroDisplay },
+    description: {
+      story: 'This story showcases all available button types and themes in the HeroHome component.'
+    }
+  }
 }
