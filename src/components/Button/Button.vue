@@ -28,7 +28,7 @@
           :class="[
             'group-hover:translate-x-[.1rem] -translate-x-[.1rem]  transition-transform relative ',
             type === 'linkExternal' || target === '_blank'
-              ? 'group-hover:translate-y-0 translate-y-[50%] top-[30%]'
+              ? 'translate-y-0 group-hover:translate-y-[-50%] top-[20%]'
               : 'rotate-45 -translate-y-1/2 top-1/2'
           ]"
           viewBox="0 0 10 10"
