@@ -1,3 +1,9 @@
+## [1.265.0](https://github.com/aziontech/azion-webkit/compare/v1.264.1...v1.265.0) (2025-11-11)
+
+### Features
+
+* update HeroHome to use unified Button component ([73ec11e](https://github.com/aziontech/azion-webkit/commit/73ec11e09c4d52b276e38b6d8c3d81a810066a46))
+
 ## [1.264.1](https://github.com/aziontech/azion-webkit/compare/v1.264.0...v1.264.1) (2025-11-11)
 
 ### Bug Fixes
