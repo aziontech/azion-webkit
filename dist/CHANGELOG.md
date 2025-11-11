@@ -1,3 +1,9 @@
+## [1.266.2](https://github.com/aziontech/azion-webkit/compare/v1.266.1...v1.266.2) (2025-11-11)
+
+### Bug Fixes
+
+* simplify MigratedClientsCard rendering with array iteration ([3877670](https://github.com/aziontech/azion-webkit/commit/387767058a759e2fe2e2b8b67d7e3a2fd922a898))
+
 ## [1.266.1](https://github.com/aziontech/azion-webkit/compare/v1.266.0...v1.266.1) (2025-11-11)
 
 ### Bug Fixes
