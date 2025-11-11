@@ -31,6 +31,11 @@ export default {
     icon: {
       control: { type: 'text' },
       description: 'PrimeVue icon class (e.g., "pi pi-check")'
+    },
+    target: {
+      control: { type: 'select' },
+      options: ['_blank', '_self'],
+      description: 'Target attribute for link buttons (opens in new tab or same tab)'
     }
   }
 }
