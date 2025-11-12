@@ -1,7 +1,7 @@
 <template>
   <section
     :id="id"
-    :class="`text-white relative overflow-hidden w-full mx-auto md:py-24 ${bottomSpacing}`"
+    :class="`text-white relative overflow-hidden w-full mx-auto py-24 md:py-0 ${bottomSpacing}`"
     style="
       background-image: radial-gradient(circle, #cec9c940 1.5px, #0000 0);
       background-size: 3rem 3rem;
@@ -46,7 +46,7 @@
           />
         </div>
       </div>
-      <div class="relative flex w-full md:w-1/2 md:p-12 items-center justify-center">
+      <div class="relative flex w-full md:w-1/2 md:px-12 md:py-36 items-center justify-center">
         <div
           v-if="image"
           class="p-1 w-full max-w-md mx-auto"

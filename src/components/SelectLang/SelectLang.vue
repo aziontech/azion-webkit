@@ -39,7 +39,7 @@
         <a
           :href="slotProps.option.slug"
           target="_self"
-          class="block w-fit rounded-sm p-2 text-xs text-neutral-900 hover:bg-[#F5F5F5]"
+          class="block w-full rounded-sm p-2 text-xs text-neutral-900 hover:bg-[#F5F5F5]"
         >
           {{ slotProps.option.lang }}
         </a>
