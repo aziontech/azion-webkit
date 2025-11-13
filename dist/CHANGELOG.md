@@ -1,3 +1,9 @@
+## [1.266.5](https://github.com/aziontech/azion-webkit/compare/v1.266.4...v1.266.5) (2025-11-13)
+
+### Bug Fixes
+
+* hero and select lang fixes ([f587ddb](https://github.com/aziontech/azion-webkit/commit/f587ddb75210f5d27cc4bd41b23c3c90ea6580fd))
+
 ## [1.266.4](https://github.com/aziontech/azion-webkit/compare/v1.266.3...v1.266.4) (2025-11-13)
 
 ### Bug Fixes
