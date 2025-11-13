@@ -1,3 +1,9 @@
+## [1.266.4](https://github.com/aziontech/azion-webkit/compare/v1.266.3...v1.266.4) (2025-11-13)
+
+### Bug Fixes
+
+* allow empty href attributes in Button component regex patterns ([4a66622](https://github.com/aziontech/azion-webkit/commit/4a666227ec3e0442336526cba86402d294a384fe))
+
 ## [1.266.3](https://github.com/aziontech/azion-webkit/compare/v1.266.2...v1.266.3) (2025-11-11)
 
 ### Bug Fixes
