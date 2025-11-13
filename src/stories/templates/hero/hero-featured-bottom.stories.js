@@ -36,13 +36,13 @@ const MOCK = {
   buttons: [
     {
       label: 'Start Now',
-      link: 'https://console.azion.com/signup/',
-      outlined: false
+      href: 'https://console.azion.com/signup/',
+      type: 'primary'
     },
     {
       label: 'Get a Demo',
-      link: '/en/contact-sales/',
-      outlined: true
+      href: '/en/contact-sales/',
+      type: 'secondary'
     }
   ],
   cards: [

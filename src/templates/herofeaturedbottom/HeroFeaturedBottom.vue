@@ -9,7 +9,7 @@
     :margin="margin"
   >
     <template #actions>
-      <LinkButton
+      <Button
         v-for="(button, index) in buttons"
         :key="index"
         v-bind="button"
@@ -26,7 +26,7 @@
 
 <script setup>
   import HeroBlockBase from '../herobase'
-  import LinkButton from '../linkbutton'
+  import Button from '../components/Button/Button.vue'
   import FeaturedCards from '../featuredcards'
 
   defineProps({
