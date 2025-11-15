@@ -135,8 +135,8 @@
   const containerClasses = computed(() => {
     const baseClasses = 'md:flex-row'
     return props.inverted
-      ? `${baseClasses} md:flex-row-reverse before:right-0 after:right-0`
-      : `${baseClasses} before:left-0 after-right-0 md:after:left-0`
+      ? `${baseClasses} md:flex-row-reverse before:left-0 after:right-0 md:before:left-auto md:before:right-0`
+      : `${baseClasses} before:left-0 after:right-0 md:after:left-0`
   })
 
   const backgroundImageStyle = computed(() => {

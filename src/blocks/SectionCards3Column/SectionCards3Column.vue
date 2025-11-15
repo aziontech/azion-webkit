@@ -12,10 +12,9 @@
         :key="index"
         :class="[
           'p-1 border hover:bg-neutral-900 transition-colors duration-150 border-neutral-900 relative',
+          `after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0`,
           `before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 before:block`,
-          (index + 1) % 3 === 0
-            ? `after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 after:block`
-            : ''
+          (index + 1) % dotIndexController === 0 ? 'after:block' : 'after:block lg:after:hidden'
         ]"
       >
         <div
@@ -23,9 +22,9 @@
             'h-full w-full p-6 flex flex-col gap-2',
             `before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:left-0`,
             `after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:right-0`,
-            (index + 1) % 3 === 0
+            (index + 1) % dotIndexController === 0
               ? 'before:block after:block'
-              : 'before:hidden md:before:block after:hidden'
+              : 'before:hidden after:hidden lg:before:block'
           ]"
         >
           <div class="flex gap-2">
@@ -42,7 +41,6 @@
               />
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -51,6 +49,7 @@
 
 <script setup lang="ts">
   import { parseMarkdown } from '../../services/markdown/markdown-service'
+  import { ref, onMounted } from 'vue'
 
   export interface Card3Column {
     icon: string
@@ -67,5 +66,20 @@
   const props = withDefaults(defineProps<SectionCards3ColumnProps>(), {
     cards: () => [],
     bottomSpacing: 'mb-24'
+  })
+
+  const dotIndexController = ref(3)
+
+  const handleResize = () => {
+    if (window.innerWidth < 1200) {
+      dotIndexController.value = props.cards.length
+    } else {
+      dotIndexController.value = 3
+    }
+  }
+
+  onMounted(() => {
+    handleResize()
+    window.addEventListener('resize', handleResize)
   })
 </script>
