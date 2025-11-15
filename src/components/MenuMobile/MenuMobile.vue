@@ -155,7 +155,7 @@
 </template>
 
 <script setup>
-  import { onUpdated, ref } from 'vue'
+  import { watch, ref, onMounted, onUnmounted } from 'vue'
   import ButtonPrime from 'primevue/button'
   import Menu from 'primevue/menu'
   import Sidebar from 'primevue/sidebar'
@@ -186,18 +186,35 @@
     return menuItem
   })
 
-  function getHTMLElement() {
-    return document.querySelector('html')
+  function getAppElement() {
+    return document.getElementsByTagName('html')[0]
   }
 
-  function pageScroll(action) {
-    const overflow = action === 'stop' ? 'hidden' : 'auto'
-    getHTMLElement().style.overflow = overflow
-
-    return overflow
+  function toggleAppScroll(disable) {
+    const appElement = getAppElement()
+    if (appElement) {
+      appElement.style.overflow = disable ? 'hidden' : 'auto'
+    }
   }
 
-  onUpdated(() => {
-    visibleRight.value ? pageScroll('stop') : pageScroll('auto')
+  function handleResize() {
+    if (window.innerWidth > 1200) {
+      visibleRight.value = false
+      toggleAppScroll(false)
+    }
+  }
+
+  watch(visibleRight, (isVisible) => {
+    toggleAppScroll(isVisible)
+  })
+
+  onMounted(() => {
+    window.addEventListener('resize', handleResize)
+    handleResize()
+  })
+
+  onUnmounted(() => {
+    window.removeEventListener('resize', handleResize)
+    toggleAppScroll(false)
   })
 </script>
