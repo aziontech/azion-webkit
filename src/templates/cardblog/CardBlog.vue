@@ -13,14 +13,31 @@
         v-if="imgSrc"
       >
         <picture>
-          <img
-            height="209"
-            width="372"
-            loading="lazy"
-            :alt="`${imgAlt}`"
-            :src="`${imgSrc}?ims=372x209`"
-            class="w-full aspect-video group-hover:scale-[1.10] transition-all duration-300"
-          />
+          <template v-if="imageType === 'logo'">
+            <div
+              class="group-hover:bg-neutral-200 aspect-video transition-colors duration-300 w-full"
+            >
+              <div
+                class="flex items-center justify-center overflow-hidden logo-container h-full"
+                :style="backgroundImageStyle"
+              >
+                <div
+                  class="group-hover:text-black"
+                  v-html="imgSrc"
+                />
+              </div>
+            </div>
+          </template>
+          <template v-else>
+            <img
+              height="209"
+              width="372"
+              loading="lazy"
+              :alt="`${imgAlt}`"
+              :src="`${imgSrc}?ims=372x209`"
+              class="w-full aspect-video group-hover:scale-[1.10] transition-all duration-300"
+            />
+          </template>
         </picture>
       </template>
       <template #content>
@@ -108,13 +125,23 @@
       required: false,
       default: 'column',
       options: ['column', 'row']
+    },
+    imageType: {
+      type: String,
+      required: false,
+      default: 'default',
+      options: ['default', 'logo']
     }
   })
 
   const getPTOptions = () => {
+    const headerStyle =
+      props.imageType === 'logo'
+        ? 'overflow-hidden'
+        : 'rounded border surface-border overflow-hidden'
     const response = {
       root: 'w-full shadow-none bg-transparent gap-6 flex flex-col',
-      header: 'rounded border surface-border overflow-hidden',
+      header: headerStyle,
       content: 'h-full'
     }
 
@@ -126,4 +153,21 @@
 
     return response
   }
+
+  const backgroundImageStyle = `
+        background-image: 
+          linear-gradient(to top, transparent 0%, transparent 100%),
+          radial-gradient(circle, rgba(206, 201, 201, 0.1) 1px, #0000 0);
+        background-size: 100% 100%, 12px 12px;
+        background-repeat: no-repeat, repeat;
+        background-position: 0 0, 0 0;
+      `
 </script>
+
+<style scoped>
+  .logo-container :deep(svg) {
+    width: 100%;
+    min-height: 40px;
+    object-fit: contain;
+  }
+</style>
