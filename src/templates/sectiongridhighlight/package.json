@@ -1,7 +1,0 @@
-{
-  "main": "./sectiongridhighlight.js",
-  "types": "./SectionGridHighlight.d.ts",
-  "browser": {
-    "./sfc": "./SectionGridHighlight.vue"
-  }
-}
