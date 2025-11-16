@@ -1,19 +1,23 @@
 <template>
-  <div class="flex flex-col gap-5">
+  <section 
+    class="flex flex-col gap-5 max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12"
+    :id="id"
+    :class="`${bottomSpacing}`"
+  >
     <div class="flex-col gap-3 max-w-xl flex lg:hidden">
-      <h2 class="font-sora text-neutral-200 text-3xl text-pretty">
+      <h2 class="font-sora text-neutral-200 display-2-mobile md:display-2 text-pretty">
         {{ title }}
       </h2>
       <p
         class="font-sora text-neutral-200 text-xs text-pretty"
-        v-html="descriptionHtml"
+        v-html="parseMarkdown(descriptionRawMarkdown)"
       ></p>
     </div>
     <div class="grid gap-3 grid-cols-2 lg:grid-cols-4 grid-rows-4">
       <div class="col-span-2 lg:col-span-4 row-span-3 bg-neutral-900 rounded-lg overflow-hidden">
         <div class="relative flex h-full lg:h-auto">
           <div
-            class="flex w-full lg:justify-between justify-end items-right py-5 lg:py-10 lg:px-5 z-2"
+            class="flex w-full gap-5 lg:justify-between justify-end items-right py-5 lg:py-10 lg:px-5 z-2"
           >
             <div class="flex-col gap-3 max-w-xl hidden lg:flex">
               <h2 class="font-sora text-neutral-200 text-5xl text-pretty">
@@ -21,7 +25,7 @@
               </h2>
               <p
                 class="font-sora text-neutral-200 text-sm text-balance"
-                v-html="descriptionHtml"
+                v-html="parseMarkdown(descriptionRawMarkdown)"
               ></p>
             </div>
             <div
@@ -51,10 +55,11 @@
         <p class="font-proto-mono text-5xl lg:text-7xl text-neutral-200">{{ item.title }}</p>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
+  import { parseMarkdown } from '../../services/markdown/markdown-service'
   import EdgeMap from './EdgeMap.vue'
   defineProps({
     items: {
@@ -65,12 +70,21 @@
       type: String,
       required: true
     },
-    descriptionHtml: {
+    descriptionRawMarkdown: {
       type: String,
       required: true
     },
     overlines: {
       type: Array
+    },
+    bottomSpacing: {
+      type: String,
+      options: ['mb-0', 'mb-6', 'mb-12', 'mb-24', 'mb-48'],
+      default: 'mb-24'
+    },
+    id: {
+      type: String,
+      default: ''
     }
   })
 </script>
