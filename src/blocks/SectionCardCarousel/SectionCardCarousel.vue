@@ -14,8 +14,12 @@
       <div class="flex items-center gap-3">
         <button
           ref="prevButton"
-          class="swiper-button-prev-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800  text-neutral-400 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-          :class="disabledNavigation ? '' : 'hover:border-orange-500 hover:text-orange-500'"
+          class="swiper-button-prev-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800 text-neutral-400 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          :class="
+            disabledNavigation
+              ? ''
+              : 'hover:border-orange-500 hover:text-orange-500 disabled:hover:border-inherit disabled:hover:text-inherit'
+          "
           aria-label="Previous slide"
           :disabled="disabledNavigation"
         >
@@ -24,7 +28,11 @@
         <button
           ref="nextButton"
           class="swiper-button-next-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800 text-neutral-400 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-          :class="disabledNavigation ? '' : 'hover:border-orange-500 hover:text-orange-500'"
+          :class="
+            disabledNavigation
+              ? ''
+              : 'hover:border-orange-500 hover:text-orange-500 disabled:hover:border-inherit disabled:hover:text-inherit'
+          "
           aria-label="Next slide"
           :disabled="disabledNavigation"
         >
@@ -36,7 +44,6 @@
     <swiper
       :modules="modules"
       :slides-per-view="1.15"
-      :space-between="16"
       :grab-cursor="true"
       :breakpoints="breakpoints"
       :navigation="{
@@ -58,46 +65,48 @@
           :target="card.target ?? '_blank'"
           class="group cursor-pointer"
         >
-        <div
-          class="p-1 border hover:bg-neutral-900 border-neutral-900 relative h-full before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0"
-        >
           <div
-            class="h-full w-full p-6 flex flex-col gap-4 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:right-0"
+            :id="`swiper-card-dot-top-${index}`"
+            class="p-1 border hover:bg-neutral-900 border-neutral-900 relative h-full before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 after:hidden"
           >
             <div
-              v-if="card.tag"
-              class="flex items-center gap-2 bg-slate-950 text-neutral-100 px-3 py-1 rounded w-fit"
+              :id="`swiper-card-dot-bottom-${index}`"
+              class="h-full w-full p-6 flex flex-col gap-4 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:right-0 after:hidden"
             >
-              <i
-                v-if="card.tagIcon"
-                :class="card.tagIcon"
-                class="text-sm"
-              ></i>
-              <span class="text-xs uppercase font-proto-mono">
-                {{ card.tag }}
-              </span>
+              <div
+                v-if="card.tag"
+                class="flex items-center gap-2 bg-slate-950 text-neutral-100 px-3 py-1 rounded w-fit"
+              >
+                <i
+                  v-if="card.tagIcon"
+                  :class="card.tagIcon"
+                  class="text-sm"
+                ></i>
+                <span class="text-xs uppercase font-proto-mono">
+                  {{ card.tag }}
+                </span>
+              </div>
+
+              <h3 class="display-5-mobile md:display-5 text-white font-sora">
+                {{ card.title }}
+              </h3>
+
+              <div
+                class="text-sm mb-12 text-neutral-400 leading-relaxed font-sora flex-grow"
+                v-html="parseMarkdown(card.descriptionRawMarkdown)"
+              ></div>
+
+              <Button
+                v-if="card.link"
+                :label="card.linkLabel || 'Learn more'"
+                :target="card.target ?? '_blank'"
+                type="linkSecondary"
+                size="small"
+                theme="dark"
+                customClass="w-fit"
+              />
             </div>
-
-            <h3 class="display-5-mobile md:display-5 text-white font-sora">
-              {{ card.title }}
-            </h3>
-
-            <div
-              class="text-sm mb-12 text-neutral-400 leading-relaxed font-sora flex-grow"
-              v-html="parseMarkdown(card.descriptionRawMarkdown)"
-            ></div>
-
-            <Button
-              v-if="card.link"
-              :label="card.linkLabel || 'Learn more'"
-              :target="card.target ?? '_blank'"
-              type="linkSecondary"
-              size="small"
-              theme="dark"
-              customClass="w-fit"
-            />
           </div>
-        </div>
         </a>
       </swiper-slide>
     </swiper>
@@ -107,7 +116,7 @@
 <script setup lang="ts">
   import { Swiper, SwiperSlide } from 'swiper/vue'
   import { Navigation } from 'swiper/modules'
-  import { ref, computed } from 'vue'
+  import { ref, computed, onMounted } from 'vue'
   import Button from '../../components/Button/Button.vue'
   import 'swiper/css'
   import 'swiper/css/navigation'
@@ -142,27 +151,24 @@
   const prevButton = ref(null)
   const nextButton = ref(null)
   const slidesPerView = ref(0)
+  const prevDotBottom = ref<HTMLElement | null>(null)
+  const prevDotTop = ref<HTMLElement | null>(null)
 
   const breakpoints = {
     320: {
-      slidesPerView: 1.1,
-      spaceBetween: 16
+      slidesPerView: 1.1
     },
     640: {
-      slidesPerView: 1.5,
-      spaceBetween: 20
+      slidesPerView: 1.5
     },
     768: {
-      slidesPerView: 2,
-      spaceBetween: 24
+      slidesPerView: 2
     },
     1024: {
-      slidesPerView: 2.5,
-      spaceBetween: 24
+      slidesPerView: 2.5
     },
     1280: {
-      slidesPerView: 3,
-      spaceBetween: 24
+      slidesPerView: 3
     }
   }
 
@@ -170,17 +176,52 @@
     swiperInstance.value = swiper
   }
 
-  const onBreakpoint = (_: any, breakpointParams: any) => {
+  const onBreakpoint = (swiper: any, breakpointParams: any) => {
     slidesPerView.value = breakpointParams.slidesPerView
+    handleDotsOnSlideChange(swiper.activeIndex)
   }
 
   const disabledNavigation = computed(() => {
     return props.cards.length <= slidesPerView.value
   })
 
+  const handleDotsOnSlideChange = (index: number) => {
+    const targetIndex = Math.ceil(slidesPerView.value) - 1 + index
+    const dotTop: HTMLElement | null = document.getElementById(`swiper-card-dot-top-${targetIndex}`)
+    const dotBottom: HTMLElement | null = document.getElementById(
+      `swiper-card-dot-bottom-${targetIndex}`
+    )
+
+    if (!dotTop && !dotBottom) return
+
+    if (prevDotTop.value) {
+      prevDotTop.value.classList.add('after:hidden')
+      prevDotTop.value.classList.remove('after:block')
+    }
+
+    if (prevDotBottom.value) {
+      prevDotBottom.value.classList.add('after:hidden')
+      prevDotBottom.value.classList.remove('after:block')
+    }
+
+    dotTop?.classList.add('after:block')
+    dotTop?.classList.remove('after:hidden')
+    dotBottom?.classList.add('after:block')
+    dotBottom?.classList.remove('after:hidden')
+
+    prevDotTop.value = dotTop
+    prevDotBottom.value = dotBottom
+  }
+
   const onSlideChange = (swiper: any) => {
+    handleDotsOnSlideChange(swiper.activeIndex)
     emit('slide-change', { index: swiper.activeIndex })
   }
+
+  onMounted(() => {
+    const INITAL_INDEX = 0
+    handleDotsOnSlideChange(INITAL_INDEX)
+  })
 </script>
 
 <style scoped>
