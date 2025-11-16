@@ -4,7 +4,6 @@
       <div class="flex flex-col lg:flex-row justify-between w-full gap-9 lg:gap-12">
         <div class="w-full flex flex-col justify-between gap-4">
           <div class="flex flex-col gap-4">
-
             <AzionLogo
               :href="`/${lang}/`"
               hrefTitle="Azion Technologies"

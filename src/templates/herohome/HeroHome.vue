@@ -15,10 +15,18 @@
       />
     </template>
     <template #actions>
-      <LinkButton
+      <div class="flex gap-4 flex-col md:flex-row justify-center items-center">
+              <Button
         v-for="button in buttons"
-        v-bind="button"
+        :key="button.label || button.link"
+        :label="button.label"
+        :href="button.link"
+        :icon="button.icon"
+        :size="button.size === 'medium' ? 'large' : 'small'"
+        :type="button.type"
+        :theme="button.theme"
       />
+      </div>
     </template>
     <template #content>
       <div class="flex flex-col gap-4 md:gap-8 items-center text-center">
@@ -35,7 +43,7 @@
 
 <script setup>
   import HeroBase from '../herobase'
-  import LinkButton from '../linkbutton'
+  import Button from '../components/Button/Button.vue'
   import ContentLogo from '../contentlogo'
 
   defineProps({

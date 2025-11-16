@@ -2501,10 +2501,10 @@
         y2="0"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#171717" />
+        <stop stop-color="#0a0a0a" />
         <stop
           offset="1"
-          stop-color="#171717"
+          stop-color="#0a0a0a"
           stop-opacity="0"
         />
       </linearGradient>
@@ -2517,10 +2517,10 @@
         y2="27.5"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#171717" />
+        <stop stop-color="#0a0a0a" />
         <stop
           offset="1"
-          stop-color="#171717"
+          stop-color="#0a0a0a"
           stop-opacity="0"
         />
       </linearGradient>

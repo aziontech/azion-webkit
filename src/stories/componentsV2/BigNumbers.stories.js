@@ -1,115 +1,76 @@
-import BigNumbers from '../../components/bignumbers/BigNumbers.vue'
+import BigNumbers from '../../blocks/SectionBigNumbersCarousel/BigNumbers.vue'
 
 export default {
-  title: 'Components/Rebranding/BigNumbers',
+  title: 'Blocks/Rebranding/SectionBigNumbersCarousel',
   component: BigNumbers,
   tags: ['autodocs'],
   argTypes: {
-    items: {
-      control: { type: 'object' },
-      description: 'Array of stat objects with title, description, and icon',
-      table: {
-        type: { summary: 'Array<{title: string, description: string, icon: string}>' },
-        required: true
-      }
-    },
     justify: {
       control: { type: 'select' },
       options: ['center', 'start'],
-      description: 'Content justification',
-      table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: 'center' }
-      }
+      description: 'Defines the alignment of the big numbers'
+    },
+    items: {
+      control: { type: 'object' },
+      description: 'Array of items to display as big numbers'
     }
   },
   parameters: {
     docs: {
       description: {
         component: `
-# BigNumbers Component
+The BigNumbers component displays a collection of metrics or statistics in a carousel format using Swiper. Each item includes an icon, a main number/title, and a description.
 
-A carousel component for displaying impressive statistics and metrics with large numbers.
-
-## Features
-- **Swiper Integration**: Smooth horizontal scrolling carousel
-- **Responsive Breakpoints**: Adapts slides per view based on screen size
-- **Icon Support**: PrimeVue icons in circular badges
-- **Large Typography**: 80px numbers for maximum impact
-- **Scrollbar**: Draggable scrollbar for navigation
-- **Grab Cursor**: Interactive cursor feedback
-- **Border Design**: Top border on desktop (md+)
-
-## Responsive Behavior
-- **Mobile**: 1 slide per view
-- **Tablet (768px+)**: 1.5 slides per view
-- **Desktop (1280px+)**: 2.5 slides per view
-- **Large (1440px+)**: 3.15 slides per view
-
-## Item Structure
-Each item requires:
-- \`title\`: Large number or stat (e.g., "99%", "1M+")
-- \`description\`: Explanatory text (uppercase, tracking-widest)
-- \`icon\`: PrimeVue icon class (e.g., "pi pi-bolt")
-
-## Usage
-
-\`\`\`vue
-<BigNumbers 
-  :items="[
-    {
-      title: '99.9%',
-      description: 'Uptime Guarantee',
-      icon: 'pi pi-check-circle'
-    },
-    {
-      title: '150+',
-      description: 'Edge Locations',
-      icon: 'pi pi-globe'
-    }
-  ]"
-  justify="center"
-/>
-\`\`\`
-
-## Design Notes
-- Proto Mono font for numbers and descriptions
-- Light text (#EDE8E8) on dark background
-- Orange border (#F3652B) on icon circles
-- Scrollbar: #2B2B2B background, #EDE8E8 drag handle
-- Top border: 2px #2B2B2B on desktop
-- Icon circle: 56px mobile, 64px desktop
+### Features
+- Swiper carousel layout for smooth navigation
+- Icon support for visual representation
+- Responsive design with proper spacing
+- Scrollbar navigation for better UX
         `
       }
-    },
-    backgrounds: {
-      default: 'dark',
-      values: [
-        { name: 'dark', value: '#000000' }
-      ]
     }
-  }
+  },
+  decorators: [
+    (story) => ({
+      components: { story },
+      template: '<div class="bg-neutral-950 p-6"><story /></div>'
+    })
+  ]
 }
 
-export const Default = {
-  args: {
-    items: [
-      {
-        title: '99.9%',
-        description: 'Uptime Guarantee',
-        icon: 'pi pi-check-circle'
-      },
-      {
-        title: '150+',
-        description: 'Edge Locations Worldwide',
-        icon: 'pi pi-globe'
-      },
-      {
-        title: '< 20ms',
-        description: 'Average Latency',
-        icon: 'pi pi-bolt'
-      }
-    ],
-    justify: 'center'
+const Template = (args) => ({
+  components: { BigNumbers },
+  setup() {
+    return { args }
+  },
+  template: `<BigNumbers v-bind="args" />`
+})
+
+const mockItems = [
+  {
+    icon: 'pi pi-check',
+    title: '80%',
+    description: 'Better TCO'
+  },
+  {
+    icon: 'pi pi-shield',
+    title: '80%',
+    description: 'Faster Applications'
+  },
+  {
+    icon: 'pi pi-code',
+    title: '100%',
+    description: 'Availability, backed by an SLA'
+  },
+  {
+    icon: 'pi pi-stopwatch',
+    title: '80k+',
+    description: 'Processed requests per second at peak load'
   }
+]
+
+export const Default = Template.bind({})
+Default.args = {
+  items: mockItems,
+  justify: 'center'
 }

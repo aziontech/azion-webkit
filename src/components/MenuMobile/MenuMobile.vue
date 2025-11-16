@@ -135,18 +135,18 @@
 
     <template v-if="bottomButtons">
       <div
-        class="w-full fixed justify-center bottom-10 flex gap-2 items-center self-end left-1/2 transform -translate-x-1/2"
+        class="w-full fixed justify-center bottom-4 bg-neutral-900 py-4 pb-6 flex gap-2 items-center self-end left-1/2 transform -translate-x-1/2"
       >
         <Button
           v-for="(button, index) in bottomButtons"
           :key="index"
           :href="button.url"
-          type="tertiary"
+          type="secondary"
           size="small"
-          class="whitespace-nowrap font-sm"
+          class="whitespace-nowrap"
           :title="button.urlTitle"
-          customClass="px-2 py-1 !h-[42px]"
-          :label="button.label" 
+          customClass="px-2 py-3 text-xs"
+          :label="button.label"
           :icon="button.icon"
         />
       </div>

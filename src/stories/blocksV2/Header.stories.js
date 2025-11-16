@@ -45,9 +45,7 @@ const menuDataWithSubmenu = {
         },
         {
           title: 'Secure',
-          items: [
-            { label: 'Edge Firewall', href: '/products/edge-firewall' }
-          ]
+          items: [{ label: 'Edge Firewall', href: '/products/edge-firewall' }]
         }
       ]
     },
@@ -163,68 +161,14 @@ export const Default = {
   render: (args) => ({
     components: { Header, HeaderLogoAzion, Menu, MenuMobile, Search },
     setup() {
-      return { 
-        args, 
-        menuData: simpleMenuData, 
-        menuSecondary, 
-        menuSecondaryMobile, 
-        bottomButtonsMobile, 
-        communityData, 
-        menuMobileData: simpleMobileMenuData 
-      }
-    },
-    template: `
-      <Header :menuSecondary="menuSecondary">
-        <template #logo>
-          <HeaderLogoAzion
-            href="/"
-            hrefTitle="Home | Azion Technologies"
-            target="_self"
-            version="default"
-          />
-        </template>
-        
-        <template #dialog>
-          <Search
-            algoliaAppId="PYJUZH6VNQ"
-            algoliaApiKey="7c1795c333053265edd2aeb199745797"
-            algoliaIndex="azion_en"
-            algoliaModel="search"
-            inputPlaceholder="Search documentation..."
-          />
-        </template>
-
-        <template #navigation>
-          <Menu
-            :communityData="communityData"
-            :menuData="menuData"
-          />
-        </template>
-
-        <template #menu-mobile>
-          <MenuMobile
-            :menuSecondary="menuSecondaryMobile"
-            :bottomButtons="bottomButtonsMobile"
-            :menuMobile="menuMobileData"
-          />
-        </template>
-      </Header>
-    `
-  })
-}
-
-export const WithSubmenu = {
-  render: (args) => ({
-    components: { Header, HeaderLogoAzion, Menu, MenuMobile, Search },
-    setup() {
-      return { 
-        args, 
-        menuData: menuDataWithSubmenu, 
-        menuSecondary, 
-        menuSecondaryMobile, 
-        bottomButtonsMobile, 
-        communityData, 
-        menuMobileData: menuMobileDataWithSubmenu 
+      return {
+        args,
+        menuData: simpleMenuData,
+        menuSecondary,
+        menuSecondaryMobile,
+        bottomButtonsMobile,
+        communityData,
+        menuMobileData: simpleMobileMenuData
       }
     },
     template: `

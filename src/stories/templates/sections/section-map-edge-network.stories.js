@@ -449,7 +449,7 @@ const MOCK = {
 }
 
 const template = `
-<Container class="surface-ground">
+<Container class="bg-neutral-950">
   <SectionMapEdgeNetwork v-bind="args">
     <template #content>
       <EdgeNetworkTabView :locations="args.locations" />

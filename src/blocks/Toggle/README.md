@@ -4,19 +4,19 @@ A flexible toggle component for switching between two options with customizable 
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `modelValue` | `String` | `'main'` | The currently selected option ('main' or 'alternative') |
-| `mainLabel` | `String` | `'Main'` | Label for the main option |
-| `alternativeLabel` | `String` | `'Alternative'` | Label for the alternative option |
-| `description` | `String` | `''` | Optional description text displayed below the toggle |
+| Prop               | Type     | Default         | Description                                             |
+| ------------------ | -------- | --------------- | ------------------------------------------------------- |
+| `modelValue`       | `String` | `'main'`        | The currently selected option ('main' or 'alternative') |
+| `mainLabel`        | `String` | `'Main'`        | Label for the main option                               |
+| `alternativeLabel` | `String` | `'Alternative'` | Label for the alternative option                        |
+| `description`      | `String` | `''`            | Optional description text displayed below the toggle    |
 
 ## Events
 
-| Event | Payload | Description |
-|-------|---------|-------------|
+| Event               | Payload  | Description                              |
+| ------------------- | -------- | ---------------------------------------- |
 | `update:modelValue` | `String` | Emitted when the selected option changes |
-| `change` | `String` | Emitted when the selected option changes |
+| `change`            | `String` | Emitted when the selected option changes |
 
 ## Usage
 
@@ -32,14 +32,14 @@ A flexible toggle component for switching between two options with customizable 
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import Toggle from '@/blocks/Toggle'
+  import { ref } from 'vue'
+  import Toggle from '@/blocks/Toggle'
 
-const selectedPlan = ref('main')
+  const selectedPlan = ref('main')
 
-const handlePlanChange = (option) => {
-  console.log('Selected option:', option)
-}
+  const handlePlanChange = (option) => {
+    console.log('Selected option:', option)
+  }
 </script>
 ```
 

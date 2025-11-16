@@ -49,7 +49,7 @@ Component FormBePartner
 ### Internal
 
 - ../formblock/FormBlock.vue
-- ../src/services/hubspot-service
+- ../services/hubspot-service
 
 ## Usage Example
 

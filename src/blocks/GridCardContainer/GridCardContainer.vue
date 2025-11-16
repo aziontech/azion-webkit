@@ -1,5 +1,8 @@
 <template>
-  <section class="flex flex-col gap-4" :id="id">
+  <section
+    class="flex flex-col gap-4"
+    :id="id"
+  >
     <p class="uppercase tracking-widest text-[#B5B1F4] font-proto-mono">{{ title }}</p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
       <Card

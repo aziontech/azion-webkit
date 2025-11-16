@@ -1,4 +1,4 @@
-  import { DefineComponent, VNode } from 'vue'
+import { DefineComponent, VNode } from 'vue'
 import { ClassComponent, GlobalComponentConstructor } from 'primevue/ts-helpers'
 
 export interface PricingFeature {
@@ -42,18 +42,31 @@ export interface PricingTableContentSlots {
   /**
    * Custom content for section header
    */
-  sectionHeader(scope: { section: PricingSection, index: number }): VNode[]
+  sectionHeader(scope: { section: PricingSection; index: number }): VNode[]
   /**
    * Custom content for feature row
    */
-  featureRow(scope: { feature: PricingFeature, section: PricingSection, featureIndex: number, sectionIndex: number }): VNode[]
+  featureRow(scope: {
+    feature: PricingFeature
+    section: PricingSection
+    featureIndex: number
+    sectionIndex: number
+  }): VNode[]
   /**
    * Custom content for feature value cell
    */
-  featureValue(scope: { value: string | boolean | number, feature: PricingFeature, planIndex: number }): VNode[]
+  featureValue(scope: {
+    value: string | boolean | number
+    feature: PricingFeature
+    planIndex: number
+  }): VNode[]
 }
 
-declare class PricingTableContent extends ClassComponent<PricingTableContentProps, PricingTableContentSlots, {}> {}
+declare class PricingTableContent extends ClassComponent<
+  PricingTableContentProps,
+  PricingTableContentSlots,
+  {}
+> {}
 
 declare module 'vue' {
   export interface GlobalComponents {

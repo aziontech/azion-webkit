@@ -57,7 +57,10 @@
       >
         <template #body="slotProps">
           <div class="flex items-center justify-center">
-            <span class="font-normal whitespace-normal" v-html="formatCellContent(slotProps.data[`col_${index}`])"></span>
+            <span
+              class="font-normal whitespace-normal"
+              v-html="formatCellContent(slotProps.data[`col_${index}`])"
+            ></span>
           </div>
         </template>
       </Column>
@@ -134,7 +137,6 @@
     if (tbody) {
       bodyRows = Array.from(tbody.querySelectorAll('tr'))
     } else {
-
       const allRows = Array.from(table.querySelectorAll('tr'))
       bodyRows = allRows.slice(1)
     }

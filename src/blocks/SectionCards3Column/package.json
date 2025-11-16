@@ -1,0 +1,6 @@
+{
+  "main": "./index.ts",
+  "browser": {
+    "./sfc": "./SectionCards3Column.vue"
+  }
+}

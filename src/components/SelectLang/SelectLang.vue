@@ -15,7 +15,7 @@
         root: {
           class: 'flex flex-row justify-between items-center rounded-lg'
         },
-        panel: { class: 'bg-[#EDE8E8] rounded-lg p-2 w-full min-w-full' },
+        panel: { class: 'bg-[#EDE8E8] rounded-lg p-2 w-full min-w-20' },
         trigger: { class: 'text-neutral-900' }
       }"
       :appendTo="'self'"
@@ -39,7 +39,7 @@
         <a
           :href="slotProps.option.slug"
           target="_self"
-          class="block w-max-fit w-full rounded-sm p-2 text-xs text-neutral-900 hover:bg-[#F5F5F5]"
+          class="block w-full rounded-sm p-2 text-xs text-neutral-900 hover:bg-[#F5F5F5]"
         >
           {{ slotProps.option.lang }}
         </a>

@@ -1,0 +1,7 @@
+{
+  "main": "./sectionform.js",
+  "types": "./SectionForm.d.ts",
+  "browser": {
+    "./sfc": "./SectionForm.vue"
+  }
+}

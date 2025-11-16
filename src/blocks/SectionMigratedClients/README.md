@@ -13,31 +13,32 @@ A rebranding section component that displays two `MigratedClientsCard` component
 </template>
 
 <script setup>
-import SectionMigratedClients from '@/blocks/SectionMigratedClients'
+  import SectionMigratedClients from '@/blocks/SectionMigratedClients'
 
-const firstCardData = {
-  text: 'Before Migration',
-  logos: [
-    { imageSrc: '<svg>...</svg>', alt: 'Logo 1', title: 'Company 1' },
-    { imageSrc: '<svg>...</svg>', alt: 'Logo 2', title: 'Company 2' }
-  ],
-  link: '/before'
-}
+  const firstCardData = {
+    text: 'Before Migration',
+    logos: [
+      { imageSrc: '<svg>...</svg>', alt: 'Logo 1', title: 'Company 1' },
+      { imageSrc: '<svg>...</svg>', alt: 'Logo 2', title: 'Company 2' }
+    ],
+    link: '/before'
+  }
 
-const secondCardData = {
-  text: 'After Migration',
-  logos: [
-    { imageSrc: '<svg>...</svg>', alt: 'Logo 3', title: 'Company 3' },
-    { imageSrc: '<svg>...</svg>', alt: 'Logo 4', title: 'Company 4' }
-  ],
-  link: '/after'
-}
+  const secondCardData = {
+    text: 'After Migration',
+    logos: [
+      { imageSrc: '<svg>...</svg>', alt: 'Logo 3', title: 'Company 3' },
+      { imageSrc: '<svg>...</svg>', alt: 'Logo 4', title: 'Company 4' }
+    ],
+    link: '/after'
+  }
 </script>
 ```
 
 ## Props
 
 ### `firstCard`
+
 - **Type:** `Object`
 - **Required:** `true`
 - **Description:** Configuration object for the first MigratedClientsCard component
@@ -47,6 +48,7 @@ const secondCardData = {
   - `link` (String, optional): URL for the card link
 
 ### `secondCard`
+
 - **Type:** `Object`
 - **Required:** `true`
 - **Description:** Configuration object for the second MigratedClientsCard component
@@ -65,6 +67,7 @@ const secondCardData = {
 ## Styling
 
 The component uses Tailwind CSS classes for responsive grid layout:
+
 - Mobile: Single column (stacked cards)
 - Desktop (md+): Two equal columns (50% each)
 - Gap between cards: 1rem (gap-4)

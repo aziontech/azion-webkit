@@ -1,3 +1,661 @@
+## [1.266.5](https://github.com/aziontech/azion-webkit/compare/v1.266.4...v1.266.5) (2025-11-13)
+
+### Bug Fixes
+
+* hero and select lang fixes ([f587ddb](https://github.com/aziontech/azion-webkit/commit/f587ddb75210f5d27cc4bd41b23c3c90ea6580fd))
+
+## [1.266.4](https://github.com/aziontech/azion-webkit/compare/v1.266.3...v1.266.4) (2025-11-13)
+
+### Bug Fixes
+
+* allow empty href attributes in Button component regex patterns ([4a66622](https://github.com/aziontech/azion-webkit/commit/4a666227ec3e0442336526cba86402d294a384fe))
+
+## [1.266.3](https://github.com/aziontech/azion-webkit/compare/v1.266.2...v1.266.3) (2025-11-11)
+
+### Bug Fixes
+
+* button style ([36c6829](https://github.com/aziontech/azion-webkit/commit/36c68292c134ebbb7ee05bf1fd88f010b932993c))
+
+## [1.266.2](https://github.com/aziontech/azion-webkit/compare/v1.266.1...v1.266.2) (2025-11-11)
+
+### Bug Fixes
+
+* simplify MigratedClientsCard rendering with array iteration ([3877670](https://github.com/aziontech/azion-webkit/commit/387767058a759e2fe2e2b8b67d7e3a2fd922a898))
+
+## [1.266.1](https://github.com/aziontech/azion-webkit/compare/v1.266.0...v1.266.1) (2025-11-11)
+
+### Bug Fixes
+
+* button and carousel now support different targets types ([e9e6b14](https://github.com/aziontech/azion-webkit/commit/e9e6b14cdcd1f2637e380056fdaef21b3c820aeb))
+* edge network map degrade color ([b8e41e2](https://github.com/aziontech/azion-webkit/commit/b8e41e2b19f2341e7235dd73a4337894366b3930))
+
+## [1.266.0](https://github.com/aziontech/azion-webkit/compare/v1.265.0...v1.266.0) (2025-11-11)
+
+### Features
+
+* bold markdown text now are white ([8f62afe](https://github.com/aziontech/azion-webkit/commit/8f62afee5d92763e5f030e7435dcf65d06262da4))
+
+### Bug Fixes
+
+* fix Button component import path in HeroHome ([0d712bd](https://github.com/aziontech/azion-webkit/commit/0d712bd4dde752341c0aee96f3e9a9fddb7e42ec))
+
+## [1.265.0](https://github.com/aziontech/azion-webkit/compare/v1.264.1...v1.265.0) (2025-11-11)
+
+### Features
+
+* update HeroHome to use unified Button component ([73ec11e](https://github.com/aziontech/azion-webkit/commit/73ec11e09c4d52b276e38b6d8c3d81a810066a46))
+
+## [1.264.1](https://github.com/aziontech/azion-webkit/compare/v1.264.0...v1.264.1) (2025-11-11)
+
+### Bug Fixes
+
+* select lang ([d9eff52](https://github.com/aziontech/azion-webkit/commit/d9eff52520b01de5295573667e84626f2577cb11))
+
+## [1.264.0](https://github.com/aziontech/azion-webkit/compare/v1.263.8...v1.264.0) (2025-11-10)
+
+### Features
+
+* new section cta diagram ([cd41f4b](https://github.com/aziontech/azion-webkit/commit/cd41f4bcfcf96c1b246fce5e6fe1d350b29e2e75))
+
+### Bug Fixes
+
+* carousel disable hover, CallToAction text size ([11a10d3](https://github.com/aziontech/azion-webkit/commit/11a10d33cbe6f7ac95a1fb62b0ca1e74b22cbbae))
+* section card carousel margin bottom ([f3f3308](https://github.com/aziontech/azion-webkit/commit/f3f33082695b22e82971d41268eb44e7ac7f13ef))
+* section cards grid margin ([97694e7](https://github.com/aziontech/azion-webkit/commit/97694e72ea99e3a09dbd023a06fb60e83a343cff))
+* section logos title/btn alignment ([6c12258](https://github.com/aziontech/azion-webkit/commit/6c12258648a32e228a7705c71ca9d414dd8f0535))
+* update sectionCallToActionShared ([3f9f99c](https://github.com/aziontech/azion-webkit/commit/3f9f99c02e0e209267c5dfc6b3d5fd60c27a0c00))
+
+## [1.263.8](https://github.com/aziontech/azion-webkit/compare/v1.263.7...v1.263.8) (2025-11-07)
+
+### Bug Fixes
+
+* button type underline safety ([9d55a27](https://github.com/aziontech/azion-webkit/commit/9d55a2751f35e70b9f2a201a7a57cd01df9f9f65))
+
+## [1.263.7](https://github.com/aziontech/azion-webkit/compare/v1.263.6...v1.263.7) (2025-11-07)
+
+### Bug Fixes
+
+* section 3 cards content diagram ([9f2a4ae](https://github.com/aziontech/azion-webkit/commit/9f2a4aef81c3f473b8c5d7606a5b1975c0b7b609))
+* section card carousel ([943a212](https://github.com/aziontech/azion-webkit/commit/943a2121e9a7f042af79cf83dd626e113260af6a))
+
+## [1.263.6](https://github.com/aziontech/azion-webkit/compare/v1.263.5...v1.263.6) (2025-11-07)
+
+### Bug Fixes
+
+* update quote typography from display-3 to display-4 ([88cf239](https://github.com/aziontech/azion-webkit/commit/88cf23964f832179e076c3a4a2966e26662f6a3a))
+
+## [1.263.5](https://github.com/aziontech/azion-webkit/compare/v1.263.4...v1.263.5) (2025-11-07)
+
+### Bug Fixes
+
+* adjust bottom padding in mobile menu buttons ([ea07175](https://github.com/aziontech/azion-webkit/commit/ea0717530156df533bbf89633294d1cb4de5dbe6))
+
+## [1.263.4](https://github.com/aziontech/azion-webkit/compare/v1.263.3...v1.263.4) (2025-11-07)
+
+### Bug Fixes
+
+* increase bottom padding for mobile menu buttons ([f16fae3](https://github.com/aziontech/azion-webkit/commit/f16fae37ba13256897bb0a0f543b4061637a2bf3))
+
+## [1.263.3](https://github.com/aziontech/azion-webkit/compare/v1.263.2...v1.263.3) (2025-11-07)
+
+### Bug Fixes
+
+* bold link titles ([239821a](https://github.com/aziontech/azion-webkit/commit/239821a79e0dd00929d17c29301f45efb450969a))
+* markdown parser buttons margins, link hover and justify center section image content 2 column ([d916e09](https://github.com/aziontech/azion-webkit/commit/d916e09aec2b08bedb2c8e535e0089c3c344649a))
+* section title limited to 1024px ([8fe5a61](https://github.com/aziontech/azion-webkit/commit/8fe5a6116859b9f0a227efdae41c70e1b26ebdd2))
+* section title margins and max-w ([3dbf607](https://github.com/aziontech/azion-webkit/commit/3dbf607b9b6af99c6fb45001611736ffc79976ef))
+
+## [1.263.2](https://github.com/aziontech/azion-webkit/compare/v1.263.1...v1.263.2) (2025-11-07)
+
+### Bug Fixes
+
+* adjust bottom button spacing and sizing in mobile menu ([ebaa368](https://github.com/aziontech/azion-webkit/commit/ebaa368e2325935839aebccedfb8dd8087a1fa1d))
+
+## [1.263.1](https://github.com/aziontech/azion-webkit/compare/v1.263.0...v1.263.1) (2025-11-07)
+
+### Bug Fixes
+
+* improve mobile menu bottom buttons styling ([4e3a24d](https://github.com/aziontech/azion-webkit/commit/4e3a24db30a5cb3b8b8d04d59c13e5250b87117a))
+
+## [1.263.0](https://github.com/aziontech/azion-webkit/compare/v1.262.0...v1.263.0) (2025-11-07)
+
+### Features
+
+* adjust spacing and alignment in quote and carousel components ([cbec439](https://github.com/aziontech/azion-webkit/commit/cbec43956ca7c2dce7a550838b4fc5084def0684))
+
+## [1.262.0](https://github.com/aziontech/azion-webkit/compare/v1.261.1...v1.262.0) (2025-11-07)
+
+### Features
+
+* improve SectionCallToAction click behavior and typography ([9b64213](https://github.com/aziontech/azion-webkit/commit/9b642134a4903773d0abb7e2d3a78c064684c1fa))
+
+### Bug Fixes
+
+* improve component layouts and visual consistency ([fd42ec6](https://github.com/aziontech/azion-webkit/commit/fd42ec6b64e53b7553153cb31792cfb1285f3f09))
+* update button hover styles and add pt-10 spacing ([33a5031](https://github.com/aziontech/azion-webkit/commit/33a5031ad8a08617f4f6469d933cf7e92271db75))
+
+## [1.261.1](https://github.com/aziontech/azion-webkit/compare/v1.261.0...v1.261.1) (2025-11-07)
+
+### Bug Fixes
+
+* update title typography from display-2 to display-3 ([a4ee2f3](https://github.com/aziontech/azion-webkit/commit/a4ee2f36989d901eb7ede6521f05b4128a169ab3))
+
+## [1.261.0](https://github.com/aziontech/azion-webkit/compare/v1.260.4...v1.261.0) (2025-11-07)
+
+### Features
+
+* standardize heading sizes across section components ([c4877bb](https://github.com/aziontech/azion-webkit/commit/c4877bbb9d477ff8d319cc5a4f549e61a130485a))
+
+## [1.260.4](https://github.com/aziontech/azion-webkit/compare/v1.260.3...v1.260.4) (2025-11-07)
+
+### Bug Fixes
+
+* correct hover text color for primary dark button ([f45cdb0](https://github.com/aziontech/azion-webkit/commit/f45cdb069e1347c03b33beedf03753eaa7cde9e6))
+
+## [1.260.3](https://github.com/aziontech/azion-webkit/compare/v1.260.2...v1.260.3) (2025-11-07)
+
+### Bug Fixes
+
+* correct button hover and active state colors ([621957d](https://github.com/aziontech/azion-webkit/commit/621957d899aa95e91f528167a2d7994b8ac2a1ae))
+
+## [1.260.2](https://github.com/aziontech/azion-webkit/compare/v1.260.1...v1.260.2) (2025-11-06)
+
+### Bug Fixes
+
+* hotfix to optimize markdown parsing with computed properties ([2d048cc](https://github.com/aziontech/azion-webkit/commit/2d048ccc73cbf72e54740f06012a3309cacb1ac7))
+
+## [1.260.1](https://github.com/aziontech/azion-webkit/compare/v1.260.0...v1.260.1) (2025-11-05)
+
+### Bug Fixes
+
+* adjust docs header ([d87c83e](https://github.com/aziontech/azion-webkit/commit/d87c83ecef0d990467e4375e92114b32df17eb93))
+
+## [1.260.0](https://github.com/aziontech/azion-webkit/compare/v1.259.0...v1.260.0) (2025-11-05)
+
+### Features
+
+* section form ([7fcc5a9](https://github.com/aziontech/azion-webkit/commit/7fcc5a9663d3d288c839e65851cddc3066e6e796))
+
+### Bug Fixes
+
+* button hover color, section cta hover and spacing ([b80b491](https://github.com/aziontech/azion-webkit/commit/b80b49126222a2098c2501009cdb2ca16cec0398))
+* call to action shared ([b3cfafd](https://github.com/aziontech/azion-webkit/commit/b3cfafdc764f96d192ea62e1cfb0de892fd26367))
+
+## [1.259.0](https://github.com/aziontech/azion-webkit/compare/v1.258.1...v1.259.0) (2025-11-05)
+
+### Features
+
+* improve logos section layout when title is absent ([0d9fbf9](https://github.com/aziontech/azion-webkit/commit/0d9fbf9c2ff71d475caf2b2771210aa34b35c216))
+
+## [1.258.1](https://github.com/aziontech/azion-webkit/compare/v1.258.0...v1.258.1) (2025-11-05)
+
+### Bug Fixes
+
+* adjust font ([1bc3d06](https://github.com/aziontech/azion-webkit/commit/1bc3d06a060642c2d4630638525b1731afe3f87e))
+
+## [1.258.0](https://github.com/aziontech/azion-webkit/compare/v1.257.1...v1.258.0) (2025-11-04)
+
+### Features
+
+* overline text improvements ([836b5db](https://github.com/aziontech/azion-webkit/commit/836b5db6b24170e7fe06e801713f4ce04e615efe))
+* overline text improvements ([a00dfa8](https://github.com/aziontech/azion-webkit/commit/a00dfa8905a8d2ceadd8e4a69edd15162e645a0a))
+* section call to action black version and hover ([eed72e9](https://github.com/aziontech/azion-webkit/commit/eed72e97ba87da0fc5d4bee5e3622ec13c7d78b3))
+* section call to action black version and hover ([c3c6a7d](https://github.com/aziontech/azion-webkit/commit/c3c6a7d0e3c0d00b0d93d5f92550db1e9ba5622f))
+
+### Bug Fixes
+
+* lint ([625abee](https://github.com/aziontech/azion-webkit/commit/625abee3fb62f4415da0b1be0cdee4ed82072a41))
+* lint ([76a778a](https://github.com/aziontech/azion-webkit/commit/76a778a47be43da24fd2813d1cf4085d14f0fd88))
+* lint ([9838c29](https://github.com/aziontech/azion-webkit/commit/9838c29a3cc1fa72138b93874b7120f8894a6820))
+* remove package change ([567644a](https://github.com/aziontech/azion-webkit/commit/567644acfa086beaa16e88cff951bbe788f45723))
+* remove package change ([cfb12b3](https://github.com/aziontech/azion-webkit/commit/cfb12b3ce488a38cf9f7f1b5c972f16049f47fe0))
+* remove package change ([41cf78e](https://github.com/aziontech/azion-webkit/commit/41cf78eb899b54f55f66fc91d21a6b2dc14dbb59))
+* remove services from src inside dist ([12b32d4](https://github.com/aziontech/azion-webkit/commit/12b32d4f01cdba2638f9923704f572ccbfd33b63))
+* remove services from src inside dist ([81f73dc](https://github.com/aziontech/azion-webkit/commit/81f73dc47af6b93416b97e982ebda56f64c99a9d))
+* same path for service imports ([8b4194f](https://github.com/aziontech/azion-webkit/commit/8b4194ff1f98191ab1b32980faa2c4f023946f24))
+* same path for service imports ([e104968](https://github.com/aziontech/azion-webkit/commit/e104968ccc4b20fbca012682040f58a6a81da37d))
+* text aligment ([5ab961a](https://github.com/aziontech/azion-webkit/commit/5ab961a1614efab30133ae63afd012d9ae93251b))
+* text position ([fd7e499](https://github.com/aziontech/azion-webkit/commit/fd7e499f45ff199463fa8c68abca74616722ff28))
+* text position ([86b8822](https://github.com/aziontech/azion-webkit/commit/86b88221f7453a5388a8e2e9a765d80485da70b3))
+* V2 stories view ([62b882a](https://github.com/aziontech/azion-webkit/commit/62b882a01131b6c2e16cffda3094c4e2f64caad9))
+* V2 stories view ([ce89c92](https://github.com/aziontech/azion-webkit/commit/ce89c92381fc93c2d79bab483718bc7c307dc74f))
+
+## [1.257.1](https://github.com/aziontech/azion-webkit/compare/v1.257.0...v1.257.1) (2025-11-04)
+
+### Bug Fixes
+
+* clean up markdown parsing and remove unused component ([b23e0bb](https://github.com/aziontech/azion-webkit/commit/b23e0bb2d429edaca53729dab4c010b3933cdf62))
+* format code and remove whitespace ([2d6f6e4](https://github.com/aziontech/azion-webkit/commit/2d6f6e45f5d24c21672629d3cd5be780046bf995))
+
+## [1.257.0](https://github.com/aziontech/azion-webkit/compare/v1.256.4...v1.257.0) (2025-11-04)
+
+### Features
+
+* enhance SectionCallToAction stories with improved examples and docs ([95c790f](https://github.com/aziontech/azion-webkit/commit/95c790f3b96ebd81cdaebf8170fd895ba95bb09c))
+
+## [1.256.4](https://github.com/aziontech/azion-webkit/compare/v1.256.3...v1.256.4) (2025-11-04)
+
+### Bug Fixes
+
+* improve button styling and remove redundant list markup ([d7291d4](https://github.com/aziontech/azion-webkit/commit/d7291d42e8392f8f213e96fea39c5856e3e6f9a8))
+
+## [1.256.3](https://github.com/aziontech/azion-webkit/compare/v1.256.2...v1.256.3) (2025-11-04)
+
+### Bug Fixes
+
+* correct markdown service import path ([f5bcf17](https://github.com/aziontech/azion-webkit/commit/f5bcf17b89c6f6682489a48a2d379d5acd36cb29))
+
+## [1.256.2](https://github.com/aziontech/azion-webkit/compare/v1.256.1...v1.256.2) (2025-11-04)
+
+### Bug Fixes
+
+* improve button styling and layout in two-column section ([4489709](https://github.com/aziontech/azion-webkit/commit/44897099a03c5f353e010569553355893a0a3a88))
+
+## [1.256.1](https://github.com/aziontech/azion-webkit/compare/v1.256.0...v1.256.1) (2025-11-04)
+
+### Bug Fixes
+
+* adjust sections ([b5bb0e8](https://github.com/aziontech/azion-webkit/commit/b5bb0e8331581619c34db5bceaf4aac408358b7e))
+
+## [1.256.0](https://github.com/aziontech/azion-webkit/compare/v1.255.3...v1.256.0) (2025-11-03)
+
+### Features
+
+* adjust divider styling for better visual hierarchy ([995066b](https://github.com/aziontech/azion-webkit/commit/995066bc332144d65f6fad18613ec56ce2b81c90))
+
+## [1.255.3](https://github.com/aziontech/azion-webkit/compare/v1.255.2...v1.255.3) (2025-11-03)
+
+### Bug Fixes
+
+* correct divider spacing in markdown parser ([79ac6d6](https://github.com/aziontech/azion-webkit/commit/79ac6d68a0157c476b6f0fd7f19ccf38242f10d3))
+
+## [1.255.2](https://github.com/aziontech/azion-webkit/compare/v1.255.1...v1.255.2) (2025-11-03)
+
+### Bug Fixes
+
+* adjust divider height to use exact pixel value ([f4223a1](https://github.com/aziontech/azion-webkit/commit/f4223a1025fdacc33c47a807e558918015e13ef8))
+
+## [1.255.1](https://github.com/aziontech/azion-webkit/compare/v1.255.0...v1.255.1) (2025-11-03)
+
+### Bug Fixes
+
+* replace Overline component with direct styling ([f7e0e6f](https://github.com/aziontech/azion-webkit/commit/f7e0e6fe8286746981ee92c4276acfe1bc464aa6))
+
+## [1.255.0](https://github.com/aziontech/azion-webkit/compare/v1.254.0...v1.255.0) (2025-11-03)
+
+### Features
+
+* add new component ([dc74478](https://github.com/aziontech/azion-webkit/commit/dc744787e435d3e629e0aa739f8590ab3fbc5c35))
+
+## [1.254.0](https://github.com/aziontech/azion-webkit/compare/v1.253.0...v1.254.0) (2025-10-31)
+
+### Features
+
+* hero iframe right ([5d0452d](https://github.com/aziontech/azion-webkit/commit/5d0452d5b5b767172c0edeaaedabd4f2837c5830))
+* iframe resize function ([6dea589](https://github.com/aziontech/azion-webkit/commit/6dea589ba8efe5897d3b2c80b8b506393027da9e))
+
+## [1.253.0](https://github.com/aziontech/azion-webkit/compare/v1.252.0...v1.253.0) (2025-10-31)
+
+### Features
+
+* add support for primary buttons and dividers in markdown ([dee6c64](https://github.com/aziontech/azion-webkit/commit/dee6c648da24051a41e5377ccbf2cc3186987092))
+
+## [1.252.0](https://github.com/aziontech/azion-webkit/compare/v1.251.4...v1.252.0) (2025-10-30)
+
+### Features
+
+* enhance markdown link styling with custom button component ([52245eb](https://github.com/aziontech/azion-webkit/commit/52245eb36f639a315d47a4e3a1070433a026f816))
+
+## [1.251.4](https://github.com/aziontech/azion-webkit/compare/v1.251.3...v1.251.4) (2025-10-29)
+
+### Bug Fixes
+
+* improve responsive typography and spacing ([1aa6380](https://github.com/aziontech/azion-webkit/commit/1aa6380d66031cc9805fa941daca197fe063a5c2))
+
+## [1.251.3](https://github.com/aziontech/azion-webkit/compare/v1.251.2...v1.251.3) (2025-10-29)
+
+### Bug Fixes
+
+* refine typography system with improved spacing and readability ([977851a](https://github.com/aziontech/azion-webkit/commit/977851ad48a4df952e730b93401a7e4ba7d5a522))
+
+## [1.251.2](https://github.com/aziontech/azion-webkit/compare/v1.251.1...v1.251.2) (2025-10-29)
+
+### Bug Fixes
+
+* update Overline component import paths ([e522a0d](https://github.com/aziontech/azion-webkit/commit/e522a0d996339d08e7a49c0bd02a6ec2c3d0e14f))
+
+## [1.251.1](https://github.com/aziontech/azion-webkit/compare/v1.251.0...v1.251.1) (2025-10-29)
+
+### Bug Fixes
+
+* standardize Overline component directory casing ([b3eca05](https://github.com/aziontech/azion-webkit/commit/b3eca05795c68b8e52136fb2781b3d89e3520e15))
+
+## [1.251.0](https://github.com/aziontech/azion-webkit/compare/v1.250.0...v1.251.0) (2025-10-29)
+
+### Features
+
+* add responsive typography classes to tailwind config ([a3dc74d](https://github.com/aziontech/azion-webkit/commit/a3dc74de8e7c45161da36997fcfdb90c866f523a))
+
+## [1.250.0](https://github.com/aziontech/azion-webkit/compare/v1.249.2...v1.250.0) (2025-10-29)
+
+### Features
+
+* temporary grid pattern ([f7c3309](https://github.com/aziontech/azion-webkit/commit/f7c33098ecf04c4386e1114c909e0e462dcd0838))
+
+### Bug Fixes
+
+* backgroundStyle ([d763d83](https://github.com/aziontech/azion-webkit/commit/d763d83087509aa9090fc2f931a6e89725d647d2))
+* responsivity and import ([79671c4](https://github.com/aziontech/azion-webkit/commit/79671c4ea3f49811d3dc7e3915f0091850866cc7))
+
+## [1.249.2](https://github.com/aziontech/azion-webkit/compare/v1.249.1...v1.249.2) (2025-10-28)
+
+### Bug Fixes
+
+* adjust import errors ([d5af80b](https://github.com/aziontech/azion-webkit/commit/d5af80be54c5fc4094e3e72611ad6542488c5f96))
+
+## [1.249.1](https://github.com/aziontech/azion-webkit/compare/v1.249.0...v1.249.1) (2025-10-28)
+
+### Bug Fixes
+
+* add bottom margin to logo in Quote component ([a5a4e1e](https://github.com/aziontech/azion-webkit/commit/a5a4e1ec476d261522e612031a82ab7bacedc882))
+* add escaped hyphen support in markdown service for bullet points ([3bab54b](https://github.com/aziontech/azion-webkit/commit/3bab54be5feb2b9fd3cdacd68241ab49488afcf7))
+* change bullet points from dashes to disc bullets in markdown service ([c697d23](https://github.com/aziontech/azion-webkit/commit/c697d23c8299554139126e56fd8443988627faf8))
+* improve responsive layout and typography in Hero2Column ([236c63f](https://github.com/aziontech/azion-webkit/commit/236c63fe031dd2c99ea96a80dd318236e220feee))
+* improve responsive spacing in SectionLogosQuote2Column header ([2a9332d](https://github.com/aziontech/azion-webkit/commit/2a9332d068ae8056c7ec8130455f3cb7feae89df))
+* remove redundant flex-col class in SectionCardCarousel header ([f39b864](https://github.com/aziontech/azion-webkit/commit/f39b864953e9eacbf34ef6dedc84f32a22255365))
+
+## [1.249.0](https://github.com/aziontech/azion-webkit/compare/v1.248.2...v1.249.0) (2025-10-28)
+
+### Features
+
+* clean up blocksV2 stories to keep only Default and Documentation ([76703e6](https://github.com/aziontech/azion-webkit/commit/76703e677a0b3b9accda95ee705057cea8353955))
+* rename SectionContentImage2Column to SectionContent2Column ([abe6840](https://github.com/aziontech/azion-webkit/commit/abe6840d706673b104fd057300d93f0ce9532837))
+
+## [1.248.2](https://github.com/aziontech/azion-webkit/compare/v1.248.1...v1.248.2) (2025-10-28)
+
+### Bug Fixes
+
+* remove border and dots from hero image and update background colors to [#0](https://github.com/aziontech/azion-webkit/issues/0)A0A0A ([dea0d14](https://github.com/aziontech/azion-webkit/commit/dea0d14aba3b5c3c9913305f1cc9770887667bf7)), closes [#0A0A0A](https://github.com/aziontech/azion-webkit/issues/0A0A0A)
+
+## [1.248.1](https://github.com/aziontech/azion-webkit/compare/v1.248.0...v1.248.1) (2025-10-28)
+
+### Bug Fixes
+
+* correct image vertical positioning in 2-column section ([4321689](https://github.com/aziontech/azion-webkit/commit/43216895045bdfe710f8629627ce277bea544820))
+
+## [1.248.0](https://github.com/aziontech/azion-webkit/compare/v1.247.0...v1.248.0) (2025-10-28)
+
+### Features
+
+* add markdown parsing service and update UI components with hover effects ([9430310](https://github.com/aziontech/azion-webkit/commit/9430310620aed774e6839d8372c199db20a5910a))
+
+## [1.247.0](https://github.com/aziontech/azion-webkit/compare/v1.246.0...v1.247.0) (2025-10-27)
+
+### Features
+
+* enhance visual components and layout styling ([df33d0e](https://github.com/aziontech/azion-webkit/commit/df33d0ef07fa2f6e67344a39c6cac62934782ede))
+
+## [1.246.0](https://github.com/aziontech/azion-webkit/compare/v1.245.1...v1.246.0) (2025-10-27)
+
+### Features
+
+* grid pattern ([5b79a5a](https://github.com/aziontech/azion-webkit/commit/5b79a5a21322312515ff96b8d2cb6cff6fd86b1b))
+* Section Content 3 columns ([14457c6](https://github.com/aziontech/azion-webkit/commit/14457c6ae74befb990b6bf2ad8f1e70252a25682))
+* section title ([c2c43b7](https://github.com/aziontech/azion-webkit/commit/c2c43b74ac5c62eccc65afa71896f66963dafafd))
+* use grid pattern inside Section Content Images 2 Columns ([6a6023f](https://github.com/aziontech/azion-webkit/commit/6a6023f657383bb80087993e372ec189e502c8ee))
+
+### Bug Fixes
+
+* Section Title types ([7f60598](https://github.com/aziontech/azion-webkit/commit/7f605985d6385e73ee71d300bfb419fb46c698c0))
+* storybook names ([68601e3](https://github.com/aziontech/azion-webkit/commit/68601e302163cda09bd46387e74c79b6efa3648d))
+
+## [1.245.1](https://github.com/aziontech/azion-webkit/compare/v1.245.0...v1.245.1) (2025-10-27)
+
+### Bug Fixes
+
+* remove BigNumbers component and fix import path ([0333336](https://github.com/aziontech/azion-webkit/commit/033333670fbf451af32df6fd02e298fa6c557074))
+
+## [1.245.0](https://github.com/aziontech/azion-webkit/compare/v1.244.0...v1.245.0) (2025-10-27)
+
+### Features
+
+* enhance image content section with flexible layout options ([e97c6b3](https://github.com/aziontech/azion-webkit/commit/e97c6b33b2cae95ff5b613fba3da23569a8016c3))
+
+## [1.244.0](https://github.com/aziontech/azion-webkit/compare/v1.243.1...v1.244.0) (2025-10-27)
+
+### Features
+
+* add comprehensive SectionCallToAction stories ([933e580](https://github.com/aziontech/azion-webkit/commit/933e580e8e948533f954b1ee80298de3cc314895))
+* improve Hero2Column responsive layout ([2ade5b5](https://github.com/aziontech/azion-webkit/commit/2ade5b5eddd353499fad4b619675455d961a0c96))
+* update SectionCallToAction interface structure ([f3168ee](https://github.com/aziontech/azion-webkit/commit/f3168eea0b179d70f9851886a958243d84ebe818))
+
+### Bug Fixes
+
+* correct import path for markdown service in Hero2Column ([e52f2ad](https://github.com/aziontech/azion-webkit/commit/e52f2ad7f7d0f143766e8c6fbcc289023f3150f1))
+* correct markdown service import path ([1ff6823](https://github.com/aziontech/azion-webkit/commit/1ff6823c6d615fe06e113298c9cabce884908a88))
+
+## [1.243.1](https://github.com/aziontech/azion-webkit/compare/v1.243.0...v1.243.1) (2025-10-27)
+
+### Bug Fixes
+
+* add markdown parsing to call-to-action section ([b13f954](https://github.com/aziontech/azion-webkit/commit/b13f954755b97399992dbc3ffbbc407bed20a2d0))
+
+## [1.243.0](https://github.com/aziontech/azion-webkit/compare/v1.242.0...v1.243.0) (2025-10-27)
+
+### Features
+
+* redesign call-to-action section with split layout ([a7518bc](https://github.com/aziontech/azion-webkit/commit/a7518bc22a7bfe588e11ae750846ebd944cb4629))
+
+## [1.242.0](https://github.com/aziontech/azion-webkit/compare/v1.241.0...v1.242.0) (2025-10-27)
+
+### Features
+
+* card link component ([6015d51](https://github.com/aziontech/azion-webkit/commit/6015d512410bd3f733acaf5d13581fabdd240dc0))
+
+## [1.241.0](https://github.com/aziontech/azion-webkit/compare/v1.240.4...v1.241.0) (2025-10-25)
+
+### Features
+
+* redesign layout and styling of hero and section components ([4bd3ec9](https://github.com/aziontech/azion-webkit/commit/4bd3ec9127dd473abd1d83a0791b454749b4f252))
+
+## [1.240.4](https://github.com/aziontech/azion-webkit/compare/v1.240.3...v1.240.4) (2025-10-24)
+
+### Bug Fixes
+
+* enhance link styling in markdown parser ([7ddd7fb](https://github.com/aziontech/azion-webkit/commit/7ddd7fb56828d3b8a66ddc9b992fe0f5edaf02ce)), closes [#8B5CF6](https://github.com/aziontech/azion-webkit/issues/8B5CF6) [#7C3AED](https://github.com/aziontech/azion-webkit/issues/7C3AED)
+
+## [1.240.3](https://github.com/aziontech/azion-webkit/compare/v1.240.2...v1.240.3) (2025-10-24)
+
+### Bug Fixes
+
+* update markdown service import paths ([2589441](https://github.com/aziontech/azion-webkit/commit/258944178df029c9d4bfbb4cda18f0a60024f604))
+
+## [1.240.2](https://github.com/aziontech/azion-webkit/compare/v1.240.1...v1.240.2) (2025-10-24)
+
+### Bug Fixes
+
+* correct markdown-service import paths in components ([03ae98f](https://github.com/aziontech/azion-webkit/commit/03ae98f5df9a504e5c43c12a6920d5d4bd56d099))
+
+## [1.240.1](https://github.com/aziontech/azion-webkit/compare/v1.240.0...v1.240.1) (2025-10-24)
+
+### Bug Fixes
+
+* empty commit ([410dd13](https://github.com/aziontech/azion-webkit/commit/410dd136eb5c2c905ced65cfc994165fc10ba799))
+
+## [1.240.0](https://github.com/aziontech/azion-webkit/compare/v1.239.1...v1.240.0) (2025-10-23)
+
+### Features
+
+* add markdown parsing utility function ([4ed8215](https://github.com/aziontech/azion-webkit/commit/4ed8215627a2b7a1c7733d0c8c6b56f07b42a699))
+
+## [1.239.1](https://github.com/aziontech/azion-webkit/compare/v1.239.0...v1.239.1) (2025-10-23)
+
+### Bug Fixes
+
+* add margin bottom classes to markdown-generated HTML elements ([b41df87](https://github.com/aziontech/azion-webkit/commit/b41df87eef0b4b3d4192e6c892bc61cc6830c1ee))
+
+## [1.239.0](https://github.com/aziontech/azion-webkit/compare/v1.238.1...v1.239.0) (2025-10-23)
+
+### Features
+
+* add font-sora class to all markdown-generated HTML elements ([41d845b](https://github.com/aziontech/azion-webkit/commit/41d845b85c0a8c4a13266813b6be89367a21538a))
+
+## [1.238.1](https://github.com/aziontech/azion-webkit/compare/v1.238.0...v1.238.1) (2025-10-22)
+
+### Bug Fixes
+
+* improve markdown parsing to support multiline bold and italic formatting ([0ac272d](https://github.com/aziontech/azion-webkit/commit/0ac272d12faad1de95957b28c7409acb97f4cb03))
+
+## [1.238.0](https://github.com/aziontech/azion-webkit/compare/v1.237.3...v1.238.0) (2025-10-22)
+
+### Features
+
+* enhance markdown parser with escaped characters and HTML entity support ([05af8ae](https://github.com/aziontech/azion-webkit/commit/05af8aeee826de21cd16bd389020b23ee1983738))
+
+## [1.237.3](https://github.com/aziontech/azion-webkit/compare/v1.237.2...v1.237.3) (2025-10-22)
+
+### Bug Fixes
+
+* add markdown parser to SectionImageContent2Column component ([46f7d3b](https://github.com/aziontech/azion-webkit/commit/46f7d3b4553efe62c878836a4efd3a75e4ffedc9))
+
+## [1.237.2](https://github.com/aziontech/azion-webkit/compare/v1.237.1...v1.237.2) (2025-10-22)
+
+### Bug Fixes
+
+* rename component files and update HTML references from raw to markdown ([1b88d9a](https://github.com/aziontech/azion-webkit/commit/1b88d9af48007aa08225823fb40bf0177045574a))
+
+## [1.237.1](https://github.com/aziontech/azion-webkit/compare/v1.237.0...v1.237.1) (2025-10-22)
+
+### Bug Fixes
+
+* rename descriptionRawHtml prop to descriptionRawMarkdown ([fb65e37](https://github.com/aziontech/azion-webkit/commit/fb65e37faf3e7795ee1ab7b471b75cf462f1e39a))
+
+## [1.237.0](https://github.com/aziontech/azion-webkit/compare/v1.236.0...v1.237.0) (2025-10-22)
+
+### Features
+
+* adiciona suporte a HTML/markdown nos bullets do SectionImageContent2Column ([dc0e971](https://github.com/aziontech/azion-webkit/commit/dc0e971edf31c2829a25b8ed4d3f9340841f1233))
+
+### Bug Fixes
+
+* rename contentHtml prop to descriptionRawHtml for clarity ([1fee073](https://github.com/aziontech/azion-webkit/commit/1fee073770bdb992242792b3eb62ad943cc00199))
+
+## [1.236.0](https://github.com/aziontech/azion-webkit/compare/v1.235.2...v1.236.0) (2025-10-22)
+
+### Features
+
+* bump version for component renaming ([76fdac8](https://github.com/aziontech/azion-webkit/commit/76fdac8ac167cabc389ab795e28f1ae5af046a0b))
+
+## [1.235.2](https://github.com/aziontech/azion-webkit/compare/v1.235.1...v1.235.2) (2025-10-21)
+
+### Bug Fixes
+
+* força fundo escuro no Storybook com CSS direto ([92bd08e](https://github.com/aziontech/azion-webkit/commit/92bd08e84db0384abc4ab47fc9247b02f0ba8d21))
+
+## [1.235.1](https://github.com/aziontech/azion-webkit/compare/v1.235.0...v1.235.1) (2025-10-21)
+
+### Bug Fixes
+
+* define background padrão dark no Storybook ([cd390f6](https://github.com/aziontech/azion-webkit/commit/cd390f6334e60d4ca42273474147252b2a121369))
+
+## [1.235.0](https://github.com/aziontech/azion-webkit/compare/v1.234.2...v1.235.0) (2025-10-21)
+
+### Features
+
+* adiciona SectionStickyContent mockado no App.vue ([54db97b](https://github.com/aziontech/azion-webkit/commit/54db97b382c7ba0c12775d2843167f4668bc9636))
+
+### Bug Fixes
+
+* adjust sticky section layout with updated spacing, width and color values ([886fd46](https://github.com/aziontech/azion-webkit/commit/886fd46cb92bac129c8a7b82eb19ca529edcd18a))
+
+## [1.234.2](https://github.com/aziontech/azion-webkit/compare/v1.234.1...v1.234.2) (2025-10-21)
+
+### Bug Fixes
+
+* adjust padding to vertical only on md breakpoint in ProductHero section ([f9e73e2](https://github.com/aziontech/azion-webkit/commit/f9e73e245d1a672953b8c7c5912b7c6a64e0e2d9))
+
+## [1.234.1](https://github.com/aziontech/azion-webkit/compare/v1.234.0...v1.234.1) (2025-10-21)
+
+### Bug Fixes
+
+* adjust imports ([1ef6df8](https://github.com/aziontech/azion-webkit/commit/1ef6df8b6d5361db98e78f18d3adbd3717eada63))
+* adjust section spacing and button layout for improved responsive design ([6ba8b16](https://github.com/aziontech/azion-webkit/commit/6ba8b16a712e93d650e43fb76dba8a6f2b8c509a))
+
+## [1.234.0](https://github.com/aziontech/azion-webkit/compare/v1.233.0...v1.234.0) (2025-10-20)
+
+### Features
+
+* adiciona SectionCardCarousel com Swiper, título e paginação customizada ([448f72a](https://github.com/aziontech/azion-webkit/commit/448f72a3c7a285c0c06281f9bdc615f3e7cacef7))
+* adiciona suporte para ícone na tag dos cards do carrossel ([ae4326c](https://github.com/aziontech/azion-webkit/commit/ae4326c299ffc815184ce9ee793580f271c6a60d))
+
+### Bug Fixes
+
+* product carousel section and unused component import ([a169ad8](https://github.com/aziontech/azion-webkit/commit/a169ad8c739820304243f6e59251780d058280a4))
+
+## [1.233.0](https://github.com/aziontech/azion-webkit/compare/v1.232.0...v1.233.0) (2025-10-20)
+
+### Features
+
+* adiciona bordas e square bullets nos cantos dos cards do SectionProductGridCards ([9d7dbdb](https://github.com/aziontech/azion-webkit/commit/9d7dbdb0af9dfabc0b2b9daef5d0f2fc964b8227))
+* adiciona componente SectionProductGridCards com grid responsivo de cards ([9c04333](https://github.com/aziontech/azion-webkit/commit/9c043332eaacd5432cd79de93eeff7729a35be86))
+* implementa lógica responsiva de square bullets (mobile: topo, desktop: esquerda) ([a8a3293](https://github.com/aziontech/azion-webkit/commit/a8a3293a361a54cd0c03be65988918765ab13898))
+
+### Bug Fixes
+
+* garante que o último card tenha bullet no topo esquerdo ([0eb98f9](https://github.com/aziontech/azion-webkit/commit/0eb98f9d31268b6ad6655a14add1f71e54223f57))
+* todos os cards têm square bullets nos dois lados do topo no mobile ([7b21dc3](https://github.com/aziontech/azion-webkit/commit/7b21dc38a650436f97f42bb7a1e0dc8ee85ae63d))
+* unused product grid cards section and component import ([566b19c](https://github.com/aziontech/azion-webkit/commit/566b19c76017c5003be7f45e0f6cd1a477779652))
+
+## [1.232.0](https://github.com/aziontech/azion-webkit/compare/v1.231.2...v1.232.0) (2025-10-20)
+
+### Features
+
+* adiciona TypeScript definitions, index e stories do SectionGetStarted ([76cf3a6](https://github.com/aziontech/azion-webkit/commit/76cf3a6c98d9bfa3739337cba54dc8894dd25c63))
+
+### Bug Fixes
+
+* corrige estrutura do SectionGetStarted e remove exemplo do App.vue ([994b1b2](https://github.com/aziontech/azion-webkit/commit/994b1b2d1010e57254f9f81319cba7352fdc7d58))
+
+## [1.231.2](https://github.com/aziontech/azion-webkit/compare/v1.231.1...v1.231.2) (2025-10-17)
+
+### Bug Fixes
+
+* standardize section padding and update dark background color to neutral-950 ([efd0659](https://github.com/aziontech/azion-webkit/commit/efd06595c7308c4da7dee4997177ff16eefa69b5))
+
+## [1.231.1](https://github.com/aziontech/azion-webkit/compare/v1.231.0...v1.231.1) (2025-10-17)
+
+### Bug Fixes
+
+* adjust spacing and logo dimensions in client cards and carousel sections ([27ba0c1](https://github.com/aziontech/azion-webkit/commit/27ba0c1bd6654fdb1c47d55dcf144504f2264dc3))
+
+## [1.231.0](https://github.com/aziontech/azion-webkit/compare/v1.230.6...v1.231.0) (2025-10-17)
+
+### Features
+
+* section network ([54af289](https://github.com/aziontech/azion-webkit/commit/54af28907ff49fba5c4d0f772a0a739d120b1da2))
+
+### Bug Fixes
+
+* update component name import ([03e1abc](https://github.com/aziontech/azion-webkit/commit/03e1abc16143ec385a45816d4c3dc38ec988be6d))
+
+## [1.230.6](https://github.com/aziontech/azion-webkit/compare/v1.230.5...v1.230.6) (2025-10-17)
+
+### Bug Fixes
+
+* adjust max-width breakpoints and add responsive width classes across multiple components ([5f1c139](https://github.com/aziontech/azion-webkit/commit/5f1c139cb44570edad84134a582daf2f516e6926))
+
+## [1.230.5](https://github.com/aziontech/azion-webkit/compare/v1.230.4...v1.230.5) (2025-10-17)
+
+### Bug Fixes
+
+* standardize logo height to max-h-8 across components ([6962baa](https://github.com/aziontech/azion-webkit/commit/6962baa8183a4dab915467289fef2f24a08491ec))
+
+## [1.230.4](https://github.com/aziontech/azion-webkit/compare/v1.230.3...v1.230.4) (2025-10-17)
+
+### Bug Fixes
+
+* update quote component with inverted logo and neutral color scheme ([758365e](https://github.com/aziontech/azion-webkit/commit/758365e7bb75d905c2196cc2d3965b017c20c319))
+
 ## [1.230.3](https://github.com/aziontech/azion-webkit/compare/v1.230.2...v1.230.3) (2025-10-16)
 
 ### Bug Fixes

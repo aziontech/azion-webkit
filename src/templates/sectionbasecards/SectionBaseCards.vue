@@ -24,11 +24,15 @@
             <CardDescription>
               <div class="flex flex-col gap-2">
                 <template v-if="!card.link">
-                {{ card.description }}
+                  {{ card.description }}
                 </template>
                 <template v-else>
                   {{ card.description }}
-                  <a :href="card.link" class="font-semibold mt-5 ">{{ card.linkText }}</a>
+                  <a
+                    :href="card.link"
+                    class="font-semibold mt-5"
+                    >{{ card.linkText }}</a
+                  >
                 </template>
               </div>
             </CardDescription>

@@ -1,0 +1,7 @@
+{
+  "main": "./overline.js",
+  "types": "./Overline.d.ts",
+  "browser": {
+    "./sfc": "./Overline.vue"
+  }
+}

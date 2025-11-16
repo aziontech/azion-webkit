@@ -12,8 +12,17 @@ export default {
         { name: 'dark', value: '#0a0a0a' },
         { name: 'light', value: '#ffffff' }
       ]
+    },
+    docs: {
+      description: {
+        component: `
+**IMPORTANT:** A mobile-first carousel block component for displaying pricing cards using Swiper. Designed specifically for mobile visualization showing 1.25 cards with smooth scrolling. To see the component properly, use the responsive viewport controls in Storybook 
+
+        `
+      }
     }
   },
+
   decorators: [
     (story) => ({
       components: { story },
@@ -24,184 +33,196 @@ export default {
 
 const pricingCards = [
   {
-    title: "Free",
-    subtitle: "Start free with personal projects and learning",
-    monthlyPrice: "$0",
-    annualPrice: "$0",
-    savings: "",
+    title: 'Free',
+    subtitle: 'Start free with personal projects and learning',
+    monthlyPrice: '$0',
+    annualPrice: '$0',
+    savings: '',
     features: [
       {
-        label: "Global CDN",
-        icon: "pi-globe"
+        label: 'Global CDN',
+        icon: 'pi-globe'
       },
       {
-        label: "Serverless Functions",
-        icon: "pi-code"
+        label: 'Serverless Functions',
+        icon: 'pi-code'
       },
       {
-        label: "Image optimization",
-        icon: "pi-image"
+        label: 'Image optimization',
+        icon: 'pi-image'
       },
       {
-        label: "Storage & SQL Database",
-        icon: "pi-database"
+        label: 'Storage & SQL Database',
+        icon: 'pi-database'
       },
       {
-        label: "Web Application Firewall",
-        icon: "pi-lock"
+        label: 'Web Application Firewall',
+        icon: 'pi-lock'
       },
       {
-        label: "DDoS Protection",
-        icon: "pi-shield"
+        label: 'DDoS Protection',
+        icon: 'pi-shield'
       }
     ],
-    buttonLabel: "Free forever",
+    buttonLabel: 'Free forever',
     popular: false
   },
   {
-    title: "Pro",
-    subtitle: "Scale applications securely as an independent professional",
-    monthlyPrice: "$25",
-    annualPrice: "$20",
-    savings: "Save 20%",
+    title: 'Pro',
+    subtitle: 'Scale applications securely as an independent professional',
+    monthlyPrice: '$25',
+    annualPrice: '$20',
+    savings: 'Save 20%',
     features: [
       {
-        label: "All Free features, plus"
+        label: 'All Free features, plus'
       },
       {
-        label: "Additional workloads",
-        icon: "pi-box"
+        label: 'Additional workloads',
+        icon: 'pi-box'
       },
       {
-        label: "Higher application limits",
-        icon: "pi-check-circle"
+        label: 'Higher application limits',
+        icon: 'pi-check-circle'
       },
       {
-        label: "Real-time event observability",
-        icon: "pi-eye"
+        label: 'Real-time event observability',
+        icon: 'pi-eye'
       },
       {
-        label: "Enhanced security features",
-        icon: "pi-shield"
+        label: 'Enhanced security features',
+        icon: 'pi-shield'
       },
       {
-        label: "Technical Support",
-        icon: "pi-question-circle"
+        label: 'Technical Support',
+        icon: 'pi-question-circle'
       }
     ],
-    buttonLabel: "Contact Us",
+    buttonLabel: 'Contact Us',
     popular: false
   },
   {
-    title: "Business",
-    subtitle: "Power small businesses with advanced security and compliance",
-    monthlyPrice: "$250",
-    annualPrice: "$200",
-    savings: "Save 20%",
+    title: 'Business',
+    subtitle: 'Power small businesses with advanced security and compliance',
+    monthlyPrice: '$250',
+    annualPrice: '$200',
+    savings: 'Save 20%',
     features: [
       {
-        label: "All Pro features, plus"
+        label: 'All Pro features, plus'
       },
       {
-        label: "Higher limits for Functions",
-        icon: "pi-code"
+        label: 'Higher limits for Functions',
+        icon: 'pi-code'
       },
       {
-        label: "Expanded Storage",
-        icon: "pi-database"
+        label: 'Expanded Storage',
+        icon: 'pi-database'
       },
       {
-        label: "Custom Certificates",
-        icon: "pi-verified"
+        label: 'Custom Certificates',
+        icon: 'pi-verified'
       },
       {
-        label: "Integration Services",
-        icon: "pi-wrench"
+        label: 'Integration Services',
+        icon: 'pi-wrench'
       },
       {
-        label: "Compliance (PCI DSS, SOC 2/3)",
-        icon: "pi-file-check"
+        label: 'Compliance (PCI DSS, SOC 2/3)',
+        icon: 'pi-file-check'
       }
     ],
-    buttonLabel: "Contact Us",
+    buttonLabel: 'Contact Us',
     popular: true
   },
   {
-    title: "Enterprise",
-    subtitle: "Custom contracts for mission-critical enterprise applications",
-    monthlyPrice: "Custom",
-    annualPrice: "Custom",
-    savings: "",
-    customPrice: "Custom",
+    title: 'Enterprise',
+    subtitle: 'Custom contracts for mission-critical enterprise applications',
+    monthlyPrice: 'Custom',
+    annualPrice: 'Custom',
+    savings: '',
+    customPrice: 'Custom',
     features: [
       {
-        label: "All Business features, plus"
+        label: 'All Business features, plus'
       },
       {
-        label: "Customized Contracts",
-        icon: "pi-file-check"
+        label: 'Customized Contracts',
+        icon: 'pi-file-check'
       },
       {
-        label: "Extra Integration Hours",
-        icon: "pi-arrow-right-arrow-left"
+        label: 'Extra Integration Hours',
+        icon: 'pi-arrow-right-arrow-left'
       },
       {
-        label: "Best Practices Review",
-        icon: "pi-search-plus"
+        label: 'Best Practices Review',
+        icon: 'pi-search-plus'
       },
       {
-        label: "Business Events Support",
-        icon: "pi-compass"
+        label: 'Business Events Support',
+        icon: 'pi-compass'
       },
       {
-        label: "Technical Account Manager",
-        icon: "pi-user"
+        label: 'Technical Account Manager',
+        icon: 'pi-user'
       }
     ],
-    buttonLabel: "Contact Us",
+    buttonLabel: 'Contact Us',
     popular: false
   }
 ]
 
 const pricingTableData = [
   {
-    overline: "Managed Infrastructure",
-    title: "Azion Platform",
-    description: "Powering modern workloads on global infrastructure.",
+    overline: 'Managed Infrastructure',
+    title: 'Azion Platform',
+    description: 'Powering modern workloads on global infrastructure.',
     features: [
       {
-        name: "Workspaces",
+        name: 'Workspaces',
         nested: true,
-        values: ["1 Workspace", "1 Workspace", "1 Workspace", "Custom"]
+        values: ['1 Workspace', '1 Workspace', '1 Workspace', 'Custom']
       },
       {
-        name: "Workloads",
+        name: 'Workloads',
         nested: true,
         values: [
-          "10 included",
-          "20 included, then $0.10 per workload per month",
-          "100 included, then $0.10 per workload per month",
-          "Custom"
+          '10 included',
+          '20 included, then $0.10 per workload per month',
+          '100 included, then $0.10 per workload per month',
+          'Custom'
         ]
       },
       {
-        name: "Data Transfer",
+        name: 'Data Transfer',
         nested: true,
         values: [
-          "1 TB / month included",
-          "2 TB / month included, then starting at $0.02 per GB",
-          "10 TB / month included, then starting at $0.02 per GB",
-          "Custom"
+          '1 TB / month included',
+          '2 TB / month included, then starting at $0.02 per GB',
+          '10 TB / month included, then starting at $0.02 per GB',
+          'Custom'
         ]
       }
     ]
   }
 ]
 
-export const Default = {
-  args: {
-    cards: pricingCards,
-    table: pricingTableData,
-    buttonLabel: "START NOW"
-  }
+const Template = (args) => ({
+  components: { PricingCardCarousel },
+  setup() {
+    return { args }
+  },
+  template: `
+    <PricingCardCarousel
+      :cards="args.cards"
+      :table="args.table"
+      :buttonLabel="args.buttonLabel"
+    />
+  `
+})
+
+export const Default = Template.bind({})
+Default.args = {
+  cards: pricingCards,
+  buttonLabel: 'START NOW'
 }
