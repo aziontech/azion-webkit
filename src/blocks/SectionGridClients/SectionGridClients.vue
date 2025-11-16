@@ -1,7 +1,9 @@
 <template>
   <section
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-xl xxxl:max-w-xxl mx-auto pt-40"
-  >
+    class="m-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12"
+    :class="`${bottomSpacing}`"
+    :id="id"
+    >
     <template
       v-for="(item, index) in layoutTypes"
       :key="index"
@@ -34,6 +36,15 @@
     personaCards: {
       type: Array,
       default: () => []
+    },
+    bottomSpacing: {
+      type: String,
+      options: ['mb-0', 'mb-6', 'mb-12', 'mb-24', 'mb-48'],
+      default: 'mb-24'
+    },
+    id: {
+      type: String,
+      default: ''
     }
   })
 

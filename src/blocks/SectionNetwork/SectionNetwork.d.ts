@@ -5,13 +5,13 @@ export interface NetworkListItem {
   title: string
 }
 
-export interface NetworkListProps {
+export interface SectionNetworkProps {
   /** Cards displayed to the right/below the map */
   items: NetworkListItem[]
   /** Section title */
   title: string
-  /** Section description (supports HTML via v-html) */
-  descriptionHtml: string
+  /** Section description in raw markdown format (will be parsed and rendered) */
+  descriptionRawMarkdown: string
   /** Uppercase overline tags shown on the right of the header */
   overlines?: string[]
 }
