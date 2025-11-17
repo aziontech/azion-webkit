@@ -1,3 +1,9 @@
+## [1.266.7](https://github.com/aziontech/azion-webkit/compare/v1.266.6...v1.266.7) (2025-11-17)
+
+### Bug Fixes
+
+* set up paddings and margins to non-used new blocks ([8c1ca22](https://github.com/aziontech/azion-webkit/commit/8c1ca2243be0072bb898e87a846cd9630408441e))
+
 ## [1.266.6](https://github.com/aziontech/azion-webkit/compare/v1.266.5...v1.266.6) (2025-11-17)
 
 ### Bug Fixes
