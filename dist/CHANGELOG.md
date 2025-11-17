@@ -1,3 +1,13 @@
+## [1.267.0](https://github.com/aziontech/azion-webkit/compare/v1.266.7...v1.267.0) (2025-11-17)
+
+### Features
+
+* add button link in markdown service ([a501b08](https://github.com/aziontech/azion-webkit/commit/a501b083214142e9cdfef998bf7d7398130a8c61))
+
+### Bug Fixes
+
+* clients cards ([2ce9788](https://github.com/aziontech/azion-webkit/commit/2ce9788229582d11bb3c0f5db1be535442bb4d80))
+
 ## [1.266.7](https://github.com/aziontech/azion-webkit/compare/v1.266.6...v1.266.7) (2025-11-17)
 
 ### Bug Fixes
