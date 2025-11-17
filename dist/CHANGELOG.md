@@ -1,3 +1,9 @@
+## [1.267.4](https://github.com/aziontech/azion-webkit/compare/v1.267.3...v1.267.4) (2025-11-17)
+
+### Bug Fixes
+
+* add documentation to blocks ([1484420](https://github.com/aziontech/azion-webkit/commit/1484420ab1173d1d9bfadb12c15d0a3df7f74175))
+
 ## [1.267.3](https://github.com/aziontech/azion-webkit/compare/v1.267.2...v1.267.3) (2025-11-17)
 
 ### Bug Fixes
