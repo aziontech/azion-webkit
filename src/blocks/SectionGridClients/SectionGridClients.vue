@@ -8,13 +8,13 @@
       v-for="(item, index) in layoutTypes"
       :key="index"
     >
-      <component
-        :is="componentsMapping[item.type]"
-        v-bind="resolvedCards[index] || {}"
-        :class="item.class"
-        class="min-h-52"
-      />
-    </template>
+        <component
+          :is="componentsMapping[item.type]"
+          v-bind="resolvedCards[index] || {}"
+          :class="item.class"
+          class="min-h-52"
+        />
+      </template>
   </section>
 </template>
 
@@ -51,9 +51,7 @@
   const layoutTypes = [
     { type: 'showcase', class: '' },
     { type: 'profile', class: 'hidden lg:flex' },
-    { type: 'logo', class: 'hidden lg:flex' },
     { type: 'logo', class: 'hidden md:flex' },
-    { type: 'showcase', class: 'hidden lg:flex' },
     { type: 'profile', class: '' },
     { type: 'showcase', class: '' },
     { type: 'logo', class: '' },
