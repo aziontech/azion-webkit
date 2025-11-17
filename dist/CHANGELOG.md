@@ -1,3 +1,9 @@
+## [1.267.2](https://github.com/aziontech/azion-webkit/compare/v1.267.1...v1.267.2) (2025-11-17)
+
+### Bug Fixes
+
+* products components edge dots fixed ([bd7088c](https://github.com/aziontech/azion-webkit/commit/bd7088ca978748ac2f62287efe9397a4fe9aec4b))
+
 ## [1.267.1](https://github.com/aziontech/azion-webkit/compare/v1.267.0...v1.267.1) (2025-11-17)
 
 ### Bug Fixes
