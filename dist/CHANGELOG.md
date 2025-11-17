@@ -1,3 +1,9 @@
+## [1.267.5](https://github.com/aziontech/azion-webkit/compare/v1.267.4...v1.267.5) (2025-11-17)
+
+### Bug Fixes
+
+* hotfix link button markdown ([98c8d85](https://github.com/aziontech/azion-webkit/commit/98c8d85125b3f8b648331964f45f97444b13ed91))
+
 ## [1.267.4](https://github.com/aziontech/azion-webkit/compare/v1.267.3...v1.267.4) (2025-11-17)
 
 ### Bug Fixes
