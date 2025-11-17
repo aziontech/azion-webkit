@@ -1,4 +1,4 @@
-import HeroHome from '../../../templates/herohome'
+import HeroHome from '../../../blocks/HeroHome'
 import Container from '../../../templates/container'
 import Rules from '../../rules'
 
