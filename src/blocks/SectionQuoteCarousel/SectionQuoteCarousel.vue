@@ -1,5 +1,9 @@
 <template>
-  <section class="max-w-xl xxxl:max-w-xxl mx-auto pt-40">
+  <section     
+    class="max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12"
+    :id="id"
+    :class="`${bottomSpacing}`"
+  >
     <swiper
       :modules="modules"
       :loop="true"
@@ -71,6 +75,15 @@
     items: {
       type: Array,
       required: true
+    },
+    bottomSpacing: {
+      type: String,
+      options: ['mb-0', 'mb-6', 'mb-12', 'mb-24', 'mb-48'],
+      default: 'mb-24'
+    },
+    id: {
+      type: String,
+      default: ''
     }
   })
 </script>

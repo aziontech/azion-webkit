@@ -4,35 +4,50 @@ export default {
   title: 'Blocks/Rebranding/SectionNetwork',
   component: SectionNetwork,
   tags: ['autodocs'],
-  argTypes: {}
+  parameters: {
+    layout: 'fullscreen',
+    backgrounds: {
+      default: 'dark',
+      values: [{ name: 'dark', value: '#0a0a0a' }]
+    }
+  },
+  decorators: [
+    (story) => ({
+      components: { story },
+      template: '<div class="bg-neutral-950"><story /></div>'
+    })
+  ],
+  argTypes: {
+    title: {
+      control: { type: 'text' },
+      description: 'Section title displayed at the top'
+    },
+    descriptionRawMarkdown: {
+      control: { type: 'text' },
+      description: 'Section description in raw markdown format (supports markdown syntax)'
+    },
+    overlines: {
+      control: { type: 'object' },
+      description: 'Array of uppercase overline tags shown on the right of the header'
+    },
+    items: {
+      control: { type: 'object' },
+      description: 'Array of network statistics cards displayed below the map'
+    }
+  }
 }
 
-const Template = (args) => ({
-  components: { SectionNetwork },
-  setup() {
-    return { args }
-  },
-  template: `
-  <div class="bg-black p-6">
-    <SectionNetwork v-bind="args" />
-  </div>
-  `
-})
-
-const title = 'Fastest distributed network in the planet'
-const overlines = ['100+ points of presence', '100tb/s']
-const descriptionHtml = `<strong>+120 points of presence</strong> across the globe so your data and application are where your users are`
-const items = [
-  { id: 1, titleup: 'Better TCO', title: '70%' },
-  { id: 2, titleup: 'Faster Applications', title: '10x' },
-  { id: 3, titleup: 'Availability, backed by an SLA', title: '100%' },
-  { id: 4, titleup: 'User Satisfaction', title: '95%' }
-]
-
-export const Default = Template.bind({})
-Default.args = {
-  title,
-  overlines,
-  descriptionHtml,
-  items
+export const Default = {
+  args: {
+    title: 'Fastest distributed network in the planet',
+    descriptionRawMarkdown:
+      '**+120 points of presence** across the globe so your data and application are where your users are',
+    overlines: ['100+ points of presence', '100tb/s'],
+    items: [
+      { titleup: 'Better TCO', title: '70%' },
+      { titleup: 'Faster Applications', title: '10x' },
+      { titleup: 'Availability, backed by an SLA', title: '100%' },
+      { titleup: 'User Satisfaction', title: '95%' }
+    ]
+  }
 }

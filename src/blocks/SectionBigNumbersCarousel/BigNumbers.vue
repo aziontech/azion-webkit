@@ -1,5 +1,9 @@
 <template>
-  <div>
+  <section
+    class="max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12"
+    :id="id"
+    :class="`${bottomSpacing}`"
+  >
     <swiper
       :modules="modules"
       :slides-per-view="1"
@@ -38,7 +42,7 @@
         </div>
       </swiper-slide>
     </swiper>
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -62,11 +66,8 @@
       slidesPerView: 1.5
     },
     1280: {
-      slidesPerView: 2.5
+      slidesPerView: 2.75
     },
-    1440: {
-      slidesPerView: 3.15
-    }
   }
 
   defineProps({
@@ -74,11 +75,14 @@
       type: Array,
       required: true
     },
-    justify: {
+    bottomSpacing: {
       type: String,
-      required: false,
-      default: 'center',
-      options: ['center', 'start']
+      options: ['mb-0', 'mb-6', 'mb-12', 'mb-24', 'mb-48'],
+      default: 'mb-24'
+    },
+    id: {
+      type: String,
+      default: ''
     }
   })
 </script>
