@@ -1,3 +1,9 @@
+## [1.267.1](https://github.com/aziontech/azion-webkit/compare/v1.267.0...v1.267.1) (2025-11-17)
+
+### Bug Fixes
+
+* button hovers and slide change dot handling ([b3bc3ca](https://github.com/aziontech/azion-webkit/commit/b3bc3ca38138072f2091a36d3d7f2de30554217b))
+
 ## [1.267.0](https://github.com/aziontech/azion-webkit/compare/v1.266.7...v1.267.0) (2025-11-17)
 
 ### Features
