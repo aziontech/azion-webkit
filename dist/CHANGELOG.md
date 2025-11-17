@@ -1,3 +1,9 @@
+## [1.267.3](https://github.com/aziontech/azion-webkit/compare/v1.267.2...v1.267.3) (2025-11-17)
+
+### Bug Fixes
+
+* page scroll when mobile menu is active and closing when screen is bigger than 1200px ([9577d19](https://github.com/aziontech/azion-webkit/commit/9577d19afb4ed3cea923afdcb32879c649f5c1e4))
+
 ## [1.267.2](https://github.com/aziontech/azion-webkit/compare/v1.267.1...v1.267.2) (2025-11-17)
 
 ### Bug Fixes
