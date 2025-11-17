@@ -1,3 +1,9 @@
+## [1.266.6](https://github.com/aziontech/azion-webkit/compare/v1.266.5...v1.266.6) (2025-11-17)
+
+### Bug Fixes
+
+* update HeroHome import path from templates to blocks directory ([be1fede](https://github.com/aziontech/azion-webkit/commit/be1fedea7078abc52ec5701ae38aeb6eaa5797e3))
+
 ## [1.266.5](https://github.com/aziontech/azion-webkit/compare/v1.266.4...v1.266.5) (2025-11-13)
 
 ### Bug Fixes
