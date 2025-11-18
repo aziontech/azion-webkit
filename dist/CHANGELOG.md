@@ -1,3 +1,9 @@
+## [1.269.2](https://github.com/aziontech/azion-webkit/compare/v1.269.1...v1.269.2) (2025-11-18)
+
+### Bug Fixes
+
+* update Container and ContentSection padding to match LayoutContainer pattern ([479c8ac](https://github.com/aziontech/azion-webkit/commit/479c8ac1198cfdbb3b71150bcc888b8af770a511))
+
 ## [1.269.1](https://github.com/aziontech/azion-webkit/compare/v1.269.0...v1.269.1) (2025-11-18)
 
 ### Bug Fixes
