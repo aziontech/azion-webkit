@@ -15,12 +15,9 @@
   })
 
   const containerClasses = computed(() => {
-    const baseClasses = 'text-white relative max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12'
-    const spacingClasses = props.compact
-      ? 'gap-10 lg:gap-20 xl:gap-30 2xl:gap-40'
-      : 'gap-20 lg:gap-40 xl:gap-60 2xl:gap-80'
+    const baseClasses = 'relative max-w-xl xxxl:max-w-xxl mx-auto py-12 px-6 md:px-0'
     const flexClasses = 'flex flex-col justify-center'
 
-    return `${baseClasses} ${flexClasses} ${spacingClasses}`
+    return `${baseClasses} ${flexClasses}`
   })
 </script>

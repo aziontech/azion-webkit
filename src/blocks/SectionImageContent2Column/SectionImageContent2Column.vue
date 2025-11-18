@@ -1,5 +1,6 @@
 <template>
-  <section :class="`p-6 md:p-12 max-w-xl xxxl:max-w-xxl mx-auto ${bottomSpacing}`">
+  <LayoutContainer>
+    <div :class="`${bottomSpacing}`">
     <div
       class="flex flex-col border-neutral-900 border items-start relative w-full before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute md:after:bottom-0 after:right-0 md:items-stretch"
       :class="containerClasses"
@@ -75,12 +76,14 @@
         </div>
       </div>
     </div>
-  </section>
+    </div>
+  </LayoutContainer>
 </template>
 
 <script setup>
   import { computed } from 'vue'
   import { parseMarkdown } from '../../services/markdown/markdown-service'
+  import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
 
   const props = defineProps({
     title: {
