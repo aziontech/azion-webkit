@@ -1,8 +1,9 @@
 <template>
-  <section
-    :id="id"
-    :class="`text-white relative max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12 ${bottomSpacing}`"
-  >
+  <LayoutContainer>
+    <div
+      :id="id"
+      :class="`${bottomSpacing}`"
+    >
     <div class="mx-auto grid grid-cols-1 md:grid-cols-3">
       <div
         v-for="(item, index) in cards"
@@ -38,11 +39,13 @@
         />
       </div>
     </div>
-  </section>
+    </div>
+  </LayoutContainer>
 </template>
 
 <script setup lang="ts">
   import Grid from '../../components/GridPattern'
+  import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
 
   export interface ContentCard {
     title: string

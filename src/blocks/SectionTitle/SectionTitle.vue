@@ -1,7 +1,8 @@
 <template>
-  <div
-    :class="`flex flex-col gap-3 p-6 md:p-12 max-w-xl xxxl:max-w-xxl mx-auto ${bottomSpacing} ${align === 'default' ? 'text-left' : 'text-center'}`"
-  >
+  <LayoutContainer>
+    <div
+      :class="`flex flex-col gap-3 ${bottomSpacing} ${align === 'default' ? 'text-left' : 'text-center'}`"
+    >
     <Overline v-if="overline"> {{ overline }} </Overline>
     <div
       class="grid m-0 w-full"
@@ -23,11 +24,13 @@
         {{ description }}
       </p>
     </div>
-  </div>
+    </div>
+  </LayoutContainer>
 </template>
 
 <script setup>
   import Overline from '../../components/overline/Overline.vue'
+  import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
 
   const props = defineProps({
     overline: {

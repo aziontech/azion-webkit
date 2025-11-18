@@ -1,8 +1,9 @@
 <template>
-  <section
-    :id="id"
-    :class="`text-white relative max-w-xl xxxl:max-w-xxl mx-auto py-12 px-6 md:px-0 ${bottomSpacing}`"
-  >
+  <LayoutContainer>
+    <div
+      :id="id"
+      :class="`${bottomSpacing}`"
+    >
     <div
       v-if="cards && cards.length > 0"
       class="grid grid-cols-1 lg:grid-cols-3 p-0 md:p-12 m-0"
@@ -44,12 +45,14 @@
         </div>
       </div>
     </div>
-  </section>
+    </div>
+  </LayoutContainer>
 </template>
 
 <script setup lang="ts">
   import { parseMarkdown } from '../../services/markdown/markdown-service'
   import { ref, onMounted } from 'vue'
+  import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
 
   export interface Card3Column {
     icon: string
