@@ -54,7 +54,7 @@
                       class="h-1/2 w-full relative"
                       pattern="dots"
                       color="light-gray"
-                      size="48px"
+                      size="24px"
                     />
                   </div>
                   <div
