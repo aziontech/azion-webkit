@@ -1,7 +1,7 @@
 <template>
-  <div :class="containerClasses">
+  <section :class="containerClasses">
     <slot />
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -15,11 +15,12 @@
   })
 
   const containerClasses = computed(() => {
-    const baseClasses = 'flex flex-col justify-center pt-10 lg:pt-20 pb-10 lg:pb-20'
-    const gapClasses = props.compact
+    const baseClasses = 'text-white relative max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12'
+    const spacingClasses = props.compact
       ? 'gap-10 lg:gap-20 xl:gap-30 2xl:gap-40'
       : 'gap-20 lg:gap-40 xl:gap-60 2xl:gap-80'
+    const flexClasses = 'flex flex-col justify-center'
 
-    return `${baseClasses} ${gapClasses}`
+    return `${baseClasses} ${flexClasses} ${spacingClasses}`
   })
 </script>
