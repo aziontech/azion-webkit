@@ -1,7 +1,7 @@
 <template>
   <section
     class="flex flex-col gap-10 md:gap-20 2xl:gap-40"
-    :class="spacing[margin]"
+    :class="`${spacing[margin]} ${bottomSpacing}`"
     :id="id"
   >
     <div
@@ -194,6 +194,10 @@
       type: String,
       options: ['none', 'small', 'default', 'large'],
       default: () => 'none'
+    },
+    bottomSpacing: {
+      type: String,
+      default: () => 'mb-24'
     }
   })
 
