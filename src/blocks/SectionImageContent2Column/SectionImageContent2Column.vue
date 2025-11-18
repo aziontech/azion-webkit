@@ -50,9 +50,11 @@
                 <div
                   class="absolute h-full -left-0.5 -bottom-0.5 w-full overflow-hidden flex flex-col items-center"
                 >
-                  <div
+                  <GridPattern
                     class="h-1/2 w-full relative"
-                    :style="backgroundImageStyle"
+                    pattern="dots"
+                    color="light-gray"
+                    size="48px"
                   />
                 </div>
                 <div
@@ -84,6 +86,7 @@
   import { computed } from 'vue'
   import { parseMarkdown } from '../../services/markdown/markdown-service'
   import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
+  import GridPattern from '../../components/GridPattern/GridPattern.vue'
 
   const props = defineProps({
     title: {
@@ -140,30 +143,6 @@
     return props.inverted
       ? `${baseClasses} md:flex-row-reverse before:left-0 after:right-0 md:before:left-auto md:before:right-0`
       : `${baseClasses} before:left-0 after:right-0 md:after:left-0`
-  })
-
-  const backgroundImageStyle = computed(() => {
-    if (props.backgroundStyle === 'dots') {
-      return `
-        background-color: #0A0A0A;
-        background-image: 
-          linear-gradient(to top, #0A0A0A 0%, rgba(23,23,23,0) 100%),
-          radial-gradient(circle, #CEC9C9 1.5px, #0000 0);
-        background-size: 100% 100%, 3rem 3rem;
-        background-repeat: no-repeat, repeat;
-        background-position: 0 0, 0 0;
-      `
-    } else {
-      return `
-        background-color: #0A0A0A;
-        background-image: 
-          linear-gradient(to top, #0A0A0A 0%, rgba(23,23,23,0) 100%),
-          linear-gradient(90deg, transparent 47px, #404040 47px, #404040 48px, transparent 48px),
-          linear-gradient(180deg, transparent 47px, #404040 47px, #404040 48px, transparent 48px);
-        background-size: 100% 100%, 48px 48px, 48px 48px;
-        background-repeat: no-repeat, repeat, repeat;
-      `
-    }
   })
 </script>
 

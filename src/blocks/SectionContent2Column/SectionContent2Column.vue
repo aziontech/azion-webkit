@@ -34,11 +34,16 @@
         ]"
       >
         <div class="relative overflow-hidden">
-          <div class="h-1/2 absolute top-0 left-0">
-            <Grid
-              :rows="7"
-              :columns="20"
+          <div
+            class="h-1/2 w-full absolute top-0 left-0"
+            aria-hidden="true"
+          >
+            <GridPattern
+              class="relative h-full w-full"
+              size="48px"
               :pattern="gridPattern"
+              color="light-gray"
+              aria-hidden="true"
             />
           </div>
           <div class="p-6 md:p-12 flex items-center justify-center">
@@ -57,8 +62,8 @@
 
 <script setup lang="ts">
   import Overline from '../../components/overline/Overline.vue'
-  import Grid from '../../components/GridPattern/GridPattern.vue'
   import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
+  import GridPattern from '../../components/GridPattern/GridPattern.vue'
 
   export interface ContentCard {
     overline?: string

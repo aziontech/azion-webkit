@@ -1,12 +1,11 @@
 <template>
-  <section
+  <GridPattern
     :id="id"
     :class="`text-white relative overflow-hidden w-full mx-auto py-24 md:py-0 ${bottomSpacing}`"
-    style="
-      background-image: radial-gradient(circle, #cec9c940 1.5px, #0000 0);
-      background-size: 3rem 3rem;
-      background-position: 0 0;
-    "
+    pattern="dots"
+    color="light-gray"
+    size="48px"
+    htmlTag="section"
   >
     <div
       class="flex flex-col md:flex-row items-center max-w-xl xxxl:max-w-xxl mx-auto relative z-10 p-6 md:p-0"
@@ -67,13 +66,14 @@
         </div>
       </div>
     </div>
-  </section>
+  </GridPattern>
 </template>
 
 <script setup lang="ts">
   import { computed } from 'vue'
   import Button from '../../components/Button'
   import { parseMarkdown } from '../../services/markdown/markdown-service'
+  import GridPattern from '../../components/GridPattern/GridPattern.vue'
 
   export interface Hero2ColumnButtonProps {
     label: string

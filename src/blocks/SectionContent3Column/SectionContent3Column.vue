@@ -9,14 +9,14 @@
         v-for="(item, index) in cards"
         :key="index"
         class="h-full relative w-full border-neutral-900 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:left-0 after:z-10 after:hidden md:after:block before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 before:z-10 before:hidden md:before:block"
-        :class="[
-          gridPattern === 'square'
-            ? 'border-x border-t border-neutral-900'
-            : 'border-y border-l border-r md:border-r-0 border-neutral-900',
-          index == cards.length - 1 ? 'md:border-r' : ''
-        ]"
+        :class="[index == cards.length - 1 ? 'md:border-r' : '']"
       >
-        <div class="flex flex-col h-full">
+        <GridPattern
+          size="48px"
+          :pattern="gridPattern"
+          color="light-gray"
+          class="flex flex-col h-full"
+        >
           <div class="border-b border-neutral-900 p-6 md:p-12 flex flex-col gap-5 h-full">
             <h4 class="font-sora text-2xl text-neutral-200">{{ item.title }}</h4>
             <p
@@ -24,14 +24,7 @@
               v-html="item.description"
             ></p>
           </div>
-          <div>
-            <Grid
-              :rows="7"
-              :columns="20"
-              :pattern="gridPattern"
-            />
-          </div>
-        </div>
+        </GridPattern>
         <div
           aria-hidden="true"
           v-if="index === 2"
@@ -44,8 +37,8 @@
 </template>
 
 <script setup lang="ts">
-  import Grid from '../../components/GridPattern'
   import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
+  import GridPattern from '../../components/GridPattern/GridPattern.vue'
 
   export interface ContentCard {
     title: string

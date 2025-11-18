@@ -1,99 +1,75 @@
 <template>
-  <div
-    class="grid-container relative"
-    :style="{ '--rows': rows, '--columns': columns }"
+  <component
+    :is="htmlTag"
+    :style="gridPattern"
   >
-    <div class="grid-background overflow-hidden">
-      <div
-        v-for="index in totalCells"
-        :key="`guide-${index}`"
-        class="grid-guide"
-        :class="gridPattern[pattern]"
-        :style="{ '--x': getX(index - 1), '--y': getY(index - 1) }"
-        aria-hidden="true"
-      />
-    </div>
-    <div class="grid-content">
-      <slot />
-    </div>
-  </div>
+    <slot />
+  </component>
 </template>
 
 <script setup>
   import { computed } from 'vue'
 
   const props = defineProps({
-    rows: {
-      type: Number,
-      required: true
-    },
-    columns: {
-      type: Number,
-      required: true
+    htmlTag: {
+      type: String,
+      required: false,
+      default: 'div',
+      options: ['div', 'section']
     },
     size: {
-      type: Number,
+      type: String,
       required: false,
-      default: 36
+      default: '12px',
+      options: ['12px', '24px', '48px']
     },
     pattern: {
       type: String,
       required: false,
-      default: 'square',
+      default: 'dots',
       options: ['square', 'dots']
+    },
+    color: {
+      type: String,
+      required: false,
+      default: 'medium-gray',
+      options: ['light-gray', 'medium-gray', 'dark-gray']
+    },
+    opacity: {
+      type: Number,
+      required: false,
+      default: 0.3,
+      options: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
     }
   })
+
+  const gridColors = {
+    'light-gray': `rgba(206, 201, 201, ${props.opacity})`,
+    'medium-gray': `rgba(64, 64, 64, ${props.opacity})`,
+    'dark-gray': `rgba(23, 23, 23, ${props.opacity})`
+  }
 
   const gridPattern = computed(() => {
-    return {
-      square: 'border-r border-b border-neutral-900',
-      dots: "relative m-3 after:content-[''] after:bg-neutral-500 after:w-0.5 after:h-0.5 after:absolute after:top-0 after:left-0"
+    const gridColor = gridColors[props.color]
+
+    if (props.pattern === 'dots') {
+      return `
+        background-image: 
+          linear-gradient(to top, transparent 0%, transparent 100%),
+          radial-gradient(circle, ${gridColor} 1px, #0000 0);
+        background-size: 100% 100%, ${props.size} ${props.size};
+        background-repeat: no-repeat, repeat;
+        background-position: 0 0, 0 0;
+      `
+    } else {
+      const linePosition = `calc(${props.size} - 1px)`
+      return `
+        background-image: 
+          linear-gradient(90deg, transparent ${linePosition}, ${gridColor} ${linePosition}, ${gridColor} ${props.size}, transparent ${props.size}),
+          linear-gradient(180deg, transparent ${linePosition}, ${gridColor} ${linePosition}, ${gridColor} ${props.size}, transparent ${props.size});
+        background-size: ${props.size} ${props.size}, ${props.size} ${props.size};
+        background-repeat: repeat, repeat;
+      `
     }
   })
-
-  const totalCells = computed(() => props.rows * props.columns)
-
-  const getX = (index) => {
-    return (index % props.columns) + 1
-  }
-
-  const getY = (index) => {
-    return Math.floor(index / props.columns) + 1
-  }
 </script>
-
-<style scoped>
-  .grid-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-
-  .grid-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(var(--columns), 36px);
-    grid-template-rows: repeat(var(--rows), 36px);
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  .grid-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(var(--columns), 36px);
-    grid-template-rows: repeat(var(--rows), 36px);
-    z-index: 2;
-  }
-
-  .grid-guide {
-    grid-column: var(--x);
-    grid-row: var(--y);
-  }
-</style>

@@ -24,25 +24,34 @@
         size="small"
       />
     </div>
-    <div
+    <GridPattern
       class="relative flex flex-col md:flex-row justify-between rounded-md p-6 md:p-12 overflow-hidden gap-2 md:gap-12"
       :class="[ctaColor[type], type.includes('short') ? 'pb-2 md:pb-8' : '']"
-      :style="backgroundImageStyle"
+      pattern="dots"
+      :color="type.includes('short-orange') ? 'dark-gray' : 'light-gray'"
+      size="12px"
+      :opacity="0.1"
     >
       <div
         class="flex"
-        :class="type.includes('short') ? 'flex flex-col-reverse justify-between gap-20' : 'flex-col gap-60'"
+        :class="
+          type.includes('short')
+            ? 'flex flex-col-reverse justify-between gap-20'
+            : 'flex-col gap-60'
+        "
       >
         <div class="flex flex-col gap-3">
-          <Overline v-if="cta.overline && !type.includes('short')" :color="type.includes('short-orange') ? 'black' : 'primary'">
+          <Overline
+            v-if="cta.overline && !type.includes('short')"
+            :color="type.includes('short-orange') ? 'black' : 'primary'"
+          >
             {{ cta.overline }}
           </Overline>
           <p
-              class="font-sora text-xl"
-              :class="[type.includes('short-orange') ? 'text-white' : 'text-neutral-200']"
-              v-html="parsedCtaMarkdown"
-            >
-          </p>
+            class="font-sora text-xl"
+            :class="[type.includes('short-orange') ? 'text-white' : 'text-neutral-200']"
+            v-html="parsedCtaMarkdown"
+          ></p>
         </div>
         <h2
           class="font-sora font-bold gap-4 display-2-mobile md:display-2"
@@ -51,7 +60,10 @@
           {{ cta.title }}
         </h2>
       </div>
-      <div class="flex mb-4 items-end" :class="type.includes('short') ? 'mb-4' : 'mb-0'">
+      <div
+        class="flex mb-4 items-end"
+        :class="type.includes('short') ? 'mb-4' : 'mb-0'"
+      >
         <div class="md:w-fit w-full">
           <Button
             v-if="cta.linkLabel"
@@ -65,13 +77,14 @@
           />
         </div>
       </div>
-    </div>
+    </GridPattern>
   </section>
 </template>
 
 <script setup lang="ts">
   import Button from '../../components/Button/Button.vue'
   import Overline from '../../components/overline/Overline.vue'
+  import GridPattern from '../../components/GridPattern/GridPattern.vue'
   import { parseMarkdown } from '../../services/markdown/markdown-service'
   import { computed } from 'vue'
 
@@ -108,43 +121,6 @@
     '1-col-short-orange': 'bg-orange-500 transition-colors',
     '1-col-short-black': 'bg-neutral-900 transition-colors'
   }
-
-  const overlay = {
-    '2-col-70-30': 'linear-gradient(to top, transparent 0%, transparent 100%)',
-    '1-col': 'linear-gradient(to top, transparent 0%, transparent 100%)',
-    '1-col-short-orange': 'linear-gradient(to top, transparent 0%, transparent 100%)',
-    '1-col-short-black': 'linear-gradient(to top, transparent 0%, transparent 100%)'
-  }
-
-  const dotsStyle = {
-    darkGray: `radial-gradient(circle, rgba(23, 23, 23, 0.3) 1px, #0000 0);`,
-    lightGray: `radial-gradient(circle, rgba(206, 201, 201, 0.1) 1px, #0000 0);`
-  }
-
-  const backgroundImageStyle = computed(() => {
-    const opacityOverlay = overlay[props.type]
-    const dotsOverlay = dotsStyle[props.type.includes('orange') ? 'darkGray' : 'lightGray']
-
-    if (props.backgroundStyle === 'dots') {
-      return `
-        background-image: 
-          ${opacityOverlay},
-          ${dotsOverlay};
-        background-size: 100% 100%, 12px 12px;
-        background-repeat: no-repeat, repeat;
-        background-position: 0 0, 0 0;
-      `
-    } else {
-      return `
-        background-image: 
-          ${opacityOverlay},
-          linear-gradient(90deg, transparent 47px, rgba(64, 64, 64, 0.3) 47px, rgba(64, 64, 64, 0.3) 48px, transparent 48px),
-          linear-gradient(180deg, transparent 47px, rgba(64, 64, 64, 0.3) 47px, rgba(64, 64, 64, 0.3) 48px, transparent 48px);
-        background-size: 100% 100%, 48px 48px, 48px 48px;
-        background-repeat: no-repeat, repeat, repeat;
-      `
-    }
-  })
 
   const parsedContentMarkdown = computed(() => {
     return props.content?.descriptionRawMarkdown
