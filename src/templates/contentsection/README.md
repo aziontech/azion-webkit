@@ -21,6 +21,8 @@ Component ContentSection
 | `reverse`              | `Boolean` | `() => false`  | -                           | No description |
 | `isSticky`             | `Boolean` | `() => false`  | -                           | No description |
 | `pt`                   | `Object`  | -              | -                           | No description |
+| `bottomSpacing`        | `String`  | `() => 'mb-24'`| -                           | Bottom margin spacing |
+| `hasContainer`         | `Boolean` | `() => true`   | -                           | Controls padding application |
 
 ## Slots
 
@@ -39,7 +41,39 @@ Component ContentSection
 
 ```vue
 <template>
-  <ContentSection> Component content </ContentSection>
+  <!-- Basic usage -->
+  <ContentSection
+    title="Section Title"
+    overline="Section Overline"
+    description="Section description"
+  >
+    <template #content>
+      <!-- Your content here -->
+    </template>
+  </ContentSection>
+
+  <!-- With custom spacing -->
+  <ContentSection
+    title="Custom Spacing Section"
+    bottomSpacing="mb-32"
+    :hasContainer="false"
+  >
+    <template #content>
+      <!-- Content without container padding -->
+    </template>
+  </ContentSection>
+
+  <!-- Centralized content -->
+  <ContentSection
+    title="Centered Section"
+    position="center"
+    :isContentCentralized="true"
+    bottomSpacing="mb-16"
+  >
+    <template #main>
+      <!-- Main content area -->
+    </template>
+  </ContentSection>
 </template>
 ```
 

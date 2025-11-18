@@ -1,10 +1,6 @@
 <template>
   <section
-    :class="[
-      'w-full flex flex-col gap-10 md:gap-20',
-      { 'px-container': hasContainer },
-      spacing[margin]
-    ]"
+    :class="containerClasses"
     :id="id"
   >
     <div
@@ -96,10 +92,11 @@
 </template>
 
 <script setup>
+  import { computed } from 'vue'
   import TitleSection from '../titlesection'
   import Overline from '../overline'
 
-  defineProps({
+  const props = defineProps({
     id: {
       type: String,
       default: () => ''
@@ -150,10 +147,9 @@
       type: Object,
       default: () => {}
     },
-    margin: {
+    bottomSpacing: {
       type: String,
-      options: ['none', 'small', 'default', 'large'],
-      default: () => 'small'
+      default: () => 'mb-24'
     },
     hasContainer: {
       type: Boolean,
@@ -161,10 +157,11 @@
     }
   })
 
-  const spacing = {
-    none: 'py-0',
-    small: 'py-5 lg:py-10 xl:py-16 2xl:py-20',
-    default: 'py-10 lg:py-20 xl:py-30 2xl:py-40',
-    large: 'py-14 lg:py-30 xl:py-40 2xl:py-48'
-  }
+  const containerClasses = computed(() => {
+    const baseClasses = 'text-white relative max-w-xl xxxl:max-w-xxl mx-auto'
+    const paddingClasses = props.hasContainer ? 'p-6 md:p-12' : 'px-0'
+    const flexClasses = 'w-full flex flex-col gap-10 md:gap-20'
+
+    return `${baseClasses} ${paddingClasses} ${flexClasses} ${props.bottomSpacing}`
+  })
 </script>
