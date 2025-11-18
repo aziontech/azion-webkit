@@ -1,8 +1,9 @@
 <template>
-  <section
-    :id="id"
-    :class="`text-white relative max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12 ${bottomSpacing}`"
-  >
+  <LayoutContainer>
+    <div
+      :id="id"
+      :class="`${bottomSpacing}`"
+    >
     <div :class="`flex gap-4 md:gap-0 ${title ? 'justify-between flex-col md:flex-row' : 'justify-end flex-row'} mb-6 md:mb-8`">
       <h2
         v-if="title"
@@ -61,12 +62,14 @@
         </div>
       </div>
     </div>
-  </section>
+    </div>
+  </LayoutContainer>
 </template>
 
 <script setup lang="ts">
   import ProductQuote from '../../components/ProductQuote/ProductQuote.vue'
   import Button from '../../components/Button/Button.vue'
+  import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
 
   export interface LogoQuote2Column {
     logo: string

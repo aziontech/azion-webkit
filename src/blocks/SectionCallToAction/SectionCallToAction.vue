@@ -1,9 +1,10 @@
 <template>
-  <section
-    :id="id"
-    class="grid gap-2 relative max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12 mb-40"
-    :class="cardType[type]"
-  >
+  <LayoutContainer>
+    <div
+      :id="id"
+      class="grid gap-2 mb-40"
+      :class="cardType[type]"
+    >
     <div
       v-if="content && type === '2-col-70-30'"
       class="lg:col-span-3 w-full flex flex-col justify-between gap-6 bg-neutral-900 rounded-md p-6 md:p-12"
@@ -66,12 +67,14 @@
         </div>
       </div>
     </div>
-  </section>
+    </div>
+  </LayoutContainer>
 </template>
 
 <script setup lang="ts">
   import Button from '../../components/Button/Button.vue'
   import Overline from '../../components/overline/Overline.vue'
+  import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
   import { parseMarkdown } from '../../services/markdown/markdown-service'
   import { computed } from 'vue'
 

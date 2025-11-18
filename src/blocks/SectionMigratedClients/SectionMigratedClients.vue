@@ -1,5 +1,6 @@
 <template>
-  <section class="w-full max-w-xl xxxl:max-w-xxl mx-auto">
+  <LayoutContainer>
+    <div class="w-full">
     <div class="flex w-full gap-2 flex-col md:flex-row">
       <div 
         v-for="(card, index) in cards.slice(0, 2)" 
@@ -9,11 +10,13 @@
         <MigratedClientsCard v-bind="card" />
       </div>
     </div>
-  </section>
+    </div>
+  </LayoutContainer>
 </template>
 
 <script setup>
   import MigratedClientsCard from '../../components/MigratedClientsCard'
+  import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
 
   defineProps({
     cards: {
