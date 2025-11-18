@@ -1,3 +1,9 @@
+## [1.269.0](https://github.com/aziontech/azion-webkit/compare/v1.268.0...v1.269.0) (2025-11-18)
+
+### Features
+
+* update LayoutContainer padding to py-12 px-6 md:px-0 ([c103568](https://github.com/aziontech/azion-webkit/commit/c103568b4691fa50e7317265818ea2edccfd1359))
+
 ## [1.268.0](https://github.com/aziontech/azion-webkit/compare/v1.267.5...v1.268.0) (2025-11-18)
 
 ### Features
