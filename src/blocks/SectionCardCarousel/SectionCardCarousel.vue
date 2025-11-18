@@ -1,8 +1,9 @@
 <template>
-  <section
-    :id="id"
-    :class="`text-white relative max-w-xl xxxl:max-w-xxl mx-auto p-4 md:p-12 ${bottomSpacing}`"
-  >
+  <LayoutContainer>
+    <div
+      :id="id"
+      :class="`${bottomSpacing}`"
+    >
     <div class="flex md:flex-row justify-between items-start md:items-center mb-6 gap-4">
       <h2
         v-if="title"
@@ -110,7 +111,8 @@
         </a>
       </swiper-slide>
     </swiper>
-  </section>
+    </div>
+  </LayoutContainer>
 </template>
 
 <script setup lang="ts">
@@ -118,6 +120,7 @@
   import { Navigation } from 'swiper/modules'
   import { ref, computed, onMounted } from 'vue'
   import Button from '../../components/Button/Button.vue'
+  import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
   import 'swiper/css'
   import 'swiper/css/navigation'
   import { parseMarkdown } from '../../services/markdown/markdown-service'

@@ -1,9 +1,9 @@
 <template>
-  <section     
-    class="max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12"
-    :id="id"
-    :class="`${bottomSpacing}`"
-  >
+  <LayoutContainer>
+    <div
+      :id="id"
+      :class="`${bottomSpacing}`"
+    >
     <swiper
       :modules="modules"
       :loop="true"
@@ -41,7 +41,8 @@
         </div>
       </div>
     </swiper>
-  </section>
+    </div>
+  </LayoutContainer>
 </template>
 
 <script setup>
@@ -49,6 +50,7 @@
   import { Controller, Navigation } from 'swiper/modules'
   import { ref } from 'vue'
   import Quote from '../../components/Quote/Quote.vue'
+  import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
   import 'swiper/css'
 
   const modules = [Controller, Navigation]

@@ -1,9 +1,9 @@
 <template>
-  <section
-    class="max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12"
-    :id="id"
-    :class="`${bottomSpacing}`"
-  >
+  <LayoutContainer>
+    <div
+      :id="id"
+      :class="`${bottomSpacing}`"
+    >
     <swiper
       :modules="modules"
       :slides-per-view="1"
@@ -42,13 +42,15 @@
         </div>
       </swiper-slide>
     </swiper>
-  </section>
+    </div>
+  </LayoutContainer>
 </template>
 
 <script setup>
   import { Swiper, SwiperSlide } from 'swiper/vue'
   import { Controller, Scrollbar } from 'swiper/modules'
   import { ref } from 'vue'
+  import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
   // Import Swiper styles
   import 'swiper/css'
   import 'swiper/css/scrollbar'
