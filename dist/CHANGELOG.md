@@ -1,3 +1,9 @@
+## [1.268.0](https://github.com/aziontech/azion-webkit/compare/v1.267.5...v1.268.0) (2025-11-18)
+
+### Features
+
+* new card image layout for sucess cases card on resource hub ([bcf13df](https://github.com/aziontech/azion-webkit/commit/bcf13df3cecec5623111783c03ca607c5c781fd6))
+
 ## [1.267.5](https://github.com/aziontech/azion-webkit/compare/v1.267.4...v1.267.5) (2025-11-17)
 
 ### Bug Fixes
