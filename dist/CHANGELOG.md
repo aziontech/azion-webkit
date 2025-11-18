@@ -1,3 +1,9 @@
+## [1.269.3](https://github.com/aziontech/azion-webkit/compare/v1.269.2...v1.269.3) (2025-11-18)
+
+### Bug Fixes
+
+* remove redundant spacing classes from SectionCallToAction ([0d5573a](https://github.com/aziontech/azion-webkit/commit/0d5573a88d3e200c6fbd5e0ed63277cda97012cf))
+
 ## [1.269.2](https://github.com/aziontech/azion-webkit/compare/v1.269.1...v1.269.2) (2025-11-18)
 
 ### Bug Fixes
