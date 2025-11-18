@@ -1,3 +1,9 @@
+## [1.269.1](https://github.com/aziontech/azion-webkit/compare/v1.269.0...v1.269.1) (2025-11-18)
+
+### Bug Fixes
+
+* update ContentSection to match blocks pattern ([05e0718](https://github.com/aziontech/azion-webkit/commit/05e07181e49086279c5e222d8f8e0d097d01cc5b))
+
 ## [1.269.0](https://github.com/aziontech/azion-webkit/compare/v1.268.0...v1.269.0) (2025-11-18)
 
 ### Features
