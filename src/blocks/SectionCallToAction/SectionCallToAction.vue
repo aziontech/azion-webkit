@@ -2,7 +2,6 @@
   <LayoutContainer>
     <div
       :id="id"
-      class="grid gap-2 mb-40"
       :class="cardType[type]"
     >
     <div
