@@ -27,6 +27,7 @@ Migrated from templates to blocks structure for better organization.
 | `logosTitle`         | `String` | `() => ''` | -      | Title for logos section |
 | `buttons`            | `Array`  | `() => []` | -      | Array of button configurations (supports Button component props) |
 | `margin`             | `String` | `'none'`   | `'none'`, `'small'`, `'default'`, `'large'` | Margin configuration |
+| `bottomSpacing`      | `String` | `'mb-24'`  | -      | Bottom margin spacing |
 
 ## Slots
 
@@ -48,12 +49,24 @@ Migrated from templates to blocks structure for better organization.
 
 ```vue
 <template>
+  <!-- Basic usage -->
   <HeroHome
     titleTag="h1"
     title="Welcome to Azion"
     description="Build and deploy at the edge"
     :logos="logoArray"
     :buttons="buttonArray"
+  />
+
+  <!-- With custom spacing -->
+  <HeroHome
+    titleTag="h1"
+    title="Welcome to Azion"
+    description="Build and deploy at the edge"
+    :logos="logoArray"
+    :buttons="buttonArray"
+    bottomSpacing="mb-32"
+    margin="large"
   />
 </template>
 
