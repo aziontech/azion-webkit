@@ -26,27 +26,23 @@
       </div>
       <div class="md:col-span-7">
         <div
-          class="flex flex-col w-full relative md:py-12"
+          class="flex flex-col w-full relative"
           :class="[
             `after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:right-0`,
             `before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute md:before:top-0 md:before:right-0 before:bottom-0 before:left-0 md:before:bottom-auto md:before:left-auto`
           ]"
         >
           <div
-            class="border-t border-neutral-900"
-            aria-hidden="true"
-          ></div>
-          <div
             v-for="(faq, index) in localFaqs"
             :key="index"
             @click="toggleFaq(index)"
-            class="border-b border-neutral-900 px-6 md:px-12 pt-6 pb-2 flex flex-col gap-3 hover:bg-neutral-900 transition-colors group cursor-pointer"
+            class="border-b last:border-b-0 border-neutral-900 px-6 md:px-12 pt-6 pb-2 flex flex-col gap-3 transition-colors cursor-pointer"
           >
             <div class="flex items-center justify-between">
               <h3 class="display-6-mobile md:display-6 font-sora text-white">
                 {{ faq.question }}
               </h3>
-              <span class="text-white group-hover:text-orange-500 transition-colors duration-300">
+              <span class="text-white transition-colors duration-300">
                 <i
                   class="pi pi-chevron-down transition-transform duration-300 ease-in-out"
                   :class="faq.isOpen ? 'rotate-180' : 'rotate-0'"
@@ -54,7 +50,7 @@
               </span>
             </div>
             <div
-              class="grid transition-all duration-300 ease-in-out overflow-hidden"
+              class="grid m-0 transition-all duration-300 ease-in-out overflow-hidden"
               :class="
                 faq.isOpen ? 'grid-rows-[1fr] opacity-100 mt-3' : 'grid-rows-[0fr] opacity-0 mt-0'
               "
