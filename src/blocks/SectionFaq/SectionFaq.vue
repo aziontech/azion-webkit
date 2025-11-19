@@ -26,10 +26,10 @@
       </div>
       <div class="md:col-span-7">
         <div
-          class="flex flex-col w-full relative py-6 md:py-12"
+          class="flex flex-col w-full relative md:py-12"
           :class="[
             `after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:right-0`,
-            `before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:right-0`
+            `before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute md:before:top-0 md:before:right-0 before:bottom-0 before:left-0 md:before:bottom-auto md:before:left-auto`
           ]"
         >
           <div
