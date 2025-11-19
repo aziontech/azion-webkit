@@ -1,3 +1,10 @@
+## [1.269.4](https://github.com/aziontech/azion-webkit/compare/v1.269.3...v1.269.4) (2025-11-19)
+
+### Bug Fixes
+
+* add bottomSpacing prop to HeroBase and HeroHome ([aecee1a](https://github.com/aziontech/azion-webkit/commit/aecee1abae0ad5b30ecfa6e01a03d4c92a1dd7ba))
+* consolidate class attributes in HeroBase template ([90940f5](https://github.com/aziontech/azion-webkit/commit/90940f55f8adfb42b4baf46f24398d6b97c3323e))
+
 ## [1.269.3](https://github.com/aziontech/azion-webkit/compare/v1.269.2...v1.269.3) (2025-11-18)
 
 ### Bug Fixes
