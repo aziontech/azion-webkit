@@ -41,10 +41,11 @@
               : 'flex-col gap-60'
           "
         >
-          <div class="flex flex-col gap-3">
+          <div class="flex flex-col">
             <Overline
               v-if="cta.overline && !type.includes('short')"
               :color="type.includes('short-orange') ? 'black' : 'primary'"
+              class="mb-3"
             >
               {{ cta.overline }}
             </Overline>
