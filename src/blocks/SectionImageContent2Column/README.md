@@ -1,119 +1,139 @@
 # SectionImageContent2Column
 
-## Purpose
+A two-column section component combining text content with images, featuring background patterns, flexible layouts, and markdown support. Perfect for showcasing features, products, or content with visual elements.
 
-A flexible two-column section component that displays content (text) alongside an image with full layout control and Markdown support. Perfect for feature sections, product showcases, and content-rich layouts.
+## Features
 
-- [Storybook Demo](https://azion-webkit.netlify.app/?path=/story/blocks-sectionimagecontent2column)
+- **Two-Column Layout**: Text and image side-by-side with flexible distribution
+- **Background Patterns**: Dots or square grid patterns on image section
+- **Markdown Support**: Rich text descriptions with markdown formatting
+- **Flexible Layouts**: 50/50 or 30/70 text/image distribution
+- **Reversible Order**: Image can be on left or right
+- **Responsive Design**: Adapts from mobile to desktop layouts
+- **Decorative Elements**: Corner dots for visual interest
 
 ## Props
 
-### Required
+| Prop                     | Type      | Required | Default                           | Description                          |
+| ------------------------ | --------- | -------- | --------------------------------- | ------------------------------------ |
+| `title`                  | `string`  | No       | -                                 | Section title text                   |
+| `descriptionRawMarkdown` | `string`  | No       | -                                 | Description in markdown format       |
+| `image`                  | `string`  | Yes      | -                                 | Image URL                            |
+| `alt`                    | `string`  | No       | -                                 | Image alt text                       |
+| `layout`                 | `string`  | No       | `'50/50'`                         | Layout distribution (50/50 or 30/70) |
+| `inverted`               | `boolean` | No       | `false`                           | Reverse order (image first)          |
+| `bottomSpacing`          | `string`  | No       | `mb-24`                           | Bottom margin spacing class          |
+| `backgroundPattern`      | `object`  | No       | `{ style: 'dots', size: '24px' }` | Background pattern configuration     |
 
-| Prop    | Type     | Default | Values | Description                      |
-| ------- | -------- | ------- | ------ | -------------------------------- |
-| `image` | `String` | -       | -      | URL of the image to be displayed |
+### Layout Options
 
-### Optional
+| Value   | Description                       |
+| ------- | --------------------------------- |
+| `50/50` | Equal split (50% text, 50% image) |
+| `30/70` | Text takes 1/3, image takes 2/3   |
 
-| Prop                     | Type      | Default     | Values           | Description                                                                |
-| ------------------------ | --------- | ----------- | ---------------- | -------------------------------------------------------------------------- |
-| `title`                  | `String`  | `''`        | -                | Section title displayed above the content                                  |
-| `descriptionRawMarkdown` | `String`  | `''`        | -                | Markdown content converted to HTML (supports headers, bold, italic, links) |
-| `alt`                    | `String`  | `''`        | -                | Alternative text for the image (accessibility)                             |
-| `height`                 | `String`  | `'default'` | `default\|large` | Controls the height of the image container                                 |
-| `backgroundStyle`        | `String`  | `'grid'`    | `grid\|dots`     | Background pattern style for the image container                           |
-| `fiftyFifty`             | `Boolean` | `true`      | -                | Layout distribution: true = 50/50 split, false = 1/3 text + 2/3 image      |
-| `inverted`               | `Boolean` | `false`     | -                | Block order: true = image first, false = text first (default)              |
+### Background Pattern
 
-## Layout Combinations
-
-| fiftyFifty | inverted | Result                            |
-| ---------- | -------- | --------------------------------- |
-| `true`     | `false`  | Text first, 50/50 split (default) |
-| `true`     | `true`   | Image first, 50/50 split          |
-| `false`    | `false`  | Text first, 1/3 text + 2/3 image  |
-| `false`    | `true`   | Image first, 1/3 text + 2/3 image |
-
-## Markdown Support
-
-The `descriptionRawMarkdown` prop supports:
-
-- **Headers**: `# ## ###`
-- **Bold text**: `**text**` or `__text__`
-- **Italic text**: `*text*` or `_text_`
-- **Links**: `[text](url)` with `target="_blank"`
-- **Line breaks**: Single and double line breaks
-- **Lists**: Unordered and ordered lists
-- **Paragraphs**: Automatic paragraph wrapping
-
-## Dependencies
-
-### Internal
-
-- `../../services/markdown-service` - Markdown to HTML conversion
-
-### External
-
-- Vue 3 Composition API (`computed`)
-
-## Usage Examples
-
-### Basic Usage
-
-```vue
-<template>
-  <SectionImageContent2Column
-    title="Build at the Edge"
-    descriptionRawMarkdown="Deploy applications with our **global network**."
-    image="https://example.com/image.jpg"
-    alt="Edge computing"
-  />
-</template>
+```typescript
+interface BackgroundPattern {
+  style: 'dots' | 'square' // Pattern type
+  size: '12px' | '24px' | '48px' // Grid size
+}
 ```
 
-### Advanced Layout Control
+## Usage
+
+### Basic 50/50 Layout
 
 ```vue
 <template>
-  <!-- Image first, 1/3 text + 2/3 image -->
   <SectionImageContent2Column
-    title="Advanced Features"
-    descriptionRawMarkdown="Experience **lightning-fast** performance.
+    title="Edge Computing Platform"
+    descriptionRawMarkdown="Deploy applications **closer to users** with our global edge network. Reduce latency by up to 90%."
+    image="/images/edge-platform.png"
+    alt="Edge computing platform"
+  />
+</template>
 
-### Key Benefits:
-- **Ultra-low latency**
-- **Global scale**
-- **Enterprise security**
+<script setup>
+  import SectionImageContent2Column from '@/blocks/SectionImageContent2Column'
+</script>
+```
 
-[Learn more](https://docs.azion.com)"
-    image="https://example.com/advanced.jpg"
-    alt="Advanced features"
-    height="large"
-    backgroundStyle="dots"
-    :fiftyFifty="false"
+### 30/70 Layout with Inverted Order
+
+```vue
+<template>
+  <SectionImageContent2Column
+    title="Global Infrastructure"
+    descriptionRawMarkdown="Our network spans **200+ locations** worldwide."
+    image="/images/global-network.png"
+    alt="Global network map"
+    layout="30/70"
     :inverted="true"
   />
 </template>
 ```
 
-### Responsive Behavior
+### Custom Background Pattern
 
-- **Mobile**: Always stacks vertically (text above image)
-- **Desktop**: Respects `fiftyFifty` and `inverted` props for horizontal layout
+```vue
+<template>
+  <SectionImageContent2Column
+    title="Enterprise Security"
+    descriptionRawMarkdown="Built-in security features for enterprise needs."
+    image="/images/security.png"
+    :backgroundPattern="{ style: 'square', size: '48px' }"
+  />
+</template>
+```
+
+## Markdown Support
+
+The `descriptionRawMarkdown` prop supports full markdown syntax:
+
+- **Bold text**: `**bold**` or `__bold__`
+- **Italic text**: `*italic*` or `_italic_`
+- **Links**: `[text](url)`
+- **Line breaks**: Double line breaks for paragraphs
+
+## Layout Structure
+
+The component creates a flexible two-column layout:
+
+- **Text Column**: Contains title and markdown description
+- **Image Column**: Contains image with background pattern overlay
+- **Mobile**: Stacks vertically
+- **Desktop**: Side-by-side with configurable distribution
 
 ## Styling
 
 The component uses:
 
-- **Tailwind CSS** for responsive layout and styling
-- **Custom CSS** for decorative elements (corner dots)
-- **Dynamic classes** based on props for layout control
+- **Background Patterns**: GridPattern component on image section
+- **Borders**: Neutral-900 borders with decorative corner elements
+- **Typography**:
+  - Title: Gray-200, Sora font, display-3 sizes
+  - Description: Neutral-400, Sora font
+- **Spacing**: Responsive padding (p-6 on mobile, p-12 on desktop)
 
-## Related Links
+## Responsive Behavior
 
-- [TypeScript Definitions](./SectionImageContent2Column.d.ts)
-- [Component Implementation](./SectionImageContent2Column.vue)
-- [Export Module](./index.ts)
-- [Package Configuration](./package.json)
-- [Markdown Service](../../services/markdown-service.js)
+- **Mobile**: Single column, stacked layout
+- **Desktop (md+)**: Two-column layout with configurable distribution
+- **Sticky Text**: Text column can be sticky on desktop
+- **Spacing**: Adaptive padding and margins
+
+## Accessibility
+
+- Semantic HTML structure
+- Proper alt text for images
+- Screen reader friendly content structure
+- Sufficient color contrast ratios
+
+## Dependencies
+
+- **LayoutContainer**: Wrapper component for consistent layout
+- **GridPattern Component**: For background patterns
+- **Markdown Parser**: Built-in markdown processing
+- **Tailwind CSS**: For styling and responsive design

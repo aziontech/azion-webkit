@@ -93,11 +93,19 @@
     image?: string
     id?: string
     bottomSpacing?: 'mb-0' | 'mb-6' | 'mb-12' | 'mb-24' | 'mb-48'
+    backgroundPattern: {
+      style: 'dots' | 'square'
+      size: '12px' | '24px' | '48px'
+    }
   }
 
   const props = withDefaults(defineProps<Hero2ColumnProps>(), {
     buttons: () => [],
-    bottomSpacing: 'mb-24'
+    bottomSpacing: 'mb-24',
+    backgroundPattern: () => ({
+      style: 'dots',
+      size: '48px'
+    })
   })
 
   const limitedButtons = computed(() => {

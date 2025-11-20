@@ -37,13 +37,12 @@ export default {
       control: 'text',
       description: 'ID opcional para o elemento section'
     },
-    backgroundStyle: {
-      control: 'select',
-      options: ['dots', 'square'],
-      description: 'Estilo do padrão de fundo: dots (pontos) ou square (grade quadriculada)',
+    backgroundPattern: {
+      control: 'object',
+      description: 'Background pattern configuration',
       table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: 'dots' }
+        type: { summary: '{ style: string, size: string }' },
+        defaultValue: { summary: "{ style: 'dots', size: '12px' }" }
       }
     },
     cta: {
@@ -69,7 +68,10 @@ export const Default = {
   args: {
     type: '2-col-70-30',
     id: 'section-cta-default',
-    backgroundStyle: 'dots',
+    backgroundPattern: {
+      style: 'dots',
+      size: '12px'
+    },
     content: {
       overline: 'Need enterprise solutions?',
       title: 'Not sure which plan is right for you?',
@@ -93,7 +95,10 @@ export const OneCol = {
   args: {
     type: '1-col',
     id: 'section-cta-single',
-    backgroundStyle: 'dots',
+    backgroundPattern: {
+      style: 'dots',
+      size: '12px'
+    },
     cta: {
       overline: 'Enterprise Solutions',
       title: 'Scale Your Infrastructure',
@@ -109,7 +114,10 @@ export const OneColShortOrange = {
   args: {
     type: '1-col-short-orange',
     id: 'section-cta-promo',
-    backgroundStyle: 'dots',
+    backgroundPattern: {
+      style: 'dots',
+      size: '12px'
+    },
     cta: {
       overline: 'Limited Time Offer',
       title: 'Construa suas aplicacoes de forma inteligente',

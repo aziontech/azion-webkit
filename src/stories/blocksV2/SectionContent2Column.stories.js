@@ -9,6 +9,12 @@ export default {
     backgrounds: {
       default: 'dark',
       values: [{ name: 'dark', value: '#0a0a0a' }]
+    },
+    docs: {
+      description: {
+        component:
+          'SectionContent2Column is a two-column content section with alternating text and image cards, featuring background patterns and decorative elements.'
+      }
     }
   },
   decorators: [
@@ -18,45 +24,94 @@ export default {
     })
   ],
   argTypes: {
-    cards: {
-      control: 'object',
-      description: 'Array of content cards with images to display'
-    },
     id: {
       control: 'text',
-      description: 'Section ID for navigation'
+      description: 'Optional HTML id attribute'
     },
-    gridPattern: {
+    cards: {
+      control: 'object',
+      description: 'Array of content cards (typically 2)',
+      table: {
+        type: { summary: 'ContentCard[]' }
+      }
+    },
+    bottomSpacing: {
       control: 'select',
-      options: ['square', 'dots'],
-      description: 'Pattern type for the grid background'
+      options: ['mb-0', 'mb-6', 'mb-12', 'mb-24', 'mb-48'],
+      description: 'Bottom margin spacing class',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'mb-24' }
+      }
+    },
+    backgroundPattern: {
+      control: 'object',
+      description: 'Background pattern configuration',
+      table: {
+        type: { summary: '{ style: string, size: string }' },
+        defaultValue: { summary: "{ style: 'dots', size: '48px' }" }
+      }
     }
   }
 }
 
 export const Default = {
+  name: 'Default Two Column',
   args: {
+    id: 'section-content-2col-default',
     cards: [
       {
-        overline: 'Edge Computing',
+        overline: 'Performance',
         description:
-          'Deploy your applications at the edge with unmatched performance, security, and scalability. Join thousands of developers building the future of the web.',
+          'Deploy applications closer to users with our **global edge network** for improved performance and reduced latency.',
         image: {
-          src: 'https://placehold.co/400x300/1a1a1a/f3652b?text=Edge+Computing',
-          alt: 'Edge Computing Platform'
+          src: 'https://via.placeholder.com/400x300/1a1a1a/ffffff?text=Performance',
+          alt: 'Performance illustration'
         }
       },
       {
-        overline: 'Global CDN',
+        overline: 'Security',
         description:
-          'Deliver content faster than ever with our global edge network. Reduce latency and improve user experience across all continents.',
+          'Built-in security features including **DDoS protection**, Web Application Firewall, and SSL certificates.',
         image: {
-          src: 'https://placehold.co/400x300/1a1a1a/f3652b?text=Global+CDN',
-          alt: 'Global CDN Network'
+          src: 'https://via.placeholder.com/400x300/1a1a1a/ffffff?text=Security',
+          alt: 'Security illustration'
         }
       }
     ],
-    id: 'section-content-image-2-column',
-    gridPattern: 'dots'
+    bottomSpacing: 'mb-24',
+    backgroundPattern: {
+      style: 'dots',
+      size: '48px'
+    }
+  }
+}
+
+export const WithSquarePattern = {
+  name: 'With Square Pattern',
+  args: {
+    id: 'section-content-2col-square',
+    cards: [
+      {
+        overline: 'Edge Computing',
+        description: 'Experience the power of edge computing with our distributed infrastructure.',
+        image: {
+          src: 'https://via.placeholder.com/400x300/1a1a1a/ffffff?text=Edge',
+          alt: 'Edge computing illustration'
+        }
+      },
+      {
+        overline: 'Scalability',
+        description: 'Automatic scaling based on demand with no configuration required.',
+        image: {
+          src: 'https://via.placeholder.com/400x300/1a1a1a/ffffff?text=Scale',
+          alt: 'Scalability illustration'
+        }
+      }
+    ],
+    backgroundPattern: {
+      style: 'square',
+      size: '24px'
+    }
   }
 }

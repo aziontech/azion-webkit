@@ -52,9 +52,9 @@
                   >
                     <GridPattern
                       class="h-1/2 w-full relative"
-                      pattern="dots"
+                      :pattern="backgroundPattern.style"
                       color="light-gray"
-                      size="24px"
+                      :size="backgroundPattern.size"
                     />
                   </div>
                   <div
@@ -105,11 +105,6 @@
       type: String,
       default: ''
     },
-    backgroundStyle: {
-      type: String,
-      default: 'grid',
-      validator: (value) => ['grid', 'dots'].includes(value)
-    },
     layout: {
       type: String,
       default: '50/50',
@@ -123,7 +118,11 @@
       type: String,
       options: ['mb-0', 'mb-6', 'mb-12', 'mb-24', 'mb-48'],
       default: 'mb-24'
-    }
+    },
+    backgroundPattern: () => ({
+      style: 'dots',
+      size: '24px'
+    })
   })
 
   const parsedMarkdown = computed(() => {

@@ -3,6 +3,7 @@
     <div
       :id="id"
       :class="cardType[type]"
+      class="grid gap-1 m-0"
     >
       <div
         v-if="content && type === '2-col-70-30'"
@@ -27,10 +28,10 @@
       <GridPattern
         class="relative flex flex-col md:flex-row justify-between rounded-md p-6 md:p-12 overflow-hidden gap-2 md:gap-12"
         :class="[ctaColor[type], type.includes('short') ? 'pb-2 md:pb-8' : '']"
-        pattern="dots"
+        :pattern="backgroundPattern.style"
         :color="type.includes('short-orange') ? 'dark-gray' : 'light-gray'"
-        size="12px"
-        :opacity="0.1"
+        :size="backgroundPattern.size"
+        :opacity="type.includes('short-orange') ? 0.3 : 0.1"
       >
         <div
           class="flex"
@@ -100,14 +101,20 @@
   interface SectionCallToActionProps {
     type: '2-col-70-30' | '1-col' | '1-col-short-orange' | '1-col-short-black'
     id?: string
-    backgroundStyle: 'dots' | 'square'
     cta: CardProps
     content: CardProps
+    backgroundPattern: {
+      style: 'dots' | 'square'
+      size: '12px' | '24px' | '48px'
+    }
   }
 
   const props = withDefaults(defineProps<SectionCallToActionProps>(), {
     type: '2-col-70-30',
-    backgroundStyle: 'dots'
+    backgroundPattern: () => ({
+      style: 'dots',
+      size: '12px'
+    })
   })
 
   const cardType = {

@@ -1,89 +1,92 @@
 <template>
-  <section
-    :id="id"
-    class="grid gap-2 relative max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12 mb-40"
-    :class="cardType[type]"
-  >
+  <LayoutContainer>
     <div
-      v-if="content && type === '2-col-70-30'"
-      class="lg:col-span-3 w-full flex flex-col justify-between gap-6 bg-neutral-900 rounded-md p-6 md:p-12"
-    >
-      <div class="flex flex-col gap-3">
-        <Overline color="orange">{{ content.overline }}</Overline>
-        <h2 class="text-2xl text-neutral-200 font-sora">{{ content.title }}</h2>
-        <p
-          class="text-neutral-400 font-sora"
-          v-html="parsedContentMarkdown"
-        ></p>
-      </div>
-      <Button
-        v-if="content.linkLabel"
-        :label="content.linkLabel"
-        :href="content.link"
-        type="linkSecondary"
-        size="small"
-      />
-    </div>
-    <GridPattern
-      class="relative flex flex-col md:flex-row justify-between rounded-md p-6 md:p-12 overflow-hidden gap-2 md:gap-12"
-      :class="[ctaColor[type], type.includes('short') ? 'pb-2 md:pb-8' : '']"
-      pattern="dots"
-      :color="type.includes('short-orange') ? 'dark-gray' : 'light-gray'"
-      size="12px"
-      :opacity="0.1"
+      :id="id"
+      :class="cardType[type]"
+      class="grid gap-1 m-0"
     >
       <div
-        class="flex"
-        :class="
-          type.includes('short')
-            ? 'flex flex-col-reverse justify-between gap-20'
-            : 'flex-col gap-60'
-        "
+        v-if="content && type === '2-col-70-30'"
+        class="lg:col-span-3 w-full flex flex-col justify-between gap-6 bg-neutral-900 rounded-md p-6 md:p-12"
       >
         <div class="flex flex-col gap-3">
-          <Overline
-            v-if="cta.overline && !type.includes('short')"
-            :color="type.includes('short-orange') ? 'black' : 'primary'"
-          >
-            {{ cta.overline }}
-          </Overline>
+          <Overline color="orange">{{ content.overline }}</Overline>
+          <h2 class="text-2xl text-neutral-200 font-sora">{{ content.title }}</h2>
           <p
-            class="font-sora text-xl"
-            :class="[type.includes('short-orange') ? 'text-white' : 'text-neutral-200']"
-            v-html="parsedCtaMarkdown"
+            class="text-neutral-400 font-sora"
+            v-html="parsedContentMarkdown"
           ></p>
         </div>
-        <h2
-          class="font-sora font-bold gap-4 display-2-mobile md:display-2"
-          :class="type.includes('short-orange') ? 'text-neutral-900' : 'text-orange-500'"
-        >
-          {{ cta.title }}
-        </h2>
+        <Button
+          v-if="content.linkLabel"
+          :label="content.linkLabel"
+          :href="content.link"
+          type="linkSecondary"
+          size="small"
+        />
       </div>
-      <div
-        class="flex mb-4 items-end"
-        :class="type.includes('short') ? 'mb-4' : 'mb-0'"
+      <GridPattern
+        class="relative flex flex-col md:flex-row justify-between rounded-md p-6 md:p-12 overflow-hidden gap-2 md:gap-12"
+        :class="[ctaColor[type], type.includes('short') ? 'pb-2 md:pb-8' : '']"
+        :pattern="backgroundPattern.style"
+        :color="type.includes('short-orange') ? 'dark-gray' : 'light-gray'"
+        :size="backgroundPattern.size"
+        :opacity="type.includes('short-orange') ? 0.3 : 0.1"
       >
-        <div class="md:w-fit w-full">
-          <Button
-            v-if="cta.linkLabel"
-            :label="cta.linkLabel"
-            :href="cta.link"
-            :theme="type.includes('short-orange') ? 'dark' : 'light'"
-            icon="pi pi-angle-right"
-            :type="type.includes('short-orange') ? 'secondary' : 'primary'"
-            size="small"
-            class="w-full"
-          />
+        <div
+          class="flex"
+          :class="
+            type.includes('short')
+              ? 'flex flex-col-reverse justify-between gap-20'
+              : 'flex-col gap-60'
+          "
+        >
+          <div class="flex flex-col gap-3">
+            <Overline
+              v-if="cta.overline && !type.includes('short')"
+              :color="type.includes('short-orange') ? 'black' : 'primary'"
+            >
+              {{ cta.overline }}
+            </Overline>
+            <p
+              class="font-sora text-xl"
+              :class="[type.includes('short-orange') ? 'text-white' : 'text-neutral-200']"
+              v-html="parsedCtaMarkdown"
+            ></p>
+          </div>
+          <h2
+            class="font-sora font-bold gap-4 display-2-mobile md:display-2"
+            :class="type.includes('short-orange') ? 'text-neutral-900' : 'text-orange-500'"
+          >
+            {{ cta.title }}
+          </h2>
         </div>
-      </div>
-    </GridPattern>
-  </section>
+        <div
+          class="flex mb-4 items-end"
+          :class="type.includes('short') ? 'mb-4' : 'mb-0'"
+        >
+          <div class="md:w-fit w-full">
+            <Button
+              v-if="cta.linkLabel"
+              :label="cta.linkLabel"
+              :href="cta.link"
+              :theme="type.includes('short-orange') ? 'dark' : 'light'"
+              icon="pi pi-angle-right"
+              :type="type.includes('short-orange') ? 'secondary' : 'primary'"
+              size="small"
+              class="w-full"
+            />
+          </div>
+        </div>
+      </GridPattern>
+    </div>
+  </LayoutContainer>
 </template>
 
 <script setup lang="ts">
   import Button from '../../components/Button/Button.vue'
   import Overline from '../../components/overline/Overline.vue'
+  import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
   import GridPattern from '../../components/GridPattern/GridPattern.vue'
   import { parseMarkdown } from '../../services/markdown/markdown-service'
   import { computed } from 'vue'
@@ -98,14 +101,20 @@
   interface SectionCallToActionProps {
     type: '2-col-70-30' | '1-col' | '1-col-short-orange' | '1-col-short-black'
     id?: string
-    backgroundStyle: 'dots' | 'square'
     cta: CardProps
     content: CardProps
+    backgroundPattern: {
+      style: 'dots' | 'square'
+      size: '12px' | '24px' | '48px'
+    }
   }
 
   const props = withDefaults(defineProps<SectionCallToActionProps>(), {
     type: '2-col-70-30',
-    backgroundStyle: 'dots'
+    backgroundPattern: () => ({
+      style: 'dots',
+      size: '12px'
+    })
   })
 
   const cardType = {

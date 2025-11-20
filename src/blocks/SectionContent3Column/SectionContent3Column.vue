@@ -12,8 +12,8 @@
           :class="[index == cards.length - 1 ? 'md:border-r' : '']"
         >
           <GridPattern
-            size="48px"
-            :pattern="gridPattern"
+            :size="backgroundPattern.size"
+            :pattern="backgroundPattern.style"
             color="light-gray"
             class="flex flex-col h-full"
           >
@@ -48,14 +48,20 @@
   interface SectionContentImage2ColumnProps {
     cards: ContentCard[]
     id?: string
-    gridPattern: 'square' | 'dots'
     bottomSpacing?: 'mb-0' | 'mb-6' | 'mb-12' | 'mb-24' | 'mb-48'
+    backgroundPattern: {
+      style: 'dots' | 'square'
+      size: '12px' | '24px' | '48px'
+    }
   }
 
   withDefaults(defineProps<SectionContentImage2ColumnProps>(), {
     cards: () => [],
     id: '',
-    gridPattern: 'dots',
-    bottomSpacing: 'mb-24'
+    bottomSpacing: 'mb-24',
+    backgroundPattern: () => ({
+      style: 'dots',
+      size: '48px'
+    })
   })
 </script>
