@@ -119,10 +119,13 @@
       options: ['mb-0', 'mb-6', 'mb-12', 'mb-24', 'mb-48'],
       default: 'mb-24'
     },
-    backgroundPattern: () => ({
-      style: 'dots',
-      size: '24px'
-    })
+    backgroundPattern: {
+      type: Object,
+      default: () => ({
+        style: 'dots',
+        size: '24px'
+      })
+    }
   })
 
   const parsedMarkdown = computed(() => {
@@ -144,10 +147,3 @@
       : `${baseClasses} before:left-0 after:right-0 md:after:left-0`
   })
 </script>
-
-<style scoped>
-  :root {
-    --ds-background-200: #171717;
-    --ds-gray-300: #404040;
-  }
-</style>
