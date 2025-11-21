@@ -1,3 +1,19 @@
+## [1.270.0](https://github.com/aziontech/azion-webkit/compare/v1.269.5...v1.270.0) (2025-11-21)
+
+### Features
+
+* grid pattern padronization ([59b7f9a](https://github.com/aziontech/azion-webkit/commit/59b7f9a046b22ba0847b705030084adf6907004f))
+* grid pattern props ([76e5701](https://github.com/aziontech/azion-webkit/commit/76e57019931cb215dadabb013576d9f6c223b73c))
+* section faq ([2faeb1a](https://github.com/aziontech/azion-webkit/commit/2faeb1abfb5ded2e8a8dfe603978e042e84f3fdb))
+* section faq mobile version ([cb4b6fb](https://github.com/aziontech/azion-webkit/commit/cb4b6fbb57270b81180e865c4de0d68f1ca28e57))
+
+### Bug Fixes
+
+* components aligment ([3c71c60](https://github.com/aziontech/azion-webkit/commit/3c71c600cab0636e0bcecb8381f8fc3d09539a17))
+* hovers and spacing ([b777b98](https://github.com/aziontech/azion-webkit/commit/b777b98ccee5f2c47f2141952c826f31067f027c))
+* lint ([2750d39](https://github.com/aziontech/azion-webkit/commit/2750d39a485c51943d50dd793fdaf1a845e04794))
+* update grid pattern ([03ca9ca](https://github.com/aziontech/azion-webkit/commit/03ca9cae2c3ff7ec4142d12c4819de7662c80934))
+
 ## [1.269.5](https://github.com/aziontech/azion-webkit/compare/v1.269.4...v1.269.5) (2025-11-21)
 
 ### Bug Fixes
