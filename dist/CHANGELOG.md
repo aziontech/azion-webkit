@@ -1,3 +1,9 @@
+## [1.269.5](https://github.com/aziontech/azion-webkit/compare/v1.269.4...v1.269.5) (2025-11-21)
+
+### Bug Fixes
+
+* simplify primary dark button hover states and adjust secondary button ([4c52b80](https://github.com/aziontech/azion-webkit/commit/4c52b801ebb0474c0ac1a66a54d1d807394c76b7))
+
 ## [1.269.4](https://github.com/aziontech/azion-webkit/compare/v1.269.3...v1.269.4) (2025-11-19)
 
 ### Bug Fixes
