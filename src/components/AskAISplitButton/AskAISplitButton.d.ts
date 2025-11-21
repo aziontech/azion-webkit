@@ -1,5 +1,3 @@
-export interface AskAISplitButtonProps {
-  }
-  
-  export { default } from './AskAISplitButton.vue'
-  
+export interface AskAISplitButtonProps {}
+
+export { default } from './AskAISplitButton.vue'

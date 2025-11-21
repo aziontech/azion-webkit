@@ -66,4 +66,3 @@ export const Spanish = {
     lang: 'es'
   }
 }
-

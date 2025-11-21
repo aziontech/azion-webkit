@@ -1,8 +1,7 @@
 {
-    "main": "./index.ts",
-    "types": "./AskAISplitButton.d.ts",
-    "browser": {
-      "./sfc": "./AskAISplitButton.vue"
-    }
+  "main": "./index.ts",
+  "types": "./AskAISplitButton.d.ts",
+  "browser": {
+    "./sfc": "./AskAISplitButton.vue"
   }
-  
+}
