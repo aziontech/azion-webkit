@@ -40,9 +40,10 @@
   </SplitButton>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import { computed, ref } from 'vue'
   import SplitButton from 'primevue/splitbutton'
+  import type { AskAISplitButtonProps, AskAISplitButtonMenuItem } from './AskAISplitButton.d.ts'
 
   const props = defineProps({
     lang: {
@@ -61,7 +62,7 @@
     }[props.lang]
   })
 
-  const pageMarkdown = ref(null)
+  const pageMarkdown = ref<string | null>(null)
 
   const getPageMarkdown = async () => {
     if (pageMarkdown.value) {
@@ -82,7 +83,7 @@
     }
   }
 
-  const copyToClipboard = async (text) => {
+  const copyToClipboard = async (text: string) => {
     if (typeof navigator !== 'undefined' && navigator.clipboard) {
       await navigator.clipboard.writeText(text)
     }
@@ -97,7 +98,7 @@
     await copyToClipboard(pageLink)
   }
 
-  const getAIMessage = () => {
+  const getAIMessage = (): string => {
     const pageLink = getPageLink()
 
     const messages = {
@@ -105,10 +106,10 @@
       'pt-br': `Leia esta página da Azion: ${pageLink} e responda perguntas sobre o conteúdo.`,
       es: `Lea esta página de la Azion: ${pageLink} y responda preguntas sobre el contenido.`
     }
-    return messages[props.lang]
+    return messages[props.lang as keyof typeof messages]
   }
 
-  const openAILink = (url) => {
+  const openAILink = (url: string) => {
     if (typeof window === 'undefined') return
     const message = encodeURIComponent(getAIMessage())
     window.open(`${url}${message}`, '_blank')
@@ -139,7 +140,7 @@
     openAILink('https://x.com/i/grok?text=')
   }
 
-  const menuItems = {
+  const menuItems: Record<AskAISplitButtonProps['lang'], AskAISplitButtonMenuItem[]> = {
     en: [
       {
         label: 'Get page link',
