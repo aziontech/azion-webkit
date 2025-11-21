@@ -15,7 +15,7 @@
   })
 
   const containerClasses = computed(() => {
-    const baseClasses = 'relative max-w-xl xxxl:max-w-xxl mx-auto py-12 px-6 md:px-0'
+    const baseClasses = 'relative max-w-xl xxxl:max-w-xxl mx-auto py-12 px-6 xl:px-0'
     const flexClasses = 'flex flex-col justify-center'
 
     return `${baseClasses} ${flexClasses}`
