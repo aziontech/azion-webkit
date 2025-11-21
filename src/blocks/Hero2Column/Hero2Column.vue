@@ -1,7 +1,7 @@
 <template>
   <GridPattern
     :id="id"
-    :class="`text-white relative overflow-hidden w-full mx-auto py-24 lg:py-0 ${bottomSpacing}`"
+    :class="`text-white relative overflow-hidden w-full mx-auto ${bottomSpacing}`"
     pattern="dots"
     color="light-gray"
     size="48px"
@@ -9,7 +9,7 @@
   >
     <LayoutContainer class="flex flex-col gap-4 lg:gap-24 lg:flex-row items-center z-10">
       <div
-        class="flex w-full lg:w-1/2 pb-6 lg:py-12 flex-col gap-3 md:gap-4 lg:gap-5 text-center lg:text-left"
+        class="flex w-full lg:w-1/2 pb-6 flex-col gap-3 md:gap-4 lg:gap-5 text-center lg:text-left"
       >
         <div class="flex flex-col gap-2 lg:gap-3">
           <p
@@ -43,7 +43,7 @@
           />
         </div>
       </div>
-      <div class="relative flex w-full lg:w-1/2 lg:py-36 items-center justify-center">
+      <div class="relative flex w-full lg:w-1/2 lg:py-24 items-center justify-center">
         <div
           v-if="image"
           class="py-1 w-full max-w-md mx-auto"
