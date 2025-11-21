@@ -1,3 +1,14 @@
+## [1.271.0](https://github.com/aziontech/azion-webkit/compare/v1.270.0...v1.271.0) (2025-11-21)
+
+### Features
+
+* ask ai component ([9911721](https://github.com/aziontech/azion-webkit/commit/9911721e22de659c530501402cb9a2d4a430daa1))
+* types ([a39b0b3](https://github.com/aziontech/azion-webkit/commit/a39b0b3762fee79de591ea88fa1191732b5990e1))
+
+### Bug Fixes
+
+* padding issues ([39d2d48](https://github.com/aziontech/azion-webkit/commit/39d2d48883e5451db3673936ac0651cb22000df5))
+
 ## [1.270.0](https://github.com/aziontech/azion-webkit/compare/v1.269.5...v1.270.0) (2025-11-21)
 
 ### Features
