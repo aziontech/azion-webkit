@@ -6,7 +6,7 @@
     >
       <div
         v-if="cards && cards.length > 0"
-        class="grid grid-cols-1 lg:grid-cols-3 p-0 md:p-12 m-0"
+        class="grid grid-cols-1 lg:grid-cols-3 m-0"
       >
         <div
           v-for="(card, index) in cards"

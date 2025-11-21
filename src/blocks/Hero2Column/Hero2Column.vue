@@ -1,38 +1,36 @@
 <template>
   <GridPattern
     :id="id"
-    :class="`text-white relative overflow-hidden w-full mx-auto py-24 md:py-0 ${bottomSpacing}`"
+    :class="`text-white relative overflow-hidden w-full mx-auto py-24 lg:py-0 ${bottomSpacing}`"
     pattern="dots"
     color="light-gray"
     size="48px"
     htmlTag="section"
   >
-    <div
-      class="flex flex-col md:flex-row items-center max-w-xl xxxl:max-w-xxl mx-auto relative z-10 p-6 md:p-0"
-    >
+    <LayoutContainer class="flex flex-col gap-4 lg:gap-24 lg:flex-row items-center z-10">
       <div
-        class="flex w-full md:w-1/2 pb-6 md:p-12 flex-col gap-3 md:gap-4 lg:gap-5 text-center lg:text-left"
+        class="flex w-full lg:w-1/2 pb-6 lg:py-12 flex-col gap-3 md:gap-4 lg:gap-5 text-center lg:text-left"
       >
-        <div class="flex flex-col gap-2 md:gap-3">
+        <div class="flex flex-col gap-2 lg:gap-3">
           <p
             v-if="overline"
-            class="text-orange-500 font-proto-mono text-sm md:text-base tracking-tight uppercase"
+            class="text-orange-500 font-proto-mono text-sm lg:text-base tracking-tight uppercase"
           >
             {{ overline }}
           </p>
-          <h1 class="font-sora md:leading-tight text-pretty display-1-mobile md:display-1">
+          <h1 class="font-sora lg:leading-tight text-pretty display-1-mobile lg:display-1">
             {{ title }}
           </h1>
           <div
             v-if="descriptionRawMarkdown"
-            class="text-sm text-pretty md:text-balance lg:text-base max-w-sm md:max-w-7xl text-neutral-200 font-sora mx-auto lg:mx-0"
+            class="text-sm text-pretty lg:text-balance lg:text-base max-w-sm lg:max-w-7xl text-neutral-200 font-sora mx-auto lg:mx-0"
             v-html="parsedSubtitle"
           />
         </div>
 
         <div
           v-if="buttons && buttons.length > 0"
-          class="flex flex-col md:flex-row gap-4 md:gap-5 mt-4 md:mt-0 items-center justify-center lg:justify-start"
+          class="flex flex-col lg:flex-row gap-4 lg:gap-5 mt-4 lg:mt-0 items-center justify-center lg:justify-start"
         >
           <Button
             v-for="(button, index) in limitedButtons"
@@ -45,10 +43,10 @@
           />
         </div>
       </div>
-      <div class="relative flex w-full md:w-1/2 md:px-12 md:py-36 items-center justify-center">
+      <div class="relative flex w-full lg:w-1/2 lg:py-36 items-center justify-center">
         <div
           v-if="image"
-          class="p-1 w-full max-w-md mx-auto"
+          class="py-1 w-full max-w-md mx-auto"
         >
           <div class="w-full">
             <img
@@ -65,7 +63,7 @@
           <i class="pi pi-image text-6xl text-neutral-600" />
         </div>
       </div>
-    </div>
+    </LayoutContainer>
   </GridPattern>
 </template>
 
@@ -74,6 +72,7 @@
   import Button from '../../components/Button'
   import { parseMarkdown } from '../../services/markdown/markdown-service'
   import GridPattern from '../../components/GridPattern/GridPattern.vue'
+  import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
 
   export interface Hero2ColumnButtonProps {
     label: string
