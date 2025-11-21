@@ -26,16 +26,11 @@ export interface SectionCallToActionSharedProps {
    * Banner layout type
    * @defaultValue '2-col-70-30'
    */
-  type: '2-col-70-30' | '1-col' | '1-col-short' | '1-col-short-orange'
+  type: '2-col-70-30' | '1-col' | '1-col-short-orange' | '1-col-short-black'
   /**
    * Optional ID for the section element
    */
   id?: string
-  /**
-   * Background pattern style for the CTA card
-   * @defaultValue 'dots'
-   */
-  backgroundStyle?: 'dots' | 'square'
   /**
    * CTA card configuration (right/main card)
    */
@@ -44,6 +39,14 @@ export interface SectionCallToActionSharedProps {
    * Content card configuration (left/secondary card)
    */
   content: CardProps
+  /**
+   * Background pattern configuration
+   * @defaultValue { style: 'dots', size: '12px' }
+   */
+  backgroundPattern: {
+    style: 'dots' | 'square'
+    size: '12px' | '24px' | '48px'
+  }
 }
 
 export { default } from './SectionCallToActionShared.vue'

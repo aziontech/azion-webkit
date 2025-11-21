@@ -1,198 +1,217 @@
-# ProductHero
+# Hero2Column
 
-A flexible two-column hero section component designed for product pages. Features content on one side and an image/visual on the other, with support for features list, multiple CTAs, and flexible layouts.
+A two-column hero section component with background pattern support, markdown content, and flexible button configurations. Perfect for landing pages and product showcases.
 
 ## Features
 
-- **Two-column layout** with responsive design
-- **Reversible layout** - image on left or right
-- **Features list** with customizable icons
-- **Multiple CTAs** - supports up to 3 buttons
-- **Theme support** - light and dark modes
-- **Flexible spacing** options
-- **Custom visual slot** for advanced use cases
-- **TypeScript support** with full type definitions
+- **Two-Column Layout**: Content on left, image on right with responsive stacking
+- **Background Patterns**: Dots or square grid patterns with customizable size and opacity
+- **Markdown Support**: Rich text descriptions with markdown formatting
+- **Multiple Buttons**: Support for up to 3 CTA buttons
+- **Responsive Design**: Adapts from mobile to desktop layouts
+- **Flexible Spacing**: Configurable bottom margin options
 
 ## Props
 
-| Prop             | Type                                        | Default         | Description                      |
-| ---------------- | ------------------------------------------- | --------------- | -------------------------------- |
-| `title`          | `string`                                    | **required**    | Main heading text                |
-| `subtitle`       | `string`                                    | `undefined`     | Description/subtitle text        |
-| `overline`       | `string`                                    | `undefined`     | Small text above title           |
-| `features`       | `ProductHeroFeature[]`                      | `[]`            | Array of feature items           |
-| `buttons`        | `ProductHeroButtonProps[]`                  | `[]`            | Array of button configs (max 3)  |
-| `image`          | `string`                                    | `undefined`     | Image URL                        |
-| `imageAlt`       | `string`                                    | `undefined`     | Image alt text                   |
-| `imageClass`     | `string`                                    | `undefined`     | Additional CSS classes for image |
-| `layout`         | `'image-right' \| 'image-left'`             | `'image-right'` | Image position                   |
-| `spacing`        | `'none' \| 'small' \| 'default' \| 'large'` | `'default'`     | Vertical padding                 |
-| `titleSize`      | `'default' \| 'large'`                      | `'default'`     | Title size variant               |
-| `additionalInfo` | `string`                                    | `undefined`     | Text below buttons               |
-| `id`             | `string`                                    | `undefined`     | HTML id attribute                |
+| Prop                     | Type                       | Required | Default                           | Description                               |
+| ------------------------ | -------------------------- | -------- | --------------------------------- | ----------------------------------------- |
+| `title`                  | `string`                   | Yes      | -                                 | Main hero title                           |
+| `overline`               | `string`                   | No       | -                                 | Small text displayed above title          |
+| `descriptionRawMarkdown` | `string`                   | No       | -                                 | Description in markdown format            |
+| `buttons`                | `Hero2ColumnButtonProps[]` | No       | `[]`                              | Array of button configs (max 3 displayed) |
+| `image`                  | `string`                   | No       | -                                 | Hero image URL                            |
+| `id`                     | `string`                   | No       | -                                 | HTML id attribute                         |
+| `bottomSpacing`          | `string`                   | No       | `mb-24`                           | Bottom margin spacing class               |
+| `backgroundPattern`      | `object`                   | No       | `{ style: 'dots', size: '48px' }` | Background pattern configuration          |
 
-## Types
+### Bottom Spacing Options
+
+| Value   | Description               |
+| ------- | ------------------------- |
+| `mb-0`  | No bottom margin          |
+| `mb-6`  | Small bottom margin       |
+| `mb-12` | Medium bottom margin      |
+| `mb-24` | Large bottom margin       |
+| `mb-48` | Extra large bottom margin |
+
+### Background Pattern
 
 ```typescript
-interface ProductHeroFeature {
-  text: string
-  icon?: string // PrimeVue icon class, default: 'pi pi-check-circle'
+interface BackgroundPattern {
+  style: 'dots' | 'square' // Pattern type
+  size: '12px' | '24px' | '48px' // Grid size
 }
+```
 
-interface ProductHeroButtonProps {
-  label: string
-  size?: 'small' | 'large'
+### Hero2ColumnButtonProps
+
+```typescript
+interface Hero2ColumnButtonProps {
+  label: string // Button text
+  size?: 'small' | 'large' // Button size
   type?: 'primary' | 'secondary' | 'link' | 'tertiary' | 'linkExternal'
-  href: string
-  icon?: string
-  theme?: string
-  customClass?: string
+  href: string // Link URL
+  icon?: string // PrimeIcons class
+  theme?: string // Theme variant
+  customClass?: string // Custom CSS classes
 }
 ```
 
 ## Usage
 
-### Basic Example
+### Basic Hero
 
 ```vue
 <template>
-  <ProductHero
+  <Hero2Column
     title="Build faster with Azion"
-    subtitle="The edge platform that accelerates your applications"
-    image="/images/product-screenshot.png"
+    descriptionRawMarkdown="The edge platform that **accelerates** your applications and reduces latency by up to 90%."
     :buttons="[
-      { label: 'Get Started', type: 'primary', href: '/signup' },
+      { label: 'Get Started', type: 'primary', href: '/signup', icon: 'pi pi-chevron-right' },
       { label: 'Learn More', type: 'secondary', href: '/docs' }
     ]"
+    image="/images/hero-image.png"
   />
 </template>
 
 <script setup>
-  import ProductHero from '@/blocks/ProductHero'
+  import Hero2Column from '@/blocks/Hero2Column'
 </script>
 ```
 
-### With Features List
+### With Overline
 
 ```vue
 <template>
-  <ProductHero
+  <Hero2Column
     overline="Edge Computing"
     title="Deploy at the edge in seconds"
-    subtitle="Build and deploy applications closer to your users"
-    :features="[
-      { text: 'Global edge network with 100+ locations' },
-      { text: 'Deploy in under 60 seconds' },
-      { text: 'Automatic SSL certificates' },
-      { text: '99.99% uptime SLA' }
-    ]"
+    descriptionRawMarkdown="Build and deploy applications closer to your users with our **global edge network**."
     :buttons="[{ label: 'Start Free Trial', type: 'primary', href: '/trial' }]"
     image="/images/edge-network.png"
-    layout="image-left"
   />
 </template>
 ```
 
-### Custom Icons
+### Custom Background Pattern
 
 ```vue
 <template>
-  <ProductHero
-    title="Enterprise Security"
-    :features="[
-      { text: 'DDoS protection', icon: 'pi pi-shield' },
-      { text: 'Web Application Firewall', icon: 'pi pi-lock' },
-      { text: 'Bot management', icon: 'pi pi-verified' }
+  <Hero2Column
+    title="Enterprise Solutions"
+    descriptionRawMarkdown="Scale your infrastructure with confidence."
+    :backgroundPattern="{ style: 'square', size: '24px' }"
+    image="/images/enterprise.png"
+  />
+</template>
+```
+
+### Minimal Hero
+
+```vue
+<template>
+  <Hero2Column
+    title="Welcome to Azion"
+    descriptionRawMarkdown="Experience the power of edge computing."
+    bottomSpacing="mb-12"
+  />
+</template>
+```
+
+## Markdown Support
+
+The `descriptionRawMarkdown` prop supports full markdown syntax:
+
+- **Bold text**: `**bold**` or `__bold__`
+- **Italic text**: `*italic*` or `_italic_`
+- **Links**: `[text](url)`
+- **Line breaks**: Double line breaks for paragraphs
+- **Lists**: Ordered and unordered lists
+
+### Example with Markdown
+
+```vue
+<template>
+  <Hero2Column
+    title="Get Started Today"
+    descriptionRawMarkdown="Join thousands of developers building **faster applications** with our platform.\n\n- Deploy in under 60 seconds\n- Global edge network\n- [Learn more](/docs)"
+  />
+</template>
+```
+
+## Button Configuration
+
+Buttons support various types and configurations:
+
+```vue
+<template>
+  <Hero2Column
+    title="Multiple CTAs"
+    :buttons="[
+      {
+        label: 'Primary Action',
+        type: 'primary',
+        href: '/signup',
+        icon: 'pi pi-chevron-right',
+        theme: 'light'
+      },
+      {
+        label: 'Secondary Action',
+        type: 'secondary',
+        href: '/docs'
+      },
+      {
+        label: 'Learn More',
+        type: 'link',
+        href: '/about'
+      }
     ]"
-    image="/images/security.png"
   />
 </template>
 ```
 
-### Custom Visual Slot
+**Note**: Only the first 3 buttons will be displayed.
 
-```vue
-<template>
-  <ProductHero
-    title="Interactive Demo"
-    subtitle="See it in action"
-  >
-    <template #visual>
-      <video
-        autoplay
-        loop
-        muted
-        class="w-full rounded-lg"
-      >
-        <source
-          src="/videos/demo.mp4"
-          type="video/mp4"
-        />
-      </video>
-    </template>
-  </ProductHero>
-</template>
-```
+## Layout Structure
 
-### With Additional Info
+The component uses a two-column grid layout:
 
-```vue
-<template>
-  <ProductHero
-    title="Start your free trial"
-    subtitle="No credit card required"
-    :buttons="[{ label: 'Sign Up Free', type: 'primary', href: '/signup' }]"
-    additionalInfo="14-day free trial • Cancel anytime"
-    image="/images/trial.png"
-  />
-</template>
-```
-
-## Layout Options
-
-### Image Right (Default)
-
-Content on the left, image on the right.
-
-```vue
-<ProductHero layout="image-right" ... />
-```
-
-### Image Left
-
-Image on the left, content on the right.
-
-```vue
-<ProductHero layout="image-left" ... />
-```
-
-## Spacing Options
-
-- **`none`** - No vertical padding
-- **`small`** - Minimal padding (8-16px)
-- **`default`** - Standard padding (12-28px)
-- **`large`** - Maximum padding (16-36px)
+- **Left Column (50% on desktop)**: Contains title, overline, description, and buttons
+- **Right Column (50% on desktop)**: Contains the hero image
+- **Mobile**: Stacks vertically with content first, then image
 
 ## Styling
 
 The component uses:
 
-- **Tailwind CSS** for responsive layout and spacing
-- **PrimeVue icons** for feature checkmarks
-- **Azion orange** (#F3652B) for accent colors
-- **Font Sora** for headings
-- **Font Proto Mono** for overline text
+- **Background**: GridPattern component with customizable patterns
+- **Typography**:
+  - Overline: Orange-500, Proto Mono font, uppercase
+  - Title: White, Sora font, responsive display sizes
+  - Description: Neutral-200, Sora font
+- **Colors**:
+  - Text: White and neutral variants
+  - Accent: Orange-500 for overline
+- **Spacing**: Responsive padding (p-6 on mobile, p-12 on desktop)
 
 ## Responsive Behavior
 
-- **Mobile**: Single column, centered content
-- **Tablet**: Maintains single column with larger spacing
-- **Desktop (lg+)**: Two-column grid layout with image positioning
+- **Mobile**: Single column, stacked layout, centered content
+- **Tablet (md+)**: Two-column layout with image on right
+- **Typography**: Scales from mobile to desktop display sizes
+- **Spacing**: Adaptive padding and margins
 
 ## Accessibility
 
 - Semantic HTML5 `<section>` element
-- Proper heading hierarchy
-- Alt text support for images
+- Proper heading hierarchy (h1 for title)
+- Alt text support for images (uses title as fallback)
 - Keyboard-accessible buttons
-- ARIA-compliant icon usage
+- Screen reader friendly content structure
+
+## Dependencies
+
+- **GridPattern**: Background pattern component
+- **Button**: Button component for CTAs
+- **Markdown Service**: Parses markdown in descriptions
+- **Tailwind CSS**: For styling and responsive design

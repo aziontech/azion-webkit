@@ -16,14 +16,14 @@ This component doesn't accept any props - it provides a pure layout container op
 
 ## Slots
 
-| Slot      | Description                                    |
-| --------- | ---------------------------------------------- |
-| `default` | Main content area for card components          |
+| Slot      | Description                           |
+| --------- | ------------------------------------- |
+| `default` | Main content area for card components |
 
 ## Grid Breakpoints
 
 - **Mobile**: 1 column (stacked cards)
-- **Medium (md+)**: 2 columns 
+- **Medium (md+)**: 2 columns
 - **Large (lg+)**: 3 columns
 
 ## Usage
