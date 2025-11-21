@@ -1,19 +1,25 @@
 <template>
   <SplitButton
-    size="large"
+    size="small"
     unstyled
     :pt="{
+      root: {
+        class: `flex h-8`
+      },
       button: {
         root: {
-          class: `group bg-neutral-950 text-neutral-100 duration-300 transition px-3 py-3 rounded-l-md active:bg-neutral-900 border-1 border-neutral-900 hover:bg-neutral-900 hover:text-orange-500`
+          class: `text-sm group bg-neutral-950 text-neutral-100 duration-300 px-3 transition rounded-l-md active:bg-neutral-900 border-1 border-neutral-900 hover:bg-neutral-900 hover:text-orange-500`
         }
       },
       menuButton: {
         root: {
-          class: `group bg-neutral-950 text-neutral-100 duration-300 transition px-3 py-3 rounded-r-md rounded-l-none active:bg-neutral-900 border-1 border-l-none border-neutral-900 hover:bg-neutral-900`
+          class: `group bg-neutral-950 text-neutral-100 duration-300 transition px-3 rounded-r-md rounded-l-none active:bg-neutral-900 border-1 border-l-none border-neutral-900 hover:bg-neutral-900`
         },
         icon: {
           class: `group-hover:text-orange-500 h-3 w-3`
+        },
+        label: {
+          class: `hidden`
         }
       },
       menu: {
@@ -24,7 +30,7 @@
     }"
     @click="getPageMarkdown"
     :label="label"
-    :model="menuItems[props.lang]"
+    :model="menuItems[props.lang as keyof typeof menuItems]"
   >
     <template #item="{ item }">
       <div class="flex gap-2 hover:bg-neutral-900 p-1 rounded-md">
