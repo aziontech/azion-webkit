@@ -1,3 +1,9 @@
+## [1.271.6](https://github.com/aziontech/azion-webkit/compare/v1.271.5...v1.271.6) (2025-11-24)
+
+### Bug Fixes
+
+* replace dark background menu items with Button component in Header ([4ccc7f0](https://github.com/aziontech/azion-webkit/commit/4ccc7f028c62846eae38b61e153464b3f32708cd))
+
 ## [1.271.5](https://github.com/aziontech/azion-webkit/compare/v1.271.4...v1.271.5) (2025-11-24)
 
 ### Bug Fixes
