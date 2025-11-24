@@ -24,7 +24,7 @@
               type="primary"
               theme="light"
               size="small"
-              custom-class="!py-2"
+              custom-class="!py-2 px-3"
             />
             <a
               v-else
