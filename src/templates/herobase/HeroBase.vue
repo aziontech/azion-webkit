@@ -1,6 +1,6 @@
 <template>
   <section
-    :class="`relative max-w-xl xxxl:max-w-xxl mx-auto pt-16 p-6 md:p-0 ${bottomSpacing}`"
+    :class="`relative max-w-xl xxxl:max-w-xxl mx-auto mt-16 p-6 md:p-0 ${bottomSpacing}`"
     :id="id"
   >
     <div
