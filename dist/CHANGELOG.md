@@ -1,3 +1,9 @@
+## [1.271.5](https://github.com/aziontech/azion-webkit/compare/v1.271.4...v1.271.5) (2025-11-24)
+
+### Bug Fixes
+
+* change top padding to margin in HeroBase component ([ea28337](https://github.com/aziontech/azion-webkit/commit/ea283371db0aaf787b9d7ed413a3de4f1adbbece))
+
 ## [1.271.4](https://github.com/aziontech/azion-webkit/compare/v1.271.3...v1.271.4) (2025-11-24)
 
 ### Bug Fixes
