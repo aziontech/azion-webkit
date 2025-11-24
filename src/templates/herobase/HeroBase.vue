@@ -1,6 +1,6 @@
 <template>
   <section
-    :class="`flex flex-col gap-10 md:gap-20 2xl:gap-40 ${spacing[margin]} ${bottomSpacing}`"
+    :class="`relative max-w-xl xxxl:max-w-xxl mx-auto p-6 ${bottomSpacing}`"
     :id="id"
   >
     <div
