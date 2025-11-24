@@ -5,7 +5,7 @@
     :pt="{
       button: {
         root: {
-          class: `group bg-neutral-950 text-neutral-100 duration-300 transition px-3 py-3 rounded-l-md active:bg-neutral-900 border-1 border-neutral-900 hover:bg-neutral-900 hover:text-orange-500`
+          class: `text-sm min-w-32 group bg-neutral-950 text-neutral-100 duration-300 px-3 transition ease-in-out rounded-l-md active:bg-neutral-900 border-1 border-neutral-900 hover:bg-neutral-900 hover:text-orange-500`
         }
       },
       menuButton: {
@@ -27,8 +27,11 @@
     :model="menuItems[props.lang]"
   >
     <template #item="{ item }">
-      <div class="flex gap-2 hover:bg-neutral-900 p-1 rounded-md">
-        <i class="pi pi-angle-right text-neutral-500 text-sm" />
+      <div class="flex gap-2 hover:bg-neutral-900 p-1 rounded-md cursor-pointer">
+        <i
+          :class="item.icon"
+          class="text-neutral-500 text-xs pt-0.5"
+        />
         <div class="flex flex-col gap-1">
           <p class="text-neutral-100 text-sm">
             {{ item.label }}
@@ -54,12 +57,22 @@
     }
   })
 
+  const isCopied = ref(false)
+
   const label = computed(() => {
+    const lang = props.lang as 'en' | 'pt-br' | 'es'
+    if (isCopied.value) {
+      return {
+        en: 'Copied!',
+        'pt-br': 'Copiado!',
+        es: '¡Copiado!'
+      }[lang]
+    }
     return {
       en: 'Copy page',
       'pt-br': 'Copiar página',
       es: 'Copiar página'
-    }[props.lang]
+    }[lang]
   })
 
   const pageMarkdown = ref<string | null>(null)
@@ -67,6 +80,7 @@
   const getPageMarkdown = async () => {
     if (pageMarkdown.value) {
       await copyToClipboard(pageMarkdown.value)
+      showCopiedFeedback()
       return
     }
 
@@ -76,11 +90,19 @@
       const markdownText = await response.text()
       await copyToClipboard(markdownText)
       pageMarkdown.value = markdownText
+      showCopiedFeedback()
 
       return
     } catch (error) {
       console.error(error)
     }
+  }
+
+  const showCopiedFeedback = () => {
+    isCopied.value = true
+    setTimeout(() => {
+      isCopied.value = false
+    }, 2000)
   }
 
   const copyToClipboard = async (text: string) => {
@@ -145,36 +167,43 @@
       {
         label: 'Get page link',
         description: 'Get the URL of this page',
+        icon: 'pi pi-clipboard',
         command: copyPageLink
       },
       {
         label: 'View page as markdown',
         description: 'Open the markdown file of this page',
+        icon: 'pi pi-arrow-up-right',
         command: openPageAsMarkdown
       },
       {
         label: 'Open in Google AI',
         description: 'Ask Google AI about this page',
+        icon: 'pi pi-arrow-up-right',
         command: openInGoogleAI
       },
       {
         label: 'Open in Perplexity',
         description: 'Ask Perplexity about this page',
+        icon: 'pi pi-arrow-up-right',
         command: openInPerplexity
       },
       {
         label: 'Open in Claude',
         description: 'Ask Claude about this page',
+        icon: 'pi pi-arrow-up-right',
         command: openInClaude
       },
       {
         label: 'Open in ChatGPT',
         description: 'Ask ChatGPT about this page',
+        icon: 'pi pi-arrow-up-right',
         command: openInChatGPT
       },
       {
         label: 'Open in Grok',
         description: 'Ask Grok about this page',
+        icon: 'pi pi-arrow-up-right',
         command: openInGrok
       }
     ],
@@ -182,36 +211,43 @@
       {
         label: 'Obter link da página',
         description: 'Obter o URL da página',
+        icon: 'pi pi-clipboard',
         command: getPageLink
       },
       {
         label: 'Visualizar página como markdown',
         description: 'Abrir o arquivo markdown da página',
+        icon: 'pi pi-arrow-up-right',
         command: openPageAsMarkdown
       },
       {
         label: 'Abrir no Google AI',
         description: 'Pergunte ao Google AI sobre esta página',
+        icon: 'pi pi-arrow-up-right',
         command: openInGoogleAI
       },
       {
         label: 'Abrir no Perplexity',
         description: 'Pergunte ao Perplexity sobre esta página',
+        icon: 'pi pi-arrow-up-right',
         command: openInPerplexity
       },
       {
         label: 'Abrir no Claude',
         description: 'Pergunte ao Claude sobre esta página',
+        icon: 'pi pi-arrow-up-right',
         command: openInClaude
       },
       {
         label: 'Abrir no ChatGPT',
         description: 'Pergunte ao ChatGPT sobre esta página',
+        icon: 'pi pi-arrow-up-right',
         command: openInChatGPT
       },
       {
         label: 'Abrir no Grok',
         description: 'Pergunte ao Grok sobre esta página',
+        icon: 'pi pi-arrow-up-right',
         command: openInGrok
       }
     ],
@@ -219,36 +255,43 @@
       {
         label: 'Obtener link de la página',
         description: 'Obtener el URL de la página',
+        icon: 'pi pi-clipboard',
         command: getPageLink
       },
       {
         label: 'Visualizar página como markdown',
         description: 'Abrir el archivo markdown de la página',
+        icon: 'pi pi-arrow-up-right',
         command: openPageAsMarkdown
       },
       {
         label: 'Abrir en Google AI',
         description: 'Pregunte al Google AI sobre esta página',
+        icon: 'pi pi-arrow-up-right',
         command: openInGoogleAI
       },
       {
         label: 'Abrir en Perplexity',
         description: 'Pregunte al Perplexity sobre esta página',
+        icon: 'pi pi-arrow-up-right',
         command: openInPerplexity
       },
       {
         label: 'Abrir en Claude',
         description: 'Pregunte al Claude sobre esta página',
+        icon: 'pi pi-arrow-up-right',
         command: openInClaude
       },
       {
         label: 'Abrir en ChatGPT',
         description: 'Pregunte al ChatGPT sobre esta página',
+        icon: 'pi pi-arrow-up-right',
         command: openInChatGPT
       },
       {
         label: 'Abrir en Grok',
         description: 'Pregunte al Grok sobre esta página',
+        icon: 'pi pi-arrow-up-right',
         command: openInGrok
       }
     ]

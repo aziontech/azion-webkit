@@ -5,6 +5,7 @@ export interface AskAISplitButtonProps {
 export interface AskAISplitButtonMenuItem {
   label: string
   description: string
+  icon: string
   command: () => void
 }
 
