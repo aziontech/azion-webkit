@@ -1,3 +1,9 @@
+## [1.271.4](https://github.com/aziontech/azion-webkit/compare/v1.271.3...v1.271.4) (2025-11-24)
+
+### Bug Fixes
+
+* add top padding to HeroBase component ([0e3c1ab](https://github.com/aziontech/azion-webkit/commit/0e3c1ab5c43ab302ee9861a8f4197dd08e8b50e3))
+
 ## [1.271.3](https://github.com/aziontech/azion-webkit/compare/v1.271.2...v1.271.3) (2025-11-24)
 
 ### Bug Fixes
