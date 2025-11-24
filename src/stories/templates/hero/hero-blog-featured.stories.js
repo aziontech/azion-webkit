@@ -11,7 +11,7 @@ export default {
       description: {
         component: `
 ### Content rules
-${Rules.hero.image}
+${Rules.hero.image} 
 ${Rules.hero.title}
 ${Rules.hero.description}
 ${Rules.hero.avatar}
