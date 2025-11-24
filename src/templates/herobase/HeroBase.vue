@@ -1,10 +1,10 @@
 <template>
   <section
-    :class="`relative max-w-xl xxxl:max-w-xxl mx-auto p-6 ${bottomSpacing}`"
+    :class="`relative max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-0 ${bottomSpacing}`"
     :id="id"
   >
     <div
-      class="px-container flex flex-col w-full"
+      class="flex flex-col w-full"
       :class="[
         { 'gap-10': !isCentralized },
         { 'lg:flex-row': !isCentralized && position !== 'right' },
