@@ -1,3 +1,34 @@
+## [1.271.5](https://github.com/aziontech/azion-webkit/compare/v1.271.4...v1.271.5) (2025-11-24)
+
+### Bug Fixes
+
+* change top padding to margin in HeroBase component ([ea28337](https://github.com/aziontech/azion-webkit/commit/ea283371db0aaf787b9d7ed413a3de4f1adbbece))
+
+## [1.271.4](https://github.com/aziontech/azion-webkit/compare/v1.271.3...v1.271.4) (2025-11-24)
+
+### Bug Fixes
+
+* add top padding to HeroBase component ([0e3c1ab](https://github.com/aziontech/azion-webkit/commit/0e3c1ab5c43ab302ee9861a8f4197dd08e8b50e3))
+
+## [1.271.3](https://github.com/aziontech/azion-webkit/compare/v1.271.2...v1.271.3) (2025-11-24)
+
+### Bug Fixes
+
+* remove duplicate padding in HeroBase component ([82da906](https://github.com/aziontech/azion-webkit/commit/82da9065923232f2de189e09ae34cc3633523471))
+
+## [1.271.2](https://github.com/aziontech/azion-webkit/compare/v1.271.1...v1.271.2) (2025-11-24)
+
+### Bug Fixes
+
+* adjust hero grid ([64fc869](https://github.com/aziontech/azion-webkit/commit/64fc869dfa3ef21b5ac831813682422c388c5160))
+
+## [1.271.1](https://github.com/aziontech/azion-webkit/compare/v1.271.0...v1.271.1) (2025-11-24)
+
+### Bug Fixes
+
+* askAI size fixes ([82654f4](https://github.com/aziontech/azion-webkit/commit/82654f4028ed42b8c80df2d522870223cf81cf70))
+* hero2column padding balance ([af1ca43](https://github.com/aziontech/azion-webkit/commit/af1ca4328bdf772140e58a6650b31251687b38e8))
+
 ## [1.271.0](https://github.com/aziontech/azion-webkit/compare/v1.270.0...v1.271.0) (2025-11-21)
 
 ### Features
