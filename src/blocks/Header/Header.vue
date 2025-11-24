@@ -12,23 +12,32 @@
         <div
           class="bg-transparent items-center rounded-md p-1 hidden xl:flex xl:gap-1 h-[2.625rem]"
         >
-          <a
+          <template
             v-for="(menu, index) in menuSecondary"
             :key="index"
-            :target="menu.target"
-            :href="menu.link"
-            :title="menu.title"
-            :class="[
-              'border-none py-1 px-4  rounded-md',
-              menu.backgroundColor === 'dark'
-                ? 'bg-neutral-200 text-neutral-900 hover:bg-neutral-300'
-                : 'text-white hover:text-neutral-300'
-            ]"
           >
-            <span :class="['text-sm', 'font-sora']">
-              {{ menu.text }}
-            </span>
-          </a>
+            <Button
+              v-if="menu.backgroundColor === 'dark'"
+              :label="menu.text"
+              :href="menu.link"
+              :target="menu.target || '_self'"
+              type="primary"
+              theme="light"
+              size="small"
+              custom-class="!py-2"
+            />
+            <a
+              v-else
+              :target="menu.target"
+              :href="menu.link"
+              :title="menu.title"
+              :class="['border-none py-1 px-4  rounded-md text-white hover:text-neutral-300']"
+            >
+              <span :class="['text-sm', 'font-sora']">
+                {{ menu.text }}
+              </span>
+            </a>
+          </template>
         </div>
         <div
           v-if="$slots.dialog"
@@ -45,6 +54,8 @@
 </template>
 
 <script setup>
+  import Button from '../../components/Button/Button.vue'
+
   const props = defineProps({ menuSecondary: Object })
   const { menuSecondary } = props
 </script>
