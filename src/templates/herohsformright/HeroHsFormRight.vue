@@ -7,6 +7,7 @@
     :position="props.position"
     :id="id"
     :margin="props.margin"
+    :bottomSpacing="props.bottomSpacing"
   >
     <template
       v-if="props.list.length"
@@ -88,6 +89,10 @@
       type: String,
       options: ['none', 'small', 'default', 'large'],
       default: () => 'none'
+    },
+    bottomSpacing: {
+      type: String,
+      default: () => 'mb-24'
     }
   })
 

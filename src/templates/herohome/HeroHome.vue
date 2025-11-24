@@ -7,6 +7,7 @@
     :bannerNews="bannerNews"
     :id="id"
     :margin="margin"
+    :bottomSpacing="bottomSpacing"
   >
     <template #title>
       <h1
@@ -94,6 +95,10 @@
       type: String,
       options: ['none', 'small', 'default', 'large'],
       default: () => 'none'
+    },
+    bottomSpacing: {
+      type: String,
+      default: () => 'mb-24'
     }
   })
 </script>
