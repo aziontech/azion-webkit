@@ -1,3 +1,9 @@
+## [1.271.2](https://github.com/aziontech/azion-webkit/compare/v1.271.1...v1.271.2) (2025-11-24)
+
+### Bug Fixes
+
+* adjust hero grid ([64fc869](https://github.com/aziontech/azion-webkit/commit/64fc869dfa3ef21b5ac831813682422c388c5160))
+
 ## [1.271.1](https://github.com/aziontech/azion-webkit/compare/v1.271.0...v1.271.1) (2025-11-24)
 
 ### Bug Fixes
