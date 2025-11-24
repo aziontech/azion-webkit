@@ -1,3 +1,10 @@
+## [1.271.1](https://github.com/aziontech/azion-webkit/compare/v1.271.0...v1.271.1) (2025-11-24)
+
+### Bug Fixes
+
+* askAI size fixes ([82654f4](https://github.com/aziontech/azion-webkit/commit/82654f4028ed42b8c80df2d522870223cf81cf70))
+* hero2column padding balance ([af1ca43](https://github.com/aziontech/azion-webkit/commit/af1ca4328bdf772140e58a6650b31251687b38e8))
+
 ## [1.271.0](https://github.com/aziontech/azion-webkit/compare/v1.270.0...v1.271.0) (2025-11-21)
 
 ### Features
