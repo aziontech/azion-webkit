@@ -1,3 +1,9 @@
+## [1.271.7](https://github.com/aziontech/azion-webkit/compare/v1.271.6...v1.271.7) (2025-11-24)
+
+### Bug Fixes
+
+* icon and copied state ([30d2082](https://github.com/aziontech/azion-webkit/commit/30d20822f35820401613ef8c14a85cb2e12e7eeb))
+
 ## [1.271.6](https://github.com/aziontech/azion-webkit/compare/v1.271.5...v1.271.6) (2025-11-24)
 
 ### Bug Fixes
