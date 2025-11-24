@@ -1,3 +1,9 @@
+## [1.271.3](https://github.com/aziontech/azion-webkit/compare/v1.271.2...v1.271.3) (2025-11-24)
+
+### Bug Fixes
+
+* remove duplicate padding in HeroBase component ([82da906](https://github.com/aziontech/azion-webkit/commit/82da9065923232f2de189e09ae34cc3633523471))
+
 ## [1.271.2](https://github.com/aziontech/azion-webkit/compare/v1.271.1...v1.271.2) (2025-11-24)
 
 ### Bug Fixes
