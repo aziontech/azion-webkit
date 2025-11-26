@@ -12,12 +12,9 @@ export default {
     }
   },
   argTypes: {
-    firstCard: {
-      description: 'Configuration object for the first MigratedClientsCard',
-      control: 'object'
-    },
-    secondCard: {
-      description: 'Configuration object for the second MigratedClientsCard',
+    cards: {
+      description:
+        'Array of configuration objects for MigratedClientsCard. Only the first two items are rendered.',
       control: 'object'
     }
   }
@@ -33,6 +30,5 @@ const Template = (args) => ({
 
 export const Default = Template.bind({})
 Default.args = {
-  firstCard: migratedClientsData.firstCard,
-  secondCard: migratedClientsData.secondCard
+  cards: [migratedClientsData.firstCard, migratedClientsData.secondCard]
 }
