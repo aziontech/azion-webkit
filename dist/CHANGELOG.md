@@ -1,3 +1,9 @@
+## [1.272.1](https://github.com/aziontech/azion-webkit/compare/v1.272.0...v1.272.1) (2025-11-27)
+
+### Bug Fixes
+
+* adjust color ([d3b9906](https://github.com/aziontech/azion-webkit/commit/d3b9906d28f0a267e9f03561c2935279ca824875))
+
 ## [1.272.0](https://github.com/aziontech/azion-webkit/compare/v1.271.7...v1.272.0) (2025-11-27)
 
 ### Features
