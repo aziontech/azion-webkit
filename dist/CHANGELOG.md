@@ -1,3 +1,9 @@
+## [1.272.0](https://github.com/aziontech/azion-webkit/compare/v1.271.7...v1.272.0) (2025-11-27)
+
+### Features
+
+* adjust button ([7a11dd9](https://github.com/aziontech/azion-webkit/commit/7a11dd9cdce619fa3bbab565de563cf294da7a8b))
+
 ## [1.271.7](https://github.com/aziontech/azion-webkit/compare/v1.271.6...v1.271.7) (2025-11-24)
 
 ### Bug Fixes
