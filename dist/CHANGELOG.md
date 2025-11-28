@@ -1,3 +1,9 @@
+## [1.272.5](https://github.com/aziontech/azion-webkit/compare/v1.272.4...v1.272.5) (2025-11-28)
+
+### Bug Fixes
+
+* add custom padding to Hero2Column button component ([2442729](https://github.com/aziontech/azion-webkit/commit/24427292e8b0dd0b129342969ca930fb5b63ae59))
+
 ## [1.272.4](https://github.com/aziontech/azion-webkit/compare/v1.272.3...v1.272.4) (2025-11-28)
 
 ### Bug Fixes
