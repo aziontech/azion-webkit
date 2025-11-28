@@ -125,7 +125,7 @@
       </template>
     </div>
     <template v-if="$slots.principal">
-      <div class="px-container w-full">
+      <div class="py-10 w-full">
         <slot name="principal" />
       </div>
     </template>
