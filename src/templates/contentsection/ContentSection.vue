@@ -158,7 +158,7 @@
   })
 
   const containerClasses = computed(() => {
-    const baseClasses = 'text-white relative max-w-xl xxxl:max-w-xxl mx-auto pt-10'
+    const baseClasses = 'text-white relative max-w-xl xxxl:max-w-xxl mx-auto md:mt-10'
     const paddingClasses = props.hasContainer ? 'p-6 md:p-0' : 'px-0'
     const flexClasses = 'w-full flex flex-col gap-10 md:gap-20'
 
