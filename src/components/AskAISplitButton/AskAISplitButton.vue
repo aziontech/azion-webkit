@@ -102,9 +102,9 @@
     const pageLink = getPageLink()
 
     const messages = {
-      en: `Read this page from the Azion: ${pageLink} and answer questions about the content.`,
+      en: `Read this page from Azion: ${pageLink} and answer questions about the content.`,
       'pt-br': `Leia esta página da Azion: ${pageLink} e responda perguntas sobre o conteúdo.`,
-      es: `Lea esta página de la Azion: ${pageLink} y responda preguntas sobre el contenido.`
+      es: `Lea esta página de Azion: ${pageLink} y responda preguntas sobre el contenido.`
     }
     return messages[props.lang as keyof typeof messages]
   }
