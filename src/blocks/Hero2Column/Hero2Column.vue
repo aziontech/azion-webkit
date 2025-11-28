@@ -38,6 +38,7 @@
             size="small"
             icon="pi pi-chevron-right"
             type="primary"
+            customClass="px-3 py-3"
             theme="light"
             v-bind="button"
           />
