@@ -1,3 +1,9 @@
+## [1.272.2](https://github.com/aziontech/azion-webkit/compare/v1.272.1...v1.272.2) (2025-11-28)
+
+### Bug Fixes
+
+* remove hardcoded padding from Button component and adjust HeroBase principal slot spacing ([cafda42](https://github.com/aziontech/azion-webkit/commit/cafda42ece9f8c3660cf2627ca2a1c944a184107))
+
 ## [1.272.1](https://github.com/aziontech/azion-webkit/compare/v1.272.0...v1.272.1) (2025-11-27)
 
 ### Bug Fixes
