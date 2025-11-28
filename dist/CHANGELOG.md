@@ -1,3 +1,9 @@
+## [1.272.3](https://github.com/aziontech/azion-webkit/compare/v1.272.2...v1.272.3) (2025-11-28)
+
+### Bug Fixes
+
+* add top padding to ContentSection container base classes ([3143aa0](https://github.com/aziontech/azion-webkit/commit/3143aa0810e91171ff55a6d8baff3ffaa91a7ae0))
+
 ## [1.272.2](https://github.com/aziontech/azion-webkit/compare/v1.272.1...v1.272.2) (2025-11-28)
 
 ### Bug Fixes
