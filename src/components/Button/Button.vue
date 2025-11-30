@@ -3,7 +3,7 @@
     <a
       :href="href"
       class="flex gap-3 w-fit cursor-pointer group"
-      :class="type.includes('link') ? underlineHover[type][theme] : ''"
+      :class="type.includes('link') ? underlineHover[type][theme] : 'no-underline'"
       :target="target"
     >
       <Button
