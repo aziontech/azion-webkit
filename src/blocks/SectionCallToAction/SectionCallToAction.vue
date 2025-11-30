@@ -12,10 +12,10 @@
         <div class="flex flex-col gap-3">
           <Overline color="orange">{{ content.overline }}</Overline>
           <h2 class="text-2xl text-neutral-200 font-sora">{{ content.title }}</h2>
-          <p
+          <div
             class="text-neutral-400 font-sora"
             v-html="parsedContentMarkdown"
-          ></p>
+          ></div>
         </div>
         <Button
           v-if="content.linkLabel"
@@ -49,11 +49,11 @@
             >
               {{ cta.overline }}
             </Overline>
-            <p
+            <div
               class="font-sora text-xl"
               :class="[type.includes('short-orange') ? 'text-white' : 'text-neutral-200']"
               v-html="parsedCtaMarkdown"
-            ></p>
+            ></div>
           </div>
           <h2
             class="font-sora font-bold gap-4 display-2-mobile md:display-2"
