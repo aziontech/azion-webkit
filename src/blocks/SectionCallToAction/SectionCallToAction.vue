@@ -38,7 +38,7 @@
           :class="
             type.includes('short')
               ? 'flex flex-col-reverse justify-between gap-20'
-              : 'flex-col gap-60'
+              : 'flex-col gap-20 lg:gap-60'
           "
         >
           <div class="flex flex-col">
