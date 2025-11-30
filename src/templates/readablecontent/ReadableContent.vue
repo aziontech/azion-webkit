@@ -49,17 +49,21 @@
     prose-p:text-neutral-400
     prose-li:text-neutral-400
     prose-table:text-neutral-400
-    prose-table:border-t-1
-    prose-table:border-neutral-900
+    prose-table:rounded
+    prose-table:border
+    prose-table:border-neutral-800
     prose-table:overflow-x-scroll
+    lg:prose-table:overflow-x-auto
     prose-table:block
     prose-table:w-full
     md:prose-table:w-fit
     prose-td:whitespace-nowrap
     md:prose-td:whitespace-normal
     prose-thead:bg-neutral-900
-    prose-thead:border-separate
+    prose-tr:bg-neutral-900
     prose-th:bg-neutral-900
+    prose-tr:border-neutral-800
+    prose-thead:border-separate
     prose-th:text-sm
     prose-th:text-neutral-400
     prose-th:p-4
