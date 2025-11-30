@@ -115,33 +115,33 @@
   })
 
   const buttonClasses = computed(() => {
+    const focusOverride =
+      'focus:outline-none focus:ring-0 focus:shadow-none focus-visible:outline-none focus-visible:ring-0 focus-visible:shadow-none'
+
     return {
       primary: {
-        dark: 'h-fit group border-1 border-neutral-900 active:bg-orange-700 bg-neutral-900 text-neutral-100 duration-300 transition rounded-md hover:bg-orange-500 hover:border-orange-500 hover:text-neutral-900',
-        light:
-          'h-fit group border-1 border-neutral-100 active:bg-orange-700 active:bg-orange-600 bg-neutral-100 text-neutral-900 duration-300 transition rounded-md hover:bg-orange-500 hover:border-orange-500 hover:text-neutral-900'
+        dark: `h-fit group border-1 border-neutral-900 bg-neutral-900 text-neutral-100 duration-300 transition rounded-md hover:bg-orange-500 hover:border-orange-500 hover:text-neutral-900 ${focusOverride}`,
+        light: `h-fit group border-1 border-neutral-100 bg-neutral-100 text-neutral-900 duration-300 transition rounded-md hover:bg-orange-500 hover:border-orange-500 hover:text-neutral-900 ${focusOverride}`
       },
       secondary: {
-        dark: 'h-fit group bg-neutral-900 text-neutral-100 duration-300 transition rounded-md active:bg-neutral-900 border-1 border-neutral-800 hover:bg-transparent hover:text-orange-500',
-        light:
-          'h-fit group bg-neutral-200 text-neutral-900 duration-300 transition rounded-md active:bg-neutral-700 border-1 border-neutral-400 hover:bg-neutral-100 hover:text-orange-500 hover:border-neutral-300'
+        dark: `h-fit group bg-neutral-900 text-neutral-100 duration-300 transition rounded-md border-1 border-neutral-800 hover:bg-transparent hover:text-orange-500 ${focusOverride}`,
+        light: `h-fit group bg-neutral-200 text-neutral-900 duration-300 transition rounded-md border-1 border-neutral-400 hover:bg-neutral-100 hover:text-orange-500 hover:border-neutral-300 ${focusOverride}`
       },
       tertiary: {
-        dark: 'h-fit group font-proto-mono bg-orange-900/10 text-orange-500 duration-300 transition rounded-none border-none bg-orange-900/20 ',
-        light:
-          'h-fit group font-proto-mono bg-orange-900/10 text-orange-500 duration-300 transition rounded-none border-none bg-orange-900/20 '
+        dark: `h-fit group font-proto-mono bg-orange-900/10 text-orange-500 duration-300 transition rounded-none border-none bg-orange-900/20 ${focusOverride}`,
+        light: `h-fit group font-proto-mono bg-orange-900/10 text-orange-500 duration-300 transition rounded-none border-none bg-orange-900/20 ${focusOverride}`
       },
       link: {
-        dark: 'w-fit !leading-[.75rem] bg-transparent border-none text-violet-300 px-0 py-0',
-        light: 'w-fit !leading-[.75rem] bg-transparent border-none text-violet-600 px-0 py-0'
+        dark: `w-fit !leading-[.75rem] bg-transparent border-none text-violet-300 px-0 py-0 ${focusOverride}`,
+        light: `w-fit !leading-[.75rem] bg-transparent border-none text-violet-600 px-0 py-0 ${focusOverride}`
       },
       linkSecondary: {
-        dark: 'w-fit !leading-[.75rem] bg-transparent border-none text-neutral-100 px-0 py-0',
-        light: 'w-fit !leading-[.75rem] bg-transparent border-none text-neutral-950 px-0 py-0'
+        dark: `w-fit !leading-[.75rem] bg-transparent border-none text-neutral-100 px-0 py-0 ${focusOverride}`,
+        light: `w-fit !leading-[.75rem] bg-transparent border-none text-neutral-950 px-0 py-0 ${focusOverride}`
       },
       linkExternal: {
-        dark: 'w-fit !leading-[.75rem] bg-transparent border-none text-violet-300 px-0 py-0',
-        light: 'w-fit !leading-[.75rem] bg-transparent border-none text-violet-300 px-0 py-0'
+        dark: `w-fit !leading-[.75rem] bg-transparent border-none text-violet-300 px-0 py-0 ${focusOverride}`,
+        light: `w-fit !leading-[.75rem] bg-transparent border-none text-violet-300 px-0 py-0 ${focusOverride}`
       }
     }[props.type]
   })
