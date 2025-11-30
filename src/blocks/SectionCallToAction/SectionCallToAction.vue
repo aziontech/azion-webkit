@@ -63,7 +63,7 @@
           </h2>
         </div>
         <div
-          class="flex mb-4 items-end"
+          class="flex items-end"
           :class="type.includes('short') ? 'mb-4' : 'mb-0'"
         >
           <div class="md:w-fit w-full">
