@@ -45,7 +45,7 @@
     description: string
   }
 
-  interface SectionContentImage2ColumnProps {
+  interface SectionContent3ColumnProps {
     cards: ContentCard[]
     id?: string
     bottomSpacing?: 'mb-0' | 'mb-6' | 'mb-12' | 'mb-24' | 'mb-48'
@@ -55,7 +55,7 @@
     }
   }
 
-  withDefaults(defineProps<SectionContentImage2ColumnProps>(), {
+  withDefaults(defineProps<SectionContent3ColumnProps>(), {
     cards: () => [],
     id: '',
     bottomSpacing: 'mb-24',

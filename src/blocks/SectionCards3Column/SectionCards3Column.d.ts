@@ -1,7 +1,7 @@
 export interface Card3Column {
   icon: string
   title: string
-  description: string
+  descriptionRawMarkdown: string
 }
 
 export interface SectionCards3ColumnProps {
