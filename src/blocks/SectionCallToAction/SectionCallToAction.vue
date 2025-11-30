@@ -74,6 +74,7 @@
               :theme="type.includes('short-orange') ? 'dark' : 'light'"
               icon="pi pi-angle-right"
               :type="type.includes('short-orange') ? 'secondary' : 'primary'"
+              :target="cta.linkTarget || '_self'"
               size="small"
               class="w-full"
             />
@@ -98,6 +99,7 @@
     descriptionRawMarkdown: string
     linkLabel: string
     link: string
+    linkTarget?: string
   }
   interface SectionCallToActionProps {
     type: '2-col-70-30' | '1-col' | '1-col-short-orange' | '1-col-short-black'
