@@ -21,7 +21,7 @@
               <h4 class="font-sora text-2xl text-neutral-200">{{ item.title }}</h4>
               <p
                 class="text-neutral-400 font-sora text-sm"
-                v-html="item.description"
+                v-html="parseMarkdown(item.descriptionRawMarkdown)"
               ></p>
             </div>
           </GridPattern>
@@ -39,6 +39,7 @@
 <script setup lang="ts">
   import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
   import GridPattern from '../../components/GridPattern/GridPattern.vue'
+  import { parseMarkdown } from '../../services/markdown/markdown-service'
 
   export interface ContentCard {
     title: string
