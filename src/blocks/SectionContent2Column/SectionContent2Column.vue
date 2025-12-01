@@ -18,7 +18,7 @@
             <Overline v-if="item.overline">{{ item.overline }}</Overline>
             <p
               class="text-neutral-400 font-sora text-sm md:text-2xl"
-              v-html="item.description"
+              v-html="parseMarkdown(item.descriptionRawMarkdown)"
             ></p>
           </div>
         </div>
@@ -64,10 +64,11 @@
   import Overline from '../../components/overline/Overline.vue'
   import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
   import GridPattern from '../../components/GridPattern/GridPattern.vue'
+  import { parseMarkdown } from '../../services/markdown/markdown-service'
 
   export interface ContentCard {
     overline?: string
-    description: string
+    descriptionRawMarkdown: string
     image: {
       src: string
       alt: string

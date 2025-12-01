@@ -3,7 +3,7 @@
     <a
       :href="href"
       class="flex gap-3 w-fit cursor-pointer group"
-      :class="type.includes('link') ? underlineHover[type][theme] : ''"
+      :class="type.includes('link') ? underlineHover[type][theme] : 'no-underline'"
       :target="target"
     >
       <Button
@@ -124,8 +124,9 @@
         light: `h-fit group border-1 border-neutral-100 bg-neutral-100 text-neutral-900 duration-300 transition rounded-md hover:bg-orange-500 hover:border-orange-500 hover:text-neutral-900 ${focusOverride}`
       },
       secondary: {
-        dark: `h-fit group bg-neutral-900 text-neutral-100 duration-300 transition rounded-md border-1 border-neutral-800 hover:bg-transparent hover:text-orange-500 ${focusOverride}`,
-        light: `h-fit group bg-neutral-200 text-neutral-900 duration-300 transition rounded-md border-1 border-neutral-400 hover:bg-neutral-100 hover:text-orange-500 hover:border-neutral-300 ${focusOverride}`
+        dark: 'h-fit group bg-neutral-900 text-neutral-100 duration-300 transition rounded-md active:bg-neutral-900 border-1 border-neutral-800 hover:bg-neutral-950 hover:text-orange-500 ${focusOverride}',
+        light:
+          'h-fit group bg-neutral-200 text-neutral-900 duration-300 transition rounded-md active:bg-neutral-700 border-1 border-neutral-400 hover:bg-neutral-100 hover:text-orange-500 hover:border-neutral-300 ${focusOverride}'
       },
       tertiary: {
         dark: `h-fit group font-proto-mono bg-orange-900/10 text-orange-500 duration-300 transition rounded-none border-none bg-orange-900/20 ${focusOverride}`,

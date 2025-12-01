@@ -1,3 +1,38 @@
+## [1.273.1](https://github.com/aziontech/azion-webkit/compare/v1.273.0...v1.273.1) (2025-12-01)
+
+### Bug Fixes
+
+* add parse markdown to sectioncontent3col ([59e5d26](https://github.com/aziontech/azion-webkit/commit/59e5d269a28db182106ea4ebee0603cdf2e08719))
+* update description type ([0f2740d](https://github.com/aziontech/azion-webkit/commit/0f2740d1d282f3ecaf91a37fb6ed7cd733a14dcb))
+
+## [1.273.0](https://github.com/aziontech/azion-webkit/compare/v1.272.7...v1.273.0) (2025-12-01)
+
+### Features
+
+* scoped prose inside vue component ([77844c0](https://github.com/aziontech/azion-webkit/commit/77844c0a403e1fdeda80a2cb248a36a208cae956))
+
+### Bug Fixes
+
+* table colors ([19615c7](https://github.com/aziontech/azion-webkit/commit/19615c7bdaa73c8e4c9c17e05e7175e43cf08212))
+
+## [1.272.7](https://github.com/aziontech/azion-webkit/compare/v1.272.6...v1.272.7) (2025-12-01)
+
+### Bug Fixes
+
+* typo ([375e922](https://github.com/aziontech/azion-webkit/commit/375e92259406c503b9c3f7e67f16d9c53dfb60ba))
+
+## [1.272.6](https://github.com/aziontech/azion-webkit/compare/v1.272.5...v1.272.6) (2025-12-01)
+
+### Bug Fixes
+
+* update secondary dark button hover background from transparent to neutral-950 ([281bcc3](https://github.com/aziontech/azion-webkit/commit/281bcc39ac1bea1f9098a315c3926b34a87ed27a))
+
+## [1.272.5](https://github.com/aziontech/azion-webkit/compare/v1.272.4...v1.272.5) (2025-11-28)
+
+### Bug Fixes
+
+* add custom padding to Hero2Column button component ([2442729](https://github.com/aziontech/azion-webkit/commit/24427292e8b0dd0b129342969ca930fb5b63ae59))
+
 ## [1.272.4](https://github.com/aziontech/azion-webkit/compare/v1.272.3...v1.272.4) (2025-11-28)
 
 ### Bug Fixes

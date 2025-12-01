@@ -8,7 +8,7 @@ A two-column content section component with alternating text and image cards, fe
 - **Background Patterns**: Dots or square grid patterns on image cards
 - **Decorative Elements**: Corner dots for visual interest
 - **Responsive Design**: Adapts from mobile to desktop layouts
-- **Flexible Content**: Support for overline and HTML descriptions
+- **Flexible Content**: Support for overline and Markdown descriptions
 
 ## Props
 
@@ -24,7 +24,7 @@ A two-column content section component with alternating text and image cards, fe
 ```typescript
 interface ContentCard {
   overline?: string // Optional label above description
-  description: string // Description text (supports HTML)
+  descriptionRawMarkdown: string // Description text (supports Markdown)
   image: {
     src: string // Image URL
     alt: string // Image alt text
@@ -51,7 +51,7 @@ interface BackgroundPattern {
     :cards="[
       {
         overline: 'Performance',
-        description: 'Deploy applications closer to users with our global edge network.',
+        descriptionRawMarkdown: 'Deploy applications closer to users with our global edge network.',
         image: {
           src: '/images/performance.png',
           alt: 'Performance illustration'
@@ -59,7 +59,7 @@ interface BackgroundPattern {
       },
       {
         overline: 'Security',
-        description: 'Built-in security features including DDoS protection and WAF.',
+        descriptionRawMarkdown: 'Built-in security features including DDoS protection and WAF.',
         image: {
           src: '/images/security.png',
           alt: 'Security illustration'

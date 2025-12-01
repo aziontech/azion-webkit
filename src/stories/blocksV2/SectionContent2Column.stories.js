@@ -62,7 +62,7 @@ export const Default = {
     cards: [
       {
         overline: 'Performance',
-        description:
+        descriptionRawMarkdown:
           'Deploy applications closer to users with our **global edge network** for improved performance and reduced latency.',
         image: {
           src: 'https://via.placeholder.com/400x300/1a1a1a/ffffff?text=Performance',
@@ -71,7 +71,7 @@ export const Default = {
       },
       {
         overline: 'Security',
-        description:
+        descriptionRawMarkdown:
           'Built-in security features including **DDoS protection**, Web Application Firewall, and SSL certificates.',
         image: {
           src: 'https://via.placeholder.com/400x300/1a1a1a/ffffff?text=Security',
@@ -94,7 +94,8 @@ export const WithSquarePattern = {
     cards: [
       {
         overline: 'Edge Computing',
-        description: 'Experience the power of edge computing with our distributed infrastructure.',
+        descriptionRawMarkdown:
+          'Experience the power of edge computing with our distributed infrastructure.',
         image: {
           src: 'https://via.placeholder.com/400x300/1a1a1a/ffffff?text=Edge',
           alt: 'Edge computing illustration'
@@ -102,7 +103,7 @@ export const WithSquarePattern = {
       },
       {
         overline: 'Scalability',
-        description: 'Automatic scaling based on demand with no configuration required.',
+        descriptionRawMarkdown: 'Automatic scaling based on demand with no configuration required.',
         image: {
           src: 'https://via.placeholder.com/400x300/1a1a1a/ffffff?text=Scale',
           alt: 'Scalability illustration'
