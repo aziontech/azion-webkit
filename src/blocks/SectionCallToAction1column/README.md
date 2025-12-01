@@ -18,7 +18,6 @@ A compact single-column call-to-action section block component with background p
 | `id`                | `string`    | No       | -                                 | HTML id attribute                               |
 | `type`              | `string`    | No       | `'short-black'`                   | Layout type variant                             |
 | `cta`               | `CardProps` | Yes      | -                                 | Main CTA card content                           |
-| `content`           | `CardProps` | No       | -                                 | Content card (kept for compatibility, not used) |
 | `backgroundPattern` | `object`    | No       | `{ style: 'dots', size: '12px' }` | Background pattern configuration                |
 
 ### Layout Types

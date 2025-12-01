@@ -85,7 +85,6 @@
     type: 'short-orange' | 'short-black'
     id?: string
     cta: CardProps
-    content: CardProps
     backgroundPattern: {
       style: 'dots' | 'square'
       size: '12px' | '24px' | '48px'

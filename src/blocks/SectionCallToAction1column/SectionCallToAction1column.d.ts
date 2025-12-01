@@ -26,7 +26,7 @@ export interface CardProps {
   target?: string
 }
 
-export interface SectionCallToActionProps {
+export interface SectionCallToAction1columnProps {
   /**
    * Banner layout type
    * @defaultValue 'short-black'
@@ -40,10 +40,6 @@ export interface SectionCallToActionProps {
    * CTA card configuration
    */
   cta: CardProps
-  /**
-   * Content card configuration (not used in 1-column layout, kept for compatibility)
-   */
-  content: CardProps
   /**
    * Background pattern configuration
    * @defaultValue { style: 'dots', size: '12px' }
