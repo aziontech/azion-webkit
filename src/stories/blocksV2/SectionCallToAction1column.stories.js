@@ -19,17 +19,17 @@ export default {
   decorators: [
     (story) => ({
       components: { story },
-      template: '<div class="bg-[#0a0a0a] min-h-screen py-12"><story /></div>'
+      template: '<div class="bg-[#0a0a0a] min-h-screen p-12"><story /></div>'
     })
   ],
   argTypes: {
     type: {
       control: 'select',
-      options: ['short', 'short-orange'],
+      options: ['short-black', 'short-orange'],
       description: 'short (uma coluna compacta), short-orange (uma coluna compacta laranja)',
       table: {
         type: { summary: 'string' },
-        defaultValue: { summary: '2-col-70-30' }
+        defaultValue: { summary: 'short-black' }
       }
     },
     id: {
@@ -62,6 +62,7 @@ export default {
 }
 
 export const Orange = {
+  name: 'short-orange',
   args: {
     type: 'short-orange',
     id: 'section-cta-promo',
@@ -81,6 +82,7 @@ export const Orange = {
 }
 
 export const Black = {
+  name: 'short-black',
   args: {
     type: 'short-black',
     id: 'section-cta-black',

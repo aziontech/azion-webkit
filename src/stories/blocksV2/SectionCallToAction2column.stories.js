@@ -63,7 +63,7 @@ export default {
 
 // Layout de duas colunas - mais comum para landing pages
 export const Default = {
-  name: 'Two Column Layout',
+  name: '70-30',
   args: {
     type: '70-30',
     id: 'section-cta-default',
