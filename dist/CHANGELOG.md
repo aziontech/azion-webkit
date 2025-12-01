@@ -1,3 +1,9 @@
+## [1.272.6](https://github.com/aziontech/azion-webkit/compare/v1.272.5...v1.272.6) (2025-12-01)
+
+### Bug Fixes
+
+* update secondary dark button hover background from transparent to neutral-950 ([281bcc3](https://github.com/aziontech/azion-webkit/commit/281bcc39ac1bea1f9098a315c3926b34a87ed27a))
+
 ## [1.272.5](https://github.com/aziontech/azion-webkit/compare/v1.272.4...v1.272.5) (2025-11-28)
 
 ### Bug Fixes
