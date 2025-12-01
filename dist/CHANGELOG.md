@@ -1,3 +1,9 @@
+## [1.272.7](https://github.com/aziontech/azion-webkit/compare/v1.272.6...v1.272.7) (2025-12-01)
+
+### Bug Fixes
+
+* typo ([375e922](https://github.com/aziontech/azion-webkit/commit/375e92259406c503b9c3f7e67f16d9c53dfb60ba))
+
 ## [1.272.6](https://github.com/aziontech/azion-webkit/compare/v1.272.5...v1.272.6) (2025-12-01)
 
 ### Bug Fixes
