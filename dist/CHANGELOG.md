@@ -1,3 +1,13 @@
+## [1.273.0](https://github.com/aziontech/azion-webkit/compare/v1.272.7...v1.273.0) (2025-12-01)
+
+### Features
+
+* scoped prose inside vue component ([77844c0](https://github.com/aziontech/azion-webkit/commit/77844c0a403e1fdeda80a2cb248a36a208cae956))
+
+### Bug Fixes
+
+* table colors ([19615c7](https://github.com/aziontech/azion-webkit/commit/19615c7bdaa73c8e4c9c17e05e7175e43cf08212))
+
 ## [1.272.7](https://github.com/aziontech/azion-webkit/compare/v1.272.6...v1.272.7) (2025-12-01)
 
 ### Bug Fixes
