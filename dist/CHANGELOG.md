@@ -1,3 +1,10 @@
+## [1.273.1](https://github.com/aziontech/azion-webkit/compare/v1.273.0...v1.273.1) (2025-12-01)
+
+### Bug Fixes
+
+* add parse markdown to sectioncontent3col ([59e5d26](https://github.com/aziontech/azion-webkit/commit/59e5d269a28db182106ea4ebee0603cdf2e08719))
+* update description type ([0f2740d](https://github.com/aziontech/azion-webkit/commit/0f2740d1d282f3ecaf91a37fb6ed7cd733a14dcb))
+
 ## [1.273.0](https://github.com/aziontech/azion-webkit/compare/v1.272.7...v1.273.0) (2025-12-01)
 
 ### Features
