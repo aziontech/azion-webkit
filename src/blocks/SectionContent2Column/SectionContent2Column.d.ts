@@ -6,7 +6,7 @@ export interface ContentCard {
   /**
    * Description text (supports HTML)
    */
-  description: string
+  descriptionRawMarkdown: string
   /**
    * Image configuration
    */
