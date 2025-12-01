@@ -1,3 +1,14 @@
+## [1.273.2](https://github.com/aziontech/azion-webkit/compare/v1.273.1...v1.273.2) (2025-12-01)
+
+### Bug Fixes
+
+* add target to section call to action ([b5e6198](https://github.com/aziontech/azion-webkit/commit/b5e619834f0727d4eeb4fe13ba02cf3f5cca9b97))
+* delete section call to action shared ([5a606ab](https://github.com/aziontech/azion-webkit/commit/5a606abcb324c95a4310e377a03a893d6da6588b))
+* mobile 2 col cta gap ([d1e61b9](https://github.com/aziontech/azion-webkit/commit/d1e61b95afe267e672e97f7ee61ac0c895df623c))
+* remove button theme outline and section call to action target prop ([994ab12](https://github.com/aziontech/azion-webkit/commit/994ab1255d70045f239cd2cca814098e58fde3af))
+* remove unwanted margin when is not short ([4bd8081](https://github.com/aziontech/azion-webkit/commit/4bd8081fdc2d959efcd67566614f318ca522c921))
+* section cta parse out element ([2a79ee4](https://github.com/aziontech/azion-webkit/commit/2a79ee499de02657fbdcf59fccccf01eb690194f))
+
 ## [1.273.1](https://github.com/aziontech/azion-webkit/compare/v1.273.0...v1.273.1) (2025-12-01)
 
 ### Bug Fixes
