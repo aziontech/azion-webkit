@@ -19,24 +19,29 @@ export interface CardProps {
    * Link URL for the button
    */
   link: string
+  /**
+   * Link target attribute (e.g., '_self', '_blank')
+   * @defaultValue '_self'
+   */
+  target?: string
 }
 
 export interface SectionCallToActionProps {
   /**
    * Banner layout type
-   * @defaultValue '2-col-70-30'
+   * @defaultValue 'short-black'
    */
-  type: '2-col-70-30' | '1-col' | '1-col-short-orange' | '1-col-short-black'
+  type: 'short-orange' | 'short-black'
   /**
    * Optional ID for the section element
    */
   id?: string
   /**
-   * CTA card configuration (right/main card)
+   * CTA card configuration
    */
   cta: CardProps
   /**
-   * Content card configuration (left/secondary card)
+   * Content card configuration (not used in 1-column layout, kept for compatibility)
    */
   content: CardProps
   /**
@@ -49,4 +54,4 @@ export interface SectionCallToActionProps {
   }
 }
 
-export { default } from './SectionCallToAction.vue'
+export { default } from './SectionCallToAction1column.vue'

@@ -38,10 +38,16 @@ export default {
       description: 'URL for link buttons'
     },
     disabled: {
-        control: 'boolean',
-        description: 'Disabled state'
+      control: 'boolean',
+      description: 'Disabled state'
     }
-  }
+  },
+  decorators: [
+    (story) => ({
+      components: { story },
+      template: '<div class="bg-[#0a0a0a] flex justify-center py-12 items-center"><story /></div>'
+    })
+  ]
 }
 
 export const Primary = {
