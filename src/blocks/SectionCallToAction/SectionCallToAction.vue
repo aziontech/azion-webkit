@@ -12,15 +12,16 @@
         <div class="flex flex-col gap-3">
           <Overline color="orange">{{ content.overline }}</Overline>
           <h2 class="text-2xl text-neutral-200 font-sora">{{ content.title }}</h2>
-          <p
+          <div
             class="text-neutral-400 font-sora"
             v-html="parsedContentMarkdown"
-          ></p>
+          ></div>
         </div>
         <Button
           v-if="content.linkLabel"
           :label="content.linkLabel"
           :href="content.link"
+          :target="content.target || '_self'"
           type="linkSecondary"
           size="small"
         />
@@ -38,7 +39,7 @@
           :class="
             type.includes('short')
               ? 'flex flex-col-reverse justify-between gap-20'
-              : 'flex-col gap-60'
+              : 'flex-col gap-20 lg:gap-60'
           "
         >
           <div class="flex flex-col">
@@ -49,11 +50,11 @@
             >
               {{ cta.overline }}
             </Overline>
-            <p
+            <div
               class="font-sora text-xl"
               :class="[type.includes('short-orange') ? 'text-white' : 'text-neutral-200']"
               v-html="parsedCtaMarkdown"
-            ></p>
+            ></div>
           </div>
           <h2
             class="font-sora font-bold gap-4 display-2-mobile md:display-2"
@@ -63,7 +64,7 @@
           </h2>
         </div>
         <div
-          class="flex mb-4 items-end"
+          class="flex items-end"
           :class="type.includes('short') ? 'mb-4' : 'mb-0'"
         >
           <div class="md:w-fit w-full">
@@ -74,6 +75,7 @@
               :theme="type.includes('short-orange') ? 'dark' : 'light'"
               icon="pi pi-angle-right"
               :type="type.includes('short-orange') ? 'secondary' : 'primary'"
+              :target="cta.target || '_self'"
               size="small"
               class="w-full"
             />
@@ -98,6 +100,7 @@
     descriptionRawMarkdown: string
     linkLabel: string
     link: string
+    target?: string
   }
   interface SectionCallToActionProps {
     type: '2-col-70-30' | '1-col' | '1-col-short-orange' | '1-col-short-black'

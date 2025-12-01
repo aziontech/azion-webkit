@@ -78,7 +78,8 @@ export const Default = {
       descriptionRawMarkdown:
         'Select from a range of plans, from **free to enterprise**, tailored to your specific requirements and scale.',
       linkLabel: 'Explore Plans',
-      link: 'https://www.azion.com/pricing'
+      link: 'https://www.azion.com/pricing',
+      target: '_self'
     },
     cta: {
       overline: 'Get Started',
@@ -86,7 +87,8 @@ export const Default = {
       descriptionRawMarkdown:
         'Experience the power of **edge computing** with our global infrastructure.',
       linkLabel: 'Start Free Trial',
-      link: 'https://console.azion.com/signup'
+      link: 'https://console.azion.com/signup',
+      target: '_self'
     }
   }
 }
