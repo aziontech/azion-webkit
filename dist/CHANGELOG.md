@@ -1,3 +1,14 @@
+## [1.274.0](https://github.com/aziontech/azion-webkit/compare/v1.273.2...v1.274.0) (2025-12-02)
+
+### Features
+
+* split section call to action ([6894a18](https://github.com/aziontech/azion-webkit/commit/6894a18a4a2854788801eee1e14c9c77cc877306))
+* update storybook ([f3acfcf](https://github.com/aziontech/azion-webkit/commit/f3acfcfe8f6f6420464ddd686ff4a6837c7289cd))
+
+### Bug Fixes
+
+* naming ([9180c28](https://github.com/aziontech/azion-webkit/commit/9180c284cf6f950f4f3349e4846a8b2c754dd564))
+
 ## [1.273.2](https://github.com/aziontech/azion-webkit/compare/v1.273.1...v1.273.2) (2025-12-01)
 
 ### Bug Fixes
