@@ -1,7 +1,7 @@
-import SectionCallToAction from '../../blocks/SectionCallToAction/SectionCallToAction.vue'
+import SectionCallToAction from '../../blocks/SectionCallToAction1column/SectionCallToAction1column.vue'
 
 export default {
-  title: 'Blocks/Rebranding/SectionCallToAction',
+  title: 'Blocks/Rebranding/SectionCallToAction1column',
   component: SectionCallToAction,
   tags: ['autodocs'],
   parameters: {
@@ -19,18 +19,17 @@ export default {
   decorators: [
     (story) => ({
       components: { story },
-      template: '<div class="bg-[#0a0a0a] min-h-screen py-12"><story /></div>'
+      template: '<div class="bg-[#0a0a0a] min-h-screen p-12"><story /></div>'
     })
   ],
   argTypes: {
     type: {
       control: 'select',
-      options: ['2-col-70-30', '1-col', '1-col-short', '1-col-short-orange'],
-      description:
-        'Layout do banner: 2-col-70-30 (duas colunas), 1-col (uma coluna alta), 1-col-short (uma coluna compacta), 1-col-short-orange (uma coluna compacta laranja)',
+      options: ['short-black', 'short-orange'],
+      description: 'short (uma coluna compacta), short-orange (uma coluna compacta laranja)',
       table: {
         type: { summary: 'string' },
-        defaultValue: { summary: '2-col-70-30' }
+        defaultValue: { summary: 'short-black' }
       }
     },
     id: {
@@ -62,59 +61,10 @@ export default {
   }
 }
 
-// Layout de duas colunas - mais comum para landing pages
-export const Default = {
-  name: 'Two Column Layout',
+export const Orange = {
+  name: 'short-orange',
   args: {
-    type: '2-col-70-30',
-    id: 'section-cta-default',
-    backgroundPattern: {
-      style: 'dots',
-      size: '12px'
-    },
-    content: {
-      overline: 'Need enterprise solutions?',
-      title: 'Not sure which plan is right for you?',
-      descriptionRawMarkdown:
-        'Select from a range of plans, from **free to enterprise**, tailored to your specific requirements and scale.',
-      linkLabel: 'Explore Plans',
-      link: 'https://www.azion.com/pricing',
-      target: '_self'
-    },
-    cta: {
-      overline: 'Get Started',
-      title: 'Deploy in minutes',
-      descriptionRawMarkdown:
-        'Experience the power of **edge computing** with our global infrastructure.',
-      linkLabel: 'Start Free Trial',
-      link: 'https://console.azion.com/signup',
-      target: '_self'
-    }
-  }
-}
-
-export const OneCol = {
-  args: {
-    type: '1-col',
-    id: 'section-cta-single',
-    backgroundPattern: {
-      style: 'dots',
-      size: '12px'
-    },
-    cta: {
-      overline: 'Enterprise Solutions',
-      title: 'Scale Your Infrastructure',
-      descriptionRawMarkdown:
-        'Transform your digital infrastructure with our **cutting-edge edge computing** platform. Reduce latency by up to *90%* and improve user experience globally.',
-      linkLabel: 'Contact Sales',
-      link: 'https://www.azion.com/contact'
-    }
-  }
-}
-
-export const OneColShortOrange = {
-  args: {
-    type: '1-col-short-orange',
+    type: 'short-orange',
     id: 'section-cta-promo',
     backgroundPattern: {
       style: 'dots',
@@ -131,9 +81,10 @@ export const OneColShortOrange = {
   }
 }
 
-export const OneColShortBlack = {
+export const Black = {
+  name: 'short-black',
   args: {
-    type: '1-col-short-black',
+    type: 'short-black',
     id: 'section-cta-black',
     content: {
       overline: 'Special Offer',

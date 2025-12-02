@@ -5,27 +5,6 @@
       :class="cardType[type]"
       class="grid gap-1 m-0"
     >
-      <div
-        v-if="content && type === '2-col-70-30'"
-        class="lg:col-span-3 w-full flex flex-col justify-between gap-6 bg-neutral-900 rounded-md p-6 md:p-12"
-      >
-        <div class="flex flex-col gap-3">
-          <Overline color="orange">{{ content.overline }}</Overline>
-          <h2 class="text-2xl text-neutral-200 font-sora">{{ content.title }}</h2>
-          <div
-            class="text-neutral-400 font-sora"
-            v-html="parsedContentMarkdown"
-          ></div>
-        </div>
-        <Button
-          v-if="content.linkLabel"
-          :label="content.linkLabel"
-          :href="content.link"
-          :target="content.target || '_self'"
-          type="linkSecondary"
-          size="small"
-        />
-      </div>
       <GridPattern
         class="relative flex flex-col md:flex-row justify-between rounded-md p-6 md:p-12 overflow-hidden gap-2 md:gap-12"
         :class="[ctaColor[type], type.includes('short') ? 'pb-2 md:pb-8' : '']"
@@ -103,10 +82,9 @@
     target?: string
   }
   interface SectionCallToActionProps {
-    type: '2-col-70-30' | '1-col' | '1-col-short-orange' | '1-col-short-black'
+    type: 'short-orange' | 'short-black'
     id?: string
     cta: CardProps
-    content: CardProps
     backgroundPattern: {
       style: 'dots' | 'square'
       size: '12px' | '24px' | '48px'
@@ -114,7 +92,7 @@
   }
 
   const props = withDefaults(defineProps<SectionCallToActionProps>(), {
-    type: '2-col-70-30',
+    type: 'short-black',
     backgroundPattern: () => ({
       style: 'dots',
       size: '12px'
@@ -122,24 +100,14 @@
   })
 
   const cardType = {
-    '2-col-70-30': 'lg:grid-cols-10 grid-cols-1',
-    '1-col': 'grid-cols-1',
-    '1-col-short-orange': 'grid-cols-1',
-    '1-col-short-black': 'grid-cols-1'
+    'short-orange': 'grid-cols-1',
+    'short-black': 'grid-cols-1'
   }
 
   const ctaColor = {
-    '2-col-70-30': 'bg-neutral-900 transition-colors lg:col-span-7 ',
-    '1-col': 'bg-neutral-900 transition-colors',
-    '1-col-short-orange': 'bg-orange-500 transition-colors',
-    '1-col-short-black': 'bg-neutral-900 transition-colors'
+    'short-orange': 'bg-orange-500 transition-colors',
+    'short-black': 'bg-neutral-900 transition-colors'
   }
-
-  const parsedContentMarkdown = computed(() => {
-    return props.content?.descriptionRawMarkdown
-      ? parseMarkdown(props.content.descriptionRawMarkdown)
-      : ''
-  })
 
   const parsedCtaMarkdown = computed(() => {
     return props.cta?.descriptionRawMarkdown ? parseMarkdown(props.cta.descriptionRawMarkdown) : ''
