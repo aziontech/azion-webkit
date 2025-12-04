@@ -1,3 +1,9 @@
+## [1.274.1](https://github.com/aziontech/azion-webkit/compare/v1.274.0...v1.274.1) (2025-12-04)
+
+### Bug Fixes
+
+* imrpove grid client props config ([be0d6c7](https://github.com/aziontech/azion-webkit/commit/be0d6c7ee569dda45081ab0e2bc3930db68fd32d))
+
 ## [1.274.0](https://github.com/aziontech/azion-webkit/compare/v1.273.2...v1.274.0) (2025-12-02)
 
 ### Features
