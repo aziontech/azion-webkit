@@ -13,17 +13,10 @@ export default {
         defaultValue: { summary: '[]' }
       }
     },
-    logoCards: {
+    cards: {
       control: { type: 'object' },
-      description: 'Array of logo card data',
-      table: {
-        type: { summary: 'Array' },
-        defaultValue: { summary: '[]' }
-      }
-    },
-    personaCards: {
-      control: { type: 'object' },
-      description: 'Array of client profile/persona card data',
+      description:
+        'Array of cards (LogoCard with component: "logo" or PersonaCard with component: "persona")',
       table: {
         type: { summary: 'Array' },
         defaultValue: { summary: '[]' }
@@ -34,6 +27,33 @@ export default {
     backgrounds: {
       default: 'dark',
       values: [{ name: 'dark', value: '#000000' }]
+    },
+    docs: {
+      description: {
+        component: `
+## Cards Layout Explanation:
+      
+The grid has 11 positions with the following visibility rules:
+
+- **Position 0:** Showcase card (VTEX) - Always visible
+- **Position 1:** Persona card (Sean Strickland) - Hidden on mobile, visible from md breakpoint
+- **Position 2:** Logo card (white) - Hidden until xl breakpoint
+- **Position 3:** Logo card (neutral) - Hidden on mobile, visible from md breakpoint
+- **Position 4:** Showcase card (Dafiti) - Hidden until xl breakpoint
+- **Position 5:** Logo card (orange) - Hidden on mobile, visible from md breakpoint
+- **Position 6:** Showcase card (Dafiti) - Always visible
+- **Position 7:** Logo card (lavander) - Hidden on mobile, visible from md breakpoint
+- **Position 8:** Logo card (orange) - Hidden on mobile, visible from md breakpoint
+- **Position 9:** Logo card (white) - Hidden on mobile, visible from md breakpoint
+- **Position 10:** Logo card (orange) - Hidden until xl breakpoint
+
+### Breakpoints:
+- Mobile (< md): Only positions 0 and 6 are visible (2 showcase cards)
+- Tablet (md to xl): Positions 0, 1, 3, 5, 6, 7, 8, 9 are visible (2 showcase + 6 cards)
+- Desktop (xl+): All positions visible (3 showcase + 8 cards)
+      
+        `
+      }
     }
   }
 }
@@ -60,43 +80,93 @@ const logoSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="75" height="48" 
 
 const showcaseCards = [
   {
+    component: 'showcase',
     title: `Explore how Vtex boosts e-commerce speed with Azion's Edge technology, surpassing legacy solutions and enhancing user experience across South America.`,
     action: 'learn more',
+    size: '2x2',
+    type: 'lavander',
     href: '#',
-    logo: { src: logoSvg, alt: 'VTEX Logo' }
+    logo: logoSvg
   },
   {
+    component: 'showcase',
     title:
       "Explore how Dafiti boosts e-commerce speed with Azion's Edge technology, surpassing legacy solutions and enhancing user experience across South America.",
     action: 'Learn More',
     href: '#',
-    logo: { src: logoSvg, alt: 'Dafiti Logo' },
-    size: 'small',
+    logo: logoSvg,
+    size: '2x1',
+    type: 'image',
+    backgroundImage: 'https://allprodad.com/wp-content/uploads/2021/03/05-12-21-happy-people.jpg'
+  },
+  {
+    component: 'showcase',
+    title:
+      "Explore how Dafiti boosts e-commerce speed with Azion's Edge technology, surpassing legacy solutions and enhancing user experience across South America.",
+    action: 'Learn More',
+    href: '#',
+    logo: logoSvg,
+    size: '2x1',
     type: 'image',
     backgroundImage: 'https://allprodad.com/wp-content/uploads/2021/03/05-12-21-happy-people.jpg'
   }
 ]
 
-const personaCards = [
+const cards = [
   {
+    component: 'persona',
     title: 'Sean Strickland',
     backgroundImage: 'https://allprodad.com/wp-content/uploads/2021/03/05-12-21-happy-people.jpg'
   },
   {
+    component: 'logo',
+    type: 'white',
+    logo: logoSvg
+  },
+  {
+    component: 'logo',
+    type: 'neutral',
+    logo: logoSvg
+  },
+  {
+    component: 'persona',
     title: 'Samantha Van',
     backgroundImage: 'https://allprodad.com/wp-content/uploads/2021/03/05-12-21-happy-people.jpg'
+  },
+  {
+    component: 'logo',
+    type: 'orange',
+    logo: logoSvg
+  },
+  {
+    component: 'logo',
+    type: 'lavander',
+    logo: logoSvg
+  },
+  {
+    component: 'logo',
+    type: 'orange',
+    logo: logoSvg
+  },
+  {
+    component: 'logo',
+    type: 'white',
+    logo: logoSvg
+  },
+  {
+    component: 'logo',
+    type: 'orange',
+    logo: logoSvg
+  },
+  {
+    component: 'logo',
+    type: 'orange',
+    logo: logoSvg
   }
-]
-
-const logoCards = [
-  { type: 'white', logo: { src: logoSvg, alt: 'telefonica Logo' } },
-  { logo: { src: logoSvg, alt: 'Prime Video Logo' } },
-  { type: 'orange', logo: { src: logoSvg, alt: 'AFG Global Fashion Group Logo' } }
 ]
 
 export const Default = Template.bind({})
 Default.args = {
   showcaseCards,
-  personaCards,
-  logoCards
+  cards
 }

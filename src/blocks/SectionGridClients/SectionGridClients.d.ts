@@ -8,49 +8,48 @@ export interface Logo {
 }
 
 export interface ShowcaseCard {
+  component: 'showcase'
   /** Card title */
   title: string
   /** Action text displayed at the bottom */
   action: string
   /** Link URL */
   href: string
-  /** Logo object with src, alt, and optional color */
-  logo: Logo
-  /** Card size */
-  size?: 'default' | 'small'
+  /** Logo as HTML string (SVG) */
+  logo: string
+  /** Card size - 2x2 spans 2 columns and 2 rows, 2x1 spans 2 columns and 1 row */
+  size?: '2x2' | '2x1'
   /** Card type/theme */
-  type?: 'default' | 'white' | 'image'
+  type?: 'lavander' | 'white' | 'image'
   /** Background image URL (used when type is 'image') */
   backgroundImage?: string
+  /** Target for the link */
+  target?: '_blank' | '_self'
 }
 
 export interface LogoCard {
-  /** Card type/theme */
-  type?: 'default' | 'orange' | 'white' | 'lavander'
-  /** Optional title */
-  title?: string
-  /** Optional action text */
-  action?: string
-  /** Optional link URL */
-  href?: string
-  /** Logo object with src and alt */
-  logo: Logo
+  component: 'logo'
+  /** Card type/theme - determines background color */
+  type?: 'neutral' | 'orange' | 'white' | 'lavander'
+  /** Logo as HTML string (SVG) - required */
+  logo: string
 }
 
 export interface PersonaCard {
+  component: 'persona'
   /** Profile title */
   title: string
   /** Background image URL */
   backgroundImage: string
 }
 
+export type Card = LogoCard | PersonaCard
+
 export interface SectionGridClientsProps {
-  /** Array of showcase cards to display */
+  /** Array of showcase cards to display - positioned at fixed layout positions */
   showcaseCards?: ShowcaseCard[]
-  /** Array of company logo cards to display */
-  logoCards?: LogoCard[]
-  /** Array of persona/profile cards to display */
-  personaCards?: PersonaCard[]
+  /** Array of cards (LogoCard or PersonaCard) - filled sequentially into remaining positions */
+  cards: Card[]
   /** Bottom spacing class */
   bottomSpacing?: 'mb-0' | 'mb-6' | 'mb-12' | 'mb-24' | 'mb-48'
   /** Section ID attribute */
@@ -58,4 +57,3 @@ export interface SectionGridClientsProps {
 }
 
 export { default } from './SectionGridClients.vue'
-

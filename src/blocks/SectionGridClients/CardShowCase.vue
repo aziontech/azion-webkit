@@ -3,30 +3,34 @@
     class="p-6 rounded group"
     :class="[
       cardBackgroundColor[type],
-      size == 'small' ? 'md:row-span-2' : 'col-span-1 md:col-span-2 lg:row-span-2',
+      size == '2x1' ? 'md:row-span-2' : 'col-span-1 md:col-span-2 md:row-span-2',
       backgroundImage ? 'bg-cover bg-center bg-no-repeat' : ''
     ]"
     :style="backgroundImage ? computedBackgroundImage : ''"
   >
     <a
       :href="href"
-      class="flex flex-col gap-8 justify-between h-full"
+      :target="target"
+      class="flex flex-col gap-8 justify-between h-full cursor-pointer"
       :class="cardTextColor[type]"
     >
-      <div
-        v-html="logo.src"
-        :alt="logo.alt"
-        class="h-12"
-        :class="logo.color"
-      />
+      <div class="h-10 flex">
+        <div
+          v-html="logo"
+          class="max-h-full"
+        />
+      </div>
       <div class="flex flex-col gap-4">
         <p
           class="font-sora text-xl"
-          :class="size == 'small' ? 'text-xl' : 'text-2xl'"
+          :class="size == '2x1' ? 'text-xl' : 'text-2xl'"
         >
           {{ title }}
         </p>
-        <p class="font-proto-mono uppercase text-xs leading-1 flex items-center gap-2" :class="actionTextColor[type]">
+        <p
+          class="font-proto-mono uppercase text-xs leading-1 flex items-center gap-2"
+          :class="actionTextColor[type]"
+        >
           <i class="pi pi-angle-right text-xs"></i> {{ action }}
         </p>
       </div>
@@ -51,44 +55,46 @@
       default: ''
     },
     logo: {
-      type: Object,
-      default: () => ({
-        src: '',
-        alt: ''
-      })
+      type: String,
+      default: ''
     },
     size: {
       type: String,
-      default: 'default',
-      options: ['default', 'small']
+      default: '2x2',
+      options: ['2x2', '2x1']
     },
     type: {
       type: String,
-      default: 'default',
-      options: ['default', 'white', 'image']
+      default: 'lavander',
+      options: ['lavander', 'white', 'image']
     },
     backgroundImage: {
       type: String,
       default: ''
+    },
+    target: {
+      type: String,
+      default: '_self',
+      options: ['_blank', '_self']
     }
   })
 
   const cardBackgroundColor = {
-    default: 'bg-violet-500 hover:bg-violet-400 transition-colors',
-    white: 'bg-white',
+    lavander: 'bg-violet-500 hover:bg-violet-400 transition-colors',
+    white: 'bg-white hover:bg-neutral-100 transition-colors',
     image: 'bg-transparent'
   }
 
   const cardTextColor = {
-    default: 'text-gray-950',
+    lavander: 'text-gray-950',
     white: 'text-black',
     image: 'text-white'
   }
 
   const actionTextColor = {
-    default: 'group-hover:text-violet-900',
-    white: 'group-hover:text-gray-950',
-    image: 'group-hover:text-gray-200'
+    lavander: 'group-hover:text-violet-900',
+    white: 'group-hover:text-neutral-800 transition-colors',
+    image: 'group-hover:text-neutral-300 transition-colors'
   }
 
   const computedBackgroundImage = computed(() => {

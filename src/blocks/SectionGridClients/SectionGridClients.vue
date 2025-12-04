@@ -1,39 +1,44 @@
 <template>
   <section
-    class="m-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12"
+    class="m-0 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-3 max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12"
     :class="`${bottomSpacing}`"
     :id="id"
-    >
+  >
     <template
-      v-for="(item, index) in layoutTypes"
+      v-for="(item, index) in resolvedCards"
       :key="index"
     >
+      <template v-if="item.component === 'hidden'">
+        <div
+          class="invisible"
+          aria-hidden="true"
+        ></div>
+      </template>
+      <template v-else>
         <component
-          :is="componentsMapping[item.type]"
-          v-bind="resolvedCards[index] || {}"
+          :is="componentsMapping[item.component]"
+          v-bind="item"
           :class="item.class"
           class="min-h-52"
         />
       </template>
+    </template>
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import { computed } from 'vue'
   import CardShowCase from './CardShowCase.vue'
   import CardCompanyLogo from './CardCompanyLogo.vue'
   import ClientProfile from './ClientProfile.vue'
+  import type { ShowcaseCard, LogoCard, PersonaCard } from './SectionGridClients.d.ts'
 
-  const propsDef = defineProps({
+  const props = defineProps({
     showcaseCards: {
       type: Array,
       default: () => []
     },
-    logoCards: {
-      type: Array,
-      default: () => []
-    },
-    personaCards: {
+    cards: {
       type: Array,
       default: () => []
     },
@@ -49,42 +54,44 @@
   })
 
   const layoutTypes = [
-    { type: 'showcase', class: '' },
-    { type: 'profile', class: 'hidden lg:flex' },
-    { type: 'logo', class: 'hidden md:flex' },
-    { type: 'profile', class: '' },
-    { type: 'showcase', class: '' },
-    { type: 'logo', class: '' },
-    { type: 'logo', class: 'hidden md:flex' }
+    { type: 'showcase' },
+    { class: 'hidden md:flex' },
+    { class: 'hidden xl:flex' },
+    { class: 'hidden md:flex' },
+    { type: 'showcase', class: 'hidden xl:flex' },
+    { class: 'hidden md:flex' },
+    { type: 'showcase' },
+    { class: 'hidden md:flex' },
+    { class: 'hidden md:flex' },
+    { class: 'hidden md:flex' },
+    { class: 'hidden xl:flex' }
   ]
 
-  const componentsMapping = {
+  type ResolvedCard =
+    | ((ShowcaseCard | LogoCard | PersonaCard) & { class: string })
+    | { component: 'hidden'; class: string }
+
+  const componentsMapping: Record<string, any> = {
     showcase: CardShowCase,
     logo: CardCompanyLogo,
-    profile: ClientProfile
+    persona: ClientProfile
   }
 
-  const resolvedCards = computed(() => {
+  const resolvedCards = computed<ResolvedCard[]>(() => {
     let showcaseIndex = 0
-    let personaIndex = 0
-    let logoIndex = 0
+    let cardsIndex = 0
+
     return layoutTypes.map((item) => {
       if (item.type === 'showcase') {
-        const card = propsDef.showcaseCards[showcaseIndex] || {}
+        const card = props.showcaseCards[showcaseIndex] || {}
         showcaseIndex += 1
-        return card
+        return { ...card, component: 'showcase', class: item.class ?? '' } as ResolvedCard
       }
-      if (item.type === 'profile') {
-        const card = propsDef.personaCards[personaIndex] || {}
-        personaIndex += 1
-        return card
-      }
-      if (item.type === 'logo') {
-        const card = propsDef.logoCards[logoIndex] || {}
-        logoIndex += 1
-        return card
-      }
-      return {}
+
+      const card = (props.cards[cardsIndex] || {}) as LogoCard | PersonaCard | Record<string, any>
+      cardsIndex += 1
+      const component = (card as any).component ?? 'hidden'
+      return { ...card, component, class: item.class ?? '' } as ResolvedCard
     })
   })
 </script>
