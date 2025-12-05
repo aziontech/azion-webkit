@@ -1,3 +1,10 @@
+## [1.275.0](https://github.com/aziontech/azion-webkit/compare/v1.274.1...v1.275.0) (2025-12-05)
+
+### Features
+
+* add SectionCards2Column component with outline and default variants ([685d1f0](https://github.com/aziontech/azion-webkit/commit/685d1f00612e28641fcdc552620b1cd003c14231))
+* move SectionCards2Column to Blocks/Rebranding in Storybook and remove demo from App.vue ([199f0c3](https://github.com/aziontech/azion-webkit/commit/199f0c3ad0045b591cf47a99c6843320e9a8caf5))
+
 ## [1.274.1](https://github.com/aziontech/azion-webkit/compare/v1.274.0...v1.274.1) (2025-12-04)
 
 ### Bug Fixes
