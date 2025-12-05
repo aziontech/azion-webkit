@@ -11,7 +11,7 @@
         <Card
           v-for="(card, index) in cards"
           :key="index"
-          :variant="variant"
+          :variant="cardsType"
           :icon="card.icon"
           :title="card.title"
           :descriptionRawMarkdown="card.descriptionRawMarkdown"
@@ -41,7 +41,7 @@
     cards?: Card2Column[]
     id?: string
     bottomSpacing?: 'mb-0' | 'mb-6' | 'mb-12' | 'mb-24' | 'mb-48'
-    variant?: 'default' | 'outline'
+    cardsType?: 'default' | 'outline'
   }
 
   const props = withDefaults(defineProps<SectionCards2ColumnProps>(), {
