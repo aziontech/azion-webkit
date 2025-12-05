@@ -1,3 +1,9 @@
+## [1.275.1](https://github.com/aziontech/azion-webkit/compare/v1.275.0...v1.275.1) (2025-12-05)
+
+### Bug Fixes
+
+* bump version ([c7aed01](https://github.com/aziontech/azion-webkit/commit/c7aed014b7354ff60ca901ef7697ebe774d1c5b6))
+
 ## [1.275.0](https://github.com/aziontech/azion-webkit/compare/v1.274.1...v1.275.0) (2025-12-05)
 
 ### Features
