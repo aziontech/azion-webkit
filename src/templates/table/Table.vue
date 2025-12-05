@@ -16,7 +16,7 @@
         field=""
         header=""
         :pt="{
-          headerontent: { class: 'h-full bg-current' },
+          headerontent: { class: 'h-full bg-transparent' },
           headercell: {
             class: ' font-normal text-color sticky top-0 z-10  border-0 z-10 bg-transparent'
           },
