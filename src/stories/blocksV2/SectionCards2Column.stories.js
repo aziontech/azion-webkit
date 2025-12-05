@@ -1,7 +1,7 @@
 import SectionCards2Column from '../../blocks/SectionCards2Column'
 
 export default {
-  title: 'Blocks V2/SectionCards2Column',
+  title: 'Blocks/Rebranding/SectionCards2Column',
   component: SectionCards2Column,
   tags: ['autodocs'],
   argTypes: {
