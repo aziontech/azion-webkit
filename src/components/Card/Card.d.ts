@@ -8,9 +8,13 @@ export interface CardProps {
    */
   title?: string
   /**
-   * The description text displayed below the title
+   * The description text displayed below the title (plain text)
    */
   description?: string
+  /**
+   * The description in raw markdown format (will be parsed to HTML)
+   */
+  descriptionRawMarkdown?: string
   /**
    * Optional URL to make the card clickable. When provided, the card becomes a link with hover effects
    */
@@ -25,6 +29,15 @@ export interface CardProps {
    * @defaultValue '_self'
    */
   target?: '_blank' | '_self'
+  /**
+   * Card variant style
+   * @defaultValue 'default'
+   */
+  variant?: 'default' | 'outline'
+  /**
+   * Optional PrimeVue icon class (e.g., 'pi pi-check')
+   */
+  icon?: string
 }
 
 export { default } from './Card.vue'
