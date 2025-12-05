@@ -1,3 +1,9 @@
+## [1.275.3](https://github.com/aziontech/azion-webkit/compare/v1.275.2...v1.275.3) (2025-12-05)
+
+### Bug Fixes
+
+* update SectionCards2Column grid layout to be more responsive with 4-column support ([c077b40](https://github.com/aziontech/azion-webkit/commit/c077b40d0a7d24be6d3f4555167bd0a44a26866c))
+
 ## [1.275.2](https://github.com/aziontech/azion-webkit/compare/v1.275.1...v1.275.2) (2025-12-05)
 
 ### Bug Fixes
