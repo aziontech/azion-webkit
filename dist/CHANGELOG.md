@@ -1,3 +1,9 @@
+## [1.275.2](https://github.com/aziontech/azion-webkit/compare/v1.275.1...v1.275.2) (2025-12-05)
+
+### Bug Fixes
+
+* rename variant prop to cardsType in SectionCards2Column component ([2a47099](https://github.com/aziontech/azion-webkit/commit/2a4709918c0b13b201a64a8feca686ac70ad32d4))
+
 ## [1.275.1](https://github.com/aziontech/azion-webkit/compare/v1.275.0...v1.275.1) (2025-12-05)
 
 ### Bug Fixes
