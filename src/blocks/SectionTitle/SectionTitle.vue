@@ -24,6 +24,21 @@
         {{ description }}
       </p>
     </div>
+    <div
+      v-if="buttons && buttons.length > 0"
+      class="flex gap-4 mt-6"
+      :class="align === 'center' ? 'justify-center' : 'justify-start'"
+    >
+      <Button
+        v-for="(button, index) in buttons"
+        :key="index"
+        :label="button.label"
+        :href="button.href"
+        :variant="button.variant || button.type"
+        :size="button.size || 'medium'"
+        :icon="button.icon"
+      />
+    </div>
     </div>
   </LayoutContainer>
 </template>
@@ -31,6 +46,7 @@
 <script setup>
   import Overline from '../../components/overline/Overline.vue'
   import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
+  import Button from '../../components/Button/Button.vue'
 
   const props = defineProps({
     overline: {
@@ -59,6 +75,10 @@
       type: String,
       options: ['mb-0', 'mb-6', 'mb-12', 'mb-24', 'mb-48'],
       default: 'mb-24'
+    },
+    buttons: {
+      type: Array,
+      default: () => []
     }
   })
 </script>
