@@ -20,6 +20,7 @@ export default {
 }
 
 export const Default = {
+  name: '50x50',
   args: {
     title: 'Trusted by Industry Leaders',
     link: '/customers',
@@ -38,6 +39,26 @@ export const Default = {
       'Azion has transformed how we deliver content globally. The edge platform is incredibly fast and reliable, making it easy to scale our applications without worrying about infrastructure.',
     author: 'John Smith',
     role: 'CTO at TechCorp',
-    logo: 'https://placehold.co/200x60/1a1a1a/ffffff?text=Company+Logo'
+    logo: 'https://placehold.co/200x60/1a1a1a/ffffff?text=Company+Logo',
+    type: '50x50'
+  }
+}
+
+export const SevenZeroByThirty = {
+  name: '70x30',
+  args: {
+    title: 'Trusted by Industry Leaders',
+    link: '/customers',
+    linkLabel: 'View All Customers',
+    clients: {
+      image: 'https://placehold.co/300x400/1a1a1a/ffffff?text=Image',
+      alt: 'Client 1'
+    },
+    quote:
+      'Azion has transformed how we deliver content globally. The edge platform is incredibly fast and reliable, making it easy to scale our applications without worrying about infrastructure.',
+    author: 'John Smith',
+    role: 'CTO at TechCorp',
+    logo: 'https://placehold.co/200x60/1a1a1a/ffffff?text=Company+Logo',
+    type: '70x30'
   }
 }
