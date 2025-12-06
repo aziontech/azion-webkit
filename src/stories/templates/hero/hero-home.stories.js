@@ -118,7 +118,8 @@ Default.parameters = {
 export const ButtonVariations = Template.bind({})
 ButtonVariations.args = {
   ...MOCK,
-  title: "Button <span class='animate-pretty bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-500'>Variations</span><br class='hidden lg:block' /> Showcase",
+  title:
+    "Button <span class='animate-pretty bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-500'>Variations</span><br class='hidden lg:block' /> Showcase",
   description: 'Demonstrating different button types and themes available in the Button component.',
   buttons: [
     {
@@ -162,7 +163,7 @@ ButtonVariations.args = {
 }
 
 ButtonVariations.parameters = {
-  docs: { 
+  docs: {
     source: { code: HeroDisplay },
     description: {
       story: 'This story showcases all available button types and themes in the HeroHome component.'

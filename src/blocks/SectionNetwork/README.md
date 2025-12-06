@@ -12,12 +12,12 @@ A specialized section block component for displaying network information, infras
 
 ## Props
 
-| Prop           | Type     | Required | Default | Description                    |
-| -------------- | -------- | -------- | ------- | ------------------------------ |
-| `title`        | `string` | No       | -       | Section title                  |
-| `description`  | `string` | No       | -       | Network description            |
-| `locations`    | `Array`  | No       | `[]`    | Array of network locations     |
-| `statistics`   | `Object` | No       | -       | Network performance stats      |
+| Prop          | Type     | Required | Default | Description                |
+| ------------- | -------- | -------- | ------- | -------------------------- |
+| `title`       | `string` | No       | -       | Section title              |
+| `description` | `string` | No       | -       | Network description        |
+| `locations`   | `Array`  | No       | `[]`    | Array of network locations |
+| `statistics`  | `Object` | No       | -       | Network performance stats  |
 
 ### Location Interface
 
@@ -55,15 +55,15 @@ interface Statistics {
 
 <script setup>
   const edgeLocations = [
-    { city: "São Paulo", country: "Brazil", region: "South America" },
-    { city: "New York", country: "USA", region: "North America" }
+    { city: 'São Paulo', country: 'Brazil', region: 'South America' },
+    { city: 'New York', country: 'USA', region: 'North America' }
   ]
-  
+
   const networkStats = {
     totalLocations: 100,
-    coverage: "6 continents",
-    latency: "<50ms",
-    uptime: "99.9%"
+    coverage: '6 continents',
+    latency: '<50ms',
+    uptime: '99.9%'
   }
 </script>
 ```

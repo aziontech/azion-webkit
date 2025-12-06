@@ -55,10 +55,10 @@ interface ListData {
 
 ## Slots
 
-| Slot        | Description                                    |
-| ----------- | ---------------------------------------------- |
-| `status`    | Status information or additional content       |
-| `list-data` | Custom content for navigation list areas       |
+| Slot        | Description                              |
+| ----------- | ---------------------------------------- |
+| `status`    | Status information or additional content |
+| `list-data` | Custom content for navigation list areas |
 
 ## Usage
 
@@ -79,7 +79,7 @@ interface ListData {
 
 <script setup>
   import Footer from '@/blocks/Footer'
-  
+
   const securityInfo = {
     title: 'Security & Compliance',
     tags: [
@@ -88,12 +88,13 @@ interface ListData {
       { title: 'GDPR Compliant', icon: 'pi pi-lock' }
     ]
   }
-  
+
   const footerContent = {
     title: 'Build at the Edge',
-    description: 'The <strong>edge computing platform</strong> that accelerates your applications worldwide.'
+    description:
+      'The <strong>edge computing platform</strong> that accelerates your applications worldwide.'
   }
-  
+
   const navigationData = [
     {
       title: 'Products',

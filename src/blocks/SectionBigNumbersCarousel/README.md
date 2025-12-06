@@ -12,11 +12,11 @@ A carousel section block component for displaying large numbers, statistics, or 
 
 ## Props
 
-| Prop              | Type      | Required | Default | Description                           |
-| ----------------- | --------- | -------- | ------- | ------------------------------------- |
-| `title`           | `string`  | No       | -       | Section title                         |
-| `numbers`         | `Array`   | Yes      | `[]`    | Array of number/statistic objects     |
-| `bottomSpacing`   | `string`  | No       | `''`    | Additional bottom spacing classes     |
+| Prop            | Type     | Required | Default | Description                       |
+| --------------- | -------- | -------- | ------- | --------------------------------- |
+| `title`         | `string` | No       | -       | Section title                     |
+| `numbers`       | `Array`  | Yes      | `[]`    | Array of number/statistic objects |
+| `bottomSpacing` | `string` | No       | `''`    | Additional bottom spacing classes |
 
 ### Number Interface
 
@@ -44,7 +44,7 @@ interface NumberItem {
 
 <script setup>
   import SectionBigNumbersCarousel from '@/blocks/SectionBigNumbersCarousel'
-  
+
   const platformStats = [
     {
       value: '100+',

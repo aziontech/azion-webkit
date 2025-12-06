@@ -14,27 +14,24 @@ A versatile card component built on top of **PrimeVue Card** with support for mu
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `title` | `string` | `''` | The main title text displayed at the top of the card |
-| `description` | `string` | `''` | Plain text description displayed below the title |
-| `descriptionRawMarkdown` | `string` | `''` | Markdown formatted description (parsed to HTML) |
-| `label` | `string` | `''` | Button label text displayed at the bottom of the card |
-| `href` | `string` | `''` | Optional URL to make the card clickable with hover effects |
-| `target` | `'_blank' \| '_self'` | `'_self'` | Link target attribute (only applies when href is provided) |
-| `variant` | `'default' \| 'outline'` | `'default'` | Card visual variant style |
-| `icon` | `string` | `''` | Optional PrimeVue icon class (e.g., 'pi pi-check') |
-| `theme` | `'default'` | `'default'` | Visual theme for the card styling |
+| Prop                     | Type                     | Default     | Description                                                |
+| ------------------------ | ------------------------ | ----------- | ---------------------------------------------------------- |
+| `title`                  | `string`                 | `''`        | The main title text displayed at the top of the card       |
+| `description`            | `string`                 | `''`        | Plain text description displayed below the title           |
+| `descriptionRawMarkdown` | `string`                 | `''`        | Markdown formatted description (parsed to HTML)            |
+| `label`                  | `string`                 | `''`        | Button label text displayed at the bottom of the card      |
+| `href`                   | `string`                 | `''`        | Optional URL to make the card clickable with hover effects |
+| `target`                 | `'_blank' \| '_self'`    | `'_self'`   | Link target attribute (only applies when href is provided) |
+| `variant`                | `'default' \| 'outline'` | `'default'` | Card visual variant style                                  |
+| `icon`                   | `string`                 | `''`        | Optional PrimeVue icon class (e.g., 'pi pi-check')         |
+| `theme`                  | `'default'`              | `'default'` | Visual theme for the card styling                          |
 
 ## Usage
 
 ### Basic Card
 
 ```vue
-<Card
-  title="Card Title"
-  description="This is a simple card with plain text description."
-/>
+<Card title="Card Title" description="This is a simple card with plain text description." />
 ```
 
 ### Card with Markdown
@@ -98,11 +95,13 @@ Cards with `href` automatically display a **linkSecondary** button at the bottom
 ## Variants
 
 ### Default
+
 - Clean background with rounded corners
 - Hover effect changes background color
 - Supports clickable links with smooth transitions
 
 ### Outline
+
 - Border with decorative corner dots
 - Hover effect on background
 - Ideal for feature lists and informational cards
@@ -137,6 +136,7 @@ const defaultCardPT = {
 ```
 
 **Benefits of Unstyled Mode:**
+
 - Zero CSS conflicts with existing styles
 - Complete control over all styling aspects
 - No need to override default PrimeVue styles
@@ -147,8 +147,8 @@ const defaultCardPT = {
 The component uses the `parseMarkdown` service to convert markdown to HTML:
 
 - Headers (# ## ###)
-- Bold (**text** or __text__)
-- Italic (*text* or _text_)
+- Bold (**text** or **text**)
+- Italic (_text_ or _text_)
 - Links [text](url)
 - Line breaks and paragraphs
 

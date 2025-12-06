@@ -65,7 +65,8 @@ Default.args = {
     id: 'a3b0bf4c-c170-4988-a21a-f109055c4b70',
     title: 'Get in touch with us',
     action: 'https://www.azion.com',
-    successMessage: 'Thank you for your interest in Azion. Our Sales team will contact you shortly.',
+    successMessage:
+      'Thank you for your interest in Azion. Our Sales team will contact you shortly.',
     redirect: ''
   },
   margin: 'default'
@@ -94,4 +95,3 @@ NoMargin.args = {
   },
   margin: 'none'
 }
-

@@ -18,7 +18,9 @@
       </div>
 
       <blockquote class="flex flex-col gap-4 md:gap-6">
-        <p class="display-4-mobile md:display-4 max-w-sm md:max-w-7xl text-neutral-200 font-sora">"{{ quote }}"</p>
+        <p class="display-4-mobile md:display-4 max-w-sm md:max-w-7xl text-neutral-200 font-sora">
+          "{{ quote }}"
+        </p>
       </blockquote>
 
       <div

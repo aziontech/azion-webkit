@@ -4,44 +4,44 @@
       :id="id"
       :class="`${bottomSpacing}`"
     >
-    <swiper
-      :modules="modules"
-      :slides-per-view="1"
-      :grab-cursor="true"
-      :space-between="16"
-      :scrollbar="{ draggable: true }"
-      :breakpoints="breakpoints"
-      class="md:pt-10 pb-3 md:pb-[42px] md:border-t-2 md:border-[#2B2B2B]"
-      @swiper="onSwiper"
-    >
-      <swiper-slide
-        v-for="(item, index) in items"
-        :key="index"
+      <swiper
+        :modules="modules"
+        :slides-per-view="1"
+        :grab-cursor="true"
+        :space-between="16"
+        :scrollbar="{ draggable: true }"
+        :breakpoints="breakpoints"
+        class="md:pt-10 pb-3 md:pb-[42px] md:border-t-2 md:border-[#2B2B2B]"
+        @swiper="onSwiper"
       >
-        <div class="flex flex-col md:flex-row gap-3 w-fit md:gap-5 md:items-center">
-          <div
-            class="rounded-full h-14 w-14 md:h-16 md:w-16 min-w-14 md:min-w-16 border-2 border-[#F3652B] flex items-center justify-center"
-          >
-            <i
-              class="md:text-2xl text-[#EDE8E8]"
-              :class="item.icon"
-            />
-          </div>
-          <div class="flex gap-2 items-start">
-            <p
-              class="text-6xl md:text-[80px] font-proto-mono text-[#EDE8E8] leading-tight flex-shrink-0"
+        <swiper-slide
+          v-for="(item, index) in items"
+          :key="index"
+        >
+          <div class="flex flex-col md:flex-row gap-3 w-fit md:gap-5 md:items-center">
+            <div
+              class="rounded-full h-14 w-14 md:h-16 md:w-16 min-w-14 md:min-w-16 border-2 border-[#F3652B] flex items-center justify-center"
             >
-              {{ item.title }}
-            </p>
-            <p
-              class="mt-4 text-balanced font-proto-mono tracking-widest text-xs font-medium uppercase leading-tight text-[#EDE8E8] w-full md:w-[calc(100%-65%)]"
-            >
-              {{ item.description }}
-            </p>
+              <i
+                class="md:text-2xl text-[#EDE8E8]"
+                :class="item.icon"
+              />
+            </div>
+            <div class="flex gap-2 items-start">
+              <p
+                class="text-6xl md:text-[80px] font-proto-mono text-[#EDE8E8] leading-tight flex-shrink-0"
+              >
+                {{ item.title }}
+              </p>
+              <p
+                class="mt-4 text-balanced font-proto-mono tracking-widest text-xs font-medium uppercase leading-tight text-[#EDE8E8] w-full md:w-[calc(100%-65%)]"
+              >
+                {{ item.description }}
+              </p>
+            </div>
           </div>
-        </div>
-      </swiper-slide>
-    </swiper>
+        </swiper-slide>
+      </swiper>
     </div>
   </LayoutContainer>
 </template>
@@ -69,7 +69,7 @@
     },
     1280: {
       slidesPerView: 2.75
-    },
+    }
   }
 
   defineProps({

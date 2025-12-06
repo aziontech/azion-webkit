@@ -13,7 +13,7 @@ A flexible layout container component that provides consistent spacing and respo
 </template>
 
 <script setup>
-import LayoutContainer from './blocks/LayoutContainer'
+  import LayoutContainer from './blocks/LayoutContainer'
 </script>
 ```
 
@@ -31,7 +31,7 @@ The following blocks have been updated to use LayoutContainer:
 
 - **SectionTitle** - Title sections with overline and descriptions
 - **SectionContent2Column** - Two-column content layouts
-- **SectionContent3Column** - Three-column content layouts  
+- **SectionContent3Column** - Three-column content layouts
 - **SectionCards3Column** - Three-column card grids
 - **SectionImageContent2Column** - Image and content combinations
 - **BigNumbers** - Carousel component for displaying statistics and metrics
@@ -44,6 +44,7 @@ The following blocks have been updated to use LayoutContainer:
 ## Styling
 
 The component applies the following base classes:
+
 - `relative` - Relative positioning
 - `max-w-xl xxxl:max-w-xxl` - Responsive max width
 - `mx-auto` - Horizontal centering

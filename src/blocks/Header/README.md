@@ -13,8 +13,8 @@ A flexible header block component with sticky positioning and slot-based archite
 
 ## Props
 
-| Prop            | Type     | Required | Default | Description                           |
-| --------------- | -------- | -------- | ------- | ------------------------------------- |
+| Prop            | Type     | Required | Default | Description                            |
+| --------------- | -------- | -------- | ------- | -------------------------------------- |
 | `menuSecondary` | `Object` | No       | `{}`    | Configuration for secondary menu items |
 
 ### MenuSecondary Interface
@@ -31,12 +31,12 @@ interface MenuSecondaryItem {
 
 ## Slots
 
-| Slot           | Description                                    |
-| -------------- | ---------------------------------------------- |
-| `logo`         | Logo or brand element (left side)             |
-| `navigation`   | Main navigation menu (left side, after logo)  |
-| `dialog`       | Dialog trigger or search (right side)         |
-| `menu-mobile`  | Mobile menu trigger (right side, last item)   |
+| Slot          | Description                                  |
+| ------------- | -------------------------------------------- |
+| `logo`        | Logo or brand element (left side)            |
+| `navigation`  | Main navigation menu (left side, after logo) |
+| `dialog`      | Dialog trigger or search (right side)        |
+| `menu-mobile` | Mobile menu trigger (right side, last item)  |
 
 ## Usage
 
@@ -48,15 +48,15 @@ interface MenuSecondaryItem {
     <template #logo>
       <AzionLogo href="/" />
     </template>
-    
+
     <template #navigation>
       <MainNavigation :items="navItems" />
     </template>
-    
+
     <template #dialog>
       <SearchDialog />
     </template>
-    
+
     <template #menu-mobile>
       <MobileMenuButton @click="toggleMobileMenu" />
     </template>
@@ -65,7 +65,7 @@ interface MenuSecondaryItem {
 
 <script setup>
   import Header from '@/blocks/Header'
-  
+
   const secondaryMenu = [
     {
       text: 'Login',

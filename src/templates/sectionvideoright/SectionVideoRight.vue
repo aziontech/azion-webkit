@@ -96,7 +96,15 @@
               class="h-full w-full rounded"
               allowfullscreen
               height="480"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
             >
             </iframe>
           </div>

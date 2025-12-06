@@ -19,7 +19,7 @@ A centered hero section block component with optional animated background, overl
 | `title`              | `string`                                    | Yes      | -           | Main hero heading                  |
 | `subtitle`           | `string`                                    | No       | `undefined` | Supporting description text        |
 | `overline`           | `string`                                    | No       | `undefined` | Small text above title             |
-| `buttons`            | `Array<HeroButtonProps>`                    | No       | `[]`        | Array of CTA buttons (max 3)      |
+| `buttons`            | `Array<HeroButtonProps>`                    | No       | `[]`        | Array of CTA buttons (max 3)       |
 | `spacing`            | `'none' \| 'small' \| 'default' \| 'large'` | No       | `'default'` | Vertical padding                   |
 | `animatedBackground` | `boolean`                                   | No       | `false`     | Enable canvas background animation |
 
@@ -131,6 +131,7 @@ The component uses:
 ## Animated Background
 
 When `animatedBackground` is enabled:
+
 - Canvas element renders behind content
 - Requires custom animation implementation
 - Automatically handles responsive sizing

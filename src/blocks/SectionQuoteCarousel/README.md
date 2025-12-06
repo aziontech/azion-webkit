@@ -12,8 +12,8 @@ A carousel section block component for displaying customer testimonials and quot
 
 ## Props
 
-| Prop     | Type    | Required | Default | Description                    |
-| -------- | ------- | -------- | ------- | ------------------------------ |
+| Prop     | Type    | Required | Default | Description                        |
+| -------- | ------- | -------- | ------- | ---------------------------------- |
 | `quotes` | `Array` | Yes      | `[]`    | Array of quote/testimonial objects |
 
 ### Quote Interface
@@ -39,9 +39,9 @@ interface Quote {
   const testimonials = [
     {
       text: "Azion's edge platform transformed our application performance.",
-      author: "John Doe",
-      title: "CTO",
-      company: "Tech Corp"
+      author: 'John Doe',
+      title: 'CTO',
+      company: 'Tech Corp'
     }
   ]
 </script>

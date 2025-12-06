@@ -28,8 +28,8 @@ This component doesn't accept any props - it provides a pure layout container.
 <template>
   <PricingTable>
     <PricingTableHeader />
-    <PricingTableRow 
-      v-for="feature in features" 
+    <PricingTableRow
+      v-for="feature in features"
       :key="feature.id"
       :feature="feature"
     />
@@ -42,7 +42,7 @@ This component doesn't accept any props - it provides a pure layout container.
   import PricingTableHeader from '@/components/PricingTableHeader'
   import PricingTableRow from '@/components/PricingTableRow'
   import PricingTableFooter from '@/components/PricingTableFooter'
-  
+
   const features = [
     { id: 1, name: 'Storage', free: '1GB', pro: '100GB', enterprise: 'Unlimited' },
     { id: 2, name: 'Bandwidth', free: '10GB', pro: '1TB', enterprise: 'Unlimited' }
@@ -61,7 +61,7 @@ This component doesn't accept any props - it provides a pure layout container.
     <div class="col-span-1 text-center font-bold">Pro</div>
     <div class="col-span-1 text-center font-bold">Business</div>
     <div class="col-span-1 text-center font-bold">Enterprise</div>
-    
+
     <!-- Feature rows -->
     <div class="col-span-1">Storage</div>
     <div class="col-span-1 text-center">1GB</div>
@@ -75,6 +75,7 @@ This component doesn't accept any props - it provides a pure layout container.
 ## Grid Structure
 
 The component creates a CSS Grid with:
+
 - **Columns**: 5 equal columns (`grid-cols-5`)
 - **Max Width**: 1292px with auto centering
 - **Padding**: 20px horizontal (`px-5`)
@@ -139,6 +140,7 @@ The component uses:
 ## Alternative Approaches
 
 For more complex pricing tables, consider:
+
 - HTML `<table>` elements for better semantics
 - Responsive card layouts for mobile
 - PrimeVue DataTable for advanced features

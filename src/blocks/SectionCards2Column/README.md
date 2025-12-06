@@ -15,27 +15,31 @@ A responsive section component that displays cards in a 2-column grid layout usi
 ## Props
 
 ### `cards`
+
 - **Type**: `Card2Column[]`
 - **Required**: No
 - **Default**: `[]`
 - **Description**: Array of card objects to display
 
 #### Card2Column Interface
+
 ```typescript
 interface Card2Column {
-  icon?: string              // Optional PrimeVue icon class (e.g., 'pi pi-bolt')
-  title: string              // Card title
-  descriptionRawMarkdown: string  // Card description with markdown support
+  icon?: string // Optional PrimeVue icon class (e.g., 'pi pi-bolt')
+  title: string // Card title
+  descriptionRawMarkdown: string // Card description with markdown support
 }
 ```
 
 ### `id`
+
 - **Type**: `string`
 - **Required**: No
 - **Default**: `''`
 - **Description**: HTML id attribute for the section
 
 ### `bottomSpacing`
+
 - **Type**: `'mb-0' | 'mb-6' | 'mb-12' | 'mb-24' | 'mb-48'`
 - **Required**: No
 - **Default**: `'mb-24'`
@@ -44,59 +48,61 @@ interface Card2Column {
 ## Usage
 
 ### Basic Example
+
 ```vue
 <template>
   <SectionCards2Column :cards="cards" />
 </template>
 
 <script setup>
-import SectionCards2Column from '@/blocks/SectionCards2Column'
+  import SectionCards2Column from '@/blocks/SectionCards2Column'
 
-const cards = [
-  {
-    icon: 'pi pi-bolt',
-    title: 'Ultra-Low Latency',
-    descriptionRawMarkdown: 'Deploy your applications at the **edge** for millisecond response times.'
-  },
-  {
-    icon: 'pi pi-shield',
-    title: 'Advanced Security',
-    descriptionRawMarkdown: 'Protect your infrastructure with [DDoS mitigation](https://azion.com) and WAF.'
-  }
-]
+  const cards = [
+    {
+      icon: 'pi pi-bolt',
+      title: 'Ultra-Low Latency',
+      descriptionRawMarkdown:
+        'Deploy your applications at the **edge** for millisecond response times.'
+    },
+    {
+      icon: 'pi pi-shield',
+      title: 'Advanced Security',
+      descriptionRawMarkdown:
+        'Protect your infrastructure with [DDoS mitigation](https://azion.com) and WAF.'
+    }
+  ]
 </script>
 ```
 
 ### With Custom Spacing
+
 ```vue
-<SectionCards2Column 
-  :cards="cards" 
-  bottomSpacing="mb-48"
-  id="features-section"
-/>
+<SectionCards2Column :cards="cards" bottomSpacing="mb-48" id="features-section" />
 ```
 
 ### Cards without Icons
+
 ```vue
 <script setup>
-const cards = [
-  {
-    title: '99.99% Uptime',
-    descriptionRawMarkdown: 'Industry-leading **SLA** for your applications.'
-  },
-  {
-    title: '24/7 Support',
-    descriptionRawMarkdown: 'Expert support team available around the clock.'
-  }
-]
+  const cards = [
+    {
+      title: '99.99% Uptime',
+      descriptionRawMarkdown: 'Industry-leading **SLA** for your applications.'
+    },
+    {
+      title: '24/7 Support',
+      descriptionRawMarkdown: 'Expert support team available around the clock.'
+    }
+  ]
 </script>
 ```
 
 ## Markdown Support
 
 Card descriptions support the following markdown features:
+
 - **Bold text**: `**text**`
-- *Italic text*: `*text*`
+- _Italic text_: `*text*`
 - [Links](url): `[text](url)`
 - Line breaks and paragraphs
 
@@ -109,6 +115,7 @@ Card descriptions support the following markdown features:
 ## Card Styling
 
 Each card features:
+
 - Border with corner dots (neutral-400)
 - Hover effect (background changes to neutral-900)
 - Smooth transitions (150ms)

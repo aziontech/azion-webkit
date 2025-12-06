@@ -3,27 +3,27 @@
     <div
       :class="`flex flex-col gap-3 ${bottomSpacing} ${align === 'default' ? 'text-left' : 'text-center'}`"
     >
-    <Overline v-if="overline"> {{ overline }} </Overline>
-    <div
-      class="grid m-0 w-full"
-      :class="
-        align === 'default'
-          ? 'grid-cols-1 md:grid-cols-2 gap-3 md:gap-6'
-          : 'grid-cols-1 flex-col text-center gap-3'
-      "
-    >
-      <component
-        :is="titleTag"
-        class="display-2-mobile md:display-2 text-balance font-sora text-neutral-50"
-        >{{ title }}</component
+      <Overline v-if="overline"> {{ overline }} </Overline>
+      <div
+        class="grid m-0 w-full"
+        :class="
+          align === 'default'
+            ? 'grid-cols-1 md:grid-cols-2 gap-3 md:gap-6'
+            : 'grid-cols-1 flex-col text-center gap-3'
+        "
       >
-      <p
-        v-if="description"
-        class="font-sora text-neutral-200 text-balance"
-      >
-        {{ description }}
-      </p>
-    </div>
+        <component
+          :is="titleTag"
+          class="display-2-mobile md:display-2 text-balance font-sora text-neutral-50"
+          >{{ title }}</component
+        >
+        <p
+          v-if="description"
+          class="font-sora text-neutral-200 text-balance"
+        >
+          {{ description }}
+        </p>
+      </div>
     </div>
   </LayoutContainer>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <section 
+  <section
     class="flex flex-col gap-5 max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12"
     :id="id"
     :class="`${bottomSpacing}`"

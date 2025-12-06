@@ -16,9 +16,9 @@ This component doesn't accept any props - it provides a pure layout container wi
 
 ## Slots
 
-| Slot      | Description                                    |
-| --------- | ---------------------------------------------- |
-| `default` | Main content area for card components          |
+| Slot      | Description                           |
+| --------- | ------------------------------------- |
+| `default` | Main content area for card components |
 
 ## Grid Breakpoints
 
@@ -47,7 +47,7 @@ This component doesn't accept any props - it provides a pure layout container wi
 <script setup>
   import GridCardContainer from '@/blocks/GridCardContainer'
   import ProductCard from '@/components/ProductCard'
-  
+
   const products = [
     {
       id: 1,
@@ -103,7 +103,7 @@ This component doesn't accept any props - it provides a pure layout container wi
     <PricingCard :plan="freePlan" />
     <TestimonialCard :testimonial="customerReview" />
     <BlogCard :article="latestPost" />
-    <CTACard 
+    <CTACard
       title="Get Started"
       description="Ready to build at the edge?"
       buttonLabel="Sign Up Free"
@@ -133,16 +133,19 @@ The component uses:
 ## Best Practices
 
 ### Card Consistency
+
 - Use cards with similar heights for better visual alignment
 - Maintain consistent content structure across cards
 - Consider using aspect ratios for images
 
 ### Content Organization
+
 - Group related cards together
 - Use logical ordering (importance, alphabetical, chronological)
 - Limit to 12-16 cards per container for performance
 
 ### Responsive Considerations
+
 - Test card content at different breakpoints
 - Ensure text remains readable at all sizes
 - Consider card minimum widths for content integrity
@@ -150,6 +153,7 @@ The component uses:
 ## Common Patterns
 
 ### Product Showcase
+
 ```vue
 <GridCardContainer>
   <ProductCard v-for="product in products" :key="product.id" v-bind="product" />
@@ -157,6 +161,7 @@ The component uses:
 ```
 
 ### Feature Grid
+
 ```vue
 <GridCardContainer>
   <FeatureCard v-for="feature in features" :key="feature.id" v-bind="feature" />
@@ -164,6 +169,7 @@ The component uses:
 ```
 
 ### Team Members
+
 ```vue
 <GridCardContainer>
   <TeamCard v-for="member in team" :key="member.id" v-bind="member" />

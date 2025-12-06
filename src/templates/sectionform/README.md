@@ -23,35 +23,36 @@ A Vue component that displays a HubSpot form within a styled section container.
 </template>
 
 <script setup>
-import SectionForm from '@azion-webkit/templates/sectionform'
+  import SectionForm from '@azion-webkit/templates/sectionform'
 
-const formConfig = {
-  id: 'a3b0bf4c-c170-4988-a21a-f109055c4b70',
-  title: 'Get in touch with us',
-  action: 'https://www.azion.com',
-  successMessage: 'Thank you for your interest in Azion. Our Sales team will contact you shortly.',
-  redirect: '' // Optional: leave empty to show success message
-}
+  const formConfig = {
+    id: 'a3b0bf4c-c170-4988-a21a-f109055c4b70',
+    title: 'Get in touch with us',
+    action: 'https://www.azion.com',
+    successMessage:
+      'Thank you for your interest in Azion. Our Sales team will contact you shortly.',
+    redirect: '' // Optional: leave empty to show success message
+  }
 </script>
 ```
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `id` | `string` | `''` | Section ID attribute |
-| `form` | `FormConfig` | **required** | Form configuration object |
-| `margin` | `'none' \| 'small' \| 'default' \| 'large'` | `'none'` | Vertical spacing/margin for the section |
+| Prop     | Type                                        | Default      | Description                             |
+| -------- | ------------------------------------------- | ------------ | --------------------------------------- |
+| `id`     | `string`                                    | `''`         | Section ID attribute                    |
+| `form`   | `FormConfig`                                | **required** | Form configuration object               |
+| `margin` | `'none' \| 'small' \| 'default' \| 'large'` | `'none'`     | Vertical spacing/margin for the section |
 
 ## FormConfig Interface
 
 ```typescript
 interface FormConfig {
-  id: string                    // HubSpot form ID (required)
-  title: string                 // Form title displayed above the form fields
-  action?: string               // Optional custom form action URL
-  successMessage?: string       // Success message (if redirect is not provided)
-  redirect?: string             // Optional URL to redirect after form submission
+  id: string // HubSpot form ID (required)
+  title: string // Form title displayed above the form fields
+  action?: string // Optional custom form action URL
+  successMessage?: string // Success message (if redirect is not provided)
+  redirect?: string // Optional URL to redirect after form submission
 }
 ```
 
@@ -68,4 +69,3 @@ interface FormConfig {
 - Forms are configured to use the `na1` region and portal ID `5759082`
 - If `redirect` is provided and not empty, users will be redirected after submission instead of seeing the success message
 - Form tracking analytics can be enabled by uncommenting the `setupFormTrackingAnalytics()` call in the component
-
