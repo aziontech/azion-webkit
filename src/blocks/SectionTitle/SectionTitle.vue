@@ -17,12 +17,11 @@
           class="display-2-mobile md:display-2 text-balance font-sora text-neutral-50"
           >{{ title }}</component
         >
-        <p
+        <div
           v-if="description"
           class="font-sora text-neutral-200 text-balance"
-        >
-          {{ description }}
-        </p>
+          v-html="description"
+        ></div>
       </div>
       <div
         v-if="buttons && buttons.length > 0"
