@@ -1,3 +1,9 @@
+## [1.276.0](https://github.com/aziontech/azion-webkit/compare/v1.275.3...v1.276.0) (2025-12-06)
+
+### Features
+
+* add new prop to sectiontitle ([dde0d48](https://github.com/aziontech/azion-webkit/commit/dde0d48230dc582fc0259f8909586627e46fc59f))
+
 ## [1.275.3](https://github.com/aziontech/azion-webkit/compare/v1.275.2...v1.275.3) (2025-12-05)
 
 ### Bug Fixes
