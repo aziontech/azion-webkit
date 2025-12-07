@@ -1,6 +1,5 @@
 <template>
-  <section
-    class="flex flex-col gap-5 max-w-xl xxxl:max-w-xxl mx-auto p-6 md:p-12"
+  <LayoutContainer
     :id="id"
     :class="`${bottomSpacing}`"
   >
@@ -15,7 +14,7 @@
     </div>
     <div class="grid gap-3 grid-cols-2 lg:grid-cols-4 grid-rows-4">
       <div class="col-span-2 lg:col-span-4 row-span-3 bg-neutral-900 rounded-lg overflow-hidden">
-        <div class="relative flex h-full lg:h-auto">
+        <div class="relative flex h-full lg:h-auto min-h-96 md:min-h-[480px]">
           <div
             class="flex w-full gap-5 lg:justify-between justify-end items-right py-5 lg:py-10 lg:px-5 z-2"
           >
@@ -31,13 +30,15 @@
             <div
               class="flex flex-col gap-3 justify-end lg:justify-start font-proto-mono uppercase text-xs"
             >
-              <p
-                v-for="(item, index) in overlines"
-                key="index"
-                class="bg-white font-proto-mono px-3 py-1 text-xs md:text-base text-neutral-900"
-              >
-                {{ item }}
-              </p>
+              <template v-if="overlines && overlines.length > 0">
+                <p
+                  v-for="(item, index) in overlines"
+                  :key="index"
+                  class="bg-white font-proto-mono px-3 py-1 text-xs md:text-base text-neutral-900"
+                >
+                  {{ item }}
+                </p>
+              </template>
             </div>
           </div>
           <div
@@ -47,6 +48,7 @@
         </div>
       </div>
       <div
+        v-if="items && items.length > 0"
         v-for="(item, index) in items"
         :key="index"
         class="bg-neutral-900 flex flex-col p-3 lg:p-5 gap-3 rounded-lg"
@@ -55,11 +57,12 @@
         <p class="font-proto-mono text-5xl lg:text-7xl text-neutral-200">{{ item.title }}</p>
       </div>
     </div>
-  </section>
+  </LayoutContainer>
 </template>
 
 <script setup>
   import { parseMarkdown } from '../../services/markdown/markdown-service'
+  import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
   import EdgeMap from './EdgeMap.vue'
   defineProps({
     items: {
