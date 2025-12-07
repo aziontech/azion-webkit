@@ -161,7 +161,7 @@
   const outlineCardPT = {
     root: {
       class: [
-        'p-1 border hover:bg-neutral-900 transition-colors duration-150 border-neutral-900 relative',
+        'p-1 border transition-colors duration-150 border-neutral-900 relative',
         "after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 after:block",
         "before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 before:block"
       ]

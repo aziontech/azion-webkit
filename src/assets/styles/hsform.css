@@ -2,7 +2,7 @@
 .hbspt-form form select,
 .hbspt-form form input,
 .hbspt-form form textarea {
-  color: var(--text-color-secondary) !important;
+  color: #e5e7eb !important;
   font-weight: 400;
   font-size: 14px;
 }
@@ -17,12 +17,12 @@
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
   appearance: none !important;
-  background: var(--input-bg) !important;
-  border: 1px solid var(--surface-border) !important;
+  background: #171717 !important;
+  border: 1px solid #262626 !important;
   border-radius: 6px !important;
-  color: var(--text-color) !important;
-  font-family: var(--font-family) !important;
-  font-feature-settings: var(--font-feature-settings, normal) !important;
+  color: #fafafa !important;
+  font-family: 'Sora', sans-serif !important;
+  font-feature-settings: 14px !important;
   font-size: 0.875rem !important;
   padding: 0.344rem 0.5rem !important;
   transition:
@@ -53,6 +53,16 @@
 }
 
 .hbspt-form form .hs-button.primary.large {
+  height: fit-content !important;
+  border: 1px solid #171717 !important;
+  background-color: #171717 !important;
+  color: #f5f5f5 !important;
+  border-radius: 6px !important;
+  transition-duration: 300ms;
+  transition-property:
+    color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow,
+    transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   align-items: center !important;
   cursor: pointer !important;
   display: inline-flex !important;
@@ -63,17 +73,16 @@
   -moz-user-select: none !important;
   user-select: none !important;
   vertical-align: bottom !important;
-  background: #f3652b !important;
-  border: 1px solid #f3652b !important;
-  border-radius: 6px !important;
-  color: var(--primary-text-color) !important;
-  font-size: 1rem !important;
-  padding: 0.344rem 0.75rem !important;
-  transition:
-    background-color 0.2s,
-    color 0.2s,
-    border-color 0.2s,
-    box-shadow 0.2s !important;
+  font-size: 14px !important;
+  padding: 12px !important;
+  font-family: 'Proto Mono', sans-serif !important;
+  line-height: 1rem !important;
+}
+
+.hbspt-form form .hs-button.primary.large:hover {
+  background-color: #fe601f !important;
+  border-color: #fe601f !important;
+  color: #171717 !important;
 }
 
 /* Styling for form fieldsets */
@@ -118,12 +127,12 @@
 }
 
 .hbspt-form form input[type='checkbox']:checked {
-  background-color: var(--p-tag-color) !important;
+  background-color: #fe601f !important;
 }
 
 /* Error message styling */
 .hbspt-form form .hs-error-msgs {
-  color: #f26464 !important;
+  color: #f87171 !important;
   margin-top: 16px;
   margin-bottom: 16px;
   list-style: none;
@@ -132,7 +141,7 @@
 }
 
 .hbspt-form form .hs-error-msgs li label {
-  color: var(--color-error);
+  color: #ef4444;
   line-height: 1.25rem;
 }
 
@@ -146,7 +155,8 @@
   margin-top: 32px;
 }
 .hs-richtext a {
-  color: #93c5fd !important;
+  color: #fafafa !important;
+  font-weight: 500 !important;
 }
 
 .hs-error-msg {

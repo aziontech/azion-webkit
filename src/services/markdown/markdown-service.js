@@ -85,7 +85,7 @@ export const parseMarkdown = (markdown) => {
     (match, href, text) => {
       const targetMatch = match.match(/target="([^"]*)"/i)
       const target = targetMatch ? targetMatch[1] : '_self'
-      return `<a href="${href}" target="${target}" class="group flex w-fit items-center bg-neutral-950 h-[2.5rem] text-neutral-100 duration-300 transition rounded-md active:bg-neutral-900 border-1 border-[#353040] hover:bg-neutral-900 hover:text-orange-500 px-5 md:px-6 font-proto-mono text-sm leading-[2.5rem] whitespace-nowrap cursor-pointer mt-5">${text}</a>`
+      return `<a href="${href}" target="${target}" class="group flex w-fit items-center bg-neutral-950 h-[2.5rem] text-neutral-100 duration-300 transition rounded-md active:bg-neutral-900 border-1 border-neutral-800 hover:bg-neutral-900 hover:text-orange-500 px-5 md:px-6 font-proto-mono text-sm leading-[2.5rem] whitespace-nowrap cursor-pointer mt-5">${text}</a>`
     }
   )
 

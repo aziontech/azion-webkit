@@ -1,16 +1,16 @@
 <template>
-  <section
-    class="flex flex-col gap-10 md:gap-20 2xl:gap-40"
-    :class="spacing[margin]"
-    :id="id"
-  >
-    <div class="form border surface-border rounded-md p-4 md:p-8 flex flex-col gap-8">
+  <LayoutContainer>
+    <div
+      :id="id"
+      :class="[bottomSpacing]"
+      class="border border-neutral-800 p-6 md:p-12 flex flex-col"
+    >
       <form
         data-form
         class="hbspt-form"
       >
         <p
-          class="mb-6 font-medium text-xl"
+          class="mb-6 font-medium display-2-mobile md:display-2"
           :class="{ hidden: formIsSubmitted }"
         >
           {{ props.form.title }}
@@ -23,34 +23,42 @@
         </div>
       </form>
     </div>
-  </section>
+  </LayoutContainer>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import { ref, onMounted } from 'vue'
-  import HeroBase from '../herobase'
+  import LayoutContainer from '../LayoutContainer/LayoutContainer.vue'
 
-  const props = defineProps({
-    id: {
-      type: String,
-      default: () => ''
-    },
-    form: {
-      type: Object // id, title, action, successMessage
-    },
-    margin: {
-      type: String,
-      options: ['none', 'small', 'default', 'large'],
-      default: () => 'none'
+  interface HubSpotForms {
+    forms: {
+      create: (options: {
+        region: string
+        portalId: string
+        formId: string
+        target: string
+        onFormReady?: (form: HTMLElement) => void
+        onFormSubmitted?: () => void
+      }) => void
     }
-  })
-
-  const spacing = {
-    none: 'py-0',
-    small: 'py-5 lg:py-10 xl:py-16 2xl:py-20',
-    default: 'py-10 lg:py-20 xl:py-30 2xl:py-40',
-    large: 'py-14 lg:py-30 xl:py-40 2xl:py-48'
   }
+
+  interface SectionForm1ColumnProps {
+    id?: string
+    form: {
+      id: string
+      title: string
+      action: string
+      successMessage: string
+      redirect: string
+    }
+    bottomSpacing?: 'mb-0' | 'mb-6' | 'mb-12' | 'mb-24' | 'mb-48'
+  }
+
+  const props = withDefaults(defineProps<SectionForm1ColumnProps>(), {
+    id: '',
+    bottomSpacing: 'mb-24'
+  })
 
   const isLoading = ref(true)
   const formIsSubmitted = ref(false)
@@ -83,21 +91,24 @@
     }, 50)
   }
 
-  const redirect = (destiny) => {
+  const redirect = (destiny: string) => {
     window.location.href = destiny
   }
 
   const createHubSpotForm = () => {
-    if (window.hbspt) {
-      window.hbspt.forms.create({
+    const hbspt = (window as Window & { hbspt?: HubSpotForms }).hbspt
+    if (hbspt) {
+      hbspt.forms.create({
         region: 'na1',
         portalId: '5759082',
         formId: props.form.id,
         target: '.field-wrap',
         onFormReady: function ($form) {
-          let inputElement = $form.querySelector('input[name="form_action"]')
+          const inputElement = $form.querySelector(
+            'input[name="form_action"]'
+          ) as HTMLInputElement | null
 
-          if (inputElement && props.form?.action) {
+          if (inputElement instanceof HTMLInputElement && props.form?.action) {
             inputElement.value = props.form.action
           }
         },
@@ -113,51 +124,10 @@
     }
   }
 
-  const setupFormTrackingAnalytics = () => {
-    const trackFormFilling = (form) => {
-      if (!form) return
-
-      const inputElements = form.querySelectorAll('input')
-      let eventTriggered = false
-
-      inputElements.forEach((input) => {
-        input.addEventListener(
-          'keyup',
-          () => {
-            if (eventTriggered) return
-
-            window.dataLayer = window.dataLayer || []
-            window.dataLayer.push({
-              event: 'form_filling_started',
-              formLocation: 'hero'
-            })
-
-            eventTriggered = true
-          },
-          { once: true }
-        )
-      })
-    }
-
-    let attempts = 0
-    const checkForm = setInterval(() => {
-      const form = document.querySelector('form')
-
-      if (form || attempts >= 10) {
-        clearInterval(checkForm)
-        if (form) trackFormFilling(form)
-      }
-
-      attempts++
-    }, 1000)
-  }
-
   onMounted(async () => {
     try {
       await loadHubSpotScript()
       createHubSpotForm()
-      // Uncomment the following line if you want to enable form tracking
-      // setupFormTrackingAnalytics()
     } catch (error) {
       console.error('Error loading HubSpot form:', error)
     } finally {

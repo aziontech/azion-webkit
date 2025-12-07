@@ -17,28 +17,28 @@
           class="display-2-mobile md:display-2 text-balance font-sora text-neutral-50"
           >{{ title }}</component
         >
-      <p
-        v-if="description"
-        class="font-sora text-neutral-200 text-balance"
+        <p
+          v-if="description"
+          class="font-sora text-neutral-200 text-balance"
+        >
+          {{ description }}
+        </p>
+      </div>
+      <div
+        v-if="buttons && buttons.length > 0"
+        class="flex gap-4 mt-6"
+        :class="align === 'center' ? 'justify-center' : 'justify-start'"
       >
-        {{ description }}
-      </p>
-    </div>
-    <div
-      v-if="buttons && buttons.length > 0"
-      class="flex gap-4 mt-6"
-      :class="align === 'center' ? 'justify-center' : 'justify-start'"
-    >
-      <Button
-        v-for="(button, index) in buttons"
-        :key="index"
-        :label="button.label"
-        :href="button.href"
-        :variant="button.variant || button.type"
-        :size="button.size || 'medium'"
-        :icon="button.icon"
-      />
-    </div>
+        <Button
+          v-for="(button, index) in buttons"
+          :key="index"
+          :label="button.label"
+          :href="button.href"
+          :variant="button.variant || button.type"
+          :size="button.size || 'medium'"
+          :icon="button.icon"
+        />
+      </div>
     </div>
   </LayoutContainer>
 </template>
