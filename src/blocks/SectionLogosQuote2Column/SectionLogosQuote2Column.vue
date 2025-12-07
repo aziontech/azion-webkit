@@ -30,14 +30,11 @@
         <div
           :class="`${clientSize.client} p-1 border relative w-full border-neutral-900 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:left-0 md:after:block after:hidden`"
         >
-          <template v-if="!Array.isArray(clients)">
-            <div
-              :key="index"
-              class="flex items-center justify-center h-full p-6 md:p-12"
-            >
+          <template v-if="!Array.isArray(clientType)">
+            <div class="flex items-center justify-center h-full p-6 md:p-12">
               <img
-                :src="clients.image"
-                :alt="clients.alt"
+                :src="clientType.image"
+                :alt="clientType.alt"
                 class="max-h-full w-auto object-contain"
               />
             </div>
@@ -47,7 +44,7 @@
               class="h-full w-full p-6 md:p-12 m-0 grid grid-cols-4 grid-rows-3 gap-4 place-items-center before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:right-0 before:hidden after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 md:after:hidden"
             >
               <div
-                v-for="(client, index) in clients"
+                v-for="(client, index) in clientType"
                 :key="index"
                 class="flex items-center justify-center h-12 md:h-16"
               >
@@ -100,7 +97,7 @@
   }
 
   interface SectionLogosQuote2ColumnProps {
-    clients?: LogoQuote2Column[] | ImageType
+    clients?: Array<LogoQuote2Column[] | ImageType>
     quote?: string
     author?: string
     role?: string
@@ -119,6 +116,9 @@
     bottomSpacing: 'mb-24',
     type: '50x50'
   })
+
+  // unfortuantely, cloudcannon doesn't support conditional properties, so we need to check the type of the first element in the array
+  const clientType: LogoQuote2Column[] | ImageType = props.clients[0]
 
   const clientSize = computed(() => {
     const sizeMap: Record<'70x30' | '50x50', { container: string; client: string; quote: string }> =
