@@ -145,7 +145,7 @@
         successMessageElement.innerHTML = ''
 
         var paragraph = document.createElement('p')
-        paragraph.textContent = props.form.successMessage
+        paragraph.textContent = props.form?.successMessage || ''
         successMessageElement.appendChild(paragraph)
 
         clearInterval(intervalId)
@@ -163,7 +163,7 @@
       hbspt.forms.create({
         region: 'na1',
         portalId: '5759082',
-        formId: props.form.id,
+        formId: props.form?.id || '',
         target: '.field-wrap',
         onFormReady: function ($form) {
           const inputElement = $form.querySelector(
@@ -177,7 +177,7 @@
         onFormSubmitted: function () {
           formIsSubmitted.value = true
 
-          const formRedirect = props.form.redirect
+          const formRedirect = props.form?.redirect || ''
           const destiny = formRedirect && formRedirect.length ? formRedirect : null
 
           destiny ? redirect(destiny) : appendSuccessMessage()
