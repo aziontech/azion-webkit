@@ -15,8 +15,9 @@
         <component
           :is="titleTag"
           class="display-2-mobile md:display-2 text-balance font-sora text-neutral-50"
-          >{{ title }}</component
         >
+          {{ title }}
+        </component>
         <div
           v-if="description"
           class="font-sora text-neutral-200 text-balance"
@@ -36,6 +37,18 @@
           :variant="button.variant || button.type"
           :size="button.size || 'medium'"
           :icon="button.icon"
+        />
+      </div>
+      <div
+        v-if="logos && logos.length > 0"
+        :class="align === 'center' ? 'justify-center' : 'justify-start'"
+        class="flex items-center flex-col md:flex-row gap-8 mt-8"
+      >
+        <img
+          v-for="(logo, index) in logos"
+          :src="logo.logo"
+          :key="index"
+          class="h-10 w-auto text-neutral-100"
         />
       </div>
     </div>
@@ -76,6 +89,10 @@
       default: 'mb-24'
     },
     buttons: {
+      type: Array,
+      default: () => []
+    },
+    logos: {
       type: Array,
       default: () => []
     }
