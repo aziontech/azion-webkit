@@ -1,9 +1,9 @@
 import Container from '../../../templates/container'
-import SectionListAvatars from '../../../templates/sectionlistavatars'
+import SectionListAvatars from '../../../blocks/SectionListAvatar'
 import Rules from '../../rules'
 
 export default {
-  title: 'Blocks/Sections/section-list-avatars',
+  title: 'Blocks/rebranding/SectionListAvatars',
   tags: ['autodocs'],
   parameters: {
     docs: {

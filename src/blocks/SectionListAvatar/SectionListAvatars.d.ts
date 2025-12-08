@@ -6,7 +6,7 @@
  * @module `sectionlistavatars`
  */
 import { VNode } from 'vue'
-import { ClassComponent, GlobalComponentConstructor } from '../ts-helpers'
+import { ClassComponent, GlobalComponentConstructor } from '../../templates/ts-helpers'
 
 type Avatars = Array<{
   image: string
