@@ -1,3 +1,9 @@
+## [1.277.0](https://github.com/aziontech/azion-webkit/compare/v1.276.0...v1.277.0) (2025-12-08)
+
+### Features
+
+* refactor all section forms ([129234d](https://github.com/aziontech/azion-webkit/commit/129234df50394705018c6162360edb4ee21f07c6))
+
 ## [1.276.0](https://github.com/aziontech/azion-webkit/compare/v1.275.3...v1.276.0) (2025-12-06)
 
 ### Features
