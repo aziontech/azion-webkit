@@ -13,13 +13,13 @@ A responsive carousel section block component for displaying cards with Swiper i
 
 ## Props
 
-| Prop              | Type      | Required | Default | Description                           |
-| ----------------- | --------- | -------- | ------- | ------------------------------------- |
-| `id`              | `string`  | No       | -       | HTML id attribute                     |
-| `title`           | `string`  | No       | -       | Section title                         |
-| `cards`           | `Array`   | Yes      | `[]`    | Array of card data objects            |
-| `bottomSpacing`   | `string`  | No       | `''`    | Additional bottom spacing classes     |
-| `disabledNavigation` | `boolean` | No    | `false` | Disable navigation buttons            |
+| Prop                 | Type      | Required | Default | Description                       |
+| -------------------- | --------- | -------- | ------- | --------------------------------- |
+| `id`                 | `string`  | No       | -       | HTML id attribute                 |
+| `title`              | `string`  | No       | -       | Section title                     |
+| `cards`              | `Array`   | Yes      | `[]`    | Array of card data objects        |
+| `bottomSpacing`      | `string`  | No       | `''`    | Additional bottom spacing classes |
+| `disabledNavigation` | `boolean` | No       | `false` | Disable navigation buttons        |
 
 ### Card Interface
 
@@ -41,7 +41,7 @@ interface Card {
 ## Responsive Breakpoints
 
 - **Mobile (default)**: 1.15 cards visible
-- **Small (640px+)**: 1.5 cards visible  
+- **Small (640px+)**: 1.5 cards visible
 - **Medium (768px+)**: 2.5 cards visible
 - **Large (1024px+)**: 3 cards visible
 - **Extra Large (1280px+)**: 4 cards visible
@@ -60,11 +60,12 @@ interface Card {
 
 <script setup>
   import SectionCardCarousel from '@/blocks/SectionCardCarousel'
-  
+
   const productCards = [
     {
       title: 'Edge Application',
-      descriptionRawMarkdown: 'Build and deploy **applications** at the edge for improved performance.',
+      descriptionRawMarkdown:
+        'Build and deploy **applications** at the edge for improved performance.',
       imageSrc: '/images/edge-app.jpg',
       imageAlt: 'Edge Application Dashboard',
       link: '/products/edge-application',

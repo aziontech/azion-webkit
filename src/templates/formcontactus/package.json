@@ -1,7 +1,0 @@
-{
-  "main": "./formcontactus.js",
-  "types": "./FormContactUs.d.ts",
-  "browser": {
-    "./sfc": "./FormContactUs.vue"
-  }
-}

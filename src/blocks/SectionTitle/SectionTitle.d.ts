@@ -10,8 +10,22 @@ export interface ButtonProps {
   /**
    * Button variant/type
    */
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'link' | 'linkSecondary' | 'linkNeutral' | 'linkViolet'
-  type?: 'primary' | 'secondary' | 'tertiary' | 'link' | 'linkSecondary' | 'linkNeutral' | 'linkViolet'
+  variant?:
+    | 'primary'
+    | 'secondary'
+    | 'tertiary'
+    | 'link'
+    | 'linkSecondary'
+    | 'linkNeutral'
+    | 'linkViolet'
+  type?:
+    | 'primary'
+    | 'secondary'
+    | 'tertiary'
+    | 'link'
+    | 'linkSecondary'
+    | 'linkNeutral'
+    | 'linkViolet'
   /**
    * Button size
    */

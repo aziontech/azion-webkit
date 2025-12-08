@@ -13,14 +13,14 @@ A flexible section title block component with overline, title, and description. 
 
 ## Props
 
-| Prop           | Type     | Required | Default     | Description                           |
-| -------------- | -------- | -------- | ----------- | ------------------------------------- |
-| `overline`     | `string` | No       | `''`        | Small text above title                |
-| `title`        | `string` | No       | `''`        | Main section heading                  |
-| `description`  | `string` | No       | `''`        | Supporting description text           |
-| `align`        | `string` | No       | `'default'` | Layout alignment ('default', 'center') |
-| `titleTag`     | `string` | No       | `'h2'`      | HTML heading tag (h1-h6)             |
-| `bottomSpacing`| `string` | No       | `''`        | Additional bottom spacing classes     |
+| Prop            | Type     | Required | Default     | Description                            |
+| --------------- | -------- | -------- | ----------- | -------------------------------------- |
+| `overline`      | `string` | No       | `''`        | Small text above title                 |
+| `title`         | `string` | No       | `''`        | Main section heading                   |
+| `description`   | `string` | No       | `''`        | Supporting description text            |
+| `align`         | `string` | No       | `'default'` | Layout alignment ('default', 'center') |
+| `titleTag`      | `string` | No       | `'h2'`      | HTML heading tag (h1-h6)               |
+| `bottomSpacing` | `string` | No       | `''`        | Additional bottom spacing classes      |
 
 ## Usage
 
@@ -81,11 +81,13 @@ A flexible section title block component with overline, title, and description. 
 ## Layout Options
 
 ### Default Layout
+
 - **Desktop**: Two-column grid (title | description)
 - **Mobile**: Single column, stacked layout
 - **Alignment**: Left-aligned text
 
 ### Center Layout
+
 - **All Screens**: Single column, centered
 - **Alignment**: Center-aligned text
 - **Use Case**: Hero sections, feature introductions
@@ -95,7 +97,7 @@ A flexible section title block component with overline, title, and description. 
 The component uses:
 
 - **Typography**: Sora font family for headings and body text
-- **Colors**: 
+- **Colors**:
   - Title: Light neutral (text-neutral-50)
   - Description: Medium neutral (text-neutral-200)
   - Overline: Orange accent via Overline component

@@ -16,16 +16,16 @@
     </template>
     <template #actions>
       <div class="flex gap-4 flex-col md:flex-row justify-center items-center">
-              <Button
-        v-for="button in buttons"
-        :key="button.label || button.link"
-        :label="button.label"
-        :href="button.link"
-        :icon="button.icon"
-        :size="button.size === 'medium' ? 'large' : 'small'"
-        :type="button.type"
-        :theme="button.theme"
-      />
+        <Button
+          v-for="button in buttons"
+          :key="button.label || button.link"
+          :label="button.label"
+          :href="button.link"
+          :icon="button.icon"
+          :size="button.size === 'medium' ? 'large' : 'small'"
+          :type="button.type"
+          :theme="button.theme"
+        />
       </div>
     </template>
     <template #content>

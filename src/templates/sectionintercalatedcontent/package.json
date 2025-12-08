@@ -1,7 +1,0 @@
-{
-  "main": "./sectionintercalatedcontent.js",
-  "types": "./SectionIntercalatedContent.d.ts",
-  "browser": {
-    "./sfc": "./SectionIntercalatedContent.vue"
-  }
-}

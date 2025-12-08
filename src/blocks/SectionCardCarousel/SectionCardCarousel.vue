@@ -4,113 +4,113 @@
       :id="id"
       :class="`${bottomSpacing}`"
     >
-    <div class="flex md:flex-row justify-between items-start md:items-center mb-6 gap-4">
-      <h2
-        v-if="title"
-        class="display-3-mobile md:display-3 font-normal tracking-tight text-gray-200 font-sora"
-      >
-        {{ title }}
-      </h2>
+      <div class="flex md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+        <h2
+          v-if="title"
+          class="display-3-mobile md:display-3 font-normal tracking-tight text-gray-200 font-sora"
+        >
+          {{ title }}
+        </h2>
 
-      <div class="flex items-center gap-3">
-        <button
-          ref="prevButton"
-          class="swiper-button-prev-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800 text-neutral-400 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-          :class="
-            disabledNavigation
-              ? ''
-              : 'hover:border-orange-500 hover:text-orange-500 disabled:hover:border-inherit disabled:hover:text-inherit'
-          "
-          aria-label="Previous slide"
-          :disabled="disabledNavigation"
-        >
-          <i class="pi pi-chevron-left text-[.5rem]" />
-        </button>
-        <button
-          ref="nextButton"
-          class="swiper-button-next-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800 text-neutral-400 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-          :class="
-            disabledNavigation
-              ? ''
-              : 'hover:border-orange-500 hover:text-orange-500 disabled:hover:border-inherit disabled:hover:text-inherit'
-          "
-          aria-label="Next slide"
-          :disabled="disabledNavigation"
-        >
-          <i class="pi pi-chevron-right text-[.5rem]" />
-        </button>
+        <div class="flex items-center gap-3">
+          <button
+            ref="prevButton"
+            class="swiper-button-prev-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800 text-neutral-400 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            :class="
+              disabledNavigation
+                ? ''
+                : 'hover:border-orange-500 hover:text-orange-500 disabled:hover:border-inherit disabled:hover:text-inherit'
+            "
+            aria-label="Previous slide"
+            :disabled="disabledNavigation"
+          >
+            <i class="pi pi-chevron-left text-[.5rem]" />
+          </button>
+          <button
+            ref="nextButton"
+            class="swiper-button-next-custom px-3 cursor-pointer flex items-center bg-neutral-900 justify-center rounded-lg border border-neutral-800 text-neutral-400 w-10 h-10 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            :class="
+              disabledNavigation
+                ? ''
+                : 'hover:border-orange-500 hover:text-orange-500 disabled:hover:border-inherit disabled:hover:text-inherit'
+            "
+            aria-label="Next slide"
+            :disabled="disabledNavigation"
+          >
+            <i class="pi pi-chevron-right text-[.5rem]" />
+          </button>
+        </div>
       </div>
-    </div>
 
-    <swiper
-      :modules="modules"
-      :slides-per-view="1.15"
-      :grab-cursor="true"
-      :breakpoints="breakpoints"
-      :navigation="{
-        prevEl: prevButton,
-        nextEl: nextButton
-      }"
-      @swiper="onSwiper"
-      @slide-change="onSlideChange"
-      @breakpoint="onBreakpoint"
-      class="w-full"
-    >
-      <swiper-slide
-        v-for="(card, index) in cards"
-        :key="index"
-        class="h-auto"
+      <swiper
+        :modules="modules"
+        :slides-per-view="1.15"
+        :grab-cursor="true"
+        :breakpoints="breakpoints"
+        :navigation="{
+          prevEl: prevButton,
+          nextEl: nextButton
+        }"
+        @swiper="onSwiper"
+        @slide-change="onSlideChange"
+        @breakpoint="onBreakpoint"
+        class="w-full"
       >
-        <a
-          :href="card.link"
-          :target="card.target ?? '_blank'"
-          class="group cursor-pointer"
+        <swiper-slide
+          v-for="(card, index) in cards"
+          :key="index"
+          class="h-auto"
         >
-          <div
-            :id="`swiper-card-dot-top-${index}`"
-            class="p-1 border hover:bg-neutral-900 border-neutral-900 relative h-full before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 after:hidden"
+          <a
+            :href="card.link"
+            :target="card.target ?? '_blank'"
+            class="group cursor-pointer"
           >
             <div
-              :id="`swiper-card-dot-bottom-${index}`"
-              class="h-full w-full p-6 flex flex-col gap-4 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:right-0 after:hidden"
+              :id="`swiper-card-dot-top-${index}`"
+              class="p-1 border hover:bg-neutral-900 border-neutral-900 relative h-full before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 after:hidden"
             >
               <div
-                v-if="card.tag"
-                class="flex items-center gap-2 bg-slate-950 text-neutral-100 px-3 py-1 rounded w-fit"
+                :id="`swiper-card-dot-bottom-${index}`"
+                class="h-full w-full p-6 flex flex-col gap-4 before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:left-0 after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:right-0 after:hidden"
               >
-                <i
-                  v-if="card.tagIcon"
-                  :class="card.tagIcon"
-                  class="text-sm"
-                ></i>
-                <span class="text-xs uppercase font-proto-mono">
-                  {{ card.tag }}
-                </span>
+                <div
+                  v-if="card.tag"
+                  class="flex items-center gap-2 bg-slate-950 text-neutral-100 px-3 py-1 rounded w-fit"
+                >
+                  <i
+                    v-if="card.tagIcon"
+                    :class="card.tagIcon"
+                    class="text-sm"
+                  ></i>
+                  <span class="text-xs uppercase font-proto-mono">
+                    {{ card.tag }}
+                  </span>
+                </div>
+
+                <h3 class="display-5-mobile md:display-5 text-white font-sora">
+                  {{ card.title }}
+                </h3>
+
+                <div
+                  class="text-sm mb-12 text-neutral-400 leading-relaxed font-sora flex-grow"
+                  v-html="parseMarkdown(card.descriptionRawMarkdown)"
+                ></div>
+
+                <Button
+                  v-if="card.link"
+                  :label="card.linkLabel || 'Learn more'"
+                  :target="card.target ?? '_blank'"
+                  type="linkSecondary"
+                  size="small"
+                  theme="dark"
+                  customClass="w-fit"
+                />
               </div>
-
-              <h3 class="display-5-mobile md:display-5 text-white font-sora">
-                {{ card.title }}
-              </h3>
-
-              <div
-                class="text-sm mb-12 text-neutral-400 leading-relaxed font-sora flex-grow"
-                v-html="parseMarkdown(card.descriptionRawMarkdown)"
-              ></div>
-
-              <Button
-                v-if="card.link"
-                :label="card.linkLabel || 'Learn more'"
-                :target="card.target ?? '_blank'"
-                type="linkSecondary"
-                size="small"
-                theme="dark"
-                customClass="w-fit"
-              />
             </div>
-          </div>
-        </a>
-      </swiper-slide>
-    </swiper>
+          </a>
+        </swiper-slide>
+      </swiper>
     </div>
   </LayoutContainer>
 </template>

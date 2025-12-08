@@ -3,42 +3,54 @@
     <div
       :class="`flex flex-col gap-3 ${bottomSpacing} ${align === 'default' ? 'text-left' : 'text-center'}`"
     >
-    <Overline v-if="overline"> {{ overline }} </Overline>
-    <div
-      class="grid m-0 w-full"
-      :class="
-        align === 'default'
-          ? 'grid-cols-1 md:grid-cols-2 gap-3 md:gap-6'
-          : 'grid-cols-1 flex-col text-center gap-3'
-      "
-    >
-      <component
-        :is="titleTag"
-        class="display-2-mobile md:display-2 text-balance font-sora text-neutral-50"
-        >{{ title }}</component
+      <Overline v-if="overline"> {{ overline }} </Overline>
+      <div
+        class="grid m-0 w-full"
+        :class="
+          align === 'default'
+            ? 'grid-cols-1 md:grid-cols-2 gap-3 md:gap-6'
+            : 'grid-cols-1 flex-col text-center gap-3'
+        "
       >
-      <p
-        v-if="description"
-        class="font-sora text-neutral-200 text-balance"
+        <component
+          :is="titleTag"
+          class="display-2-mobile md:display-2 text-balance font-sora text-neutral-50"
+        >
+          {{ title }}
+        </component>
+        <div
+          v-if="description"
+          class="font-sora text-neutral-200 text-balance"
+          v-html="description"
+        ></div>
+      </div>
+      <div
+        v-if="buttons && buttons.length > 0"
+        class="flex gap-4 mt-6"
+        :class="align === 'center' ? 'justify-center' : 'justify-start'"
       >
-        {{ description }}
-      </p>
-    </div>
-    <div
-      v-if="buttons && buttons.length > 0"
-      class="flex gap-4 mt-6"
-      :class="align === 'center' ? 'justify-center' : 'justify-start'"
-    >
-      <Button
-        v-for="(button, index) in buttons"
-        :key="index"
-        :label="button.label"
-        :href="button.href"
-        :variant="button.variant || button.type"
-        :size="button.size || 'medium'"
-        :icon="button.icon"
-      />
-    </div>
+        <Button
+          v-for="(button, index) in buttons"
+          :key="index"
+          :label="button.label"
+          :href="button.href"
+          :variant="button.variant || button.type"
+          :size="button.size || 'medium'"
+          :icon="button.icon"
+        />
+      </div>
+      <div
+        v-if="logos && logos.length > 0"
+        :class="align === 'center' ? 'justify-center' : 'justify-start'"
+        class="flex items-center flex-col md:flex-row gap-8 mt-8"
+      >
+        <img
+          v-for="(logo, index) in logos"
+          :src="logo.logo"
+          :key="index"
+          class="h-10 w-auto text-neutral-100"
+        />
+      </div>
     </div>
   </LayoutContainer>
 </template>
@@ -77,6 +89,10 @@
       default: 'mb-24'
     },
     buttons: {
+      type: Array,
+      default: () => []
+    },
+    logos: {
       type: Array,
       default: () => []
     }

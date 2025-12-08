@@ -8,21 +8,21 @@ Component ContentSection
 
 ### Optional
 
-| Prop                   | Type      | Default        | Values                      | Description    |
-| ---------------------- | --------- | -------------- | --------------------------- | -------------- |
-| `overline`             | `String`  | `() => ''`     | -                           | No description |
-| `title`                | `String`  | `() => ''`     | -                           | No description |
-| `titleTag`             | `String`  | `() => 'h2'`   | -                           | No description |
-| `description`          | `String`  | `() => ''`     | -                           | No description |
-| `descriptionRawHtml`   | `String`  | `() => ''`     | -                           | No description |
-| `position`             | `String`  | `() => 'left'` | `left\|right\|center\|full` | No description |
-| `isContentCentralized` | `Boolean` | `() => false`  | -                           | No description |
-| `textCenter`           | `Boolean` | `() => false`  | -                           | No description |
-| `reverse`              | `Boolean` | `() => false`  | -                           | No description |
-| `isSticky`             | `Boolean` | `() => false`  | -                           | No description |
-| `pt`                   | `Object`  | -              | -                           | No description |
-| `bottomSpacing`        | `String`  | `() => 'mb-24'`| -                           | Bottom margin spacing |
-| `hasContainer`         | `Boolean` | `() => true`   | -                           | Controls padding application |
+| Prop                   | Type      | Default         | Values                      | Description                  |
+| ---------------------- | --------- | --------------- | --------------------------- | ---------------------------- |
+| `overline`             | `String`  | `() => ''`      | -                           | No description               |
+| `title`                | `String`  | `() => ''`      | -                           | No description               |
+| `titleTag`             | `String`  | `() => 'h2'`    | -                           | No description               |
+| `description`          | `String`  | `() => ''`      | -                           | No description               |
+| `descriptionRawHtml`   | `String`  | `() => ''`      | -                           | No description               |
+| `position`             | `String`  | `() => 'left'`  | `left\|right\|center\|full` | No description               |
+| `isContentCentralized` | `Boolean` | `() => false`   | -                           | No description               |
+| `textCenter`           | `Boolean` | `() => false`   | -                           | No description               |
+| `reverse`              | `Boolean` | `() => false`   | -                           | No description               |
+| `isSticky`             | `Boolean` | `() => false`   | -                           | No description               |
+| `pt`                   | `Object`  | -               | -                           | No description               |
+| `bottomSpacing`        | `String`  | `() => 'mb-24'` | -                           | Bottom margin spacing        |
+| `hasContainer`         | `Boolean` | `() => true`    | -                           | Controls padding application |
 
 ## Slots
 

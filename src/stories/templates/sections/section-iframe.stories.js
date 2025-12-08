@@ -1,20 +1,18 @@
-import Container from '../../../templates/container/container.js'
-import SectionIframe from '../../../templates/sectioniframe/SectionIframe.js'
+import SectionIframe from '../../../blocks/sectioniframe/SectionIframe.js'
 import Rules from '../../rules'
 
 const MOCK = {
   id: 'section-iframe',
-  iframeUrl: 'https://web-assessment.azion.app/'
+  iframeUrl: 'https://web-assessment.azion.app/',
+  bottomSpacing: 'mb-24'
 }
 
 const HeroDisplay = `
-<Container class="surface-ground">
   <SectionIframe v-bind="args" />
-</Container>
 `
 
 export default {
-  title: 'Blocks/Sections/section-iframe',
+  title: 'Blocks/Rebranding/SectionIframe',
   tags: ['autodocs'],
   argTypes: {
     id: {
@@ -41,7 +39,7 @@ ${Rules.hero?.description || ''}
 }
 
 const Template = (args) => ({
-  components: { Container, SectionIframe },
+  components: { SectionIframe },
   setup() {
     return { args }
   },

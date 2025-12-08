@@ -143,12 +143,14 @@ CustomSpacing.args = {
     {
       icon: 'pi pi-star',
       title: 'Premium Features',
-      descriptionRawMarkdown: 'Access all premium features with our **Business** and **Enterprise** plans.'
+      descriptionRawMarkdown:
+        'Access all premium features with our **Business** and **Enterprise** plans.'
     },
     {
       icon: 'pi pi-heart',
       title: 'Customer Success',
-      descriptionRawMarkdown: 'Dedicated customer success team to help you achieve your goals faster.'
+      descriptionRawMarkdown:
+        'Dedicated customer success team to help you achieve your goals faster.'
     }
   ],
   bottomSpacing: 'mb-48',

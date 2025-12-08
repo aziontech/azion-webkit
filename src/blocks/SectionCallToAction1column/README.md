@@ -13,12 +13,12 @@ A compact single-column call-to-action section block component with background p
 
 ## Props
 
-| Prop                | Type        | Required | Default                           | Description                                     |
-| ------------------- | ----------- | -------- | --------------------------------- | ----------------------------------------------- |
-| `id`                | `string`    | No       | -                                 | HTML id attribute                               |
-| `type`              | `string`    | No       | `'short-black'`                   | Layout type variant                             |
-| `cta`               | `CardProps` | Yes      | -                                 | Main CTA card content                           |
-| `backgroundPattern` | `object`    | No       | `{ style: 'dots', size: '12px' }` | Background pattern configuration                |
+| Prop                | Type        | Required | Default                           | Description                      |
+| ------------------- | ----------- | -------- | --------------------------------- | -------------------------------- |
+| `id`                | `string`    | No       | -                                 | HTML id attribute                |
+| `type`              | `string`    | No       | `'short-black'`                   | Layout type variant              |
+| `cta`               | `CardProps` | Yes      | -                                 | Main CTA card content            |
+| `backgroundPattern` | `object`    | No       | `{ style: 'dots', size: '12px' }` | Background pattern configuration |
 
 ### Layout Types
 

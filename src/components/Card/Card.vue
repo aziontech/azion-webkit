@@ -1,24 +1,27 @@
 <template>
   <template v-if="variant === 'outline'">
-      <PrimeCard unstyled :pt="outlineCardPT">
-        <template #content>
-          <div class="flex gap-2">
-            <span
-              v-if="icon"
-              :class="icon"
-              class="text-orange-500 text-lg md:text-xl flex-shrink-0"
-            ></span>
-            <div class="flex flex-col gap-2">
-              <h3 class="display-5-mobile md:display-5 text-white font-sora">{{ title }}</h3>
-              <div
-                v-if="descriptionRawMarkdown"
-                class="body-2 text-neutral-400 leading-relaxed font-sora"
-                v-html="parsedMarkdown"
-              />
-            </div>
+    <PrimeCard
+      unstyled
+      :pt="outlineCardPT"
+    >
+      <template #content>
+        <div class="flex gap-2">
+          <span
+            v-if="icon"
+            :class="icon"
+            class="text-orange-500 text-lg md:text-xl flex-shrink-0"
+          ></span>
+          <div class="flex flex-col gap-2">
+            <h3 class="display-5-mobile md:display-5 text-white font-sora">{{ title }}</h3>
+            <div
+              v-if="descriptionRawMarkdown"
+              class="body-2 text-neutral-400 leading-relaxed font-sora"
+              v-html="parsedMarkdown"
+            />
           </div>
-        </template>
-      </PrimeCard>
+        </div>
+      </template>
+    </PrimeCard>
   </template>
 
   <template v-else>
@@ -28,7 +31,10 @@
         :target="target"
         class="group transition-colors cursor-pointer"
       >
-        <PrimeCard unstyled :pt="defaultCardWithHoverPT">
+        <PrimeCard
+          unstyled
+          :pt="defaultCardWithHoverPT"
+        >
           <template #content>
             <div class="flex flex-col gap-3 h-full">
               <div class="flex flex-col gap-2 font-sora flex-grow">
@@ -60,7 +66,10 @@
     </template>
 
     <template v-else>
-      <PrimeCard unstyled :pt="defaultCardPT">
+      <PrimeCard
+        unstyled
+        :pt="defaultCardPT"
+      >
         <template #content>
           <div class="flex flex-col gap-3 h-full">
             <div class="flex flex-col gap-2 font-sora flex-grow">
@@ -152,16 +161,16 @@
   const outlineCardPT = {
     root: {
       class: [
-        'p-1 border hover:bg-neutral-900 transition-colors duration-150 border-neutral-900 relative',
-        'after:content-[\'\'] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 after:block',
-        'before:content-[\'\'] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 before:block'
+        'p-1 border transition-colors duration-150 border-neutral-900 relative',
+        "after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 after:block",
+        "before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 before:block"
       ]
     },
     body: {
       class: [
         'h-full w-full p-6',
-        'before:content-[\'\'] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:left-0 before:block',
-        'after:content-[\'\'] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:right-0 after:block'
+        "before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:left-0 before:block",
+        "after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:right-0 after:block"
       ]
     },
     content: {
@@ -173,15 +182,15 @@
     root: {
       class: [
         'p-1 border group-hover:bg-neutral-900 transition-colors duration-150 border-neutral-900 relative',
-        'after:content-[\'\'] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 after:block',
-        'before:content-[\'\'] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 before:block'
+        "after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:top-0 after:right-0 after:block",
+        "before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:top-0 before:left-0 before:block"
       ]
     },
     body: {
       class: [
         'h-full w-full p-6',
-        'before:content-[\'\'] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:left-0 before:block',
-        'after:content-[\'\'] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:right-0 after:block'
+        "before:content-[''] before:bg-neutral-400 before:w-1 before:h-1 before:absolute before:bottom-0 before:left-0 before:block",
+        "after:content-[''] after:bg-neutral-400 after:w-1 after:h-1 after:absolute after:bottom-0 after:right-0 after:block"
       ]
     },
     content: {
@@ -203,7 +212,8 @@
 
   const defaultCardWithHoverPT = {
     root: {
-      class: 'w-full h-full bg-neutral-900 rounded-md group-hover:bg-neutral-800 transition-colors flex flex-col'
+      class:
+        'w-full h-full bg-neutral-900 rounded-md group-hover:bg-neutral-800 transition-colors flex flex-col'
     },
     body: {
       class: 'p-3 md:p-6 flex-1'
