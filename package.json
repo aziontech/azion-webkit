@@ -64,7 +64,7 @@
     "vee-validate": "4.13.2",
     "vue": "^3.3.11",
     "vue-frappe-chart": "^0.1.10",
-    "vue-instantsearch": "^4.13.1",
+    "vue-instantsearch": "^4.22.8",
     "yup": "^1.3.2"
   },
   "devDependencies": {
