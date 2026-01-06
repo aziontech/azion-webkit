@@ -1,0 +1,7 @@
+{
+  "main": "./readablecontent.js",
+  "types": "./ReadableContent.d.ts",
+  "browser": {
+    "./sfc": "./ReadableContent.vue"
+  }
+}

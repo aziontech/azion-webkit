@@ -1,0 +1,7 @@
+{
+  "main": "./cardtitle.js",
+  "types": "./CardTitle.d.ts",
+  "browser": {
+    "./sfc": "./CardTitle.vue"
+  }
+}

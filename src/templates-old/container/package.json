@@ -1,0 +1,7 @@
+{
+  "main": "./container.js",
+  "types": "./Container.d.ts",
+  "browser": {
+    "./sfc": "./Container.vue"
+  }
+}
