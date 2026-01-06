@@ -1,7 +1,0 @@
-{
-  "main": "./contentlogo.js",
-  "types": "./ContentLogo.d.ts",
-  "browser": {
-    "./sfc": "./ContentLogo.vue"
-  }
-}

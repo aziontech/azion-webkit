@@ -1,7 +1,0 @@
-{
-  "main": "./azionlogo.js",
-  "types": "./AzionLogo.d.ts",
-  "browser": {
-    "./sfc": "./AzionLogo.vue"
-  }
-}

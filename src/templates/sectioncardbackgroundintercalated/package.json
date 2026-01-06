@@ -1,7 +1,0 @@
-{
-  "main": "./sectioncardbackgroundintercalated.js",
-  "types": "./SectionCardBackgroundIntercalated.d.ts",
-  "browser": {
-    "./sfc": "./SectionCardBackgroundIntercalated.vue"
-  }
-}

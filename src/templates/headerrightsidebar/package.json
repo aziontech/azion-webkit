@@ -1,7 +1,0 @@
-{
-  "main": "./headerrightsidebar.js",
-  "types": "./HeaderRightSidebar.d.ts",
-  "browser": {
-    "./sfc": "./HeaderRightSidebar.vue"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "main": "./sectioncardbackground.js",
-  "types": "./SectionCardBackground.d.ts",
-  "browser": {
-    "./sfc": "./SectionCardBackground.vue"
-  }
-}

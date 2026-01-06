@@ -1,7 +1,0 @@
-{
-  "main": "./newsletterwide.js",
-  "types": "./NewsletterWide.d.ts",
-  "browser": {
-    "./sfc": "./NewsletterWide.vue"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "main": "./themeswitcher.js",
-  "types": "./ThemeSwitcher.d.ts",
-  "browser": {
-    "./sfc": "./ThemeSwitcher.vue"
-  }
-}

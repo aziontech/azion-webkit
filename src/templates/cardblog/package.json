@@ -1,7 +1,0 @@
-{
-  "main": "./cardblog.js",
-  "types": "./CardBlog.d.ts",
-  "browser": {
-    "./sfc": "./CardBlog.vue"
-  }
-}

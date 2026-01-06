@@ -1,7 +1,0 @@
-{
-  "main": "./newslettersingleline.js",
-  "types": "./NewsletterSingleLine.d.ts",
-  "browser": {
-    "./sfc": "./NewsletterSingleLine.vue"
-  }
-}

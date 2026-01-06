@@ -1,7 +1,0 @@
-{
-  "main": "./selecttheme.js",
-  "types": "./SelectTheme.d.ts",
-  "browser": {
-    "./sfc": "./SelectTheme.vue"
-  }
-}

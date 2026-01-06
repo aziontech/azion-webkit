@@ -1,7 +1,0 @@
-{
-  "main": "./dividergradient.js",
-  "types": "./DividerGradient.d.ts",
-  "browser": {
-    "./sfc": "./DividerGradient.vue"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "main": "./sharerblock.js",
-  "types": "./SharerBlock.d.ts",
-  "browser": {
-    "./sfc": "./SharerBlock.vue"
-  }
-}

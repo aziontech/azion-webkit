@@ -1,7 +1,0 @@
-{
-  "main": "./videoblocker.js",
-  "types": "./VideoBlocker.d.ts",
-  "browser": {
-    "./sfc": "./VideoBlocker.vue"
-  }
-}

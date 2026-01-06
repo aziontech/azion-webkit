@@ -1,7 +1,0 @@
-{
-  "main": "./livemap.js",
-  "types": "./Livemap.d.ts",
-  "browser": {
-    "./sfc": "./Livemap.vue"
-  }
-}

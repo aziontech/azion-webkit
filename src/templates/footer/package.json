@@ -1,7 +1,0 @@
-{
-  "main": "./footer.js",
-  "types": "./Footer.d.ts",
-  "browser": {
-    "./sfc": "./Footer.vue"
-  }
-}

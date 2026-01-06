@@ -1,7 +1,0 @@
-{
-  "main": "./systemstatus.js",
-  "types": "./SystemStatus.d.ts",
-  "browser": {
-    "./sfc": "./SystemStatus.vue"
-  }
-}

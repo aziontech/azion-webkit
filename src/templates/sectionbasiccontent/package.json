@@ -1,7 +1,0 @@
-{
-  "main": "./sectionbasiccontent.js",
-  "types": "./SectionBasicContent.d.ts",
-  "browser": {
-    "./sfc": "./SectionBasicContent.vue"
-  }
-}

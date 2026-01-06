@@ -1,7 +1,0 @@
-{
-  "main": "./errorstateblock.js",
-  "types": "./ErrorStateBlock.d.ts",
-  "browser": {
-    "./sfc": "./ErrorStateBlock.vue"
-  }
-}

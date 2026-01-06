@@ -1,7 +1,0 @@
-{
-  "main": "./articlenavigation.js",
-  "types": "./ArticleNavigation.d.ts",
-  "browser": {
-    "./sfc": "./ArticleNavigation.vue"
-  }
-}

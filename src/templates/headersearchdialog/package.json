@@ -1,7 +1,0 @@
-{
-  "main": "./headersearchdialog.js",
-  "types": "./HeaderSearchDialog.d.ts",
-  "browser": {
-    "./sfc": "./HeaderSearchDialog.vue"
-  }
-}

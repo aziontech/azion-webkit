@@ -1,7 +1,0 @@
-{
-  "main": "./titlelist.js",
-  "types": "./TitleList.d.ts",
-  "browser": {
-    "./sfc": "./TitleList.vue"
-  }
-}

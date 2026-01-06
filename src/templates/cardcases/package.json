@@ -1,7 +1,0 @@
-{
-  "main": "./cardcases.js",
-  "types": "./CardCases.d.ts",
-  "browser": {
-    "./sfc": "./CardCases.vue"
-  }
-}

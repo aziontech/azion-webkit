@@ -1,7 +1,0 @@
-{
-  "main": "./gridbento.js",
-  "types": "./GridBento.d.ts",
-  "browser": {
-    "./sfc": "./GridBento.vue"
-  }
-}
