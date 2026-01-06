@@ -29,6 +29,5 @@ storybook-static
 *.sw?
 
 yarn.lock
-pnpm-lock.yaml
 
 *storybook.log
