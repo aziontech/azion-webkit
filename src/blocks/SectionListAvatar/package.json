@@ -1,7 +1,0 @@
-{
-  "main": "./sectionlistavatars.js",
-  "types": "./SectionListAvatars.d.ts",
-  "browser": {
-    "./sfc": "./SectionListAvatars.vue"
-  }
-}

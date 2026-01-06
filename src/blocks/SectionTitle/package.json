@@ -1,7 +1,0 @@
-{
-  "main": "./index.ts",
-  "types": "./SectionTitle.d.ts",
-  "browser": {
-    "./sfc": "./SectionTitle.vue"
-  }
-}

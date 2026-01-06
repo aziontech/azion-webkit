@@ -1,7 +1,0 @@
-{
-  "main": "./index.ts",
-  "types": "./CardLink.d.ts",
-  "browser": {
-    "./sfc": "./CardLink.vue"
-  }
-}
