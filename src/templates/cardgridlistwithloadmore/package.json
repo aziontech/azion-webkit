@@ -1,7 +1,0 @@
-{
-  "main": "./cardgridlistwithloadmore.js",
-  "types": "./CardGridListWithLoadMore.d.ts",
-  "browser": {
-    "./sfc": "./CardGridListWithLoadMore.vue"
-  }
-}

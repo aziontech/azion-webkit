@@ -1,7 +1,0 @@
-{
-  "main": "./menunavigationblock.js",
-  "types": "./MenuNavigationBlock.d.ts",
-  "browser": {
-    "./sfc": "./MenuNavigationBlock.vue"
-  }
-}

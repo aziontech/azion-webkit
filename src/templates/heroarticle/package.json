@@ -1,7 +1,0 @@
-{
-  "main": "./heroArticle.js",
-  "types": "./HeroArticle.d.ts",
-  "browser": {
-    "./sfc": "./HeroArticle.vue"
-  }
-}

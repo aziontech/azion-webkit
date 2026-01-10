@@ -1,7 +1,0 @@
-{
-  "main": "./imageswitcher.js",
-  "types": "./ImageSwitcher.d.ts",
-  "browser": {
-    "./sfc": "./ImageSwitcher.vue"
-  }
-}

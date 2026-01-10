@@ -1,7 +1,0 @@
-{
-  "main": "./quoteavatar.js",
-  "types": "./QuoteAvatar.d.ts",
-  "browser": {
-    "./sfc": "./QuoteAvatar.vue"
-  }
-}

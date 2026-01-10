@@ -1,7 +1,0 @@
-{
-  "main": "./algoliainstantsearch.js",
-  "types": "./AlgoliaInstantSearch.d.ts",
-  "browser": {
-    "./sfc": "./AlgoliaInstantSearch.vue"
-  }
-}

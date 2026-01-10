@@ -4,12 +4,7 @@ import { setup } from '@storybook/vue3-vite';
 import PrimeVue from 'primevue/config';
 
 import 'primeflex/primeflex.css';
-import 'primeicons/primeicons.css';
-import "../src/assets/icons/azionicons.scss";
-import '../src/assets/styles/avatar.css';
-import '../src/assets/styles/hsform.css';
-import '../src/assets/styles/text.css';
-import '../src/assets/styles/main.css';
+import 'primeicons/primeicons.css'
 import 'azion-theme'
 
 import { withThemeByClassName } from '@storybook/addon-themes';

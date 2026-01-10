@@ -1,7 +1,0 @@
-{
-  "main": "./algoliaindexhit.js",
-  "types": "./AlgoliaIndexHit.d.ts",
-  "browser": {
-    "./sfc": "./AlgoliaIndexHit.vue"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "main": "./contentsection.js",
-  "types": "./ContentSection.d.ts",
-  "browser": {
-    "./sfc": "./ContentSection.vue"
-  }
-}

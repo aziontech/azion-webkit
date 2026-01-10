@@ -1,7 +1,0 @@
-{
-  "main": "./sectioncardnavigation.js",
-  "types": "./SectionCardNavigation.d.ts",
-  "browser": {
-    "./sfc": "./SectionCardNavigation.vue"
-  }
-}

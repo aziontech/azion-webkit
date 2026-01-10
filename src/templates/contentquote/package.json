@@ -1,7 +1,0 @@
-{
-  "main": "./contentquote.js",
-  "types": "./ContentQuote.d.ts",
-  "browser": {
-    "./sfc": "./ContentQuote.vue"
-  }
-}

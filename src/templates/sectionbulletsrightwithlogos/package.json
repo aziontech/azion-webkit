@@ -1,7 +1,0 @@
-{
-  "main": "./sectionbulletsrightwithlogos.js",
-  "types": "./SectionBulletsRightWithLogos.d.ts",
-  "browser": {
-    "./sfc": "./SectionBulletsRightWithLogos.vue"
-  }
-}

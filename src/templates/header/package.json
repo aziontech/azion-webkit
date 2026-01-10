@@ -1,7 +1,0 @@
-{
-  "main": "./header.js",
-  "types": "./Header.d.ts",
-  "browser": {
-    "./sfc": "./Header.vue"
-  }
-}

@@ -1,2 +1,0 @@
-import SectionHorizontalNavigation from './SectionHorizontalNavigation.vue'
-export default SectionHorizontalNavigation

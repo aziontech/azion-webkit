@@ -17,7 +17,7 @@
       "incremental": true,
       "paths": {
         "@assets/*": ["src/assets/*"],
-        "@templates/*": ["src/templates/*"],
+        "@templates/*": ["src/templates-old/*"],
         "@services": ["src/services"],
         "@services/*": ["src/services/*"]
       }

@@ -1,7 +1,0 @@
-{
-  "main": "./titlegroup.js",
-  "types": "./Titlegroup.d.ts",
-  "browser": {
-    "./sfc": "./Titlegroup.vue"
-  }
-}

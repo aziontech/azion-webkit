@@ -1,7 +1,0 @@
-{
-  "main": "./formblock.js",
-  "types": "./FormBlock.d.ts",
-  "browser": {
-    "./sfc": "./FormBlock.vue"
-  }
-}

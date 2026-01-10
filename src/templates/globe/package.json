@@ -1,7 +1,0 @@
-{
-  "main": "./globe.js",
-  "types": "./Globe.d.ts",
-  "browser": {
-    "./sfc": "./Globe.vue"
-  }
-}

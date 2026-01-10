@@ -1,7 +1,0 @@
-{
-  "main": "./bannerlivemap.js",
-  "types": "./BannerLiveMap.d.ts",
-  "browser": {
-    "./sfc": "./BannerLiveMap.vue"
-  }
-}

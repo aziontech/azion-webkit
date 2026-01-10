@@ -1,7 +1,0 @@
-{
-  "main": "./dropdownthemeswitcher.js",
-  "types": "./DropdownThemeSwitcher.d.ts",
-  "browser": {
-    "./sfc": "./DropdownThemeSwitcher.vue"
-  }
-}

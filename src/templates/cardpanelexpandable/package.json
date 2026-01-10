@@ -1,7 +1,0 @@
-{
-  "main": "./cardpanelexpandable.js",
-  "types": "./CardPanelExpandable.d.ts",
-  "browser": {
-    "./sfc": "./CardPanelExpandable.vue"
-  }
-}

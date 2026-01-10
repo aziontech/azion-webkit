@@ -1,7 +1,0 @@
-{
-  "main": "./footersimple.js",
-  "types": "./FooterSimple.d.ts",
-  "browser": {
-    "./sfc": "./FooterSimple.vue"
-  }
-}

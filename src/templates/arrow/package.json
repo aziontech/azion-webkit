@@ -1,7 +1,0 @@
-{
-  "main": "./arrow.js",
-  "types": "./Arrow.d.ts",
-  "browser": {
-    "./sfc": "./Arrow.vue"
-  }
-}

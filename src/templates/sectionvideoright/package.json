@@ -1,7 +1,0 @@
-{
-  "main": "./sectionvideoright.js",
-  "types": "./SectionVideoRight.d.ts",
-  "browser": {
-    "./sfc": "./SectionVideoRight.vue"
-  }
-}

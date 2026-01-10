@@ -1,7 +1,0 @@
-{
-  "main": "./tile.js",
-  "types": "./Tile.d.ts",
-  "browser": {
-    "./sfc": "./Tile.vue"
-  }
-}

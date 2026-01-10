@@ -1,7 +1,0 @@
-{
-  "main": "./sectionsuccesscases.js",
-  "types": "./SectionSuccessCases.d.ts",
-  "browser": {
-    "./sfc": "./SectionSuccessCases.vue"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "main": "./tabmenuwithsearchlink.js",
-  "types": "./TabMenuWithSearchLink.d.ts",
-  "browser": {
-    "./sfc": "./TabMenuWithSearchLink.vue"
-  }
-}

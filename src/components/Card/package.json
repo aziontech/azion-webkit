@@ -1,7 +1,0 @@
-{
-  "main": "./index.ts",
-  "types": "./Card.d.ts",
-  "browser": {
-    "./sfc": "./Card.vue"
-  }
-}

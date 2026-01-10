@@ -1,7 +1,0 @@
-{
-  "main": "./tabmenu.js",
-  "types": "./TabMenu.d.ts",
-  "browser": {
-    "./sfc": "./TabMenu.vue"
-  }
-}

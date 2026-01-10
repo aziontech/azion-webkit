@@ -1,7 +1,0 @@
-{
-  "main": "./formjobapplication.js",
-  "types": "./FormJobApplication.d.ts",
-  "browser": {
-    "./sfc": "./FormJobApplication.vue"
-  }
-}

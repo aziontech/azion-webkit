@@ -1,7 +1,0 @@
-{
-  "main": "./keyboardkey.js",
-  "types": "./KeyboardKey.d.ts",
-  "browser": {
-    "./sfc": "./KeyboardKey.vue"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "main": "./cardbase.js",
-  "types": "./CardBase.d.ts",
-  "browser": {
-    "./sfc": "./CardBase.vue"
-  }
-}

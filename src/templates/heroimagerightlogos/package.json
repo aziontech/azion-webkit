@@ -1,7 +1,0 @@
-{
-  "main": "./heroimagerightlogos.js",
-  "types": "./HeroImageRightLogos.d.ts",
-  "browser": {
-    "./sfc": "./HeroImageRightLogos.vue"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "main": "./emptystateblock.js",
-  "types": "./EmptyStateBlock.d.ts",
-  "browser": {
-    "./sfc": "./EmptyStateBlock.vue"
-  }
-}
