@@ -19,8 +19,8 @@ const config = {
   refs: {
     'marketing-components': {
       title: 'Marketing Components',
-      url: 'https://rjekr8cirq.map.azionedge.net',
-      expanded: false
+      url: 'https://s07fylnjym.map.azionedge.net/',
+      expanded: true
     }
   }
 }
