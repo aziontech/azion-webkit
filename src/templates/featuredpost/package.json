@@ -1,7 +1,0 @@
-{
-  "main": "./featuredpost.js",
-  "types": "./FeaturedPost.d.ts",
-  "browser": {
-    "./sfc": "./FeaturedPost.vue"
-  }
-}

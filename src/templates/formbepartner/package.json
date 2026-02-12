@@ -1,7 +1,0 @@
-{
-  "main": "./formbepartner.js",
-  "types": "./FormBePartner.d.ts",
-  "browser": {
-    "./sfc": "./FormBePartner.vue"
-  }
-}

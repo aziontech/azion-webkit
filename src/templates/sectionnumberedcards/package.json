@@ -1,7 +1,0 @@
-{
-  "main": "./sectionnumberedcards.js",
-  "types": "./SectionNumberedCards.d.ts",
-  "browser": {
-    "./sfc": "./SectionNumberedCards.vue"
-  }
-}

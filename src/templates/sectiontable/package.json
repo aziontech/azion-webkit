@@ -1,7 +1,0 @@
-{
-  "main": "./sectiontable.js",
-  "types": "./SectionTable.d.ts",
-  "browser": {
-    "./sfc": "./SectionTable.vue"
-  }
-}

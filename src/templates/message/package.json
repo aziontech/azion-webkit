@@ -1,7 +1,0 @@
-{
-  "main": "./message.js",
-  "types": "./Message.d.ts",
-  "browser": {
-    "./sfc": "./Message.vue"
-  }
-}

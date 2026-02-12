@@ -1,7 +1,0 @@
-{
-  "main": "./consoleintegration.js",
-  "types": "./ConsoleIntegration.d.ts",
-  "browser": {
-    "./sfc": "./ConsoleIntegration.vue"
-  }
-}

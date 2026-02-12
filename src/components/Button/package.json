@@ -1,7 +1,0 @@
-{
-  "main": "./index.ts",
-  "types": "./Button.d.ts",
-  "browser": {
-    "./sfc": "./Button.vue"
-  }
-}

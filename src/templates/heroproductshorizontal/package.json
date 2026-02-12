@@ -1,7 +1,0 @@
-{
-  "main": "./heroproductshorizontal.js",
-  "types": "./HeroProductsHorizontal.d.ts",
-  "browser": {
-    "./sfc": "./HeroProductsHorizontal.vue"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "main": "./newslettercard.js",
-  "types": "./NewsletterCard.d.ts",
-  "browser": {
-    "./sfc": "./NewsletterCard.vue"
-  }
-}

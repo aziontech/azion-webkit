@@ -1,7 +1,0 @@
-{
-  "main": "./sectionbignumberslivemap.js",
-  "types": "./SectionBigNumbersLivemap.d.ts",
-  "browser": {
-    "./sfc": "./SectionBigNumbersLivemap.vue"
-  }
-}

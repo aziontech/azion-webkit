@@ -1,7 +1,0 @@
-{
-  "main": "./sectionhighlight.js",
-  "types": "./SectionHighlight.d.ts",
-  "browser": {
-    "./sfc": "./SectionHighlight.vue"
-  }
-}

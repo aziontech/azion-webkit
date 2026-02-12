@@ -1,7 +1,0 @@
-{
-  "main": "./sectionbignumbers.js",
-  "types": "./SectionBigNumbers.d.ts",
-  "browser": {
-    "./sfc": "./SectionBigNumbers.vue"
-  }
-}

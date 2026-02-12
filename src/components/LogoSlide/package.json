@@ -1,7 +1,0 @@
-{
-  "main": "./logoslide.ts",
-  "types": "./LogoSlide.d.ts",
-  "browser": {
-    "./sfc": "./LogoSlide.vue"
-  }
-}

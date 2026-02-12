@@ -1,7 +1,0 @@
-{
-  "main": "./cardgridlist.js",
-  "types": "./CardGridList.d.ts",
-  "browser": {
-    "./sfc": "./CardGridList.vue"
-  }
-}

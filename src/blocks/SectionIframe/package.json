@@ -1,7 +1,0 @@
-{
-  "main": "./sectioniframe.js",
-  "types": "./SectionIframe.d.ts",
-  "browser": {
-    "./sfc": "./SectionIframe.vue"
-  }
-}

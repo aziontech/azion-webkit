@@ -1,7 +1,0 @@
-{
-  "main": "./sectiongridbento2c5i.js",
-  "types": "./SectionGridBento2c5i.d.ts",
-  "browser": {
-    "./sfc": "./SectionGridBento2c5i.vue"
-  }
-}

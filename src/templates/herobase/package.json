@@ -1,7 +1,0 @@
-{
-  "main": "./herobase.js",
-  "types": "./HeroBase.d.ts",
-  "browser": {
-    "./sfc": "./HeroBase.vue"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "main": "./listdescriptionunordered.js",
-  "types": "./ListDescriptionUnordered.d.ts",
-  "browser": {
-    "./sfc": "./ListDescriptionUnordered.vue"
-  }
-}

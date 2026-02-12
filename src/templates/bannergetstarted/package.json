@@ -1,7 +1,0 @@
-{
-  "main": "./bannergetstarted.js",
-  "types": "./BannerGetStarted.d.ts",
-  "browser": {
-    "./sfc": "./BannerGetStarted.vue"
-  }
-}

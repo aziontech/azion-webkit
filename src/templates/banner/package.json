@@ -1,7 +1,0 @@
-{
-  "main": "./banner.js",
-  "types": "./Banner.d.ts",
-  "browser": {
-    "./sfc": "./Banner.vue"
-  }
-}
