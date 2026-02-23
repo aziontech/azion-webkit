@@ -1,22 +1,8 @@
 {
   "name": "azion-webkit",
   "author": "aziontech",
-  "version": "1.112.0",
+  "version": "2.0.0",
   "url": "https://webkit.azion.com/",
-  "contributors": [
-    {
-      "name": "Robson Junior",
-      "url": "https://www.robsonjunior.dev/"
-    },
-    {
-      "name": "Isaque Böck",
-      "url": "https://github.com/isaquebock"
-    },
-    {
-      "name": "Eduardo de Cesaro Amarante",
-      "url": "https://www.professorduda.com/"
-    }
-  ],
   "keywords": [
     "primevue",
     "vue",

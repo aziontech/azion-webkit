@@ -1,7 +1,0 @@
-{
-  "main": "./selectlang.js",
-  "types": "./SelectLang.d.ts",
-  "browser": {
-    "./sfc": "./SelectLang.vue"
-  }
-}

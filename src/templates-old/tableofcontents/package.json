@@ -1,7 +1,0 @@
-{
-  "main": "./tableofcontents.js",
-  "types": "./TableOfContents.d.ts",
-  "browser": {
-    "./sfc": "./TableOfContents.vue"
-  }
-}

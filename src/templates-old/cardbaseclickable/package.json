@@ -1,7 +1,0 @@
-{
-  "main": "./cardbaseclickable.js",
-  "types": "./CardBaseClickable.d.ts",
-  "browser": {
-    "./sfc": "./CardBaseClickable.vue"
-  }
-}

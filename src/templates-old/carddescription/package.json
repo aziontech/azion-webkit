@@ -1,7 +1,0 @@
-{
-  "main": "./carddescription.js",
-  "types": "./CardDescription.d.ts",
-  "browser": {
-    "./sfc": "./CardDescription.vue"
-  }
-}
