@@ -1,9 +1,16 @@
 {
   "name": "azion-icons",
   "version": "0.1.0",
-  "private": true,
   "description": "Azion icon font library — azionicons + primeicons as CSS/woff2",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aziontech/azion-webkit.git",
+    "directory": "packages/azion-icons"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --dest dist-app",
@@ -13,7 +20,8 @@
     "publish:package": "cd dist && npm publish",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "format": "prettier --write scripts/ src/"
+    "format": "prettier --write scripts/ src/",
+    "eslint": "eslint --fix --ext .js,.vue src/"
   },
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.24.7",
