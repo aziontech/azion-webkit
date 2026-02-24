@@ -3,7 +3,7 @@
 ./dist-app
 ./node_modules
 ./src/assets/icon-fonts/*
-.tmp/**/*
+.tmp/*
 
 ./.DS_Store
 ./yarn.lock
