@@ -1,15 +1,12 @@
-./tmp
-./dist
-./dist-app
-./node_modules
-
-.DS_Store
-./yarn.lock
-./package-lock.json
-
-#Paths added by Azion CLI
-./.edge/
-./.vulcan
-
 tmp
+dist
+dist-app
+node_modules
 src/assets/icon-fonts
+
+yarn.lock
+package-lock.json
+
+.edge/
+.vulcan
+.DS_Store
