@@ -30,3 +30,6 @@ package-lock.json
 yarn.lock
 
 .DS_Store
+
+# packages folder to ignore
+
