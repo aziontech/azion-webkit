@@ -11,5 +11,5 @@
 ./.edge/
 ./.vulcan
 
-./tmp/
-./src/assets/icon-fonts/
+tmp
+src/assets/icon-fonts
