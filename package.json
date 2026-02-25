@@ -15,11 +15,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aziontech/azion-webkit.git"
+    "url": "https://github.com/aziontech/webkit.git"
   },
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
+    "icons:install:npm": "pnpm --filter icons run install:npm",
+    "icons:install:yarn": "pnpm --filter icons run install:yarn",
     "icons:build": "pnpm --filter azion-icons run build",
     "icons:validate": "pnpm --filter azion-icons run validate",
     "icons:publish": "pnpm --filter azion-icons run publish"
