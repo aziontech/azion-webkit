@@ -1,5 +1,5 @@
 const ASSETSTYPE =  ['css']
-const BASESVGPATH = './src/assets/svg-raw'
+const BASESVGPATH = './src/svg-raw'
 const FONTTYPES =  ['woff2']
 const FONTHEIGHT = 1000
 const JSONIdent = 2

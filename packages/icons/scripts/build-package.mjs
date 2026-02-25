@@ -8,7 +8,7 @@
  *   4. Create index.css barrel file
  *   5. Generate dist/package.json for npm publish
  *   6. Copy LICENSE and README.md into dist/
- *   7. Sync generated fonts back to src/assets/icon-fonts/ for dev app
+ *   7. Sync generated fonts back to src/icon-fonts/ for dev app
  *
  * After running this script, publish with:
  *   cd dist && npm pack --dry-run   (preview)
@@ -31,7 +31,7 @@ import { join } from "node:path";
 
 const CHARSET = "utf-8";
 const DIST_DIR = "./dist";
-const ICON_FONTS_DIR = "./src/assets/icon-fonts";
+const ICON_FONTS_DIR = "./src/icon-fonts";
 
 // ─── Step 1: Validate SVGs ──────────────────────────────────────────────────
 
@@ -124,10 +124,10 @@ if (existsSync("./README.md")) {
   console.log("  ⚠ README.md not found — skipped");
 }
 
-// ─── Step 7: Sync to src/assets/icon-fonts/ ─────────────────────────────────
+// ─── Step 7: Sync to src/icon-fonts/ ─────────────────────────────────
 
 console.log(
-  "\n🔄 Step 7/7 — Syncing fonts to src/assets/icon-fonts/ for dev app...\n"
+  "\n🔄 Step 7/7 — Syncing fonts to src/icon-fonts/ for dev app...\n"
 );
 
 mkdirSync(ICON_FONTS_DIR, { recursive: true });
