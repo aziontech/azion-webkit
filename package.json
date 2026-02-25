@@ -1,7 +1,6 @@
 {
   "private": true,
   "name": "@aziontech/webkit",
-  "packageManager": "pnpm@9.15.0",  
   "author": "aziontech",
   "url": "https://webkit.azion.com/",
   "keywords": [
