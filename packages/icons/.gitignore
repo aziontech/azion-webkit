@@ -2,7 +2,7 @@ tmp
 dist
 dist-app
 node_modules
-src/assets/icon-fonts
+src/icon-fonts
 
 yarn.lock
 package-lock.json
