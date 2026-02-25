@@ -18,16 +18,12 @@
     "validate": "node scripts/validate.mjs",
     "publish": "cd dist && npm publish && cd ..",
     "pack:dry": "cd dist && npm pack --dry-run && cd ..",
-    "format": "prettier --write scripts/ src/",
-    "lint": "eslint --fix --ext .js,.vue src/"
+    "format": "prettier --write scripts/ src/"
   },
   "dependencies": {
-    "azion": "^1.17.4",
     "fantasticon": "^4.1.0"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.7.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^10.0.1",
     "@semantic-release/exec": "^6.0.3",
