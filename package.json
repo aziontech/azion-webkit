@@ -1,9 +1,8 @@
 {
   "private": true,
-  "name": "azion-webkit",
+  "name": "@aziontech/webkit",
   "packageManager": "pnpm@9.15.0",
   "author": "aziontech",
-  "version": "2.0.0",
   "url": "https://webkit.azion.com/",
   "keywords": [
     "primevue",
@@ -21,9 +20,9 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
-    "icons:build": "pnpm --filter azion-icons run build:package",
+    "icons:build": "pnpm --filter azion-icons run build",
     "icons:validate": "pnpm --filter azion-icons run validate",
-    "icons:publish": "pnpm --filter azion-icons run publish:package"
+    "icons:publish": "pnpm --filter azion-icons run publish"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.10",
