@@ -1,15 +1,15 @@
-# azion-icons
+# @aziontech/icons
 
 > Icon font library for Azion — **azionicons** (`ai`) + **primeicons** (`pi`) delivered as CSS + woff2.
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![npm version](https://img.shields.io/npm/v/azion-icons.svg)](https://www.npmjs.com/package/azion-icons)
+[![npm version](https://img.shields.io/npm/v/@aziontech/icons.svg)](https://www.npmjs.com/package/@aziontech/icons)
 
 ---
 
 ## Overview
 
-`azion-icons` is a dual icon font package that bundles:
+`@aziontech/icons` is a dual icon font package that bundles:
 
 | Font | Prefix | Icons | Description |
 |------|--------|-------|-------------|
@@ -23,7 +23,7 @@ Icons are distributed as **woff2 icon fonts** with matching CSS class utilities,
 ## Installation
 
 ```bash
-npm install azion-icons
+npm install @aziontech/icons
 ```
 
 ---
@@ -34,22 +34,22 @@ npm install azion-icons
 
 ```js
 // Import both icon sets (recommended)
-import 'azion-icons'
+import '@aziontech/icons'
 
 // Or import individually
-import 'azion-icons/azionicons'
-import 'azion-icons/primeicons'
+import '@aziontech/icons/azionicons'
+import '@aziontech/icons/primeicons'
 ```
 
 ### Import via HTML `<link>`
 
 ```html
 <!-- All icons -->
-<link rel="stylesheet" href="node_modules/azion-icons/dist/index.css" />
+<link rel="stylesheet" href="node_modules/@aziontech/icons/dist/index.css" />
 
 <!-- Or individually -->
-<link rel="stylesheet" href="node_modules/azion-icons/dist/azionicons.css" />
-<link rel="stylesheet" href="node_modules/azion-icons/dist/primeicons.css" />
+<link rel="stylesheet" href="node_modules/@aziontech/icons/dist/azionicons.css" />
+<link rel="stylesheet" href="node_modules/@aziontech/icons/dist/primeicons.css" />
 ```
 
 ### Use in HTML
@@ -71,9 +71,9 @@ import 'azion-icons/primeicons'
 The package exposes the following named exports (defined in the generated `dist/package.json`):
 
 ```js
-import 'azion-icons'                              // → dist/index.css (both sets)
-import 'azion-icons/azionicons'                   // → dist/azionicons.css
-import 'azion-icons/primeicons'                   // → dist/primeicons.css
+import '@aziontech/icons'                              // → dist/index.css (both sets)
+import '@aziontech/icons/azionicons'                   // → dist/azionicons.css
+import '@aziontech/icons/primeicons'                   // → dist/primeicons.css
 ```
 
 ---
@@ -195,7 +195,7 @@ Features of the preview app:
 ### Project structure
 
 ```
-azion-icons/
+@aziontech/icons/
 ├── dist/                     # npm publishable output (gitignored)
 │   ├── azionicons.css
 │   ├── azionicons.woff2
