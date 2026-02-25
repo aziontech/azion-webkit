@@ -49,4 +49,5 @@ jobs:
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
+          NPM_TOKEN: ${{ secrets.PKG_NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
