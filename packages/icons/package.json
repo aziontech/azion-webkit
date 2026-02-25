@@ -17,7 +17,7 @@
     "build": "node scripts/build-package.mjs",
     "validate": "node scripts/validate.mjs",
     "publish": "cd dist && npm publish && cd ..",
-    "pack:dry": "cd dist && npm pack --dry-run",
+    "pack:dry": "cd dist && npm pack --dry-run && cd ..",
     "format": "prettier --write scripts/ src/",
     "lint": "eslint --fix --ext .js,.vue src/"
   },
