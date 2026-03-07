@@ -1,0 +1,51 @@
+---
+/**
+ * BaseLayout
+ * 
+ * Base HTML layout providing the shell structure for all pages.
+ * Handles global head, body classes, and global styles.
+ */
+
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Azion Design System Documentation' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | Azion Design System</title>
+  </head>
+  <body class="min-h-screen bg-surface text-text-primary antialiased">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  /* Ensure smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Focus styles */
+  :focus-visible {
+    outline: 2px solid var(--color-primary-500, #3b82f6);
+    outline-offset: 2px;
+  }
+
+  /* Selection styles */
+  ::selection {
+    background-color: var(--color-primary-100, #dbeafe);
+    color: var(--color-primary-900, #1e3a8a);
+  }
+</style>

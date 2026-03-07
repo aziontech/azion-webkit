@@ -1,0 +1,65 @@
+---
+/**
+ * DocsShellLayout
+ * 
+ * Documentation shell layout providing header, sidebar, and content area.
+ * This is the main layout for all documentation pages.
+ */
+
+import BaseLayout from './BaseLayout.astro';
+import DocsSidebar from '../components/docs/DocsSidebar.vue';
+import DocsHeader from '../components/docs/DocsHeader.vue';
+import { getNavigationTree } from '../lib/content';
+import type { Section, NavItem } from '../lib/content/types';
+
+interface Props {
+  title: string;
+  description?: string;
+  section?: Section | null;
+  item?: NavItem | null;
+}
+
+const { title, description, section, item } = Astro.props;
+
+// Get navigation tree
+const navigation = await getNavigationTree();
+
+// Get current path for active state
+const currentPath = Astro.url.pathname;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="docs-layout flex">
+    <!-- Sidebar Navigation -->
+    <DocsSidebar 
+      client:load 
+      navigation={navigation} 
+      currentPath={currentPath}
+    />
+    
+    <!-- Main Content Area -->
+    <main class="docs-main flex-1 min-h-screen">
+      <!-- Header -->
+      <DocsHeader 
+        client:load 
+        section={section} 
+        item={item}
+      />
+      
+      <!-- Content -->
+      <div class="docs-content px-6 py-8 max-w-docs-content">
+        <slot />
+      </div>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .docs-layout {
+    min-height: 100vh;
+  }
+  
+  .docs-content {
+    max-width: 80rem;
+  }
+</style>

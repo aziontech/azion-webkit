@@ -1,0 +1,62 @@
+---
+/**
+ * DocPageLayout
+ * 
+ * Generic documentation page layout.
+ * Provides page header rendering and markdown content rendering.
+ */
+
+import DocsShellLayout from './DocsShellLayout.astro';
+import PageHeader from '../components/docs/PageHeader.vue';
+import type { Section, NavItem } from '../lib/content/types';
+
+interface Props {
+  title: string;
+  description: string;
+  section?: Section | null;
+  item?: NavItem | null;
+  status?: 'stable' | 'beta' | 'deprecated' | 'planned' | 'experimental';
+  navLabel?: string;
+  order?: number;
+}
+
+const { 
+  title, 
+  description, 
+  section, 
+  item,
+  status,
+} = Astro.props;
+---
+
+<DocsShellLayout title={title} description={description} section={section} item={item}>
+  <article class="doc-page">
+    <PageHeader 
+      client:load
+      title={title}
+      description={description}
+      status={status}
+    />
+    
+    <div class="doc-content prose prose-slate max-w-none">
+      <slot />
+    </div>
+  </article>
+</DocsShellLayout>
+
+<style>
+  .doc-page {
+    animation: fadeIn 0.2s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

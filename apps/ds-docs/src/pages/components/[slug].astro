@@ -1,0 +1,42 @@
+---
+/**
+ * Components Dynamic Routes
+ * 
+ * Handles all pages under /components/[slug]
+ */
+
+import { getCollection } from 'astro:content';
+import ComponentPageLayout from '../../layouts/ComponentPageLayout.astro';
+import { getBreadcrumbContext } from '../../lib/content';
+import { markdownComponents } from '../../components/docs';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('components');
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+// Get breadcrumb context
+const breadcrumb = await getBreadcrumbContext(`/components/${entry.slug === 'index' ? '' : entry.slug}`);
+---
+
+<ComponentPageLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  section={breadcrumb.section}
+  item={breadcrumb.item}
+  status={entry.data.status}
+  category={entry.data.category}
+  component={entry.data.component}
+  source={entry.data.source}
+  storybook={entry.data.storybook}
+  figma={entry.data.figma}
+  related={entry.data.related}
+>
+  <Content components={markdownComponents} />
+</ComponentPageLayout>

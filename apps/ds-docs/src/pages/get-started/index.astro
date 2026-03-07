@@ -1,0 +1,24 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+import { getCollection } from 'astro:content';
+import { markdownComponents } from '../../components/docs';
+
+/**
+ * Get Started Index Page
+ */
+
+const entry = await getCollection('get-started');
+const indexEntry = entry.find((e) => e.slug === 'index');
+
+if (!indexEntry) {
+  return Astro.redirect('/');
+}
+
+const { Content } = await indexEntry.render();
+---
+
+<DocsLayout title="Get Started">
+  <div class="docs-prose">
+    <Content components={markdownComponents} />
+  </div>
+</DocsLayout>

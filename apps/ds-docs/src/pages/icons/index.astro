@@ -1,0 +1,32 @@
+---
+/**
+ * Icons Page
+ * 
+ * Handles the /icons route.
+ */
+
+import { getCollection } from 'astro:content';
+import DocPageLayout from '../../layouts/DocPageLayout.astro';
+import { getBreadcrumbContext } from '../../lib/content';
+import { markdownComponents } from '../../components/docs';
+
+// Get the icons index page
+const entries = await getCollection('icons');
+const indexEntry = entries.find((e) => e.slug === 'index');
+
+if (!indexEntry) {
+  return Astro.redirect('/404');
+}
+
+const { Content } = await indexEntry.render();
+const breadcrumb = await getBreadcrumbContext('/icons');
+---
+
+<DocPageLayout
+  title={indexEntry.data.title}
+  description={indexEntry.data.description}
+  section={breadcrumb.section}
+  item={null}
+>
+  <Content components={markdownComponents} />
+</DocPageLayout>

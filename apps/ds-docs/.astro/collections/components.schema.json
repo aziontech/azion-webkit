@@ -1,0 +1,103 @@
+{
+  "$ref": "#/definitions/components",
+  "definitions": {
+    "components": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "navLabel": {
+          "type": "string"
+        },
+        "order": {
+          "type": "number"
+        },
+        "hidden": {
+          "type": "boolean"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "form",
+            "navigation",
+            "feedback",
+            "data-display",
+            "layout",
+            "utility"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "stable",
+            "beta",
+            "deprecated",
+            "planned",
+            "experimental"
+          ]
+        },
+        "since": {
+          "type": "string"
+        },
+        "contributors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "lastUpdated": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "integer",
+              "format": "unix-time"
+            }
+          ]
+        },
+        "type": {
+          "type": "string",
+          "const": "component"
+        },
+        "component": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "storybook": {
+          "type": "string"
+        },
+        "figma": {
+          "type": "string"
+        },
+        "related": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "type"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

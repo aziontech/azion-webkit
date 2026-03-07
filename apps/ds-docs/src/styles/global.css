@@ -1,0 +1,110 @@
+/* Import fonts - must be before @tailwind directives */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+@layer base {
+  html {
+    font-family: 'Sora', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-surface text-text-primary;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Focus styles */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+  }
+}
+
+/* Custom components */
+@layer components {
+  /* Documentation prose styles */
+  .docs-prose {
+    @apply prose prose-lg max-w-docs-content;
+  }
+
+  .docs-prose h1 {
+    @apply text-3xl font-bold tracking-tight mb-4;
+  }
+
+  .docs-prose h2 {
+    @apply text-2xl font-semibold tracking-tight mt-10 mb-4 border-b border-gray-200 pb-2;
+  }
+
+  .docs-prose h3 {
+    @apply text-xl font-semibold mt-8 mb-3;
+  }
+
+  .docs-prose p {
+    @apply mb-4 leading-relaxed;
+  }
+
+  .docs-prose ul,
+  .docs-prose ol {
+    @apply mb-4 pl-6;
+  }
+
+  .docs-prose li {
+    @apply mb-2;
+  }
+
+  .docs-prose a {
+    @apply text-primary-600 hover:text-primary-700 underline underline-offset-2;
+  }
+
+  /* Demo preview container */
+  .demo-preview {
+    @apply border border-gray-200 rounded-lg p-6 bg-surface my-6;
+  }
+
+  .demo-preview__title {
+    @apply text-sm font-medium text-text-secondary mb-4;
+  }
+
+  .demo-preview__content {
+    @apply flex items-center justify-center min-h-[100px];
+  }
+
+  /* Code block styles */
+  .code-block {
+    @apply relative my-6 rounded-lg overflow-hidden;
+  }
+
+  .code-block pre {
+    @apply p-4 overflow-x-auto text-sm;
+  }
+
+  .code-block__filename {
+    @apply absolute top-0 right-0 px-3 py-1 text-xs text-gray-400 bg-gray-800 rounded-bl;
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Text balance for headings */
+  .text-balance {
+    text-wrap: balance;
+  }
+}

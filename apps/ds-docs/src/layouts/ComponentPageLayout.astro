@@ -1,0 +1,98 @@
+---
+/**
+ * ComponentPageLayout
+ * 
+ * Layout specifically for component documentation pages.
+ * Supports status badge, metadata links, and API anchor areas.
+ */
+
+import DocsShellLayout from './DocsShellLayout.astro';
+import PageHeader from '../components/docs/PageHeader.vue';
+import MetadataLinks from '../components/docs/MetadataLinks.vue';
+import type { Section, NavItem } from '../lib/content/types';
+
+interface Props {
+  title: string;
+  description: string;
+  section?: Section | null;
+  item?: NavItem | null;
+  status?: 'stable' | 'beta' | 'deprecated' | 'planned' | 'experimental';
+  category?: string;
+  component?: string;
+  source?: string;
+  storybook?: string;
+  figma?: string;
+  related?: string[];
+}
+
+const { 
+  title, 
+  description, 
+  section, 
+  item,
+  status,
+  category,
+  component,
+  source,
+  storybook,
+  figma,
+  related,
+} = Astro.props;
+
+// Build metadata links
+const metadataLinks = [
+  source ? { label: 'Source', href: source, icon: 'github' } : null,
+  storybook ? { label: 'Storybook', href: storybook, icon: 'storybook' } : null,
+  figma ? { label: 'Figma', href: figma, icon: 'figma' } : null,
+].filter(Boolean);
+---
+
+<DocsShellLayout title={title} description={description} section={section} item={item}>
+  <article class="component-page">
+    <!-- Page Header -->
+    <PageHeader 
+      client:load
+      title={title}
+      description={description}
+      status={status}
+      eyebrow={category}
+    />
+    
+    <!-- Metadata Links -->
+    {metadataLinks.length > 0 && (
+      <div class="mb-6">
+        <MetadataLinks 
+          client:load
+          links={metadataLinks}
+        />
+      </div>
+    )}
+    
+    <!-- Content -->
+    <div class="component-content prose prose-slate max-w-none">
+      <slot />
+    </div>
+    
+    <!-- API Section Anchor (content will be added by markdown) -->
+    <div id="api" class="mt-12 pt-8 border-t border-gray-200">
+      <slot name="api" />
+    </div>
+  </article>
+</DocsShellLayout>
+
+<style>
+  .component-page {
+    animation: fadeIn 0.2s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
