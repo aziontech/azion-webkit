@@ -198,7 +198,7 @@ Use Fieldset when you need to:
 ## Do's and Don'ts
 
 <DoDont title="Fieldset usage">
-  <template #do>
+  <div slot="do">
     <p class="text-sm mb-2">Group related form fields:</p>
     <fieldset class="border border-gray-300 rounded p-3">
       <legend class="text-xs font-medium px-2">Contact Info</legend>
@@ -207,8 +207,8 @@ Use Fieldset when you need to:
         <input type="text" class="w-full px-2 py-1 text-sm border border-gray-300 rounded" placeholder="Phone" />
       </div>
     </fieldset>
-  </template>
-  <template #dont>
+  </div>
+  <div slot="dont">
     <p class="text-sm mb-2">Don't use for unrelated fields:</p>
     <fieldset class="border border-gray-300 rounded p-3">
       <legend class="text-xs font-medium px-2">Mixed Fields</legend>
@@ -216,22 +216,22 @@ Use Fieldset when you need to:
       <input type="text" class="w-full px-2 py-1 text-sm border border-gray-300 rounded" placeholder="Favorite Color" />
     </fieldset>
     <p class="text-xs text-red-600 mt-1">These aren't logically related</p>
-  </template>
+  </div>
 </DoDont>
 
 <DoDont>
-  <template #do>
+  <div slot="do">
     <p class="text-sm mb-2">Use descriptive legends:</p>
     <fieldset class="border border-gray-300 rounded p-3">
       <legend class="text-xs font-medium px-2">Billing Address</legend>
       <input type="text" class="w-full px-2 py-1 text-sm border border-gray-300 rounded" placeholder="Street" />
     </fieldset>
-  </template>
-  <template #dont>
+  </div>
+  <div slot="dont">
     <p class="text-sm mb-2">Don't use vague legends:</p>
     <fieldset class="border border-gray-300 rounded p-3">
       <legend class="text-xs font-medium px-2">Info</legend>
       <input type="text" class="w-full px-2 py-1 text-sm border border-gray-300 rounded" placeholder="Street" />
     </fieldset>
-  </template>
+  </div>
 </DoDont>

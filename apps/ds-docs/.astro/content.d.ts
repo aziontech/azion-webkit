@@ -253,6 +253,16 @@ declare module 'astro:content' {
   rendered?: RenderedContent;
   filePath?: string;
 }>;
+"pt": Record<string, {
+  id: string;
+  render(): Render[".md"];
+  slug: string;
+  body: string;
+  collection: "pt";
+  data: InferEntrySchema<"pt">;
+  rendered?: RenderedContent;
+  filePath?: string;
+}>;
 "templates": Record<string, {
   id: string;
   render(): Render[".md"];

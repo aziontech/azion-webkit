@@ -1,7 +1,7 @@
 <script setup lang="ts">
 /**
  * DocsSidebarSection
- * 
+ *
  * Renders a single navigation section with its items.
  * Supports collapsible groups and active state highlighting.
  */
@@ -9,6 +9,8 @@
 import { computed } from 'vue';
 import type { NavSection, NavItem } from '@/lib/content/types';
 import DocsSidebarItem from './DocsSidebarItem.vue';
+import { getDefaultLanguage } from '@/config';
+import { t } from '@/lib/i18n';
 
 const props = defineProps<{
   /** Navigation section data */
@@ -17,19 +19,60 @@ const props = defineProps<{
   isActive: boolean;
   /** Current URL path */
   currentPath: string;
+  /** Current language */
+  language?: string;
 }>();
+
+const currentLanguage = computed(() => props.language || getDefaultLanguage());
+const isDefaultLang = computed(() => currentLanguage.value === getDefaultLanguage());
 
 // Filter out index pages from sidebar listing (they're accessible via section link)
 const visibleItems = computed(() => {
   return props.section.items.filter((item) => !item.isIndex);
 });
+
+// Build section link with language prefix
+const sectionLink = computed(() => {
+  const basePath = props.section.section.basePath;
+  if (isDefaultLang.value) {
+    return basePath;
+  }
+  return `/${currentLanguage.value}${basePath}`;
+});
+
+// Get translated section label
+const sectionLabel = computed(() => {
+  const sectionId = props.section.section.id;
+  // Map section IDs to i18n keys
+  const keyMap: Record<string, string> = {
+    'get-started': 'nav.getStarted',
+    'foundations': 'nav.foundations',
+    'tokens': 'nav.tokens',
+    'components': 'nav.components',
+    'blocks': 'nav.blocks',
+    'patterns': 'nav.patterns',
+    'templates': 'nav.templates',
+    'icons': 'nav.icons',
+    'playground': 'nav.playground',
+    'contributing': 'nav.contributing',
+  };
+  const key = keyMap[sectionId];
+  return key ? t(key, currentLanguage.value) : props.section.section.label;
+});
+
+// Check if current path matches item href (with language prefix handling)
+function isItemActive(item: NavItem): boolean {
+  // Strip language prefix from current path for comparison
+  const pathForMatch = props.currentPath.replace(/^\/(pt|en)/, '') || '/';
+  return pathForMatch === item.href;
+}
 </script>
 
 <template>
   <div class="sidebar-section">
     <!-- Section Link -->
     <a
-      :href="section.section.basePath"
+      :href="sectionLink"
       class="section-link block px-3 py-2 text-sm rounded-md transition-colors"
       :class="[
         isActive
@@ -37,7 +80,7 @@ const visibleItems = computed(() => {
           : 'hover:bg-surface-subtle text-text-secondary hover:text-text-primary'
       ]"
     >
-      {{ section.section.label }}
+      {{ sectionLabel }}
     </a>
     
     <!-- Section Items (only show when section is active) -->
@@ -46,7 +89,8 @@ const visibleItems = computed(() => {
         v-for="item in visibleItems"
         :key="item.href"
         :item="item"
-        :is-active="currentPath === item.href"
+        :is-active="isItemActive(item)"
+        :language="currentLanguage"
       />
     </div>
   </div>

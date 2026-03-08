@@ -2,6 +2,7 @@
 import DocsLayout from '../../layouts/DocsLayout.astro';
 import { getCollection } from 'astro:content';
 import { markdownComponents } from '../../components/docs';
+import { getBreadcrumbContext } from '../../lib/content';
 
 /**
  * Get Started Index Page
@@ -15,9 +16,12 @@ if (!indexEntry) {
 }
 
 const { Content } = await indexEntry.render();
+
+// Get breadcrumb context for this page
+const breadcrumb = await getBreadcrumbContext('/get-started');
 ---
 
-<DocsLayout title="Get Started">
+<DocsLayout title="Get Started" section={breadcrumb.section} item={breadcrumb.item}>
   <div class="docs-prose">
     <Content components={markdownComponents} />
   </div>

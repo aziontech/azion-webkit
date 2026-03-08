@@ -190,6 +190,22 @@ const playgroundSchema = baseSchema.extend({
 });
 
 /**
+ * Portuguese content schema - union of all types
+ */
+const ptContentSchema = z.discriminatedUnion('type', [
+  componentSchema,
+  foundationSchema,
+  tokenSchema,
+  blockSchema,
+  patternSchema,
+  templateSchema,
+  guideSchema,
+  iconSchema,
+  contributingSchema,
+  playgroundSchema,
+]);
+
+/**
  * Define all content collections
  */
 export const collections = {
@@ -233,6 +249,11 @@ export const collections = {
   playground: defineCollection({
     type: 'content',
     schema: playgroundSchema,
+  }),
+  // Portuguese content collection
+  pt: defineCollection({
+    type: 'content',
+    schema: ptContentSchema,
   }),
 };
 

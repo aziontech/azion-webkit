@@ -4,11 +4,13 @@
  * 
  * Generic documentation page layout.
  * Provides page header rendering and markdown content rendering.
+ * Supports internationalization (i18n) with language switching.
  */
 
 import DocsShellLayout from './DocsShellLayout.astro';
 import PageHeader from '../components/docs/PageHeader.vue';
 import type { Section, NavItem } from '../lib/content/types';
+import type { I18nContext } from '../lib/i18n';
 
 interface Props {
   title: string;
@@ -18,6 +20,10 @@ interface Props {
   status?: 'stable' | 'beta' | 'deprecated' | 'planned' | 'experimental';
   navLabel?: string;
   order?: number;
+  /** Current language code */
+  language?: string;
+  /** i18n context for translations */
+  i18n?: I18nContext;
 }
 
 const { 
@@ -26,10 +32,12 @@ const {
   section, 
   item,
   status,
+  language = 'en',
+  i18n,
 } = Astro.props;
 ---
 
-<DocsShellLayout title={title} description={description} section={section} item={item}>
+<DocsShellLayout title={title} description={description} section={section} item={item} language={language} i18n={i18n}>
   <article class="doc-page">
     <PageHeader 
       client:load

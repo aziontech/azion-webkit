@@ -4,6 +4,7 @@
  * 
  * Documentation shell layout providing header, sidebar, and content area.
  * This is the main layout for all documentation pages.
+ * Supports internationalization (i18n) with language switching.
  */
 
 import BaseLayout from './BaseLayout.astro';
@@ -12,39 +13,77 @@ import DocsHeader from '../components/docs/DocsHeader.vue';
 import SearchModal from '../components/search/SearchModal.vue';
 import { getNavigationTree } from '../lib/content';
 import type { Section, NavItem } from '../lib/content/types';
+import type { I18nContext } from '../lib/i18n';
+import { getDefaultLanguage, isSupportedLanguage, getAllLanguages } from '../config';
 
 interface Props {
   title: string;
   description?: string;
   section?: Section | null;
   item?: NavItem | null;
+  /** Current language code */
+  language?: string;
+  /** i18n context for translations */
+  i18n?: I18nContext;
 }
 
-const { title, description, section, item } = Astro.props;
+const { title, description, section, item, language = 'en', i18n } = Astro.props;
 
 // Get navigation tree
 const navigation = await getNavigationTree();
 
 // Get current path for active state
 const currentPath = Astro.url.pathname;
+
+// Determine the language for the HTML lang attribute
+const htmlLang = isSupportedLanguage(language) ? language : getDefaultLanguage();
+
+// Build alternate language URLs for hreflang tags
+const alternateUrls: Record<string, string> = {};
+const pathWithoutLang = currentPath.replace(/^\/(pt|en)/, '') || '/';
+for (const lang of getAllLanguages()) {
+  if (lang === getDefaultLanguage()) {
+    alternateUrls[lang] = pathWithoutLang;
+  } else {
+    alternateUrls[lang] = `/${lang}${pathWithoutLang}`;
+  }
+}
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} language={htmlLang}>
+  <!-- hreflang tags for SEO -->
+  {getAllLanguages().map((lang) => (
+    <link 
+      rel="alternate" 
+      hreflang={lang} 
+      href={`https://docs.azion.com${alternateUrls[lang]}`} 
+      slot="head"
+    />
+  ))}
+  <link 
+    rel="alternate" 
+    hreflang="x-default" 
+    href={`https://docs.azion.com${alternateUrls[getDefaultLanguage()]}`} 
+    slot="head"
+  />
+  
   <div class="docs-layout flex">
     <!-- Sidebar Navigation -->
-    <DocsSidebar 
-      client:load 
-      navigation={navigation} 
+    <DocsSidebar
+      client:load
+      navigation={navigation}
       currentPath={currentPath}
+      language={language}
     />
     
     <!-- Main Content Area -->
     <main class="docs-main flex-1 min-h-screen">
       <!-- Header -->
-      <DocsHeader 
-        client:load 
-        section={section} 
+      <DocsHeader
+        client:load
+        section={section}
         item={item}
+        language={language}
       />
       
       <!-- Content -->

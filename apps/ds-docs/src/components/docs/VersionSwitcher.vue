@@ -1,12 +1,12 @@
 <script setup lang="ts">
 /**
  * Version Switcher Component
- * 
+ *
  * Allows users to switch between documentation versions.
  * Maintains the current page when possible, falls back to section index if page doesn't exist.
  */
 
-import { computed, ref } from 'vue';
+import { computed, ref, onMounted, onUnmounted } from 'vue';
 import {
   getAllVersions,
   getVersionLabel,
@@ -38,6 +38,7 @@ const emit = defineEmits<{
 
 // State
 const isOpen = ref(false);
+const dropdownRef = ref<HTMLElement | null>(null);
 
 // Computed
 const versions = computed(() => getAllVersions());
@@ -92,15 +93,26 @@ function toggleDropdown() {
 }
 
 /**
- * Close dropdown when clicking outside
+ * Handle click outside
  */
-function closeDropdown() {
-  isOpen.value = false;
+function handleClickOutside(event: MouseEvent) {
+  if (dropdownRef.value && !dropdownRef.value.contains(event.target as Node)) {
+    isOpen.value = false;
+  }
 }
+
+// Add click outside listener
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('click', handleClickOutside);
+});
 </script>
 
 <template>
-  <div class="version-switcher" v-click-outside="closeDropdown">
+  <div class="version-switcher" ref="dropdownRef">
     <button
       type="button"
       class="version-switcher__trigger"

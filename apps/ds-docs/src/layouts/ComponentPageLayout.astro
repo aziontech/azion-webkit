@@ -4,6 +4,7 @@
  * 
  * Layout specifically for component documentation pages.
  * Supports status badge, metadata links, structured sections, and API documentation.
+ * Supports internationalization (i18n) with language switching.
  * 
  * Sections:
  * - Overview (auto from content)
@@ -24,6 +25,7 @@ import AnatomyBlock from '../components/docs/AnatomyBlock.astro';
 import AccessibilityChecklist from '../components/docs/AccessibilityChecklist.astro';
 import ApiSection from '../components/docs/ApiSection.astro';
 import type { Section, NavItem } from '../lib/content/types';
+import type { I18nContext } from '../lib/i18n';
 import type { 
   PropDefinition, 
   SlotDefinition, 
@@ -52,6 +54,10 @@ interface Props {
     slots?: SlotDefinition[];
     events?: EventDefinition[];
   };
+  /** Current language code */
+  language?: string;
+  /** i18n context for translations */
+  i18n?: I18nContext;
 }
 
 const { 
@@ -69,6 +75,8 @@ const {
   anatomy,
   accessibility,
   api,
+  language = 'en',
+  i18n,
 } = Astro.props;
 
 // Build metadata links
@@ -78,15 +86,17 @@ const metadataLinks = [
   figma ? { label: 'Figma', href: figma, icon: 'figma' } : null,
 ].filter(Boolean);
 
-// Build related items
+// Build related items - use language prefix for non-default languages
 const relatedItems = related.map(name => ({
   title: name,
-  href: `/components/${name.toLowerCase()}`,
+  href: language === 'en' 
+    ? `/components/${name.toLowerCase()}` 
+    : `/${language}/components/${name.toLowerCase()}`,
   type: 'component' as const,
 }));
 ---
 
-<DocsShellLayout title={title} description={description} section={section} item={item}>
+<DocsShellLayout title={title} description={description} section={section} item={item} language={language} i18n={i18n}>
   <article class="component-page" data-component={component}>
     <!-- Page Header -->
     <PageHeader 

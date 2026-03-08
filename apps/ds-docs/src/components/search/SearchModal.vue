@@ -1,10 +1,10 @@
 <script setup lang="ts">
 /**
  * SearchModal
- * 
+ *
  * Full-featured search modal with keyboard navigation,
  * result highlighting, and category grouping.
- * 
+ *
  * Uses global state from useSearch composable.
  */
 
@@ -13,8 +13,23 @@ import type { SearchResult, SearchContentType } from '@/lib/search/types';
 import { TYPE_LABELS, SECTION_LABELS } from '@/lib/search/types';
 import { initSearchEngine } from '@/lib/search';
 import { useSearch } from '@/lib/search/use-search';
+import { t } from '@/lib/i18n';
+import { getDefaultLanguage } from '@/config';
 
 const { isOpen, closeSearch } = useSearch();
+
+// Get current language from URL
+const currentLanguage = computed(() => {
+  if (typeof window === 'undefined') return getDefaultLanguage();
+  const path = window.location.pathname;
+  const langMatch = path.match(/^\/(pt|en)/);
+  return langMatch ? langMatch[1] : getDefaultLanguage();
+});
+
+// Translated strings
+const placeholderText = computed(() => t('search.placeholder', currentLanguage.value));
+const noResultsText = computed(() => t('search.noResults', currentLanguage.value));
+const startTypingText = computed(() => t('search.startTyping', currentLanguage.value));
 
 // State
 const query = ref('');
@@ -192,7 +207,7 @@ onUnmounted(() => {
             ref="inputRef"
             v-model="query"
             type="text"
-            placeholder="Search documentation..."
+            :placeholder="placeholderText"
             class="w-full pl-12 pr-4 py-4 text-lg border-0 focus:outline-none focus:ring-0"
             autocomplete="off"
             autocapitalize="off"
@@ -221,7 +236,7 @@ onUnmounted(() => {
             v-else-if="query && !hasResults"
             class="px-4 py-12 text-center"
           >
-            <p class="text-gray-500">No results found for "{{ query }}"</p>
+            <p class="text-gray-500">{{ noResultsText.replace('{query}', query) }}</p>
           </div>
           
           <!-- Initial State -->
@@ -229,7 +244,7 @@ onUnmounted(() => {
             v-else-if="!query"
             class="px-4 py-8 text-center"
           >
-            <p class="text-gray-400">Start typing to search...</p>
+            <p class="text-gray-400">{{ startTypingText }}</p>
           </div>
           
           <!-- Results List -->

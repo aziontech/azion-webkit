@@ -203,6 +203,19 @@ export async function getPrevNextItems(
 }
 
 /**
+ * Strip language prefix from a path
+ * Removes /pt, /en, etc. from the beginning of a path
+ */
+function stripLanguagePrefix(href: string): string {
+  // Match paths like /pt/... or /pt at the start
+  const langPrefixMatch = href.match(/^\/(pt|en)(\/.*)?$/);
+  if (langPrefixMatch) {
+    return langPrefixMatch[2] || '/';
+  }
+  return href;
+}
+
+/**
  * Get breadcrumb context for a page
  */
 export async function getBreadcrumbContext(
@@ -210,8 +223,11 @@ export async function getBreadcrumbContext(
 ): Promise<{ section: Section; item: NavItem | null }> {
   const tree = await getNavigationTree();
   
+  // Strip language prefix to get the base path for navigation lookup
+  const basePath = stripLanguagePrefix(href);
+  
   for (const navSection of tree) {
-    const item = navSection.items.find((i) => i.href === href);
+    const item = navSection.items.find((i) => i.href === basePath);
     if (item) {
       return {
         section: navSection.section,
@@ -222,7 +238,7 @@ export async function getBreadcrumbContext(
   
   // Check if it's a section index
   for (const navSection of tree) {
-    if (navSection.section.basePath === href) {
+    if (navSection.section.basePath === basePath) {
       return {
         section: navSection.section,
         item: null,

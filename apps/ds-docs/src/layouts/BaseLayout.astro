@@ -4,6 +4,7 @@
  * 
  * Base HTML layout providing the shell structure for all pages.
  * Handles global head, body classes, and global styles.
+ * Supports internationalization (i18n) with language attribute.
  */
 
 import '../styles/global.css';
@@ -11,13 +12,15 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  /** Language code for the HTML lang attribute */
+  language?: string;
 }
 
-const { title, description = 'Azion Design System Documentation' } = Astro.props;
+const { title, description = 'Azion Design System Documentation', language = 'en' } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={language}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,6 +28,7 @@ const { title, description = 'Azion Design System Documentation' } = Astro.props
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} | Azion Design System</title>
+    <slot name="head" />
   </head>
   <body class="min-h-screen bg-surface text-text-primary antialiased">
     <slot />

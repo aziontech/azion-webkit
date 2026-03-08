@@ -1,14 +1,26 @@
 ---
 import DocsLayout from '../../layouts/DocsLayout.astro';
 import { getCollection } from 'astro:content';
+import { getBreadcrumbContext } from '../../lib/content';
+import { createI18nContext } from '../../lib/i18n';
+import Tabs from '../../components/docs/Tabs.astro';
+import ComponentsStatusTable from '../../components/docs/ComponentsStatusTable.astro';
+import { componentStatusData } from '../../data/component-status';
 
 /**
  * Components Index Page
- * 
- * Lists all available components in the design system.
+ *
+ * Lists all available components in the design system with tabs for
+ * Overview (component cards) and Status (progress tracking).
  */
 
 const components = await getCollection('components');
+
+// Get breadcrumb context for this page
+const breadcrumb = await getBreadcrumbContext('/components');
+
+// Create i18n context for English
+const i18n = createI18nContext('en');
 
 // Group components by category
 const componentsByCategory = components.reduce((acc, component) => {
@@ -30,42 +42,60 @@ const categoryLabels: Record<string, string> = {
 };
 ---
 
-<DocsLayout title="Components">
+<DocsLayout
+  title="Components"
+  description="Explore our component library built with Vue and designed for the Azion platform."
+  section={breadcrumb.section}
+  item={breadcrumb.item}
+  language="en"
+  i18n={i18n}
+>
   <h1>Components</h1>
   <p class="text-xl text-text-secondary mb-8">
     Explore our component library built with Vue and designed for the Azion platform.
   </p>
   
-  {Object.entries(componentsByCategory).map(([category, items]) => (
-    <section class="mb-10">
-      <h2 class="text-xl font-semibold mb-4">{categoryLabels[category] || category}</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {items.map((component) => (
-          <a
-            href={`/components/${component.slug}`}
-            class="group p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50/50 transition-colors"
-          >
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="font-medium text-text-primary group-hover:text-primary-700">
-                {component.data.title}
-              </h3>
-              {component.data.status && (
-                <span class={`text-xs px-2 py-0.5 rounded-full ${
-                  component.data.status === 'stable' ? 'bg-emerald-50 text-emerald-700' :
-                  component.data.status === 'beta' ? 'bg-blue-50 text-blue-700' :
-                  component.data.status === 'deprecated' ? 'bg-amber-50 text-amber-700' :
-                  'bg-gray-50 text-gray-600'
-                }`}>
-                  {component.data.status}
-                </span>
-              )}
-            </div>
-            <p class="text-sm text-text-secondary line-clamp-2">
-              {component.data.description}
-            </p>
-          </a>
-        ))}
-      </div>
-    </section>
-  ))}
+  <Tabs>
+    <Fragment slot="overview">
+      {Object.entries(componentsByCategory).map(([category, items]) => (
+        <section class="mb-10">
+          <h2 class="text-xl font-semibold mb-4">{categoryLabels[category] || category}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {items.map((component) => (
+              <a
+                href={`/components/${component.slug}`}
+                class="group p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50/50 transition-colors"
+              >
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="font-medium text-text-primary group-hover:text-primary-700">
+                    {component.data.title}
+                  </h3>
+                  {component.data.status && (
+                    <span class={`text-xs px-2 py-0.5 rounded-full ${
+                      component.data.status === 'stable' ? 'bg-emerald-50 text-emerald-700' :
+                      component.data.status === 'beta' ? 'bg-blue-50 text-blue-700' :
+                      component.data.status === 'deprecated' ? 'bg-amber-50 text-amber-700' :
+                      'bg-gray-50 text-gray-600'
+                    }`}>
+                      {component.data.status}
+                    </span>
+                  )}
+                </div>
+                <p class="text-sm text-text-secondary line-clamp-2">
+                  {component.data.description}
+                </p>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+    </Fragment>
+    
+    <Fragment slot="status">
+      <ComponentsStatusTable 
+        components={componentStatusData}
+        caption="Track the progress of each component across design and development. Components are sorted by launch status."
+      />
+    </Fragment>
+  </Tabs>
 </DocsLayout>

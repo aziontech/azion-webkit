@@ -1,39 +1,103 @@
 <script setup lang="ts">
 /**
  * DocsHeader
- * 
+ *
  * Documentation header component with breadcrumb context
  * and search trigger button.
  */
 
+import { computed } from 'vue';
 import type { Section, NavItem } from '@/lib/content/types';
 import { useSearch } from '@/lib/search/use-search';
+import LanguageSwitcher from './LanguageSwitcher.vue';
+import { getDefaultLanguage } from '@/config';
+import { t } from '@/lib/i18n';
 
-defineProps<{
+const props = withDefaults(defineProps<{
   /** Current section */
   section?: Section | null;
   /** Current page item */
   item?: NavItem | null;
-}>();
+  /** Current language */
+  language?: string;
+}>(), {
+  language: () => getDefaultLanguage(),
+});
 
 const { openSearch } = useSearch();
+
+const isDefaultLang = computed(() => props.language === getDefaultLanguage());
+
+// Build home link with language prefix
+const homeLink = computed(() => {
+  return isDefaultLang.value ? '/' : `/${props.language}`;
+});
+
+// Build section link with language prefix
+const sectionLink = computed(() => {
+  if (!props.section) return '/';
+  if (isDefaultLang.value) {
+    return props.section.basePath;
+  }
+  return `/${props.language}${props.section.basePath}`;
+});
+
+// Get translated section label
+const sectionLabel = computed(() => {
+  if (!props.section) return '';
+  const sectionId = props.section.id;
+  // Map section IDs to i18n keys
+  const keyMap: Record<string, string> = {
+    'get-started': 'nav.getStarted',
+    'foundations': 'nav.foundations',
+    'tokens': 'nav.tokens',
+    'components': 'nav.components',
+    'blocks': 'nav.blocks',
+    'patterns': 'nav.patterns',
+    'templates': 'nav.templates',
+    'icons': 'nav.icons',
+    'playground': 'nav.playground',
+    'contributing': 'nav.contributing',
+  };
+  const key = keyMap[sectionId];
+  return key ? t(key, props.language) : props.section.label;
+});
+
+// Translated "Documentation" text
+const documentationText = computed(() => {
+  return t('nav.documentation', props.language);
+});
 </script>
 
 <template>
   <header class="docs-header h-16 sticky top-0 z-10 border-b border-gray-200 bg-surface/95 backdrop-blur">
     <div class="flex items-center justify-between h-full px-6">
       <!-- Breadcrumb -->
-      <div class="flex items-center gap-2 text-sm">
-        <span class="text-text-muted">Documentation</span>
-        <span v-if="section" class="text-text-muted">/</span>
-        <span v-if="section" class="text-text-primary font-medium">
-          {{ section.label }}
-        </span>
-        <span v-if="item && !item.isIndex" class="text-text-muted">/</span>
-        <span v-if="item && !item.isIndex" class="text-text-primary">
-          {{ item.navLabel }}
-        </span>
-      </div>
+      <nav class="flex items-center gap-2 text-sm" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-2">
+          <li>
+            <a :href="homeLink" class="text-text-muted hover:text-text-primary transition-colors">
+              {{ documentationText }}
+            </a>
+          </li>
+          <li v-if="section" class="flex items-center gap-2">
+            <span class="text-text-muted" aria-hidden="true">/</span>
+            <a
+              :href="sectionLink"
+              class="text-text-primary font-medium hover:text-primary-600 transition-colors"
+              :aria-current="item && !item.isIndex ? undefined : 'page'"
+            >
+              {{ sectionLabel }}
+            </a>
+          </li>
+          <li v-if="item && !item.isIndex" class="flex items-center gap-2">
+            <span class="text-text-muted" aria-hidden="true">/</span>
+            <span class="text-text-primary" aria-current="page">
+              {{ item.navLabel }}
+            </span>
+          </li>
+        </ol>
+      </nav>
       
       <!-- Header actions -->
       <div class="flex items-center gap-4">
@@ -58,13 +122,8 @@ const { openSearch } = useSearch();
           </svg>
         </div>
         
-        <!-- Language switcher placeholder -->
-        <div class="hidden md:flex items-center gap-1 px-2 py-1 text-xs text-text-muted bg-surface-subtle rounded">
-          <span>EN</span>
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
+        <!-- Language switcher -->
+        <LanguageSwitcher :current-language="language" />
         
         <!-- GitHub link -->
         <a 

@@ -45,6 +45,13 @@ export { default as DoDont } from './DoDont.astro';
 // Callouts
 export { default as Callout } from './Callout.astro';
 
+// Component Status
+export { default as ProgressStatusBadge } from './ProgressStatusBadge.vue';
+export { default as ComponentsStatusTable } from './ComponentsStatusTable.astro';
+
+// Navigation
+export { default as Tabs } from './Tabs.astro';
+
 /**
  * Components map for markdown rendering
  * 

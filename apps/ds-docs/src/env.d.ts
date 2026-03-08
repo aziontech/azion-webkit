@@ -12,3 +12,9 @@ declare module '*.astro' {
   const Component: (props: Props) => any;
   export default Component;
 }
+
+// Allow JSON imports for i18n translation files
+declare module '*.json' {
+  const value: Record<string, any>;
+  export default value;
+}

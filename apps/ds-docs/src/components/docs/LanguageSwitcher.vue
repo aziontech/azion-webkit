@@ -1,12 +1,12 @@
 <script setup lang="ts">
 /**
  * Language Switcher Component
- * 
+ *
  * Allows users to switch between documentation languages.
  * Maintains the current page when possible, falls back to English if translation doesn't exist.
  */
 
-import { computed, ref } from 'vue';
+import { computed, ref, onMounted, onUnmounted } from 'vue';
 import {
   getAllLanguages,
   getLanguageLabel,
@@ -17,19 +17,10 @@ import {
 interface Props {
   /** Current language */
   currentLanguage?: string;
-  /** Current version */
-  version?: string;
-  /** Current section (for URL building) */
-  section?: string;
-  /** Current page slug (for URL building) */
-  slug?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   currentLanguage: () => getDefaultLanguage(),
-  version: () => 'v1',
-  section: '',
-  slug: 'index',
 });
 
 const emit = defineEmits<{
@@ -38,6 +29,7 @@ const emit = defineEmits<{
 
 // State
 const isOpen = ref(false);
+const dropdownRef = ref<HTMLElement | null>(null);
 
 // Computed
 const languages = computed(() => getAllLanguages());
@@ -47,31 +39,32 @@ const currentLanguageLabel = computed(() => {
 });
 
 /**
- * Build URL for a language
- * Tries to keep the same page, falls back to English if translation missing
+ * Build URL for a language by manipulating the current URL
  */
 function buildLanguageUrl(language: string): string {
+  const currentPath = window.location.pathname;
   const isDefault = isDefaultLanguage(language);
-  const isCurrentVersion = props.version === 'v1'; // Assuming v1 is current
   
-  // For default language with current version, use short URL
-  if (isDefault && isCurrentVersion) {
-    if (props.slug === 'index') {
-      return `/${props.section}`;
-    }
-    return `/${props.section}/${props.slug}`;
+  // Check if current path starts with a language prefix
+  const langPrefixMatch = currentPath.match(/^\/(pt|en)(\/.*)?$/);
+  
+  let pathWithoutLang: string;
+  if (langPrefixMatch) {
+    // Remove the language prefix from the current path
+    pathWithoutLang = langPrefixMatch[2] || '/';
+  } else {
+    // Current path has no language prefix (it's in English)
+    pathWithoutLang = currentPath;
   }
   
-  // For other languages, include language in URL
-  const versionPart = isCurrentVersion ? '' : `/${props.version}`;
-  const slugPart = props.slug === 'index' ? '' : `/${props.slug}`;
-  
+  // Build the new URL
   if (isDefault) {
-    // Default language doesn't need language prefix
-    return `${versionPart}/${props.section}${slugPart}`;
+    // Default language (English) - no prefix
+    return pathWithoutLang || '/';
+  } else {
+    // Other languages - add language prefix
+    return `/${language}${pathWithoutLang}`;
   }
-  
-  return `${versionPart}/${language}/${props.section}${slugPart}`;
 }
 
 /**
@@ -99,13 +92,24 @@ function toggleDropdown() {
 /**
  * Close dropdown when clicking outside
  */
-function closeDropdown() {
-  isOpen.value = false;
+function handleClickOutside(event: MouseEvent) {
+  if (dropdownRef.value && !dropdownRef.value.contains(event.target as Node)) {
+    isOpen.value = false;
+  }
 }
+
+// Add click outside listener
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('click', handleClickOutside);
+});
 </script>
 
 <template>
-  <div class="language-switcher" v-click-outside="closeDropdown">
+  <div class="language-switcher" ref="dropdownRef">
     <button
       type="button"
       class="language-switcher__trigger"
