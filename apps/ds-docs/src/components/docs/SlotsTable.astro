@@ -1,0 +1,57 @@
+---
+/**
+ * SlotsTable
+ * 
+ * Displays component slots in a structured table format.
+ */
+
+import type { SlotDefinition } from '../../content/config';
+
+interface Props {
+  rows?: SlotDefinition[];
+  component?: string;
+}
+
+const { rows = [], component } = Astro.props;
+---
+
+<div class="slots-table overflow-x-auto">
+  {rows.length === 0 ? (
+    <div class="empty-state py-8 text-center text-text-secondary border border-dashed border-gray-300 rounded-lg">
+      <p class="text-sm">No slots documented yet.</p>
+    </div>
+  ) : (
+    <table class="w-full text-sm border-collapse">
+      <thead>
+        <tr class="border-b border-gray-200">
+          <th class="py-3 px-4 text-left font-semibold text-text-primary bg-gray-50">Slot</th>
+          <th class="py-3 px-4 text-left font-semibold text-text-primary bg-gray-50">Description</th>
+          <th class="py-3 px-4 text-left font-semibold text-text-primary bg-gray-50">Slot Props</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((slot) => (
+          <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+            <td class="py-3 px-4 font-mono text-primary-600">
+              <code class="bg-gray-100 px-1.5 py-0.5 rounded">
+                {slot.name === 'default' ? 'default' : slot.name}
+              </code>
+            </td>
+            <td class="py-3 px-4 text-text-secondary">
+              {slot.description}
+            </td>
+            <td class="py-3 px-4 font-mono text-text-tertiary text-xs">
+              {slot.props ? (
+                <code class="bg-gray-100 px-1.5 py-0.5 rounded">
+                  {slot.props}
+                </code>
+              ) : (
+                <span class="text-gray-400">—</span>
+              )}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )}
+</div>

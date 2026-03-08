@@ -9,6 +9,7 @@
 import BaseLayout from './BaseLayout.astro';
 import DocsSidebar from '../components/docs/DocsSidebar.vue';
 import DocsHeader from '../components/docs/DocsHeader.vue';
+import SearchModal from '../components/search/SearchModal.vue';
 import { getNavigationTree } from '../lib/content';
 import type { Section, NavItem } from '../lib/content/types';
 
@@ -52,7 +53,22 @@ const currentPath = Astro.url.pathname;
       </div>
     </main>
   </div>
+  
+  <!-- Search Modal - rendered at body level for proper positioning -->
+  <SearchModal client:only="vue" />
 </BaseLayout>
+
+<script>
+  // Global keyboard shortcut for search
+  document.addEventListener('keydown', (event) => {
+    if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
+      event.preventDefault();
+      // The SearchModal component handles the state via useSearch composable
+      // We dispatch a custom event that the modal listens to
+      document.dispatchEvent(new CustomEvent('toggle-search'));
+    }
+  });
+</script>
 
 <style>
   .docs-layout {

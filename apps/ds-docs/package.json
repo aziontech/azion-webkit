@@ -7,11 +7,13 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "pnpm build:search && astro build",
+    "build:search": "node --loader ts-node/esm scripts/build-search-index.ts",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.13",
     "@aziontech/icons": "workspace:*",
     "astro": "^5.4.0",
     "vue": "^3.5.29"

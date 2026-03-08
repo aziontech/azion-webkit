@@ -14,8 +14,80 @@ const baseSchema = z.object({
   // Status metadata
   status: z.enum(['stable', 'beta', 'deprecated', 'planned', 'experimental']).optional(),
   since: z.string().optional(),
+  deprecatedIn: z.string().optional(),
   contributors: z.array(z.string()).optional(),
   lastUpdated: z.coerce.date().optional(),
+  // Tags for search/categorization
+  tags: z.array(z.string()).optional(),
+  // Version and Language (i18n support)
+  version: z.string().default('v1'),
+  language: z.string().default('en'),
+  // Translation metadata
+  translatedFrom: z.string().optional(), // Original language if translated
+  translationStatus: z.enum(['complete', 'partial', 'missing']).optional(),
+});
+
+/**
+ * Anatomy part definition
+ */
+const anatomyPartSchema = z.object({
+  label: z.string(),
+  description: z.string().optional(),
+});
+
+/**
+ * Keyboard interaction definition
+ */
+const keyboardInteractionSchema = z.object({
+  keys: z.string(),
+  action: z.string(),
+});
+
+/**
+ * ARIA attribute definition
+ */
+const ariaAttributeSchema = z.object({
+  attribute: z.string(),
+  usage: z.string(),
+});
+
+/**
+ * Accessibility metadata schema
+ */
+const accessibilitySchema = z.object({
+  keyboard: z.array(keyboardInteractionSchema).optional(),
+  aria: z.array(ariaAttributeSchema).optional(),
+  wcag: z.array(z.string()).optional(),
+  notes: z.array(z.string()).optional(),
+});
+
+/**
+ * Prop definition for API documentation
+ */
+const propDefinitionSchema = z.object({
+  name: z.string(),
+  type: z.string(),
+  default: z.string().optional(),
+  required: z.boolean().optional(),
+  description: z.string(),
+});
+
+/**
+ * Slot definition for API documentation
+ */
+const slotDefinitionSchema = z.object({
+  name: z.string(),
+  description: z.string(),
+  props: z.string().optional(),
+});
+
+/**
+ * Event definition for API documentation
+ */
+const eventDefinitionSchema = z.object({
+  name: z.string(),
+  payload: z.string().optional(),
+  description: z.string(),
 });
 
 /**
@@ -29,6 +101,16 @@ const componentSchema = baseSchema.extend({
   storybook: z.string().optional(),
   figma: z.string().optional(),
   related: z.array(z.string()).optional(),
+  // Structured anatomy
+  anatomy: z.array(anatomyPartSchema).optional(),
+  // Structured accessibility
+  accessibility: accessibilitySchema.optional(),
+  // API documentation (can be manual or generated)
+  api: z.object({
+    props: z.array(propDefinitionSchema).optional(),
+    slots: z.array(slotDefinitionSchema).optional(),
+    events: z.array(eventDefinitionSchema).optional(),
+  }).optional(),
 });
 
 /**
@@ -101,12 +183,20 @@ const contributingSchema = baseSchema.extend({
 });
 
 /**
+ * Playground documentation schema
+ */
+const playgroundSchema = baseSchema.extend({
+  type: z.literal('playground'),
+});
+
+/**
  * Define all content collections
  */
 export const collections = {
   components: defineCollection({
     type: 'content',
     schema: componentSchema,
+    format: 'mdx',
   }),
   foundations: defineCollection({
     type: 'content',
@@ -140,6 +230,10 @@ export const collections = {
     type: 'content',
     schema: contributingSchema,
   }),
+  playground: defineCollection({
+    type: 'content',
+    schema: playgroundSchema,
+  }),
 };
 
 /**
@@ -154,3 +248,13 @@ export type TemplateFrontmatter = z.infer<typeof templateSchema>;
 export type GuideFrontmatter = z.infer<typeof guideSchema>;
 export type IconFrontmatter = z.infer<typeof iconSchema>;
 export type ContributingFrontmatter = z.infer<typeof contributingSchema>;
+export type PlaygroundFrontmatter = z.infer<typeof playgroundSchema>;
+
+// Export sub-types for convenience
+export type AnatomyPart = z.infer<typeof anatomyPartSchema>;
+export type KeyboardInteraction = z.infer<typeof keyboardInteractionSchema>;
+export type AriaAttribute = z.infer<typeof ariaAttributeSchema>;
+export type AccessibilityMetadata = z.infer<typeof accessibilitySchema>;
+export type PropDefinition = z.infer<typeof propDefinitionSchema>;
+export type SlotDefinition = z.infer<typeof slotDefinitionSchema>;
+export type EventDefinition = z.infer<typeof eventDefinitionSchema>;

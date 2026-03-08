@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import DocPageLayout from '../../layouts/DocPageLayout.astro';
+import { getBreadcrumbContext } from '../../lib/content';
+import { markdownComponents } from '../../components/docs';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('tokens');
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+const breadcrumb = await getBreadcrumbContext(`/tokens/${entry.slug === 'index' ? '' : entry.slug}`);
+---
+
+<DocPageLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  section={breadcrumb.section}
+  item={breadcrumb.item}
+>
+  <Content components={markdownComponents} />
+</DocPageLayout>

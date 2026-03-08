@@ -1,0 +1,144 @@
+---
+/**
+ * Playground Demo Page
+ * 
+ * Demonstrates the interactive playground system with multiple components.
+ * This page serves as a sandbox for exploring component props interactively.
+ */
+
+import DocsLayout from '../../layouts/DocsLayout.astro';
+import { Playground } from '../../components/playground';
+import { AzButton, AzFieldset } from '../../components/demo';
+import { buttonProps, fieldsetProps } from '../../components/demo/props-metadata';
+---
+
+<DocsLayout title="Playground - Azion Design System">
+  <div class="playground-page">
+    <!-- Page Header -->
+    <div class="playground-page__header">
+      <h1 class="text-3xl font-bold text-gray-900">Playground</h1>
+      <p class="mt-2 text-lg text-gray-600">
+        Explore Design System components interactively. Adjust props and see live changes.
+      </p>
+    </div>
+
+    <!-- Button Playground -->
+    <section class="playground-section">
+      <div class="playground-section__header">
+        <h2 class="text-xl font-semibold text-gray-900">Button</h2>
+        <p class="mt-1 text-sm text-gray-600">
+          Buttons trigger actions and events when users interact with them.
+        </p>
+      </div>
+      
+      <Playground
+        client:load
+        component={AzButton}
+        component-name="AzButton"
+        props={buttonProps}
+        slot-content="Button"
+      />
+    </section>
+
+    <!-- Fieldset Playground -->
+    <section class="playground-section">
+      <div class="playground-section__header">
+        <h2 class="text-xl font-semibold text-gray-900">Fieldset</h2>
+        <p class="mt-1 text-sm text-gray-600">
+          Group related form elements with an optional title.
+        </p>
+      </div>
+      
+      <Playground
+        client:load
+        component={AzFieldset}
+        component-name="AzFieldset"
+        props={fieldsetProps}
+        slot-content="Fieldset content goes here"
+      />
+    </section>
+
+    <!-- Usage Guide -->
+    <section class="playground-guide">
+      <h2 class="text-xl font-semibold text-gray-900 mb-4">How to Use</h2>
+      
+      <div class="playground-guide__content">
+        <div class="playground-guide__item">
+          <h3 class="text-sm font-medium text-gray-700">1. Adjust Props</h3>
+          <p class="mt-1 text-sm text-gray-600">
+            Use the controls on the right to modify component props. Changes are reflected immediately in the preview.
+          </p>
+        </div>
+        
+        <div class="playground-guide__item">
+          <h3 class="text-sm font-medium text-gray-700">2. Preview Changes</h3>
+          <p class="mt-1 text-sm text-gray-600">
+            The preview area shows the component with your current prop values. Try different combinations!
+          </p>
+        </div>
+        
+        <div class="playground-guide__item">
+          <h3 class="text-sm font-medium text-gray-700">3. Copy Code</h3>
+          <p class="mt-1 text-sm text-gray-600">
+            The code panel shows the generated Vue template code. Click "Copy" to use it in your project.
+          </p>
+        </div>
+        
+        <div class="playground-guide__item">
+          <h3 class="text-sm font-medium text-gray-700">4. Reset</h3>
+          <p class="mt-1 text-sm text-gray-600">
+            Click "Reset" in the controls panel to restore default prop values.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</DocsLayout>
+
+<style>
+  .playground-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .playground-page__header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .playground-section {
+    margin-bottom: 3rem;
+  }
+
+  .playground-section__header {
+    margin-bottom: 1rem;
+  }
+
+  .playground-guide {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+  }
+
+  .playground-guide__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .playground-guide__content {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .playground-guide__item {
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.375rem;
+  }
+</style>

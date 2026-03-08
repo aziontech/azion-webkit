@@ -3,13 +3,34 @@
  * ComponentPageLayout
  * 
  * Layout specifically for component documentation pages.
- * Supports status badge, metadata links, and API anchor areas.
+ * Supports status badge, metadata links, structured sections, and API documentation.
+ * 
+ * Sections:
+ * - Overview (auto from content)
+ * - When to use
+ * - Anatomy
+ * - Examples
+ * - States
+ * - Accessibility
+ * - API
+ * - Related
  */
 
 import DocsShellLayout from './DocsShellLayout.astro';
 import PageHeader from '../components/docs/PageHeader.vue';
 import MetadataLinks from '../components/docs/MetadataLinks.vue';
+import RelatedLinks from '../components/docs/RelatedLinks.astro';
+import AnatomyBlock from '../components/docs/AnatomyBlock.astro';
+import AccessibilityChecklist from '../components/docs/AccessibilityChecklist.astro';
+import ApiSection from '../components/docs/ApiSection.astro';
 import type { Section, NavItem } from '../lib/content/types';
+import type { 
+  PropDefinition, 
+  SlotDefinition, 
+  EventDefinition,
+  AnatomyPart,
+  AccessibilityMetadata 
+} from '../content/config';
 
 interface Props {
   title: string;
@@ -23,6 +44,14 @@ interface Props {
   storybook?: string;
   figma?: string;
   related?: string[];
+  // Structured data from frontmatter
+  anatomy?: AnatomyPart[];
+  accessibility?: AccessibilityMetadata;
+  api?: {
+    props?: PropDefinition[];
+    slots?: SlotDefinition[];
+    events?: EventDefinition[];
+  };
 }
 
 const { 
@@ -36,7 +65,10 @@ const {
   source,
   storybook,
   figma,
-  related,
+  related = [],
+  anatomy,
+  accessibility,
+  api,
 } = Astro.props;
 
 // Build metadata links
@@ -45,10 +77,17 @@ const metadataLinks = [
   storybook ? { label: 'Storybook', href: storybook, icon: 'storybook' } : null,
   figma ? { label: 'Figma', href: figma, icon: 'figma' } : null,
 ].filter(Boolean);
+
+// Build related items
+const relatedItems = related.map(name => ({
+  title: name,
+  href: `/components/${name.toLowerCase()}`,
+  type: 'component' as const,
+}));
 ---
 
 <DocsShellLayout title={title} description={description} section={section} item={item}>
-  <article class="component-page">
+  <article class="component-page" data-component={component}>
     <!-- Page Header -->
     <PageHeader 
       client:load
@@ -68,15 +107,50 @@ const metadataLinks = [
       </div>
     )}
     
-    <!-- Content -->
+    <!-- Main Content -->
     <div class="component-content prose prose-slate max-w-none">
       <slot />
     </div>
     
-    <!-- API Section Anchor (content will be added by markdown) -->
-    <div id="api" class="mt-12 pt-8 border-t border-gray-200">
-      <slot name="api" />
-    </div>
+    <!-- Anatomy Section (from frontmatter) -->
+    {anatomy && anatomy.length > 0 && (
+      <section id="anatomy" class="mt-12 pt-8 border-t border-gray-200">
+        <h2 class="text-2xl font-semibold text-text-primary tracking-tight mb-6">
+          Anatomy
+        </h2>
+        <AnatomyBlock parts={anatomy} />
+      </section>
+    )}
+    
+    <!-- Accessibility Section (from frontmatter) -->
+    {accessibility && (
+      <section id="accessibility" class="mt-12 pt-8 border-t border-gray-200">
+        <h2 class="text-2xl font-semibold text-text-primary tracking-tight mb-6">
+          Accessibility
+        </h2>
+        <AccessibilityChecklist 
+          keyboard={accessibility.keyboard}
+          aria={accessibility.aria}
+          wcag={accessibility.wcag}
+          notes={accessibility.notes}
+        />
+      </section>
+    )}
+    
+    <!-- API Section (from frontmatter) -->
+    {api && (api.props?.length || api.slots?.length || api.events?.length) && (
+      <ApiSection 
+        props={api.props}
+        slots={api.slots}
+        events={api.events}
+        component={component}
+      />
+    )}
+    
+    <!-- Related Links (if provided via props) -->
+    {relatedItems.length > 0 && (
+      <RelatedLinks items={relatedItems} />
+    )}
   </article>
 </DocsShellLayout>
 
@@ -94,5 +168,51 @@ const metadataLinks = [
       opacity: 1;
       transform: translateY(0);
     }
+  }
+  
+  /* Section styling for consistent spacing */
+  .component-content :global(h2) {
+    @apply text-2xl font-semibold text-text-primary tracking-tight mt-10 mb-4 border-b border-gray-200 pb-2;
+  }
+  
+  .component-content :global(h3) {
+    @apply text-xl font-semibold text-text-primary mt-8 mb-3;
+  }
+  
+  .component-content :global(h4) {
+    @apply text-lg font-medium text-text-primary mt-6 mb-2;
+  }
+  
+  /* Paragraph spacing */
+  .component-content :global(p) {
+    @apply mb-4 leading-relaxed text-text-secondary;
+  }
+  
+  /* List styling */
+  .component-content :global(ul),
+  .component-content :global(ol) {
+    @apply mb-4 pl-6;
+  }
+  
+  .component-content :global(li) {
+    @apply mb-2 text-text-secondary;
+  }
+  
+  /* Link styling */
+  .component-content :global(a) {
+    @apply text-primary-600 hover:text-primary-700 underline underline-offset-2;
+  }
+  
+  /* Code styling */
+  .component-content :global(code) {
+    @apply bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+  
+  .component-content :global(pre) {
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4;
+  }
+  
+  .component-content :global(pre code) {
+    @apply bg-transparent p-0;
   }
 </style>

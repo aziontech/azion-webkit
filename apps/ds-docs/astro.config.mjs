@@ -1,6 +1,8 @@
 import { defineConfig } from 'astro/config';
 import vue from '@astrojs/vue';
 import tailwind from '@astrojs/tailwind';
+import mdx from '@astrojs/mdx';
+import { searchIndexIntegration } from './src/integrations/search-index';
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,6 +11,8 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
+    mdx(),
+    searchIndexIntegration(),
   ],
   
   // Site configuration

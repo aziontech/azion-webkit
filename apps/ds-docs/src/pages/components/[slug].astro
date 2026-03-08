@@ -23,20 +23,26 @@ const { Content } = await entry.render();
 
 // Get breadcrumb context
 const breadcrumb = await getBreadcrumbContext(`/components/${entry.slug === 'index' ? '' : entry.slug}`);
+
+// Extract frontmatter data
+const data = entry.data;
 ---
 
 <ComponentPageLayout
-  title={entry.data.title}
-  description={entry.data.description}
+  title={data.title}
+  description={data.description}
   section={breadcrumb.section}
   item={breadcrumb.item}
-  status={entry.data.status}
-  category={entry.data.category}
-  component={entry.data.component}
-  source={entry.data.source}
-  storybook={entry.data.storybook}
-  figma={entry.data.figma}
-  related={entry.data.related}
+  status={data.status}
+  category={data.category}
+  component={data.component}
+  source={data.source}
+  storybook={data.storybook}
+  figma={data.figma}
+  related={data.related}
+  anatomy={data.anatomy}
+  accessibility={data.accessibility}
+  api={data.api}
 >
   <Content components={markdownComponents} />
 </ComponentPageLayout>

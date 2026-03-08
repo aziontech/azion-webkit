@@ -2,11 +2,12 @@
 /**
  * DocsHeader
  * 
- * Documentation header component with breadcrumb context,
- * search placeholder, and version/language switcher placeholders.
+ * Documentation header component with breadcrumb context
+ * and search trigger button.
  */
 
 import type { Section, NavItem } from '@/lib/content/types';
+import { useSearch } from '@/lib/search/use-search';
 
 defineProps<{
   /** Current section */
@@ -14,6 +15,8 @@ defineProps<{
   /** Current page item */
   item?: NavItem | null;
 }>();
+
+const { openSearch } = useSearch();
 </script>
 
 <template>
@@ -34,10 +37,11 @@ defineProps<{
       
       <!-- Header actions -->
       <div class="flex items-center gap-4">
-        <!-- Search placeholder -->
+        <!-- Search button -->
         <button 
           class="flex items-center gap-2 px-3 py-1.5 text-sm text-text-secondary bg-surface-subtle rounded-md hover:bg-gray-100 transition-colors"
           aria-label="Search documentation"
+          @click="openSearch"
         >
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />

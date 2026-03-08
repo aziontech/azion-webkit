@@ -43,6 +43,9 @@
         "since": {
           "type": "string"
         },
+        "deprecatedIn": {
+          "type": "string"
+        },
         "contributors": {
           "type": "array",
           "items": {
@@ -63,6 +66,31 @@
               "type": "integer",
               "format": "unix-time"
             }
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "version": {
+          "type": "string",
+          "default": "v1"
+        },
+        "language": {
+          "type": "string",
+          "default": "en"
+        },
+        "translatedFrom": {
+          "type": "string"
+        },
+        "translationStatus": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "partial",
+            "missing"
           ]
         },
         "type": {
@@ -86,6 +114,159 @@
           "items": {
             "type": "string"
           }
+        },
+        "anatomy": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "accessibility": {
+          "type": "object",
+          "properties": {
+            "keyboard": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "keys": {
+                    "type": "string"
+                  },
+                  "action": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "keys",
+                  "action"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "aria": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "attribute": {
+                    "type": "string"
+                  },
+                  "usage": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "attribute",
+                  "usage"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "wcag": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "notes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "api": {
+          "type": "object",
+          "properties": {
+            "props": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "default": {
+                    "type": "string"
+                  },
+                  "required": {
+                    "type": "boolean"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "type",
+                  "description"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "slots": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "props": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "description"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "events": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "payload": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "description"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
         },
         "$schema": {
           "type": "string"

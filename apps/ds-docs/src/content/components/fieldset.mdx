@@ -1,0 +1,237 @@
+---
+title: Fieldset
+description: Group related form inputs under a shared label for better organization and accessibility.
+type: component
+category: form
+status: stable
+since: 1.0.0
+component: AzFieldset
+figma: https://figma.com/file/azion-design-system?node-id=fieldset
+storybook: https://storybook.azion.com/?path=/story/form-fieldset
+source: https://github.com/aziontech/webkit/tree/main/packages/components/src/Fieldset
+related:
+  - Form
+  - Input
+  - Select
+  - Checkbox
+tags:
+  - form
+  - grouping
+  - accessibility
+anatomy:
+  - label: Fieldset Container
+    description: The grouping container with border styling
+  - label: Legend
+    description: The title/label for the group of inputs
+  - label: Content Area
+    description: The area containing grouped form controls
+accessibility:
+  keyboard:
+    - keys: Tab
+      action: Moves focus to the first focusable element within the fieldset
+  aria:
+    - attribute: aria-describedby
+      usage: Can reference a description for the fieldset group
+    - attribute: aria-required="true"
+      usage: When all fields in the group are required
+  wcag:
+    - "1.3.1 Info and Relationships"
+    - "3.3.2 Labels or Instructions"
+  notes:
+    - Native <fieldset> and <legend> elements provide built-in accessibility
+    - Screen readers announce the legend when entering the fieldset
+api:
+  props:
+    - name: legend
+      type: "string"
+      default: "undefined"
+      required: false
+      description: The text for the fieldset legend
+    - name: disabled
+      type: "boolean"
+      default: "false"
+      required: false
+      description: Whether all controls in the fieldset are disabled
+    - name: required
+      type: "boolean"
+      default: "false"
+      required: false
+      description: Whether all fields in the group are required
+    - name: variant
+      type: "'default' | 'card' | 'transparent'"
+      default: "'default'"
+      required: false
+      description: Visual style variant
+  slots:
+    - name: default
+      description: Form controls and content inside the fieldset
+    - name: legend
+      description: Custom legend content (overrides legend prop)
+  events: []
+---
+
+import { ExampleBlock, Callout } from '@components/docs';
+
+## Overview
+
+The Fieldset component provides a way to group related form controls together. It renders a native HTML `<fieldset>` element with proper accessibility features, including an associated `<legend>` for the group label.
+
+Fieldsets are essential for creating accessible forms, as they help screen reader users understand the relationship between form controls.
+
+<Callout type="info" title="Semantic HTML">
+  This component uses native `<fieldset>` and `<legend>` elements, which provide built-in accessibility benefits without requiring additional ARIA attributes.
+</Callout>
+
+## When to Use
+
+Use Fieldset when you need to:
+
+- Group related form inputs (e.g., address fields, contact information)
+- Create logical sections within a larger form
+- Improve form accessibility with proper semantic structure
+- Apply a shared label or description to multiple inputs
+- Disable multiple inputs at once
+
+## Examples
+
+### Basic Fieldset
+
+<ExampleBlock 
+  title="Basic fieldset with legend"
+  description="A simple fieldset grouping personal information fields"
+  code={`<AzFieldset legend="Personal Information">
+  <AzInput label="Full Name" />
+  <AzInput label="Email" type="email" />
+</AzFieldset>`}
+>
+  <fieldset class="border border-gray-300 rounded-lg p-4">
+    <legend class="text-sm font-medium text-text-primary px-2">Personal Information</legend>
+    <div class="space-y-4 mt-2">
+      <div>
+        <label class="block text-sm font-medium text-text-secondary mb-1">Full Name</label>
+        <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500" placeholder="Enter your name" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-text-secondary mb-1">Email</label>
+        <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500" placeholder="Enter your email" />
+      </div>
+    </div>
+  </fieldset>
+</ExampleBlock>
+
+### Address Grouping
+
+<ExampleBlock 
+  title="Address fields grouped"
+  description="Grouping address-related fields together"
+  code={`<AzFieldset legend="Shipping Address">
+  <AzInput label="Street Address" />
+  <div class="grid grid-cols-2 gap-4">
+    <AzInput label="City" />
+    <AzInput label="ZIP Code" />
+  </div>
+</AzFieldset>`}
+>
+  <fieldset class="border border-gray-300 rounded-lg p-4">
+    <legend class="text-sm font-medium text-text-primary px-2">Shipping Address</legend>
+    <div class="space-y-4 mt-2">
+      <div>
+        <label class="block text-sm font-medium text-text-secondary mb-1">Street Address</label>
+        <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="123 Main St" />
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium text-text-secondary mb-1">City</label>
+          <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="City" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-text-secondary mb-1">ZIP Code</label>
+          <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="12345" />
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</ExampleBlock>
+
+### Disabled State
+
+<ExampleBlock 
+  title="Disabled fieldset"
+  description="All inputs disabled via the fieldset"
+  code={`<AzFieldset legend="Disabled Group" disabled>
+  <AzInput label="Input 1" />
+  <AzInput label="Input 2" />
+</AzFieldset>`}
+>
+  <fieldset class="border border-gray-300 rounded-lg p-4 opacity-50" disabled>
+    <legend class="text-sm font-medium text-text-primary px-2">Disabled Group</legend>
+    <div class="space-y-4 mt-2">
+      <div>
+        <label class="block text-sm font-medium text-text-secondary mb-1">Input 1</label>
+        <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-100" placeholder="Disabled" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-text-secondary mb-1">Input 2</label>
+        <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-100" placeholder="Disabled" />
+      </div>
+    </div>
+  </fieldset>
+</ExampleBlock>
+
+## States
+
+<StateGrid columns={3}>
+  <fieldset slot="default" class="border border-gray-300 rounded-lg p-3">
+    <legend class="text-xs font-medium text-text-primary px-2">Default</legend>
+    <input type="text" class="w-full px-2 py-1 text-sm border border-gray-300 rounded" placeholder="Input" />
+  </fieldset>
+  <fieldset slot="focus" class="border border-primary-300 rounded-lg p-3 ring-2 ring-primary-100">
+    <legend class="text-xs font-medium text-text-primary px-2">Focused</legend>
+    <input type="text" class="w-full px-2 py-1 text-sm border border-primary-500 rounded ring-1 ring-primary-500" placeholder="Input" />
+  </fieldset>
+  <fieldset slot="disabled" class="border border-gray-200 rounded-lg p-3 opacity-50" disabled>
+    <legend class="text-xs font-medium text-text-primary px-2">Disabled</legend>
+    <input type="text" class="w-full px-2 py-1 text-sm border border-gray-200 rounded bg-gray-100" placeholder="Disabled" disabled />
+  </fieldset>
+</StateGrid>
+
+## Do's and Don'ts
+
+<DoDont title="Fieldset usage">
+  <template #do>
+    <p class="text-sm mb-2">Group related form fields:</p>
+    <fieldset class="border border-gray-300 rounded p-3">
+      <legend class="text-xs font-medium px-2">Contact Info</legend>
+      <div class="space-y-2">
+        <input type="text" class="w-full px-2 py-1 text-sm border border-gray-300 rounded" placeholder="Email" />
+        <input type="text" class="w-full px-2 py-1 text-sm border border-gray-300 rounded" placeholder="Phone" />
+      </div>
+    </fieldset>
+  </template>
+  <template #dont>
+    <p class="text-sm mb-2">Don't use for unrelated fields:</p>
+    <fieldset class="border border-gray-300 rounded p-3">
+      <legend class="text-xs font-medium px-2">Mixed Fields</legend>
+      <input type="text" class="w-full px-2 py-1 text-sm border border-gray-300 rounded mb-2" placeholder="Name" />
+      <input type="text" class="w-full px-2 py-1 text-sm border border-gray-300 rounded" placeholder="Favorite Color" />
+    </fieldset>
+    <p class="text-xs text-red-600 mt-1">These aren't logically related</p>
+  </template>
+</DoDont>
+
+<DoDont>
+  <template #do>
+    <p class="text-sm mb-2">Use descriptive legends:</p>
+    <fieldset class="border border-gray-300 rounded p-3">
+      <legend class="text-xs font-medium px-2">Billing Address</legend>
+      <input type="text" class="w-full px-2 py-1 text-sm border border-gray-300 rounded" placeholder="Street" />
+    </fieldset>
+  </template>
+  <template #dont>
+    <p class="text-sm mb-2">Don't use vague legends:</p>
+    <fieldset class="border border-gray-300 rounded p-3">
+      <legend class="text-xs font-medium px-2">Info</legend>
+      <input type="text" class="w-full px-2 py-1 text-sm border border-gray-300 rounded" placeholder="Street" />
+    </fieldset>
+  </template>
+</DoDont>

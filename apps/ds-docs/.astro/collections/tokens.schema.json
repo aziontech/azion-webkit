@@ -44,6 +44,9 @@
         "since": {
           "type": "string"
         },
+        "deprecatedIn": {
+          "type": "string"
+        },
         "contributors": {
           "type": "array",
           "items": {
@@ -64,6 +67,31 @@
               "type": "integer",
               "format": "unix-time"
             }
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "version": {
+          "type": "string",
+          "default": "v1"
+        },
+        "language": {
+          "type": "string",
+          "default": "en"
+        },
+        "translatedFrom": {
+          "type": "string"
+        },
+        "translationStatus": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "partial",
+            "missing"
           ]
         },
         "type": {

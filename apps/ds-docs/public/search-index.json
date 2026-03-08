@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "generated": "2026-03-08T18:00:00.000Z",
+    "count": 15,
+    "lang": "en",
+    "schemaVersion": 1
+  },
+  "entries": [
+    {
+      "id": "components/button",
+      "title": "Button",
+      "section": "components",
+      "type": "component",
+      "category": "form",
+      "description": "Buttons trigger actions. They communicate what will happen when the user interacts with them.",
+      "headings": ["Overview", "Examples", "Variants", "Sizes", "States", "Accessibility", "API"],
+      "tags": ["action", "interactive", "form", "click"],
+      "content": "Buttons trigger actions They communicate what will happen when the user interacts with them Button types include primary secondary tertiary and ghost variants Sizes include small medium and large States include default hover active focus and disabled Accessibility follows WCAG guidelines with proper ARIA attributes",
+      "url": "/components/button",
+      "status": "stable",
+      "related": ["components/fieldset"]
+    },
+    {
+      "id": "components/fieldset",
+      "title": "Fieldset",
+      "section": "components",
+      "type": "component",
+      "category": "form",
+      "description": "Fieldset groups related form elements together with an optional legend.",
+      "headings": ["Overview", "Examples", "Composition", "Accessibility", "API"],
+      "tags": ["form", "group", "container", "legend"],
+      "content": "Fieldset groups related form elements together with an optional legend It provides semantic grouping for accessibility and visual organization Use fieldset to group related inputs like address fields or contact information",
+      "url": "/components/fieldset",
+      "status": "stable",
+      "related": ["components/button"]
+    },
+    {
+      "id": "foundations/color",
+      "title": "Color",
+      "section": "foundations",
+      "type": "foundation",
+      "category": "color",
+      "description": "Color is a fundamental design token that conveys meaning, creates hierarchy, and establishes brand identity.",
+      "headings": ["Overview", "Color System", "Semantic Colors", "Usage Guidelines"],
+      "tags": ["color", "design token", "brand", "semantic"],
+      "content": "Color is a fundamental design token that conveys meaning creates hierarchy and establishes brand identity The color system includes primary secondary and neutral palettes Semantic colors provide meaning through success warning error and info states",
+      "url": "/foundations/color"
+    },
+    {
+      "id": "foundations/index",
+      "title": "Foundations",
+      "section": "foundations",
+      "type": "foundation",
+      "description": "Design foundations are the core principles and building blocks that ensure consistency across the design system.",
+      "headings": ["Overview", "Principles"],
+      "tags": ["foundation", "principles", "design"],
+      "content": "Design foundations are the core principles and building blocks that ensure consistency across the design system Foundations include color typography spacing elevation and motion",
+      "url": "/foundations"
+    },
+    {
+      "id": "tokens/index",
+      "title": "Tokens",
+      "section": "tokens",
+      "type": "token",
+      "description": "Design tokens are the visual design atoms of the design system—specifically, they are named entities that store visual design attributes.",
+      "headings": ["Overview", "Token Types", "Usage"],
+      "tags": ["token", "design token", "variable"],
+      "content": "Design tokens are the visual design atoms of the design system specifically they are named entities that store visual design attributes Tokens include colors spacing typography borders shadows and motion",
+      "url": "/tokens"
+    },
+    {
+      "id": "get-started/index",
+      "title": "Get Started",
+      "section": "get-started",
+      "type": "guide",
+      "description": "Welcome to the Azion Design System. This guide will help you get started with using the design system in your projects.",
+      "headings": ["Overview", "Quick Start"],
+      "tags": ["getting started", "introduction", "quick start"],
+      "content": "Welcome to the Azion Design System This guide will help you get started with using the design system in your projects The design system provides components tokens and guidelines for building consistent user interfaces",
+      "url": "/get-started"
+    },
+    {
+      "id": "get-started/installation",
+      "title": "Installation",
+      "section": "get-started",
+      "type": "guide",
+      "category": "installation",
+      "description": "Learn how to install and configure the Azion Design System in your project.",
+      "headings": ["Installation", "Configuration", "Usage"],
+      "tags": ["installation", "setup", "npm", "yarn", "pnpm"],
+      "content": "Learn how to install and configure the Azion Design System in your project Install the packages using npm yarn or pnpm Configure your project to use the design system tokens and components",
+      "url": "/get-started/installation"
+    },
+    {
+      "id": "icons/index",
+      "title": "Icons",
+      "section": "icons",
+      "type": "icon",
+      "description": "Icons are visual symbols used to represent actions, objects, and concepts. They help users understand and interact with the interface.",
+      "headings": ["Overview", "Icon Library", "Usage Guidelines"],
+      "tags": ["icon", "symbol", "visual", "svg"],
+      "content": "Icons are visual symbols used to represent actions objects and concepts They help users understand and interact with the interface The icon library includes navigation action status and object icons",
+      "url": "/icons"
+    },
+    {
+      "id": "patterns/index",
+      "title": "Patterns",
+      "section": "patterns",
+      "type": "pattern",
+      "description": "Design patterns are reusable solutions to common design problems. They provide consistent approaches to user interactions.",
+      "headings": ["Overview", "Available Patterns"],
+      "tags": ["pattern", "workflow", "interaction"],
+      "content": "Design patterns are reusable solutions to common design problems They provide consistent approaches to user interactions Patterns include form layouts navigation patterns and feedback patterns",
+      "url": "/patterns"
+    },
+    {
+      "id": "blocks/index",
+      "title": "Blocks",
+      "section": "blocks",
+      "type": "block",
+      "description": "Blocks are pre-built UI sections composed of multiple components. They provide ready-to-use solutions for common page sections.",
+      "headings": ["Overview", "Available Blocks"],
+      "tags": ["block", "section", "composition"],
+      "content": "Blocks are pre-built UI sections composed of multiple components They provide ready-to-use solutions for common page sections Blocks include headers footers sidebars and content sections",
+      "url": "/blocks"
+    },
+    {
+      "id": "templates/index",
+      "title": "Templates",
+      "section": "templates",
+      "type": "template",
+      "description": "Templates are complete page layouts composed of blocks and components. They provide starting points for common page types.",
+      "headings": ["Overview", "Available Templates"],
+      "tags": ["template", "page", "layout"],
+      "content": "Templates are complete page layouts composed of blocks and components They provide starting points for common page types Templates include dashboard settings and form pages",
+      "url": "/templates"
+    },
+    {
+      "id": "contributing/index",
+      "title": "Contributing",
+      "section": "contributing",
+      "type": "contributing",
+      "description": "Learn how to contribute to the Azion Design System. We welcome contributions from the community.",
+      "headings": ["Overview", "Contribution Guidelines"],
+      "tags": ["contributing", "contribution", "open source"],
+      "content": "Learn how to contribute to the Azion Design System We welcome contributions from the community Follow the contribution guidelines to submit bug fixes features and documentation improvements",
+      "url": "/contributing"
+    },
+    {
+      "id": "playground/index",
+      "title": "Playground",
+      "section": "playground",
+      "type": "playground",
+      "description": "Interactive playground for experimenting with design system components and seeing them in action.",
+      "headings": ["Overview", "Usage"],
+      "tags": ["playground", "interactive", "demo"],
+      "content": "Interactive playground for experimenting with design system components and seeing them in action Use the playground to test component configurations and preview changes in real time",
+      "url": "/playground"
+    },
+    {
+      "id": "components/index",
+      "title": "Components",
+      "section": "components",
+      "type": "doc",
+      "description": "Browse all available components in the Azion Design System. Components are reusable UI building blocks.",
+      "headings": ["Overview", "Component List"],
+      "tags": ["component", "ui", "building block"],
+      "content": "Browse all available components in the Azion Design System Components are reusable UI building blocks Components include buttons inputs fieldsets and more",
+      "url": "/components"
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+---
+title: Button
+description: Buttons trigger actions and events when users interact with them.
+navLabel: Button
+order: 1
+type: component
+category: form
+status: stable
+since: 1.0.0
+component: AzButton
+source: https://github.com/aziontech/webkit/tree/main/packages/components/src/Button
+storybook: https://storybook.azion.com/components/button
+figma: https://figma.com/file/azion-design-system/components/button
+related:
+  - Input
+  - Select
+  - IconButton
+tags:
+  - action
+  - form
+  - interactive
+anatomy:
+  - label: Container
+    description: The clickable area with background styling and border
+  - label: Label
+    description: The text content describing the action
+  - label: Icon (optional)
+    description: An optional icon for visual emphasis before or after the label
+accessibility:
+  keyboard:
+    - keys: Tab
+      action: Moves focus to the button
+    - keys: Enter
+      action: Activates the button when focused
+    - keys: Space
+      action: Activates the button when focused
+  aria:
+    - attribute: aria-disabled="true"
+      usage: Use instead of disabled attribute for screen readers to announce the disabled state
+    - attribute: aria-label
+      usage: Required for icon-only buttons to provide accessible name
+    - attribute: aria-busy="true"
+      usage: When button is in loading state
+  wcag:
+    - "2.1.1 Keyboard"
+    - "4.1.2 Name, Role, Value"
+api:
+  props:
+    - name: variant
+      type: "'primary' | 'secondary' | 'destructive' | 'ghost'"
+      default: "'primary'"
+      required: false
+      description: Visual style variant of the button
+    - name: size
+      type: "'sm' | 'md' | 'lg'"
+      default: "'md'"
+      required: false
+      description: Size of the button
+    - name: disabled
+      type: "boolean"
+      default: "false"
+      required: false
+      description: Whether the button is disabled
+    - name: loading
+      type: "boolean"
+      default: "false"
+      required: false
+      description: Shows loading spinner and disables interaction
+    - name: icon
+      type: "string"
+      default: "undefined"
+      required: false
+      description: Icon name to display before the label
+    - name: iconPosition
+      type: "'left' | 'right'"
+      default: "'left'"
+      required: false
+      description: Position of the icon relative to label
+    - name: fullWidth
+      type: "boolean"
+      default: "false"
+      required: false
+      description: Whether button takes full width of container
+  slots:
+    - name: default
+      description: Button label content
+    - name: icon-left
+      description: Custom icon before the label
+      props: "iconClass: string"
+    - name: icon-right
+      description: Custom icon after the label
+      props: "iconClass: string"
+  events:
+    - name: click
+      payload: "MouseEvent"
+      description: Fired when button is clicked and not disabled
+---
+
+import { ExampleBlock, Callout, StateGrid } from '@components/docs';
+
+## Overview
+
+Buttons are interactive elements that trigger actions when clicked or tapped. They communicate actions that users can take and are typically placed throughout your UI, from forms to dialogs to navigation.
+
+The Button component provides a consistent, accessible way to trigger actions throughout your application.
+
+## When to Use
+
+Use buttons to:
+
+- Trigger primary actions (Submit, Save, Continue)
+- Navigate to different views or pages
+- Toggle states or settings
+- Trigger secondary actions (Cancel, Delete)
+- Submit forms
+
+<Callout type="tip" title="Choosing the right variant">
+  Use **primary** for the main action, **secondary** for alternative actions, **destructive** for dangerous actions, and **ghost** for less prominent actions.
+</Callout>
+
+## Examples
+
+### Primary Button
+
+Use for the main action in a context.
+
+<ExampleBlock 
+  title="Primary variant"
+  description="The default button style for primary actions"
+  code={`<AzButton variant="primary">Primary Button</AzButton>`}
+>
+  <button class="px-4 py-2 bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors font-medium">
+    Primary Button
+  </button>
+</ExampleBlock>
+
+### Secondary Button
+
+Use for secondary or alternative actions.
+
+<ExampleBlock 
+  title="Secondary variant"
+  description="For alternative or less prominent actions"
+  code={`<AzButton variant="secondary">Secondary Button</AzButton>`}
+>
+  <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors border border-gray-300 font-medium">
+    Secondary Button
+  </button>
+</ExampleBlock>
+
+### Destructive Button
+
+Use for destructive or irreversible actions.
+
+<ExampleBlock 
+  title="Destructive variant"
+  description="For dangerous actions like delete or remove"
+  code={`<AzButton variant="destructive">Delete</AzButton>`}
+>
+  <button class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors font-medium">
+    Delete
+  </button>
+</ExampleBlock>
+
+### Button Sizes
+
+<ExampleBlock 
+  title="Size variants"
+  description="Available in small, medium, and large sizes"
+  code={`<AzButton size="sm">Small</AzButton>
+<AzButton size="md">Medium</AzButton>
+<AzButton size="lg">Large</AzButton>`}
+>
+  <div class="flex items-center gap-3">
+    <button class="px-3 py-1.5 text-sm bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors font-medium">
+      Small
+    </button>
+    <button class="px-4 py-2 bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors font-medium">
+      Medium
+    </button>
+    <button class="px-6 py-3 text-lg bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors font-medium">
+      Large
+    </button>
+  </div>
+</ExampleBlock>
+
+## States
+
+<StateGrid columns={4}>
+  <button slot="default" class="px-4 py-2 bg-primary-500 text-white rounded-md font-medium">Button</button>
+  <button slot="hover" class="px-4 py-2 bg-primary-600 text-white rounded-md font-medium">Button</button>
+  <button slot="focus" class="px-4 py-2 bg-primary-500 text-white rounded-md font-medium ring-2 ring-primary-300 ring-offset-2">Button</button>
+  <button slot="disabled" class="px-4 py-2 bg-gray-300 text-gray-500 rounded-md font-medium cursor-not-allowed" disabled>Button</button>
+</StateGrid>
+
+## Do's and Don'ts
+
+<DoDont title="Usage guidelines">
+  <template v-slot:do>
+    <p class="text-sm mb-2">Use buttons for actionable items:</p>
+    <button class="px-4 py-2 bg-primary-500 text-white rounded-md text-sm">Submit Form</button>
+  </template>
+  <template v-slot:dont>
+    <p class="text-sm mb-2">Don't use buttons for navigation:</p>
+    <button class="px-4 py-2 bg-primary-500 text-white rounded-md text-sm">Go to Dashboard</button>
+    <p class="text-xs text-red-600 mt-1">Use a link instead</p>
+  </template>
+</DoDont>
+
+<DoDont>
+  <template v-slot:do>
+    <p class="text-sm mb-2">Use clear, action-oriented labels:</p>
+    <button class="px-4 py-2 bg-primary-500 text-white rounded-md text-sm">Save Changes</button>
+  </template>
+  <template v-slot:dont>
+    <p class="text-sm mb-2">Don't use vague labels:</p>
+    <button class="px-4 py-2 bg-primary-500 text-white rounded-md text-sm">Click Here</button>
+  </template>
+</DoDont>
+
+## Playground
+
+Explore the Button component interactively. Adjust props and see live changes.
+
+import { Playground } from '../../components/playground';
+import { AzButton } from '../../components/demo';
+import { buttonProps } from '../../components/demo/props-metadata';
+
+<Playground
+  client:load
+  component={AzButton}
+  component-name="AzButton"
+  props={buttonProps}
+  slot-content="Button"
+/>

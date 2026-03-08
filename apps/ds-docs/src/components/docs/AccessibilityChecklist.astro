@@ -1,0 +1,135 @@
+---
+/**
+ * AccessibilityChecklist
+ * 
+ * Displays accessibility requirements and guidelines in a checklist format.
+ */
+
+import type { AccessibilityMetadata, KeyboardInteraction, AriaAttribute } from '../../content/config';
+
+interface Props {
+  items?: string[];
+  keyboard?: KeyboardInteraction[];
+  aria?: AriaAttribute[];
+  wcag?: string[];
+  notes?: string[];
+}
+
+const { 
+  items = [],
+  keyboard = [],
+  aria = [],
+  wcag = [],
+  notes = []
+} = Astro.props;
+---
+
+<div class="accessibility-checklist">
+  {/* Keyboard Interactions */}
+  {keyboard.length > 0 && (
+    <div class="a11y-section mb-6">
+      <h4 class="text-sm font-semibold text-text-primary mb-3 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+        </svg>
+        Keyboard Navigation
+      </h4>
+      <div class="bg-gray-50 rounded-lg overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-gray-200">
+              <th class="py-2 px-3 text-left font-medium text-text-secondary">Keys</th>
+              <th class="py-2 px-3 text-left font-medium text-text-secondary">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {keyboard.map((item) => (
+              <tr class="border-b border-gray-100 last:border-0">
+                <td class="py-2 px-3 font-mono text-primary-600">
+                  <kbd class="bg-white px-2 py-0.5 rounded border border-gray-300 text-xs">
+                    {item.keys}
+                  </kbd>
+                </td>
+                <td class="py-2 px-3 text-text-secondary">
+                  {item.action}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  )}
+  
+  {/* ARIA Attributes */}
+  {aria.length > 0 && (
+    <div class="a11y-section mb-6">
+      <h4 class="text-sm font-semibold text-text-primary mb-3 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+        </svg>
+        ARIA Attributes
+      </h4>
+      <div class="space-y-2">
+        {aria.map((item) => (
+          <div class="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
+            <code class="font-mono text-primary-600 text-sm bg-white px-2 py-0.5 rounded border border-gray-200 shrink-0">
+              {item.attribute}
+            </code>
+            <p class="text-sm text-text-secondary">
+              {item.usage}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
+  
+  {/* WCAG Compliance */}
+  {wcag.length > 0 && (
+    <div class="a11y-section mb-6">
+      <h4 class="text-sm font-semibold text-text-primary mb-3 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        WCAG Compliance
+      </h4>
+      <div class="flex flex-wrap gap-2">
+        {wcag.map((criterion) => (
+          <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+            {criterion}
+          </span>
+        ))}
+      </div>
+    </div>
+  )}
+  
+  {/* Checklist Items */}
+  {items.length > 0 && (
+    <div class="a11y-section mb-6">
+      <h4 class="text-sm font-semibold text-text-primary mb-3">Checklist</h4>
+      <ul class="space-y-2">
+        {items.map((item) => (
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-sm text-text-secondary">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+  
+  {/* Additional Notes */}
+  {notes.length > 0 && (
+    <div class="a11y-section">
+      <h4 class="text-sm font-semibold text-text-primary mb-3">Additional Notes</h4>
+      <ul class="space-y-1 list-disc list-inside text-sm text-text-secondary">
+        {notes.map((note) => (
+          <li>{note}</li>
+        ))}
+      </ul>
+    </div>
+  )}
+</div>
