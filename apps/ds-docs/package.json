@@ -7,10 +7,17 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "pnpm build:search && astro build",
+    "build": "pnpm build:search && pnpm build:api && astro build",
     "build:search": "node --loader ts-node/esm scripts/build-search-index.ts",
+    "build:api": "node --loader ts-node/esm scripts/extractComponentApi.ts",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "node --loader ts-node/esm scripts/check-docs.ts lint",
+    "lint:links": "node --loader ts-node/esm scripts/check-docs.ts links",
+    "lint:rules": "node --loader ts-node/esm scripts/check-docs.ts rules",
+    "lint:coverage": "node --loader ts-node/esm scripts/checkComponentDocs.ts",
+    "check": "node --loader ts-node/esm scripts/check-docs.ts all",
+    "changelog": "node --loader ts-node/esm scripts/generateChangelog.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
