@@ -48,11 +48,11 @@ const config = statusConfig[props.status];
 <template>
   <span
     :class="[
-      'inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-medium rounded-full border',
+      'inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-medium rounded-md border',
       config.class,
     ]"
   >
     <span class="text-sm">{{ config.icon }}</span>
-    {{ config.label }}
+    <span class="font-mono">{{ config.label }}</span>
   </span>
 </template>

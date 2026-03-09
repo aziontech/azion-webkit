@@ -137,7 +137,7 @@
   }
 
   .docs-prose h1 {
-    @apply text-3xl font-bold tracking-tight mb-4;
+    @apply text-3xl font-medium tracking-tight mb-4;
   }
 
   .docs-prose h2 {

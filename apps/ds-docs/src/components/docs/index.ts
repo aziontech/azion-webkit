@@ -46,6 +46,7 @@ export { default as AccessibilityChecklist } from './AccessibilityChecklist.astr
 export { default as AnatomyBlock } from './AnatomyBlock.astro';
 export { default as StateGrid } from './StateGrid.astro';
 export { default as DoDont } from './DoDont.astro';
+export { default as FoundationCard } from './FoundationCard.astro';
 
 // Callouts
 export { default as Callout } from './Callout.astro';
@@ -82,6 +83,7 @@ import StateGrid from './StateGrid.astro';
 import DoDont from './DoDont.astro';
 import RelatedLinks from './RelatedLinks.astro';
 import Callout from './Callout.astro';
+import FoundationCard from './FoundationCard.astro';
 import Playground from '../playground/Playground.vue';
 import { AzButton } from '../demo';
 
@@ -99,6 +101,7 @@ export const markdownComponents = {
   DoDont,
   RelatedLinks,
   Callout,
+  FoundationCard,
   Playground,
   // Demo components for MDX usage
   AzButton,
@@ -113,6 +116,7 @@ export const markdownComponents = {
   A11y: AccessibilityChecklist,
   Anatomy: AnatomyBlock,
   States: StateGrid,
+  Foundation: FoundationCard,
 };
 
 // Re-export playground components for markdown usage

@@ -1,0 +1,29 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+import { getCollection } from 'astro:content';
+import { markdownComponents } from '../../components/docs';
+import { getBreadcrumbContext } from '../../lib/content';
+
+/**
+ * Foundations Index Page
+ */
+
+const allContent = await getCollection('v1-en');
+const foundationsEntries = allContent.filter(e => (e.id || '').startsWith('foundations/'));
+const indexEntry = foundationsEntries.find((e) => e.id === 'foundations/index.md' || e.id === 'foundations/index.mdx');
+
+if (!indexEntry) {
+  return Astro.redirect('/');
+}
+
+const { Content } = await indexEntry.render();
+
+// Get breadcrumb context for this page
+const breadcrumb = await getBreadcrumbContext('/foundations');
+---
+
+<DocsLayout title="Foundations" section={breadcrumb.section} item={breadcrumb.item}>
+  <div class="docs-prose">
+    <Content components={markdownComponents} />
+  </div>
+</DocsLayout>

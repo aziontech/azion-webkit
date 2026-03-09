@@ -25,7 +25,7 @@ const props = defineProps<Props>();
 <template>
   <header class="mb-8">
     <div class="flex items-start gap-4 mb-4">
-      <h1 class="text-3xl font-bold tracking-tight text-text-primary">
+      <h1 class="text-3xl font-medium tracking-tight text-text-primary">
         {{ title }}
       </h1>
     </div>

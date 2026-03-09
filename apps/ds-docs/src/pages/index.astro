@@ -40,24 +40,24 @@ const features = [
 <DocsLayout title="Home">
   <!-- Hero Section -->
   <section class="mb-12">
-    <h1 class="text-4xl font-bold tracking-tight mb-4">
+    <h1 class="text-4xl font-medium tracking-tight mb-4">
       Azion Design System
     </h1>
-    <p class="text-xl text-text-secondary mb-8 max-w-2xl">
+    <p class="text-base text-text-secondary mb-8 max-w-2xl">
       Build consistent, accessible, and beautiful user interfaces with our comprehensive design system. 
       Designed for Azion's edge computing platform.
     </p>
     
-    <div class="flex flex-wrap gap-4">
+    <div class="flex flex-wrap gap-3">
       {heroLinks.map((link) => (
         <a
           href={link.href}
           class="group px-6 py-4 bg-surface-subtle hover:bg-primary-50 border border-gray-200 hover:border-primary-200 rounded-lg transition-colors"
         >
-          <span class="block text-lg font-medium text-text-primary group-hover:text-primary-700">
+          <span class="block mb-1 text-base font-medium text-text-primary group-hover:text-primary-700">
             {link.label}
           </span>
-          <span class="block text-sm text-text-secondary">
+          <span class="block text-xs text-text-secondary">
             {link.description}
           </span>
         </a>
@@ -83,7 +83,6 @@ const features = [
   <section class="mb-12">
     <h2 class="text-2xl font-medium mb-6">Quick Start</h2>
     <div class="bg-gray-900 rounded-lg p-6">
-      <p class="text-gray-400 mb-4">Install the design system packages:</p>
       <pre class="text-sm text-gray-100"><code class="!font-code">npm install @aziontech/components @aziontech/icons @aziontech/theme</code></pre>
     </div>
   </section>
