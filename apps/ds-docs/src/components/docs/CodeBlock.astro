@@ -27,14 +27,14 @@ const lines = code.split('\n');
 const lineCount = lines.length;
 ---
 
-<div class="code-block my-6">
+<div class="code-block">
   <!-- Header with filename and copy button -->
-  <div class="flex items-center justify-between px-4 py-2 bg-gray-800 rounded-t-lg border-b border-gray-700">
+  <div class="flex items-center justify-between px-4 py-2 bg-gray-[#f9fafb] border-y border-[#e5e7eb]">
     {filename && (
-      <span class="text-xs text-gray-400 font-mono">{filename}</span>
+      <span class="text-xs text-gray-400 font-code">{filename}</span>
     )}
     {!filename && (
-      <span class="text-xs text-gray-400 font-mono">{language}</span>
+      <span class="text-xs text-gray-400 font-code">{language}</span>
     )}
     {showCopy && (
       <button

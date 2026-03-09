@@ -32,7 +32,7 @@ const { rows = [], component } = Astro.props;
       <tbody>
         {rows.map((slot) => (
           <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-            <td class="py-3 px-4 font-mono text-primary-600">
+            <td class="py-3 px-4 font-code text-gray-600">
               <code class="bg-gray-100 px-1.5 py-0.5 rounded">
                 {slot.name === 'default' ? 'default' : slot.name}
               </code>
@@ -40,7 +40,7 @@ const { rows = [], component } = Astro.props;
             <td class="py-3 px-4 text-text-secondary">
               {slot.description}
             </td>
-            <td class="py-3 px-4 font-mono text-text-tertiary text-xs">
+            <td class="py-3 px-4 font-code text-text-tertiary text-xs">
               {slot.props ? (
                 <code class="bg-gray-100 px-1.5 py-0.5 rounded">
                   {slot.props}

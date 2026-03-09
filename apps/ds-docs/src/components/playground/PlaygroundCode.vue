@@ -166,7 +166,7 @@ function toggleCode() {
 }
 
 .playground-code__code {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Mono', monospace !important;
   font-size: 0.8125rem;
   line-height: 1.6;
   color: #e5e7eb;

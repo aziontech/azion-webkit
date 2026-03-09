@@ -223,7 +223,7 @@ onUnmounted(() => {
 }
 
 .version-switcher__label {
-  font-family: var(--font-mono, ui-monospace, monospace);
+  font-family: var(--font-code, ui-monospace, monospace);
 }
 
 .version-switcher__badge {
@@ -289,7 +289,7 @@ onUnmounted(() => {
 
 .version-switcher__option-label {
   flex: 1;
-  font-family: var(--font-mono, ui-monospace, monospace);
+  font-family: var(--font-code, ui-monospace, monospace);
 }
 
 .version-switcher__option-badge {

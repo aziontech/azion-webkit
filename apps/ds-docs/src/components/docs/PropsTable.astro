@@ -44,7 +44,7 @@ const sortedRows = [...rows].sort((a, b) => {
       <tbody>
         {sortedRows.map((prop, index) => (
           <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-            <td class="py-3 px-4 font-mono text-primary-600">
+            <td class="py-3 px-4 font-code text-gray-600">
               <span class="flex items-center gap-1">
                 {prop.required && (
                   <span class="text-red-500" title="Required">*</span>
@@ -52,12 +52,12 @@ const sortedRows = [...rows].sort((a, b) => {
                 {prop.name}
               </span>
             </td>
-            <td class="py-3 px-4 font-mono text-text-secondary text-xs">
+            <td class="py-3 px-4 font-code text-text-secondary text-xs">
               <code class="bg-gray-100 px-1.5 py-0.5 rounded">
                 {prop.type}
               </code>
             </td>
-            <td class="py-3 px-4 font-mono text-text-tertiary text-xs">
+            <td class="py-3 px-4 font-code text-text-tertiary text-xs">
               {prop.default ? (
                 <code class="bg-gray-100 px-1.5 py-0.5 rounded">
                   {prop.default}

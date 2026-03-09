@@ -73,7 +73,7 @@ const bgClass = computed(() => {
     <div v-if="isCodeVisible && $slots.code" class="demo-preview__code mt-3">
       <div class="bg-gray-900 rounded-lg overflow-hidden">
         <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
-          <span class="text-xs text-gray-400 font-mono">{{ codeLanguage }}</span>
+          <span class="text-xs text-gray-400 font-code">{{ codeLanguage }}</span>
           <button class="text-xs text-gray-400 hover:text-white transition-colors">
             Copy
           </button>

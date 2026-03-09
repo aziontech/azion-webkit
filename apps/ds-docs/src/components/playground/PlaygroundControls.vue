@@ -127,7 +127,7 @@ function resetToDefaults() {
   font-size: 0.875rem;
   font-weight: 600;
   color: #111827;
-  margin: 0;
+  margin: 0 !important;
 }
 
 .playground-controls__reset {
@@ -157,13 +157,13 @@ function resetToDefaults() {
 }
 
 .playground-controls__category {
-  font-size: 0.75rem;
+  font-size: 0.75rem !important;
   font-weight: 600;
-  color: #6b7280;
+  color: #6b7280 !important;
   text-transform: uppercase;
   font-family: Proto Mono;
   letter-spacing: 0.05em;
-  margin: 0;
+  margin: 0 !important;
 }
 
 .playground-controls__items {

@@ -180,7 +180,7 @@
 
   /* Code block styles */
   .code-block {
-    @apply relative my-6 rounded-lg overflow-hidden;
+    @apply relative overflow-hidden;
   }
 
   .code-block pre {
@@ -188,7 +188,7 @@
   }
 
   .code-block__filename {
-    @apply absolute top-0 right-0 px-3 py-1 text-xs text-gray-400 bg-gray-800 rounded-bl;
+    @apply absolute top-0 right-0 px-3 py-1 text-xs text-gray-400 bg-gray-800;
   }
 }
 
