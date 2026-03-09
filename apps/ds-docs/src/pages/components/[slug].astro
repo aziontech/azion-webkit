@@ -5,24 +5,32 @@
  * Handles all pages under /components/[slug]
  */
 
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import ComponentPageLayout from '../../layouts/ComponentPageLayout.astro';
 import { getBreadcrumbContext } from '../../lib/content';
 import { markdownComponents } from '../../components/docs';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('components');
+  const allContent = await getCollection('v1-en');
+  // Filter to only get components (entries where id starts with 'components/')
+  const entries = allContent.filter(entry => {
+    const id = entry.id || '';
+    const idParts = id.split('/');
+    return idParts[0] === 'components' && idParts.length > 1 && !idParts[1].startsWith('index.');
+  });
   return entries.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id.replace('components/', '').replace(/\.(md|mdx)$/, '') },
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 
 // Get breadcrumb context
-const breadcrumb = await getBreadcrumbContext(`/components/${entry.slug === 'index' ? '' : entry.slug}`);
+const entryId = entry.id.replace(/\.(md|mdx)$/, '');
+const slugFromId = entryId.replace('components/', '');
+const breadcrumb = await getBreadcrumbContext(`/components/${slugFromId === 'index' ? '' : slugFromId}`);
 
 // Extract frontmatter data
 const data = entry.data;

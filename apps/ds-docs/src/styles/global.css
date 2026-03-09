@@ -5,6 +5,107 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Azion Fonts - Roboto Mono */
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('https://fonts.azion.com/roboto-mono/roboto-mono-light.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('https://fonts.azion.com/roboto-mono/roboto-mono-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('https://fonts.azion.com/roboto-mono/roboto-mono-medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('https://fonts.azion.com/roboto-mono/roboto-mono-semi-bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('https://fonts.azion.com/roboto-mono/roboto-mono-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Sora */
+
+@font-face {
+    font-family: 'Sora';
+    src: url('https://fonts.azion.com/sora/Sora-VariableFont_wght.ttf') format('truetype');
+    font-weight: 200 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Proto Mono */
+
+@font-face {
+    font-family: 'Proto Mono';
+    src: url('https://fonts.azion.com/proto-mono/ProtoMono-Light.eot');
+    src: url('https://fonts.azion.com/proto-mono/ProtoMono-Light.eot?#iefix') format('embedded-opentype'),
+        url('https://fonts.azion.com/proto-mono/ProtoMono-Light.woff2') format('woff2'),
+        url('https://fonts.azion.com/proto-mono/ProtoMono-Light.woff') format('woff'),
+        url('https://fonts.azion.com/proto-mono/ProtoMono-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proto Mono';
+    src: url('https://fonts.azion.com/proto-mono/ProtoMono-Regular.eot');
+    src: url('https://fonts.azion.com/proto-mono/ProtoMono-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://fonts.azion.com/proto-mono/ProtoMono-Regular.woff2') format('woff2'),
+        url('https://fonts.azion.com/proto-mono/ProtoMono-Regular.woff') format('woff'),
+        url('https://fonts.azion.com/proto-mono/ProtoMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proto Mono';
+    src: url('https://fonts.azion.com/proto-mono/ProtoMono-Medium.eot');
+    src: url('https://fonts.azion.com/proto-mono/ProtoMono-Medium.eot?#iefix') format('embedded-opentype'),
+        url('https://fonts.azion.com/proto-mono/ProtoMono-Medium.woff2') format('woff2'),
+        url('https://fonts.azion.com/proto-mono/ProtoMono-Medium.woff') format('woff'),
+        url('https://fonts.azion.com/proto-mono/ProtoMono-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proto Mono';
+    src: url('https://fonts.azion.com/proto-mono/ProtoMono-SemiBold.eot');
+    src: url('https://fonts.azion.com/proto-mono/ProtoMono-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://fonts.azion.com/proto-mono/ProtoMono-SemiBold.woff2') format('woff2'),
+        url('https://fonts.azion.com/proto-mono/ProtoMono-SemiBold.woff') format('woff'),
+        url('https://fonts.azion.com/proto-mono/ProtoMono-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Base styles */
 @layer base {
   html {

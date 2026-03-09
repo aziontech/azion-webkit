@@ -1,0 +1,257 @@
+---
+title: Button
+description: Botões acionam ações e eventos quando os usuários interagem com eles.
+navLabel: Button
+order: 1
+type: component
+category: form
+status: stable
+since: 1.0.0
+component: AzButton
+source: https://github.com/aziontech/webkit/tree/main/packages/components/src/Button
+storybook: https://storybook.azion.com/components/button
+figma: https://figma.com/file/azion-design-system/components/button
+related:
+  - Input
+  - Select
+  - IconButton
+tags:
+  - action
+  - form
+  - interactive
+language: pt
+translatedFrom: en
+translationStatus: complete
+anatomy:
+  - label: Container
+    description: A área clicável com estilo de fundo e borda
+  - label: Label
+    description: O conteúdo de texto que descreve a ação
+  - label: Icon (opcional)
+    description: Um ícone opcional para ênfase visual antes ou depois do label
+accessibility:
+  keyboard:
+    - keys: Tab
+      action: Move o foco para o botão
+    - keys: Enter
+      action: Ativa o botão quando focado
+    - keys: Space
+      action: Ativa o botão quando focado
+  aria:
+    - attribute: aria-disabled="true"
+      usage: Use em vez do atributo disabled para leitores de tela anunciarem o estado desabilitado
+    - attribute: aria-label
+      usage: Obrigatório para botões apenas com ícone para fornecer nome acessível
+    - attribute: aria-busy="true"
+      usage: Quando o botão está em estado de carregamento
+  wcag:
+    - "2.1.1 Keyboard"
+    - "4.1.2 Name, Role, Value"
+api:
+  props:
+    - name: variant
+      type: "'primary' | 'secondary' | 'destructive' | 'ghost'"
+      default: "'primary'"
+      required: false
+      description: Variante de estilo visual do botão
+    - name: size
+      type: "'sm' | 'md' | 'lg'"
+      default: "'md'"
+      required: false
+      description: Tamanho do botão
+    - name: disabled
+      type: "boolean"
+      default: "false"
+      required: false
+      description: Se o botão está desabilitado
+    - name: loading
+      type: "boolean"
+      default: "false"
+      required: false
+      description: Mostra spinner de carregamento e desabilita interação
+    - name: icon
+      type: "string"
+      default: "undefined"
+      required: false
+      description: Nome do ícone para exibir antes do label
+    - name: iconPosition
+      type: "'left' | 'right'"
+      default: "'left'"
+      required: false
+      description: Posição do ícone relativa ao label
+    - name: fullWidth
+      type: "boolean"
+      default: "false"
+      required: false
+      description: Se o botão ocupa toda a largura do container
+  slots:
+    - name: default
+      description: Conteúdo do label do botão
+    - name: icon-left
+      description: Ícone customizado antes do label
+      props: "iconClass: string"
+    - name: icon-right
+      description: Ícone customizado após o label
+      props: "iconClass: string"
+  events:
+    - name: click
+      payload: "MouseEvent"
+      description: Disparado quando o botão é clicado e não está desabilitado
+---
+
+import { ExampleBlock, Callout, StateGrid, Playground } from '@components/docs';
+import { AzButton } from '@components/demo';
+import { buttonProps } from '@components/demo/props-metadata';
+
+## Visão Geral
+
+Botões são elementos interativos que disparam ações quando clicados ou tocados. Eles comunicam ações que os usuários podem realizar e são tipicamente colocados em toda a interface, desde formulários até diálogos e navegação.
+
+O componente Button fornece uma maneira consistente e acessível de disparar ações em toda sua aplicação.
+
+## Quando Usar
+
+Use botões para:
+
+- Disparar ações principais (Enviar, Salvar, Continuar)
+- Navegar para diferentes visualizações ou páginas
+- Alternar estados ou configurações
+- Disparar ações secundárias (Cancelar, Excluir)
+- Submeter formulários
+
+<Callout type="tip" title="Escolhendo a variante certa">
+  Use **primary** para a ação principal, **secondary** para ações alternativas, **destructive** para ações perigosas, e **ghost** para ações menos proeminentes.
+</Callout>
+
+## Exemplos
+
+### Botão Primário
+
+Use para a ação principal em um contexto.
+
+<ExampleBlock 
+  title="Variante Primary"
+  description="O estilo padrão de botão para ações principais"
+  code={`<AzButton variant="primary">Botão Primário</AzButton>`}
+>
+  <button class="px-4 py-2 bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors font-medium">
+    Botão Primário
+  </button>
+</ExampleBlock>
+
+### Botão Secundário
+
+Use para ações secundárias ou alternativas.
+
+<ExampleBlock 
+  title="Variante Secondary"
+  description="Para ações alternativas ou menos proeminentes"
+  code={`<AzButton variant="secondary">Botão Secundário</AzButton>`}
+>
+  <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors border border-gray-300 font-medium">
+    Botão Secundário
+  </button>
+</ExampleBlock>
+
+### Botão Destrutivo
+
+Use para ações destrutivas ou irreversíveis.
+
+<ExampleBlock 
+  title="Variante Destructive"
+  description="Para ações perigosas como excluir ou remover"
+  code={`<AzButton variant="destructive">Excluir</AzButton>`}
+>
+  <button class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors font-medium">
+    Excluir
+  </button>
+</ExampleBlock>
+
+### Tamanhos de Botão
+
+<ExampleBlock 
+  title="Variantes de tamanho"
+  description="Disponível nos tamanhos pequeno, médio e grande"
+  code={`<AzButton size="sm">Pequeno</AzButton>
+<AzButton size="md">Médio</AzButton>
+<AzButton size="lg">Grande</AzButton>`}
+>
+  <div class="flex items-center gap-3">
+    <button class="px-3 py-1.5 text-sm bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors font-medium">
+      Pequeno
+    </button>
+    <button class="px-4 py-2 bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors font-medium">
+      Médio
+    </button>
+    <button class="px-6 py-3 text-lg bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors font-medium">
+      Grande
+    </button>
+  </div>
+</ExampleBlock>
+
+## Estados
+
+<StateGrid columns={4}>
+  <button slot="default" class="px-4 py-2 bg-primary-500 text-white rounded-md font-medium">Botão</button>
+  <button slot="hover" class="px-4 py-2 bg-primary-600 text-white rounded-md font-medium">Botão</button>
+  <button slot="focus" class="px-4 py-2 bg-primary-500 text-white rounded-md font-medium ring-2 ring-primary-300 ring-offset-2">Botão</button>
+  <button slot="disabled" class="px-4 py-2 bg-gray-300 text-gray-500 rounded-md font-medium cursor-not-allowed" disabled>Botão</button>
+</StateGrid>
+
+## Faça e Não Faça
+
+<DoDont title="Diretrizes de uso">
+  <template v-slot:do>
+    <p class="text-sm mb-2">Use botões para itens acionáveis:</p>
+    <button class="px-4 py-2 bg-primary-500 text-white rounded-md text-sm">Enviar Formulário</button>
+  </template>
+  <template v-slot:dont>
+    <p class="text-sm mb-2">Não use botões para navegação:</p>
+    <button class="px-4 py-2 bg-primary-500 text-white rounded-md text-sm">Ir para Dashboard</button>
+    <p class="text-xs text-red-600 mt-1">Use um link em vez disso</p>
+  </template>
+</DoDont>
+
+<DoDont>
+  <template v-slot:do>
+    <p class="text-sm mb-2">Use rótulos claros e orientados a ação:</p>
+    <button class="px-4 py-2 bg-primary-500 text-white rounded-md text-sm">Salvar Alterações</button>
+  </template>
+  <template v-slot:dont>
+    <p class="text-sm mb-2">Não use rótulos vagos:</p>
+    <button class="px-4 py-2 bg-primary-500 text-white rounded-md text-sm">Clique Aqui</button>
+  </template>
+</DoDont>
+
+## Playground Interativo
+
+Explore o componente Button interativamente. Ajuste as props e veja as alterações em tempo real.
+
+<Playground
+  client:load
+  component={AzButton}
+  component-name="AzButton"
+  props={buttonProps}
+  slot-content="Clique aqui"
+/>
+
+## Acessibilidade
+
+### Navegação por Teclado
+
+| Tecla | Ação |
+|-------|------|
+| Tab | Move o foco para o botão |
+| Enter | Ativa o botão quando focado |
+| Space | Ativa o botão quando focado |
+
+### ARIA
+
+- Use `aria-disabled="true"` em vez do atributo `disabled` para leitores de tela
+- Use `aria-label` para botões apenas com ícone
+- Use `aria-busy="true"` quando o botão estiver carregando
+
+## Próximos Passos
+
+- [Fieldset](/pt/components/fieldset) - Agrupamento de campos de formulário
+- [Foundations](/pt/foundations) - Princípios de design

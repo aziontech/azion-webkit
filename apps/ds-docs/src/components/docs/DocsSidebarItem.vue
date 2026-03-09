@@ -33,7 +33,7 @@ const itemLink = computed(() => {
 <template>
   <a
     :href="itemLink"
-    class="sidebar-item block px-3 py-1.5 text-sm rounded-md transition-colors"
+    class="sidebar-item block px-3 py-1.5 text-sm transition-colors"
     :class="[
       isActive
         ? 'bg-primary-50 text-primary-700 font-medium'
@@ -55,6 +55,6 @@ const itemLink = computed(() => {
 }
 
 .sidebar-item[aria-current='page'] {
-  border-left-color: var(--color-primary-500, #3b82f6);
+  border-left-color: var(--color-primary-500);
 }
 </style>

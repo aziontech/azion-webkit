@@ -9,17 +9,17 @@ export default {
       colors: {
         // Primary brand colors
         primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
-          950: '#172554',
+          50: '#fff5ef',
+          100: '#ffe7d8',
+          200: '#ffcfb3',
+          300: '#ffb180',
+          400: '#ff8e4d',
+          500: '#fe601f',
+          600: '#d94a03',
+          700: '#b03c02',
+          800: '#8a2f02',
+          900: '#692402',
+          950: '#401602',
         },
         // Neutral colors for documentation
         surface: {
@@ -44,7 +44,8 @@ export default {
       },
       fontFamily: {
         sans: ['Sora', 'system-ui', 'sans-serif'],
-        mono: ['Roboto Mono', 'monospace'],
+        mono: ['Proto Mono', 'monospace'],
+        code: ['Roboto Mono', 'monospace'],
       },
       typography: (theme) => ({
         DEFAULT: {

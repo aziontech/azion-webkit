@@ -9,6 +9,7 @@
 import { computed } from 'vue';
 import type { NavigationTree, NavItem, NavSection } from '@/lib/content/types';
 import DocsSidebarSection from './DocsSidebarSection.vue';
+import DocsIcon from './DocsIcon.vue';
 import { getDefaultLanguage } from '@/config';
 import { t } from '@/lib/i18n';
 
@@ -60,7 +61,7 @@ const brandName = computed(() => {
       <!-- Logo/Brand -->
       <div class="mb-6">
         <a :href="homeLink" class="flex items-center gap-2 text-lg font-semibold text-text-primary">
-          <span class="text-primary-600">Azion</span>
+          <DocsIcon name="ai-azion" size="xl" class="text-primary-600" decorative />
           <span class="text-text-secondary">{{ brandName }}</span>
         </a>
       </div>

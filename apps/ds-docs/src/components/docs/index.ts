@@ -12,6 +12,9 @@ export { default as MetadataLinks } from './MetadataLinks.vue';
 export { default as SectionBlock } from './SectionBlock.astro';
 export { default as RelatedLinks } from './RelatedLinks.astro';
 
+// Icons
+export { default as DocsIcon } from './DocsIcon.vue';
+
 // Navigation
 export { default as DocsSidebar } from './DocsSidebar.vue';
 export { default as DocsSidebarSection } from './DocsSidebarSection.vue';
@@ -71,6 +74,8 @@ import StateGrid from './StateGrid.astro';
 import DoDont from './DoDont.astro';
 import RelatedLinks from './RelatedLinks.astro';
 import Callout from './Callout.astro';
+import Playground from '../playground/Playground.vue';
+import { AzButton, AzFieldset } from '../demo';
 
 export const markdownComponents = {
   DemoPreview,
@@ -86,6 +91,10 @@ export const markdownComponents = {
   DoDont,
   RelatedLinks,
   Callout,
+  Playground,
+  // Demo components for MDX usage
+  AzButton,
+  AzFieldset,
   // Aliases for convenience
   Demo: DemoPreview,
   Section: SectionBlock,

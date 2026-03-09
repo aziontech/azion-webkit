@@ -73,7 +73,7 @@ function isItemActive(item: NavItem): boolean {
     <!-- Section Link -->
     <a
       :href="sectionLink"
-      class="section-link block px-3 py-2 text-sm rounded-md transition-colors"
+      class="section-link block px-3 py-2 text-sm transition-colors"
       :class="[
         isActive
           ? 'bg-primary-50 text-primary-700 font-medium'

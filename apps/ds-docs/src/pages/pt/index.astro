@@ -1,50 +1,50 @@
 ---
-import DocsLayout from '../layouts/DocsLayout.astro';
+import DocsLayout from '../../layouts/DocsLayout.astro';
 
 /**
- * Homepage
+ * Portuguese Homepage
  * 
- * Landing page for the Azion Design System documentation.
+ * Landing page for the Azion Design System documentation in Portuguese.
  */
 
 const heroLinks = [
-  { href: '/components', label: 'Components', description: 'Explore our component library' },
-  { href: '/foundations', label: 'Foundations', description: 'Learn the design principles' },
+  { href: '/pt/components', label: 'Componentes', description: 'Explore nossa biblioteca de componentes' },
+  { href: '/pt/foundations', label: 'Fundamentos', description: 'Aprenda os princípios de design' },
 ];
 
 const features = [
   {
     icon: '🎨',
     title: 'Design Tokens',
-    description: 'Consistent design language with tokens for colors, typography, spacing, and more.',
+    description: 'Linguagem de design consistente com tokens para cores, tipografia, espaçamento e mais.',
   },
   {
     icon: '🧩',
-    title: 'Components',
-    description: 'Production-ready Vue components built with accessibility in mind.',
+    title: 'Componentes',
+    description: 'Componentes Vue prontos para produção construídos com acessibilidade em mente.',
   },
   {
     icon: '📱',
-    title: 'Responsive',
-    description: 'Components that work seamlessly across all screen sizes and devices.',
+    title: 'Responsivo',
+    description: 'Componentes que funcionam perfeitamente em todos os tamanhos de tela e dispositivos.',
   },
   {
     icon: '♿',
-    title: 'Accessible',
-    description: 'WCAG compliant components with keyboard navigation and screen reader support.',
+    title: 'Acessível',
+    description: 'Componentes compatíveis com WCAG com navegação por teclado e suporte a leitores de tela.',
   },
 ];
 ---
 
-<DocsLayout title="Home">
+<DocsLayout title="Início">
   <!-- Hero Section -->
   <section class="mb-12">
     <h1 class="text-4xl font-bold tracking-tight mb-4">
       Azion Design System
     </h1>
     <p class="text-xl text-text-secondary mb-8 max-w-2xl">
-      Build consistent, accessible, and beautiful user interfaces with our comprehensive design system. 
-      Designed for Azion's edge computing platform.
+      Construa interfaces de usuário consistentes, acessíveis e bonitas com nosso design system abrangente. 
+      Projetado para a plataforma de edge computing da Azion.
     </p>
     
     <div class="flex flex-wrap gap-4">
@@ -66,7 +66,7 @@ const features = [
   
   <!-- Features Section -->
   <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-6">Why use our Design System?</h2>
+    <h2 class="text-2xl font-semibold mb-6">Por que usar nosso Design System?</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {features.map((feature) => (
         <div class="p-6 bg-surface-subtle rounded-lg">
@@ -80,34 +80,34 @@ const features = [
   
   <!-- Quick Start Section -->
   <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-6">Quick Start</h2>
+    <h2 class="text-2xl font-semibold mb-6">Início Rápido</h2>
     <div class="bg-gray-900 rounded-lg p-6">
-      <p class="text-gray-400 mb-4">Install the design system packages:</p>
+      <p class="text-gray-400 mb-4">Instale os pacotes do design system:</p>
       <pre class="text-sm text-gray-100"><code>npm install @aziontech/components @aziontech/icons @aziontech/theme</code></pre>
     </div>
   </section>
   
   <!-- Status Section -->
   <section>
-    <h2 class="text-2xl font-semibold mb-6">Project Status</h2>
+    <h2 class="text-2xl font-semibold mb-6">Status do Projeto</h2>
     <div class="space-y-4">
       <div class="flex items-center gap-3">
         <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-medium rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
-          ✓ Stable
+          ✓ Estável
         </span>
-        <span class="text-text-secondary">Icons package is production-ready</span>
+        <span class="text-text-secondary">O pacote de ícones está pronto para produção</span>
       </div>
       <div class="flex items-center gap-3">
         <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-medium rounded-full bg-blue-50 text-blue-700 border border-blue-200">
           β Beta
         </span>
-        <span class="text-text-secondary">Components package in active development</span>
+        <span class="text-text-secondary">Pacote de componentes em desenvolvimento ativo</span>
       </div>
       <div class="flex items-center gap-3">
         <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-medium rounded-full bg-gray-50 text-gray-600 border border-gray-200">
-          ○ Planned
+          ○ Planejado
         </span>
-        <span class="text-text-secondary">Theme package coming soon</span>
+        <span class="text-text-secondary">Pacote de tema em breve</span>
       </div>
     </div>
   </section>

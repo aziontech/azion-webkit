@@ -88,13 +88,29 @@ export interface ResolveOptions {
 
 /**
  * Content collection entry type
+ * Matches Astro's content collection entry structure
  */
 interface ContentEntry {
   id: string;
-  slug: string;
+  collection: string;
   data: Record<string, unknown>;
   body?: string;
-  render?: () => Promise<{ Content: unknown; headings: unknown[] }>;
+  rendered?: {
+    html: string;
+  };
+  filePath?: string;
+}
+
+/**
+ * Valid collection names based on content/config.ts
+ */
+type CollectionName = 'v1-en' | 'v1-pt';
+
+/**
+ * Get the collection name for a version and language
+ */
+function getCollectionName(version: string, language: string): CollectionName {
+  return `${version}-${language}` as CollectionName;
 }
 
 /**
@@ -249,6 +265,9 @@ async function resolveWithFallback(
 
 /**
  * Get a content entry from the collection
+ * 
+ * Content is organized by version-language (e.g., 'v1-en', 'v1-pt')
+ * Each collection contains all content types organized by folder structure
  */
 async function getContentEntry(
   version: string,
@@ -260,33 +279,24 @@ async function getContentEntry(
   if (!section) return null;
 
   try {
-    // For now, we use the existing flat content structure
-    // When content is restructured for version/language, this will be updated
-    const collectionName = section.collectionName as keyof typeof collections;
-    const entries = await getCollection(collectionName as 'components' | 'foundations' | 'tokens' | 'blocks' | 'patterns' | 'templates' | 'get-started' | 'icons' | 'contributing');
+    const collectionName = getCollectionName(version, language);
+    const entries = await getCollection(collectionName);
     
-    // Find entry by slug
-    const entry = entries.find((e) => e.slug === slug);
+    // Find entry by matching the section folder and slug
+    // Entry IDs are like 'components/button.md' or 'foundations/color.md'
+    const entry = entries.find((e) => {
+      const idParts = e.id.split('/');
+      const entrySection = idParts[0];
+      const entrySlug = idParts.slice(1).join('/').replace(/\.(md|mdx)$/, '');
+      return entrySection === sectionId && entrySlug === slug;
+    });
+    
     return entry as ContentEntry | null;
   } catch (error) {
     console.error(`Error getting content entry: ${sectionId}/${slug}`, error);
     return null;
   }
 }
-
-// Collection names for type safety
-const collections = {
-  components: true,
-  foundations: true,
-  tokens: true,
-  blocks: true,
-  patterns: true,
-  templates: true,
-  'get-started': true,
-  icons: true,
-  contributing: true,
-  playground: true,
-};
 
 /**
  * Build the URL for a documentation page
@@ -381,20 +391,23 @@ export async function getAvailablePages(
   const resolvedLanguage = language || getDefaultLanguage();
   const pages: Array<{ section: string; slug: string }> = [];
 
-  for (const section of SECTIONS) {
-    try {
-      const collectionName = section.collectionName as 'components' | 'foundations' | 'tokens' | 'blocks' | 'patterns' | 'templates' | 'get-started' | 'icons' | 'contributing';
-      const entries = await getCollection(collectionName);
+  try {
+    const collectionName = getCollectionName(resolvedVersion, resolvedLanguage);
+    const entries = await getCollection(collectionName);
+    
+    for (const entry of entries) {
+      // Parse section and slug from entry ID
+      const idParts = entry.id.split('/');
+      const section = idParts[0];
+      const slug = idParts.slice(1).join('/').replace(/\.(md|mdx)$/, '');
       
-      for (const entry of entries) {
-        pages.push({
-          section: section.id,
-          slug: entry.slug,
-        });
-      }
-    } catch (error) {
-      console.error(`Error getting pages for section ${section.id}:`, error);
+      pages.push({
+        section,
+        slug,
+      });
     }
+  } catch (error) {
+    console.error('Error getting available pages:', error);
   }
 
   return pages;
@@ -433,36 +446,33 @@ export async function getDocStaticPaths(): Promise<
   const currentVersion = getCurrentVersion();
   const defaultLanguage = getDefaultLanguage();
 
-  for (const section of SECTIONS) {
-    try {
-      const collectionName = section.collectionName as 'components' | 'foundations' | 'tokens' | 'blocks' | 'patterns' | 'templates' | 'get-started' | 'icons' | 'contributing';
-      const entries = await getCollection(collectionName);
+  // Get entries from the default language collection
+  try {
+    const collectionName = getCollectionName(currentVersion, defaultLanguage);
+    const entries = await getCollection(collectionName);
 
-      for (const entry of entries) {
-        // Default language and current version (short URL)
-        paths.push({
-          params: { section: section.id, slug: entry.slug },
-          props: {
-            entry: entry as ContentEntry,
-            section,
-            version: currentVersion,
-            language: defaultLanguage,
-          },
-        });
+    for (const entry of entries) {
+      // Parse section and slug from entry ID
+      const idParts = entry.id.split('/');
+      const sectionId = idParts[0];
+      const slug = idParts.slice(1).join('/').replace(/\.(md|mdx)$/, '');
+      
+      const section = getSectionById(sectionId);
+      if (!section) continue;
 
-        // Future: Add paths for other languages
-        // for (const lang of getAllLanguages()) {
-        //   if (!isDefaultLanguage(lang)) {
-        //     paths.push({
-        //       params: { lang, section: section.id, slug: entry.slug },
-        //       props: { entry, section, version: currentVersion, language: lang },
-        //     });
-        //   }
-        // }
-      }
-    } catch (error) {
-      console.error(`Error generating static paths for ${section.id}:`, error);
+      // Default language and current version (short URL)
+      paths.push({
+        params: { section: sectionId, slug },
+        props: {
+          entry: entry as ContentEntry,
+          section,
+          version: currentVersion,
+          language: defaultLanguage,
+        },
+      });
     }
+  } catch (error) {
+    console.error('Error generating static paths:', error);
   }
 
   return paths;

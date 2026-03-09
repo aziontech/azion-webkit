@@ -3,6 +3,11 @@ import vue from '@astrojs/vue';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import { searchIndexIntegration } from './src/integrations/search-index';
+import { fileURLToPath } from 'node:url';
+import { dirname, resolve } from 'node:path';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const monorepoRoot = resolve(__dirname, '..', '..');
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,12 +27,16 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        '@': '/src',
-        '@components': '/src/components',
-        '@layouts': '/src/layouts',
-        '@lib': '/src/lib',
+        '@': resolve(__dirname, 'src'),
+        '@components': resolve(__dirname, 'src/components'),
+        '@layouts': resolve(__dirname, 'src/layouts'),
+        '@lib': resolve(__dirname, 'src/lib'),
+        // Alias for icons package to ensure proper resolution from monorepo
+        '@aziontech/icons': resolve(monorepoRoot, 'packages/icons/dist/index.css'),
       },
     },
+    // Ensure woff2 font files are properly handled
+    assetsInclude: ['**/*.woff2'],
   },
   
   // Markdown configuration

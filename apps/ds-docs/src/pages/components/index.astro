@@ -14,7 +14,15 @@ import { componentStatusData } from '../../data/component-status';
  * Overview (component cards) and Status (progress tracking).
  */
 
-const components = await getCollection('components');
+const allContent = await getCollection('v1-en');
+
+// Filter to only get components (not other content types)
+const components = allContent.filter(item => {
+  // Use id instead of slug for the new content collections API
+  const id = item.id || '';
+  const idParts = id.split('/');
+  return idParts[0] === 'components' && idParts.length > 1 && idParts[1] !== 'index.md' && idParts[1] !== 'index.mdx';
+});
 
 // Get breadcrumb context for this page
 const breadcrumb = await getBreadcrumbContext('/components');
@@ -61,11 +69,14 @@ const categoryLabels: Record<string, string> = {
         <section class="mb-10">
           <h2 class="text-xl font-semibold mb-4">{categoryLabels[category] || category}</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {items.map((component) => (
-              <a
-                href={`/components/${component.slug}`}
-                class="group p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50/50 transition-colors"
-              >
+            {items.map((component) => {
+              // Extract component name from id (e.g., 'components/button.mdx' -> 'button')
+              const componentName = component.id.replace(/\.(md|mdx)$/, '').split('/').pop() || component.id;
+              return (
+                <a
+                  href={`/components/${componentName}`}
+                  class="group p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50/50 transition-colors"
+                >
                 <div class="flex items-center justify-between mb-2">
                   <h3 class="font-medium text-text-primary group-hover:text-primary-700">
                     {component.data.title}
@@ -85,7 +96,7 @@ const categoryLabels: Record<string, string> = {
                   {component.data.description}
                 </p>
               </a>
-            ))}
+            )})}
           </div>
         </section>
       ))}

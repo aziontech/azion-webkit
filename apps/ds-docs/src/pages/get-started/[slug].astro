@@ -5,24 +5,28 @@
  * Handles all pages under /get-started/[slug]
  */
 
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import DocPageLayout from '../../layouts/DocPageLayout.astro';
 import { getBreadcrumbContext } from '../../lib/content';
 import { markdownComponents } from '../../components/docs';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('get-started');
+  const allContent = await getCollection('v1-en');
+  // Filter to only get get-started entries
+  const entries = allContent.filter(entry => (entry.id || '').startsWith('get-started/'));
   return entries.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id.replace('get-started/', '').replace(/\.(md|mdx)$/, '') },
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 
 // Get breadcrumb context
-const breadcrumb = await getBreadcrumbContext(`/get-started/${entry.slug === 'index' ? '' : entry.slug}`);
+const entryId = entry.id.replace(/\.(md|mdx)$/, '');
+const slugFromId = entryId.replace('get-started/', '');
+const breadcrumb = await getBreadcrumbContext(`/get-started/${slugFromId === 'index' ? '' : slugFromId}`);
 ---
 
 <DocPageLayout

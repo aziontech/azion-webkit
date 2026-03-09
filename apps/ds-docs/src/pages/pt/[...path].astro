@@ -13,7 +13,7 @@
  * - /pt/components/button
  */
 
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import ComponentPageLayout from '../../layouts/ComponentPageLayout.astro';
 import DocPageLayout from '../../layouts/DocPageLayout.astro';
 import { getBreadcrumbContext } from '../../lib/content';
@@ -28,26 +28,27 @@ export async function getStaticPaths() {
   }> = [];
 
   // Get all Portuguese content from the nested structure
-  const ptContent = await getCollection('pt');
+  const ptContent = await getCollection('v1-pt');
   
   for (const entry of ptContent) {
-    // The slug in 'pt' collection includes the subfolder structure
-    // e.g., 'get-started/index', 'components/button'
-    const slugParts = entry.slug.split('/');
+    // The id in 'v1-pt' collection includes the subfolder structure
+    // e.g., 'get-started/index.md', 'components/button.mdx'
+    const id = entry.id || '';
+    const idParts = id.replace(/\.(md|mdx)$/, '').split('/');
     
     // Build the path parameter
     // For 'get-started/index' -> path: 'get-started'
     // For 'components/button' -> path: 'components/button'
     let pathValue: string;
-    if (slugParts[slugParts.length - 1] === 'index') {
+    if (idParts[idParts.length - 1] === 'index') {
       // Remove 'index' from the end
-      pathValue = slugParts.slice(0, -1).join('/') || 'index';
+      pathValue = idParts.slice(0, -1).join('/') || 'index';
     } else {
-      pathValue = entry.slug;
+      pathValue = idParts.join('/');
     }
     
     // Determine the section (first part of the path)
-    const section = slugParts[0];
+    const section = idParts[0];
     
     paths.push({
       params: { path: pathValue },
@@ -59,10 +60,12 @@ export async function getStaticPaths() {
 }
 
 const { entry, section } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 
 // Get breadcrumb context
-const fullPath = `/pt/${entry.slug === 'index' ? '' : entry.slug.replace(/\/index$/, '')}`;
+const entryId = entry.id.replace(/\.(md|mdx)$/, '');
+const slugFromId = entryId.replace(/\/index$/, '');
+const fullPath = `/pt/${slugFromId === 'index' ? '' : slugFromId}`;
 const breadcrumb = await getBreadcrumbContext(fullPath);
 
 // Extract frontmatter data

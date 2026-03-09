@@ -8,8 +8,9 @@ import { getBreadcrumbContext } from '../../lib/content';
  * Get Started Index Page
  */
 
-const entry = await getCollection('get-started');
-const indexEntry = entry.find((e) => e.slug === 'index');
+const allContent = await getCollection('v1-en');
+const getStartedEntries = allContent.filter(e => (e.id || '').startsWith('get-started/'));
+const indexEntry = getStartedEntries.find((e) => e.id === 'get-started/index.md' || e.id === 'get-started/index.mdx');
 
 if (!indexEntry) {
   return Astro.redirect('/');

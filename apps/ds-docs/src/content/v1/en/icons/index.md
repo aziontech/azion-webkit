@@ -6,8 +6,6 @@ order: 1
 type: icon
 ---
 
-# Icons
-
 The Azion Design System includes two icon libraries:
 
 - **Azion Icons** - Custom icons designed for Azion products

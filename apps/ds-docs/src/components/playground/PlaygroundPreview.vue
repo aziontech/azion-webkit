@@ -22,6 +22,8 @@ interface Props {
   center?: boolean;
   /** Minimum height */
   minHeight?: string;
+  /** Slot content for the component */
+  slotContent?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -29,6 +31,7 @@ const props = withDefaults(defineProps<Props>(), {
   surface: 'neutral',
   center: true,
   minHeight: '120px',
+  slotContent: '',
 });
 
 // Compute surface classes
@@ -74,7 +77,9 @@ const containerStyle = computed(() => ({
         :is="component"
         v-if="component"
         v-bind="propsValues"
-      />
+      >
+        {{ slotContent }}
+      </component>
       
       <!-- Empty state when no component -->
       <div

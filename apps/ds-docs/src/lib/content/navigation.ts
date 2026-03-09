@@ -110,15 +110,25 @@ export async function getSectionNavigation(sectionId: string): Promise<NavSectio
   if (!section) return null;
 
   try {
-    // Dynamic collection access
-    const collectionName = section.collectionName as 'components' | 'foundations' | 'tokens' | 'blocks' | 'patterns' | 'templates' | 'get-started' | 'icons' | 'contributing';
-    const entries = await getCollection(collectionName);
+    // Get English content collection and filter by section
+    const entries = await getCollection('v1-en');
     
-    const items = entries
-      .map((entry) => extractNavItem(
-        { slug: entry.slug, data: entry.data as NavFrontmatter },
-        section
-      ))
+    // Filter entries that belong to this section (entry.id starts with sectionId + '/')
+    const sectionEntries = entries.filter((entry) => {
+      const id = entry.id || '';
+      return id.startsWith(sectionId + '/') || id === sectionId;
+    });
+    
+    const items = sectionEntries
+      .map((entry) => {
+        // Extract slug from entry.id (e.g., 'components/button.md' -> 'button')
+        const id = entry.id || '';
+        const slug = id.replace(new RegExp(`^${sectionId}/`), '').replace(/\.(md|mdx)$/, '');
+        return extractNavItem(
+          { slug, data: entry.data as NavFrontmatter },
+          section
+        );
+      })
       .filter((item) => !item.hidden)
       .sort(sortNavItems);
 

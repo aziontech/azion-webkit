@@ -2,7 +2,8 @@
 /**
  * Icons Page
  * 
- * Handles the /icons route.
+ * Handles the /icons route with information about the icon library
+ * and a link to the external Icon Gallery.
  */
 
 import { getCollection } from 'astro:content';
@@ -11,8 +12,9 @@ import { getBreadcrumbContext } from '../../lib/content';
 import { markdownComponents } from '../../components/docs';
 
 // Get the icons index page
-const entries = await getCollection('icons');
-const indexEntry = entries.find((e) => e.slug === 'index');
+const allContent = await getCollection('v1-en');
+const iconsEntries = allContent.filter(e => (e.id || '').startsWith('icons/'));
+const indexEntry = iconsEntries.find((e) => e.id === 'icons/index.md' || e.id === 'icons/index.mdx');
 
 if (!indexEntry) {
   return Astro.redirect('/404');
@@ -29,4 +31,26 @@ const breadcrumb = await getBreadcrumbContext('/icons');
   item={null}
 >
   <Content components={markdownComponents} />
+  
+  <!-- External Icon Gallery Link -->
+  <section class="icon-gallery-link mt-12">
+    <div class="bg-gradient-to-r from-orange-50 to-orange-100 rounded-lg p-8 border border-orange-200">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-2">Icon Gallery</h2>
+      <p class="text-gray-600 mb-6">
+        Browse all available icons with a visual gallery, search functionality, and copy-to-clipboard features.
+      </p>
+      
+      <a
+        href="https://icons-gallery.azion.app"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 text-white font-medium rounded-lg hover:bg-orange-600 transition-colors"
+      >
+        <span>Open Icon Gallery</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+      </a>
+    </div>
+  </section>
 </DocPageLayout>

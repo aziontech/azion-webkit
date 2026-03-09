@@ -178,15 +178,19 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div v-if="isOpen" class="fixed inset-0 z-50 overflow-y-auto" @click.self="closeSearch">
+  <div v-if="isOpen" class="fixed inset-0 z-50 overflow-y-auto">
     <!-- Backdrop -->
-    <div class="fixed inset-0 bg-black/50 backdrop-blur-sm" />
+    <div class="fixed inset-0 bg-black/50 backdrop-blur-sm" @click="closeSearch" />
     
     <!-- Modal -->
-    <div class="relative min-h-screen flex items-start justify-center p-4 pt-[15vh]">
+    <div
+      class="relative min-h-screen flex items-start justify-center p-4 pt-[15vh]"
+      @click="closeSearch"
+    >
       <div
         class="w-full max-w-2xl bg-white rounded-xl shadow-2xl overflow-hidden"
         @keydown="handleKeydown"
+        @click.stop
       >
         <!-- Search Input -->
         <div class="relative border-b border-gray-200">

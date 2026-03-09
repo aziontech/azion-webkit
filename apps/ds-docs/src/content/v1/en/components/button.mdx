@@ -96,7 +96,9 @@ api:
       description: Fired when button is clicked and not disabled
 ---
 
-import { ExampleBlock, Callout, StateGrid } from '@components/docs';
+import { ExampleBlock, Callout, StateGrid, Playground } from '@components/docs';
+import { AzButton } from '@components/demo';
+import { buttonProps } from '@components/demo/props-metadata';
 
 ## Overview
 
@@ -221,10 +223,6 @@ Use for destructive or irreversible actions.
 ## Playground
 
 Explore the Button component interactively. Adjust props and see live changes.
-
-import { Playground } from '../../components/playground';
-import { AzButton } from '../../components/demo';
-import { buttonProps } from '../../components/demo/props-metadata';
 
 <Playground
   client:load

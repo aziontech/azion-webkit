@@ -127,6 +127,7 @@ defineExpose({
           :props-values="propsValues"
           :surface="surface"
           :custom-class="previewClass"
+          :slot-content="slotContent"
         >
           <template #toolbar>
             <slot name="preview-toolbar" />

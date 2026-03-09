@@ -14,12 +14,13 @@ import { componentStatusData } from '../../../data/component-status';
  * Overview (component cards) and Status (progress tracking).
  */
 
-const components = await getCollection('pt');
+const allContent = await getCollection('v1-pt');
 
 // Filter to only get components (not other content types)
-const componentItems = components.filter(item => {
-  const slugParts = item.slug.split('/');
-  return slugParts[0] === 'components' && slugParts.length > 1 && slugParts[1] !== 'index';
+const componentItems = allContent.filter(item => {
+  const id = item.id || '';
+  const idParts = id.split('/');
+  return idParts[0] === 'components' && idParts.length > 1 && !idParts[1].startsWith('index.');
 });
 
 // Get breadcrumb context for this page
@@ -68,8 +69,8 @@ const categoryLabels: Record<string, string> = {
           <h2 class="text-xl font-semibold mb-4">{categoryLabels[category] || category}</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {items.map((component) => {
-              // Extract component name from slug (e.g., 'components/button' -> 'button')
-              const componentName = component.slug.split('/').pop() || component.slug;
+              // Extract component name from id (e.g., 'components/button.mdx' -> 'button')
+              const componentName = component.id.replace(/\.(md|mdx)$/, '').split('/').pop() || component.id;
               return (
                 <a
                   href={`/pt/components/${componentName}`}

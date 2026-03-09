@@ -173,113 +173,19 @@ declare module 'astro:content' {
 	};
 
 	type DataEntryMap = {
-		"blocks": Record<string, {
+		"v1-en": Record<string, {
   id: string;
-  render(): Render[".md"];
-  slug: string;
-  body: string;
-  collection: "blocks";
-  data: InferEntrySchema<"blocks">;
+  body?: string;
+  collection: "v1-en";
+  data: InferEntrySchema<"v1-en">;
   rendered?: RenderedContent;
   filePath?: string;
 }>;
-"components": Record<string, {
+"v1-pt": Record<string, {
   id: string;
-  render(): Render[".md"];
-  slug: string;
-  body: string;
-  collection: "components";
-  data: InferEntrySchema<"components">;
-  rendered?: RenderedContent;
-  filePath?: string;
-}>;
-"contributing": Record<string, {
-  id: string;
-  render(): Render[".md"];
-  slug: string;
-  body: string;
-  collection: "contributing";
-  data: InferEntrySchema<"contributing">;
-  rendered?: RenderedContent;
-  filePath?: string;
-}>;
-"foundations": Record<string, {
-  id: string;
-  render(): Render[".md"];
-  slug: string;
-  body: string;
-  collection: "foundations";
-  data: InferEntrySchema<"foundations">;
-  rendered?: RenderedContent;
-  filePath?: string;
-}>;
-"get-started": Record<string, {
-  id: string;
-  render(): Render[".md"];
-  slug: string;
-  body: string;
-  collection: "get-started";
-  data: InferEntrySchema<"get-started">;
-  rendered?: RenderedContent;
-  filePath?: string;
-}>;
-"icons": Record<string, {
-  id: string;
-  render(): Render[".md"];
-  slug: string;
-  body: string;
-  collection: "icons";
-  data: InferEntrySchema<"icons">;
-  rendered?: RenderedContent;
-  filePath?: string;
-}>;
-"patterns": Record<string, {
-  id: string;
-  render(): Render[".md"];
-  slug: string;
-  body: string;
-  collection: "patterns";
-  data: InferEntrySchema<"patterns">;
-  rendered?: RenderedContent;
-  filePath?: string;
-}>;
-"playground": Record<string, {
-  id: string;
-  render(): Render[".md"];
-  slug: string;
-  body: string;
-  collection: "playground";
-  data: InferEntrySchema<"playground">;
-  rendered?: RenderedContent;
-  filePath?: string;
-}>;
-"pt": Record<string, {
-  id: string;
-  render(): Render[".md"];
-  slug: string;
-  body: string;
-  collection: "pt";
-  data: InferEntrySchema<"pt">;
-  rendered?: RenderedContent;
-  filePath?: string;
-}>;
-"templates": Record<string, {
-  id: string;
-  render(): Render[".md"];
-  slug: string;
-  body: string;
-  collection: "templates";
-  data: InferEntrySchema<"templates">;
-  rendered?: RenderedContent;
-  filePath?: string;
-}>;
-"tokens": Record<string, {
-  id: string;
-  render(): Render[".md"];
-  slug: string;
-  body: string;
-  collection: "tokens";
-  data: InferEntrySchema<"tokens">;
+  body?: string;
+  collection: "v1-pt";
+  data: InferEntrySchema<"v1-pt">;
   rendered?: RenderedContent;
   filePath?: string;
 }>;

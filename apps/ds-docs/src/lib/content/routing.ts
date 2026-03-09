@@ -2,6 +2,7 @@
  * Routing Utilities
  * 
  * Helper functions for resolving routes and pages.
+ * Updated for v1 content structure with v1-en and v1-pt collections.
  */
 
 import { getCollection } from 'astro:content';
@@ -24,19 +25,48 @@ export interface ResolvedPage {
 }
 
 /**
+ * Extract slug from entry ID
+ * Entry ID format: "section/slug" or "section/subfolder/slug"
+ */
+function extractSlugFromId(id: string): string {
+  const parts = id.split('/');
+  // Remove the section part (first element)
+  return parts.slice(1).join('/').replace(/\.(md|mdx)$/, '');
+}
+
+/**
+ * Get entries for a section from a language collection
+ */
+async function getSectionEntries(sectionId: string, language: 'en' | 'pt' = 'en') {
+  const collectionName = language === 'en' ? 'v1-en' : 'v1-pt';
+  const allEntries = await getCollection(collectionName);
+  
+  // Filter entries by section (section is the first part of the ID)
+  return allEntries.filter((entry) => {
+    const entrySection = entry.id.split('/')[0];
+    return entrySection === sectionId;
+  });
+}
+
+/**
  * Resolve a page from section ID and slug
  */
 export async function resolvePage(
   sectionId: string,
-  slug: string
+  slug: string,
+  language: 'en' | 'pt' = 'en'
 ): Promise<ResolvedPage | null> {
   const section = getSectionById(sectionId);
   if (!section) return null;
 
   try {
-    const collectionName = section.collectionName as 'components' | 'foundations' | 'tokens' | 'blocks' | 'patterns' | 'templates' | 'get-started' | 'icons' | 'contributing';
-    const entries = await getCollection(collectionName);
-    const entry = entries.find((e) => e.slug === slug);
+    const entries = await getSectionEntries(sectionId, language);
+    
+    // Find entry by slug (matching the file path after section)
+    const entry = entries.find((e) => {
+      const entrySlug = extractSlugFromId(e.id);
+      return entrySlug === slug || entrySlug === `${slug}.md` || entrySlug === `${slug}.mdx`;
+    });
     
     if (!entry) return null;
 
@@ -58,7 +88,7 @@ export async function resolvePage(
 /**
  * Resolve a page from a URL path
  */
-export async function resolvePageFromPath(path: string): Promise<ResolvedPage | null> {
+export async function resolvePageFromPath(path: string, language: 'en' | 'pt' = 'en'): Promise<ResolvedPage | null> {
   // Remove leading slash and split
   const parts = path.replace(/^\//, '').split('/');
   
@@ -71,20 +101,19 @@ export async function resolvePageFromPath(path: string): Promise<ResolvedPage | 
   // Get slug (default to index)
   const slug = parts.length === 1 ? 'index' : parts.slice(1).join('/');
 
-  return resolvePage(section.id, slug);
+  return resolvePage(section.id, slug, language);
 }
 
 /**
  * Get all slugs for a section (for static path generation)
  */
-export async function getSectionSlugs(sectionId: string): Promise<string[]> {
+export async function getSectionSlugs(sectionId: string, language: 'en' | 'pt' = 'en'): Promise<string[]> {
   const section = getSectionById(sectionId);
   if (!section) return [];
 
   try {
-    const collectionName = section.collectionName as 'components' | 'foundations' | 'tokens' | 'blocks' | 'patterns' | 'templates' | 'get-started' | 'icons' | 'contributing';
-    const entries = await getCollection(collectionName);
-    return entries.map((e) => e.slug);
+    const entries = await getSectionEntries(sectionId, language);
+    return entries.map((e) => extractSlugFromId(e.id));
   } catch (error) {
     return [];
   }
@@ -93,16 +122,15 @@ export async function getSectionSlugs(sectionId: string): Promise<string[]> {
 /**
  * Get static paths for a section
  */
-export async function getSectionStaticPaths(sectionId: string) {
+export async function getSectionStaticPaths(sectionId: string, language: 'en' | 'pt' = 'en') {
   const section = getSectionById(sectionId);
   if (!section) return [];
 
   try {
-    const collectionName = section.collectionName as 'components' | 'foundations' | 'tokens' | 'blocks' | 'patterns' | 'templates' | 'get-started' | 'icons' | 'contributing';
-    const entries = await getCollection(collectionName);
+    const entries = await getSectionEntries(sectionId, language);
     
     return entries.map((entry) => ({
-      params: { slug: entry.slug },
+      params: { slug: extractSlugFromId(entry.id) },
       props: { entry, section },
     }));
   } catch (error) {
@@ -113,9 +141,9 @@ export async function getSectionStaticPaths(sectionId: string) {
 /**
  * Get all static paths for all sections
  */
-export async function getAllStaticPaths() {
+export async function getAllStaticPaths(language: 'en' | 'pt' = 'en') {
   const allPaths = await Promise.all(
-    SECTIONS.map((section) => getSectionStaticPaths(section.id))
+    SECTIONS.map((section) => getSectionStaticPaths(section.id, language))
   );
   
   return allPaths.flat();
@@ -124,28 +152,40 @@ export async function getAllStaticPaths() {
 /**
  * Build URL for a page
  */
-export function buildPageUrl(section: Section, slug: string): string {
+export function buildPageUrl(section: Section, slug: string, language: 'en' | 'pt' = 'en'): string {
+  const basePath = language === 'en' ? section.basePath : `/pt${section.basePath}`;
   if (slug === 'index' || slug === '') {
-    return section.basePath;
+    return basePath;
   }
-  return `${section.basePath}/${slug}`;
+  return `${basePath}/${slug}`;
 }
 
 /**
  * Parse URL to extract section and slug
  */
-export function parsePageUrl(url: string): { sectionId: string; slug: string } | null {
+export function parsePageUrl(url: string): { sectionId: string; slug: string; language: 'en' | 'pt' } | null {
   const parts = url.replace(/^\//, '').split('/');
   
   if (parts.length === 0) return null;
 
-  const section = SECTIONS.find((s) => s.basePath === `/${parts[0]}`);
+  // Check if first part is a language prefix
+  let language: 'en' | 'pt' = 'en';
+  let sectionIndex = 0;
+  
+  if (parts[0] === 'pt') {
+    language = 'pt';
+    sectionIndex = 1;
+  }
+
+  // Find matching section
+  const section = SECTIONS.find((s) => s.basePath === `/${parts[sectionIndex]}`);
   if (!section) return null;
 
-  const slug = parts.length === 1 ? 'index' : parts.slice(1).join('/');
+  const slug = parts.length === sectionIndex + 1 ? 'index' : parts.slice(sectionIndex + 1).join('/');
 
   return {
     sectionId: section.id,
     slug,
+    language,
   };
 }

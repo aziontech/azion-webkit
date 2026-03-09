@@ -1,4 +1,5 @@
 import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 /**
  * Base frontmatter schema shared across all page types
@@ -190,9 +191,9 @@ const playgroundSchema = baseSchema.extend({
 });
 
 /**
- * Portuguese content schema - union of all types
+ * Content schema - union of all types for v1 content
  */
-const ptContentSchema = z.discriminatedUnion('type', [
+const v1ContentSchema = z.discriminatedUnion('type', [
   componentSchema,
   foundationSchema,
   tokenSchema,
@@ -207,53 +208,20 @@ const ptContentSchema = z.discriminatedUnion('type', [
 
 /**
  * Define all content collections
+ * 
+ * Phase 2 structure: Content is organized in v1/en and v1/pt folders
+ * Each language folder contains all content types (components, foundations, etc.)
  */
 export const collections = {
-  components: defineCollection({
-    type: 'content',
-    schema: componentSchema,
-    format: 'mdx',
+  // v1 English content
+  'v1-en': defineCollection({
+    loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/v1/en' }),
+    schema: v1ContentSchema,
   }),
-  foundations: defineCollection({
-    type: 'content',
-    schema: foundationSchema,
-  }),
-  tokens: defineCollection({
-    type: 'content',
-    schema: tokenSchema,
-  }),
-  blocks: defineCollection({
-    type: 'content',
-    schema: blockSchema,
-  }),
-  patterns: defineCollection({
-    type: 'content',
-    schema: patternSchema,
-  }),
-  templates: defineCollection({
-    type: 'content',
-    schema: templateSchema,
-  }),
-  'get-started': defineCollection({
-    type: 'content',
-    schema: guideSchema,
-  }),
-  icons: defineCollection({
-    type: 'content',
-    schema: iconSchema,
-  }),
-  contributing: defineCollection({
-    type: 'content',
-    schema: contributingSchema,
-  }),
-  playground: defineCollection({
-    type: 'content',
-    schema: playgroundSchema,
-  }),
-  // Portuguese content collection
-  pt: defineCollection({
-    type: 'content',
-    schema: ptContentSchema,
+  // v1 Portuguese content
+  'v1-pt': defineCollection({
+    loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/v1/pt' }),
+    schema: v1ContentSchema,
   }),
 };
 

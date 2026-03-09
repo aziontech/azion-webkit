@@ -42,7 +42,7 @@ const buttonClasses = computed(() => {
   const classes: string[] = [];
 
   // Base styles
-  classes.push('inline-flex', 'items-center', 'justify-center', 'font-medium', 'rounded-md', 'transition-colors');
+  classes.push('inline-flex', 'font-mono', 'text-xs', 'items-center', 'justify-center', 'font-semibold', 'rounded-md', 'transition-colors');
 
   // Variant styles
   switch (props.variant) {
