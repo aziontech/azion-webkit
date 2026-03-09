@@ -76,15 +76,15 @@ function isItemActive(item: NavItem): boolean {
       class="section-link block px-3 py-2 text-sm transition-colors"
       :class="[
         isActive
-          ? 'bg-primary-50 text-primary-700 font-medium'
-          : 'hover:bg-surface-subtle text-text-secondary hover:text-text-primary'
+          ? 'bg-[#343434] text-white font-medium'
+          : 'hover:bg-[#343434] text-white'
       ]"
     >
       {{ sectionLabel }}
     </a>
     
     <!-- Section Items (only show when section is active) -->
-    <div v-if="isActive && visibleItems.length > 0" class="mt-1 ml-3 space-y-0.5 border-l border-gray-200 pl-3">
+    <div v-if="isActive && visibleItems.length > 0" class="mt-1 ml-3 space-y-0.5 pl-3">
       <DocsSidebarItem
         v-for="item in visibleItems"
         :key="item.href"

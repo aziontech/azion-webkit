@@ -8,7 +8,7 @@
 
 import DocsLayout from '../../layouts/DocsLayout.astro';
 import { Playground } from '../../components/playground';
-import { buttonProps, fieldsetProps } from '../../components/demo/props-metadata';
+import { buttonProps } from '../../components/demo/props-metadata';
 ---
 
 <DocsLayout title="Playground - Azion Design System">
@@ -21,43 +21,9 @@ import { buttonProps, fieldsetProps } from '../../components/demo/props-metadata
       </p>
     </div>
 
-    <!-- Button Playground -->
-    <section class="playground-section">
-      <div class="playground-section__header">
-        <h2 class="text-xl font-semibold text-gray-900">Button</h2>
-        <p class="mt-1 text-sm text-gray-600">
-          Buttons trigger actions and events when users interact with them.
-        </p>
-      </div>
-      
-      <Playground
-        client:load
-        component-name="AzButton"
-        props={buttonProps}
-        slot-content="Button"
-      />
-    </section>
-
-    <!-- Fieldset Playground -->
-    <section class="playground-section">
-      <div class="playground-section__header">
-        <h2 class="text-xl font-semibold text-gray-900">Fieldset</h2>
-        <p class="mt-1 text-sm text-gray-600">
-          Group related form elements with an optional title.
-        </p>
-      </div>
-      
-      <Playground
-        client:load
-        component-name="AzFieldset"
-        props={fieldsetProps}
-        slot-content="Fieldset content goes here"
-      />
-    </section>
-
     <!-- Usage Guide -->
-    <section class="playground-guide">
-      <h2 class="text-xl font-semibold text-gray-900 mb-4">How to Use</h2>
+    <section class="playground-guide mb-12">
+      <h2 class="text-xl font-medium text-gray-900 mb-4">How to Use</h2>
       
       <div class="playground-guide__content">
         <div class="playground-guide__item">
@@ -88,6 +54,23 @@ import { buttonProps, fieldsetProps } from '../../components/demo/props-metadata
           </p>
         </div>
       </div>
+    </section>
+
+    <!-- Button Playground -->
+    <section class="playground-section">
+      <div class="playground-section__header">
+        <h2 class="text-xl font-medium text-gray-900">Button</h2>
+        <p class="mt-1 text-sm text-gray-600">
+          Buttons trigger actions and events when users interact with them.
+        </p>
+      </div>
+      
+      <Playground
+        client:load
+        component-name="AzButton"
+        props={buttonProps}
+        slot-content="Button"
+      />
     </section>
   </div>
 </DocsLayout>

@@ -48,12 +48,12 @@ export const DOCS_LANGUAGES: DocsLanguageConfig = {
   default: 'en',
   supported: ['en', 'pt'],
   labels: {
-    en: 'English',
-    pt: 'Português',
+    en: 'EN',
+    pt: 'PT-BR',
   },
   englishLabels: {
-    en: 'English',
-    pt: 'Portuguese',
+    en: 'EN',
+    pt: 'PT-BR',
   },
 };
 

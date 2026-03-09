@@ -31,11 +31,11 @@ const { parts, image, alt } = Astro.props;
   
   {/* Parts list */}
   <div class="anatomy-block__parts">
-    <h4 class="text-sm font-semibold text-text-primary mb-3">Component Parts</h4>
+    <h4 class="text-sm font-medium text-text-primary mb-3">Component Parts</h4>
     <ol class="space-y-3">
       {parts.map((part, index) => (
         <li class="flex items-start gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center text-xs font-semibold">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center text-xs font-medium">
             {index + 1}
           </span>
           <div class="flex-1">

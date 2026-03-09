@@ -141,11 +141,11 @@
   }
 
   .docs-prose h2 {
-    @apply text-2xl font-semibold tracking-tight mt-10 mb-4 border-b border-gray-200 pb-2;
+    @apply text-2xl font-medium tracking-tight mt-10 mb-4 border-b border-gray-200 pb-2;
   }
 
   .docs-prose h3 {
-    @apply text-xl font-semibold mt-8 mb-3;
+    @apply text-xl font-medium mt-8 mb-3;
   }
 
   .docs-prose p {
@@ -179,6 +179,9 @@
   }
 
   /* Code block styles */
+  code {
+    @apply !font-code;
+  }
   .code-block {
     @apply relative overflow-hidden;
   }

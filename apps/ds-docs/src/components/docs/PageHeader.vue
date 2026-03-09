@@ -23,7 +23,7 @@ const props = defineProps<Props>();
 </script>
 
 <template>
-  <header class="page-header mb-8">
+  <header class="mb-8">
     <div class="flex items-start gap-4 mb-4">
       <h1 class="text-3xl font-bold tracking-tight text-text-primary">
         {{ title }}
@@ -50,10 +50,3 @@ const props = defineProps<Props>();
     </div>
   </header>
 </template>
-
-<style scoped>
-.page-header {
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #e5e7eb;
-}
-</style>

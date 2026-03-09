@@ -21,7 +21,7 @@ export default defineConfig({
   ],
   
   // Site configuration
-  site: 'https://docs.azion.com',
+  site: 'https://ds.azion.com',
   
   // Path aliases for clean imports
   vite: {
@@ -32,7 +32,9 @@ export default defineConfig({
         '@layouts': resolve(__dirname, 'src/layouts'),
         '@lib': resolve(__dirname, 'src/lib'),
         // Alias for icons package to ensure proper resolution from monorepo
-        '@aziontech/icons': resolve(monorepoRoot, 'packages/icons/dist/index.css'),
+        // Note: @aziontech/icons resolves naturally via package.json exports
+        // Only alias specific sub-paths that need direct file access
+        '@aziontech/icons/catalog': resolve(monorepoRoot, 'packages/icons/dist/catalog.json'),
       },
     },
     // Ensure woff2 font files are properly handled

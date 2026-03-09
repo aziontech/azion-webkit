@@ -20,10 +20,12 @@ export { default as DocsSidebar } from './DocsSidebar.vue';
 export { default as DocsSidebarSection } from './DocsSidebarSection.vue';
 export { default as DocsSidebarItem } from './DocsSidebarItem.vue';
 export { default as DocsHeader } from './DocsHeader.vue';
+export { default as DocsFooter } from './DocsFooter.vue';
 
-// Version & Language
+// Version & Language & Theme
 export { default as VersionSwitcher } from './VersionSwitcher.vue';
 export { default as LanguageSwitcher } from './LanguageSwitcher.vue';
+export { default as ThemeSwitcher } from './ThemeSwitcher.vue';
 export { default as DocsVersionBanner } from './DocsVersionBanner.vue';
 
 // Demo & Code
@@ -81,7 +83,7 @@ import DoDont from './DoDont.astro';
 import RelatedLinks from './RelatedLinks.astro';
 import Callout from './Callout.astro';
 import Playground from '../playground/Playground.vue';
-import { AzButton, AzFieldset } from '../demo';
+import { AzButton } from '../demo';
 
 export const markdownComponents = {
   DemoPreview,
@@ -100,7 +102,6 @@ export const markdownComponents = {
   Playground,
   // Demo components for MDX usage
   AzButton,
-  AzFieldset,
   // Aliases for convenience
   Demo: DemoPreview,
   Section: SectionBlock,

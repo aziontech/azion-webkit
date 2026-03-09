@@ -8,6 +8,7 @@ import DocsLayout from '../layouts/DocsLayout.astro';
  */
 
 const heroLinks = [
+  { href: '/get-started/installation', label: 'Installation', description: 'Get started with installation' },
   { href: '/components', label: 'Components', description: 'Explore our component library' },
   { href: '/foundations', label: 'Foundations', description: 'Learn the design principles' },
 ];
@@ -66,7 +67,7 @@ const features = [
   
   <!-- Features Section -->
   <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-6">Why use our Design System?</h2>
+    <h2 class="text-2xl font-medium mb-6">Why use our Design System?</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {features.map((feature) => (
         <div class="p-6 bg-surface-subtle rounded-lg">
@@ -80,16 +81,16 @@ const features = [
   
   <!-- Quick Start Section -->
   <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-6">Quick Start</h2>
+    <h2 class="text-2xl font-medium mb-6">Quick Start</h2>
     <div class="bg-gray-900 rounded-lg p-6">
       <p class="text-gray-400 mb-4">Install the design system packages:</p>
-      <pre class="text-sm text-gray-100"><code>npm install @aziontech/components @aziontech/icons @aziontech/theme</code></pre>
+      <pre class="text-sm text-gray-100"><code class="!font-code">npm install @aziontech/components @aziontech/icons @aziontech/theme</code></pre>
     </div>
   </section>
   
   <!-- Status Section -->
   <section>
-    <h2 class="text-2xl font-semibold mb-6">Project Status</h2>
+    <h2 class="text-2xl font-medium mb-6">Project Status</h2>
     <div class="space-y-4">
       <div class="flex items-center gap-3">
         <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-medium rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">

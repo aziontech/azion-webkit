@@ -77,7 +77,7 @@ const donts = usage?.doDonts?.filter(item => item.type === 'dont') || [];
                   <svg class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span class="text-sm font-semibold text-green-700">Do</span>
+                  <span class="text-sm font-medium text-green-700">Do</span>
                 </div>
                 <div class="do-dont__content p-4 space-y-3">
                   {dos.map((item) => (
@@ -99,7 +99,7 @@ const donts = usage?.doDonts?.filter(item => item.type === 'dont') || [];
                   <svg class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                  <span class="text-sm font-semibold text-red-700">Don't</span>
+                  <span class="text-sm font-medium text-red-700">Don't</span>
                 </div>
                 <div class="do-dont__content p-4 space-y-3">
                   {donts.map((item) => (
@@ -144,11 +144,11 @@ const donts = usage?.doDonts?.filter(item => item.type === 'dont') || [];
 <style>
   /* Section styling for consistent spacing */
   .usage-content :global(h2) {
-    @apply text-2xl font-semibold text-text-primary tracking-tight mt-10 mb-4 border-b border-gray-200 pb-2;
+    @apply text-2xl font-medium text-text-primary tracking-tight mt-10 mb-4 border-b border-gray-200 pb-2;
   }
   
   .usage-content :global(h3) {
-    @apply text-xl font-semibold text-text-primary mt-8 mb-3;
+    @apply text-xl font-medium text-text-primary mt-8 mb-3;
   }
   
   .usage-content :global(h4) {

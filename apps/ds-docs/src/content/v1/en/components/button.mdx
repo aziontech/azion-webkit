@@ -137,8 +137,8 @@ api:
 ---
 
 import { Playground, StateGrid, CodeBlock, Callout } from '@components/docs';
-import { AzButton } from '@components/demo';
 import { buttonProps } from '@components/demo/props-metadata';
+import AzButton from '@components/demo/AzButton.vue';
 
 Buttons are interactive elements that trigger actions when clicked or tapped. They communicate actions that users can take and are typically placed throughout your UI, from forms to dialogs to navigation.
 
@@ -154,7 +154,6 @@ Explore the Button component interactively. Adjust props and see live changes.
 
 <Playground
   client:load
-  component={AzButton}
   component-name="AzButton"
   props={buttonProps}
   slot-content="Button"
@@ -163,10 +162,10 @@ Explore the Button component interactively. Adjust props and see live changes.
 ## States
 
 <StateGrid columns={4}>
-  <button slot="default" class="px-4 py-2 bg-primary-500 text-white rounded-md font-medium">Button</button>
-  <button slot="hover" class="px-4 py-2 bg-primary-600 text-white rounded-md font-medium">Button</button>
-  <button slot="focus" class="px-4 py-2 bg-primary-500 text-white rounded-md font-medium ring-2 ring-primary-300 ring-offset-2">Button</button>
-  <button slot="disabled" class="px-4 py-2 bg-gray-300 text-gray-500 rounded-md font-medium cursor-not-allowed" disabled>Button</button>
+  <AzButton slot="default" client:load>Button</AzButton>
+  <AzButton slot="hover" client:load class="bg-primary-600 hover:bg-primary-600">Button</AzButton>
+  <AzButton slot="focus" client:load class="ring-2 ring-primary-300 ring-offset-2">Button</AzButton>
+  <AzButton slot="disabled" client:load disabled>Button</AzButton>
 </StateGrid>
 
 <Callout type="tip" title="Choosing the right variant">

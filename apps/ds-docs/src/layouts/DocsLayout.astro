@@ -5,7 +5,7 @@ import '@aziontech/icons';
 import SearchModal from '../components/search/SearchModal.vue';
 import DocsSidebar from '../components/docs/DocsSidebar.vue';
 import DocsHeader from '../components/docs/DocsHeader.vue';
-import LanguageSwitcher from '../components/docs/LanguageSwitcher.vue';
+import DocsFooter from '../components/docs/DocsFooter.vue';
 import { getNavigationTree, getBreadcrumbContext } from '../lib/content';
 import type { Section, NavItem } from '../lib/content/types';
 import { createI18nContext, type I18nContext } from '../lib/i18n';
@@ -15,8 +15,14 @@ import { getDefaultLanguage, isSupportedLanguage, getAllLanguages, getLanguageLa
  * DocsLayout
  * 
  * Base layout for all documentation pages.
- * Provides the shell structure with sidebar navigation and header.
+ * Provides the shell structure with sidebar navigation, header, and footer.
  * Supports internationalization (i18n) with language switching.
+ *
+ * Layout structure:
+ * - Header: Logo, Navigation, Search, Version Switcher
+ * - Sidebar: Navigation tree
+ * - Main: Content area
+ * - Footer: User preferences (Language, Theme), Social links, Copyright
  */
 
 interface Props {
@@ -100,8 +106,8 @@ for (const lang of getAllLanguages()) {
       />
       
       <!-- Main Content Area -->
-      <main class="docs-main flex-1 min-h-screen">
-        <!-- Header with dynamic breadcrumb and language switcher -->
+      <main class="docs-main flex-1 min-h-screen flex flex-col">
+        <!-- Header with dynamic breadcrumb and version switcher -->
         <DocsHeader
           client:load
           section={section}
@@ -110,9 +116,15 @@ for (const lang of getAllLanguages()) {
         />
         
         <!-- Content -->
-        <div class="docs-content px-6 py-8 max-w-docs-content">
+        <div class="docs-content flex-1 px-6 py-8 max-w-docs-content">
           <slot />
         </div>
+        
+        <!-- Footer -->
+        <DocsFooter
+          client:load
+          language={language}
+        />
       </main>
     </div>
     

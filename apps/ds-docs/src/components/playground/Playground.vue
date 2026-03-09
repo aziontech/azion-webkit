@@ -7,7 +7,7 @@ import PlaygroundControls from './PlaygroundControls.vue';
 import PlaygroundCode from './PlaygroundCode.vue';
 
 // Import demo components for registry
-import { AzButton, AzFieldset } from '../demo';
+import { AzButton } from '../demo';
 
 /**
  * Component Registry
@@ -18,7 +18,6 @@ import { AzButton, AzFieldset } from '../demo';
  */
 const componentRegistry: Record<string, Component> = {
   AzButton,
-  AzFieldset,
 };
 
 /**

@@ -66,7 +66,7 @@ const categoryLabels: Record<string, string> = {
     <Fragment slot="overview">
       {Object.entries(componentsByCategory).map(([category, items]) => (
         <section class="mb-10">
-          <h2 class="text-xl font-semibold mb-4">{categoryLabels[category] || category}</h2>
+          <h2 class="text-xl font-medium mb-4">{categoryLabels[category] || category}</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {items.map((component) => {
               // Extract component name from id (e.g., 'components/button.mdx' -> 'button')

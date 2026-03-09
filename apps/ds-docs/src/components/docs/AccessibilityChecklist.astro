@@ -28,7 +28,7 @@ const {
   {/* Keyboard Interactions */}
   {keyboard.length > 0 && (
     <div class="a11y-section mb-6">
-      <h4 class="text-sm font-semibold text-text-primary mb-3 flex items-center gap-2">
+      <h4 class="text-sm font-medium text-text-primary mb-3 flex items-center gap-2">
         Keyboard Navigation
       </h4>
       <div class="bg-gray-50 rounded-lg overflow-hidden">
@@ -61,7 +61,7 @@ const {
   {/* ARIA Attributes */}
   {aria.length > 0 && (
     <div class="a11y-section mb-6">
-      <h4 class="text-sm font-semibold text-text-primary mb-3 flex items-center gap-2">
+      <h4 class="text-sm font-medium text-text-primary mb-3 flex items-center gap-2">
         ARIA Attributes
       </h4>
       <div class="space-y-2">
@@ -82,7 +82,7 @@ const {
   {/* WCAG Compliance */}
   {wcag.length > 0 && (
     <div class="a11y-section mb-6">
-      <h4 class="text-sm font-semibold text-text-primary mb-3 flex items-center gap-2">
+      <h4 class="text-sm font-medium text-text-primary mb-3 flex items-center gap-2">
         WCAG Compliance
       </h4>
       <div class="flex flex-wrap gap-2">
@@ -98,7 +98,7 @@ const {
   {/* Checklist Items */}
   {items.length > 0 && (
     <div class="a11y-section mb-6">
-      <h4 class="text-sm font-semibold text-text-primary mb-3">Checklist</h4>
+      <h4 class="text-sm font-medium text-text-primary mb-3">Checklist</h4>
       <ul class="space-y-2">
         {items.map((item) => (
           <li class="flex items-start gap-2">
@@ -115,7 +115,7 @@ const {
   {/* Additional Notes */}
   {notes.length > 0 && (
     <div class="a11y-section">
-      <h4 class="text-sm font-semibold text-text-primary mb-3">Additional Notes</h4>
+      <h4 class="text-sm font-medium text-text-primary mb-3">Additional Notes</h4>
       <ul class="space-y-1 list-disc list-inside text-sm text-text-secondary">
         {notes.map((note) => (
           <li>{note}</li>

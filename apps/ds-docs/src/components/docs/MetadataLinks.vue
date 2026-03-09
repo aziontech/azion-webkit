@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 /**
  * MetadataLinks Component
  * 
@@ -17,37 +18,36 @@ const props = defineProps<Props>();
 interface LinkItem {
   href: string;
   label: string;
-  icon: string;
+  iconClass: string;
 }
 
 const links: LinkItem[] = [];
 
 if (props.source) {
-  links.push({ href: props.source, label: 'Source', icon: '📁' });
+  links.push({ href: props.source, label: 'Source', iconClass: 'pi pi-github' });
 }
 if (props.storybook) {
-  links.push({ href: props.storybook, label: 'Storybook', icon: '📖' });
+  links.push({ href: props.storybook, label: 'Storybook', iconClass: 'pi pi-book' });
 }
 if (props.figma) {
-  links.push({ href: props.figma, label: 'Figma', icon: '🎨' });
+  links.push({ href: props.figma, label: 'Figma', iconClass: 'pi pi-palette' });
 }
 </script>
 
 <template>
-  <div v-if="links.length > 0" class="metadata-links flex flex-wrap gap-3">
+  <div v-if="links.length > 0" class="metadata-links flex gap-1">
     <a
       v-for="link in links"
       :key="link.href"
       :href="link.href"
       target="_blank"
       rel="noopener noreferrer"
-      class="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm text-text-secondary hover:text-primary-600 bg-surface-subtle hover:bg-gray-100 rounded-md transition-colors"
+      class="inline-flex px-1.5 py-1.5 items-center leading-none text-base text-blue-600 group rounded-md"
     >
-      <span>{{ link.icon }}</span>
-      <span>{{ link.label }}</span>
-      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-      </svg>
+      <i :class="link.iconClass" aria-hidden="true"></i>
+      &nbsp;&nbsp;
+      <span class="group-hover:underline text-sm">{{ link.label }}</span>
     </a>
   </div>
 </template>
+

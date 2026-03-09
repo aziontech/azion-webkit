@@ -2,16 +2,19 @@
 /**
  * DocsHeader
  *
- * Documentation header component with breadcrumb context
- * and search trigger button.
+ * Documentation header component with breadcrumb context,
+ * search trigger button, and version switcher.
+ *
+ * Note: Language switcher has been moved to DocsFooter as part of
+ * user preferences section for improved information hierarchy.
  */
 
 import { computed } from 'vue';
 import type { Section, NavItem } from '@/lib/content/types';
 import { useSearch } from '@/lib/search/use-search';
-import LanguageSwitcher from './LanguageSwitcher.vue';
+import VersionSwitcher from './VersionSwitcher.vue';
 import DocsIcon from './DocsIcon.vue';
-import { getDefaultLanguage } from '@/config';
+import { getDefaultLanguage, getCurrentVersion } from '@/config';
 import { t } from '@/lib/i18n';
 
 const props = withDefaults(defineProps<{
@@ -101,37 +104,25 @@ const documentationText = computed(() => {
       </nav>
       
       <!-- Header actions -->
-      <div class="flex items-center gap-4">
+      <div class="flex items-center justify-end gap-2.5 min-w-[420px]">
         <!-- Search button -->
         <button 
-          class="flex items-center gap-2 px-3 py-1.5 text-sm text-text-secondary bg-surface-subtle rounded-md hover:bg-gray-100 transition-colors"
+          class="flex w-full max-w-sm items-center gap-2 px-3 py-1.5 text-sm text-text-secondary bg-surface-subtle rounded-md hover:bg-gray-100 transition-colors"
           aria-label="Search documentation"
           @click="openSearch"
         >
           <DocsIcon name="pi-search" size="sm" decorative />
-          <span class="hidden sm:inline">Search</span>
+          <span class="hidden sm:inline w-full text-left">Search</span>
           <kbd class="hidden sm:inline-flex px-1.5 py-0.5 text-xs bg-gray-200 rounded font-mono">⌘K</kbd>
         </button>
         
-        <!-- Version switcher placeholder -->
-        <div class="hidden md:flex items-center gap-1 px-2 py-1 text-xs text-text-muted bg-surface-subtle rounded">
-          <span>v1.0</span>
-          <DocsIcon name="pi-chevron-down" size="sm" decorative />
-        </div>
-        
-        <!-- Language switcher -->
-        <LanguageSwitcher :current-language="language" />
-        
-        <!-- GitHub link -->
-        <a 
-          href="https://github.com/aziontech/webkit" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="text-text-secondary hover:text-text-primary transition-colors"
-          aria-label="View on GitHub"
-        >
-          <DocsIcon name="pi-github" size="lg" decorative />
-        </a>
+        <!-- Version switcher -->
+        <VersionSwitcher
+          :current-version="getCurrentVersion()"
+          :section="section?.id"
+          :slug="item?.slug"
+          :language="language"
+        />
       </div>
     </div>
   </header>

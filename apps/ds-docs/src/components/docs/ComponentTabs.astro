@@ -37,7 +37,7 @@ const { defaultTab = 'overview' } = Astro.props;
       class:list={[
         'component-tabs__tab px-4 py-2.5 text-sm font-medium border-b-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2',
         defaultTab === 'overview'
-          ? 'border-primary-500 text-primary-700'
+          ? 'border-black text-black'
           : 'border-transparent text-text-secondary hover:text-text-primary hover:border-gray-300'
       ]}
     >
@@ -53,7 +53,7 @@ const { defaultTab = 'overview' } = Astro.props;
       class:list={[
         'component-tabs__tab px-4 py-2.5 text-sm font-medium border-b-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2',
         defaultTab === 'usage'
-          ? 'border-primary-500 text-primary-700'
+          ? 'border-black text-black'
           : 'border-transparent text-text-secondary hover:text-text-primary hover:border-gray-300'
       ]}
     >
@@ -69,7 +69,7 @@ const { defaultTab = 'overview' } = Astro.props;
       class:list={[
         'component-tabs__tab px-4 py-2.5 text-sm font-medium border-b-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2',
         defaultTab === 'api'
-          ? 'border-primary-500 text-primary-700'
+          ? 'border-black text-black'
           : 'border-transparent text-text-secondary hover:text-text-primary hover:border-gray-300'
       ]}
     >
@@ -192,8 +192,8 @@ const { defaultTab = 'overview' } = Astro.props;
         const isActive = el.dataset.tabId === tabId;
         el.setAttribute('aria-selected', isActive ? 'true' : 'false');
         el.setAttribute('tabindex', isActive ? '0' : '-1');
-        el.classList.toggle('border-primary-500', isActive);
-        el.classList.toggle('text-primary-700', isActive);
+        el.classList.toggle('border-black', isActive);
+        el.classList.toggle('text-black', isActive);
         el.classList.toggle('border-transparent', !isActive);
         el.classList.toggle('text-text-secondary', !isActive);
       });

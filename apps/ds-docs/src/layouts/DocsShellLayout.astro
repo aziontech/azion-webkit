@@ -2,14 +2,23 @@
 /**
  * DocsShellLayout
  * 
- * Documentation shell layout providing header, sidebar, and content area.
+ * Documentation shell layout providing header, sidebar, content area, and footer.
  * This is the main layout for all documentation pages.
  * Supports internationalization (i18n) with language switching.
+ *
+ * Layout structure:
+ * - Header: Logo, Navigation, Search, Version Switcher
+ * - Sidebar: Navigation tree
+ * - Main: Content area
+ * - Footer: User preferences (Language, Theme), Social links, Copyright
  */
 
 import BaseLayout from './BaseLayout.astro';
+// Import Azion Icons - icon font library (azionicons + primeicons)
+import '@aziontech/icons';
 import DocsSidebar from '../components/docs/DocsSidebar.vue';
 import DocsHeader from '../components/docs/DocsHeader.vue';
+import DocsFooter from '../components/docs/DocsFooter.vue';
 import SearchModal from '../components/search/SearchModal.vue';
 import { getNavigationTree } from '../lib/content';
 import type { Section, NavItem } from '../lib/content/types';
@@ -77,7 +86,7 @@ for (const lang of getAllLanguages()) {
     />
     
     <!-- Main Content Area -->
-    <main class="docs-main flex-1 min-h-screen">
+    <main class="docs-main flex-1 min-h-screen flex flex-col">
       <!-- Header -->
       <DocsHeader
         client:load
@@ -87,9 +96,15 @@ for (const lang of getAllLanguages()) {
       />
       
       <!-- Content -->
-      <div class="docs-content px-6 py-8 max-w-docs-content">
+      <div class="docs-content flex-1 px-6 py-8 max-w-docs-content">
         <slot />
       </div>
+      
+      <!-- Footer -->
+      <DocsFooter
+        client:load
+        language={language}
+      />
     </main>
   </div>
   

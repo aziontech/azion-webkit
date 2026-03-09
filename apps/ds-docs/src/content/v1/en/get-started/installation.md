@@ -7,8 +7,6 @@ type: guide
 category: installation
 ---
 
-# Installation
-
 The Azion Design System is distributed as a set of npm packages. Install only what you need for your project.
 
 ## Requirements

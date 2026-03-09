@@ -14,7 +14,7 @@ const { title } = Astro.props;
 
 <div class="do-dont">
   {title && (
-    <h4 class="text-sm font-semibold text-text-primary mb-4">{title}</h4>
+    <h4 class="text-sm font-medium text-text-primary mb-4">{title}</h4>
   )}
   
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -24,7 +24,7 @@ const { title } = Astro.props;
         <svg class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
         </svg>
-        <span class="text-sm font-semibold text-green-700">Do</span>
+        <span class="text-sm font-medium text-green-700">Do</span>
       </div>
       <div class="do-dont__content p-4">
         <slot name="do" />
@@ -37,7 +37,7 @@ const { title } = Astro.props;
         <svg class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
-        <span class="text-sm font-semibold text-red-700">Don't</span>
+        <span class="text-sm font-medium text-red-700">Don't</span>
       </div>
       <div class="do-dont__content p-4">
         <slot name="dont" />

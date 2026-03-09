@@ -33,11 +33,11 @@ const itemLink = computed(() => {
 <template>
   <a
     :href="itemLink"
-    class="sidebar-item block px-3 py-1.5 text-sm transition-colors"
+    class="sidebar-item block px-3 py-1.5 text-sm text-white font-medium transition-colors"
     :class="[
       isActive
-        ? 'bg-primary-50 text-primary-700 font-medium'
-        : 'hover:bg-surface-subtle text-text-secondary hover:text-text-primary'
+        ? 'bg-[#343434]'
+        : 'hover:bg-[#343434] '
     ]"
     :aria-current="isActive ? 'page' : undefined"
   >
@@ -51,10 +51,10 @@ const itemLink = computed(() => {
 }
 
 .sidebar-item:hover {
-  border-left-color: var(--color-gray-300, #d1d5db);
+  border-left-color: #343434;
 }
 
 .sidebar-item[aria-current='page'] {
-  border-left-color: var(--color-primary-500);
+  border-left-color: #fff;
 }
 </style>

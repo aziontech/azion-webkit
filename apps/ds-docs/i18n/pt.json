@@ -1,6 +1,6 @@
 {
   "brand": {
-    "name": "Design System"
+    "name": "design system"
   },
   "nav": {
     "documentation": "Documentação",
@@ -117,7 +117,11 @@
     "avoid": "Evitar"
   },
   "footer": {
-    "copyright": "© {year} Azion Technologies. Todos os direitos reservados.",
+    "preferences": "Preferências",
+    "language": "Idioma",
+    "theme": "Tema",
+    "copyright": "Azion Technologies ou suas afiliadas. Todos os direitos reservados.",
+    "lastUpdated": "Última atualização",
     "documentation": "Documentação",
     "resources": "Recursos",
     "community": "Comunidade",

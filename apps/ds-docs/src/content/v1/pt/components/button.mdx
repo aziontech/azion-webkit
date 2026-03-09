@@ -1,6 +1,6 @@
 ---
 title: Button
-description: Botões acionam ações e eventos quando os usuários interagem com eles.
+description: Botões disparam ações e eventos quando os usuários interagem com eles.
 navLabel: Button
 order: 1
 type: component
@@ -19,41 +19,78 @@ tags:
   - action
   - form
   - interactive
-language: pt
-translatedFrom: en
-translationStatus: complete
 anatomy:
   - label: Container
     description: A área clicável com estilo de fundo e borda
   - label: Label
-    description: O conteúdo de texto que descreve a ação
-  - label: Icon (opcional)
-    description: Um ícone opcional para ênfase visual antes ou depois do label
+    description: O texto que descreve a ação do botão
+  - label: Icon (optional)
+    description: Um ícone opcional para dar ênfase visual antes ou depois do texto
 accessibility:
   keyboard:
     - keys: Tab
       action: Move o foco para o botão
     - keys: Enter
-      action: Ativa o botão quando focado
+      action: Ativa o botão quando ele está em foco
     - keys: Space
-      action: Ativa o botão quando focado
+      action: Ativa o botão quando ele está em foco
   aria:
     - attribute: aria-disabled="true"
-      usage: Use em vez do atributo disabled para leitores de tela anunciarem o estado desabilitado
+      usage: Use no lugar do atributo disabled para que leitores de tela anunciem corretamente o estado desabilitado
     - attribute: aria-label
-      usage: Obrigatório para botões apenas com ícone para fornecer nome acessível
+      usage: Obrigatório para botões que possuem apenas ícone, fornecendo um nome acessível
     - attribute: aria-busy="true"
-      usage: Quando o botão está em estado de carregamento
+      usage: Utilizado quando o botão está em estado de carregamento
   wcag:
     - "2.1.1 Keyboard"
     - "4.1.2 Name, Role, Value"
+usage:
+  whenToUse:
+    - Disparar ações principais (Enviar, Salvar, Continuar)
+    - Navegar para diferentes telas ou páginas
+    - Alternar estados ou configurações
+    - Disparar ações secundárias (Cancelar, Excluir)
+    - Enviar formulários
+  whenNotToUse:
+    - Navegação para links externos (use um link em vez de um botão)
+    - Exibir conteúdo estático (use texto ou labels)
+    - Quando uma interação mais sutil for necessária (considere usar um link de texto)
+  doDonts:
+    - type: do
+      description: Use botões para itens acionáveis
+      example: '<AzButton>Enviar Formulário</AzButton>'
+    - type: do
+      description: Use rótulos claros e orientados à ação
+      example: '<AzButton>Salvar Alterações</AzButton>'
+    - type: dont
+      description: Não use botões para navegação
+      example: '<AzButton>Ir para Dashboard</AzButton>'
+    - type: dont
+      description: Não use rótulos vagos
+      example: '<AzButton>Clique Aqui</AzButton>'
+  examples:
+    - title: Botão Primário
+      description: Estilo padrão do botão para ações principais
+      code: '<AzButton variant="primary">Botão Primário</AzButton>'
+    - title: Botão Secundário
+      description: Para ações alternativas ou menos destacadas
+      code: '<AzButton variant="secondary">Botão Secundário</AzButton>'
+    - title: Botão Destrutivo
+      description: Para ações perigosas como excluir ou remover
+      code: '<AzButton variant="destructive">Excluir</AzButton>'
+    - title: Tamanhos do Botão
+      description: Disponível nos tamanhos pequeno, médio e grande
+      code: |-
+        <AzButton size="sm">Pequeno</AzButton>
+        <AzButton size="md">Médio</AzButton>
+        <AzButton size="lg">Grande</AzButton>
 api:
   props:
     - name: variant
       type: "'primary' | 'secondary' | 'destructive' | 'ghost'"
       default: "'primary'"
       required: false
-      description: Variante de estilo visual do botão
+      description: Variante visual do botão
     - name: size
       type: "'sm' | 'md' | 'lg'"
       default: "'md'"
@@ -63,35 +100,35 @@ api:
       type: "boolean"
       default: "false"
       required: false
-      description: Se o botão está desabilitado
+      description: Define se o botão está desabilitado
     - name: loading
       type: "boolean"
       default: "false"
       required: false
-      description: Mostra spinner de carregamento e desabilita interação
+      description: Exibe um indicador de carregamento e desativa a interação
     - name: icon
       type: "string"
       default: "undefined"
       required: false
-      description: Nome do ícone para exibir antes do label
+      description: Nome do ícone exibido antes do texto
     - name: iconPosition
       type: "'left' | 'right'"
       default: "'left'"
       required: false
-      description: Posição do ícone relativa ao label
+      description: Posição do ícone em relação ao texto
     - name: fullWidth
       type: "boolean"
       default: "false"
       required: false
-      description: Se o botão ocupa toda a largura do container
+      description: Define se o botão ocupa toda a largura do container
   slots:
     - name: default
-      description: Conteúdo do label do botão
+      description: Conteúdo do texto do botão
     - name: icon-left
-      description: Ícone customizado antes do label
+      description: Ícone customizado antes do texto
       props: "iconClass: string"
     - name: icon-right
-      description: Ícone customizado após o label
+      description: Ícone customizado após o texto
       props: "iconClass: string"
   events:
     - name: click
@@ -99,146 +136,38 @@ api:
       description: Disparado quando o botão é clicado e não está desabilitado
 ---
 
-import { ExampleBlock, Callout, StateGrid, Playground } from '@components/docs';
-import { AzButton } from '@components/demo';
+import { Playground, StateGrid, CodeBlock, Callout } from '@components/docs';
+import AzButton from '@components/demo/AzButton.vue';
 import { buttonProps } from '@components/demo/props-metadata';
 
-## Visão Geral
+Botões são elementos interativos que disparam ações quando clicados ou tocados. Eles comunicam ações que os usuários podem executar e normalmente aparecem em diversas partes da interface, desde formulários até diálogos e navegação.
 
-Botões são elementos interativos que disparam ações quando clicados ou tocados. Eles comunicam ações que os usuários podem realizar e são tipicamente colocados em toda a interface, desde formulários até diálogos e navegação.
+O componente Button fornece uma maneira consistente e acessível de disparar ações em toda a sua aplicação.
 
-O componente Button fornece uma maneira consistente e acessível de disparar ações em toda sua aplicação.
+## Import
 
-## Quando Usar
+<CodeBlock code={`import { AzButton } from '@aziontech/webkit';`} lang="javascript" />
 
-Use botões para:
+## Playground
 
-- Disparar ações principais (Enviar, Salvar, Continuar)
-- Navegar para diferentes visualizações ou páginas
-- Alternar estados ou configurações
-- Disparar ações secundárias (Cancelar, Excluir)
-- Submeter formulários
-
-<Callout type="tip" title="Escolhendo a variante certa">
-  Use **primary** para a ação principal, **secondary** para ações alternativas, **destructive** para ações perigosas, e **ghost** para ações menos proeminentes.
-</Callout>
-
-## Exemplos
-
-### Botão Primário
-
-Use para a ação principal em um contexto.
-
-<ExampleBlock
-  title="Variante Primary"
-  description="O estilo padrão de botão para ações principais"
-  code={`<AzButton variant="primary">Botão Primário</AzButton>`}
->
-  <AzButton variant="primary">Botão Primário</AzButton>
-</ExampleBlock>
-
-### Botão Secundário
-
-Use para ações secundárias ou alternativas.
-
-<ExampleBlock
-  title="Variante Secondary"
-  description="Para ações alternativas ou menos proeminentes"
-  code={`<AzButton variant="secondary">Botão Secundário</AzButton>`}
->
-  <AzButton variant="secondary">Botão Secundário</AzButton>
-</ExampleBlock>
-
-### Botão Destrutivo
-
-Use para ações destrutivas ou irreversíveis.
-
-<ExampleBlock
-  title="Variante Destructive"
-  description="Para ações perigosas como excluir ou remover"
-  code={`<AzButton variant="destructive">Excluir</AzButton>`}
->
-  <AzButton variant="destructive">Excluir</AzButton>
-</ExampleBlock>
-
-### Tamanhos de Botão
-
-<ExampleBlock
-  title="Variantes de tamanho"
-  description="Disponível nos tamanhos pequeno, médio e grande"
-  code={`<AzButton size="sm">Pequeno</AzButton>
-<AzButton size="md">Médio</AzButton>
-<AzButton size="lg">Grande</AzButton>`}
->
-  <div class="flex items-center gap-3">
-    <AzButton size="sm">Pequeno</AzButton>
-    <AzButton size="md">Médio</AzButton>
-    <AzButton size="lg">Grande</AzButton>
-  </div>
-</ExampleBlock>
-
-## Estados
-
-<StateGrid columns={4}>
-  <button slot="default" class="px-4 py-2 bg-primary-500 text-white rounded-md font-medium">Botão</button>
-  <button slot="hover" class="px-4 py-2 bg-primary-600 text-white rounded-md font-medium">Botão</button>
-  <button slot="focus" class="px-4 py-2 bg-primary-500 text-white rounded-md font-medium ring-2 ring-primary-300 ring-offset-2">Botão</button>
-  <button slot="disabled" class="px-4 py-2 bg-gray-300 text-gray-500 rounded-md font-medium cursor-not-allowed" disabled>Botão</button>
-</StateGrid>
-
-## Faça e Não Faça
-
-<DoDont title="Diretrizes de uso">
-  <template v-slot:do>
-    <p class="text-sm mb-2">Use botões para itens acionáveis:</p>
-    <button class="px-4 py-2 bg-primary-500 text-white rounded-md text-sm">Enviar Formulário</button>
-  </template>
-  <template v-slot:dont>
-    <p class="text-sm mb-2">Não use botões para navegação:</p>
-    <button class="px-4 py-2 bg-primary-500 text-white rounded-md text-sm">Ir para Dashboard</button>
-    <p class="text-xs text-red-600 mt-1">Use um link em vez disso</p>
-  </template>
-</DoDont>
-
-<DoDont>
-  <template v-slot:do>
-    <p class="text-sm mb-2">Use rótulos claros e orientados a ação:</p>
-    <button class="px-4 py-2 bg-primary-500 text-white rounded-md text-sm">Salvar Alterações</button>
-  </template>
-  <template v-slot:dont>
-    <p class="text-sm mb-2">Não use rótulos vagos:</p>
-    <button class="px-4 py-2 bg-primary-500 text-white rounded-md text-sm">Clique Aqui</button>
-  </template>
-</DoDont>
-
-## Playground Interativo
-
-Explore o componente Button interativamente. Ajuste as props e veja as alterações em tempo real.
+Explore o componente Button de forma interativa. Ajuste as props e veja as mudanças em tempo real.
 
 <Playground
   client:load
   component-name="AzButton"
   props={buttonProps}
-  slot-content="Clique aqui"
+  slot-content="Button"
 />
 
-## Acessibilidade
+## States
 
-### Navegação por Teclado
+<StateGrid columns={4}>
+  <AzButton slot="default" client:load>Button</AzButton>
+  <AzButton slot="hover" client:load class="bg-primary-600 hover:bg-primary-600">Button</AzButton>
+  <AzButton slot="focus" client:load class="ring-2 ring-primary-300 ring-offset-2">Button</AzButton>
+  <AzButton slot="disabled" client:load disabled>Button</AzButton>
+</StateGrid>
 
-| Tecla | Ação |
-|-------|------|
-| Tab | Move o foco para o botão |
-| Enter | Ativa o botão quando focado |
-| Space | Ativa o botão quando focado |
-
-### ARIA
-
-- Use `aria-disabled="true"` em vez do atributo `disabled` para leitores de tela
-- Use `aria-label` para botões apenas com ícone
-- Use `aria-busy="true"` quando o botão estiver carregando
-
-## Próximos Passos
-
-- [Fieldset](/pt/components/fieldset) - Agrupamento de campos de formulário
-- [Foundations](/pt/foundations) - Princípios de design
+<Callout type="tip" title="Escolhendo a variante correta">
+  Use **primary** para a ação principal, **secondary** para ações alternativas, **destructive** para ações perigosas e **ghost** para ações menos destacadas.
+</Callout>

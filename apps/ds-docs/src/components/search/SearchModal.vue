@@ -194,7 +194,8 @@ onUnmounted(() => {
       >
         <!-- Search Input -->
         <div class="relative border-b border-gray-200">
-          <svg
+          <i class="pi pi-search text-sm absolute left-4 top-[48%] -translate-y-1/2 text-gray-400" />
+          <!-- <svg
             class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
             fill="none"
             stroke="currentColor"
@@ -206,13 +207,13 @@ onUnmounted(() => {
               stroke-width="2"
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
-          </svg>
+          </svg> -->
           <input
             ref="inputRef"
             v-model="query"
             type="text"
             :placeholder="placeholderText"
-            class="w-full pl-12 pr-4 py-4 text-lg border-0 focus:outline-none focus:ring-0"
+            class="w-full pl-10 text-sm pr-4 py-4 leading-none border-0 focus:outline-none focus:ring-0"
             autocomplete="off"
             autocapitalize="off"
             spellcheck="false"
@@ -238,7 +239,7 @@ onUnmounted(() => {
           <!-- Empty State -->
           <div
             v-else-if="query && !hasResults"
-            class="px-4 py-12 text-center"
+            class="px-4 py-12 text-center text-xs"
           >
             <p class="text-gray-500">{{ noResultsText.replace('{query}', query) }}</p>
           </div>
@@ -246,7 +247,7 @@ onUnmounted(() => {
           <!-- Initial State -->
           <div
             v-else-if="!query"
-            class="px-4 py-8 text-center"
+            class="px-4 py-8 text-center text-xs"
           >
             <p class="text-gray-400">{{ startTypingText }}</p>
           </div>
@@ -255,7 +256,7 @@ onUnmounted(() => {
           <template v-else>
             <template v-for="[type, typeResults] in groupedResultsArray" :key="type">
               <!-- Category Header -->
-              <div class="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider bg-gray-50">
+              <div class="px-4 py-2 text-xs font-medium text-gray-400 uppercase tracking-wider bg-gray-50">
                 {{ TYPE_LABELS[type] || type }}
               </div>
               
@@ -343,7 +344,7 @@ onUnmounted(() => {
 /* Highlight styling */
 :deep(.search-highlight) {
   background-color: theme('colors.yellow.200');
-  padding: 0 2px;
+  padding: 0;
   border-radius: 2px;
 }
 
