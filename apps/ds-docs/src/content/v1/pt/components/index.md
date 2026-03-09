@@ -19,7 +19,6 @@ Explore nossa biblioteca de componentes Vue.js, projetados para serem acessívei
 Componentes para coletar entrada do usuário.
 
 - [Button](/pt/components/button) - Botões para acionar ações
-- [Fieldset](/pt/components/fieldset) - Agrupamento de campos de formulário
 
 ### Navegação
 Componentes para navegação e estrutura.

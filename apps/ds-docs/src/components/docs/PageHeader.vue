@@ -24,29 +24,30 @@ const props = defineProps<Props>();
 
 <template>
   <header class="page-header mb-8">
-    <div class="flex items-start justify-between gap-4 mb-4">
+    <div class="flex items-start gap-4 mb-4">
       <h1 class="text-3xl font-bold tracking-tight text-text-primary">
         {{ title }}
       </h1>
-      
+    </div>
+    
+    <p class="text-base text-text-secondary mb-4 max-w-docs-content">
+      {{ description }}
+    </p>
+    
+    <div class="flex items-center justify-between">
       <div v-if="status" class="flex items-center gap-2 shrink-0">
         <StatusBadge :status="status" />
         <span v-if="since" class="text-sm text-text-muted">
           since v{{ since }}
         </span>
       </div>
+      <MetadataLinks
+        v-if="source || storybook || figma"
+        :source="source"
+        :storybook="storybook"
+        :figma="figma"
+      />
     </div>
-    
-    <p class="text-lg text-text-secondary mb-4 max-w-docs-content">
-      {{ description }}
-    </p>
-    
-    <MetadataLinks
-      v-if="source || storybook || figma"
-      :source="source"
-      :storybook="storybook"
-      :figma="figma"
-    />
   </header>
 </template>
 

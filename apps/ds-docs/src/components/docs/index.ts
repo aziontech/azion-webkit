@@ -54,6 +54,12 @@ export { default as ComponentsStatusTable } from './ComponentsStatusTable.astro'
 
 // Navigation
 export { default as Tabs } from './Tabs.astro';
+export { default as ComponentTabs } from './ComponentTabs.astro';
+
+// Component Page Tab Content
+export { default as ComponentOverviewTab } from './ComponentOverviewTab.astro';
+export { default as ComponentUsageTab } from './ComponentUsageTab.astro';
+export { default as ComponentApiTab } from './ComponentApiTab.astro';
 
 /**
  * Components map for markdown rendering

@@ -6,4 +6,3 @@
  */
 
 export { default as AzButton } from './AzButton.vue';
-export { default as AzFieldset } from './AzFieldset.vue';

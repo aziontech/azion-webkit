@@ -66,58 +66,27 @@ export const buttonProps: PropsDefinition = {
     description: 'Whether button takes full width of container',
     category: 'Layout',
   },
-};
-
-/**
- * Fieldset component props metadata
- */
-export const fieldsetProps: PropsDefinition = {
-  title: {
+  icon: {
     type: 'string',
     control: 'text',
-    default: 'Fieldset Title',
-    label: 'Title',
-    description: 'The legend/title of the fieldset',
+    default: '',
+    label: 'Icon',
+    description: 'Name of the icon to display before or after the label',
     category: 'Content',
-    placeholder: 'Enter fieldset title...',
+    placeholder: 'e.g., plus, arrow-right',
   },
-  variant: {
+  iconPosition: {
     type: 'enum',
     control: 'select',
-    default: 'default',
-    options: ['default', 'bordered', 'elevated'],
+    default: 'left',
+    options: ['left', 'right'],
     optionLabels: {
-      default: 'Default',
-      bordered: 'Bordered',
-      elevated: 'Elevated',
+      left: 'Left',
+      right: 'Right',
     },
-    label: 'Variant',
-    description: 'Visual style variant of the fieldset',
-    category: 'Appearance',
-  },
-  disabled: {
-    type: 'boolean',
-    control: 'boolean',
-    default: false,
-    label: 'Disabled',
-    description: 'Whether the fieldset is disabled',
-    category: 'State',
-  },
-  collapsible: {
-    type: 'boolean',
-    control: 'boolean',
-    default: false,
-    label: 'Collapsible',
-    description: 'Whether the fieldset can be collapsed',
-    category: 'Behavior',
-  },
-  defaultExpanded: {
-    type: 'boolean',
-    control: 'boolean',
-    default: true,
-    label: 'Default Expanded',
-    description: 'Whether the fieldset is expanded by default (when collapsible)',
-    category: 'Behavior',
+    label: 'Icon Position',
+    description: 'Position of the icon relative to the label',
+    category: 'Content',
   },
 };
 

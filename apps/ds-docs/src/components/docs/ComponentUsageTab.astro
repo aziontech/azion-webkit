@@ -1,0 +1,224 @@
+---
+/**
+ * ComponentUsageTab
+ * 
+ * Renders the Usage tab content for component documentation.
+ * 
+ * Content order:
+ * 1. When to use
+ * 2. Dos and don'ts
+ * 3. Examples
+ * 
+ * Supports both structured frontmatter data and slot content.
+ */
+
+import type { UsageMetadata } from '../../content/config';
+import ExampleBlock from './ExampleBlock.astro';
+
+interface Props {
+  /** Component name for section IDs */
+  component?: string;
+  /** Structured usage data from frontmatter */
+  usage?: UsageMetadata;
+}
+
+const { component = 'component', usage } = Astro.props;
+
+// Check if we have structured usage data
+const hasStructuredUsage = usage && (
+  (usage.whenToUse && usage.whenToUse.length > 0) ||
+  (usage.whenNotToUse && usage.whenNotToUse.length > 0) ||
+  (usage.doDonts && usage.doDonts.length > 0) ||
+  (usage.examples && usage.examples.length > 0)
+);
+
+// Separate do's and don'ts
+const dos = usage?.doDonts?.filter(item => item.type === 'do') || [];
+const donts = usage?.doDonts?.filter(item => item.type === 'dont') || [];
+---
+
+<div class="component-usage-tab">
+  {hasStructuredUsage ? (
+    <!-- Render structured usage data -->
+    <div class="usage-content">
+      <!-- When to Use -->
+      {usage?.whenToUse && usage.whenToUse.length > 0 && (
+        <section class="usage-section" id={`${component}-when-to-use`}>
+          <h2>When to Use</h2>
+          <ul class="usage-list">
+            {usage.whenToUse.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      <!-- When Not to Use -->
+      {usage?.whenNotToUse && usage.whenNotToUse.length > 0 && (
+        <section class="usage-section" id={`${component}-when-not-to-use`}>
+          <h2>When Not to Use</h2>
+          <ul class="usage-list">
+            {usage.whenNotToUse.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      <!-- Do's and Don'ts -->
+      {usage?.doDonts && usage.doDonts.length > 0 && (
+        <section class="usage-section" id={`${component}-dos-and-donts`}>
+          <h2>Do's and Don'ts</h2>
+          <div class="do-dont-grid">
+            {/* Do's column */}
+            {dos.length > 0 && (
+              <div class="do-dont__do rounded-lg border-2 border-green-200 bg-green-50 overflow-hidden">
+                <div class="do-dont__header px-4 py-2 bg-green-100 border-b border-green-200 flex items-center gap-2">
+                  <svg class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm font-semibold text-green-700">Do</span>
+                </div>
+                <div class="do-dont__content p-4 space-y-3">
+                  {dos.map((item) => (
+                    <div class="do-dont__item">
+                      <p class="text-sm text-gray-700">{item.description}</p>
+                      {item.example && (
+                        <code class="mt-1 text-xs bg-green-100 px-1.5 py-0.5 rounded">{item.example}</code>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            
+            {/* Don'ts column */}
+            {donts.length > 0 && (
+              <div class="do-dont__dont rounded-lg border-2 border-red-200 bg-red-50 overflow-hidden">
+                <div class="do-dont__header px-4 py-2 bg-red-100 border-b border-red-200 flex items-center gap-2">
+                  <svg class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span class="text-sm font-semibold text-red-700">Don't</span>
+                </div>
+                <div class="do-dont__content p-4 space-y-3">
+                  {donts.map((item) => (
+                    <div class="do-dont__item">
+                      <p class="text-sm text-gray-700">{item.description}</p>
+                      {item.example && (
+                        <code class="mt-1 text-xs bg-red-100 px-1.5 py-0.5 rounded">{item.example}</code>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      <!-- Examples -->
+      {usage?.examples && usage.examples.length > 0 && (
+        <section class="usage-section" id={`${component}-examples`}>
+          <h2>Examples</h2>
+          {usage.examples.map((example) => (
+            <ExampleBlock
+              title={example.title}
+              description={example.description}
+              code={example.code}
+            >
+              {example.preview && <Fragment set:html={example.preview} />}
+            </ExampleBlock>
+          ))}
+        </section>
+      )}
+    </div>
+  ) : (
+    <!-- Fallback to slot content for markdown-authored usage -->
+    <div class="usage-content">
+      <slot />
+    </div>
+  )}
+</div>
+
+<style>
+  /* Section styling for consistent spacing */
+  .usage-content :global(h2) {
+    @apply text-2xl font-semibold text-text-primary tracking-tight mt-10 mb-4 border-b border-gray-200 pb-2;
+  }
+  
+  .usage-content :global(h3) {
+    @apply text-xl font-semibold text-text-primary mt-8 mb-3;
+  }
+  
+  .usage-content :global(h4) {
+    @apply text-lg font-medium text-text-primary mt-6 mb-2;
+  }
+  
+  /* Paragraph spacing */
+  .usage-content :global(p) {
+    @apply mb-4 leading-relaxed text-text-secondary;
+  }
+  
+  /* List styling */
+  .usage-content :global(ul),
+  .usage-content :global(ol) {
+    @apply mb-4 pl-6;
+  }
+  
+  .usage-content :global(li) {
+    @apply mb-2 text-text-secondary;
+  }
+  
+  /* Link styling */
+  .usage-content :global(a) {
+    @apply text-primary-600 hover:text-primary-700 underline underline-offset-2;
+  }
+  
+  /* Code styling */
+  .usage-content :global(code) {
+    @apply bg-gray-100 px-1.5 py-0.5 rounded text-sm font-code;
+  }
+  
+  .usage-content :global(pre) {
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4;
+  }
+  
+  .usage-content :global(pre code) {
+    @apply bg-transparent p-0;
+  }
+
+  /* Usage section spacing */
+  .usage-section {
+    @apply mb-8;
+  }
+
+  .usage-section:last-child {
+    @apply mb-0;
+  }
+
+  /* Usage list styling */
+  .usage-list {
+    @apply list-disc pl-6 space-y-2;
+  }
+
+  .usage-list li {
+    @apply text-text-secondary leading-relaxed;
+  }
+
+  /* Do/Don't grid */
+  .do-dont-grid {
+    @apply grid gap-4;
+  }
+
+  @screen md {
+    .do-dont-grid {
+      @apply grid-cols-2;
+    }
+  }
+
+  /* Do/Don't item spacing */
+  .do-dont__item {
+    @apply last:mb-0;
+  }
+</style>

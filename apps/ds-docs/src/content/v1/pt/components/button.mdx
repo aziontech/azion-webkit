@@ -129,47 +129,41 @@ Use botões para:
 
 Use para a ação principal em um contexto.
 
-<ExampleBlock 
+<ExampleBlock
   title="Variante Primary"
   description="O estilo padrão de botão para ações principais"
   code={`<AzButton variant="primary">Botão Primário</AzButton>`}
 >
-  <button class="px-4 py-2 bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors font-medium">
-    Botão Primário
-  </button>
+  <AzButton variant="primary">Botão Primário</AzButton>
 </ExampleBlock>
 
 ### Botão Secundário
 
 Use para ações secundárias ou alternativas.
 
-<ExampleBlock 
+<ExampleBlock
   title="Variante Secondary"
   description="Para ações alternativas ou menos proeminentes"
   code={`<AzButton variant="secondary">Botão Secundário</AzButton>`}
 >
-  <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors border border-gray-300 font-medium">
-    Botão Secundário
-  </button>
+  <AzButton variant="secondary">Botão Secundário</AzButton>
 </ExampleBlock>
 
 ### Botão Destrutivo
 
 Use para ações destrutivas ou irreversíveis.
 
-<ExampleBlock 
+<ExampleBlock
   title="Variante Destructive"
   description="Para ações perigosas como excluir ou remover"
   code={`<AzButton variant="destructive">Excluir</AzButton>`}
 >
-  <button class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors font-medium">
-    Excluir
-  </button>
+  <AzButton variant="destructive">Excluir</AzButton>
 </ExampleBlock>
 
 ### Tamanhos de Botão
 
-<ExampleBlock 
+<ExampleBlock
   title="Variantes de tamanho"
   description="Disponível nos tamanhos pequeno, médio e grande"
   code={`<AzButton size="sm">Pequeno</AzButton>
@@ -177,15 +171,9 @@ Use para ações destrutivas ou irreversíveis.
 <AzButton size="lg">Grande</AzButton>`}
 >
   <div class="flex items-center gap-3">
-    <button class="px-3 py-1.5 text-sm bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors font-medium">
-      Pequeno
-    </button>
-    <button class="px-4 py-2 bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors font-medium">
-      Médio
-    </button>
-    <button class="px-6 py-3 text-lg bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors font-medium">
-      Grande
-    </button>
+    <AzButton size="sm">Pequeno</AzButton>
+    <AzButton size="md">Médio</AzButton>
+    <AzButton size="lg">Grande</AzButton>
   </div>
 </ExampleBlock>
 
@@ -229,7 +217,6 @@ Explore o componente Button interativamente. Ajuste as props e veja as alteraç�
 
 <Playground
   client:load
-  component={AzButton}
   component-name="AzButton"
   props={buttonProps}
   slot-content="Clique aqui"

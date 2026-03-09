@@ -44,6 +44,46 @@ accessibility:
   wcag:
     - "2.1.1 Keyboard"
     - "4.1.2 Name, Role, Value"
+usage:
+  whenToUse:
+    - Trigger primary actions (Submit, Save, Continue)
+    - Navigate to different views or pages
+    - Toggle states or settings
+    - Trigger secondary actions (Cancel, Delete)
+    - Submit forms
+  whenNotToUse:
+    - Navigation to external links (use a link instead)
+    - Displaying static content (use text or labels)
+    - When a more subtle interaction is needed (consider a text link)
+  doDonts:
+    - type: do
+      description: Use buttons for actionable items
+      example: '<AzButton>Submit Form</AzButton>'
+    - type: do
+      description: Use clear, action-oriented labels
+      example: '<AzButton>Save Changes</AzButton>'
+    - type: dont
+      description: Don't use buttons for navigation
+      example: '<AzButton>Go to Dashboard</AzButton>'
+    - type: dont
+      description: Don't use vague labels
+      example: '<AzButton>Click Here</AzButton>'
+  examples:
+    - title: Primary Button
+      description: The default button style for primary actions
+      code: '<AzButton variant="primary">Primary Button</AzButton>'
+    - title: Secondary Button
+      description: For alternative or less prominent actions
+      code: '<AzButton variant="secondary">Secondary Button</AzButton>'
+    - title: Destructive Button
+      description: For dangerous actions like delete or remove
+      code: '<AzButton variant="destructive">Delete</AzButton>'
+    - title: Button Sizes
+      description: Available in small, medium, and large sizes
+      code: |-
+        <AzButton size="sm">Small</AzButton>
+        <AzButton size="md">Medium</AzButton>
+        <AzButton size="lg">Large</AzButton>'
 api:
   props:
     - name: variant
@@ -96,129 +136,17 @@ api:
       description: Fired when button is clicked and not disabled
 ---
 
-import { ExampleBlock, Callout, StateGrid, Playground } from '@components/docs';
+import { Playground, StateGrid, CodeBlock, Callout } from '@components/docs';
 import { AzButton } from '@components/demo';
 import { buttonProps } from '@components/demo/props-metadata';
-
-## Overview
 
 Buttons are interactive elements that trigger actions when clicked or tapped. They communicate actions that users can take and are typically placed throughout your UI, from forms to dialogs to navigation.
 
 The Button component provides a consistent, accessible way to trigger actions throughout your application.
 
-## When to Use
+## Import
 
-Use buttons to:
-
-- Trigger primary actions (Submit, Save, Continue)
-- Navigate to different views or pages
-- Toggle states or settings
-- Trigger secondary actions (Cancel, Delete)
-- Submit forms
-
-<Callout type="tip" title="Choosing the right variant">
-  Use **primary** for the main action, **secondary** for alternative actions, **destructive** for dangerous actions, and **ghost** for less prominent actions.
-</Callout>
-
-## Examples
-
-### Primary Button
-
-Use for the main action in a context.
-
-<ExampleBlock 
-  title="Primary variant"
-  description="The default button style for primary actions"
-  code={`<AzButton variant="primary">Primary Button</AzButton>`}
->
-  <button class="px-4 py-2 bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors font-medium">
-    Primary Button
-  </button>
-</ExampleBlock>
-
-### Secondary Button
-
-Use for secondary or alternative actions.
-
-<ExampleBlock 
-  title="Secondary variant"
-  description="For alternative or less prominent actions"
-  code={`<AzButton variant="secondary">Secondary Button</AzButton>`}
->
-  <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors border border-gray-300 font-medium">
-    Secondary Button
-  </button>
-</ExampleBlock>
-
-### Destructive Button
-
-Use for destructive or irreversible actions.
-
-<ExampleBlock 
-  title="Destructive variant"
-  description="For dangerous actions like delete or remove"
-  code={`<AzButton variant="destructive">Delete</AzButton>`}
->
-  <button class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors font-medium">
-    Delete
-  </button>
-</ExampleBlock>
-
-### Button Sizes
-
-<ExampleBlock 
-  title="Size variants"
-  description="Available in small, medium, and large sizes"
-  code={`<AzButton size="sm">Small</AzButton>
-<AzButton size="md">Medium</AzButton>
-<AzButton size="lg">Large</AzButton>`}
->
-  <div class="flex items-center gap-3">
-    <button class="px-3 py-1.5 text-sm bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors font-medium">
-      Small
-    </button>
-    <button class="px-4 py-2 bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors font-medium">
-      Medium
-    </button>
-    <button class="px-6 py-3 text-lg bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors font-medium">
-      Large
-    </button>
-  </div>
-</ExampleBlock>
-
-## States
-
-<StateGrid columns={4}>
-  <button slot="default" class="px-4 py-2 bg-primary-500 text-white rounded-md font-medium">Button</button>
-  <button slot="hover" class="px-4 py-2 bg-primary-600 text-white rounded-md font-medium">Button</button>
-  <button slot="focus" class="px-4 py-2 bg-primary-500 text-white rounded-md font-medium ring-2 ring-primary-300 ring-offset-2">Button</button>
-  <button slot="disabled" class="px-4 py-2 bg-gray-300 text-gray-500 rounded-md font-medium cursor-not-allowed" disabled>Button</button>
-</StateGrid>
-
-## Do's and Don'ts
-
-<DoDont title="Usage guidelines">
-  <template v-slot:do>
-    <p class="text-sm mb-2">Use buttons for actionable items:</p>
-    <button class="px-4 py-2 bg-primary-500 text-white rounded-md text-sm">Submit Form</button>
-  </template>
-  <template v-slot:dont>
-    <p class="text-sm mb-2">Don't use buttons for navigation:</p>
-    <button class="px-4 py-2 bg-primary-500 text-white rounded-md text-sm">Go to Dashboard</button>
-    <p class="text-xs text-red-600 mt-1">Use a link instead</p>
-  </template>
-</DoDont>
-
-<DoDont>
-  <template v-slot:do>
-    <p class="text-sm mb-2">Use clear, action-oriented labels:</p>
-    <button class="px-4 py-2 bg-primary-500 text-white rounded-md text-sm">Save Changes</button>
-  </template>
-  <template v-slot:dont>
-    <p class="text-sm mb-2">Don't use vague labels:</p>
-    <button class="px-4 py-2 bg-primary-500 text-white rounded-md text-sm">Click Here</button>
-  </template>
-</DoDont>
+<CodeBlock code={`import { AzButton } from '@aziontech/webkit';`} lang="javascript" />
 
 ## Playground
 
@@ -231,3 +159,16 @@ Explore the Button component interactively. Adjust props and see live changes.
   props={buttonProps}
   slot-content="Button"
 />
+
+## States
+
+<StateGrid columns={4}>
+  <button slot="default" class="px-4 py-2 bg-primary-500 text-white rounded-md font-medium">Button</button>
+  <button slot="hover" class="px-4 py-2 bg-primary-600 text-white rounded-md font-medium">Button</button>
+  <button slot="focus" class="px-4 py-2 bg-primary-500 text-white rounded-md font-medium ring-2 ring-primary-300 ring-offset-2">Button</button>
+  <button slot="disabled" class="px-4 py-2 bg-gray-300 text-gray-500 rounded-md font-medium cursor-not-allowed" disabled>Button</button>
+</StateGrid>
+
+<Callout type="tip" title="Choosing the right variant">
+  Use **primary** for the main action, **secondary** for alternative actions, **destructive** for dangerous actions, and **ghost** for less prominent actions.
+</Callout>

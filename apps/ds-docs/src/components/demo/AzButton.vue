@@ -10,6 +10,7 @@ import { computed } from 'vue';
 
 type ButtonVariant = 'primary' | 'secondary' | 'destructive' | 'ghost';
 type ButtonSize = 'sm' | 'md' | 'lg';
+type IconPosition = 'left' | 'right';
 
 interface Props {
   variant?: ButtonVariant;
@@ -17,6 +18,8 @@ interface Props {
   disabled?: boolean;
   loading?: boolean;
   fullWidth?: boolean;
+  icon?: string;
+  iconPosition?: IconPosition;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -25,6 +28,8 @@ const props = withDefaults(defineProps<Props>(), {
   disabled: false,
   loading: false,
   fullWidth: false,
+  icon: undefined,
+  iconPosition: 'left',
 });
 
 const emit = defineEmits<{
@@ -114,7 +119,27 @@ const buttonClasses = computed(() => {
       />
     </svg>
     
+    <!-- Icon left slot or prop -->
+    <span
+      v-if="iconPosition === 'left' && (icon || $slots['icon-left'])"
+      class="button__icon button__icon--left"
+    >
+      <slot name="icon-left">
+        <span v-if="icon" class="icon-placeholder">{{ icon }}</span>
+      </slot>
+    </span>
+    
     <!-- Button content -->
     <slot>Button</slot>
+    
+    <!-- Icon right slot or prop -->
+    <span
+      v-if="iconPosition === 'right' && (icon || $slots['icon-right'])"
+      class="button__icon button__icon--right"
+    >
+      <slot name="icon-right">
+        <span v-if="icon" class="icon-placeholder">{{ icon }}</span>
+      </slot>
+    </span>
   </button>
 </template>

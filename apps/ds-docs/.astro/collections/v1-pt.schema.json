@@ -191,6 +191,75 @@
               },
               "additionalProperties": false
             },
+            "usage": {
+              "type": "object",
+              "properties": {
+                "whenToUse": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "whenNotToUse": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "doDonts": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "do",
+                          "dont"
+                        ]
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "example": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "description"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "examples": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "code": {
+                        "type": "string"
+                      },
+                      "preview": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "title",
+                      "code"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "additionalProperties": false
+            },
             "api": {
               "type": "object",
               "properties": {

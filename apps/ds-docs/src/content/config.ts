@@ -92,6 +92,35 @@ const eventDefinitionSchema = z.object({
 });
 
 /**
+ * Do/Don't item for usage guidelines
+ */
+const doDontItemSchema = z.object({
+  type: z.enum(['do', 'dont']),
+  description: z.string(),
+  example: z.string().optional(),
+});
+
+/**
+ * Example definition for usage documentation
+ */
+const usageExampleSchema = z.object({
+  title: z.string(),
+  description: z.string().optional(),
+  code: z.string(),
+  preview: z.string().optional(),
+});
+
+/**
+ * Usage guidelines schema
+ */
+const usageSchema = z.object({
+  whenToUse: z.array(z.string()).optional(),
+  whenNotToUse: z.array(z.string()).optional(),
+  doDonts: z.array(doDontItemSchema).optional(),
+  examples: z.array(usageExampleSchema).optional(),
+});
+
+/**
  * Component documentation schema
  */
 const componentSchema = baseSchema.extend({
@@ -106,6 +135,8 @@ const componentSchema = baseSchema.extend({
   anatomy: z.array(anatomyPartSchema).optional(),
   // Structured accessibility
   accessibility: accessibilitySchema.optional(),
+  // Usage guidelines (for Usage tab)
+  usage: usageSchema.optional(),
   // API documentation (can be manual or generated)
   api: z.object({
     props: z.array(propDefinitionSchema).optional(),
@@ -247,3 +278,6 @@ export type AccessibilityMetadata = z.infer<typeof accessibilitySchema>;
 export type PropDefinition = z.infer<typeof propDefinitionSchema>;
 export type SlotDefinition = z.infer<typeof slotDefinitionSchema>;
 export type EventDefinition = z.infer<typeof eventDefinitionSchema>;
+export type DoDontItem = z.infer<typeof doDontItemSchema>;
+export type UsageExample = z.infer<typeof usageExampleSchema>;
+export type UsageMetadata = z.infer<typeof usageSchema>;
