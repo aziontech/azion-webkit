@@ -108,8 +108,7 @@ function toggleCode() {
 
 <style scoped>
 .playground-code {
-  border: 1px solid #e5e7eb;
-  border-radius: 0.5rem;
+  border-top: 1px solid #e5e7eb;
   overflow: hidden;
 }
 
@@ -119,7 +118,6 @@ function toggleCode() {
   justify-content: space-between;
   padding: 0.5rem 0.75rem;
   background-color: #f9fafb;
-  border-bottom: 1px solid #e5e7eb;
 }
 
 .playground-code__toggle {

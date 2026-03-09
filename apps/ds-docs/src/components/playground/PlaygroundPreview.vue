@@ -61,7 +61,7 @@ const containerStyle = computed(() => ({
 </script>
 
 <template>
-  <div class="playground-preview">
+  <div class="playground-preview h-full">
     <!-- Preview container -->
     <div
       :class="[
@@ -104,16 +104,14 @@ const containerStyle = computed(() => ({
 .playground-preview {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
 .playground-preview__container {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
   padding: 1.5rem;
-  border: 1px solid #e5e7eb;
+  height: 100%;
   border-radius: 0.5rem;
   overflow: auto;
 }

@@ -161,6 +161,7 @@ function resetToDefaults() {
   font-weight: 600;
   color: #6b7280;
   text-transform: uppercase;
+  font-family: Proto Mono;
   letter-spacing: 0.05em;
   margin: 0;
 }

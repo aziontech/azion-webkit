@@ -1,10 +1,25 @@
 <script setup lang="ts">
-import { ref, computed, watch, type Component } from 'vue';
+import { ref, computed, watch, type Component, onMounted, shallowRef } from 'vue';
 import type { PropsDefinition, PropsValues, PlaygroundConfig, PlaygroundHooks, GeneratedCode, PreviewSurface } from './types';
 import { generateCode } from './code-generator';
 import PlaygroundPreview from './PlaygroundPreview.vue';
 import PlaygroundControls from './PlaygroundControls.vue';
 import PlaygroundCode from './PlaygroundCode.vue';
+
+// Import demo components for registry
+import { AzButton, AzFieldset } from '../demo';
+
+/**
+ * Component Registry
+ * 
+ * Maps component names to their actual component objects.
+ * This is necessary because Astro's client:load directive cannot
+ * serialize Vue component objects as props.
+ */
+const componentRegistry: Record<string, Component> = {
+  AzButton,
+  AzFieldset,
+};
 
 /**
  * Playground
@@ -15,20 +30,19 @@ import PlaygroundCode from './PlaygroundCode.vue';
  * Usage:
  * ```vue
  * <Playground
- *   :component="AzButton"
- *   :props="buttonProps"
  *   component-name="AzButton"
+ *   :props="buttonProps"
  * />
  * ```
  */
 
 interface Props {
-  /** The Vue component to render */
-  component: Component;
+  /** The Vue component to render (for backwards compatibility) */
+  component?: Component;
+  /** Component name for lookup in registry */
+  componentName: string;
   /** Props definition with metadata */
   props: PropsDefinition;
-  /** Component name for display */
-  componentName: string;
   /** Initial props values (optional) */
   initialValues?: PropsValues;
   /** Preview surface style */
@@ -48,11 +62,23 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
+  component: undefined,
   surface: 'neutral',
   showCode: true,
   showControls: true,
   codeInitiallyVisible: true,
   slotContent: '',
+});
+
+// Resolve component from registry or use provided component
+const resolvedComponent = computed(() => {
+  // If component is directly provided, use it (for backwards compatibility)
+  if (props.component) {
+    return props.component;
+  }
+  
+  // Otherwise, look up in registry by name
+  return componentRegistry[props.componentName] || null;
 });
 
 // Initialize props values with defaults
@@ -119,11 +145,8 @@ defineExpose({
     <div class="playground__main">
       <!-- Preview section -->
       <div class="playground__preview">
-        <div class="playground__preview-header">
-          <span class="playground__label">Preview</span>
-        </div>
         <PlaygroundPreview
-          :component="component"
+          :component="resolvedComponent"
           :props-values="propsValues"
           :surface="surface"
           :custom-class="previewClass"
@@ -171,18 +194,16 @@ defineExpose({
 .playground {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   margin: 1.5rem 0;
-  padding: 1rem;
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .playground__main {
   display: grid;
   grid-template-columns: 1fr 280px;
-  gap: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -215,14 +236,12 @@ defineExpose({
   flex-shrink: 0;
   padding: 1rem;
   background-color: #f9fafb;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.5rem;
+  border-left: 1px solid #e5e7eb;
   overflow-y: auto;
-  max-height: 400px;
+  max-height: 512px;
 }
 
 .playground__code {
-  margin-top: 0.5rem;
 }
 
 .playground__extra {

@@ -8,7 +8,6 @@
 
 import DocsLayout from '../../layouts/DocsLayout.astro';
 import { Playground } from '../../components/playground';
-import { AzButton, AzFieldset } from '../../components/demo';
 import { buttonProps, fieldsetProps } from '../../components/demo/props-metadata';
 ---
 
@@ -33,7 +32,6 @@ import { buttonProps, fieldsetProps } from '../../components/demo/props-metadata
       
       <Playground
         client:load
-        component={AzButton}
         component-name="AzButton"
         props={buttonProps}
         slot-content="Button"
@@ -51,7 +49,6 @@ import { buttonProps, fieldsetProps } from '../../components/demo/props-metadata
       
       <Playground
         client:load
-        component={AzFieldset}
         component-name="AzFieldset"
         props={fieldsetProps}
         slot-content="Fieldset content goes here"
