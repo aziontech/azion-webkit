@@ -9,17 +9,17 @@ export default {
       colors: {
         // Primary brand colors
         primary: {
-          50: '#fff5ef',
-          100: '#ffe7d8',
-          200: '#ffcfb3',
-          300: '#ffb180',
-          400: '#ff8e4d',
-          500: '#fe601f',
-          600: '#d94a03',
-          700: '#b03c02',
-          800: '#8a2f02',
-          900: '#692402',
-          950: '#401602',
+          50: '#fafafa',
+          100: '#f5f5f5',
+          200: '#e5e5e5',
+          300: '#d4d4d4',
+          400: '#a3a3a3',
+          500: '#737373',
+          600: '#525252',
+          700: '#404040',
+          800: '#262626',
+          900: '#171717',
+          950: '#0a0a0a',
         },
         // Neutral colors for documentation
         surface: {

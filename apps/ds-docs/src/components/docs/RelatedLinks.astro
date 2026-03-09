@@ -38,7 +38,7 @@ const typeIcons: Record<string, string> = {
       {items.map((item) => (
         <a 
           href={item.href}
-          class="related-link group flex items-start gap-3 p-3 rounded-lg border border-gray-200 hover:border-primary-300 hover:bg-primary-50 transition-colors"
+          class="related-link items-center group flex gap-1.5 p-3 rounded-lg border border-gray-200 hover:border-primary-300 hover:bg-primary-50 transition-colors"
         >
           <span class="text-gray-400 group-hover:text-primary-500 transition-colors shrink-0 mt-0.5" set:html={typeIcons[item.type || 'component']} />
           <div class="flex-1 min-w-0">

@@ -212,23 +212,8 @@ onMounted(() => {
           <span class="theme-switcher__option-label">
             {{ theme.label }}
           </span>
-          <svg
-            v-if="theme.value === selectedTheme"
-            class="theme-switcher__check"
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M13.5 4.5L6 12L2.5 8.5"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+
+          <i class="pi pi-check" v-if="theme.value === selectedTheme" />
         </button>
       </div>
     </Transition>

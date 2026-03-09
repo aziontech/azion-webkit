@@ -74,13 +74,13 @@ const documentationText = computed(() => {
 </script>
 
 <template>
-  <header class="docs-header h-16 sticky top-0 z-10 border-b border-gray-200 bg-surface/95 backdrop-blur">
+  <header class="docs-header h-16 sticky top-0 z-10 bg-[#171717]">
     <div class="flex items-center justify-between h-full px-6">
       <!-- Breadcrumb -->
       <nav class="flex items-center gap-2 text-sm" aria-label="Breadcrumb">
         <ol class="flex items-center gap-2">
           <li>
-            <a :href="homeLink" class="text-text-muted hover:text-text-primary transition-colors">
+            <a :href="homeLink" class="text-text-muted hover:text-white transition-colors">
               {{ documentationText }}
             </a>
           </li>
@@ -88,7 +88,7 @@ const documentationText = computed(() => {
             <span class="text-text-muted" aria-hidden="true">/</span>
             <a
               :href="sectionLink"
-              class="text-text-primary font-medium hover:text-primary-600 transition-colors"
+              class="text-white font-medium hover:text-white transition-colors"
               :aria-current="item && !item.isIndex ? undefined : 'page'"
             >
               {{ sectionLabel }}
@@ -96,7 +96,7 @@ const documentationText = computed(() => {
           </li>
           <li v-if="item && !item.isIndex" class="flex items-center gap-2">
             <span class="text-text-muted" aria-hidden="true">/</span>
-            <span class="text-text-primary" aria-current="page">
+            <span class="text-white" aria-current="page">
               {{ item.navLabel }}
             </span>
           </li>
@@ -107,13 +107,13 @@ const documentationText = computed(() => {
       <div class="flex items-center justify-end gap-2.5 min-w-[420px]">
         <!-- Search button -->
         <button 
-          class="flex w-full max-w-sm items-center gap-2 px-3 py-1.5 text-sm text-text-secondary bg-surface-subtle rounded-md hover:bg-gray-100 transition-colors"
+          class="flex w-full max-w-sm items-center gap-2 px-3 py-1.5 text-sm text-[#B5B5B5] bg-[#292929] rounded-md hover:bg-[#404040] transition-colors"
           aria-label="Search documentation"
           @click="openSearch"
         >
           <DocsIcon name="pi-search" size="sm" decorative />
           <span class="hidden sm:inline w-full text-left">Search</span>
-          <kbd class="hidden sm:inline-flex px-1.5 py-0.5 text-xs bg-gray-200 rounded font-mono">⌘K</kbd>
+          <kbd class="hidden sm:inline-flex px-1.5 py-0.5 text-xs text-white bg-black rounded font-sans">⌘+K</kbd>
         </button>
         
         <!-- Version switcher -->

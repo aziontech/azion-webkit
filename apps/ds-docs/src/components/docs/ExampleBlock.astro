@@ -28,6 +28,9 @@ const {
   layout = 'stacked',
   background = 'light'
 } = Astro.props;
+
+// Check if there's actual content in the default slot
+const hasPreview = await Astro.slots.render('default');
 ---
 
 <div class="example-block my-6" data-layout={layout}>
@@ -49,13 +52,15 @@ const {
   
   {/* Preview Container */}
   <div class="example-block__preview-container overflow-hidden">
-    {/* Preview */}
-    <div 
-      class="example-block__preview p-6"
-      data-background={background}
-    >
-      <slot />
-    </div>
+    {/* Preview - only render if there's slot content */}
+    {hasPreview && (
+      <div 
+        class="example-block__preview p-6"
+        data-background={background}
+      >
+        <slot />
+      </div>
+    )}
     
     {/* Code */}
     {showCode && code && (

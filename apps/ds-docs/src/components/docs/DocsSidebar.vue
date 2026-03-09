@@ -56,7 +56,7 @@ const brandName = computed(() => {
 </script>
 
 <template>
-  <aside class="docs-sidebar bg-[#171717] w-64 h-screen sticky top-0 border-r border-gray-200 overflow-y-auto">
+  <aside class="docs-sidebar bg-[#171717] w-64 h-screen sticky top-0 overflow-y-auto">
     <div class="p-4">
       <!-- Logo/Brand -->
       <div class="mb-6 mt-1">

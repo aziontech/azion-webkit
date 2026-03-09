@@ -52,7 +52,7 @@ const buttonClasses = computed(() => {
   // Variant styles
   switch (props.variant) {
     case 'primary':
-      classes.push('bg-primary-500', 'text-white', 'hover:bg-primary-600');
+      classes.push('bg-[#171717]', 'text-white', 'hover:bg-[#F3652B]');
       if (props.disabled) classes.push('disabled:bg-primary-300', 'disabled:cursor-not-allowed');
       break;
     case 'secondary':

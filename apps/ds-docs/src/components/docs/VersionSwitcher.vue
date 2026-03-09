@@ -81,7 +81,7 @@ function selectVersion(version: string) {
       v-for="version in versions"
       :key="version"
       type="button"
-      class="version-switcher__button !h-8 !w-8 text-text-primary bg-surface-subtle"
+      class="version-switcher__button !h-8 !w-8 text-[#B5B5B5] bg-[#292929] rounded-md hover:bg-[#404040]"
       :class="{ '': version === currentVersion }"
       @click="selectVersion(version)"
     >
@@ -105,11 +105,6 @@ function selectVersion(version: string) {
   font-family: ui-monospace, monospace;
   cursor: pointer;
   transition: all 0.15s ease;
-}
-
-.version-switcher__button:hover {
-  background: var(--color-surface-hover, #f9fafb);
-  color: var(--color-text-primary, #1f2937);
 }
 
 .version-switcher__button:focus {

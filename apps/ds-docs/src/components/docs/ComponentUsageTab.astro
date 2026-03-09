@@ -14,6 +14,7 @@
 
 import type { UsageMetadata } from '../../content/config';
 import ExampleBlock from './ExampleBlock.astro';
+import ComponentPreview from './ComponentPreview.vue';
 
 interface Props {
   /** Component name for section IDs */
@@ -23,6 +24,15 @@ interface Props {
 }
 
 const { component = 'component', usage } = Astro.props;
+
+// Map component names to their string identifiers for the preview
+const componentNameMap: Record<string, string> = {
+  AzButton: 'AzButton',
+  // Add more components as needed
+};
+
+// Get the component name for previews
+const previewComponentName = componentNameMap[component] || component;
 
 // Check if we have structured usage data
 const hasStructuredUsage = usage && (
@@ -82,10 +92,19 @@ const donts = usage?.doDonts?.filter(item => item.type === 'dont') || [];
                 <div class="do-dont__content p-4 space-y-3">
                   {dos.map((item) => (
                     <div class="do-dont__item">
-                      <p class="text-sm text-gray-700">{item.description}</p>
+                      <p class="text-sm text-gray-700 mb-2">{item.description}</p>
                       {item.example && (
-                        <code class="mt-1 text-xs bg-green-100 px-1.5 py-0.5 rounded">{item.example}</code>
+                        <div class="do-dont__preview flex items-center gap-2 mb-2">
+                          <ComponentPreview
+                            client:load
+                            code={item.example}
+                            componentName={previewComponentName}
+                          />
+                        </div>
                       )}
+                      {/* {item.example && (
+                        <code class="mt-1 text-xs bg-green-100 px-1.5 py-0.5 rounded block">{item.example}</code>
+                      )} */}
                     </div>
                   ))}
                 </div>
@@ -104,10 +123,19 @@ const donts = usage?.doDonts?.filter(item => item.type === 'dont') || [];
                 <div class="do-dont__content p-4 space-y-3">
                   {donts.map((item) => (
                     <div class="do-dont__item">
-                      <p class="text-sm text-gray-700">{item.description}</p>
+                      <p class="text-sm text-gray-700 mb-2">{item.description}</p>
                       {item.example && (
-                        <code class="mt-1 text-xs bg-red-100 px-1.5 py-0.5 rounded">{item.example}</code>
+                        <div class="do-dont__preview flex items-center gap-2 mb-2">
+                          <ComponentPreview
+                            client:load
+                            code={item.example}
+                            componentName={previewComponentName}
+                          />
+                        </div>
                       )}
+                      {/* {item.example && (
+                        <code class="mt-1 text-xs bg-red-100 px-1.5 py-0.5 rounded block">{item.example}</code>
+                      )} */}
                     </div>
                   ))}
                 </div>
@@ -127,7 +155,15 @@ const donts = usage?.doDonts?.filter(item => item.type === 'dont') || [];
               description={example.description}
               code={example.code}
             >
-              {example.preview && <Fragment set:html={example.preview} />}
+              {example.preview ? (
+                <Fragment set:html={example.preview} />
+              ) : (
+                <ComponentPreview
+                  client:load
+                  code={example.code}
+                  componentName={previewComponentName}
+                />
+              )}
             </ExampleBlock>
           ))}
         </section>
