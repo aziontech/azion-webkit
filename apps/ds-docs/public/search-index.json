@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-03-10T16:37:57.331Z",
+    "generated": "2026-03-10T17:03:35.142Z",
     "count": 24,
     "language": "en",
     "version": "v1",
@@ -104,6 +104,7 @@
       "type": "doc",
       "description": "",
       "headings": [
+        "Foundations",
         "What are Foundations",
         "Available Foundations",
         "Why Foundations Matter",
@@ -118,7 +119,7 @@
         "How They Work Together"
       ],
       "tags": [],
-      "content": "Foundations define the visual and interaction principles that guide every component and interface across the design system. They ensure consistency, accessibility, and scalability across all products and experiences. What are Foundations Foundations are the core design decisions that underpin the entire system. They define the fundamental rules that ensure visual and functional coherence. Every component in the design system is built on top of these foundations. Understanding them helps you: Make informed design decisions Create consistent interfaces Maintain scalability across products Ensure accessibility compliance Foundations define: Color systems Palettes, semantic colors, and accessibility guidelines Typography scale Font families, sizes, weights, and line heights Spacing rules Consistent margins, padding, and gaps Layout structure Grid systems and responsive breakpoints Motion principles Animation timing, easing, and transitions Iconography Icon style, sizing, and usage guidelines Available Foundations Explore each foundation to understand the design decisions and implementation details.",
+      "content": "Foundations Foundations define the visual and interaction principles that guide every component and interface across the design system. They ensure consistency, accessibility, and scalability across all products and experiences. What are Foundations Foundations are the core design decisions that underpin the entire system. They define the fundamental rules that ensure visual and functional coherence. Every component in the design system is built on top of these foundations. Understanding them helps you: Make informed design decisions Create consistent interfaces Maintain scalability across products Ensure accessibility compliance Foundations define: Color systems Palettes, semantic colors, and accessibility guidelines Typography scale Font families, sizes, weights, and line heights Spacing rules Consistent margins, padding, and gaps Layout structure Grid systems and responsive breakpoints Motion principles Animation timing, easing, and transitions Iconography Icon style, sizing, and usage guidelines Available Foundations Explore each foundation to understand the design decisions and implementation details.",
       "url": "/v1/en/foundations",
       "version": "v1",
       "language": "en"
@@ -130,6 +131,7 @@
       "type": "doc",
       "description": "",
       "headings": [
+        "Tokens",
         "What Are Design Tokens",
         "Installing the Tokens",
         "Importing Theme Styles",
@@ -172,7 +174,7 @@
         "Related Resources"
       ],
       "tags": [],
-      "content": "Design tokens are the smallest units of the design system. They store visual values like colors, spacing, and typography, enabling consistent usage across products and platforms. In the Azion Design System, tokens are distributed through the npm package and exported for Tailwind CSS, CSS variables, and JavaScript. Tokens support both light and dark themes automatically, ensuring seamless theme switching. What Are Design Tokens Design tokens are named entities that store visual design attributes. Instead of hardcoding values like or , you use meaningful names like or . This abstraction provides several benefits: Consistency All products use the same values, creating a cohesive visual experience Maintainability Update a token once, and the change propagates everywhere Scalability New features automatically inherit the design system's visual language Theme support Semantic tokens adapt automatically between light and dark modes Cross-platform Tokens can be used in CSS, JavaScript, and design tools Installing the Tokens Install the package to access design tokens in your project: Importing Theme Styles Import the theme styles at your application's entry point: For applications that support theme switching, dynamically import the appropriate stylesheet: CSS Variables After importing, tokens are available as CSS custom properties: Token Types The Azion Design System uses two main token categories: primitive tokens and semantic tokens. Primitive Tokens Primitive tokens are raw values from the design palette. They represent the foundational colors, spacing, and typography values without any context or meaning attached. Examples of primitive tokens: Token Value Usage ------- ------- ------- Brand primary color Darkest neutral Lightest neutral Accent color Accessing primitives in JavaScript: Semantic Tokens Semantic tokens represent UI meaning. They describe what a value is used for, not just the raw value. This abstraction enables automatic theme adaptation.",
+      "content": "Tokens Design tokens are the smallest units of the design system. They store visual values like colors, spacing, and typography, enabling consistent usage across products and platforms. In the Azion Design System, tokens are distributed through the npm package and exported for Tailwind CSS, CSS variables, and JavaScript. Tokens support both light and dark themes automatically, ensuring seamless theme switching. What Are Design Tokens Design tokens are named entities that store visual design attributes. Instead of hardcoding values like or , you use meaningful names like or . This abstraction provides several benefits: Consistency All products use the same values, creating a cohesive visual experience Maintainability Update a token once, and the change propagates everywhere Scalability New features automatically inherit the design system's visual language Theme support Semantic tokens adapt automatically between light and dark modes Cross-platform Tokens can be used in CSS, JavaScript, and design tools Installing the Tokens Install the package to access design tokens in your project: Importing Theme Styles Import the theme styles at your application's entry point: For applications that support theme switching, dynamically import the appropriate stylesheet: CSS Variables After importing, tokens are available as CSS custom properties: Token Types The Azion Design System uses two main token categories: primitive tokens and semantic tokens. Primitive Tokens Primitive tokens are raw values from the design palette. They represent the foundational colors, spacing, and typography values without any context or meaning attached. Examples of primitive tokens: Token Value Usage ------- ------- ------- Brand primary color Darkest neutral Lightest neutral Accent color Accessing primitives in JavaScript: Semantic Tokens Semantic tokens represent UI meaning. They describe what a value is used for, not just the raw value. This abstraction enables automatic theme adaptation.",
       "url": "/v1/en/tokens",
       "version": "v1",
       "language": "en"
@@ -423,6 +425,7 @@
       "type": "doc",
       "description": "",
       "headings": [
+        "Fundamentos",
         "O Que São Fundamentos",
         "Fundamentos Disponíveis",
         "Por Que Fundamentos Importam",
@@ -437,7 +440,7 @@
         "Como Eles Trabalham Juntos"
       ],
       "tags": [],
-      "content": "Fundamentos definem os princ pios visuais e de intera o que orientam cada componente e interface do sistema de design. Eles garantem consist ncia, acessibilidade e escalabilidade em todos os produtos e experi ncias. O Que S o Fundamentos Fundamentos s o as decis es de design principais que sustentam todo o sistema. Eles definem as regras fundamentais que garantem coer ncia visual e funcional. Todo componente no sistema de design constru do sobre esses fundamentos. Entend -los ajuda voc a: Tomar decis es de design informadas Criar interfaces consistentes Manter escalabilidade entre produtos Garantir conformidade com acessibilidade Fundamentos definem: Sistemas de cores Paletas, cores sem nticas e diretrizes de acessibilidade Escala tipogr fica Fam lias de fontes, tamanhos, pesos e alturas de linha Regras de espa amento Margens, padding e gaps consistentes Estrutura de layout Sistemas de grid e breakpoints responsivos Princ pios de movimento Timing de anima o, easing e transi es Iconografia Estilo de cones, tamanhos e diretrizes de uso Fundamentos Dispon veis Explore cada fundamento para entender as decis es de design e detalhes de implementa o.",
+      "content": "Fundamentos Fundamentos definem os princ pios visuais e de intera o que orientam cada componente e interface do sistema de design. Eles garantem consist ncia, acessibilidade e escalabilidade em todos os produtos e experi ncias. O Que S o Fundamentos Fundamentos s o as decis es de design principais que sustentam todo o sistema. Eles definem as regras fundamentais que garantem coer ncia visual e funcional. Todo componente no sistema de design constru do sobre esses fundamentos. Entend -los ajuda voc a: Tomar decis es de design informadas Criar interfaces consistentes Manter escalabilidade entre produtos Garantir conformidade com acessibilidade Fundamentos definem: Sistemas de cores Paletas, cores sem nticas e diretrizes de acessibilidade Escala tipogr fica Fam lias de fontes, tamanhos, pesos e alturas de linha Regras de espa amento Margens, padding e gaps consistentes Estrutura de layout Sistemas de grid e breakpoints responsivos Princ pios de movimento Timing de anima o, easing e transi es Iconografia Estilo de cones, tamanhos e diretrizes de uso Fundamentos Dispon veis Explore cada fundamento para entender as decis es de design e detalhes de implementa o.",
       "url": "/v1/pt/foundations",
       "version": "v1",
       "language": "pt"
@@ -449,6 +452,7 @@
       "type": "doc",
       "description": "",
       "headings": [
+        "Tokens",
         "O Que São Design Tokens",
         "Instalando os Tokens",
         "Importando Estilos do Tema",
@@ -491,7 +495,7 @@
         "Recursos Relacionados"
       ],
       "tags": [],
-      "content": "Design tokens s o as menores unidades do sistema de design. Eles armazenam valores visuais como cores, espa amentos e tipografia, permitindo uso consistente entre produtos e plataformas. No Azion Design System, os tokens s o distribu dos atrav s do pacote npm e exportados para Tailwind CSS, vari veis CSS e JavaScript. Os tokens suportam temas claro e escuro automaticamente, garantindo troca de tema sem interrup es. O Que S o Design Tokens Design tokens s o entidades nomeadas que armazenam atributos de design visual. Em vez de usar valores fixos como ou , voc usa nomes significativos como ou . Essa abstra o oferece v rios benef cios: Consist ncia Todos os produtos usam os mesmos valores, criando uma experi ncia visual coesa Manutenibilidade Atualize um token uma vez e a mudan a se propaga para todos os lugares Escalabilidade Novas funcionalidades herdam automaticamente a linguagem visual do sistema de design Suporte a temas Tokens sem nticos se adaptam automaticamente entre os modos claro e escuro Multiplataforma Tokens podem ser usados em CSS, JavaScript e ferramentas de design Instalando os Tokens Instale o pacote para acessar os design tokens no seu projeto: Importando Estilos do Tema Importe os estilos do tema no ponto de entrada da sua aplica o: Para aplica es que suportam troca de tema, importe dinamicamente a folha de estilo apropriada: Vari veis CSS Ap s a importa o, os tokens est o dispon veis como custom properties CSS: Tipos de Tokens O Azion Design System usa duas categorias principais de tokens: tokens primitivos e tokens sem nticos. Tokens Primitivos Tokens primitivos s o valores brutos da paleta de design. Eles representam as cores, espa amentos e valores de tipografia fundamentais sem nenhum contexto ou significado anexado.",
+      "content": "Tokens Design tokens s o as menores unidades do sistema de design. Eles armazenam valores visuais como cores, espa amentos e tipografia, permitindo uso consistente entre produtos e plataformas. No Azion Design System, os tokens s o distribu dos atrav s do pacote npm e exportados para Tailwind CSS, vari veis CSS e JavaScript. Os tokens suportam temas claro e escuro automaticamente, garantindo troca de tema sem interrup es. O Que S o Design Tokens Design tokens s o entidades nomeadas que armazenam atributos de design visual. Em vez de usar valores fixos como ou , voc usa nomes significativos como ou . Essa abstra o oferece v rios benef cios: Consist ncia Todos os produtos usam os mesmos valores, criando uma experi ncia visual coesa Manutenibilidade Atualize um token uma vez e a mudan a se propaga para todos os lugares Escalabilidade Novas funcionalidades herdam automaticamente a linguagem visual do sistema de design Suporte a temas Tokens sem nticos se adaptam automaticamente entre os modos claro e escuro Multiplataforma Tokens podem ser usados em CSS, JavaScript e ferramentas de design Instalando os Tokens Instale o pacote para acessar os design tokens no seu projeto: Importando Estilos do Tema Importe os estilos do tema no ponto de entrada da sua aplica o: Para aplica es que suportam troca de tema, importe dinamicamente a folha de estilo apropriada: Vari veis CSS Ap s a importa o, os tokens est o dispon veis como custom properties CSS: Tipos de Tokens O Azion Design System usa duas categorias principais de tokens: tokens primitivos e tokens sem nticos. Tokens Primitivos Tokens primitivos s o valores brutos da paleta de design. Eles representam as cores, espa amentos e valores de tipografia fundamentais sem nenhum contexto ou significado anexado.",
       "url": "/v1/pt/tokens",
       "version": "v1",
       "language": "pt"
