@@ -84,17 +84,25 @@ interface IconEntry {
 }
 ```
 
-### 3. DocsIcon Component
+### 3. Icon usage (direct from library)
 
-The `DocsIcon.vue` component is the primary abstraction for rendering icons:
+**Note:** The `DocsIcon.vue` component was removed. Icons are used directly from `@aziontech/icons`:
 
-**Features:**
+- **PrimeIcons:** `<i class="pi pi-{name}" aria-hidden="true" />` (e.g. `pi pi-search`, `pi pi-check`)
+- **Azion Icons:** `<i class="ai ai-{name}" aria-hidden="true" />` (e.g. `ai ai-azion`)
+
+Size and color: use Tailwind on the `<i>` (e.g. `class="pi pi-code text-lg text-gray-500"`). For semantic icons, add `aria-label="…"` and omit `aria-hidden="true"`.
+
+<details>
+<summary>Legacy: former DocsIcon component (removed)</summary>
+
+The previous `DocsIcon.vue` abstraction provided:
 - Size variants (sm, md, lg, xl, 2xl)
 - Accessibility support (decorative vs semantic)
 - Custom class passthrough
 - Type-safe icon names
 
-**Usage:**
+**Usage (legacy):**
 
 ```vue
 <!-- Decorative icon (hidden from screen readers) -->
@@ -102,13 +110,9 @@ The `DocsIcon.vue` component is the primary abstraction for rendering icons:
 
 <!-- Semantic icon (announced by screen readers) -->
 <DocsIcon name="pi-search" ariaLabel="Search" />
-
-<!-- With size variant -->
-<DocsIcon name="ai-home" size="lg" />
-
-<!-- With custom class -->
-<DocsIcon name="pi-cog" class="text-primary-600" />
 ```
+
+</details>
 
 ### 4. Supporting Components
 
@@ -144,25 +148,22 @@ The icon integration follows WCAG guidelines:
 
 Icons that are purely decorative should be hidden from assistive technology:
 
-```vue
-<DocsIcon name="ai-azion" decorative />
-<!-- Renders: <i class="ai ai-azion" aria-hidden="true" role="img" /> -->
+```html
+<i class="ai ai-azion" aria-hidden="true" />
 ```
 
 ### Semantic Icons
 
 Icons that convey meaning must have an accessible label:
 
-```vue
-<DocsIcon name="pi-search" ariaLabel="Search" />
-<!-- Renders: <i class="pi pi-search" aria-label="Search" role="img" /> -->
+```html
+<i class="pi pi-search" aria-label="Search" role="img" />
 ```
 
 ### Default Behavior
 
-- If `ariaLabel` is provided → semantic icon
-- If `decorative` is true → decorative icon
-- Default → decorative icon (safe default)
+- Use `aria-hidden="true"` for decorative icons
+- Use `aria-label="…"` (and optionally `role="img"`) for semantic icons
 
 ## File Structure
 
@@ -171,9 +172,8 @@ apps/ds-docs/
 ├── src/
 │   ├── components/
 │   │   ├── docs/
-│   │   │   ├── DocsIcon.vue        # Primary icon component
 │   │   │   ├── DocsHeader.vue      # Uses icons
-│   │   │   ├── DocsSidebar.vue     # Uses icons
+│   │   │   ├── DocsSidebar.vue     # Uses icons (logo SVG + nav)
 │   │   │   └── Callout.astro       # Uses icons
 │   │   └── icons/
 │   │       ├── index.ts            # Barrel export
@@ -222,15 +222,14 @@ apps/ds-docs/
 - Categories should be defined in the package
 - Registry should become a thin wrapper
 
-### 3. DocsIcon Abstraction
+### 3. Direct icon usage
 
-**Decision:** Create a wrapper component instead of raw icon classes
+**Decision:** Use icon font classes directly on `<i>` elements (no wrapper component)
 
 **Rationale:**
-- Consistent API across the docs platform
-- Built-in accessibility support
-- Size variants via props
-- Easy to refactor if icon implementation changes
+- Simpler: no extra component to maintain
+- Library is already global; size/color via Tailwind
+- Accessibility: add `aria-hidden="true"` or `aria-label="…"` on the `<i>` as needed
 
 ### 4. Astro Config Alias
 
@@ -297,13 +296,9 @@ The `@aziontech/icons` package should evolve to provide:
 ### In Vue Components
 
 ```vue
-<script setup>
-import DocsIcon from '@/components/docs/DocsIcon.vue';
-</script>
-
 <template>
   <button>
-    <DocsIcon name="pi-search" ariaLabel="Search" />
+    <i class="pi pi-search text-sm" aria-label="Search" role="img" />
     <span>Search</span>
   </button>
 </template>
@@ -313,21 +308,19 @@ import DocsIcon from '@/components/docs/DocsIcon.vue';
 
 ```astro
 ---
-import DocsIcon from '@/components/docs/DocsIcon.vue';
+// No import needed; @aziontech/icons is loaded in layout
 ---
 
 <div class="status">
-  <DocsIcon name="pi-check-circle" class="text-green-500" decorative />
+  <i class="pi pi-check-circle text-green-500" aria-hidden="true" />
   <span>Success</span>
 </div>
 ```
 
-### In Markdown
+### In Markdown / MDX
 
-```mdx
-import DocsIcon from '@/components/docs/DocsIcon.vue';
-
-<DocsIcon name="ai-azion" size="2xl" />
+```html
+<i class="ai ai-azion text-2xl" aria-hidden="true" />
 ```
 
 ## Testing
@@ -347,7 +340,6 @@ import DocsIcon from '@/components/docs/DocsIcon.vue';
 
 ### Automated Tests (Future)
 
-- Unit tests for `DocsIcon` component
 - Unit tests for icon registry utilities
 - E2E tests for icon gallery page
 - Accessibility tests for icon rendering
