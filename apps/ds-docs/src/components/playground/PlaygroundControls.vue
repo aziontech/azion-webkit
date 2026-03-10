@@ -84,6 +84,14 @@ function togglePreviewTheme() {
       </h3>
       <div class="flex items-center gap-1.5">
         <button
+          class="flex items-center gap-1.5 py-1.5 px-3 text-xs font-medium text-gray-500 bg-transparent border border-gray-300 rounded-md cursor-pointer transition-all duration-150 hover:text-gray-900 hover:bg-gray-50 font-mono"
+          @click="resetToDefaults"
+          title="Reset to defaults"
+        >
+          <i class="pi pi-refresh"/>
+          Reset
+        </button>
+        <button
           type="button"
           class="inline-flex items-center justify-center w-8 h-8 p-0 text-base text-gray-500 bg-transparent border border-gray-300 rounded-md cursor-pointer transition-all duration-150 hover:text-gray-900 hover:bg-gray-50"
           :title="previewTheme === 'light' ? 'Dark theme' : 'Light theme'"
@@ -91,14 +99,6 @@ function togglePreviewTheme() {
           @click="togglePreviewTheme"
         >
           <i :class="previewTheme === 'light' ? 'pi pi-moon' : 'pi pi-sun'" aria-hidden="true" />
-        </button>
-        <button
-          class="flex items-center gap-1.5 py-1.5 px-3 text-xs font-medium text-gray-500 bg-transparent border border-gray-300 rounded-md cursor-pointer transition-all duration-150 hover:text-gray-900 hover:bg-gray-50 font-mono"
-          @click="resetToDefaults"
-          title="Reset to defaults"
-        >
-          <i class="pi pi-refresh"/>
-          Reset
         </button>
       </div>
     </div>

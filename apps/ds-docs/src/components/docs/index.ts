@@ -12,8 +12,7 @@ export { default as MetadataLinks } from './MetadataLinks.vue';
 export { default as SectionBlock } from './SectionBlock.astro';
 export { default as RelatedLinks } from './RelatedLinks.astro';
 
-// Icons
-export { default as DocsIcon } from './DocsIcon.vue';
+// Icons - use @aziontech/icons directly: <i class="pi pi-*" /> or <i class="ai ai-*" />
 
 // Navigation
 export { default as DocsSidebar } from './DocsSidebar.vue';

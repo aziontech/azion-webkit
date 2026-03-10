@@ -9,7 +9,6 @@
 import { computed } from 'vue';
 import type { NavigationTree, NavItem, NavSection } from '@/lib/content/types';
 import DocsSidebarSection from './DocsSidebarSection.vue';
-import DocsIcon from './DocsIcon.vue';
 import { getDefaultLanguage } from '@/config';
 import { t } from '@/lib/i18n';
 

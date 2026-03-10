@@ -30,7 +30,7 @@ const props = defineProps<Props>();
       </h1>
     </div>
     
-    <p class="text-base text-text-secondary mb-4 max-w-docs-content">
+    <p class="text-sm text-text-secondary mb-4 mt-4 max-w-docs-content">
       {{ description }}
     </p>
     

@@ -94,14 +94,10 @@ function toggleCode() {
         class="flex items-center gap-2 py-1 px-2 text-gray-700 bg-transparent border-0 rounded cursor-pointer transition-colors duration-150 hover:bg-gray-200"
         @click="toggleCode"
       >
-        <svg
-          :class="['w-4 h-4 transition-transform', { 'rotate-90': isExpanded }]"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
+        <i
+          :class="['pi pi-chevron-right text-base shrink-0 transition-transform', { 'rotate-90': isExpanded }]"
+          aria-hidden="true"
+        />
         <span class="text-sm font-medium">Code</span>
       </button>
 

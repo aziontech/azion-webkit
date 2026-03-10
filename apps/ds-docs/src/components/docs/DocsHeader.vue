@@ -13,7 +13,6 @@ import { computed } from 'vue';
 import type { Section, NavItem } from '@/lib/content/types';
 import { useSearch } from '@/lib/search/use-search';
 import VersionSwitcher from './VersionSwitcher.vue';
-import DocsIcon from './DocsIcon.vue';
 import { getDefaultLanguage, getCurrentVersion } from '@/config';
 import { t } from '@/lib/i18n';
 
@@ -111,7 +110,7 @@ const documentationText = computed(() => {
           aria-label="Search documentation"
           @click="openSearch"
         >
-          <DocsIcon name="pi-search" size="sm" decorative />
+          <i class="pi pi-search text-sm" aria-hidden="true" />
           <span class="hidden sm:inline w-full text-left">Search</span>
           <kbd class="hidden sm:inline-flex px-1.5 py-0.5 text-xs text-white bg-black rounded font-sans">⌘+K</kbd>
         </button>

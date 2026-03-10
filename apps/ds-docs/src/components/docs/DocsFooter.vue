@@ -10,7 +10,6 @@
 import { computed } from 'vue';
 import LanguageSwitcher from './LanguageSwitcher.vue';
 import ThemeSwitcher from './ThemeSwitcher.vue';
-import DocsIcon from './DocsIcon.vue';
 import { getDefaultLanguage } from '@/config';
 import { t } from '@/lib/i18n';
 
@@ -63,7 +62,7 @@ const currentYear = new Date().getFullYear();
               class="flex items-center justify-center p-1 text-text-secondary hover:text-text-primary transition-colors"
               aria-label="View on GitHub"
             >
-              <DocsIcon name="pi-github" size="lg" decorative />
+              <i class="pi pi-github text-lg" aria-hidden="true" />
             </a>
             <a
               href="https://twitter.com/aziontech"
@@ -72,7 +71,7 @@ const currentYear = new Date().getFullYear();
               class="flex items-center justify-center p-1 text-text-secondary hover:text-text-primary transition-colors"
               aria-label="Follow on Twitter"
             >
-              <DocsIcon name="pi-twitter" size="lg" decorative />
+              <i class="pi pi-twitter text-lg" aria-hidden="true" />
             </a>
             <a
               href="https://www.linkedin.com/company/aziontech"
@@ -81,7 +80,7 @@ const currentYear = new Date().getFullYear();
               class="flex items-center justify-center p-1 text-text-secondary hover:text-text-primary transition-colors"
               aria-label="Follow on LinkedIn"
             >
-              <DocsIcon name="pi-linkedin" size="lg" decorative />
+              <i class="pi pi-linkedin text-lg" aria-hidden="true" />
             </a>
           </div>
         </div>

@@ -70,19 +70,7 @@ const emit = defineEmits<{
     role="alert"
   >
     <div class="flex items-start gap-2 flex-1">
-      <svg
-        class="text-amber-800 shrink-0 mt-0.5 w-4 h-4"
-        viewBox="0 0 16 16"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1ZM8 4.5C8.41421 4.5 8.75 4.83579 8.75 5.25V8.25C8.75 8.66421 8.41421 9 8 9C7.58579 9 7.25 8.66421 7.25 8.25V5.25C7.25 4.83579 7.58579 4.5 8 4.5ZM8 11.5C8.41421 11.5 8.75 11.1642 8.75 10.75C8.75 10.3358 8.41421 10 8 10C7.58579 10 7.25 10.3358 7.25 10.75C7.25 11.1642 7.58579 11.5 8 11.5Z"
-          fill="currentColor"
-        />
-      </svg>
+      <i class="pi pi-info-circle text-amber-800 shrink-0 mt-0.5 text-base" aria-hidden="true" />
       <p class="m-0 text-sm text-amber-800 leading-relaxed">
         You are viewing an older version of the documentation.
         <a :href="buildLatestVersionUrl()" class="text-amber-800 font-semibold underline underline-offset-2 hover:no-underline focus:outline-2 focus:outline-offset-2 focus:outline-amber-800 focus:rounded">
@@ -96,15 +84,7 @@ const emit = defineEmits<{
       aria-label="Dismiss banner"
       @click="dismissBanner"
     >
-      <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M4 4L12 12M12 4L4 12"
-          stroke="currentColor"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
+      <i class="pi pi-times text-base" aria-hidden="true" />
     </button>
   </div>
 </template>

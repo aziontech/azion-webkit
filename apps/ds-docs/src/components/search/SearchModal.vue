@@ -195,19 +195,6 @@ onUnmounted(() => {
         <!-- Search Input -->
         <div class="relative border-b border-gray-200">
           <i class="pi pi-search text-sm absolute left-4 top-[48%] -translate-y-1/2 text-gray-400" />
-          <!-- <svg
-            class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg> -->
           <input
             ref="inputRef"
             v-model="query"
@@ -274,9 +261,7 @@ onUnmounted(() => {
                 <div class="flex items-start gap-3">
                   <!-- Type Icon -->
                   <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center mt-0.5">
-                    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                    </svg>
+                    <i class="pi pi-box text-base text-gray-500" aria-hidden="true" />
                   </div>
                   
                   <!-- Content -->

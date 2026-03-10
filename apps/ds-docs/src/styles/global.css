@@ -131,6 +131,9 @@
 
 /* Custom components - reduced: prose is in Tailwind typography plugin */
 @layer components {
+  h1 {
+    @apply !text-4xl;
+  }
   /* code font for inline code */
   code {
     @apply !font-code;

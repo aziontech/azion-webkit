@@ -21,9 +21,7 @@ const { title } = Astro.props;
     {/* Do side */}
     <div class="do-dont__do rounded-lg border-2 border-green-200 bg-green-50 overflow-hidden">
       <div class="do-dont__header px-4 py-2 bg-green-100 border-b border-green-200 flex items-center gap-2">
-        <svg class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-        </svg>
+        <i class="pi pi-check w-5 h-5 text-green-600" aria-hidden="true" />
         <span class="text-sm font-medium text-green-700">Do</span>
       </div>
       <div class="do-dont__content p-4">
@@ -34,9 +32,7 @@ const { title } = Astro.props;
     {/* Don't side */}
     <div class="do-dont__dont rounded-lg border-2 border-red-200 bg-red-50 overflow-hidden">
       <div class="do-dont__header px-4 py-2 bg-red-100 border-b border-red-200 flex items-center gap-2">
-        <svg class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
+        <i class="pi pi-times w-5 h-5 text-red-600" aria-hidden="true" />
         <span class="text-sm font-medium text-red-700">Don't</span>
       </div>
       <div class="do-dont__content p-4">

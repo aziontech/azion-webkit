@@ -6,8 +6,6 @@
  * Used on the Foundations landing page to link to individual foundation pages.
  */
 
-import DocsIcon from './DocsIcon.vue';
-
 interface Props {
   title: string;
   description: string;
@@ -17,7 +15,7 @@ interface Props {
 
 const { title, description, href, icon } = Astro.props;
 
-// Map foundation types to icons
+// Map foundation types to icons (PrimeIcons class names)
 const iconMap: Record<string, string> = {
   color: 'pi-palette',
   typography: 'pi-font',
@@ -28,8 +26,7 @@ const iconMap: Record<string, string> = {
   iconography: 'pi-star',
 };
 
-// Get icon from props or derive from title
-const iconName = icon || iconMap[title.toLowerCase()] || 'pi-circle';
+const iconClass = icon || iconMap[title.toLowerCase()] || 'pi-circle';
 ---
 
 <a 
@@ -38,7 +35,7 @@ const iconName = icon || iconMap[title.toLowerCase()] || 'pi-circle';
 >
   <div class="flex items-start gap-4">
     <div class="foundation-card__icon shrink-0 w-10 h-10 flex items-center justify-center rounded-lg bg-gray-50 text-gray-600 group-hover:bg-primary-50 group-hover:text-primary-600 transition-colors">
-      <DocsIcon name={iconName} size="lg" decorative />
+      <i class={`pi ${iconClass} text-lg`} aria-hidden="true" />
     </div>
     <div class="foundation-card__content flex-1 min-w-0">
       <h3 class="foundation-card__title text-base font-medium text-text-primary group-hover:text-primary-600 transition-colors">
@@ -49,7 +46,7 @@ const iconName = icon || iconMap[title.toLowerCase()] || 'pi-circle';
       </p>
     </div>
     <div class="foundation-card__arrow shrink-0 opacity-0 group-hover:opacity-100 transition-opacity text-primary-500">
-      <DocsIcon name="pi-arrow-right" decorative />
+      <i class="pi pi-arrow-right" aria-hidden="true" />
     </div>
   </div>
 </a>

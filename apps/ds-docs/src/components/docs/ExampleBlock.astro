@@ -55,7 +55,7 @@ const hasPreview = await Astro.slots.render('default');
     {/* Preview - only render if there's slot content */}
     {hasPreview && (
       <div 
-        class="example-block__preview p-6"
+        class="example-block__preview pt-2 pb-6"
         data-background={background}
       >
         <slot />

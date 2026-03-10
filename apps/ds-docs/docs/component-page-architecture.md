@@ -174,7 +174,7 @@ usage:
       example: '<AzButton>Submit Form</AzButton>'
     - type: dont
       description: Don't use buttons for navigation
-      example: '<AzButton>Go to Dashboard</AzButton>'
+      example: '<AzButton>Go to Docs</AzButton>'
   examples:
     - title: Primary Button
       description: The default button style for primary actions

@@ -8,6 +8,7 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
+import { pathToFileURL } from 'url';
 
 /**
  * Prop definition
@@ -594,8 +595,13 @@ async function main() {
   console.log(`Extracted API for ${apis.length} components`);
 }
 
-// Run main function if executed directly
-if (typeof require !== 'undefined' && require.main === module) {
+// Run main when executed as script (CJS or ESM)
+const isCjsMain = typeof require !== 'undefined' && require.main === module;
+const isEsmMain =
+  typeof import.meta !== 'undefined' &&
+  process.argv[1] &&
+  pathToFileURL(path.resolve(process.argv[1])).href === import.meta.url;
+if (isCjsMain || isEsmMain) {
   main().catch((error) => {
     console.error('Error:', error);
     process.exit(1);

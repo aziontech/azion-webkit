@@ -5,8 +5,6 @@
  * Highlighted information blocks for tips, warnings, and important notes.
  */
 
-import DocsIcon from './DocsIcon.vue';
-
 interface Props {
   type?: 'info' | 'warning' | 'error' | 'success' | 'tip';
   title?: string;
@@ -21,7 +19,7 @@ const styles = {
     icon: 'text-blue-500',
     title: 'text-blue-800',
     text: 'text-blue-700',
-    iconName: 'pi-info-circle',
+    iconClass: 'pi pi-info-circle',
   },
   warning: {
     bg: 'bg-amber-50',
@@ -29,7 +27,7 @@ const styles = {
     icon: 'text-amber-500',
     title: 'text-amber-800',
     text: 'text-amber-700',
-    iconName: 'pi-exclamation-triangle',
+    iconClass: 'pi pi-exclamation-triangle',
   },
   error: {
     bg: 'bg-red-50',
@@ -37,7 +35,7 @@ const styles = {
     icon: 'text-red-500',
     title: 'text-red-800',
     text: 'text-red-700',
-    iconName: 'pi-times-circle',
+    iconClass: 'pi pi-times-circle',
   },
   success: {
     bg: 'bg-green-50',
@@ -45,7 +43,7 @@ const styles = {
     icon: 'text-green-500',
     title: 'text-green-800',
     text: 'text-green-700',
-    iconName: 'pi-check-circle',
+    iconClass: 'pi pi-check-circle',
   },
   tip: {
     bg: 'bg-purple-50',
@@ -53,7 +51,7 @@ const styles = {
     icon: 'text-purple-500',
     title: 'text-purple-800',
     text: 'text-purple-700',
-    iconName: 'pi-lightbulb',
+    iconClass: 'pi pi-lightbulb',
   },
 };
 
@@ -64,7 +62,7 @@ const style = styles[type];
   <div class="flex gap-3">
     {/* Icon */}
     <div class={`shrink-0 ${style.icon}`}>
-      <DocsIcon name={style.iconName} size="lg" decorative />
+      <i class={`${style.iconClass} text-lg`} aria-hidden="true" />
     </div>
     
     {/* Content */}

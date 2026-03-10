@@ -62,9 +62,7 @@ const bgClass = computed(() => {
         @click="isCodeVisible = !isCodeVisible"
         class="text-sm text-text-secondary hover:text-primary-600 flex items-center gap-1.5 transition-colors"
       >
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-        </svg>
+        <i class="pi pi-code text-base shrink-0" aria-hidden="true" />
         {{ isCodeVisible ? 'Hide code' : 'Show code' }}
       </button>
     </div>

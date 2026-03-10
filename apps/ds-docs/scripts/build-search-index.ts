@@ -274,13 +274,17 @@ function processMarkdownFile(
 }
 
 /**
- * Process all content collections
+ * Process all content collections (v1/<language>/<collection> structure)
  */
 function processCollections(contentDir: string): SearchIndexEntry[] {
   const entries: SearchIndexEntry[] = [];
-  
-  // Define collections to process
-  const collections = [
+  const v1Dir = path.join(contentDir, 'v1');
+  if (!fs.existsSync(v1Dir)) {
+    console.log('v1 content directory not found');
+    return entries;
+  }
+  const languages = fs.readdirSync(v1Dir, { withFileTypes: true }).filter((d) => d.isDirectory());
+  const collectionNames = [
     'components',
     'foundations',
     'tokens',
@@ -292,32 +296,28 @@ function processCollections(contentDir: string): SearchIndexEntry[] {
     'contributing',
     'playground',
   ];
-  
-  for (const collection of collections) {
-    const collectionPath = path.join(contentDir, collection);
-    
-    if (!fs.existsSync(collectionPath)) {
-      console.log(`Collection not found: ${collection}`);
-      continue;
-    }
-    
-    const files = fs.readdirSync(collectionPath);
-    
-    for (const file of files) {
-      if (!file.endsWith('.md')) {
-        continue;
-      }
-      
-      const slug = file.replace(/\.md$/, '');
-      const filePath = path.join(collectionPath, file);
-      
-      const entry = processMarkdownFile(filePath, collection, slug);
-      if (entry) {
-        entries.push(entry);
+  for (const langDir of languages) {
+    const lang = langDir.name;
+    const langPath = path.join(v1Dir, lang);
+    for (const collection of collectionNames) {
+      const collectionPath = path.join(langPath, collection);
+      if (!fs.existsSync(collectionPath)) continue;
+      const files = fs.readdirSync(collectionPath);
+      for (const file of files) {
+        if (!file.endsWith('.md') && !file.endsWith('.mdx')) continue;
+        const slug = file.replace(/\.(md|mdx)$/, '');
+        const filePath = path.join(collectionPath, file);
+        const entry = processMarkdownFile(filePath, collection, slug);
+        if (entry) {
+          entry.id = `v1/${lang}/${collection}/${slug}`;
+          entry.url = `/v1/${lang}/${collection}${slug === 'index' ? '' : `/${slug}`}`;
+          entry.language = lang;
+          entry.version = 'v1';
+          entries.push(entry);
+        }
       }
     }
   }
-  
   return entries;
 }
 
@@ -366,4 +366,9 @@ const __dirname = path.dirname(__filename);
 const contentDir = path.join(__dirname, '../src/content');
 const outputPath = path.join(__dirname, '../public/search-index.json');
 
-buildSearchIndex(contentDir, outputPath);
+try {
+  buildSearchIndex(contentDir, outputPath);
+} catch (err) {
+  console.error('Build search index failed:', err);
+  process.exit(1);
+}
