@@ -6,6 +6,8 @@
  * Uses Shiki for syntax highlighting via Astro's built-in support.
  */
 
+import { codeToHtml } from 'shiki';
+
 interface Props {
   code: string;
   language?: string;
@@ -22,14 +24,20 @@ const {
   showLineNumbers = false,
 } = Astro.props;
 
+// Use Shiki to highlight the code
+const highlightedCode = await codeToHtml(code, {
+  lang: language,
+  theme: 'github-dark',
+});
+
 // Count lines for line numbers
 const lines = code.split('\n');
 const lineCount = lines.length;
 ---
 
-<div class="code-block roudend-md overflow-hidden rounded-md border border-[#e5e7eb]">
+<div class="code-block rounded-md overflow-hidden border border-[#e5e7eb]">
   <!-- Header with filename and copy button -->
-  <div class="flex items-center justify-between px-4 py-2 bg-gray-[#f9fafb] border-b border-[#e5e7eb]">
+  <div class="flex items-center justify-between px-4 py-2 bg-[#f9fafb] border-b border-[#e5e7eb]">
     {filename && (
       <span class="text-xs text-gray-400 font-code">{filename}</span>
     )}
@@ -61,8 +69,8 @@ const lineCount = lines.length;
         </div>
       )}
       
-      <!-- Code content -->
-      <pre class="p-4 overflow-x-auto flex-1"><code class="text-sm text-gray-100 font-code" set:html={code} /></pre>
+      <!-- Code content with Shiki highlighting -->
+      <div class="p-4 overflow-x-auto flex-1" set:html={highlightedCode} />
     </div>
   </div>
 </div>
@@ -88,3 +96,17 @@ const lineCount = lines.length;
     });
   });
 </script>
+
+<style>
+  .code-block pre {
+    margin: 0;
+    padding: 0;
+    background: transparent !important;
+  }
+  
+  .code-block code {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+</style>

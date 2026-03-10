@@ -23,6 +23,7 @@
     "@astrojs/mdx": "^4.3.13",
     "@aziontech/icons": "workspace:*",
     "astro": "^5.4.0",
+    "shiki": "^4.0.2",
     "vue": "^3.5.29"
   },
   "devDependencies": {

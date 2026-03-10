@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, watch, onMounted, shallowRef } from 'vue';
 import type { GeneratedCode } from './types';
+import { codeToHtml } from 'shiki';
 
 /**
  * PlaygroundCode
@@ -26,9 +27,44 @@ const emit = defineEmits<{
 
 const isExpanded = ref(props.initiallyExpanded);
 const isCopied = ref(false);
+const highlightedHtml = shallowRef<string>('');
+const isLoading = ref(true);
 
 // Format code for display
 const formattedCode = computed(() => props.code.code);
+
+// Highlight code using Shiki
+async function highlightCode(code: string) {
+  isLoading.value = true;
+  try {
+    const html = await codeToHtml(code, {
+      lang: 'vue',
+      theme: 'github-dark',
+    });
+    highlightedHtml.value = html;
+  } catch (error) {
+    console.error('Failed to highlight code:', error);
+    // Fallback to plain text
+    highlightedHtml.value = `<pre style="background-color: #1f2937;"><code>${escapeHtml(code)}</code></pre>`;
+  } finally {
+    isLoading.value = false;
+  }
+}
+
+// Escape HTML for fallback
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+// Watch for code changes and re-highlight
+watch(() => props.code.code, (newCode) => {
+  highlightCode(newCode);
+}, { immediate: true });
 
 // Copy to clipboard
 async function copyCode() {
@@ -101,7 +137,17 @@ function toggleCode() {
       v-show="isExpanded"
       class="playground-code__content"
     >
-      <pre class="playground-code__pre"><code class="playground-code__code">{{ formattedCode }}</code></pre>
+      <div
+        v-if="isLoading"
+        class="playground-code__loading"
+      >
+        <span class="text-gray-400 text-sm">Loading...</span>
+      </div>
+      <div
+        v-else
+        class="playground-code__highlighted"
+        v-html="highlightedHtml"
+      />
     </div>
   </div>
 </template>
@@ -160,16 +206,24 @@ function toggleCode() {
   overflow-x: auto;
 }
 
-.playground-code__pre {
-  margin: 0;
+.playground-code__loading {
+  padding: 1rem;
+  text-align: center;
+}
+
+.playground-code__highlighted {
   padding: 1rem;
 }
 
-.playground-code__code {
-  font-family: 'Roboto Mono', monospace !important;
+.playground-code__highlighted :deep(pre) {
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+}
+
+.playground-code__highlighted :deep(code) {
+  font-family: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 0.8125rem;
   line-height: 1.6;
-  color: #e5e7eb;
-  white-space: pre;
 }
 </style>
