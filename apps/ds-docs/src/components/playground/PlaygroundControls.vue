@@ -93,7 +93,7 @@ function togglePreviewTheme() {
         </button>
         <button
           type="button"
-          class="inline-flex items-center justify-center w-8 h-8 p-0 text-base text-gray-500 bg-transparent border border-gray-300 rounded-md cursor-pointer transition-all duration-150 hover:text-gray-900 hover:bg-gray-50"
+          class="inline-flex items-center justify-center w-8 h-8 p-0 text-xs text-gray-500 bg-transparent border border-gray-300 rounded-md cursor-pointer transition-all duration-150 hover:text-gray-900 hover:bg-gray-50"
           :title="previewTheme === 'light' ? 'Dark theme' : 'Light theme'"
           :aria-label="previewTheme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'"
           @click="togglePreviewTheme"
