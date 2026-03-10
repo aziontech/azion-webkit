@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated": "2026-03-10T18:11:26.864Z",
-    "count": 26,
+    "generated": "2026-03-10T19:16:23.670Z",
+    "count": 32,
     "language": "en",
     "version": "v1",
     "languages": [
@@ -196,6 +196,23 @@
       "language": "en"
     },
     {
+      "id": "v1/en/blocks/toast",
+      "title": "Toast",
+      "section": "blocks",
+      "type": "doc",
+      "description": "A toast block for success and error feedback with title, description, icon, action link, close button, and auto-close progress bar.",
+      "headings": [
+        "Playground",
+        "Variants",
+        "Behavior"
+      ],
+      "tags": [],
+      "content": "The Toast block combines a title, optional description, icon, optional action link button, close button, and a progress bar that shows the remaining time until the toast auto-closes. Playground Explore the Toast block interactively. Adjust props and see live changes.",
+      "url": "/blocks/toast",
+      "version": "v1",
+      "language": "en"
+    },
+    {
       "id": "v1/en/patterns/index",
       "title": "Design Patterns",
       "section": "patterns",
@@ -212,6 +229,31 @@
       "language": "en"
     },
     {
+      "id": "v1/en/patterns/success-creation",
+      "title": "Success Creation Pattern",
+      "section": "patterns",
+      "type": "doc",
+      "description": "Displays a success notification after creating entities, with links to view and additional actions",
+      "headings": [
+        "About",
+        "Context & Problem",
+        "When to Use",
+        "Components Used",
+        "Visual Example",
+        "Expected Behavior",
+        "Implementation",
+        "Best Practices",
+        "Anti-patterns",
+        "Accessibility",
+        "References"
+      ],
+      "tags": [],
+      "content": "About This pattern defines the behavior and visual presentation for positive feedback after a user successfully creates an entity. The system should confirm the action, reduce uncertainty, and let the user quickly access what was created. Context Problem When creating an item (e.g. workload, network list, digital certificate), users may be unsure whether the operation succeeded. Generic or missing feedback increases uncertainty and makes it harder to find the new entity. When to Use After the successful completion of create actions (CRUD - Create). Components Used Toast (Block Console Kit) Visual Example !Success creation pattern example Workloads Create Workload Expected Behavior Implementation Best Practices Anti-patterns Accessibility Use on toast components for screen readers Check contrast between background, icon, and text colors Ensure keyboard navigation to action buttons References Atlassian - Success messages",
+      "url": "/patterns/success-creation",
+      "version": "v1",
+      "language": "en"
+    },
+    {
       "id": "v1/en/templates/index",
       "title": "Page Templates",
       "section": "templates",
@@ -224,32 +266,6 @@
       "tags": [],
       "content": "Overview Page templates are complete page layouts that combine blocks and components into ready-to-use starting points for common application pages. Available Templates Template documentation is being prepared. Check back soon for detailed template references.",
       "url": "/templates",
-      "version": "v1",
-      "language": "en"
-    },
-    {
-      "id": "v1/en/get-started/animations",
-      "title": "Animações com Motion",
-      "section": "get-started",
-      "type": "doc",
-      "description": "Como usar a biblioteca Motion (motion.dev) no projeto para animações fluidas e acessíveis",
-      "headings": [
-        "Overview",
-        "Installation",
-        "Usage in Vue components",
-        "Importing",
-        "Enter / initial animation",
-        "Exit animation with AnimatePresence",
-        "Gestures (hover, press)",
-        "Scroll-triggered (whileInView)",
-        "Scroll reveal (vanilla Motion)",
-        "Where Motion is used in ds-docs",
-        "Guidelines",
-        "Resources"
-      ],
-      "tags": [],
-      "content": "Overview The ds-docs platform uses Motion (via the Vue binding motion-v) for enter exit, hover, and scroll-driven animations. Motion provides a declarative API, hardware-accelerated performance, and consistent behavior across touch and pointer devices. Installation Motion is already installed in this project: Usage in Vue components Importing Import the component and where needed: Use as a drop-in for HTML elements: , , , etc. Enter initial animation Control how elements appear with and : Set to skip the first-frame animation. Exit animation with AnimatePresence Wrap conditional content in and use the prop so elements animate out before being removed: Each animated child must have a unique so Motion can track enter exit correctly. Gestures (hover, press) Use and for interaction feedback: Motion s gestures work correctly on touch (no spurious hover from taps). Scroll-triggered (whileInView) Animate when the element enters the viewport: Scroll reveal (vanilla Motion) The docs layout uses the vanilla package for scroll reveal so content blocks animate as they enter the viewport, without wrapping HTML in Vue (keeping tab scripts and other DOM logic intact). See : inView (Intersection Observer) detects when each block enters the viewport; callback runs once per element. animate() runs the reveal (opacity 0 1, y 12 0) with a small bottom margin so the animation starts just before the block is fully visible. To customize, edit (duration, ease) and (margin, amount) in that script. Motion inView docs. Configure timing via the prop: Or use spring physics: Where Motion is used in ds-docs DocsShellLayout DocsLayout: The main content area uses a CSS keyframe animation ( ) for a smooth enter (opacity slide up).",
-      "url": "/get-started/animations",
       "version": "v1",
       "language": "en"
     },
@@ -527,29 +543,76 @@
       "language": "pt"
     },
     {
-      "id": "v1/pt/get-started/animations",
-      "title": "Animações com Motion",
-      "section": "get-started",
+      "id": "v1/pt/blocks/index",
+      "title": "Blocos de UI",
+      "section": "blocks",
       "type": "doc",
-      "description": "Como usar a biblioteca Motion (motion.dev) no projeto para animações fluidas e acessíveis",
+      "description": "Blocos de UI combinando vários componentes para casos de uso comuns.",
       "headings": [
         "Visão geral",
-        "Instalação",
-        "Uso em componentes Vue",
-        "Importando",
-        "Animação de entrada / inicial",
-        "Animação de saída com AnimatePresence",
-        "Gestos (hover, press)",
-        "Disparo por scroll (whileInView)",
-        "Revelação no scroll (Motion vanilla)",
-        "Opções de transição",
-        "Onde o Motion é usado no ds-docs",
-        "Diretrizes",
-        "Recursos"
+        "Blocos disponíveis"
       ],
       "tags": [],
-      "content": "Vis o geral A plataforma ds-docs usa Motion (via o binding Vue motion-v) para anima es de entrada sa da, hover e baseadas em scroll. O Motion oferece API declarativa, desempenho com acelera o por hardware e comportamento consistente em dispositivos touch e com mouse. Instala o O Motion j est instalado neste projeto: Uso em componentes Vue Importando Importe o componente e o onde for necess rio: Use no lugar de elementos HTML: , , , etc. Anima o de entrada inicial Controle como os elementos aparecem com e : Use para desativar a anima o no primeiro frame. Anima o de sa da com AnimatePresence Envolva conte do condicional em e use a prop para que os elementos animem a sa da antes de serem removidos: Cada filho animado precisa de um nico para o Motion rastrear entrada sa da corretamente. Gestos (hover, press) Use e para feedback de intera o: Os gestos do Motion funcionam corretamente em touch (sem hover falso ao toque). Disparo por scroll (whileInView) Anime quando o elemento entra na viewport: Revela o no scroll (Motion vanilla) O layout da doc usa o pacote vanilla para revela o no scroll: blocos de conte do animam ao entrar na viewport, sem envolver o HTML em Vue (mantendo abas e outros scripts). Veja : inView (Intersection Observer) detecta quando cada bloco entra na viewport; o callback roda uma vez por elemento. animate() aplica a revela o (opacity 0 1, y 12 0) com uma pequena margem inferior. Para customizar, edite e nesse script. Docs inView. Op es de transi o Configure o tempo pela prop : Ou use f sica de mola (spring): Onde o Motion usado no ds-docs DocsShellLayout DocsLayout: A rea principal usa anima o CSS ( ) na entrada. Revela o no scroll: o script usa inView (Intersection Observer) e animate() do Motion para revelar blocos de conte do ao entrarem na viewport cada bloco anima (opacidade y) quando cruza a rea vis vel, com e uma pequena margem inferior.",
-      "url": "/pt/get-started/animations",
+      "content": "Vis o geral Os blocos de UI s o combina es prontas de componentes que resolvem padr es comuns de interface. Eles servem como ponto de partida para construir p ginas e funcionalidades. Blocos dispon veis A documenta o dos blocos est em prepara o. Volte em breve para refer ncias detalhadas.",
+      "url": "/pt/blocks",
+      "version": "v1",
+      "language": "pt"
+    },
+    {
+      "id": "v1/pt/blocks/toast",
+      "title": "Toast",
+      "section": "blocks",
+      "type": "doc",
+      "description": "Bloco de toast para feedback de sucesso e erro com título, descrição, ícone, link de ação, botão fechar e barra de progresso de fechamento automático.",
+      "headings": [
+        "Playground",
+        "Variantes",
+        "Comportamento"
+      ],
+      "tags": [],
+      "content": "O bloco Toast combina t tulo, descri o opcional, cone, link ou bot o de a o opcional, bot o de fechar e uma barra de progresso que indica o tempo restante at o fechamento autom tico. Playground Explore o bloco Toast de forma interativa. Ajuste as props e veja as altera es em tempo real.",
+      "url": "/pt/blocks/toast",
+      "version": "v1",
+      "language": "pt"
+    },
+    {
+      "id": "v1/pt/patterns/index",
+      "title": "Padrões",
+      "section": "patterns",
+      "type": "doc",
+      "description": "Padrões de design e boas práticas para construir com o Azion Design System.",
+      "headings": [
+        "Visão geral",
+        "Padrões disponíveis"
+      ],
+      "tags": [],
+      "content": "Vis o geral Padr es de design s o solu es reutiliz veis para problemas comuns em interfaces. Eles oferecem abordagens comprovadas para desafios t picos de UX. Padr es dispon veis A documenta o de padr es est em constru o. Em breve voc encontrar refer ncias detalhadas aqui.",
+      "url": "/pt/patterns",
+      "version": "v1",
+      "language": "pt"
+    },
+    {
+      "id": "v1/pt/patterns/success-creation",
+      "title": "Padrão de Criação com Sucesso",
+      "section": "patterns",
+      "type": "doc",
+      "description": "Exibe notificação de sucesso após criação de entidades com links para visualização e ações adicionais",
+      "headings": [
+        "Sobre",
+        "Contexto & Problema",
+        "Quando Usar",
+        "Componentes Utilizados",
+        "Exemplo Visual",
+        "Comportamento Esperado",
+        "Implementação",
+        "Boas Práticas",
+        "Anti-padrões",
+        "Acessibilidade",
+        "Referências"
+      ],
+      "tags": [],
+      "content": "Sobre Este padr o define o comportamento e a apresenta o visual para feedback positivo ap s a cria o bem-sucedida de uma entidade pelo usu rio. O sistema deve informar a conclus o da a o, reduzir incertezas e permitir ao usu rio acessar facilmente o que foi criado. Contexto Problema Ao criar um item (p.ex: workload, network list, digital certificate), usu rios podem n o ter certeza sobre o sucesso da opera o. Notifica es gen ricas ou aus ncia de feedback aumentam a inseguran a e dificultam encontrar rapidamente a nova entidade. Quando Usar Ap s a conclus o bem-sucedida de a es de cria o (CRUD - Create). Componentes Utilizados Toast (Block Console Kit) Exemplo Visual !Exemplo do padr o de cria o com sucesso Workloads Create Workload Comportamento Esperado Implementa o Boas Pr ticas Anti-padr es Acessibilidade Utilize em componentes de toast para leitores de tela Verifique contraste entre cores de fundo, cone e texto Garanta navega o por teclado at os bot es de a o Refer ncias Atlassian - Success messages",
+      "url": "/pt/patterns/success-creation",
       "version": "v1",
       "language": "pt"
     },

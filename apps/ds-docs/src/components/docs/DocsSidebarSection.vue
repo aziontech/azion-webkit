@@ -53,8 +53,6 @@ const sectionLabel = computed(() => {
     'patterns': 'nav.patterns',
     'templates': 'nav.templates',
     'icons': 'nav.icons',
-    'playground': 'nav.playground',
-    'contributing': 'nav.contributing',
   };
   const key = keyMap[sectionId];
   return key ? t(key, currentLanguage.value) : props.section.section.label;

@@ -57,6 +57,7 @@ export { default as ComponentsStatusTable } from './ComponentsStatusTable.astro'
 // Navigation
 export { default as Tabs } from './Tabs.astro';
 export { default as ComponentTabs } from './ComponentTabs.astro';
+export { default as ContentTabs } from './ContentTabs.astro';
 
 // Component Page Tab Content
 export { default as ComponentOverviewTab } from './ComponentOverviewTab.astro';
@@ -85,9 +86,10 @@ import StateGrid from './StateGrid.astro';
 import DoDont from './DoDont.astro';
 import RelatedLinks from './RelatedLinks.astro';
 import Callout from './Callout.astro';
+import ContentTabs from './ContentTabs.astro';
 import FoundationCard from './FoundationCard.astro';
 import Playground from '../playground/Playground.vue';
-import { AzButton } from '../demo';
+import { AzButton, BlockToastDemo } from '../demo';
 
 export const markdownComponents = {
   DemoPreview,
@@ -103,11 +105,14 @@ export const markdownComponents = {
   DoDont,
   RelatedLinks,
   Callout,
+  ContentTabs,
   FoundationCard,
   Playground,
   // Demo components for MDX usage
   AzButton,
-  // Aliases for convenience
+  BlockToastDemo,
+  // Aliases for convenience (e.g. Starlight-style in pattern MDX)
+  Aside: Callout,
   Demo: DemoPreview,
   Section: SectionBlock,
   Example: ExampleBlock,

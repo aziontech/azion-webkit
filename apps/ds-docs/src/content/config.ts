@@ -168,6 +168,13 @@ const blockSchema = baseSchema.extend({
   type: z.literal('block'),
   category: z.string(),
   components: z.array(z.string()).optional(),
+  // Optional usage and API (same structure as component) for block detail pages
+  usage: usageSchema.optional(),
+  api: z.object({
+    props: z.array(propDefinitionSchema).optional(),
+    slots: z.array(slotDefinitionSchema).optional(),
+    events: z.array(eventDefinitionSchema).optional(),
+  }).optional(),
 });
 
 /**
@@ -177,6 +184,7 @@ const patternSchema = baseSchema.extend({
   type: z.literal('pattern'),
   category: z.string(),
   useCases: z.array(z.string()).optional(),
+  related: z.array(z.string()).optional(),
 });
 
 /**
@@ -193,7 +201,7 @@ const templateSchema = baseSchema.extend({
  */
 const guideSchema = baseSchema.extend({
   type: z.literal('guide'),
-  category: z.enum(['installation', 'quick-start', 'migration', 'contribution', 'animations']).optional(),
+  category: z.enum(['installation', 'quick-start', 'migration', 'contribution']).optional(),
   prerequisites: z.array(z.string()).optional(),
   difficulty: z.enum(['beginner', 'intermediate', 'advanced']).optional(),
 });

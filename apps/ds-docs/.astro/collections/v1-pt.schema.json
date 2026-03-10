@@ -551,6 +551,33 @@
               "items": {
                 "type": "string"
               }
+            },
+            "usage": {
+              "$ref": "#/definitions/v1-pt/anyOf/0/properties/usage"
+            },
+            "api": {
+              "type": "object",
+              "properties": {
+                "props": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/v1-pt/anyOf/0/properties/api/properties/props/items"
+                  }
+                },
+                "slots": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/v1-pt/anyOf/0/properties/api/properties/slots/items"
+                  }
+                },
+                "events": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/v1-pt/anyOf/0/properties/api/properties/events/items"
+                  }
+                }
+              },
+              "additionalProperties": false
             }
           },
           "required": [
@@ -617,6 +644,12 @@
               "const": "pattern"
             },
             "useCases": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "related": {
               "type": "array",
               "items": {
                 "type": "string"
@@ -725,8 +758,7 @@
                 "installation",
                 "quick-start",
                 "migration",
-                "contribution",
-                "animations"
+                "contribution"
               ]
             },
             "status": {

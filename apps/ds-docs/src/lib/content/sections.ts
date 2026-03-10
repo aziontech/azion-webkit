@@ -100,24 +100,6 @@ export const SECTIONS: Section[] = [
     description: 'Icon library with Azion Icons and PrimeIcons.',
     icon: 'star',
   },
-  {
-    id: 'playground',
-    label: 'Playground',
-    basePath: '/playground',
-    order: 9,
-    collectionName: 'playground',
-    description: 'Interactive component playground.',
-    icon: 'play',
-  },
-  {
-    id: 'contributing',
-    label: 'Contributing',
-    basePath: '/contributing',
-    order: 10,
-    collectionName: 'contributing',
-    description: 'Guidelines for contributing to the design system.',
-    icon: 'git',
-  },
 ];
 
 /**

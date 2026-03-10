@@ -6,3 +6,4 @@
  */
 
 export { default as AzButton } from './AzButton.vue';
+export { default as BlockToastDemo } from './BlockToastDemo.vue';

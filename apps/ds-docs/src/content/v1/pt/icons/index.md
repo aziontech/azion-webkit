@@ -6,6 +6,10 @@ order: 1
 type: icon
 ---
 
+# Ícones
+
+> **Galeria de Ícones** — Navegue por todos os ícones disponíveis com galeria visual, busca e copiar para a área de transferência. <a href="https://icons-gallery.azion.app" target="_blank" rel="noopener noreferrer">Abrir Galeria de Ícones</a>
+
 O Azion Design System inclui duas bibliotecas de ícones:
 
 - **Azion Icons** - Ícones personalizados projetados para produtos Azion

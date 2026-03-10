@@ -91,6 +91,84 @@ export const buttonProps: PropsDefinition = {
 };
 
 /**
+ * Toast block (BlockToastDemo) props metadata
+ */
+export const blockToastDemoProps: PropsDefinition = {
+  variant: {
+    type: 'enum',
+    control: 'select',
+    default: 'success',
+    options: ['success', 'error'],
+    optionLabels: { success: 'Success', error: 'Error' },
+    label: 'Variant',
+    description: 'Visual variant of the toast',
+    category: 'Appearance',
+  },
+  title: {
+    type: 'string',
+    control: 'text',
+    default: 'Changes saved',
+    label: 'Title',
+    description: 'Toast title',
+    category: 'Content',
+    placeholder: 'Title',
+  },
+  description: {
+    type: 'string',
+    control: 'text',
+    default: 'Your changes have been saved successfully.',
+    label: 'Description',
+    description: 'Optional description text',
+    category: 'Content',
+    placeholder: 'Description',
+  },
+  actionText: {
+    type: 'string',
+    control: 'text',
+    default: 'View details',
+    label: 'Action text',
+    description: 'Label for the action link',
+    category: 'Content',
+    placeholder: 'e.g. View details',
+  },
+  actionHref: {
+    type: 'string',
+    control: 'text',
+    default: '#',
+    label: 'Action URL',
+    description: 'URL for the action link',
+    category: 'Content',
+  },
+  durationMs: {
+    type: 'number',
+    control: 'number',
+    default: 5000,
+    min: 1000,
+    max: 30000,
+    step: 1000,
+    label: 'Duration (ms)',
+    description: 'Auto-close duration in milliseconds',
+    category: 'Behavior',
+  },
+  autoClose: {
+    type: 'boolean',
+    control: 'boolean',
+    default: false,
+    label: 'Auto close',
+    description: 'When off, toast stays visible (for playground)',
+    category: 'Behavior',
+  },
+  showProgress: {
+    type: 'boolean',
+    control: 'boolean',
+    default: true,
+    label: 'Show progress bar',
+    description: 'Show the countdown progress bar',
+    category: 'Appearance',
+  },
+};
+
+/**
  * Example of how this could be auto-generated in the future:
  * 
  * From Vue component:

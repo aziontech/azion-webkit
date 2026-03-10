@@ -18,8 +18,6 @@ export type SearchContentType =
   | 'block'
   | 'guide'
   | 'icon'
-  | 'contributing'
-  | 'playground'
   | 'doc';
 
 /**
@@ -244,8 +242,6 @@ export const SECTION_LABELS: Record<string, string> = {
   'patterns': 'Patterns',
   'templates': 'Templates',
   'icons': 'Icons',
-  'playground': 'Playground',
-  'contributing': 'Contributing',
 };
 
 /**
@@ -260,8 +256,6 @@ export const TYPE_LABELS: Record<SearchContentType, string> = {
   block: 'Block',
   guide: 'Guide',
   icon: 'Icon',
-  contributing: 'Contributing',
-  playground: 'Playground',
   doc: 'Documentation',
 };
 
@@ -277,7 +271,5 @@ export const TYPE_ICONS: Record<SearchContentType, string> = {
   block: 'blocks',
   guide: 'map',
   icon: 'image',
-  contributing: 'git-branch',
-  playground: 'play',
   doc: 'file-text',
 };

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import AzButton from '../demo/AzButton.vue';
+import BlockToastDemo from '../demo/BlockToastDemo.vue';
 
 /**
  * ComponentPreview
@@ -22,11 +23,9 @@ const props = withDefaults(defineProps<Props>(), {
 
 /**
  * Parse a Vue-like template string to extract props and slot content
- * Supports simple patterns like:
- * <AzButton variant="primary">Click me</AzButton>
- * <AzButton size="sm" disabled>Small</AzButton>
+ * Supports AzButton and BlockToastDemo tags.
  */
-function parseCodeString(code: string): { props: Record<string, unknown>; slotContent: string } {
+function parseCodeString(code: string, componentName: string): { props: Record<string, unknown>; slotContent: string } {
   const result: { props: Record<string, unknown>; slotContent: string } = {
     props: {},
     slotContent: '',
@@ -34,46 +33,59 @@ function parseCodeString(code: string): { props: Record<string, unknown>; slotCo
 
   if (!code) return result;
 
-  // Extract tag content (slot content)
-  const contentMatch = code.match(/>([^<]*)<\/AzButton>/);
-  if (contentMatch) {
-    result.slotContent = contentMatch[1].trim();
+  const tagName = componentName;
+  // Allow opening tag to span multiple lines
+  const tagRegex = new RegExp(`<${tagName}([\\s\\S]*?)\\s*\\/?>`, 'i');
+  const tagMatch = code.trim().match(tagRegex);
+  if (!tagMatch) return result;
+
+  const propsString = tagMatch[1].replace(/\s+/g, ' ').trim();
+
+  // Boolean attributes (component-specific)
+  const booleanProps: string[] = [];
+  if (tagName === 'AzButton') {
+    ['disabled', 'loading', 'fullWidth'].forEach((p) => {
+      if (new RegExp(`\\b${p}\\b`, 'i').test(propsString)) booleanProps.push(p);
+    });
+  } else if (tagName === 'BlockToastDemo') {
+    ['autoClose', 'showProgress'].forEach((p) => {
+      if (new RegExp(`\\b${p}\\b`, 'i').test(propsString)) booleanProps.push(p);
+    });
+  }
+  booleanProps.forEach((prop) => {
+    result.props[prop] = true;
+  });
+
+  // key="value" and :key="value" and key={number} and key={true|false}
+  const valueRegex = /(\w+)=(["'])([^"']*)\2|:?(\w+)=\{(\d+)\}|:?(\w+)=\{(true|false)\}/g;
+  let m;
+  while ((m = valueRegex.exec(propsString)) !== null) {
+    const key = (m[1] || m[4] || m[6]) as string;
+    let value: string | number | boolean | undefined;
+    if (m[3] !== undefined) value = m[3];
+    else if (m[5] !== undefined) value = Number(m[5]);
+    else if (m[7] !== undefined) value = m[7] === 'true';
+    if (key && value !== undefined) {
+      result.props[key] = typeof value === 'string' && /^\d+$/.test(value) ? Number(value) : value;
+    }
   }
 
-  // Extract props from the opening tag
-  const tagMatch = code.match(/<AzButton([^>]*)>/);
-  if (tagMatch) {
-    const propsString = tagMatch[1];
-    
-    // Match boolean attributes (e.g., "disabled", "loading")
-    const booleanProps = propsString.match(/\b(disabled|loading|fullWidth)\b/g);
-    if (booleanProps) {
-      booleanProps.forEach(prop => {
-        result.props[prop] = true;
-      });
-    }
-
-    // Match key="value" props
-    const valueProps = propsString.match(/(\w+)=(["'])([^"']*)\2/g);
-    if (valueProps) {
-      valueProps.forEach(propMatch => {
-        const [, key, , value] = propMatch.match(/(\w+)=(["'])([^"']*)\2/) || [];
-        if (key && value !== undefined) {
-          result.props[key] = value;
-        }
-      });
-    }
+  // Slot content for AzButton: <AzButton ...>content</AzButton>
+  const closeTag = new RegExp(`</${tagName}\\s*>`, 'i');
+  const contentMatch = code.trim().match(new RegExp(`>\\s*([^<]*)\\s*</${tagName}`, 'is'));
+  if (contentMatch) {
+    result.slotContent = contentMatch[1].trim();
   }
 
   return result;
 }
 
-const parsed = computed(() => parseCodeString(props.code));
+const parsed = computed(() => parseCodeString(props.code, props.componentName));
 
 // Map component names to their actual components
 const componentMap: Record<string, unknown> = {
   AzButton,
-  // Add more components as needed
+  BlockToastDemo,
 };
 
 const componentToRender = computed(() => {

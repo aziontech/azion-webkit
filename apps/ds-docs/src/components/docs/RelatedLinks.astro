@@ -9,7 +9,7 @@ interface RelatedItem {
   title: string;
   href: string;
   description?: string;
-  type?: 'component' | 'pattern' | 'foundation' | 'external';
+  type?: 'component' | 'block' | 'pattern' | 'foundation' | 'external';
 }
 
 interface Props {
@@ -24,6 +24,7 @@ const {
 
 const typeIconClasses: Record<string, string> = {
   component: 'pi pi-box',
+  block: 'pi pi-th-large',
   pattern: 'pi pi-th-large',
   foundation: 'pi pi-book',
   external: 'pi pi-arrow-up-right',

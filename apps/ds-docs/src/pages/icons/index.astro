@@ -7,22 +7,23 @@
  * Uses the same layouts as PT routes, with language='en' default
  */
 
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import DocPageLayout from '../../layouts/DocPageLayout.astro';
 import { getBreadcrumbContext } from '../../lib/content';
 import { markdownComponents } from '../../components/docs';
 import { createI18nContext } from '../../lib/i18n';
 
 // Get the icons index page
+// In Astro 5, the glob loader uses the folder path as ID for index files (e.g. 'icons' for icons/index.md)
 const allContent = await getCollection('v1-en');
-const iconsEntries = allContent.filter(e => (e.id || '').startsWith('icons/'));
-const indexEntry = iconsEntries.find((e) => e.id === 'icons/index.md' || e.id === 'icons/index.mdx');
+const iconsEntries = allContent.filter(e => (e.id || '').startsWith('icons'));
+const indexEntry = iconsEntries.find((e) => e.id === 'icons');
 
 if (!indexEntry) {
   return Astro.redirect('/404');
 }
 
-const { Content } = await indexEntry.render();
+const { Content } = await render(indexEntry);
 const breadcrumb = await getBreadcrumbContext('/icons');
 
 // Create i18n context for English (default)
@@ -38,24 +39,4 @@ const i18n = createI18nContext('en');
   i18n={i18n}
 >
   <Content components={markdownComponents} />
-  
-  <!-- External Icon Gallery Link -->
-  <section class="icon-gallery-link mt-12">
-    <div class="bg-gradient-to-r from-orange-50 to-orange-100 rounded-lg p-8 border border-orange-200">
-      <h2 class="text-2xl font-medium text-gray-900 mb-2">Icon Gallery</h2>
-      <p class="text-gray-600 mb-6">
-        Browse all available icons with a visual gallery, search functionality, and copy-to-clipboard features.
-      </p>
-      
-      <a
-        href="https://icons-gallery.azion.app"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 text-white font-medium rounded-lg hover:bg-orange-600 transition-colors"
-      >
-        <span>Open Icon Gallery</span>
-        <i class="pi pi-arrow-up-right text-lg" aria-hidden="true" />
-      </a>
-    </div>
-  </section>
 </DocPageLayout>

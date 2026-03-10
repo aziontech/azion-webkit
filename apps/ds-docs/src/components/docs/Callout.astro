@@ -6,7 +6,7 @@
  */
 
 interface Props {
-  type?: 'info' | 'warning' | 'error' | 'success' | 'tip';
+  type?: 'info' | 'warning' | 'error' | 'success' | 'tip' | 'note' | 'caution';
   title?: string;
 }
 
@@ -20,6 +20,22 @@ const styles = {
     title: 'text-blue-800',
     text: 'text-blue-700',
     iconClass: 'pi pi-info-circle',
+  },
+  note: {
+    bg: 'bg-blue-50',
+    border: 'border-blue-200',
+    icon: 'text-blue-500',
+    title: 'text-blue-800',
+    text: 'text-blue-700',
+    iconClass: 'pi pi-info-circle',
+  },
+  caution: {
+    bg: 'bg-amber-50',
+    border: 'border-amber-200',
+    icon: 'text-amber-500',
+    title: 'text-amber-800',
+    text: 'text-amber-700',
+    iconClass: 'pi pi-exclamation-triangle',
   },
   warning: {
     bg: 'bg-amber-50',
@@ -55,7 +71,7 @@ const styles = {
   },
 };
 
-const style = styles[type];
+const style = styles[type] ?? styles.info;
 ---
 
 <div class={`callout rounded-lg border ${style.bg} ${style.border} p-4 my-4`}>

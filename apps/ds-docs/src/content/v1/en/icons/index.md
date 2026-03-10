@@ -6,6 +6,10 @@ order: 1
 type: icon
 ---
 
+# Icons
+
+> **Icon Gallery** — Browse all available icons with a visual gallery, search, and copy-to-clipboard. <a href="https://icons-gallery.azion.app" target="_blank" rel="noopener noreferrer">Open Icon Gallery</a>
+
 The Azion Design System includes two icon libraries:
 
 - **Azion Icons** - Custom icons designed for Azion products

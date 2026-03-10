@@ -56,8 +56,6 @@ export const VALID_SECTIONS = [
   'templates',
   'get-started',
   'icons',
-  'contributing',
-  'playground',
 ] as const;
 
 /**

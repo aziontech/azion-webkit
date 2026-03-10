@@ -298,8 +298,6 @@ function processCollections(contentDir: string): SearchIndexEntry[] {
     'templates',
     'get-started',
     'icons',
-    'contributing',
-    'playground',
   ];
   for (const langDir of languages) {
     const lang = langDir.name;
