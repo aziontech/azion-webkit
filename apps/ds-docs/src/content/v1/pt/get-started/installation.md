@@ -8,10 +8,6 @@ translatedFrom: en
 translationStatus: complete
 ---
 
-# Instalação
-
-Aprenda a instalar e configurar o Azion Design System em seu projeto.
-
 ## Requisitos
 
 - Node.js 18 ou superior

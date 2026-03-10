@@ -6,9 +6,6 @@ order: 2
 type: guide
 category: installation
 ---
-
-The Azion Design System is distributed as a set of npm packages. Install only what you need for your project.
-
 ## Requirements
 
 - Node.js 18.x or higher

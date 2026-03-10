@@ -84,7 +84,10 @@ async function performSearch() {
   
   try {
     const engine = await initSearchEngine();
-    results.value = engine.search(query.value, { limit: 30 });
+    results.value = engine.search(query.value, {
+      limit: 30,
+      language: currentLanguage.value,
+    });
     selectedIndex.value = 0;
   } catch (error) {
     console.error('Search failed:', error);

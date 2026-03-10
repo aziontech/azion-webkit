@@ -139,6 +139,25 @@ function truncateContent(content: string, maxLength: number = 2000): string {
 }
 
 /**
+ * Extract title and description from frontmatter block using regex.
+ * More reliable when full YAML has nested structures (anatomy, accessibility, etc.).
+ */
+function extractTitleDescriptionFromFrontmatter(content: string): { title?: string; description?: string } {
+  const frontmatterMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (!frontmatterMatch) return {};
+  const block = frontmatterMatch[1];
+  // Match "title: Value" or "title: 'Value'" - capture until end of line or closing quote
+  const titleMatch = block.match(/^title:\s*(?:"([^"]*)"|'([^']*)'|([^\r\n]+?))\s*$/m);
+  const descMatch = block.match(/^description:\s*(?:"([^"]*)"|'([^']*)'|([^\r\n]+?))\s*$/m);
+  const title = titleMatch?.[1] ?? titleMatch?.[2] ?? titleMatch?.[3];
+  const description = descMatch?.[1] ?? descMatch?.[2] ?? descMatch?.[3];
+  return {
+    title: title?.trim(),
+    description: description?.trim(),
+  };
+}
+
+/**
  * Parse frontmatter from markdown content
  */
 function parseFrontmatter(content: string): Record<string, unknown> {
@@ -234,16 +253,30 @@ function processMarkdownFile(
     const headings = extractHeadings(content);
     const textContent = truncateContent(extractTextContent(content));
     
-    // Build URL
+    // Prefer regex-extracted title/description (reliable with nested YAML)
+    const extracted = extractTitleDescriptionFromFrontmatter(content);
+    const frontmatterTitle = extracted.title ?? (frontmatter.title as string);
+    const frontmatterDescription = extracted.description ?? (frontmatter.description as string);
+    
+    // URL is built per-language in processCollections (no /v1/ in public URLs)
     const url = `/${collection}/${slug}`;
+    
+    // Title: prefer frontmatter, then first heading, then slug (avoids generic "Index")
+    const rawTitle = frontmatterTitle || (headings as string[])[0] || slug;
+    const title = rawTitle ? String(rawTitle).trim() : slug;
+    
+    // Description: prefer frontmatter, then first ~160 chars of content
+    const description = frontmatterDescription
+      ? String(frontmatterDescription).trim()
+      : textContent.slice(0, 160).trim().replace(/\s+/g, ' ').replace(/\s*$/, '') || '';
     
     // Build entry
     const entry: SearchIndexEntry = {
       id: `${collection}/${slug}`,
-      title: (frontmatter.title as string) || slug,
+      title,
       section: collection,
       type: mapContentType(frontmatter),
-      description: (frontmatter.description as string) || '',
+      description,
       headings,
       tags: (frontmatter.tags as string[]) || [],
       content: textContent,
@@ -275,7 +308,10 @@ function processMarkdownFile(
 
 /**
  * Process all content collections (v1/<language>/<collection> structure)
+ * Public URLs: no /v1/ — default language (en) at /{section}/..., pt at /pt/{section}/...
  */
+const DEFAULT_LANGUAGE = 'en';
+
 function processCollections(contentDir: string): SearchIndexEntry[] {
   const entries: SearchIndexEntry[] = [];
   const v1Dir = path.join(contentDir, 'v1');
@@ -310,7 +346,9 @@ function processCollections(contentDir: string): SearchIndexEntry[] {
         const entry = processMarkdownFile(filePath, collection, slug);
         if (entry) {
           entry.id = `v1/${lang}/${collection}/${slug}`;
-          entry.url = `/v1/${lang}/${collection}${slug === 'index' ? '' : `/${slug}`}`;
+          // Public URL: no /v1/ — en at /section/..., pt at /pt/section/...
+          const pathPart = slug === 'index' ? collection : `${collection}/${slug}`;
+          entry.url = lang === DEFAULT_LANGUAGE ? `/${pathPart}` : `/${lang}/${pathPart}`;
           entry.language = lang;
           entry.version = 'v1';
           entries.push(entry);

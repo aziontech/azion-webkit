@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-03-10T17:03:35.142Z",
+    "generated": "2026-03-10T17:34:56.594Z",
     "count": 24,
     "language": "en",
     "version": "v1",
@@ -16,10 +16,10 @@
   "entries": [
     {
       "id": "v1/en/components/button",
-      "title": "button",
+      "title": "Button",
       "section": "components",
       "type": "doc",
-      "description": "",
+      "description": "Buttons trigger actions and events when users interact with them.",
       "headings": [
         "Import",
         "Playground",
@@ -27,29 +27,29 @@
       ],
       "tags": [],
       "content": "Buttons are interactive elements that trigger actions when clicked or tapped. They communicate actions that users can take and are typically placed throughout your UI, from forms to dialogs to navigation. The Button component provides a consistent, accessible way to trigger actions throughout your application. Import",
-      "url": "/v1/en/components/button",
+      "url": "/components/button",
       "version": "v1",
       "language": "en"
     },
     {
       "id": "v1/en/components/index",
-      "title": "index",
+      "title": "Components",
       "section": "components",
       "type": "doc",
-      "description": "",
+      "description": "Explore our component library built with Vue and designed for the Azion platform.",
       "headings": [],
       "tags": [],
       "content": "",
-      "url": "/v1/en/components",
+      "url": "/components",
       "version": "v1",
       "language": "en"
     },
     {
       "id": "v1/en/foundations/color",
-      "title": "color",
+      "title": "Color",
       "section": "foundations",
       "type": "doc",
-      "description": "",
+      "description": "The color system provides semantic tokens for consistent and accessible interfaces.",
       "headings": [
         "Color",
         "Color Philosophy",
@@ -66,16 +66,16 @@
       ],
       "tags": [],
       "content": "Color Color is a fundamental element of visual design. The Azion Design System uses a semantic color system built on design tokens that adapt to different contexts and themes. Color Philosophy Our color system is designed to be: Accessible: All color combinations meet WCAG 2.1 AA contrast requirements Semantic: Colors are named by purpose, not appearance Consistent: The same tokens are used across all components Themeable: Colors adapt automatically to light and dark modes Primary Colors The primary color palette represents the Azion brand: Token Light Mode Dark Mode Usage ------- ------------ ----------- ------- Light backgrounds Hover states Primary actions Active states Text on light Semantic Colors Semantic colors convey meaning: Success Used for positive actions and confirmations. Warning Used for cautionary messages and alerts. Error Used for error states and destructive actions. Info Used for informational messages and neutral states. Usage Guidelines Do Use semantic tokens instead of raw color values Ensure sufficient contrast for text Use color consistently across similar elements Don't Don't use color alone to convey information Don't create new colors outside the system Don't use decorative colors that distract from content Related Typography - Typography system Tokens - Design token reference",
-      "url": "/v1/en/foundations/color",
+      "url": "/foundations/color",
       "version": "v1",
       "language": "en"
     },
     {
       "id": "v1/en/foundations/index",
-      "title": "index",
+      "title": "Foundations",
       "section": "foundations",
       "type": "doc",
-      "description": "",
+      "description": "Core design principles and guidelines that shape the Azion Design System.",
       "headings": [
         "Foundations",
         "What's Inside",
@@ -93,16 +93,16 @@
       ],
       "tags": [],
       "content": "Foundations Foundations are the core design principles, guidelines, and visual elements that shape the Azion Design System. They provide consistency and coherence across all components and experiences. What's Inside Color Our color system is built on semantic tokens that adapt to different contexts and themes. Learn how to use color effectively in your interfaces. Typography Typography guidelines ensure readable, accessible, and consistent text across all touchpoints. Spacing A consistent spacing scale creates rhythm and harmony in layouts. Elevation Elevation defines the visual hierarchy and depth of elements in the interface. Motion Motion principles guide animations and transitions for a polished user experience. Design Principles Clarity First Every element should serve a purpose. Remove unnecessary complexity. Consistency Use familiar patterns and consistent behaviors across the system. Accessibility Design for everyone. Meet WCAG 2.1 AA standards at minimum. Performance Optimize for speed and efficiency in both design and implementation. Next Steps Color - Explore the color system Typography - Learn about typography Spacing - Understand spacing principles",
-      "url": "/v1/en/foundations",
+      "url": "/foundations",
       "version": "v1",
       "language": "en"
     },
     {
       "id": "v1/en/foundations/index",
-      "title": "index",
+      "title": "Foundations",
       "section": "foundations",
       "type": "doc",
-      "description": "",
+      "description": "Foundations define the core building blocks of the design system",
       "headings": [
         "Foundations",
         "What are Foundations",
@@ -120,16 +120,16 @@
       ],
       "tags": [],
       "content": "Foundations Foundations define the visual and interaction principles that guide every component and interface across the design system. They ensure consistency, accessibility, and scalability across all products and experiences. What are Foundations Foundations are the core design decisions that underpin the entire system. They define the fundamental rules that ensure visual and functional coherence. Every component in the design system is built on top of these foundations. Understanding them helps you: Make informed design decisions Create consistent interfaces Maintain scalability across products Ensure accessibility compliance Foundations define: Color systems Palettes, semantic colors, and accessibility guidelines Typography scale Font families, sizes, weights, and line heights Spacing rules Consistent margins, padding, and gaps Layout structure Grid systems and responsive breakpoints Motion principles Animation timing, easing, and transitions Iconography Icon style, sizing, and usage guidelines Available Foundations Explore each foundation to understand the design decisions and implementation details.",
-      "url": "/v1/en/foundations",
+      "url": "/foundations",
       "version": "v1",
       "language": "en"
     },
     {
       "id": "v1/en/tokens/index",
-      "title": "index",
+      "title": "Design Tokens",
       "section": "tokens",
       "type": "doc",
-      "description": "",
+      "description": "Design tokens are the smallest units of the design system, storing visual values like colors, spacing, and typography for consistent usage across products.",
       "headings": [
         "Tokens",
         "What Are Design Tokens",
@@ -175,64 +175,64 @@
       ],
       "tags": [],
       "content": "Tokens Design tokens are the smallest units of the design system. They store visual values like colors, spacing, and typography, enabling consistent usage across products and platforms. In the Azion Design System, tokens are distributed through the npm package and exported for Tailwind CSS, CSS variables, and JavaScript. Tokens support both light and dark themes automatically, ensuring seamless theme switching. What Are Design Tokens Design tokens are named entities that store visual design attributes. Instead of hardcoding values like or , you use meaningful names like or . This abstraction provides several benefits: Consistency All products use the same values, creating a cohesive visual experience Maintainability Update a token once, and the change propagates everywhere Scalability New features automatically inherit the design system's visual language Theme support Semantic tokens adapt automatically between light and dark modes Cross-platform Tokens can be used in CSS, JavaScript, and design tools Installing the Tokens Install the package to access design tokens in your project: Importing Theme Styles Import the theme styles at your application's entry point: For applications that support theme switching, dynamically import the appropriate stylesheet: CSS Variables After importing, tokens are available as CSS custom properties: Token Types The Azion Design System uses two main token categories: primitive tokens and semantic tokens. Primitive Tokens Primitive tokens are raw values from the design palette. They represent the foundational colors, spacing, and typography values without any context or meaning attached. Examples of primitive tokens: Token Value Usage ------- ------- ------- Brand primary color Darkest neutral Lightest neutral Accent color Accessing primitives in JavaScript: Semantic Tokens Semantic tokens represent UI meaning. They describe what a value is used for, not just the raw value. This abstraction enables automatic theme adaptation.",
-      "url": "/v1/en/tokens",
+      "url": "/tokens",
       "version": "v1",
       "language": "en"
     },
     {
       "id": "v1/en/blocks/index",
-      "title": "index",
+      "title": "UI Blocks",
       "section": "blocks",
       "type": "doc",
-      "description": "",
+      "description": "Composable UI blocks combining multiple components for common use cases.",
       "headings": [
         "Overview",
         "Available Blocks"
       ],
       "tags": [],
       "content": "Overview UI Blocks are pre-built combinations of components that solve common interface patterns. They provide a starting point for building pages and features. Available Blocks Block documentation is being prepared. Check back soon for detailed block references.",
-      "url": "/v1/en/blocks",
+      "url": "/blocks",
       "version": "v1",
       "language": "en"
     },
     {
       "id": "v1/en/patterns/index",
-      "title": "index",
+      "title": "Design Patterns",
       "section": "patterns",
       "type": "doc",
-      "description": "",
+      "description": "Common design patterns and best practices for building with the Azion Design System.",
       "headings": [
         "Overview",
         "Available Patterns"
       ],
       "tags": [],
       "content": "Overview Design patterns are reusable solutions to common problems in interface design. They provide proven approaches to typical UX challenges. Available Patterns Pattern documentation is being prepared. Check back soon for detailed pattern references.",
-      "url": "/v1/en/patterns",
+      "url": "/patterns",
       "version": "v1",
       "language": "en"
     },
     {
       "id": "v1/en/templates/index",
-      "title": "index",
+      "title": "Page Templates",
       "section": "templates",
       "type": "doc",
-      "description": "",
+      "description": "Page templates and layout examples for building applications with the Azion Design System.",
       "headings": [
         "Overview",
         "Available Templates"
       ],
       "tags": [],
       "content": "Overview Page templates are complete page layouts that combine blocks and components into ready-to-use starting points for common application pages. Available Templates Template documentation is being prepared. Check back soon for detailed template references.",
-      "url": "/v1/en/templates",
+      "url": "/templates",
       "version": "v1",
       "language": "en"
     },
     {
       "id": "v1/en/get-started/index",
-      "title": "index",
+      "title": "Get Started",
       "section": "get-started",
       "type": "doc",
-      "description": "",
+      "description": "Get started with the Azion Design System",
       "headings": [
         "Welcome",
         "Installation",
@@ -241,16 +241,16 @@
       ],
       "tags": [],
       "content": "Welcome Welcome to the Azion Design System documentation. This guide will help you get started with using our components and design tokens in your projects. Installation Install the design system packages using your preferred package manager: Quick Start Import the CSS in your main entry file: Import and use components: Next Steps Explore our Components library Learn about our Foundations and design principles Browse our Icons collection",
-      "url": "/v1/en/get-started",
+      "url": "/get-started",
       "version": "v1",
       "language": "en"
     },
     {
       "id": "v1/en/get-started/installation",
-      "title": "installation",
+      "title": "Installation",
       "section": "get-started",
       "type": "doc",
-      "description": "",
+      "description": "Get started with the Azion Design System by installing the required packages.",
       "headings": [
         "Requirements",
         "Package Installation",
@@ -262,17 +262,17 @@
         "Next Steps"
       ],
       "tags": [],
-      "content": "The Azion Design System is distributed as a set of npm packages. Install only what you need for your project. Requirements Node.js 18.x or higher Vue 3.x Tailwind CSS 3.x Package Installation Install the core packages you need: Tailwind Configuration Extend your Tailwind configuration to include Azion's design tokens: Vue Configuration Import the CSS and register the components: Next Steps Quick Start - Build your first component Components - Explore available components Foundations - Learn about design principles",
-      "url": "/v1/en/get-started/installation",
+      "content": "Requirements Node.js 18.x or higher Vue 3.x Tailwind CSS 3.x Package Installation Install the core packages you need: Tailwind Configuration Extend your Tailwind configuration to include Azion's design tokens: Vue Configuration Import the CSS and register the components: Next Steps Quick Start - Build your first component Components - Explore available components Foundations - Learn about design principles",
+      "url": "/get-started/installation",
       "version": "v1",
       "language": "en"
     },
     {
       "id": "v1/en/icons/index",
-      "title": "index",
+      "title": "Icons",
       "section": "icons",
       "type": "doc",
-      "description": "",
+      "description": "Icon library with Azion Icons and PrimeIcons for use in your applications.",
       "headings": [
         "Installation",
         "Usage",
@@ -287,16 +287,16 @@
       ],
       "tags": [],
       "content": "The Azion Design System includes two icon libraries: Azion Icons - Custom icons designed for Azion products PrimeIcons - General purpose icon library from PrimeVue Installation Icons are included in the package: Usage Font Icons Use icons as font icons with the appropriate class: SVG Icons Import SVG icons directly for more control: Icon Categories Azion Icons Azion Icons are organized into categories: Product Icons - Azion product and service icons Action Icons - Common action icons Status Icons - Status and notification icons PrimeIcons PrimeIcons provide a comprehensive set of general-purpose icons suitable for most UI needs. Sizing Icons inherit their size from the font size of their container: Accessibility When using icons alone, provide accessible labels: Related Button - Button component with icon support",
-      "url": "/v1/en/icons",
+      "url": "/icons",
       "version": "v1",
       "language": "en"
     },
     {
       "id": "v1/en/contributing/index",
-      "title": "index",
+      "title": "Contributing",
       "section": "contributing",
       "type": "doc",
-      "description": "",
+      "description": "Guidelines for contributing to the Azion Design System.",
       "headings": [
         "Contributing",
         "Ways to Contribute",
@@ -315,32 +315,32 @@
       ],
       "tags": [],
       "content": "Contributing Thank you for your interest in contributing to the Azion Design System! This guide will help you understand how to contribute effectively. Ways to Contribute Report Issues Found a bug or have a suggestion? Open an issue on our GitHub repository. Submit Pull Requests Fix a bug or add a feature by submitting a pull request. Improve Documentation Help us improve our documentation by fixing typos, adding examples, or clarifying explanations. Development Setup Fork and clone the repository Install dependencies: Start the development server: Coding Standards Code Style Follow the existing code style Use TypeScript for all new code Write meaningful commit messages Component Development Follow the component API conventions Include accessibility features Write unit tests for new components Documentation Write clear, concise documentation Include code examples Update the changelog Pull Request Process Create a feature branch from Make your changes Run tests: Submit a pull request with a clear description Code of Conduct Please read and follow our Code of Conduct. Need Help? Open a discussion on GitHub Join our community chat Email us at design-system azion.com Related Installation - Get started with the design system",
-      "url": "/v1/en/contributing",
+      "url": "/contributing",
       "version": "v1",
       "language": "en"
     },
     {
       "id": "v1/en/playground/index",
-      "title": "index",
+      "title": "Component Playground",
       "section": "playground",
       "type": "doc",
-      "description": "",
+      "description": "Interactive component playground for experimenting with Azion Design System components.",
       "headings": [
         "Overview",
         "Coming Soon"
       ],
       "tags": [],
       "content": "Overview The Component Playground provides an interactive environment for experimenting with Azion Design System components. You can modify props in real-time and see how components behave. Coming Soon The playground is currently under development. Check back soon for an interactive component testing experience.",
-      "url": "/v1/en/playground",
+      "url": "/playground",
       "version": "v1",
       "language": "en"
     },
     {
       "id": "v1/pt/components/button",
-      "title": "button",
+      "title": "Button",
       "section": "components",
       "type": "doc",
-      "description": "",
+      "description": "Botões disparam ações e eventos quando os usuários interagem com eles.",
       "headings": [
         "Import",
         "Playground",
@@ -348,29 +348,29 @@
       ],
       "tags": [],
       "content": "Bot es s o elementos interativos que disparam a es quando clicados ou tocados. Eles comunicam a es que os usu rios podem executar e normalmente aparecem em diversas partes da interface, desde formul rios at di logos e navega o. O componente Button fornece uma maneira consistente e acess vel de disparar a es em toda a sua aplica o. Import",
-      "url": "/v1/pt/components/button",
+      "url": "/pt/components/button",
       "version": "v1",
       "language": "pt"
     },
     {
       "id": "v1/pt/components/index",
-      "title": "index",
+      "title": "Componentes",
       "section": "components",
       "type": "doc",
-      "description": "",
+      "description": "Explore nossa biblioteca de componentes construída com Vue e projetada para a plataforma Azion.",
       "headings": [],
       "tags": [],
       "content": "",
-      "url": "/v1/pt/components",
+      "url": "/pt/components",
       "version": "v1",
       "language": "pt"
     },
     {
       "id": "v1/pt/foundations/color",
-      "title": "color",
+      "title": "Cor",
       "section": "foundations",
       "type": "doc",
-      "description": "",
+      "description": "O sistema de cores fornece tokens semânticos para interfaces consistentes e acessíveis.",
       "headings": [
         "Cor",
         "Filosofia de Cores",
@@ -387,16 +387,16 @@
       ],
       "tags": [],
       "content": "Cor Cor um elemento fundamental do design visual. O Azion Design System usa um sistema de cores sem ntico constru do sobre design tokens que se adaptam a diferentes contextos e temas. Filosofia de Cores Nosso sistema de cores foi projetado para ser: Acess vel: Todas as combina es de cores atendem aos requisitos de contraste WCAG 2.1 AA Sem ntico: As cores s o nomeadas por prop sito, n o por apar ncia Consistente: Os mesmos tokens s o usados em todos os componentes Tematiz vel: As cores se adaptam automaticamente aos modos claro e escuro Cores Prim rias A paleta de cores prim rias representa a marca Azion: Token Modo Claro Modo Escuro Uso ------- ------------ ------------- ----- Fundos claros Estados de hover A es prim rias Estados ativos Texto em fundo claro Cores Sem nticas Cores sem nticas transmitem significado: Sucesso Usado para a es positivas e confirma es. Alerta Usado para mensagens de cautela e avisos. Erro Usado para estados de erro e a es destrutivas. Informa o Usado para mensagens informativas e estados neutros. Diretrizes de Uso Fa a Use tokens sem nticos em vez de valores de cor brutos Garanta contraste suficiente para texto Use cores de forma consistente em elementos semelhantes N o Fa a N o use cor sozinha para transmitir informa es N o crie novas cores fora do sistema N o use cores decorativas que distraiam do conte do Relacionados Tipografia - Sistema de tipografia Tokens - Refer ncia de design tokens",
-      "url": "/v1/pt/foundations/color",
+      "url": "/pt/foundations/color",
       "version": "v1",
       "language": "pt"
     },
     {
       "id": "v1/pt/foundations/index",
-      "title": "index",
+      "title": "Fundamentos",
       "section": "foundations",
       "type": "doc",
-      "description": "",
+      "description": "Princípios e diretrizes de design principais que moldam o Azion Design System.",
       "headings": [
         "Fundamentos",
         "O Que Está Incluído",
@@ -414,16 +414,16 @@
       ],
       "tags": [],
       "content": "Fundamentos Fundamentos s o os princ pios de design principais, diretrizes e elementos visuais que moldam o Azion Design System. Eles fornecem consist ncia e coer ncia em todos os componentes e experi ncias. O Que Est Inclu do Cor Nosso sistema de cores constru do sobre tokens sem nticos que se adaptam a diferentes contextos e temas. Aprenda a usar cores de forma eficaz em suas interfaces. Tipografia As diretrizes de tipografia garantem texto leg vel, acess vel e consistente em todos os pontos de contato. Espa amento Uma escala de espa amento consistente cria ritmo e harmonia nos layouts. Eleva o A eleva o define a hierarquia visual e a profundidade dos elementos na interface. Movimento Os princ pios de movimento orientam anima es e transi es para uma experi ncia de usu rio polida. Princ pios de Design Clareza em Primeiro Lugar Todo elemento deve servir a um prop sito. Remova complexidade desnecess ria. Consist ncia Use padr es familiares e comportamentos consistentes em todo o sistema. Acessibilidade Projete para todos. Atenda aos padr es WCAG 2.1 AA no m nimo. Performance Otimize para velocidade e efici ncia tanto no design quanto na implementa o. Pr ximos Passos Cor - Explore o sistema de cores Tipografia - Aprenda sobre tipografia Espa amento - Entenda os princ pios de espa amento",
-      "url": "/v1/pt/foundations",
+      "url": "/pt/foundations",
       "version": "v1",
       "language": "pt"
     },
     {
       "id": "v1/pt/foundations/index",
-      "title": "index",
+      "title": "Fundamentos",
       "section": "foundations",
       "type": "doc",
-      "description": "",
+      "description": "Fundamentos definem os blocos de construção principais do sistema de design",
       "headings": [
         "Fundamentos",
         "O Que São Fundamentos",
@@ -441,16 +441,16 @@
       ],
       "tags": [],
       "content": "Fundamentos Fundamentos definem os princ pios visuais e de intera o que orientam cada componente e interface do sistema de design. Eles garantem consist ncia, acessibilidade e escalabilidade em todos os produtos e experi ncias. O Que S o Fundamentos Fundamentos s o as decis es de design principais que sustentam todo o sistema. Eles definem as regras fundamentais que garantem coer ncia visual e funcional. Todo componente no sistema de design constru do sobre esses fundamentos. Entend -los ajuda voc a: Tomar decis es de design informadas Criar interfaces consistentes Manter escalabilidade entre produtos Garantir conformidade com acessibilidade Fundamentos definem: Sistemas de cores Paletas, cores sem nticas e diretrizes de acessibilidade Escala tipogr fica Fam lias de fontes, tamanhos, pesos e alturas de linha Regras de espa amento Margens, padding e gaps consistentes Estrutura de layout Sistemas de grid e breakpoints responsivos Princ pios de movimento Timing de anima o, easing e transi es Iconografia Estilo de cones, tamanhos e diretrizes de uso Fundamentos Dispon veis Explore cada fundamento para entender as decis es de design e detalhes de implementa o.",
-      "url": "/v1/pt/foundations",
+      "url": "/pt/foundations",
       "version": "v1",
       "language": "pt"
     },
     {
       "id": "v1/pt/tokens/index",
-      "title": "index",
+      "title": "Design Tokens",
       "section": "tokens",
       "type": "doc",
-      "description": "",
+      "description": "Design tokens são as menores unidades do sistema de design, armazenando valores visuais como cores, espaçamentos e tipografia para uso consistente entre produtos.",
       "headings": [
         "Tokens",
         "O Que São Design Tokens",
@@ -496,16 +496,16 @@
       ],
       "tags": [],
       "content": "Tokens Design tokens s o as menores unidades do sistema de design. Eles armazenam valores visuais como cores, espa amentos e tipografia, permitindo uso consistente entre produtos e plataformas. No Azion Design System, os tokens s o distribu dos atrav s do pacote npm e exportados para Tailwind CSS, vari veis CSS e JavaScript. Os tokens suportam temas claro e escuro automaticamente, garantindo troca de tema sem interrup es. O Que S o Design Tokens Design tokens s o entidades nomeadas que armazenam atributos de design visual. Em vez de usar valores fixos como ou , voc usa nomes significativos como ou . Essa abstra o oferece v rios benef cios: Consist ncia Todos os produtos usam os mesmos valores, criando uma experi ncia visual coesa Manutenibilidade Atualize um token uma vez e a mudan a se propaga para todos os lugares Escalabilidade Novas funcionalidades herdam automaticamente a linguagem visual do sistema de design Suporte a temas Tokens sem nticos se adaptam automaticamente entre os modos claro e escuro Multiplataforma Tokens podem ser usados em CSS, JavaScript e ferramentas de design Instalando os Tokens Instale o pacote para acessar os design tokens no seu projeto: Importando Estilos do Tema Importe os estilos do tema no ponto de entrada da sua aplica o: Para aplica es que suportam troca de tema, importe dinamicamente a folha de estilo apropriada: Vari veis CSS Ap s a importa o, os tokens est o dispon veis como custom properties CSS: Tipos de Tokens O Azion Design System usa duas categorias principais de tokens: tokens primitivos e tokens sem nticos. Tokens Primitivos Tokens primitivos s o valores brutos da paleta de design. Eles representam as cores, espa amentos e valores de tipografia fundamentais sem nenhum contexto ou significado anexado.",
-      "url": "/v1/pt/tokens",
+      "url": "/pt/tokens",
       "version": "v1",
       "language": "pt"
     },
     {
       "id": "v1/pt/get-started/index",
-      "title": "index",
+      "title": "Começar",
       "section": "get-started",
       "type": "doc",
-      "description": "",
+      "description": "Comece a usar o Azion Design System",
       "headings": [
         "Bem-vindo",
         "Instalação",
@@ -514,16 +514,16 @@
       ],
       "tags": [],
       "content": "Bem-vindo Bem-vindo documenta o do Azion Design System. Este guia ir ajud -lo a come ar a usar nossos componentes e design tokens em seus projetos. Instala o Instale os pacotes do design system usando seu gerenciador de pacotes preferido: In cio R pido Importe o CSS no seu arquivo de entrada principal: Importe e use os componentes: Pr ximos Passos Explore nossa biblioteca de Componentes Conhe a nossos Fundamentos e princ pios de design Navegue pela nossa cole o de cones",
-      "url": "/v1/pt/get-started",
+      "url": "/pt/get-started",
       "version": "v1",
       "language": "pt"
     },
     {
       "id": "v1/pt/get-started/installation",
-      "title": "installation",
+      "title": "Instalação",
       "section": "get-started",
       "type": "doc",
-      "description": "",
+      "description": "Instale o Azion Design System em seu projeto",
       "headings": [
         "Instalação",
         "Requisitos",
@@ -544,16 +544,16 @@
       ],
       "tags": [],
       "content": "Instala o Aprenda a instalar e configurar o Azion Design System em seu projeto. Requisitos Node.js 18 ou superior npm, yarn ou pnpm Instalar Pacotes O Azion Design System composto por tr s pacotes principais: Pacotes Pacote Descri o -------- ----------- Componentes Vue.js Biblioteca de cones Design tokens e estilos base Configura o Importar Estilos Importe os estilos base no seu arquivo de entrada principal: Registrar Componentes (Opcional) Para registrar todos os componentes globalmente: Importa o Sob Demanda Para melhor performance, importe componentes individualmente: Frameworks Suportados O Azion Design System constru do com Vue 3 e funciona com: Vue 3.x Nuxt 3.x Vite Solu o de Problemas Erro de Importa o Se voc encontrar erros de importa o, verifique se o est instalado corretamente: Estilos N o Aplicados Certifique-se de importar os estilos antes de usar os componentes: Pr ximos Passos In cio R pido - Comece a usar os componentes Componentes - Explore a biblioteca de componentes Fundamentos - Conhe a os princ pios de design",
-      "url": "/v1/pt/get-started/installation",
+      "url": "/pt/get-started/installation",
       "version": "v1",
       "language": "pt"
     },
     {
       "id": "v1/pt/icons/index",
-      "title": "index",
+      "title": "Ícones",
       "section": "icons",
       "type": "doc",
-      "description": "",
+      "description": "Biblioteca de ícones com Azion Icons e PrimeIcons para uso em suas aplicações.",
       "headings": [
         "Instalação",
         "Uso",
@@ -568,23 +568,23 @@
       ],
       "tags": [],
       "content": "O Azion Design System inclui duas bibliotecas de cones: Azion Icons - cones personalizados projetados para produtos Azion PrimeIcons - Biblioteca de cones de uso geral do PrimeVue Instala o Os cones est o inclu dos no pacote : Uso cones de Fonte Use cones como font icons com a classe apropriada: cones SVG Importe cones SVG diretamente para ter mais controle: Categorias de cones Azion Icons Os cones Azion est o organizados em categorias: cones de Produto - cones de produtos e servi os Azion cones de A o - cones de a es comuns cones de Status - cones de status e notifica es PrimeIcons PrimeIcons fornece um conjunto abrangente de cones de uso geral adequados para a maioria das necessidades de interface. Tamanhos Os cones herdam seu tamanho do tamanho da fonte de seu cont iner: Acessibilidade Ao usar cones sozinhos, forne a r tulos acess veis: Relacionado Button - Componente de bot o com suporte a cones",
-      "url": "/v1/pt/icons",
+      "url": "/pt/icons",
       "version": "v1",
       "language": "pt"
     },
     {
       "id": "v1/pt/playground/index",
-      "title": "index",
+      "title": "Playground de Componentes",
       "section": "playground",
       "type": "doc",
-      "description": "",
+      "description": "Ambiente interativo para experimentar componentes do Azion Design System.",
       "headings": [
         "Visão Geral",
         "Em Breve"
       ],
       "tags": [],
       "content": "Vis o Geral O Playground de Componentes fornece um ambiente interativo para experimentar componentes do Azion Design System. Voc pode modificar props em tempo real e ver como os componentes se comportam. Em Breve O playground est atualmente em desenvolvimento. Volte em breve para uma experi ncia interativa de teste de componentes.",
-      "url": "/v1/pt/playground",
+      "url": "/pt/playground",
       "version": "v1",
       "language": "pt"
     }
