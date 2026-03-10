@@ -34,6 +34,7 @@ export type {
   PropsDefinition,
   PropsValues,
   PreviewSurface,
+  PreviewTheme,
   PlaygroundConfig,
   PlaygroundHooks,
   StatePreset,

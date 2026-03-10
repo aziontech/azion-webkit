@@ -105,6 +105,11 @@ export type PropsDefinition = Record<string, PropMetadata>;
 export type PropsValues = Record<string, unknown>;
 
 /**
+ * Preview theme for the playground (light/dark)
+ */
+export type PreviewTheme = 'light' | 'dark';
+
+/**
  * Preview surface/background options
  */
 export type PreviewSurface = 'light' | 'neutral' | 'dark';

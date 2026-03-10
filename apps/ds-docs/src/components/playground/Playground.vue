@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, watch, type Component, onMounted, shallowRef } from 'vue';
-import type { PropsDefinition, PropsValues, PlaygroundConfig, PlaygroundHooks, GeneratedCode, PreviewSurface } from './types';
+import type { PropsDefinition, PropsValues, PlaygroundConfig, PlaygroundHooks, GeneratedCode, PreviewSurface, PreviewTheme } from './types';
 import { generateCode } from './code-generator';
 import PlaygroundPreview from './PlaygroundPreview.vue';
 import PlaygroundControls from './PlaygroundControls.vue';
@@ -101,6 +101,7 @@ function initializeValues(): PropsValues {
 
 // Reactive state
 const propsValues = ref<PropsValues>(initializeValues());
+const previewTheme = ref<PreviewTheme>('light');
 
 // Generate code from current state
 const generatedCode = computed<GeneratedCode>(() => {
@@ -148,8 +149,10 @@ defineExpose({
           :component="resolvedComponent"
           :props-values="propsValues"
           :surface="surface"
+          :preview-theme="previewTheme"
           :custom-class="previewClass"
           :slot-content="slotContent"
+          @update:preview-theme="previewTheme = $event"
         >
           <template #toolbar>
             <slot name="preview-toolbar" />
@@ -165,7 +168,9 @@ defineExpose({
         <PlaygroundControls
           :props-definition="props.props"
           :props-values="propsValues"
+          :preview-theme="previewTheme"
           @update:props-values="updatePropsValues"
+          @update:preview-theme="previewTheme = $event"
         />
       </div>
     </div>

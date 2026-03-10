@@ -1,24 +1,31 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import type { PropsDefinition, PropsValues, PropMetadata } from './types';
+import type { PropsDefinition, PropsValues, PropMetadata, PreviewTheme } from './types';
 import PlaygroundPropControl from './PlaygroundPropControl.vue';
 
 /**
  * PlaygroundControls
- * 
+ *
  * Renders all prop controls for a component.
  * Groups controls by category and maintains
  * the reactive state for all props.
+ * Includes reset and preview theme toggle.
  */
 
 interface Props {
   propsDefinition: PropsDefinition;
   propsValues: PropsValues;
+  /** Current preview theme (light/dark) */
+  previewTheme?: PreviewTheme;
 }
 
-const props = defineProps<Props>();
+const props = withDefaults(defineProps<Props>(), {
+  previewTheme: 'light',
+});
+
 const emit = defineEmits<{
   'update:propsValues': [values: PropsValues];
+  'update:previewTheme': [value: PreviewTheme];
 }>();
 
 // Group props by category
@@ -61,6 +68,11 @@ function resetToDefaults() {
   }
   emit('update:propsValues', defaults);
 }
+
+// Toggle preview theme between light and dark
+function togglePreviewTheme() {
+  emit('update:previewTheme', props.previewTheme === 'light' ? 'dark' : 'light');
+}
 </script>
 
 <template>
@@ -70,16 +82,25 @@ function resetToDefaults() {
       <h3 class="playground-controls__title">
         Props
       </h3>
-      <button
-        class="playground-controls__reset"
-        @click="resetToDefaults"
-        title="Reset to defaults"
-      >
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-        </svg>
-        Reset
-      </button>
+      <div class="playground-controls__actions">
+        <button
+          type="button"
+          class="playground-controls__icon-btn"
+          :title="previewTheme === 'light' ? 'Dark theme' : 'Light theme'"
+          :aria-label="previewTheme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'"
+          @click="togglePreviewTheme"
+        >
+          <i :class="previewTheme === 'light' ? 'pi pi-moon' : 'pi pi-sun'" aria-hidden="true" />
+        </button>
+        <button
+          class="playground-controls__reset font-mono"
+          @click="resetToDefaults"
+          title="Reset to defaults"
+        >
+          <i class="pi pi-refresh"/>
+          Reset
+        </button>
+      </div>
     </div>
 
     <!-- Controls by category -->
@@ -128,6 +149,33 @@ function resetToDefaults() {
   font-weight: 600;
   color: #111827;
   margin: 0 !important;
+}
+
+.playground-controls__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.playground-controls__icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  font-size: 1rem;
+  color: #6b7280;
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.playground-controls__icon-btn:hover {
+  color: #111827;
+  background-color: #f9fafb;
 }
 
 .playground-controls__reset {
