@@ -1,14 +1,16 @@
 ---
 /**
- * Foundations Dynamic Routes
+ * Foundations Dynamic Routes (English)
  * 
  * Handles all pages under /foundations/[slug]
+ * Uses the same layouts as PT routes, with language='en' default
  */
 
 import { getCollection, render } from 'astro:content';
 import DocPageLayout from '../../layouts/DocPageLayout.astro';
 import { getBreadcrumbContext } from '../../lib/content';
 import { markdownComponents } from '../../components/docs';
+import { createI18nContext } from '../../lib/i18n';
 
 export async function getStaticPaths() {
   const allContent = await getCollection('v1-en');
@@ -27,6 +29,9 @@ const { Content } = await render(entry);
 const entryId = entry.id.replace(/\.(md|mdx)$/, '');
 const slugFromId = entryId.replace('foundations/', '');
 const breadcrumb = await getBreadcrumbContext(`/foundations/${slugFromId === 'index' ? '' : slugFromId}`);
+
+// Create i18n context for English (default)
+const i18n = createI18nContext('en');
 ---
 
 <DocPageLayout
@@ -35,6 +40,8 @@ const breadcrumb = await getBreadcrumbContext(`/foundations/${slugFromId === 'in
   section={breadcrumb.section}
   item={breadcrumb.item}
   status={entry.data.status}
+  language="en"
+  i18n={i18n}
 >
   <Content components={markdownComponents} />
 </DocPageLayout>

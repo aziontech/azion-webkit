@@ -1,15 +1,17 @@
 ---
 /**
- * Icons Page
+ * Icons Page (English)
  * 
  * Handles the /icons route with information about the icon library
  * and a link to the external Icon Gallery.
+ * Uses the same layouts as PT routes, with language='en' default
  */
 
 import { getCollection } from 'astro:content';
 import DocPageLayout from '../../layouts/DocPageLayout.astro';
 import { getBreadcrumbContext } from '../../lib/content';
 import { markdownComponents } from '../../components/docs';
+import { createI18nContext } from '../../lib/i18n';
 
 // Get the icons index page
 const allContent = await getCollection('v1-en');
@@ -22,6 +24,9 @@ if (!indexEntry) {
 
 const { Content } = await indexEntry.render();
 const breadcrumb = await getBreadcrumbContext('/icons');
+
+// Create i18n context for English (default)
+const i18n = createI18nContext('en');
 ---
 
 <DocPageLayout
@@ -29,6 +34,8 @@ const breadcrumb = await getBreadcrumbContext('/icons');
   description={indexEntry.data.description}
   section={breadcrumb.section}
   item={null}
+  language="en"
+  i18n={i18n}
 >
   <Content components={markdownComponents} />
   

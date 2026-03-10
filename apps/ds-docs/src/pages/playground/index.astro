@@ -1,17 +1,22 @@
 ---
 /**
- * Playground Demo Page
+ * Playground Demo Page (English)
  * 
  * Demonstrates the interactive playground system with multiple components.
  * This page serves as a sandbox for exploring component props interactively.
+ * Uses the same layouts as PT routes, with language='en' default
  */
 
 import DocsLayout from '../../layouts/DocsLayout.astro';
 import { Playground } from '../../components/playground';
 import { buttonProps } from '../../components/demo/props-metadata';
+import { createI18nContext } from '../../lib/i18n';
+
+// Create i18n context for English (default)
+const i18n = createI18nContext('en');
 ---
 
-<DocsLayout title="Playground - Azion Design System">
+<DocsLayout title="Playground - Azion Design System" language="en" i18n={i18n}>
   <div class="playground-page">
     <!-- Page Header -->
     <div class="playground-page__header">

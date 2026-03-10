@@ -64,6 +64,9 @@ export { default as ComponentOverviewTab } from './ComponentOverviewTab.astro';
 export { default as ComponentUsageTab } from './ComponentUsageTab.astro';
 export { default as ComponentApiTab } from './ComponentApiTab.astro';
 
+// Component Index
+export { default as ComponentsIndex } from './ComponentsIndex.astro';
+
 /**
  * Components map for markdown rendering
  * 

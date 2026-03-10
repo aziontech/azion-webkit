@@ -1,14 +1,16 @@
 ---
 /**
- * Components Dynamic Routes
+ * Components Dynamic Routes (English)
  * 
  * Handles all pages under /components/[slug]
+ * Uses the same layouts as PT routes, with language='en' default
  */
 
 import { getCollection, render } from 'astro:content';
 import ComponentPageLayout from '../../layouts/ComponentPageLayout.astro';
 import { getBreadcrumbContext } from '../../lib/content';
 import { markdownComponents } from '../../components/docs';
+import { createI18nContext } from '../../lib/i18n';
 
 export async function getStaticPaths() {
   const allContent = await getCollection('v1-en');
@@ -34,6 +36,9 @@ const breadcrumb = await getBreadcrumbContext(`/components/${slugFromId === 'ind
 
 // Extract frontmatter data
 const data = entry.data;
+
+// Create i18n context for English (default)
+const i18n = createI18nContext('en');
 ---
 
 <ComponentPageLayout
@@ -52,6 +57,8 @@ const data = entry.data;
   accessibility={data.accessibility}
   usage={data.usage}
   api={data.api}
+  language="en"
+  i18n={i18n}
 >
   <Content components={markdownComponents} />
 </ComponentPageLayout>

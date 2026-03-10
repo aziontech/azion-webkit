@@ -1,11 +1,16 @@
 ---
-import DocsLayout from '../layouts/DocsLayout.astro';
-
 /**
- * Homepage
+ * Homepage (English)
  * 
  * Landing page for the Azion Design System documentation.
+ * Uses the same layouts as PT routes, with language='en' default
  */
+
+import DocsLayout from '../layouts/DocsLayout.astro';
+import { createI18nContext } from '../lib/i18n';
+
+// Create i18n context for English (default)
+const i18n = createI18nContext('en');
 
 const heroLinks = [
   { href: '/get-started/installation', label: 'Installation', description: 'Get started with installation' },
@@ -37,7 +42,7 @@ const features = [
 ];
 ---
 
-<DocsLayout title="Home">
+<DocsLayout title="Home" language="en" i18n={i18n}>
   <!-- Hero Section -->
   <section class="mb-12">
     <h1 class="text-4xl font-medium tracking-tight mb-4">
