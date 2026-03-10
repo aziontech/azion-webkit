@@ -78,7 +78,14 @@ const data = entry.data;
 const i18n = createI18nContext('pt');
 
 // Determine which layout to use based on section
-const isComponentPage = section === 'components' && data.type === 'component';
+// Components index (list) must use DocPageLayout; only component detail pages use ComponentPageLayout.
+// When path is exactly "components" we're on the index; when "components/button" etc we're on a detail page.
+const pathParam = Astro.params.path ?? '';
+const isComponentsIndexPage = pathParam === 'components';
+const isComponentPage =
+  section === 'components' &&
+  data.type === 'component' &&
+  !isComponentsIndexPage;
 ---
 
 {isComponentPage ? (
@@ -110,6 +117,7 @@ const isComponentPage = section === 'components' && data.type === 'component';
     item={breadcrumb.item}
     language="pt"
     i18n={i18n}
+    prose={!isComponentsIndexPage}
   >
     <Content components={markdownComponents} />
   </DocPageLayout>

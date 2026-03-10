@@ -20,6 +20,8 @@ interface Props {
   status?: 'stable' | 'beta' | 'deprecated' | 'planned' | 'experimental';
   navLabel?: string;
   order?: number;
+  /** When false, content is not wrapped in docs-prose (e.g. components index with cards). Default true. */
+  prose?: boolean;
   /** Current language code */
   language?: string;
   /** i18n context for translations */
@@ -32,6 +34,7 @@ const {
   section, 
   item,
   status,
+  prose = true,
   language = 'en',
   i18n,
 } = Astro.props;
@@ -46,7 +49,7 @@ const {
       status={status}
     />
     
-    <div class="doc-content docs-prose max-w-none">
+    <div class={prose ? 'doc-content docs-prose max-w-none' : 'doc-content max-w-none'}>
       <slot />
     </div>
   </article>
