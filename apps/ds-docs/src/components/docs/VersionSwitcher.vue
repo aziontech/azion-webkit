@@ -76,39 +76,15 @@ function selectVersion(version: string) {
 </script>
 
 <template>
-  <div class="version-switcher">
+  <div class="inline-flex items-center gap-1">
     <button
       v-for="version in versions"
       :key="version"
       type="button"
-      class="version-switcher__button !h-8 !w-8 text-[#B5B5B5] bg-[#292929] rounded-md hover:bg-[#404040]"
-      :class="{ '': version === currentVersion }"
+      class="h-8 w-8 py-1 px-2 text-[#B5B5B5] bg-[#292929] rounded-md hover:bg-[#404040] text-xs font-medium font-mono cursor-pointer transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
       @click="selectVersion(version)"
     >
       {{ version }}
     </button>
   </div>
 </template>
-
-<style scoped>
-.version-switcher {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.version-switcher__button {
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  font-family: ui-monospace, monospace;
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.version-switcher__button:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--color-focus-ring, rgba(59, 130, 246, 0.5));
-}
-</style>

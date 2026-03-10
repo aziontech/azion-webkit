@@ -35,9 +35,9 @@ const lines = code.split('\n');
 const lineCount = lines.length;
 ---
 
-<div class="code-block rounded-md overflow-hidden border border-[#e5e7eb]">
+<div class="relative overflow-hidden rounded-md border border-gray-200 [&_pre]:m-0 [&_pre]:p-0 [&_pre]:!bg-transparent [&_code]:text-sm [&_code]:leading-6 [&_code]:font-mono">
   <!-- Header with filename and copy button -->
-  <div class="flex items-center justify-between px-4 py-2 bg-[#f9fafb] border-b border-[#e5e7eb]">
+  <div class="flex items-center justify-between px-4 py-2 bg-gray-50 border-b border-gray-200">
     {filename && (
       <span class="text-xs text-gray-400 font-code">{filename}</span>
     )}
@@ -46,7 +46,7 @@ const lineCount = lines.length;
     )}
     {showCopy && (
       <button
-        class="copy-button text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+        class="flex items-center gap-1 text-xs text-gray-400 transition-colors hover:text-white copy-button"
         data-code={code}
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -96,17 +96,3 @@ const lineCount = lines.length;
     });
   });
 </script>
-
-<style>
-  .code-block pre {
-    margin: 0;
-    padding: 0;
-    background: transparent !important;
-  }
-  
-  .code-block code {
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  }
-</style>

@@ -141,19 +141,17 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="language-switcher font-mono text-xs" ref="triggerRef">
+  <div class="relative inline-flex font-mono text-xs" ref="triggerRef">
     <button
       type="button"
-      class="language-switcher__trigger"
+      class="inline-flex items-center gap-2 py-1.5 px-3 font-medium text-gray-800 bg-white border border-gray-200 rounded-md cursor-pointer transition-all duration-150 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
       :aria-expanded="isOpen"
       aria-haspopup="listbox"
       :aria-label="`Current language: ${currentLanguageLabel}. Change language.`"
       @click="toggleDropdown"
     >
       <i class="pi pi-globe"/>
-      <span class="language-switcher__label">
-        {{ currentLanguageLabel }}
-      </span>
+      <span class="font-medium">{{ currentLanguageLabel }}</span>
       <i class="pi pi-angle-down"/>
     </button>
 
@@ -161,7 +159,7 @@ onUnmounted(() => {
       <div
         v-if="isOpen"
         ref="dropdownRef"
-        class="language-switcher__dropdown"
+        class="absolute min-w-40 text-xs bg-white border border-gray-200 rounded-md shadow-lg z-50 overflow-hidden language-switcher__dropdown"
         :class="dropdownClasses"
         role="listbox"
         :aria-label="'Select language'"
@@ -170,16 +168,14 @@ onUnmounted(() => {
           v-for="language in languages"
           :key="language"
           type="button"
-          class="language-switcher__option text-xs"
-          :class="{ 'language-switcher__option--active': language === currentLanguage }"
+          class="flex items-center gap-2 w-full py-2 px-3 text-xs bg-transparent border-0 text-gray-800 cursor-pointer transition-colors duration-150 text-left hover:bg-gray-50 focus:outline-none focus:bg-gray-50"
+          :class="{ 'font-medium': language === currentLanguage }"
           role="option"
           :aria-selected="language === currentLanguage"
           @click="selectLanguage(language)"
         >
-          <span class="language-switcher__option-label">
-            {{ getLanguageLabel(language) }}
-          </span>
-          <i class="pi pi-check" v-if="language === currentLanguage"/>
+          <span class="flex-1">{{ getLanguageLabel(language) }}</span>
+          <i class="pi pi-check text-blue-600 shrink-0" v-if="language === currentLanguage"/>
         </button>
       </div>
     </Transition>
@@ -187,137 +183,10 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-.language-switcher {
-  position: relative;
-  display: inline-flex;
-}
-
-.language-switcher__trigger {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.375rem 0.75rem;
-  background: var(--color-surface, #ffffff);
-  border: 1px solid var(--color-border, #e5e7eb);
-  border-radius: 0.375rem;
-  font-weight: 500;
-  color: var(--color-text, #1f2937);
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.language-switcher__trigger:hover {
-  background: var(--color-surface-hover, #f9fafb);
-  border-color: var(--color-border-hover, #d1d5db);
-}
-
-.language-switcher__trigger:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--color-focus-ring, rgba(59, 130, 246, 0.5));
-}
-
-.language-switcher__globe {
-  color: var(--color-text-secondary, #6b7280);
-  flex-shrink: 0;
-}
-
-.language-switcher__label {
-  font-weight: 500;
-}
-
-.language-switcher__icon {
-  color: var(--color-text-secondary, #6b7280);
-  transition: transform 0.15s ease;
-}
-
-.language-switcher__icon--open {
-  transform: rotate(180deg);
-}
-
-.language-switcher__dropdown {
-  position: absolute;
-  min-width: 10rem;
-  background: var(--color-surface, #ffffff);
-  border: 1px solid var(--color-border, #e5e7eb);
-  border-radius: 0.375rem;
-  box-shadow: var(--shadow-lg, 0 10px 15px -3px rgba(0, 0, 0, 0.1));
-  z-index: 50;
-  overflow: hidden;
-}
-
-/* Positioning classes */
-.language-switcher__dropdown.dropdown--below {
-  top: calc(100% + 0.25rem);
-}
-
-.language-switcher__dropdown.dropdown--above {
-  bottom: calc(100% + 0.25rem);
-}
-
-.language-switcher__dropdown.dropdown--align-start {
-  left: 0;
-}
-
-.language-switcher__dropdown.dropdown--align-end {
-  right: 0;
-}
-
-.language-switcher__option {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  width: 100%;
-  padding: 0.5rem 0.75rem;
-  background: transparent;
-  border: none;
-  color: var(--color-text, #1f2937);
-  cursor: pointer;
-  transition: background 0.15s ease;
-  text-align: left;
-}
-
-.language-switcher__option:hover {
-  background: var(--color-surface-hover, #f9fafb);
-}
-
-.language-switcher__option:focus {
-  outline: none;
-  background: var(--color-surface-hover, #f9fafb);
-}
-
-.language-switcher__option--active {
-  font-weight: 500;
-}
-
-.language-switcher__option-label {
-  flex: 1;
-}
-
-.language-switcher__option-badge {
-  padding: 0.125rem 0.375rem;
-  background: var(--color-neutral-light, #f3f4f6);
-  color: var(--color-text-secondary, #6b7280);
-  border-radius: 0.25rem;
-  font-size: 0.625rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.language-switcher__check {
-  color: var(--color-primary, #2563eb);
-  flex-shrink: 0;
-}
-
-/* Dropdown transition */
-.dropdown-enter-active,
-.dropdown-leave-active {
-  transition: all 0.15s ease;
-}
-
-.dropdown-enter-from,
-.dropdown-leave-to {
-  opacity: 0;
-  transform: translateY(-0.25rem);
-}
+.language-switcher__dropdown.dropdown--below { top: calc(100% + 0.25rem); }
+.language-switcher__dropdown.dropdown--above { bottom: calc(100% + 0.25rem); }
+.language-switcher__dropdown.dropdown--align-start { left: 0; }
+.language-switcher__dropdown.dropdown--align-end { right: 0; }
+.dropdown-enter-active, .dropdown-leave-active { transition: all 0.15s ease; }
+.dropdown-enter-from, .dropdown-leave-to { opacity: 0; transform: translateY(-0.25rem); }
 </style>

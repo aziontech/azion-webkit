@@ -87,11 +87,11 @@ function toggleCode() {
 </script>
 
 <template>
-  <div class="playground-code">
+  <div class="border-t border-gray-200 overflow-hidden">
     <!-- Header -->
-    <div class="playground-code__header">
+    <div class="flex items-center justify-between py-2 px-3 bg-gray-50">
       <button
-        class="playground-code__toggle"
+        class="flex items-center gap-2 py-1 px-2 text-gray-700 bg-transparent border-0 rounded cursor-pointer transition-colors duration-150 hover:bg-gray-200"
         @click="toggleCode"
       >
         <svg
@@ -107,7 +107,7 @@ function toggleCode() {
 
       <button
         v-if="showCopy && isExpanded"
-        class="playground-code__copy font-mono"
+        class="flex items-center gap-1.5 py-1 px-2 text-gray-500 bg-transparent border-0 rounded cursor-pointer transition-all duration-150 hover:text-gray-900 hover:bg-gray-200 font-mono"
         @click="copyCode"
       >
         <i class="pi pi-copy" v-if="!isCopied"/>
@@ -119,95 +119,19 @@ function toggleCode() {
     <!-- Code content -->
     <div
       v-show="isExpanded"
-      class="playground-code__content"
+      class="bg-[#1f2937] overflow-x-auto"
     >
       <div
         v-if="isLoading"
-        class="playground-code__loading"
+        class="py-4 text-center"
       >
         <span class="text-gray-400 text-sm">Loading...</span>
       </div>
       <div
         v-else
-        class="playground-code__highlighted"
+        class="p-4 [&_pre]:m-0 [&_pre]:p-0 [&_pre]:!bg-transparent [&_code]:font-mono [&_code]:text-[0.8125rem] [&_code]:leading-[1.6]"
         v-html="highlightedHtml"
       />
     </div>
   </div>
 </template>
-
-<style scoped>
-.playground-code {
-  border-top: 1px solid #e5e7eb;
-  overflow: hidden;
-}
-
-.playground-code__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 0.75rem;
-  background-color: #f9fafb;
-}
-
-.playground-code__toggle {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  color: #374151;
-  background: none;
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  transition: background-color 0.15s ease;
-}
-
-.playground-code__toggle:hover {
-  background-color: #e5e7eb;
-}
-
-.playground-code__copy {
-  display: flex;
-  align-items: center;
-  gap: 0.375rem;
-  padding: 0.25rem 0.5rem;
-  color: #6b7280;
-  background: none;
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.playground-code__copy:hover {
-  color: #111827;
-  background-color: #e5e7eb;
-}
-
-.playground-code__content {
-  background-color: #1f2937;
-  overflow-x: auto;
-}
-
-.playground-code__loading {
-  padding: 1rem;
-  text-align: center;
-}
-
-.playground-code__highlighted {
-  padding: 1rem;
-}
-
-.playground-code__highlighted :deep(pre) {
-  margin: 0;
-  padding: 0;
-  background: transparent !important;
-}
-
-.playground-code__highlighted :deep(code) {
-  font-family: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.8125rem;
-  line-height: 1.6;
-}
-</style>

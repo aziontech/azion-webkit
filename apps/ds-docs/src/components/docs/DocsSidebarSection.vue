@@ -69,7 +69,7 @@ function isItemActive(item: NavItem): boolean {
 </script>
 
 <template>
-  <div class="sidebar-section">
+  <div class="mb-1">
     <!-- Section Link -->
     <a
       :href="sectionLink"
@@ -95,9 +95,3 @@ function isItemActive(item: NavItem): boolean {
     </div>
   </div>
 </template>
-
-<style scoped>
-.sidebar-section {
-  margin-bottom: 0.25rem;
-}
-</style>

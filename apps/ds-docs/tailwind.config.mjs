@@ -79,6 +79,38 @@ export default {
               backgroundColor: 'transparent',
               padding: '0',
             },
+            h1: {
+              fontSize: '1.5rem',
+              fontWeight: '500',
+              letterSpacing: '-0.025em',
+              marginBottom: '1rem',
+            },
+            h2: {
+              fontSize: '1.25rem',
+              fontWeight: '500',
+              letterSpacing: '-0.025em',
+              marginTop: '2.5rem',
+              marginBottom: '1rem',
+            },
+            h3: {
+              fontSize: '1.125rem',
+              fontWeight: '500',
+              marginTop: '2rem',
+              marginBottom: '0.75rem',
+            },
+            p: {
+              marginBottom: '1rem',
+              fontSize: '0.875rem',
+              lineHeight: '1.625',
+            },
+            'ul, ol': {
+              marginBottom: '1rem',
+              paddingLeft: '1.5rem',
+              fontSize: '0.875rem',
+            },
+            li: {
+              marginBottom: '0.5rem',
+            },
           },
         },
       }),

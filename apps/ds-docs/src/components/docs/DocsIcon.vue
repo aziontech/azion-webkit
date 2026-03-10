@@ -147,8 +147,3 @@ const ariaAttributes = computed(() => {
 <template>
   <i :class="iconClasses" v-bind="ariaAttributes" />
 </template>
-
-<style scoped>
-/* Icon base styles are provided by @aziontech/icons */
-/* Additional styling can be added via class prop */
-</style>

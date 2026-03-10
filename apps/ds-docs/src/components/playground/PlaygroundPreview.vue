@@ -88,20 +88,20 @@ const containerStyle = computed(() => ({
 </script>
 
 <template>
-  <div class="playground-preview h-full">
+  <div class="flex flex-col h-full">
     <!-- Optional toolbar slot -->
-    <div v-if="$slots.toolbar" class="playground-preview__toolbar">
+    <div v-if="$slots.toolbar" class="flex items-center justify-end gap-2">
       <slot name="toolbar" />
     </div>
 
     <!-- Preview container wrapped for theme (class "dark" enables Tailwind dark: inside) -->
-    <div :class="['playground-preview__wrapper', wrapperClass]">
+    <div :class="['flex-1 min-h-0 overflow-auto', wrapperClass]">
       <div
         :class="[
-          'playground-preview__container',
+          'relative flex flex-wrap p-6 h-full overflow-auto',
           surfaceClasses,
           customClass,
-          { 'playground-preview--center': center }
+          { 'items-center justify-center': center }
         ]"
         :style="containerStyle"
       >
@@ -117,7 +117,7 @@ const containerStyle = computed(() => ({
       <!-- Empty state when no component -->
       <div
         v-else
-        class="playground-preview__empty text-gray-500 dark:text-gray-400"
+        class="flex flex-col items-center justify-center gap-2 p-8 text-gray-500 dark:text-gray-400"
       >
         <svg class="w-8 h-8 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
@@ -128,48 +128,3 @@ const containerStyle = computed(() => ({
     </div>
   </div>
 </template>
-
-<style scoped>
-.playground-preview {
-  display: flex;
-  flex-direction: column;
-}
-
-.playground-preview__container {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1.5rem;
-  height: 100%;
-  border-radius: 0.5rem;
-  overflow: auto;
-}
-
-.playground-preview--center {
-  align-items: center;
-  justify-content: center;
-}
-
-.playground-preview__empty {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 2rem;
-}
-
-.playground-preview__toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.5rem;
-}
-
-.playground-preview__wrapper {
-  flex: 1;
-  min-height: 0;
-  border-radius: 0.5rem;
-  overflow: auto;
-}
-</style>

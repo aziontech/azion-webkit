@@ -129,69 +129,11 @@
   }
 }
 
-/* Custom components */
+/* Custom components - reduced: prose is in Tailwind typography plugin */
 @layer components {
-  /* Documentation prose styles */
-  .docs-prose {
-    @apply prose prose-lg max-w-docs-content;
-  }
-
-  .docs-prose h1 {
-    @apply text-2xl !font-medium tracking-tight mb-4;
-  }
-
-  .docs-prose h2 {
-    @apply text-xl !font-medium tracking-tight mt-10 mb-4;
-  }
-
-  .docs-prose h3 {
-    @apply text-lg !font-medium mt-8 mb-3;
-  }
-
-  .docs-prose p {
-    @apply mb-4 text-sm leading-relaxed;
-  }
-
-  .docs-prose ul,
-  .docs-prose ol {
-    @apply mb-4 pl-6 text-sm;
-  }
-
-  .docs-prose li {
-    @apply mb-2;
-  }
-
-  .docs-prose a {
-    @apply text-primary-600 hover:text-primary-700 underline underline-offset-2;
-  }
-
-  /* Demo preview container */
-  .demo-preview {
-    @apply border border-gray-200 rounded-lg p-6 bg-surface my-6;
-  }
-
-  .demo-preview__title {
-    @apply text-sm font-medium text-text-secondary mb-4;
-  }
-
-  .demo-preview__content {
-    @apply flex items-center justify-center min-h-[100px];
-  }
-
-  /* Code block styles */
+  /* code font for inline code */
   code {
     @apply !font-code;
-  }
-  .code-block {
-    @apply relative overflow-hidden;
-  }
-
-  .code-block pre {
-    @apply p-4 overflow-x-auto text-sm;
-  }
-
-  .code-block__filename {
-    @apply absolute top-0 right-0 px-3 py-1 text-xs text-gray-400 bg-gray-800;
   }
 }
 

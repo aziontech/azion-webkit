@@ -56,7 +56,7 @@ const brandName = computed(() => {
 </script>
 
 <template>
-  <aside class="docs-sidebar bg-[#171717] w-64 h-screen sticky top-0 overflow-y-auto">
+  <aside class="shrink-0 w-64 h-screen sticky top-0 overflow-y-auto bg-[#171717] [scrollbar-width:thin] [scrollbar-color:transparent_transparent] hover:[scrollbar-color:rgba(0,0,0,0.2)_transparent]">
     <div class="p-4">
       <!-- Logo/Brand -->
       <div class="mb-6 mt-1">
@@ -82,15 +82,3 @@ const brandName = computed(() => {
     </div>
   </aside>
 </template>
-
-<style scoped>
-.docs-sidebar {
-  flex-shrink: 0;
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
-}
-
-.docs-sidebar:hover {
-  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
-}
-</style>

@@ -33,28 +33,12 @@ const itemLink = computed(() => {
 <template>
   <a
     :href="itemLink"
-    class="sidebar-item block rounded-md px-3 py-1.5 text-sm text-white font-medium transition-colors"
+    class="block rounded-md px-3 py-1.5 text-sm text-white font-medium transition-colors border-l-2 border-l-transparent hover:bg-[#343434] hover:border-l-[#343434]"
     :class="[
-      isActive
-        ? 'bg-[#343434]'
-        : 'hover:bg-[#343434] '
+      isActive ? 'bg-[#343434]' : ''
     ]"
     :aria-current="isActive ? 'page' : undefined"
   >
     {{ item.navLabel }}
   </a>
 </template>
-
-<style scoped>
-.sidebar-item {
-  border-left: 2px solid transparent;
-}
-
-.sidebar-item:hover {
-  border-left-color: #343434;
-}
-
-.sidebar-item[aria-current='page'] {
-  /* border-left-color: #fff; */
-}
-</style>

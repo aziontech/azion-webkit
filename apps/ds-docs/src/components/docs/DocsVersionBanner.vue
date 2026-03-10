@@ -66,14 +66,12 @@ const emit = defineEmits<{
 <template>
   <div
     v-if="!isLatest"
-    class="version-banner"
+    class="flex items-center justify-between gap-4 py-3 px-4 bg-amber-100 border-b border-amber-500"
     role="alert"
   >
-    <div class="version-banner__content">
+    <div class="flex items-start gap-2 flex-1">
       <svg
-        class="version-banner__icon"
-        width="16"
-        height="16"
+        class="text-amber-800 shrink-0 mt-0.5 w-4 h-4"
         viewBox="0 0 16 16"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -85,26 +83,20 @@ const emit = defineEmits<{
           fill="currentColor"
         />
       </svg>
-      <p class="version-banner__message">
+      <p class="m-0 text-sm text-amber-800 leading-relaxed">
         You are viewing an older version of the documentation.
-        <a :href="buildLatestVersionUrl()" class="version-banner__link">
+        <a :href="buildLatestVersionUrl()" class="text-amber-800 font-semibold underline underline-offset-2 hover:no-underline focus:outline-2 focus:outline-offset-2 focus:outline-amber-800 focus:rounded">
           View the latest version ({{ latestVersionLabel }})
         </a>
       </p>
     </div>
     <button
       type="button"
-      class="version-banner__dismiss"
+      class="flex items-center justify-center w-6 h-6 p-0 bg-transparent border-0 rounded text-amber-800 cursor-pointer transition-colors duration-150 shrink-0 hover:bg-amber-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-amber-800"
       aria-label="Dismiss banner"
       @click="dismissBanner"
     >
-      <svg
-        width="16"
-        height="16"
-        viewBox="0 0 16 16"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M4 4L12 12M12 4L4 12"
           stroke="currentColor"
@@ -116,78 +108,3 @@ const emit = defineEmits<{
     </button>
   </div>
 </template>
-
-<style scoped>
-.version-banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.75rem 1rem;
-  background: var(--color-warning-light, #fef3c7);
-  border-bottom: 1px solid var(--color-warning, #f59e0b);
-}
-
-.version-banner__content {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  flex: 1;
-}
-
-.version-banner__icon {
-  color: var(--color-warning-dark, #b45309);
-  flex-shrink: 0;
-  margin-top: 0.125rem;
-}
-
-.version-banner__message {
-  margin: 0;
-  font-size: 0.875rem;
-  color: var(--color-warning-dark, #b45309);
-  line-height: 1.5;
-}
-
-.version-banner__link {
-  color: var(--color-warning-dark, #b45309);
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 0.125rem;
-}
-
-.version-banner__link:hover {
-  text-decoration: none;
-}
-
-.version-banner__link:focus {
-  outline: 2px solid var(--color-warning-dark, #b45309);
-  outline-offset: 0.125rem;
-  border-radius: 0.125rem;
-}
-
-.version-banner__dismiss {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  padding: 0;
-  background: transparent;
-  border: none;
-  border-radius: 0.25rem;
-  color: var(--color-warning-dark, #b45309);
-  cursor: pointer;
-  transition: background 0.15s ease;
-  flex-shrink: 0;
-}
-
-.version-banner__dismiss:hover {
-  background: var(--color-warning, #f59e0b);
-  color: white;
-}
-
-.version-banner__dismiss:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--color-warning-dark, #b45309);
-}
-</style>

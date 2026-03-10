@@ -140,11 +140,11 @@ defineExpose({
 </script>
 
 <template>
-  <div class="playground">
+  <div class="flex flex-col my-6 bg-white border border-gray-200 rounded-lg overflow-hidden">
     <!-- Main content area -->
-    <div class="playground__main">
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_280px]">
       <!-- Preview section -->
-      <div class="playground__preview">
+      <div class="flex flex-col gap-2">
         <PlaygroundPreview
           :component="resolvedComponent"
           :props-values="propsValues"
@@ -163,7 +163,7 @@ defineExpose({
       <!-- Controls section -->
       <div
         v-if="showControls"
-        class="playground__controls"
+        class="shrink-0 p-4 bg-gray-50 border-l border-gray-200 overflow-y-auto max-h-[512px]"
       >
         <PlaygroundControls
           :props-definition="props.props"
@@ -178,7 +178,7 @@ defineExpose({
     <!-- Code section -->
     <div
       v-if="showCode"
-      class="playground__code"
+      class="border-t border-gray-200"
     >
       <PlaygroundCode
         :code="generatedCode"
@@ -188,69 +188,8 @@ defineExpose({
     </div>
 
     <!-- Future extensibility slots -->
-    <div v-if="$slots.extra" class="playground__extra">
+    <div v-if="$slots.extra" class="mt-2 pt-4 border-t border-gray-200">
       <slot name="extra" />
     </div>
   </div>
 </template>
-
-<style scoped>
-.playground {
-  display: flex;
-  flex-direction: column;
-  margin: 1.5rem 0;
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.5rem;
-  overflow: hidden;
-}
-
-.playground__main {
-  display: grid;
-  grid-template-columns: 1fr 280px;
-}
-
-@media (max-width: 768px) {
-  .playground__main {
-    grid-template-columns: 1fr;
-  }
-}
-
-.playground__preview {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.playground__preview-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.playground__label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #6b7280;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.playground__controls {
-  flex-shrink: 0;
-  padding: 1rem;
-  background-color: #f9fafb;
-  border-left: 1px solid #e5e7eb;
-  overflow-y: auto;
-  max-height: 512px;
-}
-
-.playground__code {
-}
-
-.playground__extra {
-  margin-top: 0.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid #e5e7eb;
-}
-</style>

@@ -29,7 +29,7 @@ const controlType = computed(() => props.metadata.control);
 </script>
 
 <template>
-  <div class="playground-prop-control">
+  <div class="w-full">
     <!-- Text Control -->
     <PlaygroundTextControl
       v-if="controlType === 'text'"
@@ -67,22 +67,10 @@ const controlType = computed(() => props.metadata.control);
     />
 
     <!-- Fallback for unknown control types -->
-    <div v-else class="playground-prop-control__unknown">
+    <div v-else class="p-2 bg-amber-100 rounded-md">
       <span class="text-xs text-gray-500">
         Unknown control type: {{ controlType }}
       </span>
     </div>
   </div>
 </template>
-
-<style scoped>
-.playground-prop-control {
-  width: 100%;
-}
-
-.playground-prop-control__unknown {
-  padding: 0.5rem;
-  background-color: #fef3c7;
-  border-radius: 0.375rem;
-}
-</style>

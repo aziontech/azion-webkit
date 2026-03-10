@@ -39,16 +39,16 @@ const bgClass = computed(() => {
 </script>
 
 <template>
-  <div class="demo-preview my-6">
+  <div class="my-6">
     <!-- Demo Title -->
-    <div v-if="title" class="demo-preview__header mb-3">
+    <div v-if="title" class="mb-3">
       <h4 class="text-sm font-medium text-text-secondary">{{ title }}</h4>
     </div>
     
     <!-- Preview Area -->
     <div
       :class="[
-        'demo-preview__content border border-gray-200 rounded-lg p-6',
+        'flex items-center justify-center min-h-[100px] border border-gray-200 rounded-lg p-6',
         bgClass,
         { 'overflow-x-auto': responsive }
       ]"
@@ -57,7 +57,7 @@ const bgClass = computed(() => {
     </div>
     
     <!-- Code Toggle -->
-    <div v-if="showCode" class="demo-preview__code-toggle mt-3">
+    <div v-if="showCode" class="mt-3">
       <button
         @click="isCodeVisible = !isCodeVisible"
         class="text-sm text-text-secondary hover:text-primary-600 flex items-center gap-1.5 transition-colors"
@@ -70,7 +70,7 @@ const bgClass = computed(() => {
     </div>
     
     <!-- Code Block -->
-    <div v-if="isCodeVisible && $slots.code" class="demo-preview__code mt-3">
+    <div v-if="isCodeVisible && $slots.code" class="mt-3">
       <div class="bg-gray-900 rounded-lg overflow-hidden">
         <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
           <span class="text-xs text-gray-400 font-code">{{ codeLanguage }}</span>
@@ -83,12 +83,3 @@ const bgClass = computed(() => {
     </div>
   </div>
 </template>
-
-<style scoped>
-.demo-preview__content {
-  min-height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-</style>

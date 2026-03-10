@@ -20,7 +20,7 @@ interface Props {
   status?: 'stable' | 'beta' | 'deprecated' | 'planned' | 'experimental';
   navLabel?: string;
   order?: number;
-  /** When false, content is not wrapped in docs-prose (e.g. components index with cards). Default true. */
+  /** When false, content is not wrapped in prose (e.g. components index with cards). Default true. */
   prose?: boolean;
   /** Current language code */
   language?: string;
@@ -49,7 +49,7 @@ const {
       status={status}
     />
     
-    <div class={prose ? 'doc-content docs-prose max-w-none' : 'doc-content max-w-none'}>
+    <div class={prose ? 'doc-content prose prose-lg max-w-docs-content max-w-none' : 'doc-content max-w-none'}>
       <slot />
     </div>
   </article>

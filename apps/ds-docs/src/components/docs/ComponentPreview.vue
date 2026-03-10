@@ -82,7 +82,7 @@ const componentToRender = computed(() => {
 </script>
 
 <template>
-  <div class="component-preview">
+  <div class="inline-flex items-center justify-center">
     <component
       :is="componentToRender"
       v-bind="parsed.props"
@@ -91,11 +91,3 @@ const componentToRender = computed(() => {
     </component>
   </div>
 </template>
-
-<style scoped>
-.component-preview {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-</style>

@@ -152,32 +152,24 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="theme-switcher font-mono" ref="triggerRef">
+  <div class="relative inline-flex font-mono" ref="triggerRef">
     <button
       type="button"
-      class="theme-switcher__trigger text-xs min-w-[114px] flex justify-between"
+      class="inline-flex items-center gap-2 py-1.5 px-3 min-w-[114px] text-xs font-medium text-gray-800 bg-white border border-gray-200 rounded-md cursor-pointer transition-all duration-150 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
       :aria-expanded="isOpen"
       aria-haspopup="listbox"
       :aria-label="`Current theme: ${currentThemeLabel}. Change theme.`"
       @click="toggleDropdown"
     >
       <div class="flex gap-1.5 items-center">
-      <!-- Sun icon for light theme -->
-       <i class="pi pi-sun" v-if="selectedTheme === 'light'" />
-
-      <!-- Moon icon for dark theme -->
-       <i class="pi pi-moon" v-if="selectedTheme === 'dark'" />
-
-      <!-- Desktop icon for system theme -->
-       <i class="pi pi-desktop" v-if="selectedTheme === 'system'" />
-
-      <span class="theme-switcher__label">
-        {{ currentThemeLabel }}
-      </span>
+        <i class="pi pi-sun" v-if="selectedTheme === 'light'" />
+        <i class="pi pi-moon" v-if="selectedTheme === 'dark'" />
+        <i class="pi pi-desktop" v-if="selectedTheme === 'system'" />
+        <span class="font-medium">{{ currentThemeLabel }}</span>
       </div>
       <i
-        class="pi pi-angle-down theme-switcher__chevron"
-        :class="{ 'theme-switcher__chevron--open': isOpen }"
+        class="pi pi-angle-down text-gray-500 transition-transform duration-150"
+        :class="{ 'rotate-180': isOpen }"
       />
     </button>
 
@@ -185,7 +177,7 @@ onMounted(() => {
       <div
         v-if="isOpen"
         ref="dropdownRef"
-        class="theme-switcher__dropdown text-xs"
+        class="absolute min-w-32 text-xs bg-white border border-gray-200 rounded-md shadow-lg z-50 overflow-hidden theme-switcher__dropdown"
         :class="dropdownClasses"
         role="listbox"
         aria-label="Select theme"
@@ -194,26 +186,17 @@ onMounted(() => {
           v-for="theme in themes"
           :key="theme.value"
           type="button"
-          class="theme-switcher__option"
-          :class="{ 'theme-switcher__option--active': theme.value === selectedTheme }"
+          class="flex items-center gap-2 w-full py-2 px-3 bg-transparent border-0 text-gray-800 cursor-pointer transition-colors duration-150 text-left hover:bg-gray-50 focus:outline-none focus:bg-gray-50"
+          :class="{ 'font-medium': theme.value === selectedTheme }"
           role="option"
           :aria-selected="theme.value === selectedTheme"
           @click="selectTheme(theme.value)"
         >
-          <!-- Sun icon for light theme -->
           <i class="pi pi-sun" v-if="theme.icon === 'sun'" />
-
-          <!-- Moon icon for dark theme -->
           <i class="pi pi-moon" v-else-if="theme.icon === 'moon'" />
-
-          <!-- Desktop icon for system theme -->
           <i class="pi pi-desktop" v-else-if="theme.icon === 'desktop'" />
-
-          <span class="theme-switcher__option-label">
-            {{ theme.label }}
-          </span>
-
-          <i class="pi pi-check" v-if="theme.value === selectedTheme" />
+          <span class="flex-1">{{ theme.label }}</span>
+          <i class="pi pi-check text-blue-600 shrink-0" v-if="theme.value === selectedTheme" />
         </button>
       </div>
     </Transition>
@@ -221,131 +204,11 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.theme-switcher {
-  position: relative;
-  display: inline-flex;
-}
-
-.theme-switcher__trigger {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.375rem 0.75rem;
-  background: var(--color-surface, #ffffff);
-  border: 1px solid var(--color-border, #e5e7eb);
-  border-radius: 0.375rem;
-  font-weight: 500;
-  color: var(--color-text, #1f2937);
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.theme-switcher__trigger:hover {
-  background: var(--color-surface-hover, #f9fafb);
-  border-color: var(--color-border-hover, #d1d5db);
-}
-
-.theme-switcher__trigger:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--color-focus-ring, rgba(59, 130, 246, 0.5));
-}
-
-.theme-switcher__icon {
-  color: var(--color-text-secondary, #6b7280);
-  flex-shrink: 0;
-}
-
-.theme-switcher__label {
-  font-weight: 500;
-}
-
-.theme-switcher__chevron {
-  color: var(--color-text-secondary, #6b7280);
-  transition: transform 0.15s ease;
-}
-
-.theme-switcher__chevron--open {
-  transform: rotate(180deg);
-}
-
-.theme-switcher__dropdown {
-  position: absolute;
-  min-width: 8rem;
-  background: var(--color-surface, #ffffff);
-  border: 1px solid var(--color-border, #e5e7eb);
-  border-radius: 0.375rem;
-  box-shadow: var(--shadow-lg, 0 10px 15px -3px rgba(0, 0, 0, 0.1));
-  z-index: 50;
-  overflow: hidden;
-}
-
-/* Positioning classes */
-.theme-switcher__dropdown.dropdown--below {
-  top: calc(100% + 0.25rem);
-}
-
-.theme-switcher__dropdown.dropdown--above {
-  bottom: calc(100% + 0.25rem);
-}
-
-.theme-switcher__dropdown.dropdown--align-start {
-  left: 0;
-}
-
-.theme-switcher__dropdown.dropdown--align-end {
-  right: 0;
-}
-
-.theme-switcher__option {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  width: 100%;
-  padding: 0.5rem 0.75rem;
-  background: transparent;
-  border: none;
-  color: var(--color-text, #1f2937);
-  cursor: pointer;
-  transition: background 0.15s ease;
-  text-align: left;
-}
-
-.theme-switcher__option:hover {
-  background: var(--color-surface-hover, #f9fafb);
-}
-
-.theme-switcher__option:focus {
-  outline: none;
-  background: var(--color-surface-hover, #f9fafb);
-}
-
-.theme-switcher__option--active {
-  font-weight: 500;
-}
-
-.theme-switcher__option-icon {
-  color: var(--color-text-secondary, #6b7280);
-  flex-shrink: 0;
-}
-
-.theme-switcher__option-label {
-  flex: 1;
-}
-
-.theme-switcher__check {
-  color: var(--color-primary, #2563eb);
-  flex-shrink: 0;
-}
-
-/* Dropdown transition */
-.dropdown-enter-active,
-.dropdown-leave-active {
-  transition: all 0.15s ease;
-}
-
-.dropdown-enter-from,
-.dropdown-leave-to {
-  opacity: 0;
-  transform: translateY(-0.25rem);
-}
+/* Positioning from useDropdownPosition composable */
+.theme-switcher__dropdown.dropdown--below { top: calc(100% + 0.25rem); }
+.theme-switcher__dropdown.dropdown--above { bottom: calc(100% + 0.25rem); }
+.theme-switcher__dropdown.dropdown--align-start { left: 0; }
+.theme-switcher__dropdown.dropdown--align-end { right: 0; }
+.dropdown-enter-active, .dropdown-leave-active { transition: all 0.15s ease; }
+.dropdown-enter-from, .dropdown-leave-to { opacity: 0; transform: translateY(-0.25rem); }
 </style>
