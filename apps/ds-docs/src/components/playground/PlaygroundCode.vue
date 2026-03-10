@@ -35,7 +35,10 @@ const formattedCode = computed(() => props.code.code);
 
 // Highlight code using Shiki
 async function highlightCode(code: string) {
-  isLoading.value = true;
+  const wasEmpty = !highlightedHtml.value;
+  if (wasEmpty) {
+    isLoading.value = true;
+  }
   try {
     const html = await codeToHtml(code, {
       lang: 'vue',
@@ -118,13 +121,13 @@ function toggleCode() {
       class="bg-[#1f2937] overflow-x-auto"
     >
       <div
-        v-if="isLoading"
+        v-if="isLoading && !highlightedHtml"
         class="py-4 text-center"
       >
         <span class="text-gray-400 text-sm">Loading...</span>
       </div>
       <div
-        v-else
+        v-else-if="highlightedHtml"
         class="p-4 [&_pre]:m-0 [&_pre]:p-0 [&_pre]:!bg-transparent [&_code]:font-mono [&_code]:text-[0.8125rem] [&_code]:leading-[1.6]"
         v-html="highlightedHtml"
       />

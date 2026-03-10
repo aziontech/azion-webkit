@@ -9,6 +9,7 @@
  */
 
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue';
+import { motion, AnimatePresence } from 'motion-v';
 import type { SearchResult, SearchContentType } from '@/lib/search/types';
 import { TYPE_LABELS, SECTION_LABELS } from '@/lib/search/types';
 import { initSearchEngine } from '@/lib/search';
@@ -181,20 +182,40 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div v-if="isOpen" class="fixed inset-0 z-50 overflow-y-auto">
-    <!-- Backdrop -->
-    <div class="fixed inset-0 bg-black/50 backdrop-blur-sm" @click="closeSearch" />
-    
-    <!-- Modal -->
-    <div
-      class="relative min-h-screen flex items-start justify-center p-4 pt-[15vh]"
-      @click="closeSearch"
+  <AnimatePresence>
+    <motion.div
+      v-if="isOpen"
+      key="search-root"
+      class="fixed inset-0 z-50 overflow-y-auto"
+      :initial="{ opacity: 0 }"
+      :animate="{ opacity: 1 }"
+      :exit="{ opacity: 0 }"
+      :transition="{ duration: 0.15 }"
     >
+      <!-- Backdrop -->
+      <motion.div
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm"
+        :initial="{ opacity: 0 }"
+        :animate="{ opacity: 1 }"
+        :exit="{ opacity: 0 }"
+        :transition="{ duration: 0.15 }"
+        @click="closeSearch"
+      />
+
+      <!-- Modal -->
       <div
-        class="w-full max-w-2xl bg-white rounded-xl shadow-2xl overflow-hidden"
-        @keydown="handleKeydown"
-        @click.stop
+        class="relative min-h-screen flex items-start justify-center p-4 pt-[15vh]"
+        @click="closeSearch"
       >
+        <motion.div
+          class="w-full max-w-2xl bg-white rounded-xl shadow-2xl overflow-hidden"
+          :initial="{ opacity: 0, scale: 0.98, y: -8 }"
+          :animate="{ opacity: 1, scale: 1, y: 0 }"
+          :exit="{ opacity: 0, scale: 0.98, y: -8 }"
+          :transition="{ duration: 0.2, ease: [0.25, 0.1, 0.25, 1] }"
+          @keydown="handleKeydown"
+          @click.stop
+        >
         <!-- Search Input -->
         <div class="relative border-b border-gray-200">
           <i class="pi pi-search text-sm absolute left-4 top-[48%] -translate-y-1/2 text-gray-400" />
@@ -323,9 +344,10 @@ onUnmounted(() => {
           </div>
           <span v-if="hasResults">{{ results.length }} results</span>
         </div>
+        </motion.div>
       </div>
-    </div>
-  </div>
+    </motion.div>
+  </AnimatePresence>
 </template>
 
 <style scoped>

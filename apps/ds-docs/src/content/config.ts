@@ -193,7 +193,7 @@ const templateSchema = baseSchema.extend({
  */
 const guideSchema = baseSchema.extend({
   type: z.literal('guide'),
-  category: z.enum(['installation', 'quick-start', 'migration', 'contribution']).optional(),
+  category: z.enum(['installation', 'quick-start', 'migration', 'contribution', 'animations']).optional(),
   prerequisites: z.array(z.string()).optional(),
   difficulty: z.enum(['beginner', 'intermediate', 'advanced']).optional(),
 });
