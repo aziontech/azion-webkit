@@ -46,14 +46,14 @@ const statusPriority: Record<ProgressStatus, number> = {
 
 <div class="components-status-table-wrapper">
   {caption && (
-    <p class="text-sm text-text-secondary mb-4">{caption}</p>
+    <p class="text-sm font-sans text-text-secondary mb-4">{caption}</p>
   )}
   
   {hasComponents ? (
     <div class="overflow-x-auto">
       <table class="w-full border-collapse text-sm" data-sort-column="name" data-sort-direction="asc">
         <thead>
-          <tr class="border-b border-gray-200">
+          <tr class="border-b font-sans border-gray-200">
             <th 
               scope="col" 
               class="text-left py-3 px-4 font-medium text-text-primary bg-surface-subtle cursor-pointer hover:bg-gray-100 select-none"
@@ -62,10 +62,8 @@ const statusPriority: Record<ProgressStatus, number> = {
             >
               <div class="flex items-center gap-2">
                 <span>Component</span>
-                <span class="sort-icon text-gray-400">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
-                  </svg>
+                <span class="sort-icon mt-1 text-gray-400">
+                  <i class="pi pi-sort-alt"/>
                 </span>
               </div>
             </th>
@@ -77,10 +75,8 @@ const statusPriority: Record<ProgressStatus, number> = {
             >
               <div class="flex items-center gap-2">
                 <span>Design</span>
-                <span class="sort-icon text-gray-400">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
-                  </svg>
+                <span class="sort-icon mt-1 text-gray-400">
+                  <i class="pi pi-sort-alt"/>
                 </span>
               </div>
             </th>
@@ -92,10 +88,8 @@ const statusPriority: Record<ProgressStatus, number> = {
             >
               <div class="flex items-center gap-2">
                 <span>Code</span>
-                <span class="sort-icon text-gray-400">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
-                  </svg>
+                <span class="sort-icon mt-1 text-gray-400">
+                  <i class="pi pi-sort-alt"/>
                 </span>
               </div>
             </th>
@@ -107,10 +101,8 @@ const statusPriority: Record<ProgressStatus, number> = {
             >
               <div class="flex items-center gap-2">
                 <span>Launch Version</span>
-                <span class="sort-icon text-gray-400">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
-                  </svg>
+                <span class="sort-icon mt-1 text-gray-400">
+                  <i class="pi pi-sort-alt"/>
                 </span>
               </div>
             </th>
@@ -133,7 +125,7 @@ const statusPriority: Record<ProgressStatus, number> = {
                   {component.href ? (
                     <a 
                       href={component.href}
-                      class="text-primary-600 hover:text-primary-700 hover:underline focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded"
+                      class="text-primary-600 font-sans hover:text-primary-700 hover:underline focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded"
                     >
                       {component.name}
                     </a>

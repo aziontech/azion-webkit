@@ -12,6 +12,9 @@ import { componentStatusData } from '../../../data/component-status';
  * 
  * Lists all available components in the design system with tabs for
  * Overview (component cards) and Status (progress tracking).
+ * 
+ * Content is fetched from v1-pt collection (not duplicated).
+ * UI strings are translated via i18n context (not duplicated).
  */
 
 const allContent = await getCollection('v1-pt');

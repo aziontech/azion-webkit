@@ -1,0 +1,526 @@
+---
+title: Design Tokens
+description: Design tokens are the smallest units of the design system, storing visual values like colors, spacing, and typography for consistent usage across products.
+navLabel: Tokens
+order: 1
+type: token
+category: color
+---
+
+Design tokens are the smallest units of the design system. They store visual values like colors, spacing, and typography, enabling consistent usage across products and platforms.
+
+In the Azion Design System, tokens are distributed through the `azion-theme` npm package and exported for Tailwind CSS, CSS variables, and JavaScript. Tokens support both light and dark themes automatically, ensuring seamless theme switching.
+
+## What Are Design Tokens
+
+Design tokens are named entities that store visual design attributes. Instead of hardcoding values like `#F97316` or `16px`, you use meaningful names like `color.primary.500` or `spacing.4`.
+
+This abstraction provides several benefits:
+
+- **Consistency** — All products use the same values, creating a cohesive visual experience
+- **Maintainability** — Update a token once, and the change propagates everywhere
+- **Scalability** — New features automatically inherit the design system's visual language
+- **Theme support** — Semantic tokens adapt automatically between light and dark modes
+- **Cross-platform** — Tokens can be used in CSS, JavaScript, and design tools
+
+## Installing the Tokens
+
+Install the `azion-theme` package to access design tokens in your project:
+
+```bash
+npm install azion-theme
+```
+
+### Importing Theme Styles
+
+Import the theme styles at your application's entry point:
+
+```js
+// For light theme (default)
+import 'azion-theme/light'
+
+// For dark theme
+import 'azion-theme/dark'
+```
+
+For applications that support theme switching, dynamically import the appropriate stylesheet:
+
+```js
+// Example: Theme-aware import
+const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+await import(`azion-theme/${theme}`)
+```
+
+### CSS Variables
+
+After importing, tokens are available as CSS custom properties:
+
+```css
+.my-component {
+  color: var(--text-base);
+  background-color: var(--bg-layer1);
+  border-color: var(--border-base);
+}
+```
+
+## Token Types
+
+The Azion Design System uses two main token categories: **primitive tokens** and **semantic tokens**.
+
+### Primitive Tokens
+
+Primitive tokens are raw values from the design palette. They represent the foundational colors, spacing, and typography values without any context or meaning attached.
+
+**Examples of primitive tokens:**
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `orange-500` | `#F97316` | Brand primary color |
+| `neutral-900` | `#171717` | Darkest neutral |
+| `neutral-50` | `#FAFAFA` | Lightest neutral |
+| `violet-500` | `#8B5CF6` | Accent color |
+
+**Accessing primitives in JavaScript:**
+
+```js
+import { colors } from 'azion-theme/tokens'
+
+// Access primitive colors
+const primaryColor = colors.orange[500]  // #F97316
+const textColor = colors.neutral[900]    // #171717
+const accentColor = colors.violet[500]   // #8B5CF6
+```
+
+<Callout type="warning" title="Use primitives sparingly">
+  Primitive tokens should rarely be used directly in UI components. They don't adapt to theme changes and lack semantic meaning. Prefer semantic tokens for most use cases.
+</Callout>
+
+### Semantic Tokens
+
+Semantic tokens represent UI meaning. They describe **what** a value is used for, not just the raw value. This abstraction enables automatic theme adaptation.
+
+**Examples of semantic tokens:**
+
+| Token | Light Mode | Dark Mode | Purpose |
+|-------|------------|-----------|---------|
+| `text-base` | `neutral-900` | `neutral-50` | Primary text color |
+| `bg-layer1` | `surface-0` | `surface-800` | Layer backgrounds |
+| `border-base` | `neutral-200` | `neutral-700` | Default borders |
+
+**Using semantic tokens in HTML:**
+
+```html
+<div class="bg-layer1 text-text-base border border-border-base rounded-lg p-4">
+  This content uses semantic tokens that adapt to the current theme.
+</div>
+```
+
+**Using semantic tokens in CSS:**
+
+```css
+.card {
+  background-color: var(--bg-layer1);
+  color: var(--text-base);
+  border: 1px solid var(--border-base);
+}
+```
+
+## Token Structure
+
+Tokens are organized in a structured directory within the `azion-theme` package:
+
+```
+tokens/
+├── primitives/       # Raw palette values
+│   ├── colors.json   # Color palette (orange, neutral, violet, etc.)
+│   ├── spacing.json  # Spacing scale (0-96)
+│   └── typography.json # Font sizes, weights, line heights
+├── semantic/         # Context-aware tokens
+│   ├── colors.json   # Semantic colors (text-*, bg-*, border-*)
+│   └── spacing.json  # Semantic spacing values
+└── build/            # Generated outputs
+    ├── css/          # CSS custom properties
+    ├── js/           # JavaScript module exports
+    └── tailwind/     # Tailwind configuration
+```
+
+### What Each Folder Contains
+
+**`primitives/`** — Contains the raw design values. These are the source of truth for all tokens. Primitives are organized by type (colors, spacing, typography) and exported as JSON files.
+
+**`semantic/`** — Contains tokens with meaning. Each semantic token maps to a primitive and can have different values for light and dark themes. This is where theme awareness is defined.
+
+**`build/`** — Contains the generated output files. These are the files you import in your applications. The build process generates CSS variables, JavaScript modules, and Tailwind configurations from the source tokens.
+
+## Using Tokens with Tailwind
+
+The `azion-theme` package provides a Tailwind configuration that exposes all tokens as utility classes.
+
+### Configuration
+
+Add the tokens to your Tailwind configuration:
+
+```js
+// tailwind.config.js
+import colors from 'azion-theme/tokens/colors'
+
+export default {
+  theme: {
+    extend: {
+      colors: {
+        ...colors
+      }
+    }
+  }
+}
+```
+
+### Using Token Classes
+
+Once configured, you can use token classes directly in your HTML:
+
+```html
+<!-- Text colors -->
+<p class="text-text-base">Primary text</p>
+<p class="text-text-muted">Secondary text</p>
+
+<!-- Background colors -->
+<div class="bg-bg-layer1">Layer background</div>
+<div class="bg-bg-surface">Surface background</div>
+
+<!-- Border colors -->
+<div class="border border-border-base">Default border</div>
+<div class="border border-border-muted">Subtle border</div>
+```
+
+### Complete Tailwind Setup
+
+For a complete setup with all token categories:
+
+```js
+// tailwind.config.js
+import colors from 'azion-theme/tokens/colors'
+import spacing from 'azion-theme/tokens/spacing'
+import typography from 'azion-theme/tokens/typography'
+
+export default {
+  theme: {
+    extend: {
+      colors: {
+        ...colors
+      },
+      spacing: {
+        ...spacing
+      },
+      fontSize: typography.fontSize,
+      fontWeight: typography.fontWeight,
+      lineHeight: typography.lineHeight
+    }
+  }
+}
+```
+
+## Semantic Token Examples
+
+Explore visual examples of semantic tokens in action.
+
+### Text Colors
+
+<div className="space-y-4 my-6" style={{viewTransitionName: 'text-colors'}}>
+
+<div className="p-4 rounded-lg bg-bg-layer1 border border-border-base">
+  <p className="text-text-base font-medium">text-text-base</p>
+  <p className="text-sm text-text-muted mt-1">Primary text color for headings and body content</p>
+</div>
+
+<div className="p-4 rounded-lg bg-bg-layer1 border border-border-base">
+  <p className="text-text-muted font-medium">text-text-muted</p>
+  <p className="text-sm text-text-muted mt-1">Secondary text for descriptions and labels</p>
+</div>
+
+<div className="p-4 rounded-lg bg-bg-layer1 border border-border-base">
+  <p className="text-text-subtle font-medium">text-text-subtle</p>
+  <p className="text-sm text-text-muted mt-1">Tertiary text for hints and placeholders</p>
+</div>
+
+</div>
+
+### Background Layers
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6" style={{viewTransitionName: 'bg-layers'}}>
+
+<div className="p-6 rounded-lg bg-bg-layer1 border border-border-base">
+  <p className="font-medium text-text-base">Layer 1</p>
+  <p className="text-sm text-text-muted mt-2">bg-bg-layer1</p>
+  <p className="text-xs text-text-subtle mt-1">Base layer for cards and panels</p>
+</div>
+
+<div className="p-6 rounded-lg bg-bg-layer2 border border-border-base">
+  <p className="font-medium text-text-base">Layer 2</p>
+  <p className="text-sm text-text-muted mt-2">bg-bg-layer2</p>
+  <p className="text-xs text-text-subtle mt-1">Elevated surfaces and modals</p>
+</div>
+
+<div className="p-6 rounded-lg bg-bg-surface border border-border-base">
+  <p className="font-medium text-text-base">Surface</p>
+  <p className="text-sm text-text-muted mt-2">bg-bg-surface</p>
+  <p className="text-xs text-text-subtle mt-1">Page backgrounds</p>
+</div>
+
+</div>
+
+### Border Tokens
+
+<div className="space-y-4 my-6" style={{viewTransitionName: 'border-tokens'}}>
+
+<div className="p-4 rounded-lg bg-bg-layer1 border border-border-base">
+  <p className="text-text-base font-medium">border-border-base</p>
+  <p className="text-sm text-text-muted mt-1">Default border for interactive elements</p>
+</div>
+
+<div className="p-4 rounded-lg bg-bg-layer1 border border-border-muted">
+  <p className="text-text-base font-medium">border-border-muted</p>
+  <p className="text-sm text-text-muted mt-1">Subtle border for separators</p>
+</div>
+
+<div className="p-4 rounded-lg bg-bg-layer1 border-2 border-border-focus">
+  <p className="text-text-base font-medium">border-border-focus</p>
+  <p className="text-sm text-text-muted mt-1">Focus state border</p>
+</div>
+
+</div>
+
+## Theme Awareness
+
+Semantic tokens automatically switch between light and dark themes. This is the core benefit of using semantic tokens over primitives.
+
+### How Theme Switching Works
+
+When you use a semantic token like `bg-layer1`, it maps to different primitive values depending on the active theme:
+
+| Token | Light Mode | Dark Mode |
+|-------|------------|-----------|
+| `bg-layer1` | `surface-0` (#FFFFFF) | `surface-800` (#1F1F1F) |
+| `bg-layer2` | `surface-50` (#FAFAFA) | `surface-700` (#2A2A2A) |
+| `text-base` | `neutral-900` (#171717) | `neutral-50` (#FAFAFA) |
+| `border-base` | `neutral-200` (#E5E5E5) | `neutral-700` (#404040) |
+
+### Implementing Theme Switching
+
+To support theme switching in your application:
+
+1. **Add a theme toggle** that sets a `data-theme` or `class` attribute on the `<html>` element
+2. **Import the appropriate stylesheet** based on the current theme
+3. **Use semantic tokens** throughout your components
+
+```js
+// Theme toggle example
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme)
+  localStorage.setItem('theme', theme)
+}
+
+// Initialize from user preference
+const savedTheme = localStorage.getItem('theme') || 'light'
+setTheme(savedTheme)
+```
+
+<Callout type="tip" title="Automatic theme detection">
+  The `azion-theme` package can automatically detect system preferences using `prefers-color-scheme`. Use this for a seamless default experience.
+</Callout>
+
+## When to Use Each Token Type
+
+Choosing between primitive and semantic tokens depends on your use case.
+
+### Use Semantic Tokens When
+
+- **Building UI components** — Buttons, cards, inputs, and all interface elements should use semantic tokens
+- **Styling layouts** — Page backgrounds, containers, and spacing should use semantic tokens
+- **Creating consistent experiences** — Semantic tokens ensure your UI adapts to themes automatically
+- **Working in application code** — Most of your styling should reference semantic tokens
+
+```html
+<!-- ✅ Good: Using semantic tokens -->
+<button class="bg-bg-layer1 text-text-base border border-border-base">
+  Themed button
+</button>
+```
+
+### Use Primitive Tokens When
+
+- **Creating new semantic tokens** — Define new semantic mappings using primitives
+- **Building design tooling** — Tools that need access to the raw palette
+- **One-off decorative elements** — Elements that don't need theme adaptation
+- **Gradient definitions** — Gradients often use specific primitive values
+
+```js
+// ✅ Good: Creating a new semantic token
+const customSemanticToken = {
+  'bg-custom': {
+    light: colors.neutral[100],
+    dark: colors.neutral[800]
+  }
+}
+```
+
+```html
+<!-- ⚠️ Use with caution: Primitives don't adapt to themes -->
+<div class="bg-orange-500 text-neutral-900">
+  This always uses orange-500, regardless of theme
+</div>
+```
+
+<Callout type="warning" title="Avoid primitives in components">
+  Using primitive tokens directly in components breaks theme support. Always prefer semantic tokens for UI elements.
+</Callout>
+
+## Token Sync from Figma
+
+Design tokens are authored in Figma and synchronized to the codebase using Tokens Studio. This ensures design and development stay in sync.
+
+### The Sync Pipeline
+
+The token synchronization process follows these steps:
+
+1. **Update variables in Figma** — Designers modify token values in the Figma file using Tokens Studio
+2. **Export from Tokens Studio** — Use the Tokens Studio plugin to export token files
+3. **Place files in repository** — Copy the exported JSON files to the `tokens/primitives/` or `tokens/semantic/` directories
+4. **Run the sync script** — Execute the build script to generate CSS, JS, and Tailwind outputs
+
+### Running the Sync Script
+
+After placing updated token files in the repository:
+
+```bash
+# From the package directory
+cd packages/azion-theme
+
+# Run the sync script
+node scripts/figma-sync.js
+
+# Or using npm
+npm run tokens:sync
+```
+
+The sync script:
+- Validates token files for correct structure
+- Generates CSS custom properties
+- Creates JavaScript module exports
+- Updates Tailwind configuration files
+- Generates TypeScript type definitions
+
+### Sync Workflow Diagram
+
+```
+┌─────────────┐     ┌──────────────────┐     ┌─────────────────┐
+│   Figma     │────▶│  Tokens Studio   │────▶│  JSON Files     │
+│  (Design)   │     │    (Export)      │     │  (primitives/)  │
+└─────────────┘     └──────────────────┘     └─────────────────┘
+                                                      │
+                                                      ▼
+┌─────────────┐     ┌──────────────────┐     ┌─────────────────┐
+│   Publish   │◀────│  Build Script    │◀────│  Sync Script    │
+│  (npm)      │     │  (Generate)      │     │  (Validate)     │
+└─────────────┘     └──────────────────┘     └─────────────────┘
+```
+
+<Callout type="info" title="Design handoff">
+  When designers update tokens in Figma, they should communicate the changes to developers. Major token changes may require updates in consuming applications.
+</Callout>
+
+## Token Categories
+
+The Azion Design System includes tokens across several categories:
+
+### Color Tokens
+
+Color tokens define the palette for all visual elements. They include:
+
+- **Brand colors** — Primary orange, accent violet
+- **Neutral colors** — Grayscale from white to black
+- **Semantic colors** — Success, warning, error, info states
+- **Background colors** — Surfaces, layers, and overlays
+
+### Typography Tokens
+
+Typography tokens define text styling:
+
+- **Font families** — Primary and monospace typefaces
+- **Font sizes** — Scale from xs to 4xl
+- **Font weights** — Regular, medium, semibold, bold
+- **Line heights** — Tight, normal, and relaxed spacing
+
+### Spacing Tokens
+
+Spacing tokens provide consistent margins and padding:
+
+- **Scale** — 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80, 96
+- **Semantic spacing** — Component-level spacing values
+
+### Border Tokens
+
+Border tokens define edge treatments:
+
+- **Border radius** — none, sm, base, md, lg, xl, 2xl, full
+- **Border widths** — 0, 1, 2, 4
+- **Border colors** — Default, muted, focus states
+
+### Shadow Tokens
+
+Shadow tokens create elevation and depth:
+
+- **Elevation levels** — sm, base, md, lg, xl, 2xl
+- **Focus rings** — Interactive element focus indicators
+
+## Best Practices
+
+Follow these guidelines when working with design tokens:
+
+### Do
+
+- **Use semantic tokens for all UI elements** — This ensures theme support
+- **Reference tokens by name, not value** — Use `text-base` not `#171717`
+- **Keep tokens in sync** — Run the sync script after Figma updates
+- **Document custom tokens** — If you create custom tokens, document their purpose
+
+### Don't
+
+- **Don't hardcode values** — Avoid magic numbers and hex colors
+- **Don't use primitives in components** — Primitives break theme support
+- **Don't skip the sync process** — Manual edits may be overwritten
+- **Don't create duplicate tokens** — Check existing tokens before creating new ones
+
+<Callout type="success" title="Token-first development">
+  Always reach for tokens before writing custom values. If a token doesn't exist, consider whether it should be added to the design system.
+</Callout>
+
+## Related Resources
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 mb-8">
+
+<FoundationCard
+  title="Color"
+  description="Understand the color foundation and how tokens implement the color system."
+  href="/foundations/color"
+/>
+
+<FoundationCard
+  title="Typography"
+  description="Learn about typography foundations and how tokens define text styles."
+  href="/foundations/typography"
+/>
+
+<FoundationCard
+  title="Spacing"
+  description="Explore the spacing foundation and token-based spacing values."
+  href="/foundations/spacing"
+/>
+
+<FoundationCard
+  title="Elevation"
+  description="Understand elevation and shadow tokens for creating depth."
+  href="/foundations/elevation"
+/>
+
+</div>

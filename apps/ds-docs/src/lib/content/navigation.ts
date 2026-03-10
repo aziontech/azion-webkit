@@ -70,7 +70,9 @@ function extractNavItem(
 ): NavItem {
   const data = entry.data;
   const slug = entry.slug;
-  const isIndex = slug === 'index' || slug === '' || slug.endsWith('/index');
+  // In Astro 5's glob loader, index files have ID equal to the folder name (e.g., 'tokens' for 'tokens/index.mdx')
+  // So we also check if slug equals the section ID (which means it's an index file)
+  const isIndex = slug === 'index' || slug === '' || slug.endsWith('/index') || slug === section.id;
 
   // Build href - index pages link to section root
   const href = isIndex

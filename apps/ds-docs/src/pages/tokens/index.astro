@@ -5,14 +5,14 @@ import { markdownComponents } from '../../components/docs';
 import { getBreadcrumbContext } from '../../lib/content';
 
 /**
- * Foundations Index Page
+ * Tokens Index Page
  */
 
 const allContent = await getCollection('v1-en');
 
 // In Astro 5, the glob loader uses the folder path as ID for index files
-// e.g., 'foundations' for foundations/index.md
-const indexEntry = allContent.find((e) => e.id === 'foundations');
+// e.g., 'tokens' for tokens/index.mdx, 'foundations' for foundations/index.md
+const indexEntry = allContent.find((e) => e.id === 'tokens');
 
 if (!indexEntry) {
   return Astro.redirect('/');
@@ -21,10 +21,10 @@ if (!indexEntry) {
 const { Content } = await render(indexEntry);
 
 // Get breadcrumb context for this page
-const breadcrumb = await getBreadcrumbContext('/foundations');
+const breadcrumb = await getBreadcrumbContext('/tokens');
 ---
 
-<DocsLayout title="Foundations" section={breadcrumb.section} item={breadcrumb.item}>
+<DocsLayout title="Design Tokens" section={breadcrumb.section} item={breadcrumb.item}>
   <div class="docs-prose">
     <Content components={markdownComponents} />
   </div>

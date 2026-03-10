@@ -58,8 +58,8 @@ const categoryLabels: Record<string, string> = {
   language="en"
   i18n={i18n}
 >
-  <h1>Components</h1>
-  <p class="text-xl text-text-secondary mb-8">
+  <h1 class="text-black font-medium text-lg mb-1.5">Components</h1>
+  <p class="text-sm text-text-secondary mb-8">
     Explore our component library built with Vue and designed for the Azion platform.
   </p>
   
@@ -67,7 +67,7 @@ const categoryLabels: Record<string, string> = {
     <Fragment slot="overview">
       {Object.entries(componentsByCategory).map(([category, items]) => (
         <section class="mb-10">
-          <h2 class="text-xl font-medium mb-4">{categoryLabels[category] || category}</h2>
+          <h2 class="text-xl font-sans font-medium mb-4">{categoryLabels[category] || category}</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {items.map((component) => {
               // Extract component name from id (e.g., 'components/button.mdx' -> 'button')
@@ -78,7 +78,7 @@ const categoryLabels: Record<string, string> = {
                   class="group p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50/50 transition-colors"
                 >
                 <div class="flex items-center justify-between mb-2">
-                  <h3 class="font-medium text-text-primary group-hover:text-primary-700">
+                  <h3 class="font-medium font-sans text-text-primary group-hover:text-primary-700">
                     {component.data.title}
                   </h3>
                   {component.data.status && (
@@ -92,7 +92,7 @@ const categoryLabels: Record<string, string> = {
                     </span>
                   )}
                 </div>
-                <p class="text-sm text-text-secondary line-clamp-2">
+                <p class="text-sm font-sans text-text-secondary line-clamp-2">
                   {component.data.description}
                 </p>
               </a>
@@ -105,7 +105,7 @@ const categoryLabels: Record<string, string> = {
     <Fragment slot="status">
       <ComponentsStatusTable 
         components={componentStatusData}
-        caption="Track the progress of each component across design and development. Components are sorted by launch status."
+        caption="Track the progress of each component across design and development."
       />
     </Fragment>
   </Tabs>
