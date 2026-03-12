@@ -7,6 +7,7 @@
 // Slug-keyed map (used by WebkitPreview for raw lookup)
 // ---------------------------------------------------------------------------
 export const webkitComponentLoaders: Record<string, () => Promise<{ default: any }>> = {
+  'azion-system-status': () => import('@aziontech/webkit/azion-system-status'),
   'form-field-auto-complete': () => import('@aziontech/webkit/field-auto-complete'),
   'form-field-checkbox-block': () => import('@aziontech/webkit/field-checkbox-block'),
   'form-field-dropdown': () => import('@aziontech/webkit/field-dropdown'),
@@ -31,6 +32,7 @@ export const webkitComponentLoaders: Record<string, () => Promise<{ default: any
   'form-field-text-area': () => import('@aziontech/webkit/field-text-area'),
   'form-field-text-icon': () => import('@aziontech/webkit/field-text-icon'),
   'form-field-text-password': () => import('@aziontech/webkit/field-text-password'),
+  'form-field-text-privacy': () => import('@aziontech/webkit/field-text-privacy'),
   'form-label': () => import('@aziontech/webkit/label'),
   'selector-block': () => import('@aziontech/webkit/selector-block'),
 };
@@ -39,6 +41,7 @@ export const webkitComponentLoaders: Record<string, () => Promise<{ default: any
 // Display-name-keyed map (used by Playground.vue component registry)
 // ---------------------------------------------------------------------------
 export const webkitComponentByName: Record<string, () => Promise<{ default: any }>> = {
+  'AzionSystemStatus': () => import('@aziontech/webkit/azion-system-status'),
   'FieldAutoComplete': () => import('@aziontech/webkit/field-auto-complete'),
   'FieldCheckboxBlock': () => import('@aziontech/webkit/field-checkbox-block'),
   'FieldDropdown': () => import('@aziontech/webkit/field-dropdown'),
@@ -63,6 +66,7 @@ export const webkitComponentByName: Record<string, () => Promise<{ default: any 
   'FieldTextArea': () => import('@aziontech/webkit/field-text-area'),
   'FieldTextIcon': () => import('@aziontech/webkit/field-text-icon'),
   'FieldTextPassword': () => import('@aziontech/webkit/field-text-password'),
+  'FieldTextPrivacy': () => import('@aziontech/webkit/field-text-privacy'),
   'Label': () => import('@aziontech/webkit/label'),
   'SelectorBlock': () => import('@aziontech/webkit/selector-block'),
 };
@@ -78,6 +82,7 @@ export interface WebkitRegistryEntry {
 }
 
 export const webkitRegistry: WebkitRegistryEntry[] = [
+  { slug: 'azion-system-status', exportKey: 'azion-system-status', displayName: 'AzionSystemStatus', category: 'ui' },
   { slug: 'form-field-auto-complete', exportKey: 'field-auto-complete', displayName: 'FieldAutoComplete', category: 'form' },
   { slug: 'form-field-checkbox-block', exportKey: 'field-checkbox-block', displayName: 'FieldCheckboxBlock', category: 'form' },
   { slug: 'form-field-dropdown', exportKey: 'field-dropdown', displayName: 'FieldDropdown', category: 'form' },
@@ -102,6 +107,7 @@ export const webkitRegistry: WebkitRegistryEntry[] = [
   { slug: 'form-field-text-area', exportKey: 'field-text-area', displayName: 'FieldTextArea', category: 'form' },
   { slug: 'form-field-text-icon', exportKey: 'field-text-icon', displayName: 'FieldTextIcon', category: 'form' },
   { slug: 'form-field-text-password', exportKey: 'field-text-password', displayName: 'FieldTextPassword', category: 'form' },
+  { slug: 'form-field-text-privacy', exportKey: 'field-text-privacy', displayName: 'FieldTextPrivacy', category: 'form' },
   { slug: 'form-label', exportKey: 'label', displayName: 'Label', category: 'form' },
   { slug: 'selector-block', exportKey: 'selector-block', displayName: 'SelectorBlock', category: 'ui' },
 ];

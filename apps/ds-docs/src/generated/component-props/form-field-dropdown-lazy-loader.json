@@ -85,18 +85,16 @@
     "description": "",
     "required": true,
     "category": "Required",
-    "type": "string",
-    "control": "text",
-    "default": ""
+    "type": "function",
+    "control": "none"
   },
   "loadService": {
     "label": "Load Service",
     "description": "",
     "required": true,
     "category": "Required",
-    "type": "string",
-    "control": "text",
-    "default": ""
+    "type": "function",
+    "control": "none"
   },
   "enableWorkaroundLabelToDisabledOptions": {
     "label": "Enable Workaround Label To Disabled Options",

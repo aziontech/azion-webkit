@@ -4,8 +4,7 @@
     "description": "",
     "required": true,
     "category": "Required",
-    "type": "string",
-    "control": "text",
-    "default": ""
+    "type": "function",
+    "control": "none"
   }
 }

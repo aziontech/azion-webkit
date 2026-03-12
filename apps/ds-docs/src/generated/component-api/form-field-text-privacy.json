@@ -1,9 +1,16 @@
 {
-  "component": "form-field-dropdown-icon",
-  "source": "E:\\dev2\\webkit\\packages\\webkit\\src\\core\\form\\field-dropdown-icon\\field-dropdown-icon.vue",
+  "component": "form-field-text-privacy",
+  "source": "E:\\dev2\\webkit\\packages\\webkit\\src\\core\\form\\field-text-privacy\\field-text-privacy.vue",
   "props": [
     {
       "name": "value",
+      "type": "string",
+      "required": false,
+      "default": null,
+      "description": ""
+    },
+    {
+      "name": "class",
       "type": "string",
       "required": false,
       "default": null,
@@ -52,28 +59,21 @@
       "description": ""
     },
     {
-      "name": "icon",
+      "name": "sensitive",
+      "type": "boolean",
+      "required": false,
+      "default": "false",
+      "description": ""
+    },
+    {
+      "name": "aditionalError",
       "type": "string",
       "required": false,
       "default": null,
       "description": ""
     },
     {
-      "name": "suggestions",
-      "type": "any[]",
-      "required": false,
-      "default": "[]",
-      "description": ""
-    },
-    {
-      "name": "onComplete",
-      "type": "Function",
-      "required": false,
-      "default": "{}",
-      "description": ""
-    },
-    {
-      "name": "completeOnFocus",
+      "name": "isPublic",
       "type": "boolean",
       "required": false,
       "default": "false",
@@ -82,11 +82,30 @@
   ],
   "events": [
     {
-      "name": "onChange",
+      "name": "blur",
+      "payload": null,
+      "description": ""
+    },
+    {
+      "name": "input",
+      "payload": null,
+      "description": ""
+    },
+    {
+      "name": "update:isPublic",
       "payload": null,
       "description": ""
     }
   ],
-  "slots": [],
-  "extractedAt": "2026-03-12T22:13:36.349Z"
+  "slots": [
+    {
+      "name": "default",
+      "description": ""
+    },
+    {
+      "name": "description",
+      "description": ""
+    }
+  ],
+  "extractedAt": "2026-03-12T22:13:36.383Z"
 }

@@ -2,8 +2,9 @@
 /**
  * Component Documentation Scaffold Generator
  *
- * Scans packages/webkit/src/core for components, extracts their props via
- * extractComponentApi.ts, and generates the minimum documentation structure
+ * Scans packages/webkit/src/core and packages/webkit/src/components for
+ * components, extracts their props via extractComponentApi.ts, and generates
+ * the minimum documentation structure
  * for ds-docs:
  *
  *   1. src/generated/component-api/<slug>.json        – prop/event/slot raw data
@@ -33,6 +34,7 @@ import {
 
 const CWD = process.cwd();
 const WEBKIT_CORE_DIR = path.resolve(CWD, '../../packages/webkit/src/core');
+const WEBKIT_COMPONENTS_DIR = path.resolve(CWD, '../../packages/webkit/src/components');
 const WEBKIT_PKG_JSON = path.resolve(CWD, '../../packages/webkit/package.json');
 const API_OUTPUT_DIR = path.resolve(CWD, 'src/generated/component-api');
 const PROPS_OUTPUT_DIR = path.resolve(CWD, 'src/generated/component-props');
@@ -129,6 +131,16 @@ function buildPropsDefinition(props: PropDefinition[]): Record<string, unknown> 
 
     const t = prop.type ?? '';
 
+    if (t === 'Function' || t === 'function') {
+      // Function props cannot be serialized in JSON; Playground will inject stubs at runtime.
+      result[prop.name] = {
+        ...base,
+        type: 'function',
+        control: 'none',
+        default: undefined,
+      };
+      continue;
+    }
     if (t === 'boolean') {
       result[prop.name] = {
         ...base,
@@ -223,7 +235,7 @@ import { Playground } from '@components/docs';
 import componentProps from '@/generated/component-props/${info.slug}.json';
 
 <Playground
-  client:load
+  client:only="vue"
   component-name="${displayName}"
   props={componentProps}
 />
@@ -317,16 +329,26 @@ async function scaffold(opts: ScaffoldOptions): Promise<void> {
   if (dryRun) console.log('  (dry run — no files will be written)');
   console.log('');
 
-  // 1. Verify webkit core exists
-  if (!fs.existsSync(WEBKIT_CORE_DIR)) {
-    console.error(`ERROR: webkit core not found at: ${WEBKIT_CORE_DIR}`);
+  // 1. Verify at least one webkit source dir exists
+  if (!fs.existsSync(WEBKIT_CORE_DIR) && !fs.existsSync(WEBKIT_COMPONENTS_DIR)) {
+    console.error(`ERROR: webkit source not found. Looked for:`);
+    console.error(`  ${WEBKIT_CORE_DIR}`);
+    console.error(`  ${WEBKIT_COMPONENTS_DIR}`);
     console.error('       Make sure you are running this script from apps/ds-docs.');
     process.exit(1);
   }
 
-  // 2. Discover webkit components
-  const components = discoverWebkitComponents(WEBKIT_CORE_DIR);
-  console.log(`Discovered ${components.length} webkit component(s):`);
+  // 2. Discover webkit components from both core and components dirs
+  const fromCore = fs.existsSync(WEBKIT_CORE_DIR)
+    ? discoverWebkitComponents(WEBKIT_CORE_DIR)
+    : [];
+  const fromComponents = fs.existsSync(WEBKIT_COMPONENTS_DIR)
+    ? discoverWebkitComponents(WEBKIT_COMPONENTS_DIR)
+    : [];
+  const components = [...fromCore, ...fromComponents].sort((a, b) =>
+    a.slug.localeCompare(b.slug),
+  );
+  console.log(`Discovered ${components.length} webkit component(s) (core: ${fromCore.length}, components: ${fromComponents.length}):`);
   if (verbose) {
     for (const c of components) {
       console.log(`  • ${c.slug} (export: ${c.exportKey})`);
@@ -337,19 +359,30 @@ async function scaffold(opts: ScaffoldOptions): Promise<void> {
   // 3. Read webpack exports map
   const webkitExports = readWebkitExports();
 
-  // 4. Extract API and write JSON files
+  // 4. Extract API and write JSON files (from both core and components)
   console.log('\nExtracting component APIs...');
   let extractedApis: ReturnType<typeof extractWebkitCore>['apis'] = [];
   if (!dryRun) {
     fs.mkdirSync(API_OUTPUT_DIR, { recursive: true });
-    const result = extractWebkitCore(WEBKIT_CORE_DIR, API_OUTPUT_DIR);
-    extractedApis = result.apis;
+    if (fs.existsSync(WEBKIT_CORE_DIR)) {
+      const resultCore = extractWebkitCore(WEBKIT_CORE_DIR, API_OUTPUT_DIR);
+      extractedApis.push(...resultCore.apis);
+    }
+    if (fs.existsSync(WEBKIT_COMPONENTS_DIR)) {
+      const resultComponents = extractWebkitCore(WEBKIT_COMPONENTS_DIR, API_OUTPUT_DIR);
+      extractedApis.push(...resultComponents.apis);
+    }
   } else {
     console.log('  (skipped in dry-run mode)');
-    // In dry-run, still extract in memory for props generation preview
     try {
-      const result = extractWebkitCore(WEBKIT_CORE_DIR, API_OUTPUT_DIR);
-      extractedApis = result.apis;
+      if (fs.existsSync(WEBKIT_CORE_DIR)) {
+        const r = extractWebkitCore(WEBKIT_CORE_DIR, API_OUTPUT_DIR);
+        extractedApis.push(...r.apis);
+      }
+      if (fs.existsSync(WEBKIT_COMPONENTS_DIR)) {
+        const r = extractWebkitCore(WEBKIT_COMPONENTS_DIR, API_OUTPUT_DIR);
+        extractedApis.push(...r.apis);
+      }
     } catch {
       // ignore in dry-run
     }

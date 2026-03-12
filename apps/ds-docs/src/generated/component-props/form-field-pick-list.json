@@ -40,8 +40,7 @@
     "description": "",
     "required": false,
     "category": "Optional",
-    "type": "string",
-    "control": "text",
-    "default": ""
+    "type": "function",
+    "control": "none"
   }
 }

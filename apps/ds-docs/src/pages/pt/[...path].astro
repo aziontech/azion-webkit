@@ -77,7 +77,13 @@ const { Content } = await render(entry);
 const entryId = entry.id.replace(/\.(md|mdx)$/, '');
 const slugFromId = entryId.replace(/\/index$/, '');
 const fullPath = `/pt/${slugFromId === 'index' ? '' : slugFromId}`;
-const breadcrumb = await getBreadcrumbContext(fullPath);
+let breadcrumb;
+try {
+  breadcrumb = await getBreadcrumbContext(fullPath);
+} catch {
+  // Page exists in content but not in navigation tree (e.g. playground) — use a safe fallback
+  breadcrumb = { section: { title: 'Docs', basePath: '/pt', items: [] }, item: null };
+}
 
 // Extract frontmatter data
 const data = entry.data;

@@ -112,19 +112,40 @@ function initializeValues(): PropsValues {
     Object.assign(values, props.initialValues);
   }
 
-  // Fill in defaults for any missing props
+  // Fill in defaults for any missing props (skip function type — stubs injected at render)
   for (const [name, metadata] of Object.entries(props.props)) {
-    if (values[name] === undefined && metadata.default !== undefined) {
-      values[name] = metadata.default;
+    const meta = metadata as { type?: string; default?: unknown };
+    if (meta.type === 'function') continue;
+    if (values[name] === undefined && meta.default !== undefined) {
+      values[name] = meta.default;
     }
   }
 
   return values;
 }
 
+// Stubs for required function props (cannot be serialized in MDX/JSON)
+const FUNCTION_STUBS: Record<string, () => unknown> = {
+  listCountriesPhoneService: () => Promise.resolve([]),
+};
+
 // Reactive state
 const propsValues = ref<PropsValues>(initializeValues());
 const previewTheme = ref<PreviewTheme>('light');
+
+// Merge in stub functions for props with type 'function' so components receive callables
+const resolvedPropsValues = computed<PropsValues>(() => {
+  const raw = propsValues.value;
+  const resolved = { ...raw };
+  for (const [name, metadata] of Object.entries(props.props)) {
+    const meta = metadata as { type?: string };
+    if (meta.type !== 'function') continue;
+    if (typeof resolved[name] !== 'function' && FUNCTION_STUBS[name]) {
+      resolved[name] = FUNCTION_STUBS[name];
+    }
+  }
+  return resolved;
+});
 
 // Generate code from current state
 const generatedCode = computed<GeneratedCode>(() => {
@@ -170,7 +191,7 @@ defineExpose({
       <div class="flex flex-col gap-2">
         <PlaygroundPreview
           :component="resolvedComponent"
-          :props-values="propsValues"
+          :props-values="resolvedPropsValues"
           :surface="surface"
           :preview-theme="previewTheme"
           :custom-class="previewClass"

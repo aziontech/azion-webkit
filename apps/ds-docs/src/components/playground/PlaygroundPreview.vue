@@ -98,7 +98,7 @@ const containerStyle = computed(() => ({
     <div :class="['flex-1 min-h-0 overflow-auto', wrapperClass]">
       <div
         :class="[
-          'relative flex flex-wrap p-6 h-full overflow-auto',
+          'azion relative flex flex-wrap p-6 h-full overflow-auto',
           surfaceClasses,
           customClass,
           { 'items-center justify-center': center }

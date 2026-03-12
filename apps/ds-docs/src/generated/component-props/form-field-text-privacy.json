@@ -62,8 +62,17 @@
     "control": "boolean",
     "default": false
   },
-  "icon": {
-    "label": "Icon",
+  "sensitive": {
+    "label": "Sensitive",
+    "description": "",
+    "required": false,
+    "category": "Optional",
+    "type": "boolean",
+    "control": "boolean",
+    "default": false
+  },
+  "aditionalError": {
+    "label": "Aditional Error",
     "description": "",
     "required": false,
     "category": "Optional",
@@ -71,25 +80,8 @@
     "control": "text",
     "default": ""
   },
-  "suggestions": {
-    "label": "Suggestions",
-    "description": "",
-    "required": false,
-    "category": "Optional",
-    "type": "string",
-    "control": "text",
-    "default": "[]"
-  },
-  "onComplete": {
-    "label": "On Complete",
-    "description": "",
-    "required": false,
-    "category": "Optional",
-    "type": "function",
-    "control": "none"
-  },
-  "completeOnFocus": {
-    "label": "Complete On Focus",
+  "isPublic": {
+    "label": "Is Public",
     "description": "",
     "required": false,
     "category": "Optional",
