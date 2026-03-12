@@ -1,70 +1,25 @@
 {
   "component": "Button",
-  "source": "src/components/demo/AzButton.vue",
-  "props": [
-    {
-      "name": "variant",
-      "type": "'primary' | 'secondary' | 'outline' | 'ghost'",
-      "required": false,
-      "default": "'primary'",
-      "description": "Visual style variant of the button"
-    },
-    {
-      "name": "size",
-      "type": "'sm' | 'md' | 'lg'",
-      "required": false,
-      "default": "'md'",
-      "description": "Size of the button"
-    },
-    {
-      "name": "disabled",
-      "type": "boolean",
-      "required": false,
-      "default": "false",
-      "description": "Whether the button is disabled"
-    },
-    {
-      "name": "loading",
-      "type": "boolean",
-      "required": false,
-      "default": "false",
-      "description": "Whether the button shows a loading state"
-    },
-    {
-      "name": "type",
-      "type": "'button' | 'submit' | 'reset'",
-      "required": false,
-      "default": "'button'",
-      "description": "HTML button type attribute"
-    },
-    {
-      "name": "fullWidth",
-      "type": "boolean",
-      "required": false,
-      "default": "false",
-      "description": "Whether the button takes full width of its container"
-    }
-  ],
-  "events": [
-    {
-      "name": "click",
-      "payload": "MouseEvent",
-      "description": "Emitted when the button is clicked"
-    }
-  ],
+  "source": "E:\\dev2\\webkit\\apps\\ds-docs\\src\\components\\demo\\Button.vue",
+  "props": [],
+  "events": [],
   "slots": [
     {
       "name": "default",
-      "description": "Button content"
+      "description": ""
     },
     {
       "name": "icon-left",
-      "description": "Icon to display on the left side"
+      "description": ""
+    },
+    {
+      "name": "icon-left",
+      "description": ""
     },
     {
       "name": "icon-right",
-      "description": "Icon to display on the right side"
+      "description": ""
     }
   ],
-  "extractedAt": "2026-03-08T22:37:00.000Z"
+  "extractedAt": "2026-03-12T17:21:29.969Z"
 }

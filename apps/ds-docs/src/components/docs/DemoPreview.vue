@@ -42,7 +42,7 @@ const bgClass = computed(() => {
   <div class="my-6">
     <!-- Demo Title -->
     <div v-if="title" class="mb-3">
-      <h4 class="text-sm font-medium text-text-secondary">{{ title }}</h4>
+      <h4 class="text-sm font-medium text-muted">{{ title }}</h4>
     </div>
     
     <!-- Preview Area -->
@@ -60,7 +60,7 @@ const bgClass = computed(() => {
     <div v-if="showCode" class="mt-3">
       <button
         @click="isCodeVisible = !isCodeVisible"
-        class="text-sm text-text-secondary hover:text-primary-600 flex items-center gap-1.5 transition-colors"
+        class="text-sm text-muted hover:text-primary-600 flex items-center gap-1.5 transition-colors"
       >
         <i class="pi pi-code text-base shrink-0" aria-hidden="true" />
         {{ isCodeVisible ? 'Hide code' : 'Show code' }}

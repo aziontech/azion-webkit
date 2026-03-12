@@ -7,9 +7,12 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "pnpm build:search && pnpm build:api && astro build",
+    "build": "pnpm build:search && pnpm build:api && pnpm build:scaffold && astro build",
     "build:search": "tsx scripts/build-search-index.ts",
     "build:api": "tsx scripts/extractComponentApi.ts",
+    "build:api:webkit": "tsx scripts/extractComponentApi.ts --webkit-source=../../packages/webkit/src/core",
+    "build:scaffold": "tsx scripts/scaffoldComponentDocs.ts",
+    "build:scaffold:dry": "tsx scripts/scaffoldComponentDocs.ts --dry-run --verbose",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "node --loader ts-node/esm scripts/check-docs.ts lint",
@@ -22,10 +25,15 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
     "@aziontech/icons": "workspace:*",
+    "@aziontech/theme": "workspace:*",
+    "@aziontech/webkit": "workspace:*",
+    "@vueuse/core": "^10.11.1",
     "astro": "^5.4.0",
     "motion": "^12.35.2",
     "motion-v": "^2.0.0",
+    "primevue": "^3.47.2",
     "shiki": "^4.0.2",
+    "vee-validate": "^4.15.1",
     "vue": "^3.5.29"
   },
   "devDependencies": {

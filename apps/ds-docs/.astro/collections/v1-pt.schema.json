@@ -117,6 +117,9 @@
                 "type": "string"
               }
             },
+            "apiFrom": {
+              "type": "string"
+            },
             "anatomy": {
               "type": "array",
               "items": {

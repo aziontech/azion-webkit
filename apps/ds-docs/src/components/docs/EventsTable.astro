@@ -17,36 +17,36 @@ const { rows = [], component } = Astro.props;
 
 <div class="events-table overflow-x-auto">
   {rows.length === 0 ? (
-    <div class="empty-state py-8 text-center text-text-secondary border border-dashed border-gray-300 rounded-lg">
+    <div class="empty-state py-8 text-center text-muted border border-dashed border-base rounded-lg">
       <p class="text-sm">No events documented yet.</p>
     </div>
   ) : (
     <table class="w-full text-sm border-collapse">
       <thead>
-        <tr class="border-b border-gray-200">
-          <th class="py-3 px-4 text-left font-medium text-text-primary bg-gray-50">Event</th>
-          <th class="py-3 px-4 text-left font-medium text-text-primary bg-gray-50">Payload</th>
-          <th class="py-3 px-4 text-left font-medium text-text-primary bg-gray-50">Description</th>
+        <tr class="border-b border-base">
+          <th class="py-3 px-4 text-left font-medium text-base bg-layer2">Event</th>
+          <th class="py-3 px-4 text-left font-medium text-base bg-layer2">Payload</th>
+          <th class="py-3 px-4 text-left font-medium text-base bg-layer2">Description</th>
         </tr>
       </thead>
       <tbody>
         {rows.map((event) => (
-          <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-            <td class="py-3 px-4 font-code text-gray-600">
-              <code class="bg-gray-100 px-1.5 py-0.5 rounded">
+          <tr class="border-b border-base hover:bg-layer2 transition-colors">
+            <td class="py-3 px-4 font-code text-muted">
+              <code class="bg-layer2 px-1.5 py-0.5 rounded">
                 @{event.name}
               </code>
             </td>
-            <td class="py-3 px-4 font-code text-text-tertiary text-xs">
+            <td class="py-3 px-4 font-code text-muted text-xs">
               {event.payload ? (
-                <code class="bg-gray-100 px-1.5 py-0.5 rounded">
+                <code class="bg-layer2 px-1.5 py-0.5 rounded">
                   {event.payload}
                 </code>
               ) : (
-                <span class="text-gray-400">—</span>
+                <span class="text-muted">—</span>
               )}
             </td>
-            <td class="py-3 px-4 text-text-secondary">
+            <td class="py-3 px-4 text-muted">
               {event.description}
             </td>
           </tr>

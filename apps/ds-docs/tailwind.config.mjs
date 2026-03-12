@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+import { tokenUtilities } from '@aziontech/theme/tokens/build/tailwind-plugin';
+import { primitives, surfacePrimitives, brandPrimitives } from '@aziontech/theme/tokens';
+
 export default {
-  darkMode: 'class',
+  darkMode: ['class', '.dark', '.azion.azion-dark'],
   content: [
     './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
     './content/**/*.md',
@@ -8,31 +11,38 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Primary brand colors
-        primary: {
-          50: '#fafafa',
-          100: '#f5f5f5',
-          200: '#e5e5e5',
-          300: '#d4d4d4',
-          400: '#a3a3a3',
-          500: '#737373',
-          600: '#525252',
-          700: '#404040',
-          800: '#262626',
-          900: '#171717',
-          950: '#0a0a0a',
-        },
-        // Neutral colors for documentation
+        // Primitives from @aziontech/theme (neutral, gray, orange, violet, etc.)
+        ...primitives,
+        // Surface scale from theme (surface-0, surface-50, … surface-950)
         surface: {
-          DEFAULT: '#ffffff',
-          muted: '#f9fafb',
-          subtle: '#f3f4f6',
+          ...surfacePrimitives.surface,
+          DEFAULT: surfacePrimitives.surface[0],
+          muted: surfacePrimitives.surface[50],
+          subtle: surfacePrimitives.surface[100],
         },
-        // Text colors
+        // Primary brand (orange) from theme — use for accents; docs body/links keep neutral below
+        primaryBrand: brandPrimitives.primary,
+        accent: brandPrimitives.accent,
+        // Primary (neutral scale) for documentation typography and links
+        primary: {
+          50: primitives.neutral[50],
+          100: primitives.neutral[100],
+          200: primitives.neutral[200],
+          300: primitives.neutral[300],
+          400: primitives.neutral[400],
+          500: primitives.neutral[500],
+          600: primitives.neutral[600],
+          700: primitives.neutral[700],
+          800: primitives.neutral[800],
+          900: primitives.neutral[900],
+          950: primitives.neutral[950],
+        },
+        // Neutral colors for documentation (alias; primitives.neutral also available)
+        // text.primary/secondary/muted kept for prose and existing classes
         text: {
-          primary: '#111827',
-          secondary: '#4b5563',
-          muted: '#9ca3af',
+          primary: primitives.neutral[900],
+          secondary: primitives.neutral[600],
+          muted: primitives.neutral[400],
         },
         // Status colors for component status badges
         status: {
@@ -126,6 +136,7 @@ export default {
     },
   },
   plugins: [
+    tokenUtilities(),
     require('@tailwindcss/typography'),
   ],
 };

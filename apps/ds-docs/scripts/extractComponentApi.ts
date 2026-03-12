@@ -358,6 +358,145 @@ function extractSlots(template: string): SlotDefinition[] {
 }
 
 /**
+ * Normalize Vue runtime constructor types to TypeScript equivalents
+ */
+function normalizeVueType(rawType: string): string {
+  const typeMap: Record<string, string> = {
+    String: 'string',
+    Number: 'number',
+    Boolean: 'boolean',
+    Array: 'any[]',
+    Object: 'object',
+    Function: 'Function',
+    Symbol: 'symbol',
+    Date: 'Date',
+    RegExp: 'RegExp',
+  };
+  const trimmed = rawType.trim();
+  // Handle Vue array union syntax: [String, Number] => string | number
+  if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+    const inner = trimmed.slice(1, -1);
+    return inner
+      .split(',')
+      .map((t) => typeMap[t.trim()] ?? t.trim())
+      .join(' | ');
+  }
+  return typeMap[trimmed] ?? trimmed;
+}
+
+/**
+ * Parse top-level object entries using bracket counting.
+ * Handles entries where values may be nested objects.
+ * Returns pairs of [key, valueContent] where valueContent is the inner
+ * content of the value (without surrounding braces if it is an object).
+ */
+function parseShallowObjectEntries(content: string): Array<[string, string]> {
+  const entries: Array<[string, string]> = [];
+  let i = 0;
+
+  while (i < content.length) {
+    // skip whitespace and commas
+    while (i < content.length && /[\s,]/.test(content[i])) i++;
+    if (i >= content.length) break;
+
+    // match identifier key
+    const nameMatch = content.slice(i).match(/^(\w+)\s*:/);
+    if (!nameMatch) { i++; continue; }
+    const propName = nameMatch[1];
+    i += nameMatch[0].length;
+
+    // skip whitespace
+    while (i < content.length && /\s/.test(content[i])) i++;
+    if (i >= content.length) break;
+
+    if (content[i] === '{') {
+      // extract nested object
+      let depth = 0;
+      const start = i;
+      while (i < content.length) {
+        if (content[i] === '{') depth++;
+        else if (content[i] === '}') {
+          depth--;
+          if (depth === 0) { i++; break; }
+        }
+        i++;
+      }
+      // pass inner content (without surrounding braces)
+      entries.push([propName, content.slice(start + 1, i - 1)]);
+    } else {
+      // simple value: read until next top-level comma
+      const start = i;
+      while (i < content.length && content[i] !== ',') i++;
+      entries.push([propName, content.slice(start, i).trim()]);
+    }
+  }
+
+  return entries;
+}
+
+/**
+ * Extract props from Vue 3 runtime defineProps object syntax.
+ * Handles: defineProps({ propName: { type: String, required: true, default: 'val' } })
+ */
+function extractRuntimeDefineProps(scriptSetup: string): PropDefinition[] {
+  const props: PropDefinition[] = [];
+
+  // Find defineProps({ — the object/runtime form (not the TypeScript generic <{...}>)
+  const runtimeIdx = scriptSetup.search(/defineProps\s*\(\s*\{/);
+  if (runtimeIdx === -1) return props;
+
+  // Find the opening { position
+  let openIdx = scriptSetup.indexOf('{', runtimeIdx + 'defineProps'.length);
+  if (openIdx === -1) return props;
+
+  // Find the matching closing }
+  let depth = 0;
+  let closeIdx = -1;
+  for (let i = openIdx; i < scriptSetup.length; i++) {
+    if (scriptSetup[i] === '{') depth++;
+    else if (scriptSetup[i] === '}') {
+      depth--;
+      if (depth === 0) { closeIdx = i; break; }
+    }
+  }
+  if (closeIdx === -1) return props;
+
+  const propsContent = scriptSetup.slice(openIdx + 1, closeIdx);
+  const propEntries = parseShallowObjectEntries(propsContent);
+
+  for (const [name, valueStr] of propEntries) {
+    if (!name) continue;
+
+    const typeMatch = valueStr.match(/\btype\s*:\s*([^\n,}]+)/);
+    const requiredMatch = valueStr.match(/\brequired\s*:\s*(true|false)/);
+    // default: capture value until next prop key or end, supporting arrow functions
+    const defaultMatch = valueStr.match(/\bdefault\s*:\s*([\s\S]+?)(?=(?:,\s*\w+\s*:)|\s*$)/);
+
+    let type = 'unknown';
+    if (typeMatch) {
+      type = normalizeVueType(typeMatch[1].trim());
+    }
+
+    let defaultVal: string | null = null;
+    if (defaultMatch) {
+      const raw = defaultMatch[1].trim();
+      // clean up arrow functions: () => [] => []
+      defaultVal = raw.replace(/^\(\)\s*=>\s*/, '').replace(/^['"]|['"]$/g, '').trim() || null;
+    }
+
+    props.push({
+      name,
+      type,
+      required: requiredMatch ? requiredMatch[1] === 'true' : false,
+      default: defaultVal,
+      description: '',
+    });
+  }
+
+  return props;
+}
+
+/**
  * Extract JSDoc comments for documentation
  */
 function extractJsDocComments(content: string): Map<string, string> {
@@ -390,6 +529,11 @@ function extractComponentApi(
   // Extract from script setup
   let props = extractDefineProps(scriptSetup);
   let events = extractDefineEmits(scriptSetup);
+
+  // Try runtime defineProps({ ... }) if TypeScript-style produced nothing
+  if (props.length === 0 && scriptSetup) {
+    props = extractRuntimeDefineProps(scriptSetup);
+  }
 
   // Extract from Options API if no script setup
   if (props.length === 0 && script) {
@@ -514,6 +658,104 @@ export function writeApiJsonFiles(
 }
 
 /**
+ * Discovered webkit component info
+ */
+export interface WebkitComponentInfo {
+  /** Slug used for docs, filenames, and the playground registry (e.g. 'form-field-text') */
+  slug: string;
+  /** Path to the .vue file */
+  vuePath: string;
+  /** Webkit package export key, e.g. 'field-text' */
+  exportKey: string;
+  /** Category derived from parent directory, e.g. 'form' */
+  category: string;
+}
+
+/**
+ * Recursively walk webkit core directory and collect component entries.
+ */
+function walkWebkitCore(
+  dir: string,
+  rootDir: string,
+  results: WebkitComponentInfo[],
+): void {
+  if (!fs.existsSync(dir)) return;
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+
+  let vueFile: string | null = null;
+  for (const entry of entries) {
+    if (!entry.isDirectory() && entry.name.endsWith('.vue')) {
+      vueFile = path.join(dir, entry.name);
+    }
+  }
+
+  if (vueFile) {
+    const relPath = path.relative(rootDir, dir).replace(/\\/g, '/');
+    const slug = relPath.replace(/\//g, '-');
+    const exportKey = path.basename(dir);
+    // Category = first path segment if there are multiple segments; else the slug itself
+    const segments = relPath.split('/');
+    const category = segments.length > 1 ? segments[0] : 'ui';
+    results.push({ slug, vuePath: vueFile, exportKey, category });
+  }
+
+  for (const entry of entries) {
+    if (entry.isDirectory()) {
+      walkWebkitCore(path.join(dir, entry.name), rootDir, results);
+    }
+  }
+}
+
+/**
+ * Discover all webkit components under the given core directory.
+ */
+export function discoverWebkitComponents(coreDir: string): WebkitComponentInfo[] {
+  const results: WebkitComponentInfo[] = [];
+  walkWebkitCore(coreDir, coreDir, results);
+  return results.sort((a, b) => a.slug.localeCompare(b.slug));
+}
+
+/**
+ * Extract API from all discovered webkit components and write JSON files.
+ * Uses the component's slug as the output file name.
+ */
+export function extractWebkitCore(
+  webkitCoreDir: string,
+  outputDir: string,
+): { components: WebkitComponentInfo[]; apis: ComponentApi[] } {
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  const components = discoverWebkitComponents(webkitCoreDir);
+  const apis: ComponentApi[] = [];
+
+  for (const { slug, vuePath } of components) {
+    try {
+      const api = extractComponentApiFromFile(vuePath, slug);
+      apis.push(api);
+      const outPath = path.join(outputDir, `${slug}.json`);
+      fs.writeFileSync(outPath, JSON.stringify(api, null, 2));
+      console.log(`  [webkit] Generated: ${slug}.json`);
+    } catch (err) {
+      console.error(`  [webkit] Failed to extract API for ${slug}:`, err);
+    }
+  }
+
+  return { components, apis };
+}
+
+/**
+ * Public alias so the scaffold script can call it without circular deps.
+ */
+export function extractComponentApiFromFile(
+  filePath: string,
+  componentName: string,
+): ComponentApi {
+  return extractComponentApi(filePath, componentName);
+}
+
+/**
  * Generate TypeScript types from API
  */
 export function generateApiTypes(apis: ComponentApi[]): string {
@@ -566,8 +808,28 @@ async function main() {
   const args = process.argv.slice(2);
   const outputTypes = args.includes('--types');
   const outputDir = args.find((a) => a.startsWith('--output='))?.split('=')[1] || 'src/generated/component-api';
+  const webkitSource = args.find((a) => a.startsWith('--webkit-source='))?.split('=')[1];
 
   const cwd = process.cwd();
+
+  if (webkitSource) {
+    // Webkit mode: scan webkit core directory
+    const coreDir = path.resolve(cwd, webkitSource);
+    const outDir = path.resolve(cwd, outputDir);
+
+    console.log('Extracting API from webkit core...');
+    console.log(`  Core directory : ${coreDir}`);
+    console.log(`  Output directory: ${outDir}`);
+    console.log('');
+
+    const { components } = extractWebkitCore(coreDir, outDir);
+
+    console.log('');
+    console.log(`Extracted API for ${components.length} webkit components`);
+    return;
+  }
+
+  // Default mode: scan ds-docs own components
   const componentsDir = path.join(cwd, 'src/components');
 
   console.log('Extracting component APIs...');
@@ -614,4 +876,5 @@ export {
   EventDefinition,
   SlotDefinition,
   ExtractionOptions,
+  WebkitComponentInfo,
 };

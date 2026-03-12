@@ -25,26 +25,26 @@ const sortedRows = [...rows].sort((a, b) => {
 
 <div class="props-table overflow-x-auto">
   {rows.length === 0 ? (
-    <div class="empty-state py-8 text-center text-text-secondary border border-dashed border-gray-300 rounded-lg">
+    <div class="empty-state py-8 text-center text-muted border border-dashed border-base rounded-lg">
       <p class="text-sm">No props documented yet.</p>
-      <p class="text-xs mt-1 text-text-tertiary">
+      <p class="text-xs mt-1 text-muted">
         Props will be automatically extracted or manually added.
       </p>
     </div>
   ) : (
     <table class="w-full text-sm border-collapse">
       <thead>
-        <tr class="border-b border-gray-200">
-          <th class="py-3 px-4 text-left font-medium text-text-primary bg-gray-50">Prop</th>
-          <th class="py-3 px-4 text-left font-medium text-text-primary bg-gray-50">Type</th>
-          <th class="py-3 px-4 text-left font-medium text-text-primary bg-gray-50">Default</th>
-          <th class="py-3 px-4 text-left font-medium text-text-primary bg-gray-50">Description</th>
+        <tr class="border-b border-base">
+          <th class="py-3 px-4 text-left font-medium text-base bg-layer2">Prop</th>
+          <th class="py-3 px-4 text-left font-medium text-base bg-layer2">Type</th>
+          <th class="py-3 px-4 text-left font-medium text-base bg-layer2">Default</th>
+          <th class="py-3 px-4 text-left font-medium text-base bg-layer2">Description</th>
         </tr>
       </thead>
       <tbody>
         {sortedRows.map((prop, index) => (
-          <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-            <td class="py-3 px-4 font-code text-gray-600">
+          <tr class="border-b border-base hover:bg-layer2 transition-colors">
+            <td class="py-3 px-4 font-code text-muted">
               <span class="flex items-center gap-1">
                 {prop.required && (
                   <span class="text-red-500" title="Required">*</span>
@@ -52,21 +52,21 @@ const sortedRows = [...rows].sort((a, b) => {
                 {prop.name}
               </span>
             </td>
-            <td class="py-3 px-4 font-code text-text-secondary text-xs">
-              <code class="bg-gray-100 px-1.5 py-0.5 rounded">
+            <td class="py-3 px-4 font-code text-muted text-xs">
+              <code class="bg-layer2 px-1.5 py-0.5 rounded">
                 {prop.type}
               </code>
             </td>
-            <td class="py-3 px-4 font-code text-text-tertiary text-xs">
+            <td class="py-3 px-4 font-code text-muted text-xs">
               {prop.default ? (
-                <code class="bg-gray-100 px-1.5 py-0.5 rounded">
+                <code class="bg-layer2 px-1.5 py-0.5 rounded">
                   {prop.default}
                 </code>
               ) : (
-                <span class="text-gray-400">—</span>
+                <span class="text-muted">—</span>
               )}
             </td>
-            <td class="py-3 px-4 text-text-secondary">
+            <td class="py-3 px-4 text-muted">
               {prop.description}
             </td>
           </tr>

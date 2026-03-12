@@ -202,7 +202,7 @@ function getFilledClasses(): string[] {
       bg: 'bg-[#171717] dark:bg-[#ffffff]',
       hover: 'hover:bg-[#F3652B] dark:hover:bg-[#F3652B]',
       active: 'active:bg-primary-950 dark:active:bg-primary-900',
-      text: 'text-white dark:text-black',
+      text: 'text-white dark:text-base',
       focus: 'focus-visible:ring-primary-500',
       hoverBg: 'bg-[#F3652B] dark:bg-[#F3652B]',
       activeBg: 'bg-primary-950 dark:bg-primary-900',

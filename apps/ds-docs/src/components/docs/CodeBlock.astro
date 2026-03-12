@@ -36,18 +36,18 @@ const highlightedCode = await codeToHtml(code, {
 });
 ---
 
-<div class="relative overflow-hidden rounded-md border border-gray-200">
-  <!-- Header: same as Playground (bg-gray-50, py-2 px-3) -->
-  <div class="flex items-center justify-between py-2 px-3 bg-gray-50 border-b border-gray-200">
+<div class="relative overflow-hidden rounded-md border border-base">
+  <!-- Header: same as Playground -->
+  <div class="flex items-center justify-between py-2 px-3 bg-layer2 border-b border-base">
     {filename ? (
-      <span class="text-xs text-gray-400 font-code">{filename}</span>
+      <span class="text-xs text-muted font-code">{filename}</span>
     ) : (
-      <span class="text-xs text-gray-400 font-code">{language}</span>
+      <span class="text-xs text-muted font-code">{language}</span>
     )}
     {showCopy && (
       <button
         type="button"
-        class="flex items-center gap-1.5 py-1 px-2 text-gray-500 bg-transparent border-0 rounded cursor-pointer transition-all duration-150 hover:text-gray-900 hover:bg-gray-200 font-mono text-xs copy-button"
+        class="flex items-center gap-1.5 py-1 px-2 text-muted bg-transparent border-0 rounded cursor-pointer transition-all duration-150 hover:text-base-hover hover:bg-layer2-hover font-mono text-xs copy-button"
         data-code={code}
         aria-label="Copy code"
       >

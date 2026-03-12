@@ -31,17 +31,17 @@ const iconClass = icon || iconMap[title.toLowerCase()] || 'pi-circle';
 
 <a 
   href={href}
-  class="foundation-card group block p-6 rounded-lg border border-gray-200 bg-white hover:border-primary-500 hover:shadow-md transition-all duration-200"
+  class="foundation-card group block p-6 rounded-lg border border-base bg-layer1 hover:border-primary-500 hover:shadow-md transition-all duration-200"
 >
   <div class="flex items-start gap-4">
-    <div class="foundation-card__icon shrink-0 w-10 h-10 flex items-center justify-center rounded-lg bg-gray-50 text-gray-600 group-hover:bg-primary-50 group-hover:text-primary-600 transition-colors">
+    <div class="foundation-card__icon shrink-0 w-10 h-10 flex items-center justify-center rounded-lg bg-layer2 text-muted group-hover:bg-primary-50 group-hover:text-primary-600 transition-colors">
       <i class={`pi ${iconClass} text-lg`} aria-hidden="true" />
     </div>
     <div class="foundation-card__content flex-1 min-w-0">
-      <h3 class="foundation-card__title text-base font-medium text-text-primary group-hover:text-primary-600 transition-colors">
+      <h3 class="foundation-card__title text-base font-medium group-hover:text-primary-600 transition-colors">
         {title}
       </h3>
-      <p class="foundation-card__description mt-1 text-sm text-text-secondary leading-relaxed">
+      <p class="foundation-card__description mt-1 text-sm text-muted leading-relaxed">
         {description}
       </p>
     </div>

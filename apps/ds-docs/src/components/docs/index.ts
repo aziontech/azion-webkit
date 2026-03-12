@@ -32,6 +32,9 @@ export { default as DemoPreview } from './DemoPreview.vue';
 export { default as CodeBlock } from './CodeBlock.astro';
 export { default as ExampleBlock } from './ExampleBlock.astro';
 
+// Webkit Component Preview (for auto-scaffolded pages)
+export { default as WebkitPreview } from './WebkitPreview.vue';
+
 // API Documentation
 export { default as PropsTable } from './PropsTable.astro';
 export { default as SlotsTable } from './SlotsTable.astro';
@@ -89,6 +92,7 @@ import Callout from './Callout.astro';
 import ContentTabs from './ContentTabs.astro';
 import FoundationCard from './FoundationCard.astro';
 import Playground from '../playground/Playground.vue';
+import WebkitPreview from './WebkitPreview.vue';
 import { Button, BlockToastDemo } from '../demo';
 
 export const markdownComponents = {
@@ -108,6 +112,7 @@ export const markdownComponents = {
   ContentTabs,
   FoundationCard,
   Playground,
+  WebkitPreview,
   // Demo components for MDX usage
   Button,
   BlockToastDemo,

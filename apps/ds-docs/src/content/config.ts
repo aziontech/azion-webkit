@@ -131,6 +131,12 @@ const componentSchema = baseSchema.extend({
   storybook: z.string().optional(),
   figma: z.string().optional(),
   related: z.array(z.string()).optional(),
+  /**
+   * Key for auto-loading API data from generated/component-api/<apiFrom>.json.
+   * When set and the `api` field is absent, the layout resolves props/slots/events
+   * from the generated JSON instead of requiring them in frontmatter.
+   */
+  apiFrom: z.string().optional(),
   // Structured anatomy
   anatomy: z.array(anatomyPartSchema).optional(),
   // Structured accessibility
@@ -277,6 +283,8 @@ export type GuideFrontmatter = z.infer<typeof guideSchema>;
 export type IconFrontmatter = z.infer<typeof iconSchema>;
 export type ContributingFrontmatter = z.infer<typeof contributingSchema>;
 export type PlaygroundFrontmatter = z.infer<typeof playgroundSchema>;
+
+export type ComponentFrontmatterWithApiFrom = ComponentFrontmatter & { apiFrom?: string };
 
 // Export sub-types for convenience
 export type AnatomyPart = z.infer<typeof anatomyPartSchema>;

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch, type Component, onMounted, shallowRef } from 'vue';
+import { ref, computed, watch, type Component, onMounted, shallowRef, defineAsyncComponent } from 'vue';
 import type { PropsDefinition, PropsValues, PlaygroundConfig, PlaygroundHooks, GeneratedCode, PreviewSurface, PreviewTheme } from './types';
 import { generateCode } from './code-generator';
 import PlaygroundPreview from './PlaygroundPreview.vue';
@@ -9,18 +9,38 @@ import PlaygroundCode from './PlaygroundCode.vue';
 // Import demo components for registry
 import { Button, BlockToastDemo } from '../demo';
 
+// Import webkit async loaders — each entry is a static import() call so Vite
+// can statically analyze and code-split all webkit component chunks.
+import { webkitComponentByName } from '../../generated/playground-registry';
+
 /**
  * Component Registry
- * 
+ *
  * Maps component names to their actual component objects.
  * This is necessary because Astro's client:load directive cannot
  * serialize Vue component objects as props.
+ *
+ * Webkit components are registered as async components so they are
+ * lazy-loaded only when their playground page is visited.
  */
+const webkitRegistry = Object.fromEntries(
+  Object.entries(webkitComponentByName).map(([name, loader]) => [
+    name,
+    defineAsyncComponent({
+      loader,
+      delay: 100,
+      timeout: 8000,
+    }),
+  ]),
+);
+
 const componentRegistry: Record<string, Component> = {
   Button,
   BlockToastDemo,
   // Legacy alias for backwards compatibility
   AzButton: Button,
+  // Auto-registered webkit components (lazy-loaded)
+  ...webkitRegistry,
 };
 
 /**

@@ -30,8 +30,8 @@ const {
 const hasApiData = props.length > 0 || slots.length > 0 || events.length > 0;
 ---
 
-<section id="api" class="api-section mt-12 pt-8 border-t border-gray-200">
-  <h2 class="text-2xl font-medium text-text-primary tracking-tight mb-6">
+<section id="api" class="api-section mt-12 pt-8 border-t border-base">
+  <h2 class="text-2xl font-medium text-base tracking-tight mb-6">
     {title}
   </h2>
   
@@ -40,7 +40,7 @@ const hasApiData = props.length > 0 || slots.length > 0 || events.length > 0;
       {/* Props */}
       {props.length > 0 && (
         <div class="api-subsection">
-          <h3 class="text-lg font-medium text-text-primary mb-3">Props</h3>
+          <h3 class="text-lg font-medium text-base mb-3">Props</h3>
           <PropsTable rows={props} component={component} />
         </div>
       )}
@@ -48,7 +48,7 @@ const hasApiData = props.length > 0 || slots.length > 0 || events.length > 0;
       {/* Slots */}
       {slots.length > 0 && (
         <div class="api-subsection">
-          <h3 class="text-lg font-medium text-text-primary mb-3">Slots</h3>
+          <h3 class="text-lg font-medium text-base mb-3">Slots</h3>
           <SlotsTable rows={slots} component={component} />
         </div>
       )}
@@ -56,16 +56,16 @@ const hasApiData = props.length > 0 || slots.length > 0 || events.length > 0;
       {/* Events */}
       {events.length > 0 && (
         <div class="api-subsection">
-          <h3 class="text-lg font-medium text-text-primary mb-3">Events</h3>
+          <h3 class="text-lg font-medium text-base mb-3">Events</h3>
           <EventsTable rows={events} component={component} />
         </div>
       )}
     </div>
   ) : (
-    <div class="empty-api-state py-12 text-center border border-dashed border-gray-300 rounded-lg bg-gray-50">
-      <i class="pi pi-code mx-auto text-4xl text-gray-400" aria-hidden="true" />
-      <h3 class="mt-2 text-sm font-medium text-text-primary">API documentation coming soon</h3>
-      <p class="mt-1 text-sm text-text-secondary">
+    <div class="empty-api-state py-12 text-center border border-dashed border-base rounded-lg bg-layer2">
+      <i class="pi pi-code mx-auto text-4xl text-muted" aria-hidden="true" />
+      <h3 class="mt-2 text-sm font-medium text-base">API documentation coming soon</h3>
+      <p class="mt-1 text-sm text-muted">
         Component API is being documented and will be available shortly.
       </p>
     </div>

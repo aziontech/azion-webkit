@@ -34,6 +34,10 @@ import type {
   UsageMetadata
 } from '../content/config';
 
+// Pre-load all generated component-api JSON files at build time.
+// Vite resolves these statically; we use the map for dynamic lookup by apiFrom key.
+const generatedApiFiles = import.meta.glob('../generated/component-api/*.json', { eager: true });
+
 interface Props {
   title: string;
   description: string;
@@ -56,6 +60,12 @@ interface Props {
     slots?: SlotDefinition[];
     events?: EventDefinition[];
   };
+  /**
+   * Key into generated/component-api/<apiFrom>.json.
+   * When set and `api` is absent/empty, loads prop/slot/event data from the
+   * pre-generated JSON so frontmatter duplication is unnecessary.
+   */
+  apiFrom?: string;
   /** Current language code */
   language?: string;
   /** i18n context for translations */
@@ -79,9 +89,29 @@ const {
   accessibility,
   usage,
   api,
+  apiFrom,
   language = 'en',
   i18n,
 } = Astro.props;
+
+// Resolve API: use frontmatter `api` if present, otherwise load from generated JSON.
+function loadGeneratedApi(key: string) {
+  const jsonPath = `../generated/component-api/${key}.json`;
+  const module = generatedApiFiles[jsonPath] as Record<string, unknown> | undefined;
+  if (!module) return undefined;
+  const data = (module.default ?? module) as Record<string, unknown>;
+  return {
+    props: (data.props ?? []) as PropDefinition[],
+    slots: (data.slots ?? []) as SlotDefinition[],
+    events: (data.events ?? []) as EventDefinition[],
+  };
+}
+
+const hasInlineApi =
+  api && (api.props?.length || api.slots?.length || api.events?.length);
+const resolvedApi = hasInlineApi
+  ? api
+  : (apiFrom ? loadGeneratedApi(apiFrom) : undefined);
 
 // Build related items - use language prefix for non-default languages
 const relatedItems = related.map(name => ({
@@ -92,10 +122,10 @@ const relatedItems = related.map(name => ({
   type: 'component' as const,
 }));
 
-// Extract API data
-const apiProps = api?.props || [];
-const apiSlots = api?.slots || [];
-const apiEvents = api?.events || [];
+// Extract API data from resolved source (inline frontmatter or generated JSON)
+const apiProps = resolvedApi?.props || [];
+const apiSlots = resolvedApi?.slots || [];
+const apiEvents = resolvedApi?.events || [];
 ---
 
 <DocsShellLayout title={title} description={description} section={section} item={item} language={language} i18n={i18n}>
