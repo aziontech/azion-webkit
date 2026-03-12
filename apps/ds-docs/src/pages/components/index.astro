@@ -75,7 +75,7 @@ const categoryLabels: Record<string, string> = {
               return (
                 <a
                   href={`/components/${componentName}`}
-                  class="group block p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50/50 transition-colors"
+                  class="group block p-4 border border-base rounded-lg hover:border-primary-300 hover:bg-primary-50/50 transition-colors"
                 >
                 <div class="flex items-center justify-between mb-2">
                   <h3 class="font-medium font-sans text-base group-hover:text-base-700">
@@ -85,7 +85,7 @@ const categoryLabels: Record<string, string> = {
                     <span class={`text-xs px-2 py-0.5 rounded-full ${
                       component.data.status === 'stable' ? 'bg-emerald-50 text-emerald-700' :
                       component.data.status === 'beta' ? 'bg-blue-50 text-blue-700' :
-                      component.data.status === 'deprecated' ? 'bg-amber-50 text-amber-700' :
+                      component.data.status === 'deprecated' ? 'bg-amber-50 text-warning' :
                       'bg-gray-50 text-gray-600'
                     }`}>
                       {component.data.status}

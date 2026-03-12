@@ -41,7 +41,7 @@ const semanticStyles: Record<string, { bg: string; text: string; border: string 
   },
   warning: {
     bg: 'bg-amber-50',
-    text: 'text-amber-700',
+    text: 'text-warning',
     border: 'border-amber-200',
   },
   accent: {
@@ -52,7 +52,7 @@ const semanticStyles: Record<string, { bg: string; text: string; border: string 
   neutral: {
     bg: 'bg-gray-50',
     text: 'text-gray-600',
-    border: 'border-gray-200',
+    border: 'border-base',
   },
 };
 

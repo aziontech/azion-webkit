@@ -70,17 +70,17 @@ const emit = defineEmits<{
     role="alert"
   >
     <div class="flex items-start gap-2 flex-1">
-      <i class="pi pi-info-circle text-amber-800 shrink-0 mt-0.5 text-base" aria-hidden="true" />
-      <p class="m-0 text-sm text-amber-800 leading-relaxed">
+      <i class="pi pi-info-circle text-warning shrink-0 mt-0.5 text-base" aria-hidden="true" />
+      <p class="m-0 text-sm text-warning leading-relaxed">
         You are viewing an older version of the documentation.
-        <a :href="buildLatestVersionUrl()" class="text-amber-800 font-semibold underline underline-offset-2 hover:no-underline focus:outline-2 focus:outline-offset-2 focus:outline-amber-800 focus:rounded">
+        <a :href="buildLatestVersionUrl()" class="text-warning font-semibold underline underline-offset-2 hover:no-underline focus:outline-2 focus:outline-offset-2 focus:outline-amber-800 focus:rounded">
           View the latest version ({{ latestVersionLabel }})
         </a>
       </p>
     </div>
     <button
       type="button"
-      class="flex items-center justify-center w-6 h-6 p-0 bg-transparent border-0 rounded text-amber-800 cursor-pointer transition-colors duration-150 shrink-0 hover:bg-amber-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-amber-800"
+      class="flex items-center justify-center w-6 h-6 p-0 bg-transparent border-0 rounded text-warning cursor-pointer transition-colors duration-150 shrink-0 hover:bg-amber-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-amber-800"
       aria-label="Dismiss banner"
       @click="dismissBanner"
     >

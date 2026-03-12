@@ -27,12 +27,12 @@ const statusConfig: Record<Status, { label: string; class: string; icon: string 
   },
   deprecated: {
     label: 'Deprecated',
-    class: 'bg-amber-50 text-amber-700 border-amber-200',
+    class: 'bg-amber-50 text-warning border-amber-200',
     icon: '⚠',
   },
   planned: {
     label: 'Planned',
-    class: 'bg-gray-50 text-gray-600 border-gray-200',
+    class: 'bg-gray-50 text-gray-600 border-base',
     icon: '○',
   },
   experimental: {

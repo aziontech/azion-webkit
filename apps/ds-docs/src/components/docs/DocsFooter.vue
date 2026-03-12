@@ -86,7 +86,7 @@ const currentYear = new Date().getFullYear();
         </div>
 
         <!-- Last Updated (optional) -->
-        <div v-if="lastUpdated" class="text-xs text-text-muted">
+        <div v-if="lastUpdated" class="text-xs text-muted">
           {{ lastUpdatedLabel }}: {{ lastUpdated }}
         </div>
 

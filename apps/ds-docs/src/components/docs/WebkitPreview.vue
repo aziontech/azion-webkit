@@ -76,7 +76,7 @@ const defaultPreviewProps = computed(() => ({
     <!-- Live preview -->
     <div
       v-else
-      class="rounded-lg border border-gray-200 bg-white p-8 dark:border-gray-700 dark:bg-gray-900"
+      class="rounded-lg border border-base bg-white p-8 dark:border-gray-700 dark:bg-gray-900"
     >
       <div class="mb-3 flex items-center gap-2">
         <span class="rounded-full bg-blue-50 px-2 py-0.5 text-xs font-medium text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">

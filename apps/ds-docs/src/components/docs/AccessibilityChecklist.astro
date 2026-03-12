@@ -34,7 +34,7 @@ const {
       <div class="bg-gray-50 rounded-lg overflow-hidden">
         <table class="w-full text-sm">
           <thead>
-            <tr class="border-b border-gray-200">
+            <tr class="border-b border-base">
               <th class="py-2 px-3 text-left font-medium text-muted">Keys</th>
               <th class="py-2 px-3 text-left font-medium text-muted">Action</th>
             </tr>
@@ -67,7 +67,7 @@ const {
       <div class="space-y-2">
         {aria.map((item) => (
           <div class="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
-            <code class="font-code text-gray-600 text-xs bg-white px-2 py-0.5 rounded border border-gray-200 shrink-0">
+            <code class="font-code text-gray-600 text-xs bg-white px-2 py-0.5 rounded border border-base shrink-0">
               {item.attribute}
             </code>
             <p class="text-sm text-muted">

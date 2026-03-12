@@ -159,7 +159,7 @@ onMounted(() => {
   <div class="relative inline-flex font-mono" ref="triggerRef">
     <button
       type="button"
-      class="inline-flex items-center gap-2 py-1.5 px-3 min-w-[114px] text-xs font-medium text-gray-800 bg-white border border-gray-200 rounded-md cursor-pointer transition-all duration-150 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+      class="inline-flex items-center gap-2 py-1.5 px-3 min-w-[114px] text-xs font-medium text-gray-800 bg-white border border-base rounded-md cursor-pointer transition-all duration-150 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
       :aria-expanded="isOpen"
       aria-haspopup="listbox"
       :aria-label="`Current theme: ${currentThemeLabel}. Change theme.`"
@@ -181,7 +181,7 @@ onMounted(() => {
       <div
         v-if="isOpen"
         ref="dropdownRef"
-        class="absolute min-w-32 text-xs bg-white border border-gray-200 rounded-md shadow-lg z-50 overflow-hidden theme-switcher__dropdown"
+        class="absolute min-w-32 text-xs bg-white border border-base rounded-md shadow-lg z-50 overflow-hidden theme-switcher__dropdown"
         :class="dropdownClasses"
         role="listbox"
         aria-label="Select theme"

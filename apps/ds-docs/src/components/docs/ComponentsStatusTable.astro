@@ -53,7 +53,7 @@ const statusPriority: Record<ProgressStatus, number> = {
     <div class="overflow-x-auto">
       <table class="w-full border-collapse text-sm" data-sort-column="name" data-sort-direction="asc">
         <thead>
-          <tr class="border-b font-sans border-gray-200">
+          <tr class="border-b font-sans border-base">
             <th 
               scope="col" 
               class="text-left py-3 px-4 font-medium text-base bg-surface-subtle cursor-pointer hover:bg-gray-100 select-none"
@@ -140,7 +140,7 @@ const statusPriority: Record<ProgressStatus, number> = {
                   <ProgressStatusBadge status={component.codeStatus} />
                 </td>
                 <td class="py-3 px-4 text-muted">
-                  {component.launchVersion || <span class="text-text-muted">—</span>}
+                  {component.launchVersion || <span class="text-muted">—</span>}
                 </td>
               </tr>
             );
@@ -149,9 +149,9 @@ const statusPriority: Record<ProgressStatus, number> = {
       </table>
     </div>
   ) : (
-    <div class="text-center py-12 px-4 border border-gray-200 rounded-lg bg-surface-muted">
+    <div class="text-center py-12 px-4 border border-base rounded-lg bg-surface-muted">
       <p class="text-muted">No components to display.</p>
-      <p class="text-sm text-text-muted mt-1">
+      <p class="text-sm text-muted mt-1">
         Component status information will appear here once available.
       </p>
     </div>

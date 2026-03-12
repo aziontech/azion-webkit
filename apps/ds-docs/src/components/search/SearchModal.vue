@@ -217,7 +217,7 @@ onUnmounted(() => {
           @click.stop
         >
         <!-- Search Input -->
-        <div class="relative border-b border-gray-200">
+        <div class="relative border-b border-base">
           <i class="pi pi-search text-sm absolute left-4 top-[48%] -translate-y-1/2 text-gray-400" />
           <input
             ref="inputRef"

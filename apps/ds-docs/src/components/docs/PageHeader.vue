@@ -43,7 +43,7 @@ const props = defineProps<Props>();
     <div class="flex items-center justify-between">
       <div v-if="status" class="flex items-center gap-2 shrink-0">
         <StatusBadge :status="status" />
-        <span v-if="since" class="text-sm text-text-muted">
+        <span v-if="since" class="text-sm text-muted">
           since v{{ since }}
         </span>
       </div>

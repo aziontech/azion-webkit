@@ -60,27 +60,27 @@ const surfaceClasses = computed(() => {
   if (isDark) {
     switch (props.surface) {
       case 'light':
-        classes.push('bg-gray-800');
+        classes.push('bg-base');
         break;
       case 'dark':
-        classes.push('bg-gray-950');
+        classes.push('bg-base');
         break;
       case 'neutral':
       default:
-        classes.push('bg-[#0A0A0A]');
+        classes.push('bg-base');
         break;
     }
   } else {
     switch (props.surface) {
       case 'light':
-        classes.push('bg-white');
+        classes.push('bg-base');
         break;
       case 'dark':
-        classes.push('bg-gray-800');
+        classes.push('bg-base');
         break;
       case 'neutral':
       default:
-        classes.push('bg-gray-50');
+        classes.push('bg-base');
         break;
     }
   }
@@ -90,6 +90,11 @@ const surfaceClasses = computed(() => {
 
 // Wrapper class: add .dark for Tailwind dark: variants inside preview
 const wrapperClass = computed(() => (props.previewTheme === 'dark' ? 'dark' : ''));
+
+// Azion theme class for preview container so PrimeVue/components get correct CSS vars (light/dark)
+const azionThemeClass = computed(() =>
+  props.previewTheme === 'dark' ? 'azion-dark' : 'azion-light'
+);
 
 // Compute container styles
 const containerStyle = computed(() => ({
@@ -109,17 +114,17 @@ const containerStyle = computed(() => ({
       <div
         :class="[
           'azion relative flex flex-wrap p-6 h-full overflow-auto',
+          azionThemeClass,
           surfaceClasses,
           customClass,
           { 'items-center justify-center': center }
         ]"
         :style="containerStyle"
       >
-      <!-- Component rendering (key from demoStatus forces remount when simulating status changes) -->
+      <!-- Component rendering -->
       <component
         :is="component"
         v-if="component"
-        :key="(demoOnlyValues?.demoStatus as string) ?? 'default'"
         v-bind="propsValues"
       >
         {{ slotContent }}

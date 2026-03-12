@@ -207,7 +207,7 @@ if (isPatternsIndexPage) {
                   return (
                     <a
                       href={`/pt/patterns/${name}`}
-                      class="group block p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50/50 transition-colors"
+                      class="group block p-4 border border-base rounded-lg hover:border-primary-300 hover:bg-primary-50/50 transition-colors"
                     >
                       <div class="flex items-center justify-between mb-2">
                         <h3 class="font-medium font-sans text-base group-hover:text-primary-700">
@@ -221,7 +221,7 @@ if (isPatternsIndexPage) {
                                 : patternData.status === 'beta'
                                   ? 'bg-blue-50 text-blue-700'
                                   : patternData.status === 'deprecated'
-                                    ? 'bg-amber-50 text-amber-700'
+                                    ? 'bg-amber-50 text-warning'
                                     : 'bg-gray-50 text-gray-600'
                             }`}
                           >
@@ -292,7 +292,7 @@ if (isPatternsIndexPage) {
                   return (
                     <a
                       href={`/pt/blocks/${name}`}
-                      class="group block p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50/50 transition-colors"
+                      class="group block p-4 border border-base rounded-lg hover:border-primary-300 hover:bg-primary-50/50 transition-colors"
                     >
                       <div class="flex items-center justify-between mb-2">
                         <h3 class="font-medium font-sans text-base group-hover:text-primary-700">
@@ -306,7 +306,7 @@ if (isPatternsIndexPage) {
                                 : blockData.status === 'beta'
                                   ? 'bg-blue-50 text-blue-700'
                                   : blockData.status === 'deprecated'
-                                    ? 'bg-amber-50 text-amber-700'
+                                    ? 'bg-amber-50 text-warning'
                                     : 'bg-gray-50 text-gray-600'
                             }`}
                           >

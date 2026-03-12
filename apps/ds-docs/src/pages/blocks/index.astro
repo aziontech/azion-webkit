@@ -66,7 +66,7 @@ const categoryLabels: Record<string, string> = {
               return (
                 <a
                   href={`/blocks/${name}`}
-                  class="group block p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50/50 transition-colors"
+                  class="group block p-4 border border-base rounded-lg hover:border-primary-300 hover:bg-primary-50/50 transition-colors"
                 >
                   <div class="flex items-center justify-between mb-2">
                     <h3 class="font-medium font-sans text-base group-hover:text-base-700">
@@ -80,7 +80,7 @@ const categoryLabels: Record<string, string> = {
                             : block.data.status === 'beta'
                               ? 'bg-blue-50 text-blue-700'
                               : block.data.status === 'deprecated'
-                                ? 'bg-amber-50 text-amber-700'
+                                ? 'bg-amber-50 text-warning'
                                 : 'bg-gray-50 text-gray-600'
                         }`}
                       >

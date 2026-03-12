@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch, type Component, onMounted, shallowRef, defineAsyncComponent } from 'vue';
+import { ref, computed, type Component, onMounted, defineAsyncComponent } from 'vue';
 import type { PropsDefinition, PropsValues, PlaygroundConfig, PlaygroundHooks, GeneratedCode, PreviewSurface, PreviewTheme } from './types';
 import { generateCode } from './code-generator';
 import PlaygroundPreview from './PlaygroundPreview.vue';
@@ -131,7 +131,14 @@ const FUNCTION_STUBS: Record<string, () => unknown> = {
 
 // Reactive state
 const propsValues = ref<PropsValues>(initializeValues());
+// Preview theme: starts from site theme, can be overridden only within the playground
 const previewTheme = ref<PreviewTheme>('light');
+
+// Sync preview theme with site theme only on mount; after that, only the playground toggle changes it
+onMounted(() => {
+  const isDark = document.documentElement.classList.contains('dark');
+  previewTheme.value = isDark ? 'dark' : 'light';
+});
 
 // Merge in stub functions for props with type 'function' so components receive callables
 const resolvedPropsValues = computed<PropsValues>(() => {
@@ -208,7 +215,7 @@ defineExpose({
 </script>
 
 <template>
-  <div class="flex flex-col my-6 bg-white border border-gray-200 rounded-lg overflow-hidden">
+  <div class="flex flex-col my-6 bg-white border border-base rounded-lg overflow-hidden">
     <!-- Main content area -->
     <div class="grid grid-cols-1 md:grid-cols-[1fr_280px]">
       <!-- Preview section -->
@@ -232,7 +239,7 @@ defineExpose({
       <!-- Controls section -->
       <div
         v-if="showControls"
-        class="shrink-0 p-4 bg-gray-50 border-l border-gray-200 overflow-y-auto max-h-[512px]"
+        class="shrink-0 p-4 bg-layer1 border-l border-base overflow-y-auto max-h-[512px]"
       >
         <PlaygroundControls
           :props-definition="props.props"
@@ -247,7 +254,7 @@ defineExpose({
     <!-- Code section -->
     <div
       v-if="showCode"
-      class="border-t border-gray-200"
+      class="border-t border-base"
     >
       <PlaygroundCode
         :code="generatedCode"
@@ -257,7 +264,7 @@ defineExpose({
     </div>
 
     <!-- Future extensibility slots -->
-    <div v-if="$slots.extra" class="mt-2 pt-4 border-t border-gray-200">
+    <div v-if="$slots.extra" class="mt-2 pt-4 border-t border-base">
       <slot name="extra" />
     </div>
   </div>

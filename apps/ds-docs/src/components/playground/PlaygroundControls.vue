@@ -9,7 +9,7 @@ import PlaygroundPropControl from './PlaygroundPropControl.vue';
  * Renders all prop controls for a component.
  * Groups controls by category and maintains
  * the reactive state for all props.
- * Includes reset and preview theme toggle.
+ * Includes reset and preview theme toggle (only affects the component preview, not the site).
  */
 
 interface Props {
@@ -69,7 +69,7 @@ function resetToDefaults() {
   emit('update:propsValues', defaults);
 }
 
-// Toggle preview theme between light and dark
+// Toggle preview theme (light/dark) — only affects the playground preview, not the site theme
 function togglePreviewTheme() {
   emit('update:previewTheme', props.previewTheme === 'light' ? 'dark' : 'light');
 }
@@ -78,7 +78,7 @@ function togglePreviewTheme() {
 <template>
   <div class="flex flex-col gap-4">
     <!-- Header -->
-    <div class="flex items-center justify-between pb-3 border-b border-gray-200">
+    <div class="flex items-center justify-between pb-3 border-b border-base">
       <h3 class="!text-lg !font-medium !text-gray-900 !m-0">
         Props
       </h3>
@@ -94,8 +94,8 @@ function togglePreviewTheme() {
         <button
           type="button"
           class="inline-flex items-center justify-center w-8 h-8 p-0 text-xs text-gray-500 bg-transparent border border-gray-300 rounded-md cursor-pointer transition-all duration-150 hover:text-gray-900 hover:bg-gray-50"
-          :title="previewTheme === 'light' ? 'Dark theme' : 'Light theme'"
-          :aria-label="previewTheme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'"
+          :title="previewTheme === 'light' ? 'Preview dark' : 'Preview light'"
+          :aria-label="previewTheme === 'light' ? 'Switch preview to dark theme' : 'Switch preview to light theme'"
           @click="togglePreviewTheme"
         >
           <i :class="previewTheme === 'light' ? 'pi pi-moon' : 'pi pi-sun'" aria-hidden="true" />

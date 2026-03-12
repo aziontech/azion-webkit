@@ -90,7 +90,7 @@ function toggleCode() {
 </script>
 
 <template>
-  <div class="border-t border-gray-200 overflow-hidden">
+  <div class="border-t border-base overflow-hidden">
     <!-- Header -->
     <div class="flex items-center justify-between py-2 px-3 bg-gray-50">
       <button

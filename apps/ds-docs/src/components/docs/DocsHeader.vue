@@ -77,12 +77,12 @@ const documentationText = computed(() => {
       <nav class="flex items-center gap-2 text-sm" aria-label="Breadcrumb">
         <ol class="flex items-center gap-2">
           <li>
-            <a :href="homeLink" class="text-text-muted hover:text-white transition-colors">
+            <a :href="homeLink" class="text-muted hover:text-white transition-colors">
               {{ documentationText }}
             </a>
           </li>
           <li v-if="section" class="flex items-center gap-2">
-            <span class="text-text-muted" aria-hidden="true">/</span>
+            <span class="text-muted" aria-hidden="true">/</span>
             <a
               :href="sectionLink"
               class="text-white font-medium hover:text-white transition-colors"
@@ -92,7 +92,7 @@ const documentationText = computed(() => {
             </a>
           </li>
           <li v-if="item && !item.isIndex" class="flex items-center gap-2">
-            <span class="text-text-muted" aria-hidden="true">/</span>
+            <span class="text-muted" aria-hidden="true">/</span>
             <span class="text-white" aria-current="page">
               {{ item.navLabel }}
             </span>

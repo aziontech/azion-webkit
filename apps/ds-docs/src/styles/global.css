@@ -132,14 +132,8 @@
   }
 }
 
-/* Custom components - reduced: prose is in Tailwind typography plugin */
+/* Custom components - prose sizes are defined in tailwind.config typography theme */
 @layer components {
-  h1,h2,h3,h4,h5,h6,p,li,ul,ol,td,th,strong {
-    @apply text-base;
-  }
-  h1 {
-    @apply !text-4xl text-base;
-  }
   /* code font for inline code */
   code {
     @apply !font-code;
