@@ -17,27 +17,47 @@
     "./tokens/build/tailwind-plugin": "./src/tokens/build/tailwind-plugin.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf dist/",
+    "build": "node scripts/build.mjs",
+    "validate": "node scripts/validate-theme.mjs",
+    "compile": "node scripts/compile-tokens.mjs",
+    "generate-css": "node scripts/generate-css.mjs",
+    "publish": "cd dist && npm publish && cd ..",
+    "pack:dry": "cd dist && npm pack --dry-run && cd ..",
+    "format": "prettier --write scripts/ src/"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"
   },
   "keywords": [
-    "css",
-    "brand",
-    "design",
-    "system",
-    "primevue",
-    "azion",
-    "css",
-    "azion",
+    "design-tokens",
     "theme",
-    "theme-base"
+    "css",
+    "css-vars",
+    "tailwind-css",
+    "branding",
+    "ui-kit",
+    "token-generator"
   ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/aziontech/webkit.git",
-    "directory": "packages/theme"
+  "files": [
+    "tokens/",
+    "LICENSE",
+    "README.md"
+  ],
+  "main": "./dist/tokens/index.js",
+  "style": "./dist/tokens/tokens.css",
+  "types": "./dist/tokens/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/tokens/index.js",
+      "require": "./dist/tokens/index.js",
+      "default": "./dist/tokens/tokens.css",
+      "types": "./dist/tokens/index.d.ts"
+    },
+    "./tokens": "./dist/tokens/index.js",
+    "./primitives": "./dist/tokens/primitives/colors.js",
+    "./semantic": "./dist/tokens/semantic/",
+    "./tokens/light.css": "./dist/tokens/light.css",
+    "./tokens/dark.css": "./dist/tokens/dark.css"
   }
 }
