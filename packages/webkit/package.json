@@ -1,6 +1,6 @@
 {
   "name": "@aziontech/webkit",
-  "version": "0.0.3",
+  "version": "1.2.0",
   "description": "Reusable UI components and design system utilities for building Azion web interfaces.",
   "license": "MIT",
   "repository": {
@@ -13,14 +13,14 @@
   },
   "scripts": {
     "clean": "rm -rf dist/",
-    "clean:dts": "rm -rf src/core/form/**/*.d.ts src/core/form/**/*.d.ts.map",
+    "clean:dts": "rm -rf src/**/*.d.ts src/**/*.d.ts.map",
     "build:dts": "vue-tsc --declaration --emitDeclarationOnly",
-    "build": "npm run clean:dts; npm run build:dts",
     "publish": "npm publish",
     "pack:dry": "npm pack --dry-run",
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "primevue": "3.35.0",
     "vee-validate": "^4.15.1",
     "vue-tsc": "^3.2.5"
   },
@@ -64,7 +64,9 @@
     "./field-text-area": "./src/core/form/field-text-area/field-text-area.vue",
     "./field-text-icon": "./src/core/form/field-text-icon/field-text-icon.vue",
     "./field-text-password": "./src/core/form/field-text-password/field-text-password.vue",
+    "./field-text-privacy": "./src/core/form/field-text-privacy/field-text-privacy.vue",
     "./label": "./src/core/form/label/label.vue",
-    "./selector-block": "./src/core/selector-block/selector-block.vue"
+    "./selector-block": "./src/core/selector-block/selector-block.vue",
+    "./azion-system-status": "./src/components/azion-system-status/azion-system-status.vue"
   }
 }

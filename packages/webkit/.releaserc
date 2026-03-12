@@ -1,6 +1,6 @@
 {
   "branches": ["main"],
-  "tagFormat": "@aziontech/icons@${version}",
+  "tagFormat": "@aziontech/webkit@${version}",
   "plugins": [
     [
       "@semantic-release/commit-analyzer",
@@ -37,8 +37,8 @@
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "node scripts/build.mjs",
-        "publishCmd": "npm publish ./dist --provenance --access public"
+        "prepareCmd": "vue-tsc --declaration --emitDeclarationOnly",
+        "publishCmd": "npm publish . --provenance --access public"
       }
     ],
     [
@@ -48,7 +48,7 @@
           "package.json",
           "CHANGELOG.md"
         ],
-        "message": "chore(release): @aziontech/icons ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        "message": "chore(release): @aziontech/webkit ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ],
     [
