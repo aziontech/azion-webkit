@@ -7,10 +7,6 @@ type: foundation
 category: color
 ---
 
-# Color
-
-Color is a fundamental element of visual design. The Azion Design System uses a semantic color system built on design tokens that adapt to different contexts and themes.
-
 ## Color Philosophy
 
 Our color system is designed to be:

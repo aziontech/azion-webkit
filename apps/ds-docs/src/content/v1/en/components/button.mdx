@@ -7,7 +7,7 @@ type: component
 category: form
 status: stable
 since: 1.0.0
-component: AzButton
+component: Button
 source: https://github.com/aziontech/webkit/tree/main/packages/components/src/Button
 storybook: https://storybook.azion.com/components/button
 figma: https://figma.com/file/azion-design-system/components/button
@@ -58,39 +58,44 @@ usage:
   doDonts:
     - type: do
       description: Use buttons for actionable items
-      example: '<AzButton>Submit Form</AzButton>'
+      example: '<Button>Submit Form</Button>'
     - type: do
       description: Use clear, action-oriented labels
-      example: '<AzButton>Save Changes</AzButton>'
+      example: '<Button>Save Changes</Button>'
     - type: dont
       description: Don't use buttons for navigation
-      example: '<AzButton>Go to Docs</AzButton>'
+      example: '<Button>Go to Docs</Button>'
     - type: dont
       description: Don't use vague labels
-      example: '<AzButton>Click Here</AzButton>'
+      example: '<Button>Click Here</Button>'
   examples:
     - title: Primary Button
       description: The default button style for primary actions
-      code: '<AzButton variant="primary">Primary Button</AzButton>'
+      code: '<Button severity="primary">Primary Button</Button>'
     - title: Secondary Button
       description: For alternative or less prominent actions
-      code: '<AzButton variant="secondary">Secondary Button</AzButton>'
-    - title: Destructive Button
+      code: '<Button severity="secondary">Secondary Button</Button>'
+    - title: Danger Button
       description: For dangerous actions like delete or remove
-      code: '<AzButton variant="destructive">Delete</AzButton>'
+      code: '<Button severity="danger">Delete</Button>'
     - title: Button Sizes
       description: Available in small, medium, and large sizes
       code: |-
-        <AzButton size="sm">Small</AzButton>
-        <AzButton size="md">Medium</AzButton>
-        <AzButton size="lg">Large</AzButton>'
+        <Button size="sm">Small</Button>
+        <Button size="md">Medium</Button>
+        <Button size="lg">Large</Button>'
 api:
   props:
-    - name: variant
-      type: "'primary' | 'secondary' | 'destructive' | 'ghost'"
+    - name: severity
+      type: "'primary' | 'secondary' | 'success' | 'info' | 'warn' | 'help' | 'danger' | 'plain' | 'contrast'"
       default: "'primary'"
       required: false
-      description: Visual style variant of the button
+      description: Visual severity level - affects color scheme
+    - name: variant
+      type: "'filled' | 'raised' | 'rounded' | 'outlined' | 'text' | 'link'"
+      default: "'filled'"
+      required: false
+      description: Style variant of the button
     - name: size
       type: "'sm' | 'md' | 'lg'"
       default: "'md'"
@@ -106,11 +111,11 @@ api:
       default: "false"
       required: false
       description: Shows loading spinner and disables interaction
-    - name: icon
-      type: "string"
-      default: "undefined"
+    - name: iconOnly
+      type: "boolean"
+      default: "false"
       required: false
-      description: Icon name to display before the label
+      description: Render as icon-only button (no text)
     - name: iconPosition
       type: "'left' | 'right'"
       default: "'left'"
@@ -138,7 +143,7 @@ api:
 
 import { Playground, StateGrid, CodeBlock, Callout } from '@components/docs';
 import { buttonProps } from '@components/demo/props-metadata';
-import AzButton from '@components/demo/AzButton.vue';
+import Button from '@components/demo/Button.vue';
 
 Buttons are interactive elements that trigger actions when clicked or tapped. They communicate actions that users can take and are typically placed throughout your UI, from forms to dialogs to navigation.
 
@@ -146,7 +151,7 @@ The Button component provides a consistent, accessible way to trigger actions th
 
 ## Import
 
-<CodeBlock code={`import { AzButton } from '@aziontech/webkit';`} lang="javascript" />
+<CodeBlock code={`import { Button } from '@aziontech/webkit';`} lang="javascript" />
 
 ## Playground
 
@@ -154,7 +159,7 @@ Explore the Button component interactively. Adjust props and see live changes.
 
 <Playground
   client:load
-  component-name="AzButton"
+  component-name="Button"
   props={buttonProps}
   slot-content="Button"
 />
@@ -162,13 +167,14 @@ Explore the Button component interactively. Adjust props and see live changes.
 ## States
 
 <StateGrid columns={4}>
-  <AzButton slot="default" client:load>Button</AzButton>
-  <AzButton slot="hover" client:load class="bg-[#F3652B]">Button</AzButton>
-  <AzButton slot="focus" client:load class="ring-2 ring-primary-300 ring-offset-2">Button</AzButton>
-  <AzButton slot="active" client:load class="!bg-[#2A2A2A]">Button</AzButton>
-  <AzButton slot="disabled" client:load disabled>Button</AzButton>
+  <Button slot="default" client:load>Button</Button>
+  <Button slot="hover" client:load state="hover">Button</Button>
+  <Button slot="focus" client:load state="focus">Button</Button>
+  <Button slot="active" client:load state="active">Button</Button>
+  <Button slot="disabled" client:load disabled>Button</Button>
+  <Button slot="loading" client:load loading>Button</Button>
 </StateGrid>
 
-<Callout type="tip" title="Choosing the right variant">
-  Use **primary** for the main action, **secondary** for alternative actions, **destructive** for dangerous actions, and **ghost** for less prominent actions.
+<Callout type="tip" title="Choosing the right severity">
+  Use **primary** for the main action, **secondary** for alternative actions, **danger** for destructive actions, and **plain** for less prominent actions.
 </Callout>

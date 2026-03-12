@@ -7,10 +7,6 @@ type: foundation
 category: color
 ---
 
-# Cor
-
-Cor é um elemento fundamental do design visual. O Azion Design System usa um sistema de cores semântico construído sobre design tokens que se adaptam a diferentes contextos e temas.
-
 ## Filosofia de Cores
 
 Nosso sistema de cores foi projetado para ser:

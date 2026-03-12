@@ -7,7 +7,7 @@ import PlaygroundControls from './PlaygroundControls.vue';
 import PlaygroundCode from './PlaygroundCode.vue';
 
 // Import demo components for registry
-import { AzButton, BlockToastDemo } from '../demo';
+import { Button, BlockToastDemo } from '../demo';
 
 /**
  * Component Registry
@@ -17,8 +17,10 @@ import { AzButton, BlockToastDemo } from '../demo';
  * serialize Vue component objects as props.
  */
 const componentRegistry: Record<string, Component> = {
-  AzButton,
+  Button,
   BlockToastDemo,
+  // Legacy alias for backwards compatibility
+  AzButton: Button,
 };
 
 /**

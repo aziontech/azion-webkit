@@ -13,19 +13,41 @@ import type { PropsDefinition } from '../playground/types';
  * Button component props metadata
  */
 export const buttonProps: PropsDefinition = {
-  variant: {
+  severity: {
     type: 'enum',
     control: 'select',
     default: 'primary',
-    options: ['primary', 'secondary', 'destructive', 'ghost'],
+    options: ['primary', 'secondary', 'success', 'info', 'warn', 'help', 'danger', 'plain', 'contrast'],
     optionLabels: {
       primary: 'Primary',
       secondary: 'Secondary',
-      destructive: 'Destructive',
-      ghost: 'Ghost',
+      success: 'Success',
+      info: 'Info',
+      warn: 'Warning',
+      help: 'Help',
+      danger: 'Danger',
+      plain: 'Plain',
+      contrast: 'Contrast',
+    },
+    label: 'Severity',
+    description: 'Visual severity level - affects color scheme',
+    category: 'Appearance',
+  },
+  variant: {
+    type: 'enum',
+    control: 'select',
+    default: 'filled',
+    options: ['filled', 'raised', 'rounded', 'outlined', 'text', 'link'],
+    optionLabels: {
+      filled: 'Filled',
+      raised: 'Raised',
+      rounded: 'Rounded',
+      outlined: 'Outlined',
+      text: 'Text',
+      link: 'Link',
     },
     label: 'Variant',
-    description: 'Visual style variant of the button',
+    description: 'Style variant of the button',
     category: 'Appearance',
   },
   size: {
@@ -58,6 +80,21 @@ export const buttonProps: PropsDefinition = {
     description: 'Shows loading spinner and disables interaction',
     category: 'State',
   },
+  state: {
+    type: 'enum',
+    control: 'select',
+    default: 'default',
+    options: ['default', 'hover', 'focus', 'active'],
+    optionLabels: {
+      default: 'Default',
+      hover: 'Hover',
+      focus: 'Focus',
+      active: 'Active',
+    },
+    label: 'State',
+    description: 'Forces a visual state for documentation purposes',
+    category: 'State',
+  },
   fullWidth: {
     type: 'boolean',
     control: 'boolean',
@@ -66,14 +103,13 @@ export const buttonProps: PropsDefinition = {
     description: 'Whether button takes full width of container',
     category: 'Layout',
   },
-  icon: {
-    type: 'string',
-    control: 'text',
-    default: '',
-    label: 'Icon',
-    description: 'Name of the icon to display before or after the label',
-    category: 'Content',
-    placeholder: 'e.g., plus, arrow-right',
+  iconOnly: {
+    type: 'boolean',
+    control: 'boolean',
+    default: false,
+    label: 'Icon Only',
+    description: 'Render as icon-only button (no text)',
+    category: 'Layout',
   },
   iconPosition: {
     type: 'enum',

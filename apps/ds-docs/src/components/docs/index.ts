@@ -89,7 +89,7 @@ import Callout from './Callout.astro';
 import ContentTabs from './ContentTabs.astro';
 import FoundationCard from './FoundationCard.astro';
 import Playground from '../playground/Playground.vue';
-import { AzButton, BlockToastDemo } from '../demo';
+import { Button, BlockToastDemo } from '../demo';
 
 export const markdownComponents = {
   DemoPreview,
@@ -109,7 +109,7 @@ export const markdownComponents = {
   FoundationCard,
   Playground,
   // Demo components for MDX usage
-  AzButton,
+  Button,
   BlockToastDemo,
   // Aliases for convenience (e.g. Starlight-style in pattern MDX)
   Aside: Callout,
