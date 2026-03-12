@@ -1,5 +1,5 @@
 {
-  "name": "Webkit Monorepo",
+  "name": "@aziontech/webkit-monorepo",
   "author": "@aziontech",
   "private": true,
   "repository": {
@@ -15,9 +15,7 @@
     "icons:build": "pnpm --filter icons run build",
     "icons:validate": "pnpm --filter icons run validate",
     "icons:publish": "pnpm --filter icons run publish",
-    "docs:dev": "pnpm --filter ds-docs run dev",
-    "docs:build": "pnpm --filter ds-docs run build",
-    "docs:preview": "pnpm --filter ds-docs run preview"
+    "webkit:build:dts": "pnpm --filter webkit run build:dts"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
