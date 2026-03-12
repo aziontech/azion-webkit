@@ -38,12 +38,6 @@ export default {
           950: primitives.neutral[950],
         },
         // Neutral colors for documentation (alias; primitives.neutral also available)
-        // text.primary/secondary/muted kept for prose and existing classes
-        text: {
-          primary: primitives.neutral[900],
-          secondary: primitives.neutral[600],
-          muted: primitives.neutral[400],
-        },
         // Status colors for component status badges
         status: {
           stable: '#10b981',

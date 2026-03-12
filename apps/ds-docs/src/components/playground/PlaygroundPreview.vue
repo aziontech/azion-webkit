@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, type Component } from 'vue';
 import type { PropsValues, PreviewSurface, PreviewTheme } from './types';
+import { useAzionStatusFetchMock } from './useAzionStatusFetchMock';
 
 /**
  * PlaygroundPreview
@@ -8,13 +9,17 @@ import type { PropsValues, PreviewSurface, PreviewTheme } from './types';
  * Renders the component being edited in the playground.
  * Provides different surface backgrounds and responsive containers.
  * Supports light/dark theme switching for the preview area only.
+ * When demo-only values include demoStatus (e.g. Azion System Status),
+ * installs a fetch mock so the component shows the simulated status.
  */
 
 interface Props {
   /** The Vue component to render */
   component?: Component | null;
-  /** Current props values */
+  /** Current props values (excluding demo-only; these are not passed to the component) */
   propsValues: PropsValues;
+  /** Demo-only values (e.g. "Simulate status") used for mocks in the preview */
+  demoOnlyValues?: PropsValues;
   /** Surface/background style */
   surface?: PreviewSurface;
   /** Preview theme (light/dark) - only affects the preview container */
@@ -31,12 +36,17 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   component: null,
+  demoOnlyValues: () => ({}),
   surface: 'neutral',
   previewTheme: 'light',
   center: true,
   minHeight: '120px',
   slotContent: '',
 });
+
+// When "Simulate status" is set, mock status.azion.com API so the component shows that status
+const demoStatus = computed(() => (props.demoOnlyValues?.demoStatus as string) ?? undefined);
+useAzionStatusFetchMock(demoStatus);
 
 const emit = defineEmits<{
   (e: 'update:previewTheme', value: PreviewTheme): void;
@@ -105,10 +115,11 @@ const containerStyle = computed(() => ({
         ]"
         :style="containerStyle"
       >
-      <!-- Component rendering -->
+      <!-- Component rendering (key from demoStatus forces remount when simulating status changes) -->
       <component
         :is="component"
         v-if="component"
+        :key="(demoOnlyValues?.demoStatus as string) ?? 'default'"
         v-bind="propsValues"
       >
         {{ slotContent }}

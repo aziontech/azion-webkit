@@ -28,15 +28,15 @@ const {
   {/* Keyboard Interactions */}
   {keyboard.length > 0 && (
     <div class="a11y-section mb-6">
-      <h4 class="text-sm font-medium text-text-primary mb-3 flex items-center gap-2">
+      <h4 class="text-sm font-medium text-base mb-3 flex items-center gap-2">
         Keyboard Navigation
       </h4>
       <div class="bg-gray-50 rounded-lg overflow-hidden">
         <table class="w-full text-sm">
           <thead>
             <tr class="border-b border-gray-200">
-              <th class="py-2 px-3 text-left font-medium text-text-secondary">Keys</th>
-              <th class="py-2 px-3 text-left font-medium text-text-secondary">Action</th>
+              <th class="py-2 px-3 text-left font-medium text-muted">Keys</th>
+              <th class="py-2 px-3 text-left font-medium text-muted">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -47,7 +47,7 @@ const {
                     {item.keys}
                   </kbd>
                 </td>
-                <td class="py-2 px-3 text-text-secondary">
+                <td class="py-2 px-3 text-muted">
                   {item.action}
                 </td>
               </tr>
@@ -61,7 +61,7 @@ const {
   {/* ARIA Attributes */}
   {aria.length > 0 && (
     <div class="a11y-section mb-6">
-      <h4 class="text-sm font-medium text-text-primary mb-3 flex items-center gap-2">
+      <h4 class="text-sm font-medium text-base mb-3 flex items-center gap-2">
         ARIA Attributes
       </h4>
       <div class="space-y-2">
@@ -70,7 +70,7 @@ const {
             <code class="font-code text-gray-600 text-xs bg-white px-2 py-0.5 rounded border border-gray-200 shrink-0">
               {item.attribute}
             </code>
-            <p class="text-sm text-text-secondary">
+            <p class="text-sm text-muted">
               {item.usage}
             </p>
           </div>
@@ -82,7 +82,7 @@ const {
   {/* WCAG Compliance */}
   {wcag.length > 0 && (
     <div class="a11y-section mb-6">
-      <h4 class="text-sm font-medium text-text-primary mb-3 flex items-center gap-2">
+      <h4 class="text-sm font-medium text-base mb-3 flex items-center gap-2">
         WCAG Compliance
       </h4>
       <div class="flex flex-wrap gap-2">
@@ -98,12 +98,12 @@ const {
   {/* Checklist Items */}
   {items.length > 0 && (
     <div class="a11y-section mb-6">
-      <h4 class="text-sm font-medium text-text-primary mb-3">Checklist</h4>
+      <h4 class="text-sm font-medium text-base mb-3">Checklist</h4>
       <ul class="space-y-2">
         {items.map((item) => (
           <li class="flex items-start gap-2">
             <i class="pi pi-check w-5 h-5 text-green-500 shrink-0 mt-0.5" aria-hidden="true" />
-            <span class="text-sm text-text-secondary">{item}</span>
+            <span class="text-sm text-muted">{item}</span>
           </li>
         ))}
       </ul>
@@ -113,8 +113,8 @@ const {
   {/* Additional Notes */}
   {notes.length > 0 && (
     <div class="a11y-section">
-      <h4 class="text-sm font-medium text-text-primary mb-3">Additional Notes</h4>
-      <ul class="space-y-1 list-disc list-inside text-sm text-text-secondary">
+      <h4 class="text-sm font-medium text-base mb-3">Additional Notes</h4>
+      <ul class="space-y-1 list-disc list-inside text-sm text-muted">
         {notes.map((note) => (
           <li>{note}</li>
         ))}

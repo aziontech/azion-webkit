@@ -48,7 +48,7 @@ const features = [
     <h1 class="text-4xl font-medium tracking-tight mb-4">
       Azion Design System
     </h1>
-    <p class="text-base text-text-secondary mb-8 max-w-2xl">
+    <p class="text-base text-muted mb-8 max-w-2xl">
       Build consistent, accessible, and beautiful user interfaces with our comprehensive design system. 
       Designed for Azion's edge computing platform.
     </p>
@@ -59,10 +59,10 @@ const features = [
           href={link.href}
           class="group px-6 py-4 bg-surface-subtle hover:bg-primary-50 border border-gray-200 hover:border-primary-200 rounded-lg transition-colors"
         >
-          <span class="block mb-1 text-base font-medium text-text-primary group-hover:text-primary-700">
+          <span class="block mb-1 text-base font-medium text-base group-hover:text-primary-700">
             {link.label}
           </span>
-          <span class="block text-xs text-text-secondary">
+          <span class="block text-xs text-muted">
             {link.description}
           </span>
         </a>
@@ -78,7 +78,7 @@ const features = [
         <div class="p-6 bg-surface-subtle rounded-lg">
           <span class="text-3xl mb-3 block">{feature.icon}</span>
           <h3 class="text-lg font-medium mb-2">{feature.title}</h3>
-          <p class="text-text-secondary">{feature.description}</p>
+          <p class="text-muted">{feature.description}</p>
         </div>
       ))}
     </div>
@@ -100,19 +100,19 @@ const features = [
         <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-medium rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
           ✓ Stable
         </span>
-        <span class="text-text-secondary">Icons package is production-ready</span>
+        <span class="text-muted">Icons package is production-ready</span>
       </div>
       <div class="flex items-center gap-3">
         <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-medium rounded-full bg-gray-50 text-gray-600 border border-gray-200">
           ○ Planned
         </span>
-        <span class="text-text-secondary">Tokens package coming soon</span>
+        <span class="text-muted">Tokens package coming soon</span>
       </div>
       <div class="flex items-center gap-3">
         <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-medium rounded-full bg-gray-50 text-gray-600 border border-gray-200">
           ○ Planned
         </span>
-        <span class="text-text-secondary">Components package coming soon</span>
+        <span class="text-muted">Components package coming soon</span>
       </div>
     </div>
   </section>

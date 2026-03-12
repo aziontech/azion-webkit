@@ -23,7 +23,7 @@ const { title, description = 'Azion Design System Documentation', language = 'en
 ---
 
 <!DOCTYPE html>
-<html lang={language}>
+<html lang={language} class="azion azion-light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,8 +32,22 @@ const { title, description = 'Azion Design System Documentation', language = 'en
     <meta name="generator" content={Astro.generator} />
     <title>{title} | Azion Design System</title>
     <slot name="head" />
+    {/* Sync Azion theme vars (azion-light/azion-dark) and Tailwind dark with saved theme before paint */}
+    <script is:inline define:vars={{}}>
+      (function () {
+        var stored = typeof localStorage !== 'undefined' && localStorage.getItem('docs-theme');
+        var dark = false;
+        if (stored === 'dark') dark = true;
+        else if (stored === 'light') dark = false;
+        else dark = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var root = document.documentElement;
+        root.classList.toggle('dark', dark);
+        root.classList.toggle('azion-dark', dark);
+        root.classList.toggle('azion-light', !dark);
+      })();
+    </script>
   </head>
-  <body class="min-h-screen bg-surface text-text-primary antialiased">
+  <body class="min-h-screen bg-surface text-base antialiased">
     <slot />
   </body>
 </html>

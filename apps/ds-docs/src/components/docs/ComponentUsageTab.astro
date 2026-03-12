@@ -177,20 +177,20 @@ const donts = usage?.doDonts?.filter(item => item.type === 'dont') || [];
 <style>
   /* Section styling for consistent spacing */
   .usage-content :global(h2) {
-    @apply text-2xl font-medium text-text-primary tracking-tight mt-10 mb-4 border-b border-gray-200 pb-2;
+    @apply text-2xl font-medium text-base tracking-tight mt-10 mb-4 border-b border-gray-200 pb-2;
   }
   
   .usage-content :global(h3) {
-    @apply text-xl font-medium text-text-primary mt-8 mb-3;
+    @apply text-xl font-medium text-base mt-8 mb-3;
   }
   
   .usage-content :global(h4) {
-    @apply text-lg font-medium text-text-primary mt-6 mb-2;
+    @apply text-lg font-medium text-base mt-6 mb-2;
   }
   
   /* Paragraph spacing */
   .usage-content :global(p) {
-    @apply mb-4 leading-relaxed text-text-secondary;
+    @apply mb-4 leading-relaxed text-muted;
   }
   
   /* List styling */
@@ -200,7 +200,7 @@ const donts = usage?.doDonts?.filter(item => item.type === 'dont') || [];
   }
   
   .usage-content :global(li) {
-    @apply mb-2 text-text-secondary;
+    @apply mb-2 text-muted;
   }
   
   /* Link styling */
@@ -236,7 +236,7 @@ const donts = usage?.doDonts?.filter(item => item.type === 'dont') || [];
   }
 
   .usage-list li {
-    @apply text-text-secondary leading-relaxed;
+    @apply text-muted leading-relaxed;
   }
 
   /* Do/Don't grid */

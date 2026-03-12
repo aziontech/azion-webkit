@@ -38,7 +38,7 @@ const hasPreview = await Astro.slots.render('default');
   {(title || description) && (
     <header class="example-block__header mb-3">
       {title && (
-        <h4 class="example-block__title text-sm font-medium text-text-secondary">
+        <h4 class="example-block__title text-sm font-medium text-muted">
           {title}
         </h4>
       )}

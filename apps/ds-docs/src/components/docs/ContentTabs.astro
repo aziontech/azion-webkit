@@ -47,7 +47,7 @@ const tabs = [
           'px-4 py-2.5 text-sm font-medium border-b-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2',
           tab.id === defaultTab
             ? 'border-black text-black'
-            : 'border-transparent text-text-secondary hover:text-text-primary hover:border-gray-300',
+            : 'border-transparent text-muted hover:text-base hover:border-gray-300',
         ]}
       >
         {tab.label}
@@ -111,7 +111,7 @@ const tabs = [
           el.classList.toggle('border-black', isActive);
           el.classList.toggle('text-black', isActive);
           el.classList.toggle('border-transparent', !isActive);
-          el.classList.toggle('text-text-secondary', !isActive);
+          el.classList.toggle('text-muted', !isActive);
         });
         panels.forEach((p) => {
           const panel = p as HTMLElement;

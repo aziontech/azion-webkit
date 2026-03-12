@@ -46,7 +46,7 @@ const statusPriority: Record<ProgressStatus, number> = {
 
 <div class="components-status-table-wrapper">
   {caption && (
-    <p class="text-sm font-sans text-text-secondary mb-4">{caption}</p>
+    <p class="text-sm font-sans text-muted mb-4">{caption}</p>
   )}
   
   {hasComponents ? (
@@ -56,7 +56,7 @@ const statusPriority: Record<ProgressStatus, number> = {
           <tr class="border-b font-sans border-gray-200">
             <th 
               scope="col" 
-              class="text-left py-3 px-4 font-medium text-text-primary bg-surface-subtle cursor-pointer hover:bg-gray-100 select-none"
+              class="text-left py-3 px-4 font-medium text-base bg-surface-subtle cursor-pointer hover:bg-gray-100 select-none"
               data-sortable="true"
               data-column="name"
             >
@@ -69,7 +69,7 @@ const statusPriority: Record<ProgressStatus, number> = {
             </th>
             <th 
               scope="col" 
-              class="text-left py-3 px-4 font-medium text-text-primary bg-surface-subtle cursor-pointer hover:bg-gray-100 select-none"
+              class="text-left py-3 px-4 font-medium text-base bg-surface-subtle cursor-pointer hover:bg-gray-100 select-none"
               data-sortable="true"
               data-column="design"
             >
@@ -82,7 +82,7 @@ const statusPriority: Record<ProgressStatus, number> = {
             </th>
             <th 
               scope="col" 
-              class="text-left py-3 px-4 font-medium text-text-primary bg-surface-subtle cursor-pointer hover:bg-gray-100 select-none"
+              class="text-left py-3 px-4 font-medium text-base bg-surface-subtle cursor-pointer hover:bg-gray-100 select-none"
               data-sortable="true"
               data-column="code"
             >
@@ -95,7 +95,7 @@ const statusPriority: Record<ProgressStatus, number> = {
             </th>
             <th 
               scope="col" 
-              class="text-left py-3 px-4 font-medium text-text-primary bg-surface-subtle cursor-pointer hover:bg-gray-100 select-none"
+              class="text-left py-3 px-4 font-medium text-base bg-surface-subtle cursor-pointer hover:bg-gray-100 select-none"
               data-sortable="true"
               data-column="version"
             >
@@ -130,7 +130,7 @@ const statusPriority: Record<ProgressStatus, number> = {
                       {component.name}
                     </a>
                   ) : (
-                    <span class="text-text-primary">{component.name}</span>
+                    <span class="text-base">{component.name}</span>
                   )}
                 </td>
                 <td class="py-3 px-4">
@@ -139,7 +139,7 @@ const statusPriority: Record<ProgressStatus, number> = {
                 <td class="py-3 px-4">
                   <ProgressStatusBadge status={component.codeStatus} />
                 </td>
-                <td class="py-3 px-4 text-text-secondary">
+                <td class="py-3 px-4 text-muted">
                   {component.launchVersion || <span class="text-text-muted">—</span>}
                 </td>
               </tr>
@@ -150,7 +150,7 @@ const statusPriority: Record<ProgressStatus, number> = {
     </div>
   ) : (
     <div class="text-center py-12 px-4 border border-gray-200 rounded-lg bg-surface-muted">
-      <p class="text-text-secondary">No components to display.</p>
+      <p class="text-muted">No components to display.</p>
       <p class="text-sm text-text-muted mt-1">
         Component status information will appear here once available.
       </p>

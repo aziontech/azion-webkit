@@ -60,7 +60,7 @@ const bgClass = computed(() => {
     <div v-if="showCode" class="mt-3">
       <button
         @click="isCodeVisible = !isCodeVisible"
-        class="text-sm text-muted hover:text-primary-600 flex items-center gap-1.5 transition-colors"
+        class="text-sm text-muted hover:text-primary-hover flex items-center gap-1.5 transition-colors"
       >
         <i class="pi pi-code text-base shrink-0" aria-hidden="true" />
         {{ isCodeVisible ? 'Hide code' : 'Show code' }}

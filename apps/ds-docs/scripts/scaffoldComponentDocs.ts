@@ -38,6 +38,7 @@ const WEBKIT_COMPONENTS_DIR = path.resolve(CWD, '../../packages/webkit/src/compo
 const WEBKIT_PKG_JSON = path.resolve(CWD, '../../packages/webkit/package.json');
 const API_OUTPUT_DIR = path.resolve(CWD, 'src/generated/component-api');
 const PROPS_OUTPUT_DIR = path.resolve(CWD, 'src/generated/component-props');
+const PROPS_OVERRIDES_DIR = path.resolve(CWD, 'src/generated/component-props-overrides');
 const CONTENT_EN_COMPONENTS = path.resolve(CWD, 'src/content/v1/en/components');
 const REGISTRY_OUTPUT = path.resolve(CWD, 'src/generated/playground-registry.ts');
 
@@ -393,10 +394,16 @@ async function scaffold(opts: ScaffoldOptions): Promise<void> {
   if (!dryRun) {
     fs.mkdirSync(PROPS_OUTPUT_DIR, { recursive: true });
     for (const api of extractedApis) {
-      const propsDef = buildPropsDefinition(api.props);
+      const overridePath = path.join(PROPS_OVERRIDES_DIR, `${api.component}.json`);
       const outPath = path.join(PROPS_OUTPUT_DIR, `${api.component}.json`);
-      fs.writeFileSync(outPath, JSON.stringify(propsDef, null, 2), 'utf-8');
-      if (verbose) console.log(`  Wrote props: ${api.component}.json`);
+      if (fs.existsSync(overridePath)) {
+        fs.copyFileSync(overridePath, outPath);
+        if (verbose) console.log(`  Wrote props (override): ${api.component}.json`);
+      } else {
+        const propsDef = buildPropsDefinition(api.props);
+        fs.writeFileSync(outPath, JSON.stringify(propsDef, null, 2), 'utf-8');
+        if (verbose) console.log(`  Wrote props: ${api.component}.json`);
+      }
     }
     console.log(`  Wrote PropsDefinition for ${extractedApis.length} component(s)`);
   } else {

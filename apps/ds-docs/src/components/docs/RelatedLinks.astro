@@ -33,7 +33,7 @@ const typeIconClasses: Record<string, string> = {
 
 {items.length > 0 && (
   <div class="related-links mt-8 pt-6 border-t border-gray-200">
-    <h3 class="text-sm font-medium text-text-primary mb-4">{title}</h3>
+    <h3 class="text-sm font-medium text-base mb-4">{title}</h3>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {items.map((item) => (
@@ -41,15 +41,15 @@ const typeIconClasses: Record<string, string> = {
           href={item.href}
           class="related-link items-center group flex gap-1.5 p-3 rounded-lg border border-gray-200 hover:border-primary-300 hover:bg-primary-50 transition-colors"
         >
-          <span class="text-gray-400 group-hover:text-primary-500 transition-colors shrink-0 mt-0.5 text-base" aria-hidden="true">
+          <span class="text-gray-400 group-hover:text-primary transition-colors shrink-0 mt-0.5 text-base" aria-hidden="true">
           <i class={typeIconClasses[item.type || 'component']} aria-hidden="true" />
         </span>
           <div class="flex-1 min-w-0">
-            <span class="text-sm font-medium text-text-primary group-hover:text-primary-700">
+            <span class="text-sm font-medium text-base group-hover:text-primary-700">
               {item.title}
             </span>
             {item.description && (
-              <p class="text-xs text-text-secondary mt-0.5 line-clamp-2">
+              <p class="text-xs text-muted mt-0.5 line-clamp-2">
                 {item.description}
               </p>
             )}

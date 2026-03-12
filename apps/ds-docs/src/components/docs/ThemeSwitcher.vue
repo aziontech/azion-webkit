@@ -55,18 +55,22 @@ const currentThemeLabel = computed(() => {
 });
 
 /**
- * Apply theme to document
+ * Apply theme to document.
+ * Keeps Tailwind dark: utilities (.dark) and Azion PrimeVue theme vars (azion-light/azion-dark) in sync.
  */
 function applyTheme(theme: Theme) {
   const root = document.documentElement;
+  let isDark = false;
 
   if (theme === 'system') {
-    // Use system preference
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    root.classList.toggle('dark', prefersDark);
+    isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   } else {
-    root.classList.toggle('dark', theme === 'dark');
+    isDark = theme === 'dark';
   }
+
+  root.classList.toggle('dark', isDark);
+  root.classList.toggle('azion-dark', isDark);
+  root.classList.toggle('azion-light', !isDark);
 }
 
 /**

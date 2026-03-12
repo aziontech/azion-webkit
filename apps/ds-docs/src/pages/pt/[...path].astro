@@ -189,7 +189,7 @@ if (isPatternsIndexPage) {
     i18n={i18n}
   >
     <h1 class="text-black font-medium text-lg mb-1.5">Padrões</h1>
-    <p class="text-sm text-text-secondary mb-8 mt-4">
+    <p class="text-sm text-muted mb-8 mt-4">
       Padrões de design e boas práticas para construir com o Azion Design System.
     </p>
     <Tabs>
@@ -210,7 +210,7 @@ if (isPatternsIndexPage) {
                       class="group block p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50/50 transition-colors"
                     >
                       <div class="flex items-center justify-between mb-2">
-                        <h3 class="font-medium font-sans text-text-primary group-hover:text-primary-700">
+                        <h3 class="font-medium font-sans text-base group-hover:text-primary-700">
                           {patternData.title}
                         </h3>
                         {patternData.status && (
@@ -229,7 +229,7 @@ if (isPatternsIndexPage) {
                           </span>
                         )}
                       </div>
-                      <p class="text-sm font-sans text-text-secondary line-clamp-2">
+                      <p class="text-sm font-sans text-muted line-clamp-2">
                         {patternData.description}
                       </p>
                     </a>
@@ -239,7 +239,7 @@ if (isPatternsIndexPage) {
             </section>
           ))
         ) : (
-          <p class="text-sm text-text-secondary">Nenhum padrão documentado ainda. Volte em breve.</p>
+          <p class="text-sm text-muted">Nenhum padrão documentado ainda. Volte em breve.</p>
         )}
       </Fragment>
       <Fragment slot="status">
@@ -274,7 +274,7 @@ if (isPatternsIndexPage) {
     i18n={i18n}
   >
     <h1 class="text-black font-medium text-lg mb-1.5">Blocos</h1>
-    <p class="text-sm text-text-secondary mb-8 mt-4">
+    <p class="text-sm text-muted mb-8 mt-4">
       Blocos de UI que combinam vários componentes para casos de uso comuns.
     </p>
     <Tabs>
@@ -295,7 +295,7 @@ if (isPatternsIndexPage) {
                       class="group block p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50/50 transition-colors"
                     >
                       <div class="flex items-center justify-between mb-2">
-                        <h3 class="font-medium font-sans text-text-primary group-hover:text-primary-700">
+                        <h3 class="font-medium font-sans text-base group-hover:text-primary-700">
                           {blockData.title}
                         </h3>
                         {blockData.status && (
@@ -314,7 +314,7 @@ if (isPatternsIndexPage) {
                           </span>
                         )}
                       </div>
-                      <p class="text-sm font-sans text-text-secondary line-clamp-2">
+                      <p class="text-sm font-sans text-muted line-clamp-2">
                         {blockData.description}
                       </p>
                     </a>
@@ -324,7 +324,7 @@ if (isPatternsIndexPage) {
             </section>
           ))
         ) : (
-          <p class="text-sm text-text-secondary">Nenhum bloco documentado ainda. Volte em breve.</p>
+          <p class="text-sm text-muted">Nenhum bloco documentado ainda. Volte em breve.</p>
         )}
       </Fragment>
       <Fragment slot="status">

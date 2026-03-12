@@ -147,12 +147,36 @@ const resolvedPropsValues = computed<PropsValues>(() => {
   return resolved;
 });
 
-// Generate code from current state
+// Props to pass to the component (exclude demo-only props; they drive mocks in the preview)
+const propsValuesForComponent = computed<PropsValues>(() => {
+  const resolved = resolvedPropsValues.value;
+  const out: PropsValues = {};
+  for (const [name, metadata] of Object.entries(props.props)) {
+    const meta = metadata as { demoOnly?: boolean };
+    if (meta.demoOnly) continue;
+    if (name in resolved) out[name] = resolved[name];
+  }
+  return out;
+});
+
+// Demo-only values (e.g. "Simulate status") for preview mocks; not passed to the component
+const demoOnlyValues = computed<PropsValues>(() => {
+  const resolved = resolvedPropsValues.value;
+  const out: PropsValues = {};
+  for (const [name, metadata] of Object.entries(props.props)) {
+    const meta = metadata as { demoOnly?: boolean };
+    if (!meta.demoOnly) continue;
+    if (name in resolved) out[name] = resolved[name];
+  }
+  return out;
+});
+
+// Generate code from current state (exclude demo-only props from snippet)
 const generatedCode = computed<GeneratedCode>(() => {
   return generateCode(
     props.componentName,
     props.props,
-    propsValues.value,
+    propsValuesForComponent.value,
     props.slotContent
   );
 });
@@ -191,7 +215,8 @@ defineExpose({
       <div class="flex flex-col gap-2">
         <PlaygroundPreview
           :component="resolvedComponent"
-          :props-values="resolvedPropsValues"
+          :props-values="propsValuesForComponent"
+          :demo-only-values="demoOnlyValues"
           :surface="surface"
           :preview-theme="previewTheme"
           :custom-class="previewClass"

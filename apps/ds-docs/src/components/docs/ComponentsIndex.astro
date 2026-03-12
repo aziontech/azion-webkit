@@ -76,7 +76,7 @@ const urlPrefix = language === 'en' ? '/components' : `/${language}/components`;
                 class="group block p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50/50 transition-colors"
               >
                 <div class="flex items-center justify-between mb-2">
-                  <h3 class="font-medium font-sans text-text-primary group-hover:text-primary-700">
+                  <h3 class="font-medium font-sans text-base group-hover:text-primary-700">
                     {component.data.title}
                   </h3>
                   {component.data.status && (
@@ -90,7 +90,7 @@ const urlPrefix = language === 'en' ? '/components' : `/${language}/components`;
                     </span>
                   )}
                 </div>
-                <p class="text-sm font-sans text-text-secondary line-clamp-2">
+                <p class="text-sm font-sans text-muted line-clamp-2">
                   {component.data.description}
                 </p>
               </a>

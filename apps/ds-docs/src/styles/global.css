@@ -1,6 +1,9 @@
 /* Import fonts - must be before @tailwind directives */
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
 
+/* Design tokens as CSS variables (light/dark) – same selectors as Tailwind darkMode */
+@import './theme-vars.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

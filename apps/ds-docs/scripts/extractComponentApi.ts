@@ -639,7 +639,9 @@ export function extractAllComponentApis(options: Partial<ExtractionOptions> = {}
 }
 
 /**
- * Write API JSON files
+ * Write API JSON files.
+ * Only writes the given apis; does not delete other files in outputDir
+ * (webkit and ds-docs may both write to the same directory).
  */
 export function writeApiJsonFiles(
   apis: ComponentApi[],
