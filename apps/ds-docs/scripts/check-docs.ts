@@ -91,12 +91,12 @@ function parseFrontmatter(content: string): Record<string, unknown> | null {
 }
 
 /**
- * Check frontmatter validation
+ * Check frontmatter validation (aligned with src/content/config.ts schema)
  */
 function checkFrontmatter(files: string[]): CheckResult {
   const errors: string[] = [];
   const warnings: string[] = [];
-  const requiredFields = ['title', 'description', 'section', 'version', 'language'];
+  const requiredFields = ['title', 'description', 'type'];
 
   for (const file of files) {
     const content = fs.readFileSync(file, 'utf-8');
@@ -314,17 +314,18 @@ async function main() {
   console.log(`Total Warnings: ${totalWarnings}`);
   console.log('');
 
-  if (totalErrors > 0) {
+  const exitCode = totalErrors > 0 ? 1 : 0;
+  if (exitCode !== 0) {
     console.log('❌ Documentation check failed');
-    process.exit(1);
   } else {
     console.log('✅ Documentation check passed');
-    process.exit(0);
   }
+  process.exit(exitCode);
 }
 
 // Run main function
-main().catch((error) => {
-  console.error('Error:', error);
+main().catch((err: unknown) => {
+  const message = err instanceof Error ? err.message : String(err);
+  console.error('Error:', message);
   process.exit(1);
 });

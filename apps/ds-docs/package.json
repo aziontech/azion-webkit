@@ -15,12 +15,12 @@
     "build:scaffold:dry": "tsx scripts/scaffoldComponentDocs.ts --dry-run --verbose",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "node --loader ts-node/esm scripts/check-docs.ts lint",
-    "lint:links": "node --loader ts-node/esm scripts/check-docs.ts links",
-    "lint:rules": "node --loader ts-node/esm scripts/check-docs.ts rules",
-    "lint:coverage": "node --loader ts-node/esm scripts/checkComponentDocs.ts",
-    "check": "node --loader ts-node/esm scripts/check-docs.ts all",
-    "changelog": "node --loader ts-node/esm scripts/generateChangelog.ts"
+    "lint": "tsx scripts/check-docs.ts lint",
+    "lint:links": "tsx scripts/check-docs.ts links",
+    "lint:rules": "tsx scripts/check-docs.ts rules",
+    "lint:coverage": "tsx scripts/checkComponentDocs.ts",
+    "check": "tsx scripts/check-docs.ts all",
+    "changelog": "tsx scripts/generateChangelog.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-03-13T00:43:10.301Z",
+    "generated": "2026-03-13T06:38:23.009Z",
     "count": 86,
     "language": "en",
     "version": "v1",
@@ -26,7 +26,7 @@
       "url": "/components/azion-system-status",
       "version": "v1",
       "language": "en",
-      "category": "form",
+      "category": "feedback",
       "status": "experimental"
     },
     {
@@ -472,19 +472,11 @@
       "description": "The color system provides semantic tokens for consistent and accessible interfaces.",
       "headings": [
         "Color Philosophy",
-        "Primary Colors",
-        "Semantic Colors",
-        "Success",
-        "Warning",
-        "Error",
-        "Info",
-        "Usage Guidelines",
-        "Do",
-        "Don't",
-        "Related"
+        "Primitive palette",
+        "Semantic tokens"
       ],
       "tags": [],
-      "content": "Color Philosophy Our color system is designed to be: Accessible: All color combinations meet WCAG 2.1 AA contrast requirements Semantic: Colors are named by purpose, not appearance Consistent: The same tokens are used across all components Themeable: Colors adapt automatically to light and dark modes Primary Colors The primary color palette represents the Azion brand: Token Light Mode Dark Mode Usage ------- ------------ ----------- ------- Light backgrounds Hover states Primary actions Active states Text on light Semantic Colors Semantic colors convey meaning: Success Used for positive actions and confirmations. Warning Used for cautionary messages and alerts. Error Used for error states and destructive actions. Info Used for informational messages and neutral states. Usage Guidelines Do Use semantic tokens instead of raw color values Ensure sufficient contrast for text Use color consistently across similar elements Don't Don't use color alone to convey information Don't create new colors outside the system Don't use decorative colors that distract from content Related Typography - Typography system Tokens - Design token reference",
+      "content": "Color Philosophy Our color system is designed to be: Accessible: All color combinations meet WCAG 2.1 AA contrast requirements Semantic: Colors are named by purpose, not appearance Consistent: The same tokens are used across all components Themeable: Colors adapt automatically to light and dark modes Primitive palette Raw color steps by family. Use these only when defining new semantics or when you need a fixed value; in UI components, prefer semantic tokens. Semantic tokens Semantic tokens map to different values in light and dark themes. Use them in component code so colors adapt automatically.",
       "url": "/foundations/color",
       "version": "v1",
       "language": "en"
@@ -1232,19 +1224,11 @@
       "description": "O sistema de cores fornece tokens semânticos para interfaces consistentes e acessíveis.",
       "headings": [
         "Filosofia de Cores",
-        "Cores Primárias",
-        "Cores Semânticas",
-        "Sucesso",
-        "Alerta",
-        "Erro",
-        "Informação",
-        "Diretrizes de Uso",
-        "Faça",
-        "Não Faça",
-        "Relacionados"
+        "Paleta primitiva",
+        "Tokens semânticos"
       ],
       "tags": [],
-      "content": "Filosofia de Cores Nosso sistema de cores foi projetado para ser: Acess vel: Todas as combina es de cores atendem aos requisitos de contraste WCAG 2.1 AA Sem ntico: As cores s o nomeadas por prop sito, n o por apar ncia Consistente: Os mesmos tokens s o usados em todos os componentes Tematiz vel: As cores se adaptam automaticamente aos modos claro e escuro Cores Prim rias A paleta de cores prim rias representa a marca Azion: Token Modo Claro Modo Escuro Uso ------- ------------ ------------- ----- Fundos claros Estados de hover A es prim rias Estados ativos Texto em fundo claro Cores Sem nticas Cores sem nticas transmitem significado: Sucesso Usado para a es positivas e confirma es. Alerta Usado para mensagens de cautela e avisos. Erro Usado para estados de erro e a es destrutivas. Informa o Usado para mensagens informativas e estados neutros. Diretrizes de Uso Fa a Use tokens sem nticos em vez de valores de cor brutos Garanta contraste suficiente para texto Use cores de forma consistente em elementos semelhantes N o Fa a N o use cor sozinha para transmitir informa es N o crie novas cores fora do sistema N o use cores decorativas que distraiam do conte do Relacionados Tipografia - Sistema de tipografia Tokens - Refer ncia de design tokens",
+      "content": "Filosofia de Cores Nosso sistema de cores foi projetado para ser: Acess vel: Todas as combina es de cores atendem aos requisitos de contraste WCAG 2.1 AA Sem ntico: As cores s o nomeadas por prop sito, n o por apar ncia Consistente: Os mesmos tokens s o usados em todos os componentes Tematiz vel: As cores se adaptam automaticamente aos modos claro e escuro Paleta primitiva Etapas de cor brutas por fam lia. Use-as apenas ao definir novas sem nticas ou quando precisar de um valor fixo; em componentes de UI, prefira tokens sem nticos. Tokens sem nticos Os tokens sem nticos mapeiam para valores diferentes nos temas claro e escuro. Use-os no c digo dos componentes para que as cores se adaptem automaticamente.",
       "url": "/pt/foundations/color",
       "version": "v1",
       "language": "pt"
@@ -1326,7 +1310,7 @@
         "Recursos relacionados"
       ],
       "tags": [],
-      "content": "Tokens Design tokens s o as menores unidades do sistema de design. Eles armazenam valores visuais como cores para manter produtos e plataformas consistentes. Neste monorepo, os tokens s o fornecidos pelo pacote . Eles suportam temas claro e escuro por meio de tokens sem nticos e podem ser usados com Tailwind CSS na documenta o e em outros apps. Pacote e estrutura O pacote de tema . Os design tokens ficam no export . Instala o No monorepo, o app de docs j depende do tema: Em um projeto externo: Estrutura dos tokens Dentro de : Primitivos s o valores fixos (ex.: , ). N o mudam com o tema; use do Tailwind quando precisar. Sem nticos s o definidos por tema (light dark) em . O plugin Tailwind gera as classes que seguem o tema ativo ( ou ). Tokens primitivos Use primitivos quando precisar de valor fixo ou ao definir novas sem nticas. Categoria Exemplo Uso ---------- --------- ----- Neutros Superf cies, bordas, texto sem sem ntico Primary (laranja) Marca; o laranja principal Accent (violeta) Destaques Surface , , Camadas Status , , , Estados No Tailwind (docs): O config estende com , , e de . Use , , , etc. Em JS: Tokens sem nticos Os tokens sem nticos s o conscientes de tema: um nome mapeia para valores diferentes em light e dark. O plugin Tailwind ( ) gera utilit rios que mudam com (e ). Como a documenta o usa Config Tailwind: , , e com primitives surface primaryBrand accent de . Classes do plugin (sem precisar de ): Texto: , , , , , . Fundo: , , , , e variantes sem nticas. Borda: , , , e variantes sem nticas. Use , , n o , , . Exemplos Exemplos visuais de tokens sem nticos Cores de texto text-base Texto prim rio para t tulos e corpo text-muted Texto secund rio text-link Cor de link Camadas de fundo Camada 1 bg-layer1 Camada 2 bg-layer2 Canvas bg-canvas Bordas border-base border-primary border-accent Sincroniza o e manuten o Os tokens podem ser sincronizados a partir do Figma pelos scripts em .",
+      "content": "Tokens Design tokens s o as menores unidades do sistema de design. Eles armazenam valores visuais como cores para manter produtos e plataformas consistentes. Neste monorepo, os tokens s o fornecidos pelo pacote . Eles suportam temas claro e escuro por meio de tokens sem nticos e podem ser usados com Tailwind CSS na documenta o e em outros apps. Pacote e estrutura O pacote de tema . Os design tokens ficam no export . Instala o No monorepo, o app de docs j depende do tema: Em um projeto externo: Estrutura dos tokens Dentro de : Primitivos s o valores fixos (ex.: , ). N o mudam com o tema; use do Tailwind quando precisar. Sem nticos s o definidos por tema (light dark) em . O plugin Tailwind gera as classes que seguem o tema ativo ( ou ). Tokens primitivos Use primitivos quando precisar de valor fixo ou ao definir novas sem nticas. Categoria Exemplo Uso ---------- --------- ----- Neutros Superf cies, bordas, texto sem sem ntico Primary (laranja) Marca; o laranja principal Accent (violeta) Destaques Surface , , Camadas Status , , , Estados No Tailwind (docs): O config estende com , , e de . Use , , , etc. Em JS: Tokens sem nticos Os tokens sem nticos s o conscientes de tema: um nome mapeia para valores diferentes em light e dark. O plugin Tailwind ( ) gera utilit rios que mudam com (e ). Como a documenta o usa Config Tailwind: , , e com primitives surface primaryBrand accent de . Classes do plugin (sem precisar de ): Texto: , , , , , . Fundo: , , , , e variantes sem nticas. Borda: , , , e variantes sem nticas. Use , , n o , , . Exemplos Exemplos visuais de tokens sem nticos Cores de texto text-default Texto prim rio para t tulos e corpo text-muted Texto secund rio text-link Cor de link Camadas de fundo Camada 1 bg-layer1 Camada 2 bg-layer2 Canvas bg-canvas Bordas border-default border-primary border-accent Sincroniza o e manuten o Os tokens podem ser sincronizados a partir do Figma pelos scripts em .",
       "url": "/pt/tokens",
       "version": "v1",
       "language": "pt"

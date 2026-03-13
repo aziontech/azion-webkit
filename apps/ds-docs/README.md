@@ -6,68 +6,80 @@ A product-grade documentation platform for the Azion Design System, built with A
 
 This documentation platform serves as the central hub for the Azion Design System, providing:
 
-- **Component Documentation**: Comprehensive docs for all Vue components
-- **Design Foundations**: Principles, tokens, and guidelines
+- **Component Documentation**: Comprehensive docs for all Vue/Webkit components
+- **Design Foundations**: Principles, tokens, and guidelines (color, typography, etc.)
 - **Interactive Demos**: Live component previews with code examples
-- **Accessibility Guidelines**: WCAG compliance information
+- **Playground**: Interactive component playground with prop controls
+- **Search**: Full-text search over documentation (search index built at build time)
+- **i18n**: Multilingual support (English and Portuguese) via `v1/en` and `v1/pt` content
+- **Accessibility Guidelines**: WCAG compliance and keyboard/ARIA documentation
 
 ## Tech Stack
 
-- **[Astro](https://astro.build/)**: Static site generator with Islands architecture
+- **[Astro](https://astro.build/)** (v5): Static site generator with Islands architecture
 - **[Vue 3](https://vuejs.org/)**: Interactive components via Astro integration
 - **[Tailwind CSS](https://tailwindcss.com/)**: Utility-first styling
+- **MDX**: Markdown with JSX for rich content
+- **Shiki**: Syntax highlighting for code blocks
+- **PrimeVue** (theme): UI primitives where needed
+- **@aziontech/webkit**: Design system components used in demos and playground
 
 ## Architecture
 
 ### Key Decisions
 
-1. **Astro without Starlight**: We built a custom documentation platform instead of using Starlight to have full control over layout, behavior, and custom components.
+1. **Astro without Starlight**: Custom documentation platform for full control over layout, behavior, and components.
 
-2. **Islands Architecture**: Vue components are hydrated selectively using Astro's Islands pattern:
+2. **Islands Architecture**: Vue components are hydrated selectively:
    - `client:load` for immediately interactive components
    - `client:visible` for below-fold content
-   - `client:only` for heavy interactive features
+   - `client:only` for heavy interactive features (e.g. playground, search)
 
-3. **Content Collections**: All documentation content is managed through Astro's Content Collections with Zod schema validation.
+3. **Content Collections**: Documentation is in Astro Content Collections with Zod schema validation. Content is organized by version and language: `src/content/v1/en` and `src/content/v1/pt`.
 
-4. **Monorepo Integration**: The docs app consumes Design System packages via workspace protocol (`workspace:*`).
+4. **Monorepo Integration**: The app consumes workspace packages: `@aziontech/icons`, `@aziontech/theme`, `@aziontech/webkit`.
+
+5. **Build Pipeline**: Production build runs search index generation, component API extraction, and doc scaffolding before the Astro build.
 
 ### Directory Structure
 
 ```
-apps/docs/
+apps/ds-docs/
+├── scripts/                    # Build-time and tooling scripts
+│   ├── build-search-index.ts   # Generates public/search-index.json
+│   ├── extractComponentApi.ts  # Extracts props/slots/events from Vue/Webkit
+│   ├── scaffoldComponentDocs.ts # Scaffolds/updates component MDX from webkit
+│   ├── check-docs.ts           # Lint (links, rules, all)
+│   ├── checkComponentDocs.ts   # Doc coverage checks
+│   └── generateChangelog.ts   # Changelog generation
+│
 ├── src/
 │   ├── components/
-│   │   └── docs/           # Documentation UI components
-│   │       ├── PageHeader.vue
-│   │       ├── StatusBadge.vue
-│   │       ├── MetadataLinks.vue
-│   │       ├── DemoPreview.vue
-│   │       └── CodeBlock.astro
+│   │   ├── docs/               # Documentation UI (PageHeader, StatusBadge, etc.)
+│   │   ├── demo/               # Demo wrappers (e.g. AzButton)
+│   │   ├── playground/        # Playground Vue components and code generator
+│   │   └── search/            # Search modal and engine
 │   │
-│   ├── content/            # Markdown content
-│   │   ├── config.ts       # Content collection schemas
-│   │   ├── components/     # Component documentation
-│   │   └── get-started/    # Getting started guides
+│   ├── content/
+│   │   └── config.ts          # Content collection schemas (Zod)
+│   │   └── v1/
+│   │       ├── en/            # English: components/, foundations/, get-started/, etc.
+│   │       └── pt/            # Portuguese (same structure)
 │   │
-│   ├── layouts/
-│   │   ├── DocsLayout.astro      # Base layout
-│   │   └── ComponentPage.astro   # Component page template
+│   ├── generated/             # Generated at build time (do not edit)
+│   │   ├── component-api/     # Extracted API JSON per component
+│   │   ├── component-props/   # Webkit component props (for playground)
+│   │   └── playground-registry.ts
 │   │
-│   ├── pages/
-│   │   ├── index.astro           # Homepage
-│   │   ├── components/           # Component routes
-│   │   └── get-started/          # Guide routes
-│   │
-│   ├── lib/                # Utility functions
-│   │   └── content.ts
-│   │
-│   └── styles/
-│       └── global.css      # Global styles
+│   ├── layouts/               # BaseLayout, PatternPageLayout, etc.
+│   ├── pages/                 # Astro routes (components/, foundations/, pt/, etc.)
+│   ├── lib/                   # Utilities (content, docs, search)
+│   ├── styles/                # global.css, primevue-theme.scss
+│   └── integrations/         # Astro integration (e.g. search-index)
 │
-├── public/                 # Static assets
-├── astro.config.mjs        # Astro configuration
-├── tailwind.config.mjs     # Tailwind configuration
+├── public/                    # Static assets (includes search-index.json after build)
+├── astro.config.mjs
+├── tailwind.config.mjs
 └── package.json
 ```
 
@@ -88,30 +100,53 @@ pnpm install
 ### Development
 
 ```bash
-# Start development server
-pnpm docs:dev
+# From monorepo root (if using pnpm workspaces)
+pnpm --filter ds-docs run dev
 
 # Or from this directory
-pnpm dev
+cd apps/ds-docs && pnpm dev
 ```
 
 ### Build
 
+The full build runs search index, API extraction, and scaffold steps, then Astro:
+
 ```bash
-# Build for production
-pnpm docs:build
+# From apps/ds-docs
+pnpm build
 
 # Preview production build
-pnpm docs:preview
+pnpm preview
+```
+
+Optional steps (usually run as part of `build`):
+
+```bash
+pnpm build:search    # Build search index only
+pnpm build:api       # Extract component API from Vue/Webkit only
+pnpm build:scaffold   # Scaffold/update component docs from webkit
+pnpm build:scaffold:dry  # Dry run with verbose output
+pnpm build:api:webkit   # Extract API from webkit core (../../packages/webkit/src/core)
+```
+
+### Lint & Checks
+
+```bash
+pnpm lint            # Lint docs (content rules)
+pnpm lint:links      # Check internal/external links
+pnpm lint:rules      # Lint rule files
+pnpm lint:coverage   # Check component doc coverage
+pnpm check           # Run all checks (lint + links + rules)
+pnpm changelog       # Generate changelog
 ```
 
 ## Content Authoring
 
 ### Creating a Component Page
 
-1. Create a new markdown file in `src/content/components/`:
+1. Create a new MDX file under `src/content/v1/en/components/` (and optionally `v1/pt/components/` for Portuguese):
 
-```markdown
+```mdx
 ---
 title: ComponentName
 description: Brief description of the component.
@@ -122,6 +157,7 @@ since: 1.0.0
 figma: https://figma.com/...
 storybook: https://storybook.azion.com/...
 source: https://github.com/aziontech/webkit/...
+apiFrom: ComponentName   # Optional: load API from generated/component-api/ComponentName.json
 ---
 
 ## Overview
@@ -130,132 +166,89 @@ Description of the component...
 
 ## Examples
 
-<DemoPreview title="Example title">
-  <!-- Component demo HTML -->
-</DemoPreview>
+<ComponentPreview title="Example title">
+  <!-- Vue/HTML demo -->
+</ComponentPreview>
 
 ## API
 
-### Props
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `propName` | `string` | - | Description |
+Props/slots/events can be written manually or loaded via `apiFrom` from extracted API.
 ```
 
-2. The page will automatically be available at `/components/[slug]`.
+2. The page will be available at `/components/[slug]` (and `/pt/components/[slug]` for PT).
 
 ### Frontmatter Schema
 
-All component pages require:
+Required for component pages:
 
 ```yaml
-title: string           # Component name
-description: string     # Brief description
-type: component         # Page type
-category: string        # Component category
+title: string
+description: string
+type: component
 ```
 
-Optional fields:
+Optional:
 
 ```yaml
+category: form | navigation | feedback | data-display | layout | utility
 status: stable | beta | deprecated | planned | experimental
-since: string           # Version introduced
-figma: string           # Figma link
-storybook: string       # Storybook link
-source: string          # Source code link
-related: string[]       # Related components
+since: string
+deprecatedIn: string
+figma: string
+storybook: string
+source: string
+related: string[]
+apiFrom: string      # Key for generated/component-api/<apiFrom>.json
+navLabel: string
+order: number
+hidden: boolean
+version: string      # default v1
+language: string     # default en
 ```
+
+Other content types (foundation, token, block, pattern, template, guide, icon, contributing, playground) use the same base schema with type-specific fields; see `src/content/config.ts`.
 
 ## Documentation Components
 
-### PageHeader
+- **PageHeader**: Page title, status, and metadata links (Figma, Storybook, source).
+- **StatusBadge**: Component status with semantic styling.
+- **MetadataLinks**: Links to Figma, Storybook, source.
+- **ComponentPreview / DemoPreview**: Renders demos with optional code.
+- **CodeBlock**: Syntax-highlighted code with copy.
+- **Playground**: Interactive playground with prop controls (see `components/playground/`).
 
-Displays page title, status, and metadata links.
+## Path Aliases
 
-```astro
-<PageHeader
-  title="Button"
-  description="Primary action trigger"
-  status="stable"
-  since="1.0.0"
-  source="https://github.com/..."
-  figma="https://figma.com/..."
-/>
-```
+Configured in `astro.config.mjs`:
 
-### DemoPreview
-
-Renders component demos with optional code display.
-
-```markdown
-<DemoPreview title="Basic example">
-  <button class="btn">Click me</button>
-</DemoPreview>
-```
-
-### StatusBadge
-
-Shows component status with appropriate styling.
-
-```astro
-<StatusBadge status="stable" />
-```
-
-### CodeBlock
-
-Syntax-highlighted code with copy functionality.
-
-```astro
-<CodeBlock code={codeString} language="vue" />
-```
+- `@` → `src`
+- `@components` → `src/components`
+- `@layouts` → `src/layouts`
+- `@lib` → `src/lib`
 
 ## Integration with Design System Packages
 
-The docs app is prepared to consume Design System packages:
+The app depends on:
 
 ```json
 {
-  "dependencies": {
-    "@aziontech/icons": "workspace:*",
-    "@aziontech/components": "workspace:*",
-    "@aziontech/theme": "workspace:*"
-  }
+  "@aziontech/icons": "workspace:*",
+  "@aziontech/theme": "workspace:*",
+  "@aziontech/webkit": "workspace:*"
 }
 ```
 
-Currently, only `@aziontech/icons` is available. When other packages are ready:
+- **Icons**: Used across the docs and in demos.
+- **Theme**: Tokens and SCSS partials (via `@theme-azion` alias) for PrimeVue theme.
+- **Webkit**: Component demos, playground, and API extraction source.
 
-1. Import components in markdown:
+## Future / Roadmap
 
-```markdown
----
-title: Button
----
+- **Versioning**: Support for multiple doc versions (e.g. v1 vs v2) in the URL and nav.
+- **Search**: Possible enhancements (filters, scoped search).
+- **Playground**: More components registered and more control types.
 
-import { Button } from '@aziontech/components';
-
-<DemoPreview>
-  <Button variant="primary">Click me</Button>
-</DemoPreview>
-```
-
-2. Use theme tokens in Tailwind config:
-
-```javascript
-import tokens from '@aziontech/theme/tokens';
-```
-
-## Future Features
-
-The following features are planned but not yet implemented:
-
-- **Versioning**: Support for multiple documentation versions
-- **i18n**: Multilingual support (English, Portuguese)
-- **Search**: Custom search engine with MiniSearch
-- **Playground**: Interactive component playground
-
-See the [Architecture Document](../../plans/ds-docs-architecture.md) for the complete roadmap.
+See the `plans/` folder in the monorepo for architecture and migration docs.
 
 ## Contributing
 
