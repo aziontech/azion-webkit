@@ -108,10 +108,12 @@ const containerStyle = computed(() => ({
 </script>
 
 <template>
-  <!-- Root establishes preview theme + bg so the whole preview area (incl. toolbar) matches light/dark -->
+  <!-- Root establishes preview theme + bg so the whole preview area (incl. toolbar) matches light/dark.
+       azion + azionThemeClass ensure CSS vars (theme-vars.css) apply to the entire preview subtree,
+       independent of the site theme. -->
   <div
-    class="flex flex-col h-full min-h-[200px] bg-base"
-    :class="wrapperClass"
+    class="flex flex-col h-full min-h-[200px] bg-base azion"
+    :class="[wrapperClass, azionThemeClass]"
   >
     <!-- Optional toolbar slot -->
     <div v-if="$slots.toolbar" class="flex items-center justify-end gap-2 px-2 pt-2">

@@ -4,7 +4,10 @@
 /* Design tokens as CSS variables (light/dark) – same selectors as Tailwind darkMode */
 @import './theme-vars.css';
 
-@tailwind base;
+@layer tailwind-base {
+  @tailwind base;
+}
+
 @tailwind components;
 @tailwind utilities;
 
@@ -160,4 +163,12 @@
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Playground preview: when preview is light, force background so it stays light
+   even when the site is in dark mode. Higher specificity than .dark .bg-base and
+   explicit value so it wins regardless of cascade order. */
+.playground-preview-light.azion.azion-light,
+.playground-preview-light.azion.azion-light .bg-base {
+  background-color: #ffffff;
 }
