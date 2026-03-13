@@ -53,6 +53,22 @@ interface SemanticRow {
   light: string;
   dark: string;
 }
+/** Preferred order: these tokens appear first in each section. */
+const TEXT_ORDER = ['text-default', 'text-muted', 'text-primary', 'text-accent'];
+const BACKGROUND_ORDER = ['bg-canvas', 'bg-surface', 'bg-surface-raised', 'bg-surface-overlay'];
+const BORDER_ORDER = ['border-default', 'border-subtle', 'border-strong'];
+
+function sortRowsByPreferredOrder(rows: SemanticRow[], order: string[]): void {
+  rows.sort((a, b) => {
+    const i = order.indexOf(a.token);
+    const j = order.indexOf(b.token);
+    if (i === -1 && j === -1) return a.token.localeCompare(b.token);
+    if (i === -1) return 1;
+    if (j === -1) return -1;
+    return i - j;
+  });
+}
+
 const rowsBySection: Record<string, SemanticRow[]> = { TEXT: [], BACKGROUND: [], BORDER: [], OTHER: [] };
 semanticKeys.sort().forEach((key: string) => {
   const section = bySection(key);
@@ -66,6 +82,10 @@ semanticKeys.sort().forEach((key: string) => {
     dark: darkVal ?? '—',
   });
 });
+
+sortRowsByPreferredOrder(rowsBySection.TEXT, TEXT_ORDER);
+sortRowsByPreferredOrder(rowsBySection.BACKGROUND, BACKGROUND_ORDER);
+sortRowsByPreferredOrder(rowsBySection.BORDER, BORDER_ORDER);
 
 const sections: { title: string; rows: SemanticRow[] }[] = [
   { title: 'TEXT', rows: rowsBySection.TEXT },
