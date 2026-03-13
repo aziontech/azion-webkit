@@ -177,20 +177,20 @@ const donts = usage?.doDonts?.filter(item => item.type === 'dont') || [];
 <style>
   /* Section styling for consistent spacing */
   .usage-content :global(h2) {
-    @apply text-2xl font-medium text-base tracking-tight mt-10 mb-4 border-b border-base pb-2;
+    @apply text-2xl font-medium dark:text-white text-black tracking-tight mt-10 mb-2 pb-2;
   }
   
   .usage-content :global(h3) {
-    @apply text-xl font-medium text-base mt-8 mb-3;
+    @apply text-xl font-medium dark:text-white text-black mt-8 mb-3;
   }
   
   .usage-content :global(h4) {
-    @apply text-lg font-medium text-base mt-6 mb-2;
+    @apply text-lg font-medium dark:text-white text-black mt-6 mb-2;
   }
   
   /* Paragraph spacing */
   .usage-content :global(p) {
-    @apply mb-4 leading-relaxed text-muted;
+    @apply mb-4 leading-relaxed text-muted dark:text-[#a3a3a3];
   }
   
   /* List styling */
@@ -200,12 +200,12 @@ const donts = usage?.doDonts?.filter(item => item.type === 'dont') || [];
   }
   
   .usage-content :global(li) {
-    @apply mb-2 text-muted;
+    @apply mb-2 text-muted dark:text-[#a3a3a3];
   }
   
   /* Link styling */
   .usage-content :global(a) {
-    @apply text-primary-600 hover:text-primary-700 underline underline-offset-2;
+    @apply text-link hover:text-link-hover underline underline-offset-2;
   }
   
   /* Code styling */
@@ -236,7 +236,7 @@ const donts = usage?.doDonts?.filter(item => item.type === 'dont') || [];
   }
 
   .usage-list li {
-    @apply text-muted leading-relaxed;
+    @apply text-muted dark:text-[#a3a3a3] leading-relaxed;
   }
 
   /* Do/Don't grid */

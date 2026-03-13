@@ -77,7 +77,7 @@ const documentationText = computed(() => {
       <nav class="flex items-center gap-2 text-sm" aria-label="Breadcrumb">
         <ol class="flex items-center gap-2">
           <li>
-            <a :href="homeLink" class="text-muted hover:text-white transition-colors">
+            <a :href="homeLink" class="text-muted hover:dark:text-white hover:text-black transition-colors">
               {{ documentationText }}
             </a>
           </li>
@@ -85,7 +85,7 @@ const documentationText = computed(() => {
             <span class="text-muted" aria-hidden="true">/</span>
             <a
               :href="sectionLink"
-              class="text-white font-medium hover:text-white transition-colors"
+              class="text-black dark:text-white hover:text-black dark:hover:text-white transition-colors"
               :aria-current="item && !item.isIndex ? undefined : 'page'"
             >
               {{ sectionLabel }}
@@ -93,7 +93,7 @@ const documentationText = computed(() => {
           </li>
           <li v-if="item && !item.isIndex" class="flex items-center gap-2">
             <span class="text-muted" aria-hidden="true">/</span>
-            <span class="text-white" aria-current="page">
+            <span class="dark:text-white text-black" aria-current="page">
               {{ item.navLabel }}
             </span>
           </li>
@@ -110,7 +110,7 @@ const documentationText = computed(() => {
         >
           <i class="pi pi-search text-sm" aria-hidden="true" />
           <span class="hidden sm:inline w-full text-left">Search</span>
-          <kbd class="hidden sm:inline-flex px-1.5 py-0.5 text-xs text-white bg-black rounded font-sans">⌘+K</kbd>
+          <kbd class="hidden sm:inline-flex px-1.5 py-0.5 text-xs text-black dark:text-white bg-base border border-base rounded font-sans">⌘+K</kbd>
         </button>
         
         <!-- Version switcher -->

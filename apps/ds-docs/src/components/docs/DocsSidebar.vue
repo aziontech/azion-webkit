@@ -63,7 +63,7 @@ const brandName = computed(() => {
           <svg xmlns="http://www.w3.org/2000/svg" width="93" height="18" fill="none" viewBox="0 0 93 18">
             <path fill="#F3652B" fill-rule="evenodd" d="M18.744 0 .504 15.357 0 18h2.628l14.13-11.89L14.48 18h3.447l3.448-18h-2.631Zm6.078 0-.651 3.4h11.905L21.885 15.35l-.51 2.65h17.927l.652-3.401H28.049L42.243 2.647 42.75 0H24.822Zm21.303 0L42.75 18h3.374L49.5 0h-3.375Zm6.822 0L49.5 18h17.927l3.447-18H52.947Zm2.8 3.4h11.02l-2.145 11.2h-11.02l2.146-11.2ZM88.802 0l-1.53 7.985 2.785 3.461L92.249 0h-3.447Zm-14.48 0-3.448 18h3.45l2.362-12.34L86.646 18h2.156l.426-2.204L76.478 0h-2.156Z" clip-rule="evenodd"/>
           </svg>
-          <span class="text-white text-sm italic leading-none -ml-1 -mb-1">{{ brandName }}</span>
+          <span class="dark:text-muted text-muted text-sm italic leading-none -ml-1 -mb-1">{{ brandName }}</span>
         </a>
       </div>
       

@@ -215,11 +215,12 @@ defineExpose({
 </script>
 
 <template>
-  <div class="flex flex-col my-6 bg-white border border-base rounded-lg overflow-hidden">
+  <!-- Outer card stays neutral border; preview column gets theme bg inside PlaygroundPreview -->
+  <div class="flex flex-col my-6 bg-base border border-base rounded-lg overflow-hidden">
     <!-- Main content area -->
     <div class="grid grid-cols-1 md:grid-cols-[1fr_280px]">
-      <!-- Preview section -->
-      <div class="flex flex-col gap-2">
+      <!-- Preview section: min-h so bg-base from PlaygroundPreview fills; overflow hidden clips rounded corner -->
+      <div class="flex flex-col gap-2 min-h-0 rounded-tl-lg md:rounded-l-lg overflow-hidden">
         <PlaygroundPreview
           :component="resolvedComponent"
           :props-values="propsValuesForComponent"

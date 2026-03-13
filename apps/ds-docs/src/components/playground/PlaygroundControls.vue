@@ -78,13 +78,13 @@ function togglePreviewTheme() {
 <template>
   <div class="flex flex-col gap-4 pb-4">
     <!-- Header -->
-    <div class="flex items-center justify-between pb-3 border-b border-base px-4 pt-4 bg-canvas">
+    <div class="flex items-center justify-between pb-3 border-b border-base px-4 pt-4 dark:bg-canvas bg-white">
       <h3 class="!text-lg !font-medium !text-base !m-0">
         Props
       </h3>
       <div class="flex items-center gap-1.5">
         <button
-          class="flex items-center gap-1.5 py-1.5 px-3 text-xs font-medium text-muted bg-transparent border border-base rounded-md cursor-pointer transition-all duration-150 hover:bg-layer1-hover font-mono"
+          class="flex items-center gap-1.5 py-1.5 px-3 h-8 text-xs font-medium text-muted bg-transparent border border-base rounded-md cursor-pointer transition-all duration-150 hover:bg-layer1-hover font-mono"
           @click="resetToDefaults"
           title="Reset to defaults"
         >
@@ -93,7 +93,7 @@ function togglePreviewTheme() {
         </button>
         <button
           type="button"
-          class="inline-flex items-center justify-center w-8 h-8 p-0 text-xs text-muted bg-transparent border border-base rounded-md cursor-pointer transition-all duration-150 hover:text-base hover:bg-gray-50"
+          class="inline-flex items-center justify-center w-8 h-8 p-0 text-xs text-muted bg-transparent border border-base rounded-md cursor-pointer transition-all duration-150 hover:text-base hover:bg-layer1-hover"
           :title="previewTheme === 'light' ? 'Preview dark' : 'Preview light'"
           :aria-label="previewTheme === 'light' ? 'Switch preview to dark theme' : 'Switch preview to light theme'"
           @click="togglePreviewTheme"

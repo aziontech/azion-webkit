@@ -31,7 +31,7 @@ const {
       <h4 class="text-sm font-medium text-base mb-3 flex items-center gap-2">
         Keyboard Navigation
       </h4>
-      <div class="bg-gray-50 rounded-lg overflow-hidden">
+      <div class="bg-base rounded-lg overflow-hidden">
         <table class="w-full text-sm">
           <thead>
             <tr class="border-b border-base">
@@ -41,9 +41,9 @@ const {
           </thead>
           <tbody>
             {keyboard.map((item) => (
-              <tr class="border-b border-gray-100 last:border-0">
-                <td class="py-2 px-3 font-code text-gray-600">
-                  <kbd class="bg-white px-2 py-0.5 rounded border border-base text-xs font-mono">
+              <tr class="border-b border-base last:border-0">
+                <td class="py-2 px-3 font-code text-muted">
+                  <kbd class="bg-base dark:text-white text-black px-2 py-0.5 rounded border border-base text-xs font-mono">
                     {item.keys}
                   </kbd>
                 </td>
@@ -66,8 +66,8 @@ const {
       </h4>
       <div class="space-y-2">
         {aria.map((item) => (
-          <div class="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
-            <code class="font-code text-gray-600 text-xs bg-white px-2 py-0.5 rounded border border-base shrink-0">
+          <div class="flex items-start gap-3 p-3 bg-base rounded-lg">
+            <code class="font-code text-muted text-xs bg-base px-2 py-0.5 rounded border border-base shrink-0">
               {item.attribute}
             </code>
             <p class="text-sm text-muted">
@@ -87,7 +87,7 @@ const {
       </h4>
       <div class="flex flex-wrap gap-2">
         {wcag.map((criterion) => (
-          <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+          <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-green-500/20 dark:text-green-500 text-green-800">
             {criterion}
           </span>
         ))}

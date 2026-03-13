@@ -27,7 +27,7 @@ const inputId = computed(() => `prop-${props.name}`);
   <div class="flex items-center justify-between gap-3">
     <label
       :for="inputId"
-      class="text-xs font-medium text-gray-700 capitalize"
+      class="text-xs font-medium text-black dark:text-white capitalize"
     >
       {{ metadata.label || name }}
     </label>
@@ -37,8 +37,8 @@ const inputId = computed(() => `prop-${props.name}`);
       role="switch"
       :aria-checked="modelValue"
       :class="[
-        'relative w-10 h-6 border-0 rounded-full cursor-pointer transition-colors duration-200 focus:outline-none focus:ring-3 focus:ring-blue-500/30',
-        modelValue ? 'bg-blue-500' : 'bg-gray-300'
+        'relative w-10 h-6 border-0 rounded-full cursor-pointer transition-colors duration-200 ',
+        modelValue ? 'bg-primary' : 'bg-layer1 hover:bg-layer1-hover'
       ]"
       @click="emit('update:modelValue', !modelValue)"
     >

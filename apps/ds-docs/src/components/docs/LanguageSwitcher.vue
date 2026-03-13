@@ -144,7 +144,7 @@ onUnmounted(() => {
   <div class="relative inline-flex font-mono text-xs" ref="triggerRef">
     <button
       type="button"
-      class="inline-flex items-center gap-2 py-1.5 px-3 font-medium text-gray-800 bg-white border border-base rounded-md cursor-pointer transition-all duration-150 hover:bg-gray-50 hover:border-base focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+      class="inline-flex items-center gap-2 py-1.5 px-3 font-medium text-black dark:text-white bg-base border border-base rounded-md cursor-pointer transition-all duration-150 hover:bg-layer1-hover hover:border-base focus:outline-none focus:ring-2 focus:ring-blue-500/50"
       :aria-expanded="isOpen"
       aria-haspopup="listbox"
       :aria-label="`Current language: ${currentLanguageLabel}. Change language.`"
@@ -159,7 +159,7 @@ onUnmounted(() => {
       <div
         v-if="isOpen"
         ref="dropdownRef"
-        class="absolute min-w-40 text-xs bg-white border border-base rounded-md shadow-lg z-50 overflow-hidden language-switcher__dropdown"
+        class="absolute min-w-40 text-xs bg-base border border-base rounded-md shadow-lg z-50 overflow-hidden language-switcher__dropdown"
         :class="dropdownClasses"
         role="listbox"
         :aria-label="'Select language'"
@@ -168,14 +168,14 @@ onUnmounted(() => {
           v-for="language in languages"
           :key="language"
           type="button"
-          class="flex items-center gap-2 w-full py-2 px-3 text-xs bg-transparent border-0 text-gray-800 cursor-pointer transition-colors duration-150 text-left hover:bg-gray-50 focus:outline-none focus:bg-gray-50"
+          class="flex items-center gap-2 w-full py-2 px-3 text-xs bg-transparent border-0 text-black dark:text-white cursor-pointer transition-colors duration-150 text-left hover:bg-layer1-hover focus:outline-none focus:bg-layer1-hover"
           :class="{ 'font-medium': language === currentLanguage }"
           role="option"
           :aria-selected="language === currentLanguage"
           @click="selectLanguage(language)"
         >
           <span class="flex-1">{{ getLanguageLabel(language) }}</span>
-          <i class="pi pi-check text-blue-600 shrink-0" v-if="language === currentLanguage"/>
+          <i class="pi pi-check text-black dark:text-white shrink-0" v-if="language === currentLanguage"/>
         </button>
       </div>
     </Transition>

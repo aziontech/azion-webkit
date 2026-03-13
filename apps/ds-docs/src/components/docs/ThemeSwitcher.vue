@@ -159,7 +159,7 @@ onMounted(() => {
   <div class="relative inline-flex font-mono" ref="triggerRef">
     <button
       type="button"
-      class="inline-flex items-center gap-2 py-1.5 px-3 min-w-[114px] text-xs font-medium text-gray-800 bg-white border border-base rounded-md cursor-pointer transition-all duration-150 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+      class="inline-flex items-center gap-2 py-1.5 px-3 min-w-[114px] text-xs font-medium text-black dark:text-white bg-base border border-base rounded-md cursor-pointer transition-all duration-150 hover:bg-layer1-hover"
       :aria-expanded="isOpen"
       aria-haspopup="listbox"
       :aria-label="`Current theme: ${currentThemeLabel}. Change theme.`"
@@ -181,7 +181,7 @@ onMounted(() => {
       <div
         v-if="isOpen"
         ref="dropdownRef"
-        class="absolute min-w-32 text-xs bg-white border border-base rounded-md shadow-lg z-50 overflow-hidden theme-switcher__dropdown"
+        class="absolute min-w-32 text-xs bg-base border border-base rounded-md shadow-lg z-50 overflow-hidden theme-switcher__dropdown"
         :class="dropdownClasses"
         role="listbox"
         aria-label="Select theme"
@@ -190,7 +190,7 @@ onMounted(() => {
           v-for="theme in themes"
           :key="theme.value"
           type="button"
-          class="flex items-center gap-2 w-full py-2 px-3 bg-transparent border-0 text-gray-800 cursor-pointer transition-colors duration-150 text-left hover:bg-gray-50 focus:outline-none focus:bg-gray-50"
+          class="flex items-center gap-2 w-full py-2 px-3 bg-transparent border-0 text-black dark:text-white cursor-pointer transition-colors duration-150 text-left hover:bg-layer1-hover focus:outline-none focus:bg-layer1-hover"
           :class="{ 'font-medium': theme.value === selectedTheme }"
           role="option"
           :aria-selected="theme.value === selectedTheme"
@@ -200,7 +200,7 @@ onMounted(() => {
           <i class="pi pi-moon" v-else-if="theme.icon === 'moon'" />
           <i class="pi pi-desktop" v-else-if="theme.icon === 'desktop'" />
           <span class="flex-1">{{ theme.label }}</span>
-          <i class="pi pi-check text-blue-600 shrink-0" v-if="theme.value === selectedTheme" />
+          <i class="pi pi-check text-black dark:text-white shrink-0" v-if="theme.value === selectedTheme" />
         </button>
       </div>
     </Transition>

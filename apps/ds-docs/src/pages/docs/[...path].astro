@@ -14,7 +14,6 @@
  * - /{version}/{lang}/{section}/{slug} - Non-current version, non-default language
  */
 
-import { getCollection } from 'astro:content';
 import DocsLayout from '@/layouts/DocsLayout.astro';
 import { 
   getCurrentVersion, 
@@ -24,7 +23,7 @@ import {
   isDefaultLanguage,
   isCurrentVersion,
 } from '@/config';
-import { getSectionById, SECTIONS } from '@/lib/content/sections';
+import { getSectionById } from '@/lib/content/sections';
 import { getSeoMetadata } from '@/lib/docs';
 
 // Define dynamic path parameters
@@ -40,18 +39,12 @@ export function getStaticPaths() {
     };
   }> = [];
 
-  const currentVersion = getCurrentVersion();
-  const defaultLanguage = getDefaultLanguage();
-
-  // Generate paths for all content
-  for (const section of SECTIONS) {
-    const collectionName = section.collectionName as keyof typeof collections;
-    const entries = getCollection(collectionName as any);
-    
-    // We need to handle this synchronously for static paths
-    // In production, this would be handled by Astro's build process
-  }
-
+  // Generate paths for all content.
+  // Astro collections are only 'v1-en' and 'v1-pt'. section.collectionName is a logical
+  // name (e.g. 'templates', 'icons') for routing/nav — do not pass it to getCollection().
+  // Path generation would use getCollection('v1-en') and getCollection('v1-pt') then
+  // filter by section.id; left as empty for now so this catch-all does not emit invalid
+  // collection warnings for sections that have no dedicated collection.
   return paths;
 }
 

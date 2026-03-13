@@ -88,8 +88,13 @@ const surfaceClasses = computed(() => {
   return classes.join(' ');
 });
 
-// Wrapper class: add .dark for Tailwind dark: variants inside preview
-const wrapperClass = computed(() => (props.previewTheme === 'dark' ? 'dark' : ''));
+// Wrapper class:
+// - .dark when preview is dark → dark: variants apply inside preview only
+// - .playground-preview-light when preview is light → token plugin re-emits light utilities
+//   with higher specificity so they win over html.dark / .azion.azion-dark (site dark + preview light)
+const wrapperClass = computed(() =>
+  props.previewTheme === 'dark' ? 'dark' : 'playground-preview-light'
+);
 
 // Azion theme class for preview container so PrimeVue/components get correct CSS vars (light/dark)
 const azionThemeClass = computed(() =>
@@ -103,14 +108,18 @@ const containerStyle = computed(() => ({
 </script>
 
 <template>
-  <div class="flex flex-col h-full">
+  <!-- Root establishes preview theme + bg so the whole preview area (incl. toolbar) matches light/dark -->
+  <div
+    class="flex flex-col h-full min-h-[200px] bg-base"
+    :class="wrapperClass"
+  >
     <!-- Optional toolbar slot -->
-    <div v-if="$slots.toolbar" class="flex items-center justify-end gap-2">
+    <div v-if="$slots.toolbar" class="flex items-center justify-end gap-2 px-2 pt-2">
       <slot name="toolbar" />
     </div>
 
-    <!-- Preview container wrapped for theme (class "dark" enables Tailwind dark: inside) -->
-    <div :class="['flex-1 min-h-0 overflow-auto', wrapperClass]">
+    <!-- Scroll region shares same bg so no white/transparent gaps when site is dark and preview is light -->
+    <div class="flex-1 min-h-0 overflow-auto bg-base">
       <div
         :class="[
           'azion relative flex flex-wrap p-6 h-full overflow-auto',

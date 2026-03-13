@@ -35,7 +35,7 @@ function handleInput(event: Event) {
   <div class="flex flex-col gap-1.5">
     <label
       :for="inputId"
-      class="text-xs font-medium text-gray-700 capitalize"
+      class="text-xs font-medium text-black dark:text-white capitalize"
     >
       {{ metadata.label || name }}
     </label>

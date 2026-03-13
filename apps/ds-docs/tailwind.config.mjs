@@ -167,7 +167,10 @@ export default {
     },
   },
   plugins: [
-    tokenUtilities(),
+    // Force light token utilities inside playground preview when site is dark (see PlaygroundPreview wrapper)
+    tokenUtilities({
+      extraLightSelectors: ['.playground-preview-light'],
+    }),
     require('@tailwindcss/typography'),
   ],
 };
