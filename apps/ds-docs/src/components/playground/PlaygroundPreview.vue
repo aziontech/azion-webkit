@@ -39,7 +39,7 @@ const props = withDefaults(defineProps<Props>(), {
   demoOnlyValues: () => ({}),
   surface: 'neutral',
   previewTheme: 'light',
-  center: true,
+  center: false,
   minHeight: '120px',
   slotContent: '',
 });
@@ -120,36 +120,35 @@ const containerStyle = computed(() => ({
       <slot name="toolbar" />
     </div>
 
-    <!-- Scroll region shares same bg so no white/transparent gaps when site is dark and preview is light -->
-    <div class="flex-1 min-h-0 p-6 overflow-auto bg-base my-auto flex items-center justify-center transition-all duration-300">
+    <!-- Scroll region: padded area, no forced centering so components lay out naturally -->
+    <div class="p-8 flex-1 min-h-0 overflow-auto">
       <div
         :class="[
           'azion',
           azionThemeClass,
           surfaceClasses,
-          customClass,
-          { 'items-center justify-center': center }
+          customClass
         ]"
         :style="containerStyle"
       >
-      <!-- Component rendering -->
-      <component
-        :is="component"
-        v-if="component"
-        v-bind="propsValues"
-      >
-        {{ slotContent }}
-      </component>
-      
-      <!-- Empty state when no component -->
-      <div
-        v-else
-        class="flex flex-col items-center justify-center gap-2 p-8 text-muted dark:text-muted"
-      >
-        <i class="pi pi-th-large text-2xl text-muted dark:text-muted" aria-hidden="true" />
-        <span class="text-sm">No component selected</span>
+        <!-- Component rendering -->
+        <component
+          :is="component"
+          v-if="component"
+          v-bind="propsValues"
+        >
+          {{ slotContent }}
+        </component>
+        
+        <!-- Empty state when no component -->
+        <div
+          v-else
+          class="flex flex-col items-center justify-center gap-2 p-8 text-muted dark:text-muted"
+        >
+          <i class="pi pi-th-large text-2xl text-muted dark:text-muted" aria-hidden="true" />
+          <span class="text-sm">No component selected</span>
+        </div>
       </div>
-    </div>
     </div>
   </div>
 </template>
