@@ -53,7 +53,7 @@ jobs:
       - name: Validate frontmatter
         run: |
           cd apps/ds-docs
-          node --loader ts-node/esm scripts/check-docs.ts --lint || true
+          pnpm run lint || true
 
   link-check:
     name: Link Validation
@@ -80,7 +80,7 @@ jobs:
       - name: Check internal links
         run: |
           cd apps/ds-docs
-          node --loader ts-node/esm scripts/check-docs.ts --links || true
+          pnpm run lint:links || true
 
   component-docs:
     name: Component Documentation Coverage
@@ -107,7 +107,7 @@ jobs:
       - name: Check component documentation coverage
         run: |
           cd apps/ds-docs
-          node --loader ts-node/esm scripts/checkComponentDocs.ts
+          pnpm run lint:coverage
 
   api-extraction:
     name: API Extraction
@@ -134,7 +134,7 @@ jobs:
       - name: Extract component APIs
         run: |
           cd apps/ds-docs
-          node --loader ts-node/esm scripts/extractComponentApi.ts || true
+          pnpm run build:api || true
           
       - name: Upload API artifacts
         uses: actions/upload-artifact@v4

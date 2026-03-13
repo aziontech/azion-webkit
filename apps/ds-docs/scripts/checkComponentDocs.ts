@@ -8,6 +8,7 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
 
 /**
  * Component info
@@ -398,8 +399,11 @@ function generateMarkdownReport(result: CheckResult): string {
   return lines.join('\n');
 }
 
-// Run main function if executed directly
-if (typeof require !== 'undefined' && require.main === module) {
+// Run main function if executed directly (CJS or ESM)
+const isMain =
+  typeof require !== 'undefined' && require.main === module ||
+  (process.argv[1] && path.resolve(fileURLToPath(import.meta.url)) === path.resolve(process.argv[1]));
+if (isMain) {
   main().catch((error) => {
     console.error('Error:', error);
     process.exit(1);
