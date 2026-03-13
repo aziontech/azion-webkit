@@ -1,6 +1,7 @@
 import { watch, onUnmounted, type Ref } from 'vue';
 
-const STATUS_API = 'https://status.azion.com/api/v2';
+const STATUS_API_ORIGIN = 'https://status.azion.com';
+const STATUS_API_PATH_PREFIX = '/api/v2';
 const DEMO_TO_INDICATOR: Record<string, string> = {
   operational: 'none',
   'minor-outage': 'minor',
@@ -18,12 +19,10 @@ const DESCRIPTIONS: Record<string, string> = {
 
 export function useAzionStatusFetchMock(demoStatusRef: Ref<string | undefined>) {
   let originalFetch: typeof fetch | null = null;
-  const isBrowser = typeof window !== 'undefined';
 
   const stop = watch(
     demoStatusRef,
     (demoStatus) => {
-      if (!isBrowser) return;
       if (originalFetch === null) originalFetch = window.fetch;
       if (!demoStatus) {
         window.fetch = originalFetch;
@@ -34,7 +33,15 @@ export function useAzionStatusFetchMock(demoStatusRef: Ref<string | undefined>) 
       const orig = originalFetch!;
       window.fetch = function (input: RequestInfo | URL, init?: RequestInit) {
         const url = typeof input === 'string' ? input : input instanceof URL ? input.href : (input as Request).url;
-        if (!url.includes(STATUS_API)) return orig(input, init);
+        let isStatusApi = false;
+        try {
+          const parsed = new URL(url);
+          isStatusApi =
+            parsed.origin === STATUS_API_ORIGIN && parsed.pathname.startsWith(STATUS_API_PATH_PREFIX);
+        } catch {
+          // invalid URL, not our API
+        }
+        if (!isStatusApi) return orig(input, init);
         if (url.endsWith('/status.json')) {
           return Promise.resolve(
             new Response(JSON.stringify({ status: { indicator, description } }), {
@@ -59,6 +66,6 @@ export function useAzionStatusFetchMock(demoStatusRef: Ref<string | undefined>) 
 
   onUnmounted(() => {
     stop();
-    if (isBrowser && originalFetch) window.fetch = originalFetch;
+    if (originalFetch) window.fetch = originalFetch;
   });
 }

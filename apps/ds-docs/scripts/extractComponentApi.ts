@@ -81,7 +81,19 @@ const DEFAULT_OPTIONS: ExtractionOptions = {
 };
 
 /**
- * Parse Vue SFC content
+ * Extract content between first occurrence of openTag and closeTag (no regex on HTML)
+ */
+function extractBetween(content: string, openTag: string, closeTag: string): string {
+  const start = content.indexOf(openTag);
+  if (start === -1) return '';
+  const contentStart = start + openTag.length;
+  const end = content.indexOf(closeTag, contentStart);
+  if (end === -1) return '';
+  return content.slice(contentStart, end);
+}
+
+/**
+ * Parse Vue SFC content using tag boundaries (avoids regex HTML parsing for security)
  */
 function parseVueSfc(content: string): {
   script: string;
@@ -89,35 +101,47 @@ function parseVueSfc(content: string): {
   template: string;
   style: string;
 } {
-  const result = {
-    script: '',
-    scriptSetup: '',
-    template: '',
-    style: '',
-  };
+  const result = { script: '', scriptSetup: '', template: '', style: '' };
+  const scriptClose = '</script>';
+  const templateClose = '</template>';
+  const styleClose = '</style>';
 
-  // Extract script
-  const scriptMatch = content.match(/<script[^>]*>([\s\S]*?)<\/script>/);
-  if (scriptMatch) {
-    result.script = scriptMatch[1];
+  // Extract all <script>...</script> blocks
+  let pos = 0;
+  while (true) {
+    const scriptOpen = content.indexOf('<script', pos);
+    if (scriptOpen === -1) break;
+    const tagEnd = content.indexOf('>', scriptOpen);
+    if (tagEnd === -1) break;
+    const tag = content.slice(scriptOpen, tagEnd + 1);
+    const contentStart = tagEnd + 1;
+    const closeIdx = content.indexOf(scriptClose, contentStart);
+    if (closeIdx === -1) break;
+    const blockContent = content.slice(contentStart, closeIdx);
+    if (tag.includes('setup')) {
+      result.scriptSetup = blockContent;
+    } else {
+      result.script = blockContent;
+    }
+    pos = closeIdx + scriptClose.length;
   }
 
-  // Extract script setup
-  const scriptSetupMatch = content.match(/<script\s+setup[^>]*>([\s\S]*?)<\/script>/);
-  if (scriptSetupMatch) {
-    result.scriptSetup = scriptSetupMatch[1];
+  // Extract <template>...</template>
+  const templateOpen = content.indexOf('<template');
+  if (templateOpen !== -1) {
+    const templateContentStart = content.indexOf('>', templateOpen) + 1;
+    if (templateContentStart > 0) {
+      result.template = extractBetween(content.slice(templateContentStart), '', templateClose);
+    }
   }
 
-  // Extract template
-  const templateMatch = content.match(/<template[^>]*>([\s\S]*?)<\/template>/);
-  if (templateMatch) {
-    result.template = templateMatch[1];
-  }
-
-  // Extract style
-  const styleMatch = content.match(/<style[^>]*>([\s\S]*?)<\/style>/);
-  if (styleMatch) {
-    result.style = styleMatch[1];
+  // Extract <style>...</style>
+  const styleOpen = content.indexOf('<style');
+  if (styleOpen !== -1) {
+    const styleContentStart = content.indexOf('>', styleOpen) + 1;
+    if (styleContentStart > 0) {
+      result.style = extractBetween(content.slice(styleContentStart), '', styleClose);
+    }
   }
 
   return result;
