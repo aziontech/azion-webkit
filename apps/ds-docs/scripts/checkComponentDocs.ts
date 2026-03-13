@@ -45,6 +45,8 @@ interface CheckOptions {
   docsDir: string;
   /** File patterns to ignore */
   ignorePatterns?: RegExp[];
+  /** Top-level component directory names to skip (app/infra components, not DS components) */
+  ignoreComponentDirs?: string[];
   /** Languages to check */
   languages?: string[];
 }
@@ -64,13 +66,18 @@ const DEFAULT_OPTIONS: CheckOptions = {
     /\.stories\.ts$/,
     /\.stories\.js$/,
   ],
+  ignoreComponentDirs: ['demo', 'docs', 'playground', 'search'],
   languages: ['en', 'pt'],
 };
 
 /**
  * Get all component directories
  */
-function getComponentDirectories(dir: string, ignorePatterns: RegExp[]): string[] {
+function getComponentDirectories(
+  dir: string,
+  ignorePatterns: RegExp[],
+  ignoreDirNames: string[] = []
+): string[] {
   const components: string[] = [];
 
   if (!fs.existsSync(dir)) {
@@ -82,6 +89,9 @@ function getComponentDirectories(dir: string, ignorePatterns: RegExp[]): string[
 
   for (const entry of entries) {
     if (entry.isDirectory()) {
+      if (ignoreDirNames.includes(entry.name)) {
+        continue;
+      }
       const componentPath = path.join(dir, entry.name);
       
       // Check if this is a component directory (contains .vue or .tsx files)
@@ -95,8 +105,11 @@ function getComponentDirectories(dir: string, ignorePatterns: RegExp[]): string[
       }
 
       // Also check subdirectories for nested components
-      const nestedComponents = getComponentDirectories(componentPath, ignorePatterns)
-        .map((c) => `${entry.name}/${c}`);
+      const nestedComponents = getComponentDirectories(
+        componentPath,
+        ignorePatterns,
+        ignoreDirNames
+      ).map((c) => `${entry.name}/${c}`);
       components.push(...nestedComponents);
     }
   }
@@ -178,22 +191,12 @@ export function checkComponentDocs(options: Partial<CheckOptions> = {}): CheckRe
   const opts = { ...DEFAULT_OPTIONS, ...options };
   const components: ComponentInfo[] = [];
 
-  // Get all components
+  // Get all components (excluding ignoreComponentDirs like demo, docs, playground, search)
   const componentNames = getComponentDirectories(
     opts.componentsDir,
-    opts.ignorePatterns || []
+    opts.ignorePatterns || [],
+    opts.ignoreComponentDirs || []
   );
-
-  // Also check demo components
-  const demoDir = path.join(opts.componentsDir, 'demo');
-  if (fs.existsSync(demoDir)) {
-    const demoComponents = getDemoComponents(demoDir);
-    for (const demo of demoComponents) {
-      if (!componentNames.includes(demo)) {
-        componentNames.push(demo);
-      }
-    }
-  }
 
   // Check documentation for each component
   for (const name of componentNames) {
