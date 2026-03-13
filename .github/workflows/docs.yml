@@ -165,6 +165,9 @@ jobs:
           
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Build @aziontech/icons
+        run: pnpm --filter @aziontech/icons run build
         
       - name: Build search index
         run: |
