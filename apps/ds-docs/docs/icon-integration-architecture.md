@@ -91,7 +91,7 @@ interface IconEntry {
 - **PrimeIcons:** `<i class="pi pi-{name}" aria-hidden="true" />` (e.g. `pi pi-search`, `pi pi-check`)
 - **Azion Icons:** `<i class="ai ai-{name}" aria-hidden="true" />` (e.g. `ai ai-azion`)
 
-Size and color: use Tailwind on the `<i>` (e.g. `class="pi pi-code text-lg text-gray-500"`). For semantic icons, add `aria-label="…"` and omit `aria-hidden="true"`.
+Size and color: use Tailwind on the `<i>` (e.g. `class="pi pi-code text-lg text-muted"`). For semantic icons, add `aria-label="…"` and omit `aria-hidden="true"`.
 
 <details>
 <summary>Legacy: former DocsIcon component (removed)</summary>

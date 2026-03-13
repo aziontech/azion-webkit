@@ -20,7 +20,7 @@ const { parts, image, alt } = Astro.props;
 <div class="anatomy-block">
   {/* Visual diagram (optional) */}
   {image && (
-    <div class="anatomy-block__visual mb-6 rounded-lg border border-base overflow-hidden bg-gray-50">
+    <div class="anatomy-block__visual mb-6 rounded-lg border border-base overflow-hidden bg-base">
       <img 
         src={image} 
         alt={alt || 'Component anatomy diagram'}

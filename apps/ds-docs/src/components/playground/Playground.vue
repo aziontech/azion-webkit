@@ -239,7 +239,7 @@ defineExpose({
       <!-- Controls section -->
       <div
         v-if="showControls"
-        class="shrink-0 p-4 bg-layer1 border-l border-base overflow-y-auto max-h-[512px]"
+        class="shrink-0 bg-base border-l border-base overflow-y-auto max-h-[512px]"
       >
         <PlaygroundControls
           :props-definition="props.props"

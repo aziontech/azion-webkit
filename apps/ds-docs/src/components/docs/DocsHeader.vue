@@ -71,7 +71,7 @@ const documentationText = computed(() => {
 </script>
 
 <template>
-  <header class="docs-header h-16 sticky top-0 z-10 bg-[#171717]">
+  <header class="docs-header h-16 sticky top-0 z-10 bg-base border-b border-base">
     <div class="flex items-center justify-between h-full px-6">
       <!-- Breadcrumb -->
       <nav class="flex items-center gap-2 text-sm" aria-label="Breadcrumb">
@@ -104,7 +104,7 @@ const documentationText = computed(() => {
       <div class="flex items-center justify-end gap-2.5 min-w-[420px]">
         <!-- Search button -->
         <button 
-          class="flex w-full max-w-sm items-center gap-2 px-3 py-1.5 text-sm text-[#B5B5B5] bg-[#292929] rounded-md hover:bg-[#404040] transition-colors"
+          class="flex w-full max-w-sm items-center gap-2 px-3 py-1.5 text-sm text-muted border border-base bg-layer1 rounded-md hover:bg-layer1-hover transition-colors"
           aria-label="Search documentation"
           @click="openSearch"
         >

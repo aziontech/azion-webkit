@@ -46,7 +46,7 @@ function handleInput(event: Event) {
       :min="metadata.min"
       :max="metadata.max"
       :step="metadata.step || 1"
-      class="w-full py-2 px-3 text-sm text-gray-900 bg-white border border-gray-300 rounded-md transition-[border-color,box-shadow] duration-150 focus:outline-none focus:border-blue-500 focus:ring-3 focus:ring-blue-500/10 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-inner-spin-button]:m-0"
+      class="w-full py-2 px-3 text-sm text-base bg-white border border-base rounded-md transition-[border-color,box-shadow] duration-150 focus:outline-none focus:border-blue-500 focus:ring-3 focus:ring-blue-500/10 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-inner-spin-button]:m-0"
       @input="handleInput"
     />
   </div>

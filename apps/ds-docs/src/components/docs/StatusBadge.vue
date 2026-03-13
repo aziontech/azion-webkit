@@ -17,27 +17,27 @@ const props = defineProps<Props>();
 const statusConfig: Record<Status, { label: string; class: string; icon: string }> = {
   stable: {
     label: 'Stable',
-    class: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+    class: 'bg-green-500/20 text-green-700 border-green-500/50',
     icon: '✓',
   },
   beta: {
     label: 'Beta',
-    class: 'bg-blue-50 text-blue-700 border-blue-200',
+    class: 'bg-blue-500/20 text-blue-700 border-blue-500/50',
     icon: 'β',
   },
   deprecated: {
     label: 'Deprecated',
-    class: 'bg-amber-50 text-warning border-amber-200',
+    class: 'bg-yellow-500/20 text-warning border-yellow-500/50',
     icon: '⚠',
   },
   planned: {
     label: 'Planned',
-    class: 'bg-gray-50 text-gray-600 border-base',
+    class: 'bg-gray-500/20 text-gray-600 border-gray-500/50',
     icon: '○',
   },
   experimental: {
     label: 'Experimental',
-    class: 'bg-purple-50 text-purple-700 border-purple-200',
+    class: 'bg-purple-500/20 text-purple-700 border-purple-500/50',
     icon: '⚗',
   },
 };

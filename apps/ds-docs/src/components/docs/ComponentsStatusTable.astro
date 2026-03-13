@@ -62,7 +62,7 @@ const statusPriority: Record<ProgressStatus, number> = {
             >
               <div class="flex items-center gap-2">
                 <span>Component</span>
-                <span class="sort-icon mt-1 text-gray-400">
+                <span class="sort-icon mt-1 text-muted">
                   <i class="pi pi-sort-alt"/>
                 </span>
               </div>
@@ -75,7 +75,7 @@ const statusPriority: Record<ProgressStatus, number> = {
             >
               <div class="flex items-center gap-2">
                 <span>Design</span>
-                <span class="sort-icon mt-1 text-gray-400">
+                <span class="sort-icon mt-1 text-muted">
                   <i class="pi pi-sort-alt"/>
                 </span>
               </div>
@@ -88,7 +88,7 @@ const statusPriority: Record<ProgressStatus, number> = {
             >
               <div class="flex items-center gap-2">
                 <span>Code</span>
-                <span class="sort-icon mt-1 text-gray-400">
+                <span class="sort-icon mt-1 text-muted">
                   <i class="pi pi-sort-alt"/>
                 </span>
               </div>
@@ -101,7 +101,7 @@ const statusPriority: Record<ProgressStatus, number> = {
             >
               <div class="flex items-center gap-2">
                 <span>Launch Version</span>
-                <span class="sort-icon mt-1 text-gray-400">
+                <span class="sort-icon mt-1 text-muted">
                   <i class="pi pi-sort-alt"/>
                 </span>
               </div>
@@ -194,11 +194,11 @@ const statusPriority: Record<ProgressStatus, number> = {
         headers.forEach(h => {
           const icon = h.querySelector('.sort-icon');
           if (h === header) {
-            icon?.classList.remove('text-gray-400');
+            icon?.classList.remove('text-muted');
             icon?.classList.add('text-primary-600');
           } else {
             icon?.classList.remove('text-primary-600');
-            icon?.classList.add('text-gray-400');
+            icon?.classList.add('text-muted');
           }
         });
         

@@ -52,12 +52,12 @@ const buttonClasses = computed(() => {
   // Variant styles
   switch (props.variant) {
     case 'primary':
-      classes.push('bg-[#171717]', 'text-white', 'hover:bg-[#F3652B]');
+      classes.push('bg-base', 'text-white', 'hover:bg-[#F3652B]');
       if (props.disabled) classes.push('disabled:bg-primary-300', 'disabled:cursor-not-allowed');
       break;
     case 'secondary':
-      classes.push('bg-gray-100', 'text-gray-700', 'border', 'border-gray-300', 'hover:bg-gray-200');
-      if (props.disabled) classes.push('disabled:bg-gray-50', 'disabled:text-gray-400', 'disabled:cursor-not-allowed');
+      classes.push('bg-gray-100', 'text-gray-700', 'border', 'border-base', 'hover:bg-gray-200');
+      if (props.disabled) classes.push('disabled:bg-gray-50', 'disabled:text-muted', 'disabled:cursor-not-allowed');
       break;
     case 'destructive':
       classes.push('bg-red-500', 'text-white', 'hover:bg-red-600');
@@ -65,7 +65,7 @@ const buttonClasses = computed(() => {
       break;
     case 'ghost':
       classes.push('bg-transparent', 'text-gray-700', 'hover:bg-gray-100');
-      if (props.disabled) classes.push('disabled:text-gray-400', 'disabled:cursor-not-allowed');
+      if (props.disabled) classes.push('disabled:text-muted', 'disabled:cursor-not-allowed');
       break;
   }
 

@@ -208,7 +208,7 @@ onUnmounted(() => {
         @click="closeSearch"
       >
         <motion.div
-          class="w-full max-w-2xl bg-white rounded-xl shadow-2xl overflow-hidden"
+          class="w-full max-w-2xl bg-base rounded-xl shadow-2xl overflow-hidden border border-base"
           :initial="{ opacity: 0, scale: 0.98, y: -8 }"
           :animate="{ opacity: 1, scale: 1, y: 0 }"
           :exit="{ opacity: 0, scale: 0.98, y: -8 }"
@@ -218,20 +218,20 @@ onUnmounted(() => {
         >
         <!-- Search Input -->
         <div class="relative border-b border-base">
-          <i class="pi pi-search text-sm absolute left-4 top-[48%] -translate-y-1/2 text-gray-400" />
+          <i class="pi pi-search text-sm absolute left-4 top-[48%] -translate-y-1/2 text-muted" />
           <input
             ref="inputRef"
             v-model="query"
             type="text"
             :placeholder="placeholderText"
-            class="w-full pl-10 text-sm pr-4 py-4 leading-none border-0 focus:outline-none focus:ring-0"
+            class="w-full pl-10 text-sm pr-4 py-4 leading-none border-0 focus:outline-none focus:ring-0 text-base bg-base"
             autocomplete="off"
             autocapitalize="off"
             spellcheck="false"
           />
           <kbd
             v-if="query"
-            class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-1 text-xs text-gray-400 bg-gray-100 rounded"
+            class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-1 text-xs text-muted bg-base rounded"
           >
             ESC
           </kbd>
@@ -244,7 +244,7 @@ onUnmounted(() => {
             v-if="loading"
             class="flex items-center justify-center py-12"
           >
-            <div class="w-6 h-6 border-2 border-primary-500 border-t-transparent rounded-full animate-spin" />
+            <div class="w-6 h-6 border-2 border-base border-t-transparent rounded-full animate-spin" />
           </div>
           
           <!-- Empty State -->
@@ -252,7 +252,7 @@ onUnmounted(() => {
             v-else-if="query && !hasResults"
             class="px-4 py-12 text-center text-xs"
           >
-            <p class="text-gray-500">{{ noResultsText.replace('{query}', query) }}</p>
+            <p class="text-muted">{{ noResultsText.replace('{query}', query) }}</p>
           </div>
           
           <!-- Initial State -->
@@ -260,14 +260,14 @@ onUnmounted(() => {
             v-else-if="!query"
             class="px-4 py-8 text-center text-xs"
           >
-            <p class="text-gray-400">{{ startTypingText }}</p>
+            <p class="text-muted">{{ startTypingText }}</p>
           </div>
           
           <!-- Results List -->
           <template v-else>
             <template v-for="[type, typeResults] in groupedResultsArray" :key="type">
               <!-- Category Header -->
-              <div class="px-4 py-2 text-xs font-medium text-gray-400 uppercase tracking-wider bg-gray-50">
+              <div class="px-4 py-2 text-xs font-medium text-muted uppercase tracking-wider bg-layer1">
                 {{ TYPE_LABELS[type] || type }}
               </div>
               
@@ -276,34 +276,34 @@ onUnmounted(() => {
                 v-for="result in typeResults"
                 :key="result.entry.id"
                 :data-index="flatResults.find(r => r.result === result)?.globalIndex"
-                class="w-full px-4 py-3 text-left hover:bg-gray-50 focus:bg-gray-50 focus:outline-none transition-colors"
+                class="w-full px-4 py-3 text-left hover:bg-layer1-hover focus:bg-layer1-hover focus:outline-none transition-colors"
                 :class="{
-                  'bg-primary-50': selectedIndex === flatResults.find(r => r.result === result)?.globalIndex,
+                  'bg-layer1': selectedIndex === flatResults.find(r => r.result === result)?.globalIndex,
                 }"
                 @click="selectResult(result)"
               >
                 <div class="flex items-start gap-3">
                   <!-- Type Icon -->
-                  <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center mt-0.5">
-                    <i class="pi pi-box text-base text-gray-500" aria-hidden="true" />
+                  <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-layer2 flex items-center justify-center mt-0.5">
+                    <i class="pi pi-box text-base text-muted" aria-hidden="true" />
                   </div>
                   
                   <!-- Content -->
                   <div class="flex-1 min-w-0">
                     <div class="flex items-center gap-2">
                       <h4
-                        class="text-sm font-medium text-gray-900"
+                        class="text-sm font-medium text-base"
                         v-html="result.highlightedTitle"
                       />
                       <span
                         v-if="result.entry.status"
                         class="px-1.5 py-0.5 text-xs rounded"
                         :class="{
-                          'bg-green-100 text-green-700': result.entry.status === 'stable',
-                          'bg-blue-100 text-blue-700': result.entry.status === 'beta',
-                          'bg-yellow-100 text-yellow-700': result.entry.status === 'deprecated',
-                          'bg-gray-100 text-gray-700': result.entry.status === 'planned',
-                          'bg-purple-100 text-purple-700': result.entry.status === 'experimental',
+                          'bg-green-500/20 text-green-700': result.entry.status === 'stable',
+                          'bg-blue-500/20 text-blue-700': result.entry.status === 'beta',
+                          'bg-yellow-500/20 text-yellow-700': result.entry.status === 'deprecated',
+                          'bg-gray-500/20 text-gray-700': result.entry.status === 'planned',
+                          'bg-purple-500/20 text-purple-700': result.entry.status === 'experimental',
                         }"
                       >
                         {{ result.entry.status }}
@@ -311,10 +311,10 @@ onUnmounted(() => {
                     </div>
                     <p
                       v-if="result.highlightedDescription"
-                      class="mt-1 text-sm text-gray-500 line-clamp-2"
+                      class="mt-1 text-sm text-muted line-clamp-2"
                       v-html="result.highlightedDescription"
                     />
-                    <div class="mt-1 flex items-center gap-2 text-xs text-gray-400">
+                    <div class="mt-1 flex items-center gap-2 text-xs text-muted">
                       <span>{{ SECTION_LABELS[result.entry.section] || result.entry.section }}</span>
                       <span v-if="result.entry.category">• {{ result.entry.category }}</span>
                     </div>
@@ -326,19 +326,19 @@ onUnmounted(() => {
         </div>
         
         <!-- Footer -->
-        <div class="px-4 py-3 border-t border-gray-100 bg-gray-50 flex items-center justify-between text-xs text-gray-400">
+        <div class="px-4 py-3 border-t border-base bg-base flex items-center justify-between text-xs text-muted">
           <div class="flex items-center gap-4">
             <span class="flex items-center gap-1">
-              <kbd class="px-1.5 py-0.5 bg-white rounded border">↑</kbd>
-              <kbd class="px-1.5 py-0.5 bg-white rounded border">↓</kbd>
+              <kbd class="px-1.5 py-0.5 bg-base rounded border border-base">↑</kbd>
+              <kbd class="px-1.5 py-0.5 bg-base rounded border border-base">↓</kbd>
               to navigate
             </span>
             <span class="flex items-center gap-1">
-              <kbd class="px-1.5 py-0.5 bg-white rounded border">↵</kbd>
+              <kbd class="px-1.5 py-0.5 bg-base rounded border border-base">↵</kbd>
               to select
             </span>
             <span class="flex items-center gap-1">
-              <kbd class="px-1.5 py-0.5 bg-white rounded border">esc</kbd>
+              <kbd class="px-1.5 py-0.5 bg-base rounded border border-base">esc</kbd>
               to close
             </span>
           </div>

@@ -92,7 +92,7 @@ function toggleCode() {
 <template>
   <div class="border-t border-base overflow-hidden">
     <!-- Header -->
-    <div class="flex items-center justify-between py-2 px-3 bg-gray-50">
+    <div class="flex items-center justify-between py-2 px-3 bg-surface-800 border-b border-base dark:bg-surface-950">
       <button
         class="flex items-center gap-2 py-1 px-2 text-gray-700 bg-transparent border-0 rounded cursor-pointer transition-colors duration-150 hover:bg-gray-200"
         @click="toggleCode"
@@ -106,7 +106,7 @@ function toggleCode() {
 
       <button
         v-if="showCopy && isExpanded"
-        class="flex items-center gap-1.5 py-1 px-2 text-gray-500 bg-transparent border-0 rounded cursor-pointer transition-all duration-150 hover:text-gray-900 hover:bg-gray-200 font-mono"
+        class="flex items-center gap-1.5 py-1 px-2 text-muted bg-transparent border-0 rounded cursor-pointer transition-all duration-150 hover:text-base hover:bg-gray-200 font-mono"
         @click="copyCode"
       >
         <i class="pi pi-copy" v-if="!isCopied"/>
@@ -118,13 +118,13 @@ function toggleCode() {
     <!-- Code content -->
     <div
       v-show="isExpanded"
-      class="bg-[#1f2937] overflow-x-auto"
+      class="bg-surface-900 overflow-x-auto"
     >
       <div
         v-if="isLoading && !highlightedHtml"
         class="py-4 text-center"
       >
-        <span class="text-gray-400 text-sm">Loading...</span>
+        <span class="text-muted text-sm">Loading...</span>
       </div>
       <div
         v-else-if="highlightedHtml"

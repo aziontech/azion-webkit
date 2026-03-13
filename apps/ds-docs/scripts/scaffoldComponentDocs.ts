@@ -40,6 +40,7 @@ const API_OUTPUT_DIR = path.resolve(CWD, 'src/generated/component-api');
 const PROPS_OUTPUT_DIR = path.resolve(CWD, 'src/generated/component-props');
 const PROPS_OVERRIDES_DIR = path.resolve(CWD, 'src/generated/component-props-overrides');
 const CONTENT_EN_COMPONENTS = path.resolve(CWD, 'src/content/v1/en/components');
+const CONTENT_PT_COMPONENTS = path.resolve(CWD, 'src/content/v1/pt/components');
 const REGISTRY_OUTPUT = path.resolve(CWD, 'src/generated/playground-registry.ts');
 
 // ---------------------------------------------------------------------------
@@ -410,35 +411,40 @@ async function scaffold(opts: ScaffoldOptions): Promise<void> {
     console.log('  (skipped in dry-run mode)');
   }
 
-  // 7. Scaffold missing .mdx doc pages
+  // 7. Scaffold missing .mdx doc pages (EN and PT)
   console.log('\nScaffolding documentation pages...');
   fs.mkdirSync(CONTENT_EN_COMPONENTS, { recursive: true });
+  fs.mkdirSync(CONTENT_PT_COMPONENTS, { recursive: true });
 
   const created: string[] = [];
   const skipped: string[] = [];
 
   for (const comp of components) {
+    const content = buildMdxContent(comp);
     const mdxPath = path.join(CONTENT_EN_COMPONENTS, `${comp.slug}.mdx`);
     const exists = fs.existsSync(mdxPath);
 
     if (exists && !force) {
       skipped.push(comp.slug);
       if (verbose) console.log(`  SKIP (exists): ${comp.slug}.mdx`);
-      continue;
-    }
-
-    const content = buildMdxContent(comp);
-
-    if (!dryRun) {
-      fs.writeFileSync(mdxPath, content, 'utf-8');
-    }
-
-    if (exists && force) {
-      console.log(`  OVERWRITE: ${comp.slug}.mdx`);
     } else {
-      console.log(`  CREATE: ${comp.slug}.mdx`);
+      if (!dryRun) {
+        fs.writeFileSync(mdxPath, content, 'utf-8');
+      }
+      if (exists && force) {
+        console.log(`  OVERWRITE: ${comp.slug}.mdx (en)`);
+      } else {
+        console.log(`  CREATE: ${comp.slug}.mdx (en)`);
+      }
+      created.push(comp.slug);
     }
-    created.push(comp.slug);
+
+    // PT mirror (same content; titles can be translated later)
+    const mdxPathPt = path.join(CONTENT_PT_COMPONENTS, `${comp.slug}.mdx`);
+    if (!dryRun) {
+      fs.writeFileSync(mdxPathPt, content, 'utf-8');
+    }
+    if (verbose) console.log(`  SYNC: ${comp.slug}.mdx (pt)`);
   }
 
   // 8. Generate playground registry

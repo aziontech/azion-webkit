@@ -172,7 +172,7 @@ onMounted(() => {
         <span class="font-medium">{{ currentThemeLabel }}</span>
       </div>
       <i
-        class="pi pi-angle-down text-gray-500 transition-transform duration-150"
+        class="pi pi-angle-down text-muted transition-transform duration-150"
         :class="{ 'rotate-180': isOpen }"
       />
     </button>

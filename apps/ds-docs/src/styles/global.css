@@ -132,6 +132,10 @@
   }
 }
 
+.astro-code {
+  @apply !bg-surface-900;
+}
+
 /* Custom components - prose sizes are defined in tailwind.config typography theme */
 @layer components {
   /* code font for inline code */

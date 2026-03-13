@@ -55,7 +55,7 @@ const brandName = computed(() => {
 </script>
 
 <template>
-  <aside class="shrink-0 w-64 h-screen sticky top-0 overflow-y-auto bg-[#171717] [scrollbar-width:thin] [scrollbar-color:transparent_transparent] hover:[scrollbar-color:rgba(0,0,0,0.2)_transparent]">
+  <aside class="shrink-0 w-64 h-screen border-r border-base sticky top-0 overflow-y-auto bg-base [scrollbar-width:thin] [scrollbar-color:transparent_transparent] hover:[scrollbar-color:rgba(0,0,0,0.2)_transparent]">
     <div class="p-4">
       <!-- Logo/Brand -->
       <div class="mb-6 mt-1">

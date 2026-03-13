@@ -1,11 +1,14 @@
 /**
  * Component Metadata Registry
- * 
- * Central registry of documented components.
- * This file is auto-generated and should not be edited manually.
- * 
- * Generated at: ${new Date().toISOString()}
+ *
+ * Central registry of documented components. Derived from webkit (playground-registry).
+ * For the list of component doc pages, the app uses the content collection (v1-en/v1-pt);
+ * this registry is used by docs tooling (e.g. getComponentByName, search).
+ *
+ * Regenerate playground (and thus webkit component list) with: pnpm build:scaffold
  */
+
+import { webkitRegistry } from './playground-registry';
 
 /**
  * Component registry entry
@@ -32,28 +35,21 @@ export interface ComponentRegistryEntry {
 }
 
 /**
- * Component registry
+ * Build components registry from webkit registry.
+ * Slug is used as the doc path segment (e.g. form-field-text → /components/form-field-text).
  */
-export const componentsRegistry: ComponentRegistryEntry[] = [
-  {
-    name: 'Button',
-    status: 'stable',
-    category: 'actions',
-    documentation: '/components/button',
-    description: 'Primary action trigger component for user interactions',
-    since: 'v1.0.0',
-    tags: ['action', 'interactive', 'form', 'click'],
-  },
-  {
-    name: 'Fieldset',
-    status: 'stable',
-    category: 'form',
-    documentation: '/components/fieldset',
-    description: 'Form grouping component for organizing related form controls',
-    since: 'v1.0.0',
-    tags: ['form', 'group', 'input', 'container'],
-  },
-];
+export const componentsRegistry: ComponentRegistryEntry[] = webkitRegistry.map(
+  (entry) => ({
+    name: entry.displayName,
+    status: 'experimental' as const,
+    category: entry.category,
+    documentation: `/components/${entry.slug}`,
+    description: `${entry.displayName} component from the Azion Design System.`,
+    tags: [entry.category, 'webkit', 'form', 'ui'].filter(
+      (v, i, a) => a.indexOf(v) === i
+    ),
+  })
+);
 
 /**
  * Get component by name
@@ -108,17 +104,11 @@ export function getDeprecatedComponents(): ComponentRegistryEntry[] {
  */
 export function searchComponents(query: string): ComponentRegistryEntry[] {
   const lowerQuery = query.toLowerCase();
-  
+
   return componentsRegistry.filter((c) => {
-    // Search in name
     if (c.name.toLowerCase().includes(lowerQuery)) return true;
-    
-    // Search in description
     if (c.description?.toLowerCase().includes(lowerQuery)) return true;
-    
-    // Search in tags
     if (c.tags?.some((t) => t.toLowerCase().includes(lowerQuery))) return true;
-    
     return false;
   });
 }
@@ -159,7 +149,4 @@ export function getRegistryStats(): {
   };
 }
 
-/**
- * Export default registry
- */
 export default componentsRegistry;

@@ -135,6 +135,8 @@ Automatically extracts component API information from Vue components.
 pnpm build:api
 ```
 
+**See also:** [Component docs generation](./component-docs-generation.md) — geração automática de páginas e registry a partir do webkit (`pnpm build:scaffold`).
+
 **Example Output:**
 ```json
 {
@@ -322,6 +324,7 @@ The governance system distinguishes between:
 - [`src/lib/docs/analytics.ts`](../src/lib/docs/analytics.ts) - Analytics hooks
 - [`scripts/checkComponentDocs.ts`](../scripts/checkComponentDocs.ts) - Coverage checker
 - [`scripts/extractComponentApi.ts`](../scripts/extractComponentApi.ts) - API extraction
+- [`scripts/scaffoldComponentDocs.ts`](../scripts/scaffoldComponentDocs.ts) - Component docs scaffold (see [component-docs-generation.md](./component-docs-generation.md))
 - [`scripts/generateChangelog.ts`](../scripts/generateChangelog.ts) - Changelog generator
 - [`scripts/check-docs.ts`](../scripts/check-docs.ts) - Unified check script
 - [`.github/workflows/docs.yml`](../../.github/workflows/docs.yml) - CI pipeline

@@ -133,9 +133,9 @@ const containerStyle = computed(() => ({
       <!-- Empty state when no component -->
       <div
         v-else
-        class="flex flex-col items-center justify-center gap-2 p-8 text-gray-500 dark:text-gray-400"
+        class="flex flex-col items-center justify-center gap-2 p-8 text-muted dark:text-muted"
       >
-        <i class="pi pi-th-large text-2xl text-gray-400 dark:text-gray-500" aria-hidden="true" />
+        <i class="pi pi-th-large text-2xl text-muted dark:text-muted" aria-hidden="true" />
         <span class="text-sm">No component selected</span>
       </div>
     </div>

@@ -76,15 +76,15 @@ function togglePreviewTheme() {
 </script>
 
 <template>
-  <div class="flex flex-col gap-4">
+  <div class="flex flex-col gap-4 pb-4">
     <!-- Header -->
-    <div class="flex items-center justify-between pb-3 border-b border-base">
-      <h3 class="!text-lg !font-medium !text-gray-900 !m-0">
+    <div class="flex items-center justify-between pb-3 border-b border-base px-4 pt-4 bg-canvas">
+      <h3 class="!text-lg !font-medium !text-base !m-0">
         Props
       </h3>
       <div class="flex items-center gap-1.5">
         <button
-          class="flex items-center gap-1.5 py-1.5 px-3 text-xs font-medium text-gray-500 bg-transparent border border-gray-300 rounded-md cursor-pointer transition-all duration-150 hover:text-gray-900 hover:bg-gray-50 font-mono"
+          class="flex items-center gap-1.5 py-1.5 px-3 text-xs font-medium text-muted bg-transparent border border-base rounded-md cursor-pointer transition-all duration-150 hover:bg-layer1-hover font-mono"
           @click="resetToDefaults"
           title="Reset to defaults"
         >
@@ -93,7 +93,7 @@ function togglePreviewTheme() {
         </button>
         <button
           type="button"
-          class="inline-flex items-center justify-center w-8 h-8 p-0 text-xs text-gray-500 bg-transparent border border-gray-300 rounded-md cursor-pointer transition-all duration-150 hover:text-gray-900 hover:bg-gray-50"
+          class="inline-flex items-center justify-center w-8 h-8 p-0 text-xs text-muted bg-transparent border border-base rounded-md cursor-pointer transition-all duration-150 hover:text-base hover:bg-gray-50"
           :title="previewTheme === 'light' ? 'Preview dark' : 'Preview light'"
           :aria-label="previewTheme === 'light' ? 'Switch preview to dark theme' : 'Switch preview to light theme'"
           @click="togglePreviewTheme"
@@ -107,11 +107,11 @@ function togglePreviewTheme() {
     <div
       v-for="(items, category) in groupedProps"
       :key="category"
-      class="flex flex-col gap-3"
+      class="flex flex-col gap-3 px-4"
     >
       <h4
         v-if="Object.keys(groupedProps).length > 1"
-        class="!text-xs !font-semibold !text-gray-500 !uppercase !font-mono !tracking-wide !m-0 !my-1 !mt-2"
+        class="!text-xs !font-semibold !text-muted !uppercase !font-mono !tracking-wide !m-0 !my-1 !mt-2"
       >
         {{ category }}
       </h4>

@@ -157,10 +157,10 @@ defineExpose({ activeTab });
         @click="setActiveTab(tab.id)"
         @keydown="handleKeydown($event, index)"
         :class="[
-          'px-4 py-2.5 text-sm font-medium border-b-2 transition-colors',
+          'px-4 py-2.5 !text-sm font-medium border-b-2 transition-colors',
           activeTab === tab.id
             ? 'border-base text-base'
-            : 'border-transparent text-muted hover:text-base hover:border-gray-300'
+            : 'border-transparent text-muted hover:text-base hover:border-base'
         ]"
       >
         {{ tab.label }}

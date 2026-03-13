@@ -44,7 +44,7 @@ const resolvedComponent = computed<Component | null>(() => {
       template: `<div class="text-sm text-red-500 py-2">Failed to load component.</div>`,
     },
     loadingComponent: {
-      template: `<div class="text-sm text-gray-400 py-2 animate-pulse">Loading preview…</div>`,
+      template: `<div class="text-sm text-muted py-2 animate-pulse">Loading preview…</div>`,
     },
     delay: 100,
     timeout: 8000,
@@ -67,7 +67,7 @@ const defaultPreviewProps = computed(() => ({
     <!-- Registry not found -->
     <div
       v-if="!registryEntry"
-      class="flex items-center gap-2 rounded-lg border border-dashed border-gray-300 bg-gray-50 px-4 py-6 text-sm text-gray-400"
+      class="flex items-center gap-2 rounded-lg border border-dashed border-base bg-base px-4 py-6 text-sm text-muted"
     >
       <i class="pi pi-exclamation-circle" aria-hidden="true" />
       Component <code class="mx-1 rounded bg-gray-100 px-1 text-xs">{{ componentSlug }}</code> not found in playground registry.
@@ -76,13 +76,13 @@ const defaultPreviewProps = computed(() => ({
     <!-- Live preview -->
     <div
       v-else
-      class="rounded-lg border border-base bg-white p-8 dark:border-gray-700 dark:bg-gray-900"
+      class="rounded-lg border border-base bg-white p-8 dark:border-gray-700 dark:bg-surface-900"
     >
       <div class="mb-3 flex items-center gap-2">
         <span class="rounded-full bg-blue-50 px-2 py-0.5 text-xs font-medium text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
           {{ registryEntry.displayName }}
         </span>
-        <span class="text-xs text-gray-400">Live preview</span>
+        <span class="text-xs text-muted">Live preview</span>
       </div>
 
       <Suspense>
@@ -91,7 +91,7 @@ const defaultPreviewProps = computed(() => ({
           v-bind="defaultPreviewProps"
         />
         <template #fallback>
-          <div class="animate-pulse text-sm text-gray-400">Loading component…</div>
+          <div class="animate-pulse text-sm text-muted">Loading component…</div>
         </template>
       </Suspense>
     </div>

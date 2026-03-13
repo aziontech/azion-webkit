@@ -42,7 +42,7 @@ if (props.figma) {
       :href="link.href"
       target="_blank"
       rel="noopener noreferrer"
-      class="inline-flex px-1.5 py-1.5 items-center leading-none text-base text-blue-600 group rounded-md"
+      class="inline-flex px-1.5 py-1.5 items-center leading-none text-base text-link group rounded-md"
     >
       <i class="mr-1.5" :class="link.iconClass" aria-hidden="true"></i>
       <span class="group-hover:underline text-xs">{{ link.label }}</span>

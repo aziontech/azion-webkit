@@ -34,9 +34,9 @@ const itemLink = computed(() => {
 <template>
   <motion.a
     :href="itemLink"
-    class="block rounded-md px-3 py-1.5 text-sm text-white font-medium transition-colors border-l-2 border-l-transparent hover:bg-[#343434] hover:border-l-[#343434]"
+    class="block rounded-md px-3 py-1.5 text-sm text-color font-medium transition-colors border-l-2 border-l-transparent hover:bg-layer2-hover hover:border-l-base"
     :class="[
-      isActive ? 'bg-[#343434]' : ''
+      isActive ? 'bg-base' : ''
     ]"
     :aria-current="isActive ? 'page' : undefined"
     :whileHover="{ x: 2 }"

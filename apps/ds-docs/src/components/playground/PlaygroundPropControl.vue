@@ -68,7 +68,7 @@ const controlType = computed(() => props.metadata.control);
 
     <!-- Fallback for unknown control types -->
     <div v-else class="p-2 bg-amber-100 rounded-md">
-      <span class="text-xs text-gray-500">
+      <span class="text-xs text-muted">
         Unknown control type: {{ controlType }}
       </span>
     </div>

@@ -44,10 +44,10 @@ const tabs = [
         tabindex={tab.id === defaultTab ? '0' : '-1'}
         data-tab-id={tab.id}
         class:list={[
-          'px-4 py-2.5 text-sm font-medium border-b-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2',
+          'px-4 py-2.5 !text-sm font-medium border-b-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2',
           tab.id === defaultTab
-            ? 'border-black text-black'
-            : 'border-transparent text-muted hover:text-base hover:border-gray-300',
+            ? 'border-base-hover text-base'
+            : 'border-transparent text-muted hover:text-base hover:border-base',
         ]}
       >
         {tab.label}
@@ -108,8 +108,8 @@ const tabs = [
           const isActive = el.dataset.tabId === id;
           el.setAttribute('aria-selected', isActive ? 'true' : 'false');
           el.setAttribute('tabindex', isActive ? '0' : '-1');
-          el.classList.toggle('border-black', isActive);
-          el.classList.toggle('text-black', isActive);
+          el.classList.toggle('border-base-hover', isActive);
+          el.classList.toggle('text-base', isActive);
           el.classList.toggle('border-transparent', !isActive);
           el.classList.toggle('text-muted', !isActive);
         });

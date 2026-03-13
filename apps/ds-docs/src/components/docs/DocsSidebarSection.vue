@@ -71,11 +71,11 @@ function isItemActive(item: NavItem): boolean {
     <!-- Section Link -->
     <a
       :href="sectionLink"
-      class="section-link rounded-md block px-3 py-2 text-sm transition-colors"
+      class="section-link font-medium rounded-md block px-3 py-2 text-sm transition-colors"
       :class="[
         isActive
-          ? 'bg-[#343434] text-white font-medium'
-          : 'hover:bg-[#343434] text-white'
+          ? 'bg-layer2 text-base font-medium'
+          : 'hover:bg-layer2-hover text-base'
       ]"
     >
       {{ sectionLabel }}

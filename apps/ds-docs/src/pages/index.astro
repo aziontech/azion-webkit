@@ -57,9 +57,9 @@ const features = [
       {heroLinks.map((link) => (
         <a
           href={link.href}
-          class="group px-6 py-4 bg-surface-subtle hover:bg-primary-50 border border-base hover:border-primary-200 rounded-lg transition-colors"
+          class="group px-6 py-4 bg-layer1 hover:bg-layer1-hover border border-base hover:border-base-hover rounded-lg transition-colors"
         >
-          <span class="block mb-1 text-base font-medium text-base group-hover:text-primary-700">
+          <span class="block mb-1 font-medium text-base">
             {link.label}
           </span>
           <span class="block text-xs text-muted">
@@ -87,7 +87,7 @@ const features = [
   <!-- Quick Start Section -->
   <section class="mb-12">
     <h2 class="text-2xl font-medium mb-6">Quick Start</h2>
-    <div class="bg-gray-900 rounded-lg p-6">
+    <div class="bg-surface-900 rounded-lg p-6">
       <pre class="text-sm text-gray-100"><code class="!font-code">npm install @aziontech/components @aziontech/icons @aziontech/theme</code></pre>
     </div>
   </section>
@@ -97,19 +97,19 @@ const features = [
     <h2 class="text-2xl font-medium mb-6">Project Status</h2>
     <div class="space-y-4">
       <div class="flex items-center gap-3">
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-medium rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-medium rounded-full bg-green-500/20 dark:text-green-500 text-green-700 border border-green-500/50">
           ✓ Stable
         </span>
         <span class="text-muted">Icons package is production-ready</span>
       </div>
       <div class="flex items-center gap-3">
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-medium rounded-full bg-gray-50 text-gray-600 border border-base">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-medium rounded-full bg-gray-500/20 dark:text-gray-500 text-gray-600 border border-gray-500/50">
           ○ Planned
         </span>
         <span class="text-muted">Tokens package coming soon</span>
       </div>
       <div class="flex items-center gap-3">
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-medium rounded-full bg-gray-50 text-gray-600 border border-base">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-medium rounded-full bg-gray-500/20 dark:text-gray-500 text-gray-600 border border-gray-500/50">
           ○ Planned
         </span>
         <span class="text-muted">Components package coming soon</span>

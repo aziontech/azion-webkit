@@ -47,7 +47,7 @@ const highlightedCode = await codeToHtml(code, {
     {showCopy && (
       <button
         type="button"
-        class="flex items-center gap-1.5 py-1 px-2 text-muted bg-transparent border-0 rounded cursor-pointer transition-all duration-150 hover:text-base-hover hover:bg-layer2-hover font-mono text-xs copy-button"
+        class="flex items-center gap-1.5 py-1 px-2 text-muted bg-transparent border-0 rounded cursor-pointer transition-all duration-150 hover:bg-layer2-hover font-mono text-xs copy-button"
         data-code={code}
         aria-label="Copy code"
       >
@@ -61,7 +61,7 @@ const highlightedCode = await codeToHtml(code, {
   </div>
   
   <!-- Code container: same structure as Playground (bg #1f2937, same pre/code styling) -->
-  <div class="bg-[#1f2937] overflow-x-auto">
+  <div class="bg-surface-900 overflow-x-auto">
     <div
       class="p-4 [&_pre]:m-0 [&_pre]:p-0 [&_pre]:!bg-transparent [&_code]:font-mono [&_code]:text-[0.8125rem] [&_code]:leading-[1.6]"
       set:html={highlightedCode}

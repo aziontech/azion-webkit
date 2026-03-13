@@ -144,7 +144,7 @@ onUnmounted(() => {
   <div class="relative inline-flex font-mono text-xs" ref="triggerRef">
     <button
       type="button"
-      class="inline-flex items-center gap-2 py-1.5 px-3 font-medium text-gray-800 bg-white border border-base rounded-md cursor-pointer transition-all duration-150 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+      class="inline-flex items-center gap-2 py-1.5 px-3 font-medium text-gray-800 bg-white border border-base rounded-md cursor-pointer transition-all duration-150 hover:bg-gray-50 hover:border-base focus:outline-none focus:ring-2 focus:ring-blue-500/50"
       :aria-expanded="isOpen"
       aria-haspopup="listbox"
       :aria-label="`Current language: ${currentLanguageLabel}. Change language.`"

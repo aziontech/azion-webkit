@@ -81,7 +81,7 @@ function selectVersion(version: string) {
       v-for="version in versions"
       :key="version"
       type="button"
-      class="h-8 w-8 py-1 px-2 text-[#B5B5B5] bg-[#292929] rounded-md hover:bg-[#404040] text-xs font-medium font-mono cursor-pointer transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+      class="h-8 w-8 py-1 px-2 text-muted border border-base bg-layer1 rounded-md hover:bg-layer1-hover text-xs font-medium font-mono cursor-pointer transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
       @click="selectVersion(version)"
     >
       {{ version }}

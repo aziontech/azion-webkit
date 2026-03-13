@@ -37,7 +37,7 @@ const placeholder = computed(() => props.metadata.placeholder || `Enter ${props.
       type="text"
       :value="modelValue"
       :placeholder="placeholder"
-      class="w-full py-2 px-3 text-sm text-gray-900 bg-white border border-gray-300 rounded-md transition-[border-color,box-shadow] duration-150 focus:outline-none focus:border-blue-500 focus:ring-3 focus:ring-blue-500/10 placeholder:text-gray-400"
+      class="w-full py-2 px-3 text-sm text-base bg-white border border-base rounded-md transition-[border-color,box-shadow] duration-150 focus:outline-none focus:border-blue-500 focus:ring-3 focus:ring-blue-500/10 placeholder:text-muted"
       @input="emit('update:modelValue', ($event.target as HTMLInputElement).value)"
     />
   </div>
