@@ -15,6 +15,8 @@ import { fileURLToPath } from 'url';
  */
 interface ComponentInfo {
   name: string;
+  /** Doc filename without extension (e.g. form-field-text) when using componentNameToSlug */
+  docsSlug?: string;
   path: string;
   hasDocs: boolean;
   docsPath: string | null;
@@ -39,13 +41,17 @@ interface CheckResult {
  * Options
  */
 interface CheckOptions {
-  /** Components directory */
+  /** Components directory (e.g. packages/webkit/src) */
   componentsDir: string;
-  /** Documentation directory */
+  /** Documentation content root (e.g. apps/ds-docs/src/content) */
   docsDir: string;
+  /** Content version segment in docs (e.g. "v1" -> docsDir/v1/lang/components) */
+  contentVersion?: string;
+  /** Convert component path to doc filename (e.g. "core/form/field-text" -> "form-field-text") */
+  componentNameToSlug?: (componentPath: string) => string;
   /** File patterns to ignore */
   ignorePatterns?: RegExp[];
-  /** Top-level component directory names to skip (app/infra components, not DS components) */
+  /** Top-level component directory names to skip */
   ignoreComponentDirs?: string[];
   /** Languages to check */
   languages?: string[];
@@ -151,27 +157,35 @@ function getDemoComponents(dir: string): string[] {
 function checkDocumentationExists(
   componentName: string,
   docsDir: string,
-  languages: string[]
+  languages: string[],
+  options: { contentVersion?: string; componentNameToSlug?: (n: string) => string } = {}
 ): { exists: boolean; paths: string[] } {
+  const slug = options.componentNameToSlug ? options.componentNameToSlug(componentName) : componentName;
   const possiblePaths: string[] = [];
   const foundPaths: string[] = [];
+  const version = options.contentVersion;
 
-  // Generate possible documentation paths
   for (const lang of languages) {
-    // Standard component doc path
+    if (version) {
+      possiblePaths.push(
+        path.join(docsDir, version, lang, 'components', `${slug}.md`),
+        path.join(docsDir, version, lang, 'components', `${slug}.mdx`)
+      );
+    } else {
+      possiblePaths.push(
+        path.join(docsDir, lang, 'components', `${slug}.md`),
+        path.join(docsDir, lang, 'components', `${slug}.mdx`)
+      );
+    }
+  }
+
+  if (!version) {
     possiblePaths.push(
-      path.join(docsDir, lang, 'components', `${componentName}.md`),
-      path.join(docsDir, lang, 'components', `${componentName}.mdx`)
+      path.join(docsDir, 'components', `${slug}.md`),
+      path.join(docsDir, 'components', `${slug}.mdx`)
     );
   }
 
-  // Also check root components directory (for default language)
-  possiblePaths.push(
-    path.join(docsDir, 'components', `${componentName}.md`),
-    path.join(docsDir, 'components', `${componentName}.mdx`)
-  );
-
-  // Check which paths exist
   for (const p of possiblePaths) {
     if (fs.existsSync(p)) {
       foundPaths.push(p);
@@ -204,11 +218,17 @@ export function checkComponentDocs(options: Partial<CheckOptions> = {}): CheckRe
     const docsCheck = checkDocumentationExists(
       name,
       opts.docsDir,
-      opts.languages || ['en']
+      opts.languages || ['en'],
+      {
+        contentVersion: opts.contentVersion,
+        componentNameToSlug: opts.componentNameToSlug,
+      }
     );
 
+    const docsSlug = opts.componentNameToSlug ? opts.componentNameToSlug(name) : undefined;
     const info: ComponentInfo = {
       name,
+      docsSlug,
       path: componentPath,
       hasDocs: docsCheck.exists,
       docsPath: docsCheck.paths[0] || null,
@@ -272,10 +292,12 @@ export function formatCheckResult(result: CheckResult): string {
     lines.push('Undocumented Components:');
     lines.push('-'.repeat(50));
 
+    const contentVersion = 'v1';
     for (const component of undocumented) {
+      const slug = component.docsSlug ?? component.name.replace(/\//g, '-');
       lines.push(`  ❌ ${component.name}`);
       lines.push(`     Path: ${component.path}`);
-      lines.push(`     Create: src/content/en/components/${component.name}.md`);
+      lines.push(`     Create: src/content/${contentVersion}/en/components/${slug}.mdx`);
     }
     lines.push('');
   }
@@ -320,20 +342,27 @@ export function generateJsonReport(result: CheckResult): string {
 
 /**
  * Main function for CLI
+ * When run from apps/ds-docs, checks packages/webkit/src components against ds-docs content.
  */
 async function main() {
   const args = process.argv.slice(2);
   const outputJson = args.includes('--json');
   const outputMarkdown = args.includes('--md');
 
-  // Determine paths relative to current working directory
   const cwd = process.cwd();
-  const componentsDir = path.join(cwd, 'src/components');
+  // Source: webkit package components (design system)
+  const webkitSrc = path.resolve(cwd, '../../packages/webkit/src');
+  const componentsDir = fs.existsSync(webkitSrc) ? webkitSrc : path.join(cwd, 'src/components');
+  // Docs: ds-docs content (v1/en|pt/components)
   const docsDir = path.join(cwd, 'src/content');
 
   const result = checkComponentDocs({
     componentsDir,
     docsDir,
+    contentVersion: 'v1',
+    componentNameToSlug: (name) =>
+      name.replace(/^(core|components)\//, '').replace(/\//g, '-'),
+    ignoreComponentDirs: componentsDir === webkitSrc ? [] : ['demo', 'docs', 'playground', 'search'],
   });
 
   if (outputJson) {
