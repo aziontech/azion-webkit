@@ -74,8 +74,8 @@ function isItemActive(item: NavItem): boolean {
       class="section-link font-medium rounded-md block px-3 py-2 text-sm transition-colors"
       :class="[
         isActive
-          ? 'bg-layer2 text-base font-medium'
-          : 'hover:bg-layer2-hover text-base'
+          ? 'bg-layer2 text-default font-medium'
+          : 'hover:bg-layer2-hover text-default'
       ]"
     >
       {{ sectionLabel }}

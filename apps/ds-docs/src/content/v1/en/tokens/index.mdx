@@ -106,11 +106,11 @@ The docs app wires the theme like this:
    - `theme.extend.colors` extended with primitives/surface/primaryBrand/accent from `@aziontech/theme/tokens`.
 
 2. **Utility classes** from the plugin (no `dark:` needed):
-   - **Text:** `text-base`, `text-muted`, `text-link`, `text-primary`, `text-accent`, `text-code`, and hover variants.
-   - **Background:** `bg-layer1`, `bg-layer2`, `bg-base`, `bg-canvas`, hover variants, and semantic (e.g. `bg-primary`, `bg-danger`).
-   - **Border:** `border-base`, `border-primary`, `border-accent`, and semantic (e.g. `border-danger`, `border-success`).
+   - **Text:** `text-default`, `text-muted`, `text-link`, `text-primary`, `text-accent`, `text-code`, and hover variants.
+   - **Background:** `bg-layer1`, `bg-layer2`, `bg-surface`, `bg-canvas`, hover variants, and semantic (e.g. `bg-primary`, `bg-danger`).
+   - **Border:** `border-default`, `border-primary`, `border-accent`, and semantic (e.g. `border-danger`, `border-success`).
 
-Class names are **not** prefixed with the category: use `text-base`, `bg-layer1`, `border-base` (not `text-text-base`, `bg-bg-layer1`, `border-border-base`).
+Class names are **not** prefixed with the category: use `text-default`, `bg-layer1`, `border-default` (not `text-text-default`, `bg-bg-layer1`, `border-border-default`).
 
 ### Examples in the docs
 
@@ -119,8 +119,8 @@ Class names are **not** prefixed with the category: use `text-base`, `bg-layer1`
 <div class="bg-canvas">…</div>
 
 <!-- Cards and panels -->
-<div class="bg-layer1 border border-base rounded-lg p-4">
-  <p class="text-base">Primary text</p>
+<div class="bg-layer1 border border-default rounded-lg p-4">
+  <p class="text-default">Primary text</p>
   <p class="text-muted">Secondary text</p>
 </div>
 
@@ -147,7 +147,7 @@ export default {
 };
 ```
 
-After that you can use `bg-layer1`, `text-base`, `border-base`, etc.
+After that you can use `bg-layer1`, `text-default`, `border-default`, etc.
 
 ### With primitives in theme
 
@@ -180,17 +180,17 @@ export default {
 
 <div className="space-y-4 my-6" style={{viewTransitionName: 'text-colors'}}>
 
-<div className="p-4 rounded-lg bg-layer1 border border-base">
-  <p className="text-base font-medium">text-base</p>
+<div className="p-4 rounded-lg bg-layer1 border border-default">
+  <p className="text-default font-medium">text-default</p>
   <p className="text-sm text-muted mt-1">Primary text for headings and body</p>
 </div>
 
-<div className="p-4 rounded-lg bg-layer1 border border-base">
+<div className="p-4 rounded-lg bg-layer1 border border-default">
   <p className="text-muted font-medium">text-muted</p>
   <p className="text-sm text-muted mt-1">Secondary text for descriptions and labels</p>
 </div>
 
-<div className="p-4 rounded-lg bg-layer1 border border-base">
+<div className="p-4 rounded-lg bg-layer1 border border-default">
   <p className="text-link font-medium">text-link</p>
   <p className="text-sm text-muted mt-1">Link color</p>
 </div>
@@ -201,20 +201,20 @@ export default {
 
 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6" style={{viewTransitionName: 'bg-layers'}}>
 
-<div className="p-6 rounded-lg bg-layer1 border border-base">
-  <p className="font-medium text-base">Layer 1</p>
+<div className="p-6 rounded-lg bg-layer1 border border-default">
+  <p className="font-medium text-default">Layer 1</p>
   <p className="text-sm text-muted mt-2">bg-layer1</p>
   <p className="text-xs text-muted mt-1">Cards and panels</p>
 </div>
 
-<div className="p-6 rounded-lg bg-layer2 border border-base">
-  <p className="font-medium text-base">Layer 2</p>
+<div className="p-6 rounded-lg bg-layer2 border border-default">
+  <p className="font-medium text-default">Layer 2</p>
   <p className="text-sm text-muted mt-2">bg-layer2</p>
   <p className="text-xs text-muted mt-1">Elevated surfaces</p>
 </div>
 
-<div className="p-6 rounded-lg bg-canvas border border-base">
-  <p className="font-medium text-base">Canvas</p>
+<div className="p-6 rounded-lg bg-canvas border border-default">
+  <p className="font-medium text-default">Canvas</p>
   <p className="text-sm text-muted mt-2">bg-canvas</p>
   <p className="text-xs text-muted mt-1">Page background</p>
 </div>
@@ -225,18 +225,18 @@ export default {
 
 <div className="space-y-4 my-6" style={{viewTransitionName: 'border-tokens'}}>
 
-<div className="p-4 rounded-lg bg-layer1 border border-base">
-  <p className="text-base font-medium">border-base</p>
+<div className="p-4 rounded-lg bg-layer1 border border-default">
+  <p className="text-default font-medium">border-default</p>
   <p className="text-sm text-muted mt-1">Default border</p>
 </div>
 
 <div className="p-4 rounded-lg bg-layer1 border-2 border-primary">
-  <p className="text-base font-medium">border-primary</p>
+  <p className="text-default font-medium">border-primary</p>
   <p className="text-sm text-muted mt-1">Primary (orange) border</p>
 </div>
 
 <div className="p-4 rounded-lg bg-layer1 border-2 border-accent">
-  <p className="text-base font-medium">border-accent</p>
+  <p className="text-default font-medium">border-accent</p>
   <p className="text-sm text-muted mt-1">Accent (violet) border</p>
 </div>
 

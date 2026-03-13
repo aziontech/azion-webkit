@@ -216,10 +216,10 @@ defineExpose({
 
 <template>
   <!-- Outer card stays neutral border; preview column gets theme bg inside PlaygroundPreview -->
-  <div class="flex flex-col my-6 bg-base border border-base rounded-lg overflow-hidden">
+  <div class="flex flex-col my-6 bg-surface border border-default rounded-lg overflow-hidden">
     <!-- Main content area -->
     <div class="grid grid-cols-1 md:grid-cols-[1fr_280px]">
-      <!-- Preview section: min-h so bg-base from PlaygroundPreview fills; overflow hidden clips rounded corner -->
+      <!-- Preview section: min-h so bg-surface from PlaygroundPreview fills; overflow hidden clips rounded corner -->
       <div class="flex flex-col gap-2 min-h-0 rounded-tl-lg md:rounded-l-lg overflow-hidden">
         <PlaygroundPreview
           :component="resolvedComponent"
@@ -240,7 +240,7 @@ defineExpose({
       <!-- Controls section -->
       <div
         v-if="showControls"
-        class="shrink-0 bg-base border-l border-base overflow-y-auto max-h-[512px]"
+        class="shrink-0 bg-surface border-l border-default overflow-y-auto max-h-[512px]"
       >
         <PlaygroundControls
           :props-definition="props.props"
@@ -255,7 +255,7 @@ defineExpose({
     <!-- Code section -->
     <div
       v-if="showCode"
-      class="border-t border-base"
+      class="border-t border-default"
     >
       <PlaygroundCode
         :code="generatedCode"
@@ -265,7 +265,7 @@ defineExpose({
     </div>
 
     <!-- Future extensibility slots -->
-    <div v-if="$slots.extra" class="mt-2 pt-4 border-t border-base">
+    <div v-if="$slots.extra" class="mt-2 pt-4 border-t border-default">
       <slot name="extra" />
     </div>
   </div>

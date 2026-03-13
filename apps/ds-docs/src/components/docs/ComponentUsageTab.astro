@@ -170,9 +170,9 @@ const donts = usage?.doDonts?.filter(item => item.type === 'dont') || [];
     <!-- Fallback to slot content for markdown-authored usage, or empty state -->
     <div class="usage-content usage-content--fallback">
       <slot />
-      <div class="empty-usage-state py-12 text-center border border-dashed border-base rounded-lg bg-base">
+      <div class="empty-usage-state py-12 text-center border border-dashed border-default rounded-lg bg-surface">
         <i class="pi pi-book mx-auto text-4xl text-muted" aria-hidden="true" />
-        <h3 class="mt-2 text-sm font-medium text-base">Usage documentation coming soon</h3>
+        <h3 class="mt-2 text-sm font-medium text-default">Usage documentation coming soon</h3>
         <p class="mt-1 text-sm text-muted">
           When to use, do's and don'ts, and examples will be available shortly.
         </p>

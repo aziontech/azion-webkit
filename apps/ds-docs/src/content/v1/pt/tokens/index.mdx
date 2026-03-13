@@ -101,18 +101,18 @@ Os tokens semânticos são conscientes de tema: um nome mapeia para valores dife
 1. **Config Tailwind:** `darkMode: ['class', '.dark', '.azion.azion-dark']`, `plugins: [tokenUtilities(), …]`, e `theme.extend.colors` com primitives/surface/primaryBrand/accent de `@aziontech/theme/tokens`.
 
 2. **Classes do plugin** (sem precisar de `dark:`):
-   - **Texto:** `text-base`, `text-muted`, `text-link`, `text-primary`, `text-accent`, `text-code`.
-   - **Fundo:** `bg-layer1`, `bg-layer2`, `bg-base`, `bg-canvas`, e variantes semânticas.
-   - **Borda:** `border-base`, `border-primary`, `border-accent`, e variantes semânticas.
+   - **Texto:** `text-default`, `text-muted`, `text-link`, `text-primary`, `text-accent`, `text-code`.
+   - **Fundo:** `bg-layer1`, `bg-layer2`, `bg-surface`, `bg-canvas`, e variantes semânticas.
+   - **Borda:** `border-default`, `border-primary`, `border-accent`, e variantes semânticas.
 
-Use `text-base`, `bg-layer1`, `border-base` — **não** `text-text-base`, `bg-bg-layer1`, `border-border-base`.
+Use `text-default`, `bg-layer1`, `border-default` — **não** `text-text-default`, `bg-bg-layer1`, `border-border-default`.
 
 ### Exemplos
 
 ```html
 <div class="bg-canvas">…</div>
-<div class="bg-layer1 border border-base rounded-lg p-4">
-  <p class="text-base">Texto primário</p>
+<div class="bg-layer1 border border-default rounded-lg p-4">
+  <p class="text-default">Texto primário</p>
   <p class="text-muted">Texto secundário</p>
 </div>
 <div class="border border-primary">…</div>
@@ -124,17 +124,17 @@ Use `text-base`, `bg-layer1`, `border-base` — **não** `text-text-base`, `bg-b
 
 <div className="space-y-4 my-6" style={{viewTransitionName: 'text-colors'}}>
 
-<div className="p-4 rounded-lg bg-layer1 border border-base">
-  <p className="text-base font-medium">text-base</p>
+<div className="p-4 rounded-lg bg-layer1 border border-default">
+  <p className="text-default font-medium">text-default</p>
   <p className="text-sm text-muted mt-1">Texto primário para títulos e corpo</p>
 </div>
 
-<div className="p-4 rounded-lg bg-layer1 border border-base">
+<div className="p-4 rounded-lg bg-layer1 border border-default">
   <p className="text-muted font-medium">text-muted</p>
   <p className="text-sm text-muted mt-1">Texto secundário</p>
 </div>
 
-<div className="p-4 rounded-lg bg-layer1 border border-base">
+<div className="p-4 rounded-lg bg-layer1 border border-default">
   <p className="text-link font-medium">text-link</p>
   <p className="text-sm text-muted mt-1">Cor de link</p>
 </div>
@@ -145,18 +145,18 @@ Use `text-base`, `bg-layer1`, `border-base` — **não** `text-text-base`, `bg-b
 
 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6" style={{viewTransitionName: 'bg-layers'}}>
 
-<div className="p-6 rounded-lg bg-layer1 border border-base">
-  <p className="font-medium text-base">Camada 1</p>
+<div className="p-6 rounded-lg bg-layer1 border border-default">
+  <p className="font-medium text-default">Camada 1</p>
   <p className="text-sm text-muted mt-2">bg-layer1</p>
 </div>
 
-<div className="p-6 rounded-lg bg-layer2 border border-base">
-  <p className="font-medium text-base">Camada 2</p>
+<div className="p-6 rounded-lg bg-layer2 border border-default">
+  <p className="font-medium text-default">Camada 2</p>
   <p className="text-sm text-muted mt-2">bg-layer2</p>
 </div>
 
-<div className="p-6 rounded-lg bg-canvas border border-base">
-  <p className="font-medium text-base">Canvas</p>
+<div className="p-6 rounded-lg bg-canvas border border-default">
+  <p className="font-medium text-default">Canvas</p>
   <p className="text-sm text-muted mt-2">bg-canvas</p>
 </div>
 
@@ -166,16 +166,16 @@ Use `text-base`, `bg-layer1`, `border-base` — **não** `text-text-base`, `bg-b
 
 <div className="space-y-4 my-6" style={{viewTransitionName: 'border-tokens'}}>
 
-<div className="p-4 rounded-lg bg-layer1 border border-base">
-  <p className="text-base font-medium">border-base</p>
+<div className="p-4 rounded-lg bg-layer1 border border-default">
+  <p className="text-default font-medium">border-default</p>
 </div>
 
 <div className="p-4 rounded-lg bg-layer1 border-2 border-primary">
-  <p className="text-base font-medium">border-primary</p>
+  <p className="text-default font-medium">border-primary</p>
 </div>
 
 <div className="p-4 rounded-lg bg-layer1 border-2 border-accent">
-  <p className="text-base font-medium">border-accent</p>
+  <p className="text-default font-medium">border-accent</p>
 </div>
 
 </div>

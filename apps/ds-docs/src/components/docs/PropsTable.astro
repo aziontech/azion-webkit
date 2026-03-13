@@ -25,7 +25,7 @@ const sortedRows = [...rows].sort((a, b) => {
 
 <div class="props-table overflow-x-auto">
   {rows.length === 0 ? (
-    <div class="empty-state py-8 text-center text-muted border border-dashed border-base rounded-lg">
+    <div class="empty-state py-8 text-center text-muted border border-dashed border-default rounded-lg">
       <p class="text-sm">No props documented yet.</p>
       <p class="text-xs mt-1 text-muted">
         Props will be automatically extracted or manually added.
@@ -34,16 +34,16 @@ const sortedRows = [...rows].sort((a, b) => {
   ) : (
     <table class="w-full text-sm border-collapse">
       <thead>
-        <tr class="border-b border-base">
-          <th class="py-3 px-4 text-left font-medium text-base bg-layer2">Prop</th>
-          <th class="py-3 px-4 text-left font-medium text-base bg-layer2">Type</th>
-          <th class="py-3 px-4 text-left font-medium text-base bg-layer2">Default</th>
-          <th class="py-3 px-4 text-left font-medium text-base bg-layer2">Description</th>
+        <tr class="border-b border-default">
+          <th class="py-3 px-4 text-left font-medium text-default bg-layer2">Prop</th>
+          <th class="py-3 px-4 text-left font-medium text-default bg-layer2">Type</th>
+          <th class="py-3 px-4 text-left font-medium text-default bg-layer2">Default</th>
+          <th class="py-3 px-4 text-left font-medium text-default bg-layer2">Description</th>
         </tr>
       </thead>
       <tbody>
         {sortedRows.map((prop, index) => (
-          <tr class="border-b border-base hover:bg-layer2 transition-colors">
+          <tr class="border-b border-default hover:bg-layer2 transition-colors">
             <td class="py-3 px-4 font-code text-muted">
               <span class="flex items-center gap-1">
                 {prop.required && (

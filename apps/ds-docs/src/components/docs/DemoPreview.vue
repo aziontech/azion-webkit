@@ -48,7 +48,7 @@ const bgClass = computed(() => {
     <!-- Preview Area -->
     <div
       :class="[
-        'flex items-center justify-center min-h-[100px] border border-base rounded-lg p-6',
+        'flex items-center justify-center min-h-[100px] border border-default rounded-lg p-6',
         bgClass,
         { 'overflow-x-auto': responsive }
       ]"

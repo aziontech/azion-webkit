@@ -46,7 +46,7 @@ function handleInput(event: Event) {
       :min="metadata.min"
       :max="metadata.max"
       :step="metadata.step || 1"
-      class="w-full py-2 px-3 text-sm text-base bg-layer1 hover:bg-layer1-hover border border-base rounded-md transition-[border-color,box-shadow] duration-150 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-inner-spin-button]:m-0"
+      class="w-full py-2 px-3 text-sm text-default bg-layer1 hover:bg-layer1-hover border border-default rounded-md transition-[border-color,box-shadow] duration-150 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-inner-spin-button]:m-0"
       @input="handleInput"
     />
   </div>

@@ -36,7 +36,7 @@ const currentYear = new Date().getFullYear();
 </script>
 
 <template>
-  <footer class="mt-auto border-t border-base bg-layer1">
+  <footer class="mt-auto border-t border-default bg-layer1">
     <div class="px-6 py-6">
       <!-- Footer Bottom -->
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
@@ -59,7 +59,7 @@ const currentYear = new Date().getFullYear();
               href="https://github.com/aziontech/webkit"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center justify-center p-1 text-muted hover:text-base transition-colors"
+              class="flex items-center justify-center p-1 text-muted hover:text-default transition-colors"
               aria-label="View on GitHub"
             >
               <i class="pi pi-github text-lg" aria-hidden="true" />
@@ -68,7 +68,7 @@ const currentYear = new Date().getFullYear();
               href="https://twitter.com/aziontech"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center justify-center p-1 text-muted hover:text-base transition-colors"
+              class="flex items-center justify-center p-1 text-muted hover:text-default transition-colors"
               aria-label="Follow on Twitter"
             >
               <i class="pi pi-twitter text-lg" aria-hidden="true" />
@@ -77,7 +77,7 @@ const currentYear = new Date().getFullYear();
               href="https://www.linkedin.com/company/aziontech"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center justify-center p-1 text-muted hover:text-base transition-colors"
+              class="flex items-center justify-center p-1 text-muted hover:text-default transition-colors"
               aria-label="Follow on LinkedIn"
             >
               <i class="pi pi-linkedin text-lg" aria-hidden="true" />

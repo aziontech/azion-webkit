@@ -92,7 +92,7 @@ function toggleCode() {
 <template>
   <div class="overflow-hidden">
     <!-- Header -->
-    <div class="flex items-center justify-between py-2 px-3 bg-white border-b border-base dark:bg-surface-950">
+    <div class="flex items-center justify-between py-2 px-3 bg-white border-b border-default dark:bg-surface-950">
       <button
         class="flex items-center gap-2 py-1 px-1.5 pr-2 text-muted bg-transparent border-0 rounded cursor-pointer transition-colors duration-150 hover:bg-layer1-hover"
         @click="toggleCode"
@@ -106,7 +106,7 @@ function toggleCode() {
 
       <button
         v-if="showCopy && isExpanded"
-        class="flex items-center gap-1.5 py-1 px-1.5 pr-2 text-muted bg-transparent border-0 rounded cursor-pointer transition-all duration-150 hover:text-base hover:bg-layer1-hover font-mono"
+        class="flex items-center gap-1.5 py-1 px-1.5 pr-2 text-muted bg-transparent border-0 rounded cursor-pointer transition-all duration-150 hover:text-default hover:bg-layer1-hover font-mono"
         @click="copyCode"
       >
         <i class="pi pi-copy" v-if="!isCopied"/>

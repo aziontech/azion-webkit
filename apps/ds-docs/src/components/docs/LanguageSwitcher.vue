@@ -144,7 +144,7 @@ onUnmounted(() => {
   <div class="relative inline-flex font-mono text-xs" ref="triggerRef">
     <button
       type="button"
-      class="inline-flex items-center gap-2 py-1.5 px-3 font-medium text-black dark:text-white bg-base border border-base rounded-md cursor-pointer transition-all duration-150 hover:bg-layer1-hover hover:border-base focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+      class="inline-flex items-center gap-2 py-1.5 px-3 font-medium text-black dark:text-white bg-surface border border-default rounded-md cursor-pointer transition-all duration-150 hover:bg-layer1-hover hover:border-default focus:outline-none focus:ring-2 focus:ring-blue-500/50"
       :aria-expanded="isOpen"
       aria-haspopup="listbox"
       :aria-label="`Current language: ${currentLanguageLabel}. Change language.`"
@@ -159,7 +159,7 @@ onUnmounted(() => {
       <div
         v-if="isOpen"
         ref="dropdownRef"
-        class="absolute min-w-40 text-xs bg-base border border-base rounded-md shadow-lg z-50 overflow-hidden language-switcher__dropdown"
+        class="absolute min-w-40 text-xs bg-surface border border-default rounded-md shadow-lg z-50 overflow-hidden language-switcher__dropdown"
         :class="dropdownClasses"
         role="listbox"
         :aria-label="'Select language'"

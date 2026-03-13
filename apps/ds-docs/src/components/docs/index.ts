@@ -49,6 +49,8 @@ export { default as AnatomyBlock } from './AnatomyBlock.astro';
 export { default as StateGrid } from './StateGrid.astro';
 export { default as DoDont } from './DoDont.astro';
 export { default as FoundationCard } from './FoundationCard.astro';
+export { default as PrimitivePalette } from './PrimitivePalette.astro';
+export { default as SemanticColorsTable } from './SemanticColorsTable.astro';
 
 // Callouts
 export { default as Callout } from './Callout.astro';
@@ -91,6 +93,8 @@ import RelatedLinks from './RelatedLinks.astro';
 import Callout from './Callout.astro';
 import ContentTabs from './ContentTabs.astro';
 import FoundationCard from './FoundationCard.astro';
+import PrimitivePalette from './PrimitivePalette.astro';
+import SemanticColorsTable from './SemanticColorsTable.astro';
 import Playground from '../playground/Playground.vue';
 import WebkitPreview from './WebkitPreview.vue';
 import { Button, BlockToastDemo } from '../demo';
@@ -111,6 +115,8 @@ export const markdownComponents = {
   Callout,
   ContentTabs,
   FoundationCard,
+  PrimitivePalette,
+  SemanticColorsTable,
   Playground,
   WebkitPreview,
   // Demo components for MDX usage

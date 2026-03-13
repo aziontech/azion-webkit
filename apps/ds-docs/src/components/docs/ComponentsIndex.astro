@@ -12,6 +12,7 @@ import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import Tabs from './Tabs.astro';
 import ComponentsStatusTable from './ComponentsStatusTable.astro';
+import StatusBadge from './StatusBadge.vue';
 import { componentStatusData } from '../../data/component-status';
 
 interface Props {
@@ -73,21 +74,14 @@ const urlPrefix = language === 'en' ? '/components' : `/${language}/components`;
             return (
               <a
                 href={`${urlPrefix}/${componentName}`}
-                class="group block p-4 border border-base rounded-lg hover:border-base-hover transition-colors bg-base"
+                class="group block p-4 border border-default rounded-lg hover:border-strong transition-colors bg-surface"
               >
                 <div class="flex items-center justify-between mb-2">
-                  <h3 class="font-medium font-sans text-base group-hover:text-primary-700">
+                  <h3 class="font-medium font-sans text-default">
                     {component.data.title}
                   </h3>
                   {component.data.status && (
-                    <span class={`text-xs px-2 py-0.5 rounded-full ${
-                      component.data.status === 'stable' ? 'bg-emerald-50 text-emerald-700' :
-                      component.data.status === 'beta' ? 'bg-blue-50 text-blue-700' :
-                      component.data.status === 'deprecated' ? 'bg-amber-50 text-warning' :
-                      'bg-gray-50 text-gray-600'
-                    }`}>
-                      {component.data.status}
-                    </span>
+                    <StatusBadge client:visible status={component.data.status} />
                   )}
                 </div>
                 <p class="text-sm font-sans text-muted line-clamp-2">

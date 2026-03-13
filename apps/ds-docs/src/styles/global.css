@@ -121,7 +121,7 @@
   }
 
   body {
-    @apply bg-canvas text-base;
+    @apply bg-canvas text-default;
   }
 
   /* Smooth scrolling */
@@ -136,7 +136,11 @@
 }
 
 .astro-code {
-  @apply !bg-surface-900;
+  background: #171717 !important;
+}
+
+.astro-code .astro-code-themes pre {
+  background: #171717 !important;
 }
 
 /* Force Shiki dark theme for code blocks on get-started and tokens (same look as Playground, regardless of site theme) */
@@ -148,11 +152,17 @@
   font-weight: var(--shiki-dark-font-weight) !important;
   text-decoration: var(--shiki-dark-text-decoration) !important;
 }
-.docs-code-always-dark .astro-code {
+.docs-code-always-dark .astro-code pre,
+.docs-code-always-dark .astro-code .astro-code-themes pre,
+.docs-code-always-dark .prose pre {
+  background: #171717 !important;
+  background-color: #171717 !important;
   border: 1px solid #3a3a3a !important;
 }
-.docs-code-always-dark .astro-code pre {
+.docs-code-always-dark .astro-code pre code,
+.docs-code-always-dark .astro-code .astro-code-themes pre code {
   background: transparent !important;
+  background-color: transparent !important;
 }
 
 /* Prose in dark mode: use theme text tokens so body text is light (text-white feel) */
@@ -226,9 +236,31 @@
 }
 
 /* Playground preview: when preview is light, force background so it stays light
-   even when the site is in dark mode. Higher specificity than .dark .bg-base and
+   even when the site is in dark mode. Higher specificity than .dark .bg-surface and
    explicit value so it wins regardless of cascade order. */
 .playground-preview-light.azion.azion-light,
-.playground-preview-light.azion.azion-light .bg-base {
+.playground-preview-light.azion.azion-light .bg-surface {
   background-color: #ffffff;
+}
+
+/* Code blocks in get-started/tokens: force #171717 after Tailwind so typography’s .prose pre doesn’t override */
+/* Wrapper div (e.g. Shiki with wrap) and pre/code block itself */
+.docs-code-always-dark div:has(> pre.astro-code),
+.docs-code-always-dark div:has(> pre > code),
+.docs-code-always-dark pre.astro-code,
+.docs-code-always-dark pre:has(> code),
+.docs-code-always-dark .astro-code,
+.docs-code-always-dark .astro-code pre,
+.docs-code-always-dark .astro-code .astro-code-themes,
+.docs-code-always-dark .astro-code .astro-code-themes pre,
+.docs-code-always-dark .prose pre {
+  background: #171717 !important;
+  background-color: #171717 !important;
+}
+.docs-code-always-dark pre.astro-code code,
+.docs-code-always-dark pre:has(> code) code,
+.docs-code-always-dark .astro-code pre code,
+.docs-code-always-dark .astro-code .astro-code-themes pre code {
+  background: transparent !important;
+  background-color: transparent !important;
 }

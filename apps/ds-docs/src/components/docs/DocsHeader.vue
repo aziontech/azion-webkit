@@ -71,7 +71,7 @@ const documentationText = computed(() => {
 </script>
 
 <template>
-  <header class="docs-header h-16 sticky top-0 z-10 bg-base border-b border-base">
+  <header class="docs-header h-16 sticky top-0 z-10 bg-surface border-b border-default">
     <div class="flex items-center justify-between h-full px-6">
       <!-- Breadcrumb -->
       <nav class="flex items-center gap-2 text-sm" aria-label="Breadcrumb">
@@ -101,16 +101,16 @@ const documentationText = computed(() => {
       </nav>
       
       <!-- Header actions -->
-      <div class="flex items-center justify-end gap-2.5 min-w-[420px]">
+      <div class="flex items-center justify-end gap-2.5 min-w-[340px]">
         <!-- Search button -->
         <button 
-          class="flex w-full max-w-sm items-center gap-2 px-3 py-1.5 text-sm text-muted border border-base bg-layer1 rounded-md hover:bg-layer1-hover transition-colors"
+          class="flex w-full max-w-sm items-center gap-2 px-3 py-1.5 text-sm text-muted border border-default bg-layer1 rounded-md hover:bg-layer1-hover transition-colors"
           aria-label="Search documentation"
           @click="openSearch"
         >
           <i class="pi pi-search text-sm" aria-hidden="true" />
           <span class="hidden sm:inline w-full text-left">Search</span>
-          <kbd class="hidden sm:inline-flex px-1.5 py-0.5 text-xs text-black dark:text-white bg-base border border-base rounded font-sans">⌘+K</kbd>
+          <kbd class="hidden sm:inline-flex px-1.5 py-0.5 text-xs text-black dark:text-white bg-surface border border-default rounded font-sans">⌘+K</kbd>
         </button>
         
         <!-- Version switcher -->

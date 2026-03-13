@@ -31,7 +31,7 @@ const props = defineProps<Props>();
     :transition="{ duration: 0.4, delay: 0.05, ease: [0.25, 0.1, 0.25, 1] }"
   >
     <div class="flex items-start gap-4 mb-4">
-      <h1 class="!text-3xl font-medium tracking-tight text-base">
+      <h1 class="!text-3xl font-medium tracking-tight text-default">
         {{ title }}
       </h1>
     </div>

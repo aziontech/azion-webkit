@@ -36,7 +36,7 @@ const itemLink = computed(() => {
     :href="itemLink"
     class="block rounded-md px-3 py-1.5 text-sm text-color font-medium transition-colors border-l-2 border-l-transparent hover:bg-layer2-hover hover:border-l-base"
     :class="[
-      isActive ? 'bg-base' : ''
+      isActive ? 'bg-surface' : ''
     ]"
     :aria-current="isActive ? 'page' : undefined"
     :whileHover="{ x: 2 }"

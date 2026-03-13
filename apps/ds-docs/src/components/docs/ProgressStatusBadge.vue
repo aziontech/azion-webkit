@@ -52,7 +52,7 @@ const semanticStyles: Record<string, { bg: string; text: string; border: string 
   neutral: {
     bg: 'bg-gray-50',
     text: 'text-gray-600',
-    border: 'border-base',
+    border: 'border-default',
   },
 };
 

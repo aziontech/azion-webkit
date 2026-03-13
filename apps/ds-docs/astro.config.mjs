@@ -66,6 +66,8 @@ export default defineConfig({
         dark: 'github-dark',
       },
       wrap: true,
+      // No inline background/color so .docs-code-always-dark CSS can force #171717
+      defaultColor: false,
     },
   },
   

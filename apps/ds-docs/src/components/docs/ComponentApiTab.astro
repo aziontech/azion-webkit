@@ -39,7 +39,7 @@ const hasApiData = props.length > 0 || slots.length > 0 || events.length > 0;
 
 <div class="component-api-tab">
   <section id="api" class="api-section">
-    <h2 class="text-2xl font-medium text-base tracking-tight mb-6">
+    <h2 class="text-2xl font-medium text-default tracking-tight mb-6">
       API
     </h2>
     
@@ -48,7 +48,7 @@ const hasApiData = props.length > 0 || slots.length > 0 || events.length > 0;
         {/* Props */}
         {props.length > 0 && (
           <div class="api-subsection">
-            <h3 class="text-lg font-medium text-base mb-3">Props</h3>
+            <h3 class="text-lg font-medium text-default mb-3">Props</h3>
             <PropsTable rows={props} component={component} />
           </div>
         )}
@@ -56,7 +56,7 @@ const hasApiData = props.length > 0 || slots.length > 0 || events.length > 0;
         {/* Slots */}
         {slots.length > 0 && (
           <div class="api-subsection">
-            <h3 class="text-lg font-medium text-base mb-3">Slots</h3>
+            <h3 class="text-lg font-medium text-default mb-3">Slots</h3>
             <SlotsTable rows={slots} component={component} />
           </div>
         )}
@@ -64,15 +64,15 @@ const hasApiData = props.length > 0 || slots.length > 0 || events.length > 0;
         {/* Events */}
         {events.length > 0 && (
           <div class="api-subsection">
-            <h3 class="text-lg font-medium text-base mb-3">Events</h3>
+            <h3 class="text-lg font-medium text-default mb-3">Events</h3>
             <EventsTable rows={events} component={component} />
           </div>
         )}
       </div>
     ) : (
-      <div class="empty-api-state py-12 text-center border border-dashed border-base rounded-lg bg-base">
+      <div class="empty-api-state py-12 text-center border border-dashed border-default rounded-lg bg-surface">
         <i class="pi pi-code mx-auto text-4xl text-muted" aria-hidden="true" />
-        <h3 class="mt-2 text-sm font-medium text-base">API documentation coming soon</h3>
+        <h3 class="mt-2 text-sm font-medium text-default">API documentation coming soon</h3>
         <p class="mt-1 text-sm text-muted">
           Component API is being documented and will be available shortly.
         </p>

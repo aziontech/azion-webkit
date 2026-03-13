@@ -20,7 +20,7 @@ const { parts, image, alt } = Astro.props;
 <div class="anatomy-block">
   {/* Visual diagram (optional) */}
   {image && (
-    <div class="anatomy-block__visual mb-6 rounded-lg border border-base overflow-hidden bg-base">
+    <div class="anatomy-block__visual mb-6 rounded-lg border border-default overflow-hidden bg-surface">
       <img 
         src={image} 
         alt={alt || 'Component anatomy diagram'}
@@ -31,7 +31,7 @@ const { parts, image, alt } = Astro.props;
   
   {/* Parts list */}
   <div class="anatomy-block__parts">
-    <h4 class="text-sm font-medium text-base mb-3">Component Parts</h4>
+    <h4 class="text-sm font-medium text-default mb-3">Component Parts</h4>
     <ol class="space-y-3">
       {parts.map((part, index) => (
         <li class="flex items-start gap-3">
@@ -39,7 +39,7 @@ const { parts, image, alt } = Astro.props;
             {index + 1}
           </span>
           <div class="flex-1">
-            <span class="font-medium text-base">{part.label}</span>
+            <span class="font-medium text-default">{part.label}</span>
             {part.description && (
               <p class="text-sm text-muted mt-0.5">
                 {part.description}

@@ -208,7 +208,7 @@ onUnmounted(() => {
         @click="closeSearch"
       >
         <motion.div
-          class="w-full max-w-2xl bg-base rounded-xl shadow-2xl overflow-hidden border border-base"
+          class="w-full max-w-2xl bg-surface rounded-xl shadow-2xl overflow-hidden border border-default"
           :initial="{ opacity: 0, scale: 0.98, y: -8 }"
           :animate="{ opacity: 1, scale: 1, y: 0 }"
           :exit="{ opacity: 0, scale: 0.98, y: -8 }"
@@ -217,21 +217,21 @@ onUnmounted(() => {
           @click.stop
         >
         <!-- Search Input -->
-        <div class="relative border-b border-base">
+        <div class="relative border-b border-default">
           <i class="pi pi-search text-sm absolute left-4 top-[48%] -translate-y-1/2 text-muted" />
           <input
             ref="inputRef"
             v-model="query"
             type="text"
             :placeholder="placeholderText"
-            class="w-full pl-10 text-sm pr-4 py-4 leading-none border-0 focus:outline-none focus:ring-0 text-base bg-base"
+            class="w-full pl-10 text-sm pr-4 py-4 leading-none border-0 focus:outline-none focus:ring-0 text-default bg-surface"
             autocomplete="off"
             autocapitalize="off"
             spellcheck="false"
           />
           <kbd
             v-if="query"
-            class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-1 text-xs text-muted bg-base rounded"
+            class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-1 text-xs text-muted bg-surface rounded"
           >
             ESC
           </kbd>
@@ -244,7 +244,7 @@ onUnmounted(() => {
             v-if="loading"
             class="flex items-center justify-center py-12"
           >
-            <div class="w-6 h-6 border-2 border-base border-t-transparent rounded-full animate-spin" />
+            <div class="w-6 h-6 border-2 border-default border-t-transparent rounded-full animate-spin" />
           </div>
           
           <!-- Empty State -->
@@ -292,7 +292,7 @@ onUnmounted(() => {
                   <div class="flex-1 min-w-0">
                     <div class="flex items-center gap-2">
                       <h4
-                        class="text-sm font-medium text-base"
+                        class="text-sm font-medium text-default"
                         v-html="result.highlightedTitle"
                       />
                       <span
@@ -326,19 +326,19 @@ onUnmounted(() => {
         </div>
         
         <!-- Footer -->
-        <div class="px-4 py-3 border-t border-base bg-base flex items-center justify-between text-xs text-muted">
+        <div class="px-4 py-3 border-t border-default bg-surface flex items-center justify-between text-xs text-muted">
           <div class="flex items-center gap-4">
             <span class="flex items-center gap-1">
-              <kbd class="px-1.5 py-0.5 bg-base rounded border border-base">↑</kbd>
-              <kbd class="px-1.5 py-0.5 bg-base rounded border border-base">↓</kbd>
+              <kbd class="px-1.5 py-0.5 bg-surface rounded border border-default">↑</kbd>
+              <kbd class="px-1.5 py-0.5 bg-surface rounded border border-default">↓</kbd>
               to navigate
             </span>
             <span class="flex items-center gap-1">
-              <kbd class="px-1.5 py-0.5 bg-base rounded border border-base">↵</kbd>
+              <kbd class="px-1.5 py-0.5 bg-surface rounded border border-default">↵</kbd>
               to select
             </span>
             <span class="flex items-center gap-1">
-              <kbd class="px-1.5 py-0.5 bg-base rounded border border-base">esc</kbd>
+              <kbd class="px-1.5 py-0.5 bg-surface rounded border border-default">esc</kbd>
               to close
             </span>
           </div>

@@ -211,7 +211,7 @@ function getFilledClasses(): string[] {
       bg: 'bg-gray-100 dark:bg-gray-800',
       hover: 'hover:bg-gray-200 dark:hover:bg-gray-700',
       active: 'active:bg-gray-300 dark:active:bg-gray-600',
-      text: 'text-base dark:text-gray-100',
+      text: 'text-default dark:text-gray-100',
       focus: 'focus-visible:ring-gray-500',
       hoverBg: 'bg-gray-200 dark:bg-gray-700',
       activeBg: 'bg-gray-300 dark:bg-gray-600',
@@ -274,7 +274,7 @@ function getFilledClasses(): string[] {
       bg: 'bg-white dark:bg-surface-900',
       hover: 'hover:bg-gray-100 dark:hover:bg-gray-800',
       active: 'active:bg-gray-200 dark:active:bg-gray-700',
-      text: 'text-base dark:text-white',
+      text: 'text-default dark:text-white',
       focus: 'focus-visible:ring-gray-400',
       hoverBg: 'bg-gray-100 dark:bg-gray-800',
       activeBg: 'bg-gray-200 dark:bg-gray-700',
@@ -343,7 +343,7 @@ function getOutlinedClasses(): string[] {
       activeBg: 'bg-primary-100 dark:bg-primary-900/30',
     },
     secondary: {
-      border: 'border-base dark:border-gray-600',
+      border: 'border-default dark:border-gray-600',
       text: 'text-gray-700 dark:text-gray-300',
       hover: 'hover:bg-gray-50 dark:hover:bg-gray-800',
       active: 'active:bg-gray-100 dark:active:bg-gray-700',
@@ -397,7 +397,7 @@ function getOutlinedClasses(): string[] {
       activeBg: 'bg-red-100 dark:bg-red-900/30',
     },
     plain: {
-      border: 'border-base dark:border-gray-600',
+      border: 'border-default dark:border-gray-600',
       text: 'text-gray-600 dark:text-muted',
       hover: 'hover:bg-gray-50 dark:hover:bg-gray-800',
       active: 'active:bg-gray-100 dark:active:bg-gray-700',
@@ -407,7 +407,7 @@ function getOutlinedClasses(): string[] {
     },
     contrast: {
       border: 'border-gray-900 dark:border-white',
-      text: 'text-base dark:text-white',
+      text: 'text-default dark:text-white',
       hover: 'hover:bg-gray-100 dark:hover:bg-gray-800',
       active: 'active:bg-gray-200 dark:active:bg-gray-700',
       focus: 'focus-visible:ring-gray-400',
@@ -518,7 +518,7 @@ function getTextClasses(): string[] {
       activeText: 'text-gray-700 dark:text-gray-300',
     },
     contrast: {
-      text: 'text-base dark:text-white',
+      text: 'text-default dark:text-white',
       hover: 'hover:text-gray-700 dark:hover:text-gray-200',
       active: 'active:text-gray-800 dark:active:text-gray-300',
       focus: 'focus-visible:ring-gray-400',
@@ -633,7 +633,7 @@ function getLinkClasses(): string[] {
       activeText: 'text-gray-700 dark:text-gray-300',
     },
     contrast: {
-      text: 'text-base dark:text-white',
+      text: 'text-default dark:text-white',
       hover: 'hover:text-gray-700 dark:hover:text-gray-200',
       active: 'active:text-gray-800 dark:active:text-gray-300',
       focus: 'focus-visible:ring-gray-400',

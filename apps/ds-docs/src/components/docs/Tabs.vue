@@ -142,7 +142,7 @@ defineExpose({ activeTab });
     <!-- Tab List -->
     <div 
       role="tablist" 
-      class="flex border-b border-base mb-6"
+      class="flex border-b border-default mb-6"
       aria-label="Content sections"
     >
       <button
@@ -159,8 +159,8 @@ defineExpose({ activeTab });
         :class="[
           'px-4 py-2.5 !text-sm font-medium border-b-2 transition-colors',
           activeTab === tab.id
-            ? 'border-base text-base'
-            : 'border-transparent text-muted hover:text-base hover:border-base'
+            ? 'border-default text-default'
+            : 'border-transparent text-muted hover:text-default hover:border-default'
         ]"
       >
         {{ tab.label }}

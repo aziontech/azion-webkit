@@ -60,27 +60,27 @@ const surfaceClasses = computed(() => {
   if (isDark) {
     switch (props.surface) {
       case 'light':
-        classes.push('bg-base');
+        classes.push('bg-surface');
         break;
       case 'dark':
-        classes.push('bg-base');
+        classes.push('bg-surface');
         break;
       case 'neutral':
       default:
-        classes.push('bg-base');
+        classes.push('bg-surface');
         break;
     }
   } else {
     switch (props.surface) {
       case 'light':
-        classes.push('bg-base');
+        classes.push('bg-surface');
         break;
       case 'dark':
-        classes.push('bg-base');
+        classes.push('bg-surface');
         break;
       case 'neutral':
       default:
-        classes.push('bg-base');
+        classes.push('bg-surface');
         break;
     }
   }
@@ -112,7 +112,7 @@ const containerStyle = computed(() => ({
        azion + azionThemeClass ensure CSS vars (theme-vars.css) apply to the entire preview subtree,
        independent of the site theme. -->
   <div
-    class="flex flex-col h-full min-h-[200px] bg-base azion"
+    class="flex flex-col h-full min-h-[200px] bg-surface azion"
     :class="[wrapperClass, azionThemeClass]"
   >
     <!-- Optional toolbar slot -->

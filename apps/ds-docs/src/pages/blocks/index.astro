@@ -66,10 +66,10 @@ const categoryLabels: Record<string, string> = {
               return (
                 <a
                   href={`/blocks/${name}`}
-                  class="group block p-4 border border-base rounded-lg hover:border-base-hover transition-colors bg-base"
+                  class="group block p-4 border border-default rounded-lg hover:border-default-hover transition-colors bg-surface"
                 >
                   <div class="flex items-center justify-between mb-2">
-                    <h3 class="font-medium font-sans text-base group-hover:text-base-700">
+                    <h3 class="font-medium font-sans text-default group-hover:text-primary-700">
                       {block.data.title}
                     </h3>
                     {block.data.status && (
