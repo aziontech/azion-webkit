@@ -36,18 +36,18 @@ const highlightedCode = await codeToHtml(code, {
 });
 ---
 
-<div class="relative overflow-hidden rounded-md border border-base">
-  <!-- Header: same as Playground -->
-  <div class="flex items-center justify-between py-2 px-3 bg-layer2 border-b border-base">
+<div class="relative overflow-hidden rounded-md border border-neutral-800 docs-code-block">
+  <!-- Header: always dark like Playground (independent of site theme) -->
+  <div class="flex items-center justify-between py-2 px-3 bg-surface-950 border-b border-neutral-800">
     {filename ? (
-      <span class="text-xs text-muted font-code">{filename}</span>
+      <span class="text-xs text-neutral-400 font-code">{filename}</span>
     ) : (
-      <span class="text-xs text-muted font-code">{language}</span>
+      <span class="text-xs text-neutral-400 font-code">{language}</span>
     )}
     {showCopy && (
       <button
         type="button"
-        class="flex items-center gap-1.5 py-1 px-2 text-muted bg-transparent border-0 rounded cursor-pointer transition-all duration-150 hover:bg-layer2-hover font-mono text-xs copy-button"
+        class="flex items-center gap-1.5 py-1 px-2 text-neutral-400 bg-transparent border-0 rounded cursor-pointer transition-all duration-150 hover:text-neutral-300 hover:bg-neutral-800 font-mono text-xs copy-button"
         data-code={code}
         aria-label="Copy code"
       >
@@ -60,7 +60,7 @@ const highlightedCode = await codeToHtml(code, {
     )}
   </div>
   
-  <!-- Code container: same structure as Playground (bg #1f2937, same pre/code styling) -->
+  <!-- Code container: same structure as Playground (dark bg, light text, independent of theme) -->
   <div class="bg-surface-900 overflow-x-auto">
     <div
       class="p-4 [&_pre]:m-0 [&_pre]:p-0 [&_pre]:!bg-transparent [&_code]:font-mono [&_code]:text-[0.8125rem] [&_code]:leading-[1.6]"

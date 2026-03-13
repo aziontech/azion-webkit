@@ -121,10 +121,10 @@ const containerStyle = computed(() => ({
     </div>
 
     <!-- Scroll region shares same bg so no white/transparent gaps when site is dark and preview is light -->
-    <div class="flex-1 min-h-0 overflow-auto bg-base">
+    <div class="flex-1 min-h-0 p-6 overflow-auto bg-base my-auto flex items-center justify-center transition-all duration-300">
       <div
         :class="[
-          'azion relative flex flex-wrap p-6 h-full overflow-auto',
+          'azion',
           azionThemeClass,
           surfaceClasses,
           customClass,

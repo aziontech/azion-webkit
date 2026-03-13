@@ -365,6 +365,12 @@ if (isPatternsIndexPage) {
     i18n={i18n}
     prose={!isComponentsIndexPage}
   >
-    <Content components={markdownComponents} />
+    {section === 'get-started' || section === 'tokens' ? (
+      <div class="docs-code-always-dark">
+        <Content components={markdownComponents} />
+      </div>
+    ) : (
+      <Content components={markdownComponents} />
+    )}
   </DocPageLayout>
 )}

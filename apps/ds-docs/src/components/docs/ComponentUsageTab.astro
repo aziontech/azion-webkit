@@ -167,9 +167,16 @@ const donts = usage?.doDonts?.filter(item => item.type === 'dont') || [];
       )}
     </div>
   ) : (
-    <!-- Fallback to slot content for markdown-authored usage -->
-    <div class="usage-content">
+    <!-- Fallback to slot content for markdown-authored usage, or empty state -->
+    <div class="usage-content usage-content--fallback">
       <slot />
+      <div class="empty-usage-state py-12 text-center border border-dashed border-base rounded-lg bg-base">
+        <i class="pi pi-book mx-auto text-4xl text-muted" aria-hidden="true" />
+        <h3 class="mt-2 text-sm font-medium text-base">Usage documentation coming soon</h3>
+        <p class="mt-1 text-sm text-muted">
+          When to use, do's and don'ts, and examples will be available shortly.
+        </p>
+      </div>
     </div>
   )}
 </div>
@@ -253,5 +260,10 @@ const donts = usage?.doDonts?.filter(item => item.type === 'dont') || [];
   /* Do/Don't item spacing */
   .do-dont__item {
     @apply last:mb-0;
+  }
+
+  /* Hide empty state when slot has content (slot content is rendered before .empty-usage-state) */
+  .usage-content--fallback:has(> :first-child:not(.empty-usage-state)) .empty-usage-state {
+    display: none;
   }
 </style>

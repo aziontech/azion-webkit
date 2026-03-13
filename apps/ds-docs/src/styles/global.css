@@ -139,6 +139,66 @@
   @apply !bg-surface-900;
 }
 
+/* Force Shiki dark theme for code blocks on get-started and tokens (same look as Playground, regardless of site theme) */
+.docs-code-always-dark .astro-code,
+.docs-code-always-dark .astro-code span {
+  color: var(--shiki-dark) !important;
+  background-color: #171717 !important;
+  font-style: var(--shiki-dark-font-style) !important;
+  font-weight: var(--shiki-dark-font-weight) !important;
+  text-decoration: var(--shiki-dark-text-decoration) !important;
+}
+.docs-code-always-dark .astro-code {
+  border: 1px solid #3a3a3a !important;
+}
+.docs-code-always-dark .astro-code pre {
+  background: transparent !important;
+}
+
+/* Prose in dark mode: use theme text tokens so body text is light (text-white feel) */
+.dark .prose,
+.azion.azion-dark .prose {
+  color: var(--text-textBase);
+}
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4,
+.dark .prose h5,
+.dark .prose h6,
+.azion.azion-dark .prose h1,
+.azion.azion-dark .prose h2,
+.azion.azion-dark .prose h3,
+.azion.azion-dark .prose h4,
+.azion.azion-dark .prose h5,
+.azion.azion-dark .prose h6 {
+  color: var(--text-textBase);
+}
+.dark .prose a,
+.azion.azion-dark .prose a {
+  color: var(--text-textLink);
+}
+.dark .prose a:hover,
+.azion.azion-dark .prose a:hover {
+  color: var(--text-textLinkHover);
+}
+/* Only inline code (exclude code blocks: pre > code keeps Shiki/astro-code styling) */
+.dark .prose :not(pre) > code,
+.azion.azion-dark .prose :not(pre) > code {
+  color: var(--text-textCode);
+  background-color: var(--background-bgLayer2);
+}
+.dark .prose strong,
+.azion.azion-dark .prose strong {
+  color: var(--text-textBase);
+}
+.dark .prose th {
+  color: var(--text-textBase);
+}
+.dark .prose tr, .dark .prose thead {
+  border-color: #1c1c1c;
+}
+
 /* Custom components - prose sizes are defined in tailwind.config typography theme */
 @layer components {
   /* code font for inline code */
